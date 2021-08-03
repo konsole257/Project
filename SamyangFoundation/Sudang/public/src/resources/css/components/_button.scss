@@ -1,0 +1,140 @@
+/**
+* --------------------------------
+* Button CSS
+* --------------------------------
+*/
+
+.btn-area {
+    display:flex !important;
+    justify-content:center;
+
+    [class^="btn"] {
+        margin-left:12px;
+
+        &:first-child {
+            margin-left:0;
+        }
+    }
+}
+
+[class^="btn"]:not(.btn-area) {
+    @include notoSans();
+
+    display:inline-block;
+    position:relative;
+    height:56px;
+    font-size:20px;
+    line-height:54px;
+    text-align:center;
+    vertical-align:top;
+    padding:0 16px;
+    overflow:hidden;
+
+    &[class*="small"] {
+        height:48px;
+        font-size:16px;
+        line-height:46px;
+    }
+
+    &[class*="big"] {
+        height:72px;
+        font-size:20px;
+        line-height:70px;
+    }
+
+    &[class*="mute"] {
+        text-indent:-9999px;
+    }
+
+    &[class*="stroke"] {
+        border-width:1px;
+        border-style:solid;
+        border-color:$colorDefault;
+        background-color:#fff;
+
+        &[class*="lightgray"] {
+            color:$colorGray;
+            border-color:$colorLightGray;
+        }
+    }
+
+    &[class*="fill"] {
+        color:$colorWhite;
+        border-width:1px;
+        border-style:solid;
+        border-color:$colorDefault;
+        background-color :$colorDefault;
+
+        &[class*="green"] {
+            color:#fff;
+            border-color:$colorGreen;
+            background-color:$colorGreen;
+        }
+
+        &[class*="gray"] {
+            color:#fff;
+            border-color:$colorGray;
+            background-color:$colorGray;
+        }
+    }
+
+    // &[class*="rounded"] {
+    //     border-radius:calcu(10px);
+    // }
+
+    &[class*="full"] {
+        width:100%;
+    }
+
+    &[class*="middle"] {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    &[disabled] {
+        color:$colorLightGray !important;
+        border-color:#efefef !important;
+        background-color:#efefef !important;
+        pointer-events:none;
+    }
+}
+
+@include mobile {
+    .btn-area {
+        [class^="btn"] {
+            flex:1;
+            margin-left:12px;
+
+            &:first-child {
+                margin-left:0;
+            }
+        }
+    }
+
+    [class^="btn"]:not(.btn-area) {
+        @include notoSans();
+
+        height:56px;
+        font-size:20px;
+        display:inline-block;
+        position:relative;
+        text-align:center;
+        vertical-align:top;
+        padding:0 16px;
+        overflow:hidden;
+
+        &[class*="small"] {
+            height:40px;
+            font-size:14px;
+            line-height:38px;
+        }
+
+        &[class*="big"] {
+            height:72px;
+            font-size:20px;
+            line-height:70px;
+        }
+    }
+
+}

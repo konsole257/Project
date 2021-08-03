@@ -1,0 +1,134 @@
+/**
+* --------------------------------
+* Footer
+* --------------------------------
+*/
+#footer {
+    min-width:1360px;
+    padding:60px 0 120px;
+    border-top:1px solid #ddd;
+
+    > .inner {
+        position:relative;
+        width:1360px;
+        padding-left:211px;
+        margin:0 auto;
+
+        .logo {
+            a {
+                @include bgList(6, 1);
+
+                position:absolute;
+                top:0;
+                left:0;
+                display:block;
+                width:91px;
+                height:37px;
+                text-indent:-9999px;
+                background-image:url($dirCommon+"logo.png");
+            }
+        }
+
+        .menu {
+            a {
+                @include notoSans();
+
+                font-weight:500;
+                font-size:18px;
+                margin-left:40px;
+
+                strong {
+                    font-weight:500;
+                }
+
+                &:first-child {
+                    margin-left:0;
+                }
+            }
+        }
+
+        .address {
+            @include notoSans();
+
+            font-weight:300;
+            font-size:14px;
+            color:#666;
+            line-height:28px;
+            letter-spacing:-0.025em;
+            margin-top:22px;
+
+            .copyright {
+                @include notoSans();
+
+                display:block;
+                font-size:14px;
+            }
+        }
+
+        .familysite {
+            position:absolute;
+            top:0;
+            right:0;
+            width:360px;
+            height:38px;
+        }
+    }
+}
+
+@include mobile {
+    #footer {
+        min-width:100%;
+        padding:calcu(76px) calcu(52px) calcu(160px);
+
+        > .inner {
+            width:100%;
+            padding-left:0;
+
+            .logo {
+                a {
+                    @include bgList(3, 1);
+
+                    position:absolute;
+                    top:calcu(84px);
+                    width:calcu(120px);
+                    height:calcu(30px);
+                    background-image:url($dirCommonM+"logo.png");
+                    background-size:calcu(720px);
+                }
+            }
+
+            .menu {
+                a {
+                    font-size:calcu(28px);
+                    margin-left:calcu(60px);
+
+                    &:first-child {
+                        margin-left:0;
+                    }
+                }
+            }
+
+            // .familysite {
+            //     position:absolute;
+            //     top:0;
+            //     right:0;
+            //     width:210px;
+            //     height:56px;
+            // }
+
+            .address {
+                font-size:calcu(26px);
+                line-height:calcu(40px);
+                margin-top:calcu(112px);
+
+                span {
+                    margin-right:calcu(24px);
+                }
+
+                .copyright {
+                    font-size:calcu(20px);
+                }
+            }
+        }
+    }
+}

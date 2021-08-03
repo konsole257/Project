@@ -1,0 +1,46 @@
+@mixin mobile {
+  @media (max-width:1024px) {
+    @content;
+  }
+}
+
+@mixin clearfix {
+    &:after {
+        content:'';
+        display:block;
+        clear:both;
+    }
+}
+
+@mixin bgList($col, $row) {
+    $col: -30*($col - 1);
+    $row: -30*($row - 1);
+    background-position:$col#{px} $row#{px};
+}
+
+@mixin ellipsis($lineHeight: null, $row: 1) {
+    height: $lineHeight*$row;
+    line-height:$lineHeight;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $row;
+    -webkit-box-orient: vertical;
+}
+
+@mixin notoSans($fontWeight: 350, $fontFamily: null) {
+    font-weight:$fontWeight;
+    font-family:"Noto Sans KR", Malgun gothic, "맑은고딕", Dotum, "돋움", sans-serif;
+}
+
+@mixin arrow($size, $color, $direction) {
+	border:$size solid transparent;
+	@if ($direction == 'right') {
+		border-left-color:$color;
+	} @else if ($direction == 'left') {
+		border-right-color:$color;
+	} @else if ($direction == 'top') {
+		border-bottom-color:$color;
+	} @else if ($direction == 'bottom') {
+		border-top-color:$color;
+	}
+}

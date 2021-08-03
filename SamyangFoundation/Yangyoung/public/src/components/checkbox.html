@@ -1,0 +1,4 @@
+{{if (context.prop) { {{for (var i = 0; i < context.prop.text.length; i++) {
+<label>
+    <input type="checkbox" class="type{{prop.style}} {{if (context.prop.class) {{{prop.class}}}}}" `+prop.check[i]+`><span>`+prop.text[i]+`</span>
+</label> }}} }}}

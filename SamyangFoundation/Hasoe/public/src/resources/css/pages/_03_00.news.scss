@@ -1,0 +1,96 @@
+/**
+* --------------------------------
+* News CSS
+* --------------------------------
+*/
+
+.news {
+    #contents  {
+        > .header {
+            .tit {
+                background-image:url($dirSub+"bg-news-header.jpg");
+            }
+        }
+
+        > .cont {
+            .top {
+                @include clearfix;
+
+                .menu {
+                    @include clearfix;
+
+                    float:left;
+                    padding:11px 0;
+
+                    li {
+                        float:left;
+                        margin-left:40px;
+
+                        &:first-child {
+                            margin-left:0;
+                        }
+
+                        &.active {
+                            a {
+                                font-weight:700;
+                                border-bottom:2px solid #222;
+                            }
+                        }
+
+                        a {
+                            @include notoSans();
+
+                            display:block;
+                            font-size:18px;
+                            line-height:25px;
+                        }
+                    }
+                }
+
+                .search {
+                    float:right;
+
+                    .input-search {
+                        width:400px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .news {
+        #contents  {
+            > .cont {
+                .top {
+                    .menu {
+                        float:none;
+                        padding:0;
+
+                        li {
+                            margin-left:calcu(56px);
+
+                            a {
+                                @include notoSans();
+
+                                font-size:calcu(28px);
+                                line-height:calcu(50px);
+                            }
+                        }
+                    }
+
+                    .search {
+                        float:none;
+                        margin-top:calcu(40px);
+
+                        .input-search {
+                            display:block;
+                            width:100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

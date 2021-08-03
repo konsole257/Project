@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+/**
+* --------------------------------
+* Common CSS
+* --------------------------------
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
+@font-face {
+    font-family: "SYFotf";
+    src: local("SYFotfRe00"), local("Samyang_Regular"),
+        url($dirFonts+"SYFotfRe00.woff2") format("woff2"),
+        url($dirFonts+"SYFotfRe00.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family:"SYFotf";
+	src: local("SYFotfMe00"), local("Samyang_Medium"),
+        url($dirFonts+"SYFotfMe00.woff2") format("woff2"),
+        url($dirFonts+"SYFotfMe00.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SYFotf";
+	src: local("SYFotfBo00"), local("Samyang_Bold"),
+        url($dirFonts+"SYFotfBo00.woff2") format("woff2"),
+        url($dirFonts+"SYFotfBo00.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 300;
+    src: local("Noto Sans Light"), local("NotoSans-Light"),
+    url($dirFonts+"NotoSansKR-Light-Hestia.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 350;
+    src: local("Noto Sans DemiLight"), local("NotoSans-DemiLight"),
+    url($dirFonts+"NotoSansKR-DemiLight-Hestia.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 500;
+    src: local("Noto Sans Medium"), local("NotoSans-Medium"),
+    url($dirFonts+"NotoSansKR-Medium-Hestia.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Noto Sans Bold"), local("NotoSans-Bold"),
+    url($dirFonts+"NotoSansKR-Bold-Hestia.woff") format("woff");
+}
+
+
+
+* {box-sizing:border-box;}
+html {position:relative;font-family:"SYFotf", "Noto Sans KR", Malgun gothic, "맑은고딕", Dotum, "돋움", sans-serif;font-weight:400;font-size:16px;line-height:1;letter-spacing:0;color:$colorDefault;background:$colorWhite;word-break:keep-all;word-wrap:break-word;}
+body {min-width:1360px;background-image:url($dirCommon+"img-footer.jpg");background-position:0 bottom;background-repeat:no-repeat;}
+h1,h2,h3,h4,h5,h6 {font-size:1rem;margin:0;}
+small {font-size:1rem;}
+ul, ol {list-style:none;margin:0;padding:0;}
+fieldset {margin:0;padding:0;border:none;}
+textarea {resize:none;outline:none;font-family:"SYFotf", "Noto Sans KR", Malgun gothic, "맑은고딕", Dotum, "돋움", sans-serif;}
+button {font-family:"SYFotf", "Noto Sans KR", Malgun gothic, "맑은고딕", Dotum, "돋움", sans-serif;cursor:pointer;padding:0;border:none;background:none;-webkit-tap-highlight-color:transparent;outline:none;}
+a {text-decoration:none;color:$colorDefault;-webkit-tap-highlight-color:transparent;}
+p {margin:0;}
+em {font-style:normal;}
+dl,dd {margin:0;}
+figure {margin:0;}
+img {vertical-align:top;}
+hr {display:none;}
+address {font-style:normal;}
+label {display:inline-block;}
+select {outline:none;font-family:"SYFotf", "Noto Sans KR", Malgun gothic, "맑은고딕", Dotum, "돋움", sans-serif;}
+.hide {
+    position:absolute;
+    top:-9999px;
+    left:-9999px;
+}
+
+@include mobile {
+    body {
+        min-width:100%;
+    }
+}
+
+
+
+// /* datepicker */
+// .ui-widget { font-family:"SYFotf", "Noto Sans KR", Malgun gothic, "맑은고딕", Dotum, "돋움", sans-serif; }
+// .ui-datepicker { width:280px; padding:0; border-radius:0; border-color:#a0a0a0; }
+// .ui-datepicker .ui-datepicker-header { padding:0; border:none; background:none; }
+// .ui-datepicker .ui-datepicker-title { line-height:45px; font-size:12px; color:#333; }
+// .ui-datepicker .ui-datepicker-next,
+// .ui-datepicker .ui-datepicker-prev { width:40px; height:40px; border-color:transparent; background:transparent; }
+// .ui-datepicker .ui-datepicker-next span,
+// .ui-datepicker .ui-datepicker-prev span { width:7px; height:13px; background:url() no-repeat -158px -34px; }
+// .ui-datepicker .ui-datepicker-prev span { transform:rotate(180deg); }
+// .ui-datepicker th { border-top:1px solid #f0f0f0; border-bottom:1px solid #f0f0f0; background:#f8f8f8; }
+// .ui-datepicker td { height:28px; text-align:center; }
+// .ui-datepicker td a { display:inline-block; width:24px; height:24px; text-align:center; line-height:24px; padding:0; border-radius:3px; border:none !important; background:#fff !important; }
+// .ui-datepicker td a.ui-state-active { font-size:12px; color:#fff; background:#1d53bf !important; }
+//
+// /* form set */
+// /* .form-area .input-area { padding:40px 30px 0; } */
+// .form-area .row { position:relative; margin-top:24px; }
+// .form-area .row:after { content:""; display:block; clear:both; }
+// .form-area .row:first-child { margin-top:0; }
+// .form-area .column { float:left; position:relative; width:calc((100% - 12px) / 2); margin-left:12px; }
+// .form-area .column:first-child { margin-left:0; }
+// .form-area .column:only-child { float:none; width:100%; }
+// .form-area .field-tit { display:block; font-size:14px; }
+// .form-area .field-input { position:relative; }
+// /* .form-area .field-tit.require:after { content:" *"; color:#ff0000; } */
+// .form-area .field-input > .inner:after { content:""; display:block; clear:both; }
+// .form-area .field-input > .inner > * { float:left; margin-left:10px; }
+// .form-area .field-input > .inner > *:only-child { margin-left:0; width:100%; }
+// .form-area .field-input > .inner > *:first-child { margin-left:0; }
+// .form-area .column.horizontal .field-tit,
+// .form-area .column.horizontal .field-input { float:left; }
+// .form-area .column.horizontal .field-tit { width:100px; line-height:36px; margin-bottom:0; }
+// .form-area .column.horizontal .field-input { width:calc(100% - 100px); }
+// .form-area .column.vertical .field-tit,
+// .form-area .column.vertical .field-input { display:block;}
+// .form-area .column.vertical .field-tit { margin-bottom:12px; }

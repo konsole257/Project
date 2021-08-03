@@ -1,0 +1,246 @@
+/**
+* --------------------------------
+* BBS List CSS
+* --------------------------------
+*/
+
+
+[class^="bbs"] {
+    &[class*="list"] {
+        &[class*="table"] {
+            @include notoSans();
+
+            font-size:18px;
+            color:$colorBlack;
+            border-top:2px solid $colorDefault;
+            border-bottom:1px solid $colorLightGray;
+
+            thead {
+                th {
+                    height:80px;
+                    font-weight:350;
+                    font-size:18px;
+                    border-bottom:1px solid $colorLightGray;
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        height:80px;
+                        text-align:center;
+                        padding:27px 0;
+                        border-top:1px solid $colorLightGray;
+
+                        &.subject {
+                            padding-left:78px;
+                            text-align:left;
+
+                            a {
+                                @include ellipsis(26px, 1);
+                            }
+                        }
+
+                        &.download {
+                            span {
+                                display:block;
+                                position:relative;
+                                height:100%;
+                                text-indent:-9999px;
+
+                                &:before {
+                                    @include bgList(8, 1);
+
+                                    content:"";
+                                    position:absolute;
+                                    top:0;
+                                    right:0;
+                                    bottom:0;
+                                    left:0;
+                                    width:22px;
+                                    height:26px;
+                                    margin:auto;
+                                    background-image:url($dirCommon+"icon.png");
+                                }
+                            }
+                        }
+
+                        &.date {
+                            color:$colorGray;
+                        }
+                    }
+
+                    &:first-child {
+                        td {
+                            border-top:none;
+                        }
+                    }
+                }
+            }
+        }
+
+        &[class*="gallery"] {
+            .img {
+                display:block;
+                width:520px;
+                height:371px;
+                overflow:hidden;
+
+                img {
+                    width:100%;
+                    height:100%;
+                    object-fit:cover;
+                }
+            }
+
+            .flag {
+                @include notoSans();
+
+                display:block;
+                width:80px;
+                height:32px;
+                text-align:center;
+                line-height:30px;
+                color:$colorBlack;
+                border:1px solid $colorBlack;
+                margin-top:28px;
+            }
+
+            .subject {
+                @include notoSans(700);
+                @include ellipsis(44px, 2);
+
+                font-size:32px;
+                color:$colorBlack;
+                margin-top:18px;
+            }
+
+            .cont {
+                @include notoSans();
+                @include ellipsis(28px, 2);
+
+                font-size:20px;
+                color:$colorGray;
+                margin-top:15px;
+            }
+
+            .date {
+                @include notoSans();
+
+                display:block;
+                font-size:20px;
+                color:$colorGray;
+                margin-top:28px;
+            }
+        }
+    }
+}
+
+@include mobile {
+    [class^="bbs"] {
+        &[class*="list"] {
+            &[class*="table"] {
+                display:block;
+                font-size:calcu(26px);
+                border-top:calcu(2px) solid $colorDefault;
+                border-bottom:calcu(2px) solid $colorLightGray;
+
+                thead {
+                    display:none;
+                }
+
+                tbody {
+                    display:block;
+
+                    tr {
+                        @include clearfix;
+
+                        display:block;
+
+                        td {
+                            display:block;
+                            float:left;
+                            height:calcu(120px);
+                            padding:calcu(46px) 0;
+                            border-top:calcu(2px) solid $colorLightGray;
+
+                            &.number {
+                                display:none;
+                            }
+
+                            &.subject {
+                                width:calc(100% - #{calcu(212px)});
+                                padding-left:0;
+
+                                a {
+                                    @include ellipsis(calcu(28px), 1);
+                                }
+                            }
+
+                            &.download {
+                                width:calcu(64px);
+
+                                span {
+                                    &:before {
+                                        @include bgList(1, 1);
+
+                                        width:calcu(24px);
+                                        height:calcu(28px);
+                                        background-image:url($dirCommonM+"icon.png");
+                                        background-size:calcu(720px);
+                                    }
+                                }
+                            }
+
+                            &.date {
+                                float:right;
+                                width:calcu(148px);
+                                text-align:right;
+                                color:$colorGray;
+                            }
+                        }
+
+                        &:first-child {
+                            td {
+                                border-top:none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &[class*="gallery"] {
+                .img {
+                    width:100%;
+                    height:auto;
+                }
+
+                .flag {
+                    @include notoSans();
+
+                    display:block;
+                    width:calcu(108px);
+                    height:calcu(40px);
+                    font-size:calcu(22px);
+                    line-height:calcu(36px);
+                    border:calcu(2px) solid $colorBlack;
+                    margin-top:calcu(40px);
+                }
+
+                .subject {
+                    @include ellipsis(calcu(64px), 2);
+
+                    font-size:calcu(48px);
+                    margin-top:calcu(14px);
+                }
+
+                .date {
+                    @include notoSans();
+
+                    font-size:calcu(28px);
+                    margin-top:calcu(28px);
+                }
+            }
+        }
+    }
+}

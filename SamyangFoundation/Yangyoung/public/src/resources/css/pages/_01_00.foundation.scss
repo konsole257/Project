@@ -1,0 +1,30 @@
+/**
+* --------------------------------
+* Foundation CSS
+* --------------------------------
+*/
+
+.foundation {
+    #contents  {
+        > .header {
+            .tit {
+                background-image:url($dirSub+"bg-about-header.jpg");
+            }
+        }
+
+        > .cont {
+            width:1360px;
+            margin:80px auto 0;
+        }
+    }
+}
+
+@include mobile {
+    .foundation {
+        #contents  {
+            > .cont {
+                margin-top:0;
+            }
+        }
+    }
+}

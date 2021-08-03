@@ -1,0 +1,30 @@
+/* radio */
+input[type="radio"] {
+    position:absolute;left:-9999px;
+
+    + span {
+        display:inline-block;
+        position:relative;
+        line-height:22px;
+        cursor:pointer;
+        user-select:none;
+
+        &:before {
+            @include bgList(3, 1);
+
+            content:"";
+            display:inline-block;
+            vertical-align:top;
+            margin-right:12px;
+            width:22px;
+            height:22px;
+            background-image:url($dirCommon+'form.png');
+        }
+    }
+
+    &:checked {
+        + span:before {
+            @include bgList(4, 1);
+        }
+    }
+}

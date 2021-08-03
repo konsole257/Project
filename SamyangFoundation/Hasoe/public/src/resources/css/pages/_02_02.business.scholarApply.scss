@@ -1,0 +1,295 @@
+/**
+* --------------------------------
+* ScholarApply CSS
+* --------------------------------
+*/
+
+.scholarApply {
+    overflow:hidden;
+
+    > .cont {
+         padding-bottom:0 !important;
+    }
+
+    .caution {
+        @include clearfix;
+
+        margin-top:70px;
+
+        strong {
+            float:left;
+            font-size:48px;
+            line-height:68px;
+        }
+
+        .txt-caution {
+            float:right;
+            font-size:18px;
+            line-height:28px;
+            color:#444;
+        }
+    }
+
+    .apply-area {
+        width:100vw;
+        padding:50px 0 120px;
+        margin-top:130px;
+        margin-left:calc((-100vw + 1080px) / 2);
+        background-color:#f9f9f9;
+
+        > .inner {
+            width:1080px;
+            margin:0 auto;
+        }
+
+        h3.tit {
+            margin-bottom:30px !important;
+        }
+
+        .txt {
+            @include notoSans();
+
+            font-size:20px;
+            text-align:center;
+            color:#888;
+        }
+
+        .btn-area {
+            margin-top:80px;
+
+            [class*="btn"] {
+                width:320px;
+                height:320px;
+                margin-left:60px;
+                border-radius:100%;
+                border-color:#f0f0f0;
+
+                span {
+                    &:before {
+                        content:"";
+                        display:block;
+                        margin:0 auto 28px;
+                        background-image:url($dirCommon+'icon.png');
+                    }
+                }
+
+                &:first-child {
+                    margin-left:0;
+                }
+
+                &.btn-apply {
+                    span {
+                        &:before {
+                            @include bgList(8, 2);
+
+                            width:53px;
+                            height:56px;
+                        }
+                    }
+                }
+
+                &.btn-applyPre {
+                    span {
+                        &:before {
+                            @include bgList(10, 2);
+
+                            width:75px;
+                            height:56px;
+                        }
+                    }
+                }
+
+                &.btn-view {
+                    span {
+                        &:before {
+                            @include bgList(13, 2);
+
+                            width:56px;
+                            height:56px;
+                        }
+                    }
+                }
+
+                &:hover {
+                    color:$colorWhite;
+                    border-color:$colorBlue;
+                    background-color:$colorBlue;
+
+                    &.btn-apply {
+                        span {
+                            &:before {
+                                @include bgList(8, 4);
+                            }
+                        }
+                    }
+
+                    &.btn-applyPre {
+                        span {
+                            &:before {
+                                @include bgList(10, 4);
+                            }
+                        }
+                    }
+
+                    &.btn-view {
+                        span {
+                            &:before {
+                                @include bgList(13, 4);
+                            }
+                        }
+                    }
+                }
+
+                small {
+                    display:block;
+                    line-height:20px;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .scholarApply {
+
+        > .cont {
+            margin-bottom:-60px !important;
+
+             img {
+                 width:100%;
+             }
+        }
+
+        .caution {
+            @include clearfix;
+
+            margin-top:70px;
+
+            strong {
+                float:left;
+                font-size:48px;
+                line-height:68px;
+            }
+
+            .txt-caution {
+                float:right;
+                font-size:18px;
+                line-height:28px;
+                color:#444;
+            }
+        }
+
+        .apply-area {
+            margin-left:-26px;
+            margin-right:-26px;
+
+            > .inner {
+                width:100%;
+            }
+
+            h3.tit {
+                margin-bottom:30px !important;
+            }
+
+            .txt {
+                @include notoSans();
+
+                font-size:20px;
+                text-align:center;
+                color:#888;
+            }
+
+            .btn-area {
+                display:block !important;
+                text-align:center;
+
+                [class*="btn"] {
+                    display:inline-flex;
+                    margin:60px auto 0;
+
+                    span {
+                        &:before {
+                            content:"";
+                            display:block;
+                            margin:0 auto 28px;
+                            background-image:url($dirCommon+'icon.png');
+                        }
+                    }
+
+                    &:first-child {
+                        margin-top:0;
+                    }
+
+                    &.btn-apply {
+                        span {
+                            &:before {
+                                @include bgList(8, 2);
+
+                                width:53px;
+                                height:56px;
+                            }
+                        }
+                    }
+
+                    &.btn-applyPre {
+                        span {
+                            &:before {
+                                @include bgList(10, 2);
+
+                                width:75px;
+                                height:56px;
+                            }
+                        }
+                    }
+
+                    &.btn-view {
+                        span {
+                            &:before {
+                                @include bgList(13, 2);
+
+                                width:56px;
+                                height:56px;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        color:$colorWhite;
+                        border-color:$colorBlue;
+                        background-color:$colorBlue;
+
+                        &.btn-apply {
+                            span {
+                                &:before {
+                                    @include bgList(8, 4);
+                                }
+                            }
+                        }
+
+                        &.btn-applyPre {
+                            span {
+                                &:before {
+                                    @include bgList(10, 4);
+                                }
+                            }
+                        }
+
+                        &.btn-view {
+                            span {
+                                &:before {
+                                    @include bgList(13, 4);
+                                }
+                            }
+                        }
+                    }
+
+                    small {
+                        display:block;
+                        line-height:20px;
+                    }
+                }
+            }
+        }
+    }
+
+}

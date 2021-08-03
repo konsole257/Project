@@ -1,0 +1,97 @@
+/**
+* --------------------------------
+* Greeting CSS
+* --------------------------------
+*/
+
+.greeting {
+    > .cont {
+        @include clearfix;
+
+        img {
+            float:left;
+        }
+
+        .txt-greeting {
+            float:left;
+            width:708px;
+            margin-left:92px;
+
+            strong {
+                display:block;
+                font-size:48px;
+                line-height:64px;
+                margin-bottom:49px;
+            }
+
+            p {
+                @include notoSans();
+
+                font-size:20px;
+                line-height:34px;
+                color:$colorGray;
+                margin-top:19px;
+
+                &:first-child {
+                    margin-top:0;
+                }
+            }
+
+            .sign {
+                color:$colorDefault;
+
+                b {
+                    display:block;
+                    font-size:24px;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .greeting {
+        > .cont {
+            img {
+                float:none;
+                width:100%;
+            }
+
+            .txt-greeting {
+                float:none;
+                width:100%;
+                margin-left:0;
+
+                strong {
+                    display:block;
+                    font-size:48px;
+                    line-height:64px;
+                    margin-bottom:49px;
+                }
+
+                p {
+                    @include notoSans();
+
+                    font-size:20px;
+                    line-height:34px;
+                    color:$colorGray;
+                    margin-top:19px;
+
+                    &:first-child {
+                        margin-top:0;
+                    }
+                }
+
+                .sign {
+                    color:$colorDefault;
+
+                    b {
+                        display:block;
+                        font-size:24px;
+                    }
+                }
+            }
+        }
+    }
+
+}

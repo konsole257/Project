@@ -1,0 +1,322 @@
+/* 팝업 : 연구(논문) 지원 최종제출 */
+.popup-thesisApply {
+    .contents {
+        li {
+            text-indent:-16px;
+            padding-left:16px;
+            margin-top:16px;
+            text-align:left;
+
+            &:first-child {
+                margin-top:0;
+            }
+        }
+    }
+}
+
+/* 팝업 : 수당상 역대수상자 */
+[class*="popup-history"],
+[class*="popup-judge"] {
+    > .inner {
+        width:680px;
+        padding:0;
+
+        > .header {
+            background-color:#52876f;
+
+            .tit {
+                height:99px;
+                line-height:99px;
+                font-family:"SYFotf", "Noto Sans KR", Malgun gothic, "맑은고딕", Dotum, "돋움", sans-serif;
+                font-weight:400;
+                font-size:28px;
+                color:$colorWhite;
+                padding:0 40px;
+                margin-bottom:0 !important;
+                border-bottom:0;
+            }
+
+            .btn-close {
+                top:0;
+                right:25px;
+                bottom:0;
+                margin:auto;
+
+                &:before {
+                    @include bgList(17, 1);
+
+                    width:25px;
+                    height:25px;
+                }
+            }
+        }
+
+        > .contents {
+            font-family:"SYFotf", "Noto Sans KR", Malgun gothic, "맑은고딕", Dotum, "돋움", sans-serif;
+            max-height:640px;
+            margin:0;
+            padding:0 40px;
+            overflow:hidden;
+            overflow-y:scroll;
+
+            > .inner {
+                padding:40px 0;
+            }
+
+            .info-area {
+                @include clearfix;
+
+                margin-bottom:40px;
+
+                .pic {
+                    float:left;
+                    width:130px;
+                    height:130px;
+                    border-radius:100%;
+                    overflow:hidden;
+                }
+
+                .txt-info {
+                    float:left;
+                    margin-left:22px;
+
+                    .sector {
+                        font-size:18px;
+                        color:$colorGreen;
+                        margin:14px 0 18px;
+                    }
+
+                    .name {
+                        display:block;
+                        font-weight:400;
+                        font-size:32px;
+                        line-height:42px;
+                    }
+
+                    small {
+                        font-size:18px;
+                        line-height:32px;
+                    }
+                }
+            }
+
+            table {
+                letter-spacing:-0.03em;
+
+                caption {
+                    font-weight:500;
+                    font-size:20px;
+                    text-align:left;
+                    color:#000;
+                    margin-bottom:20px;
+                }
+
+                td {
+                    font-size:18px;
+                    border:none;
+                }
+            }
+
+            .txt {
+                @include notoSans();
+
+                font-size:18px;
+                line-height:28px;
+                text-align:left;
+                color:#444;
+                margin-top:28px;
+                margin-bottom:0;
+
+                &:first-of-type {
+                    margin-top:35px;
+                }
+            }
+        }
+    }
+}
+[class*="popup-history"] {
+    > .inner {
+        > .contents {
+            table {
+                th {
+                    background-color:#f8f8f8;
+                }
+
+                td {
+                    font-size:16px;
+                    padding:0 34px;
+                    text-align:left;
+                    border-top:1px solid $colorLightGray;
+                    background-color:transparent;
+
+                    &:first-child {
+                        padding:0 18px;
+                        background-color:#f8f8f8;
+                    }
+                }
+            }
+
+            .txt {
+                font-size:16px;
+            }
+        }
+    }
+}
+[class*="popup-judge"] {
+    > .inner {
+        > .contents {
+            table {
+                margin-top:40px;
+
+                tbody {
+                    th {
+                        background-color:#f8f8f8;
+                    }
+
+                    td {
+                        padding:0 !important;
+                        text-align:center;
+                        border-top:1px solid #efefef;
+                        background-color:transparent;
+
+                        &:first-of-type {
+                            border-right:1px solid #efefef;
+                        }
+                    }
+
+                    tr:first-child {
+                        th,
+                        td {
+                            border-top:1px solid $colorLightGray;
+                        }
+                    }
+                }
+
+                &:first-child {
+                    margin-top:0;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    [class*="popup-history"],
+    [class*="popup-judge"] {
+        > .inner {
+            > .header {
+                .tit {
+                }
+
+                .btn-close {
+                    right:0;
+
+                    &:before {
+                    }
+                }
+            }
+
+            > .contents {
+                max-height:360px;
+                > .inner {
+                }
+
+                .info-area {
+
+                    .pic {
+                        float:none;
+                    }
+
+                    .txt-info {
+                        float:none;
+                        margin-left:0;
+
+                        .sector {
+                        }
+
+                        .name {
+                        }
+
+                        small {
+                        }
+                    }
+                }
+
+                table {
+                    caption {
+                        display:block;
+                    }
+
+                    th {
+                        display:block;
+                    }
+
+                    td {
+                    }
+                }
+
+                .txt {
+                    &:first-of-type {
+                    }
+                }
+            }
+        }
+    }
+
+    [class*="popup-history"] {
+        > .inner {
+            > .contents {
+                table {
+                    th {
+                    }
+
+                    td {
+                        padding:0 18px !important;
+
+                        &:first-child {
+                        }
+                    }
+                }
+
+                .txt {
+                }
+            }
+        }
+    }
+    [class*="popup-judge"] {
+        > .inner {
+            > .contents {
+                table {
+
+                    tbody {
+                        th {
+                            padding:0 18px;
+                        }
+
+                        td {
+                            padding:0 18px !important;
+                            text-align:left;
+                            border:none;
+
+                            &:first-of-type {
+                            }
+                        }
+
+                        tr:first-child {
+                            td {
+                                border:none;
+
+                                &:first-of-type {
+                                    border-top:1px solid $colorLightGray
+                                }
+                            }
+                        }
+                    }
+
+                    &:first-child {
+                    }
+                }
+            }
+        }
+    }
+}

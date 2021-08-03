@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" type="text/css" href="../resources/css/lib/normalize.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/lib/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/lib/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+
+	<title>Publishing Style Guide</title>
+
+	<style>
+		/* #wrap { height:auto; }
+		#container { min-height:auto; padding:0; overflow:hidden; }
+		#contents { padding:0; }
+		.htmlprocess-tit { width:1220px; font-size:16px; background:#000; color:#fff; margin:0 auto; font-weight:bold; padding:5px 10px; box-sizing:border-box; }
+		.guide-wrap { width:1220px; margin:0 auto; padding:10px 0 20px !important;  }
+		.guide-wrap .htmlprocess-tit2 { font-size:16px; color:#000; padding:5px 10px; margin:40px 0 20px; border-top:1px solid #000; background:#f2f2f2; }
+		.guide-wrap .htmlprocess-tit2:first-of-type { margin-top:0; }
+		.guide-wrap .guide {padding:10px; width:100%; background:#fff; box-sizing:border-box;}
+		code { display:block; position:relative; font-size:14px; letter-spacing:0; line-height:20px; margin-top:10px; padding:10px 10px 10px 30px; border:1px solid #777; background:#fafafa; }
+		code:before { display:block; content:""; position:absolute; left:0; top:0; width:20px; height:100%; background:#777; } */
+
+		#guide-menu { position:fixed; top:0; left:0; width:300px; height:100%; padding:30px 0; background:#fafafa; box-sizing:border-box; }
+		#guide-menu a { display:block; line-height:30px; padding:0 30px; }
+		#guide-menu a:hover,
+		#guide-menu a.active { background:#eee; }
+		#guide-menu a:before { content:">"; margin-right:10px; }
+
+		#guide-wrap { height:100vh; padding-left:300px; }
+
+		#guide-contents { height:100%; padding-bottom:0; }
+		#guide-contents > .guide-tit { padding:20px; }
+		#guide-contents > .guide-inner { height:100%; margin-top:-72px; padding-top:72px; box-sizing:border-box; }
+
+		#guide-contents .guide-viewer-area { position:relative; height:60%; padding:0 20px 20px; box-sizing:border-box; }
+		#guide-contents .guide-viewer-area > .guide-viewer { height:100%; overflow-y:auto; }
+
+		#guide-contents .guide-code-area { height:40%; letter-spacing:0; padding:10px 20px; box-sizing:border-box; }
+		#guide-contents .guide-code-area .guide-tab-menu { border-bottom:1px solid #e0e0e0; }
+		#guide-contents .guide-code-area .guide-tab-menu a { display:inline-block; width:25%; height:38px; font-size:14px; line-height:38px; padding:0 20px; }
+		#guide-contents .guide-code-area .guide-tab-menu a { color:#767676; }
+		#guide-contents .guide-code-area .guide-tab-menu a.active { position:relative; font-weight:bold; color:#1d53bf; }
+		#guide-contents .guide-code-area .guide-tab-menu a.active:after { content:""; position:absolute; bottom:-1px; left:0; width:100%; height:2px; background:#1d53bf; }
+		#guide-contents .guide-code-area .guide-code { display:block; position:relative; height:calc(100% - 60px); padding:20px 20px 20px 30px; margin-top:20px; border:1px solid #777; background:#f7f7f7; box-sizing:border-box; }
+		#guide-contents .guide-code-area .guide-code:before { content: ""; position:absolute; left:0; top:0; width:20px; height:100%; background:#777; }
+		#guide-contents .guide-code-area .guide-code > textarea { height:100%; font-size:12px; margin:0; border:none; box-sizing:border-box; overflow-y:auto; background:transparent; }
+
+		.guide-resize-handle { position:absolute; background:#eee; }
+		.guide-resize-handle:after { content:""; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); box-sizing:border-box; }
+		.guide-resize-handle.horizon { top:0; right:0; width:10px; height:100%; cursor:col-resize; }
+		.guide-resize-handle.vertical { bottom:0; left:0; width:100%; height:10px; cursor:row-resize; }
+		.guide-resize-handle.horizon:after { width:6px; height:12px; border-left:2px solid #ccc; border-right:2px solid #ccc; }
+		.guide-resize-handle.vertical:after { width:12px; height:6px; border-top:2px solid #ccc; border-bottom:2px solid #ccc; }
+
+		.guide-resize { user-select:none; }
+	</style>
+</head>
+<body>
+	<!-- Header // -->
+	<header id="guide-header">
+		<nav id="guide-menu">
+			<a href="#font" class="active">Font</a>
+			<a href="#form">Form</a>
+			<a href="#button">Button</a>
+			<a href="#tabmenu">Tab Menu</a>
+			<a href="#text">Text</a>
+			<a href="#pagination">Pagination</a>
+			<a href="#popup">Popup</a>
+			<a href="#productlist">Product List</a>
+			<a href="#grade">Grade</a>
+
+			<div class="guide-resize-handle horizon"></div>
+		</nav>
+	</header>
+	<!-- // Header -->
+
+	<!-- Wrap // -->
+
+	<main id="guide-wrap">
+		<section id="guide-contents">
+			<h1 class="guide-tit">Font</h1>
+
+			<div class="guide-inner">
+				<div class="guide-viewer-area">
+					<div class="guide-viewer">
+						<!-- table// -->
+						{{include('./components/table.html', {
+							"prop": {
+								"class": "table-class",
+								"style": "1",
+								"caption": {
+									"text": "caption",
+									"captionVisible": false
+								},
+								"colgroup": {
+									"colWidth": [
+										"100px",
+										"100px"
+									]
+								},
+								"thead": {
+									"th": [
+										"th1",
+										"th2"
+									]
+								},
+								"tbody": {
+									"td": [
+										"td1",
+										"td2"
+									]
+								}
+							}
+						})}}
+						<!-- //table -->
+					</div>
+
+					<div class="guide-resize-handle vertical"></div>
+				</div>
+
+				<div class="guide-code-area">
+					<div class="guide-tab-menu">
+						<a href="#html" class="active">HTML</a>
+						<a href="#gulp">GULP</a>
+					</div>
+
+					<div class="guide-code">
+						<textarea readonly>
+<!-- table// -->
+{{include('./components/table.html', {
+	"prop": {
+		"class": "table-class",
+		"style": "1",
+		"caption": {
+			"text": "caption",
+			"captionVisible": false
+		},
+		"colgroup": {
+			"colWidth": [
+				"100px",
+				"100px"
+			]
+		},
+		"thead": {
+			"th": [
+				"th1",
+				"th2"
+			]
+		},
+		"tbody": {
+			"td": [
+				"td1",
+				"td2"
+			]
+		}
+	}
+})}}
+<!-- //table -->
+						</textarea>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- // Wrap -->
+
+	<script src="../resources/js/lib/jquery-3.3.1.min.js"></script>
+	<script src="../resources/js/lib/jquery-ui.min.js"></script>
+	<script src="../resources/js/lib/swiper.min.js"></script>
+	<script src="../resources/js/function.js"></script>
+	<script src="../resources/js/jessicar.js"></script>
+
+	<script>
+	var resizeHandleDown = false;
+	var pageXtemp = false;
+	var pageXcurrent = false;
+	var pageYtemp = false;
+	var pageYcurrent = false;
+	var menuWidth = false;
+	var contentsBodyHeight = false;
+	var contentsCodeHeight = false;
+
+	$('.guide-resize-handle').mousedown(function(e){
+		var thisClass = $(this).attr('class').split(' ')[1];
+
+		switch (thisClass) {
+			case 'horizon':
+				resizeHandleDown = 'horizon';
+				pageXtemp = e.pageX;
+				menuWidth = $('#guide-menu').outerWidth();
+			break;
+
+			case 'vertical':
+				resizeHandleDown = 'vertical';
+				pageYtemp = e.pageY;
+				contentsBodyHeight = $('#guide-contents .guide-viewer-area').outerHeight();
+				contentsCodeHeight = $('#guide-contents .guide-code-area').outerHeight();
+			break;
+		}
+
+		$('body').addClass('resize');
+	});
+
+	$(document).mousemove(function(e){
+		switch (resizeHandleDown) {
+			case 'horizon' :
+				pageXcurrent = e.pageX-pageXtemp;
+
+				$('#guide-menu').css({'width':menuWidth+pageXcurrent});
+				$('#guide-wrap').css({'padding-left':menuWidth+pageXcurrent});
+			break;
+
+			case 'vertical' :
+				pageYcurrent = e.pageY-pageYtemp;
+
+				$('#guide-contents .guide-viewer-area').css({'height':contentsBodyHeight+pageYcurrent});
+				$('#guide-contents .guide-code-area').css({'height':contentsCodeHeight-pageYcurrent});
+			break;
+		}
+	}).mouseup(function(){
+		if (resizeHandleDown) {
+			resizeHandleDown = false;
+			$('body').removeClass('resize');
+		}
+	});
+	</script>
+
+</body>
+</html>

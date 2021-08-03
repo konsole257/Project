@@ -1,0 +1,23 @@
+/**
+* --------------------------------
+* Foundation CSS
+* --------------------------------
+*/
+
+.foundation {
+    #contents  {
+        // > .cont {
+        //     width:1360px;
+        // }
+    }
+}
+
+@include mobile {
+    .foundation {
+        #contents  {
+            > .cont {
+                margin-top:0;
+            }
+        }
+    }
+}

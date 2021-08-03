@@ -1,0 +1,11 @@
+#container {
+    min-width:1360px;
+    padding-bottom:150px;
+}
+
+@include mobile {
+    #container {
+        min-width:100%;
+        padding-bottom:calcu(120px);
+    }
+}

@@ -1,0 +1,145 @@
+/**
+* --------------------------------
+* Pagination CSS
+* --------------------------------
+*/
+
+.pagination {
+    display:block;
+    font-size:0;
+    text-align:center;
+
+    a {
+        @include notoSans();
+
+        display:inline-block;
+        position:relative;
+        width:32px;
+        height:32px;
+        text-align:center;
+        vertical-align:top;
+        line-height:32px;
+        margin-left:8px;
+        border:1px solid $colorLightGray;
+
+        &:before {
+            content:"";
+            position:absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            height:13px;
+            margin:auto;
+            background-image:url($dirCommon+"pagination.png");
+        }
+
+        &:first-child {
+            margin-left:0;
+        }
+
+        &.first {
+            &:before {
+                @include bgList(2, 1);
+
+                transform:rotate(180deg);
+                width:14px;
+            }
+        }
+
+        &.prev {
+            &:before {
+                @include bgList(1, 1);
+
+                transform:rotate(180deg);
+                width:7px;
+            }
+        }
+
+        &.next {
+            &:before {
+                @include bgList(1, 1);
+
+                width:7px;
+            }
+        }
+
+        &.last {
+            &:before {
+                @include bgList(2, 1);
+
+                width:14px;
+            }
+        }
+    }
+
+    .number {
+        display:inline-block;
+        margin:0 30px;
+
+        a {
+            font-size:18px;
+            color:$colorLightGray;
+            margin-left:0;
+            border:none;
+
+            &:before {
+                display:none;
+            }
+
+            &.active {
+                color:$colorBrown;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .pagination {
+        a {
+            width:calcu(48px);
+            height:calcu(48px);
+            line-height:calcu(44px);
+            margin-left:calcu(16px);
+            border:calcu(2px) solid $colorLightGray;
+
+            &:before {
+                height:calcu(22px);
+                background-image:url($dirCommonM+"pagination.png");
+                background-size:calcu(720px);
+            }
+
+            &.first {
+                &:before {
+                    width:calcu(20px);
+                }
+            }
+
+            &.prev {
+                &:before {
+                    width:calcu(12px);
+                }
+            }
+
+            &.next {
+                &:before {
+                    width:calcu(12px);
+                }
+            }
+
+            &.last {
+                &:before {
+                    width:calcu(20px);
+                }
+            }
+        }
+
+        .number {
+            margin:0 calcu(40px);
+
+            a {
+                font-size:calcu(24px);
+            }
+        }
+    }
+}

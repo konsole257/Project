@@ -1,0 +1,43 @@
+/* datepicker */
+
+.datepicker {
+    position:relative;
+    display:inline-block;
+
+    &:after {
+        @include bgList(13, 1);
+
+        content:"";
+        position:absolute;
+        z-index:-1;
+        top:12px;
+        right:17px;
+        width:25px;
+        height:23px;
+        background-image:url($dirCommon+'icon.png');
+    }
+
+    input {
+        background-color:transparent;
+
+        &[readonly] {
+            color:$colorDefault;
+            background-color:transparent;
+        }
+
+        &[disabled] {
+            color:$colorLightGray;
+            background-color:#eee;
+        }
+    }
+}
+
+@include mobile {
+    .datepicker {
+        width:100%;
+
+        &:after {
+            top:8px;
+        }
+    }
+}

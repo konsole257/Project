@@ -1,0 +1,213 @@
+/**
+* --------------------------------
+* History CSS
+* --------------------------------
+*/
+
+.history {
+    > .cont {
+        h3.tit {
+            margin-bottom:30px !important;
+
+            & + .txt {
+                @include notoSans();
+
+                font-size:20px;
+                color:#888;
+                text-align:center;
+                margin-bottom:50px;
+            }
+        }
+
+
+
+        table {
+            @include notoSans();
+            border-top:2px solid #222;
+            border-bottom:1px solid $colorLightGray;
+
+            th {
+                height:80px;
+                font-weight:350;
+                font-size:18px;
+            }
+
+            td {
+                position:relative;
+                height:67px;
+                border-top:1px solid #efefef;
+                border-right:1px solid #efefef;
+
+
+                &[rowspan] {
+                    text-align:center;
+                    border-top:1px solid $colorLightGray;
+                }
+
+                &[rowspan] + td {
+                    border-top:1px solid $colorLightGray;
+                }
+
+                &:first-child[rowspan] {
+                    background-color:#f8f8f8;
+                }
+
+                &:not([rowspan]) {
+                    padding:0 40px;
+
+                    a {
+                        position:absolute;
+                        right:40px;
+                    }
+                }
+
+                &:last-child[rowspan],
+                &:last-child[colspan] {
+                    border-right:none;
+                }
+
+                .round {
+                    display:none;
+                }
+
+                a {
+                    color:$colorGreen;
+                    padding-bottom:7px;
+                    border-bottom:1px solid $colorGreen;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .history {
+        > .cont {
+            table {
+                display:block;
+                border-top:none;
+
+                thead {
+                    display:none;
+                }
+
+                tbody {
+                    display:block;
+                    position:relative;
+                    margin-top:50px;
+                    padding-bottom:50px;
+                    border-top:2px solid #222;
+
+                    &:first-of-type {
+                        margin-top:0;
+                    }
+
+                    &.none {
+                        padding-bottom:0;
+                        margin-top:0;
+                    }
+
+                    &:not([class]) + .none {
+                        margin-top:50px;
+                    }
+
+                    tr {
+                        display:block;
+                        padding:20px 0;
+                        border-top:1px solid $colorLightGray;
+
+                        &:first-of-type {
+                            border-top:none;
+                        }
+                    }
+                }
+
+                th {
+                    text-align:left;
+
+                    height:auto;
+                }
+
+                td {
+                    display:block;
+                    position:static;
+                    text-align:left;
+                    height:auto;
+                    border:none;
+
+                    &[rowspan] {
+                        position:absolute;
+                        top:20px;
+                        right:0;
+                        text-align:left;
+                        color:$colorGray;
+                        border-top:none;
+                        padding:10px 0 20px;
+                    }
+
+                    &[rowspan] + td {
+                        border-top:none;
+                    }
+
+                    &:first-child[rowspan] {
+                        position:static;
+                        font-weight:500;
+                        color:$colorDefault;
+                        font-size:20px;
+                        background-color:transparent;
+                    }
+
+                    &:not([rowspan]) {
+                        padding:0;
+
+                        a {
+                            display:block;
+                            position:static;
+                            height:48px;
+                            font-size:16px;
+                            line-height:46px;
+                            text-align:center;
+                            border:1px solid $colorLightGray;
+                            color:$colorGray;
+                        }
+                    }
+
+                    &:last-child[rowspan],
+                    &:last-child[colspan] {
+                        border-right:none;
+                    }
+
+                    &:last-child[rowspan], {
+                        position:static;
+                        padding:0;
+
+                        a {
+                            position:absolute;
+                            bottom:0;
+                            left:0;
+                            width:100%;
+                            height:48px;
+                            font-size:16px;
+                            line-height:46px;
+                            text-align:center;
+                            color:$colorWhite;
+                            padding:0;
+                            border-bottom:none;
+                            background-color:$colorGreen;
+                        }
+                    }
+
+                    .round {
+                        display:inline;
+                    }
+
+                    .sector {
+                        display:block;
+                        margin:8px 0 15px;
+                    }
+                }
+            }
+        }
+    }
+
+}

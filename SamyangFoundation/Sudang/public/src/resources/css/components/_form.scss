@@ -1,0 +1,168 @@
+/**
+* --------------------------------
+* Form CSS
+* --------------------------------
+*/
+
+.form {
+    @include notoSans();
+
+    .row {
+        margin-top:12px;
+
+        > span {
+            @include clearfix;
+
+            display:block;
+            position:relative;
+        }
+
+        &.phone {
+            input {
+                float:left;
+                width:calc(100% - 120px);
+            }
+
+            .btn-confirm {
+                float:left;
+                width:110px;
+                margin-left:10px;
+            }
+        }
+
+
+        &:first-of-type {
+            margin-top:0;
+        }
+
+        .caution {
+            display:block;
+            font-size:14px;
+            color:$colorRed;
+            margin-top:10px;
+        }
+    }
+
+    .form-fieldset {
+        legend {
+            width:100%;
+            height:72px;
+            font-size:24px;
+            line-height:70px;
+            margin-bottom:34px;
+            border-bottom:2px solid $colorDefault;
+        }
+
+        .form-table {
+            position:relative;
+
+            tbody {
+                position:relative;
+
+                &:before {
+                    content:"";
+                    display:table-row;
+                    height:70px;
+                }
+
+                &:after {
+                    content:"";
+                    position:absolute;
+                    width:100%;
+                    height:1px;
+                    margin-top:35px;
+                    background-color:#dfdfdf;
+                }
+
+                &:first-of-type {
+                    border-top:none;
+
+                    &:before {
+                        display:none;
+                    }
+                }
+
+                &:last-of-type {
+                    border-top:none;
+
+                    &:after {
+                        display:none;
+                    }
+                }
+            }
+
+            th {
+                font-weight:350;
+                text-align:left;
+                vertical-align:top;
+                color:#444;
+                padding:6px 0;
+
+                &:after {
+                    content:"";
+                    display:inline-block;
+                    height:48px;
+                    vertical-align:middle;
+
+                }
+
+                span {
+                    display:inline-block;
+                    vertical-align:middle;
+                    line-height:24px;
+                }
+
+                &.required {
+                    span {
+                        &:after {
+                            content:"*";
+                            display:inline;
+                            color:$colorRed;
+                        }
+                    }
+                }
+            }
+
+            td {
+                padding:6px 0;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .form {
+        .form-fieldset {
+            legend {
+                display:block;
+            }
+
+            .form-table {
+                display:block;
+                position:relative;
+
+                tbody {
+                    display:block;
+
+                    tr {
+                        display:block;
+                    }
+
+                    th {
+                        display:block;
+                        padding:16px 0 6px;
+
+                        &:after {
+                            display:none;
+                        }
+                    }
+
+                    td {
+                        display:block;
+                        padding:0;
+                    }
+                }
+            }
+        }
+    }
+}

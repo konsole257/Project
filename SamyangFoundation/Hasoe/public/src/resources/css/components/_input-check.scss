@@ -1,0 +1,59 @@
+/**
+* --------------------------------
+* input Checkbox CSS
+* --------------------------------
+*/
+
+input[type="checkbox"] {
+    position:absolute;
+    left:-9999px;
+
+    + span {
+        display:inline-block;
+        position:relative;
+        font-size:16px;
+        line-height:24px;
+        cursor:pointer;
+        user-select:none;
+
+        &:before {
+            @include bgList(5, 1);
+
+            content:"";
+            display:inline-block;
+            width:24px;
+            height:24px;
+            vertical-align:top;
+            margin-right:12px;
+            background-image:url($dirCommon+'form.png');
+        }
+    }
+
+    &:checked {
+        + span {
+            &:before {
+                @include bgList(6, 1);
+            }
+        }
+
+        &[disabled] {
+            + span {
+                color:$colorDefault;
+
+                &:before {
+                    @include bgList(6, 1);
+                }
+            }
+        }
+    }
+
+    &[disabled] {
+        + span {
+            color:$colorLightGray;
+
+            &:before {
+                @include bgList(7, 1);
+            }
+        }
+    }
+}

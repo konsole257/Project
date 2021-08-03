@@ -1,0 +1,115 @@
+/**
+* --------------------------------
+* Greeting CSS
+* --------------------------------
+*/
+
+.greeting {
+    > .cont {
+        @include clearfix;
+
+        .img-greeting {
+            float:left;
+            .sign {
+                margin-top:20px;
+                color:#222;
+                font-size:18px;
+                text-align:right;
+
+                b {
+                    margin-left:10px;
+                    font-size:32px;
+                }
+            }
+        }
+
+        .txt-greeting {
+            float:left;
+            width:600px;
+            margin-left:60px;
+
+            strong {
+                display:block;
+                font-weight:350;
+                font-size:40px;
+                line-height:52px;
+                margin-bottom:49px;
+            }
+
+            p {
+                @include notoSans();
+
+                font-weight:300;
+                font-size:20px;
+                line-height:34px;
+                color:#444;
+                margin-top:19px;
+
+                &:first-child {
+                    margin-top:0;
+                }
+            }
+
+            .sign {
+                color:$colorDefault;
+
+                b {
+                    display:block;
+                    font-size:24px;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .greeting {
+        > .cont {
+            .img-greeting {
+                float:none;
+
+                img {
+                    float:none;
+                    width:100%;
+                }
+            }
+
+            .txt-greeting {
+                float:none;
+                width:100%;
+                margin-left:0;
+                margin-top:40px;
+
+                strong {
+                    display:block;
+                    font-size:38px;
+                    line-height:50px;
+                    margin-bottom:49px;
+                }
+
+                p {
+                    @include notoSans();
+
+                    font-size:20px;
+                    line-height:34px;
+                    color:$colorGray;
+                    margin-top:19px;
+
+                    &:first-child {
+                        margin-top:0;
+                    }
+                }
+
+                .sign {
+                    color:$colorDefault;
+
+                    b {
+                        display:block;
+                        font-size:24px;
+                    }
+                }
+            }
+        }
+    }
+
+}

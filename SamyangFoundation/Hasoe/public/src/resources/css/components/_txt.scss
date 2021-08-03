@@ -1,0 +1,40 @@
+/**
+* --------------------------------
+* txt CSS
+* --------------------------------
+*/
+
+.txt-area {
+    line-height:24px;
+    color:$colorGray;
+    padding:15px 24px;
+    background-color:#efefef;
+}
+
+
+[class^="bullet"] {
+    text-indent:-12px;
+    padding-left:12px;
+
+    &:before {
+        content:"";
+        display:inline-block;
+        width:4px;
+        height:4px;
+        margin-right:6px;
+        vertical-align:3px;
+        border-radius:100%;
+    }
+
+    &[class*="black"] {
+        &:before {
+            background-color:#444;
+        }
+    }
+
+    &[class*="gray"] {
+        &:before {
+            background-color:$colorGray;
+        }
+    }
+}

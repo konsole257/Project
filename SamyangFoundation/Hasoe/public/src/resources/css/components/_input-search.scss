@@ -1,0 +1,80 @@
+/**
+* --------------------------------
+* Input Search CSS
+* --------------------------------
+*/
+
+[class*="input"] {
+    &[class*="search"] {
+        position:relative;
+
+        // .btn-reset {
+        //     position:absolute;
+        //     top:0;
+        //     right:126px;
+        //     width:78px;
+        //     height:100%;
+        //
+        //     &:after {
+        //         @include bgList(3, 1);
+        //
+        //         content:"";
+        //         position:absolute;
+        //         top:0;
+        //         right:0;
+        //         bottom:0;
+        //         left:0;
+        //         width:48px;
+        //         height:48px;
+        //         margin:auto;
+        //         background-image:url($dirCommon+"form.png");
+        //         background-size:900px auto;
+        //     }
+        // }
+        //
+        input {
+            border-color:$colorLightGray;
+        }
+
+        .btn-search {
+            position:absolute;
+            top:0;
+            right:0;
+            width:63px;
+            height:100%;
+
+            &:after {
+                @include bgList(2, 1);
+
+                content:"";
+                position:absolute;
+                top:0;
+                right:0;
+                bottom:0;
+                left:0;
+                width:25px;
+                height:26px;
+                margin:auto;
+                background-image:url($dirCommon+"form.png");
+            }
+        }
+    }
+}
+
+@include mobile {
+    /* search */
+    [class*="input"] {
+        &[class*="search"] {
+            .btn-search {
+                width:calcu(88px);
+
+                &:after {
+                    width:calcu(32px);
+                    height:calcu(32px);
+                    background-image:url($dirCommonM+"form.png");
+                    background-size:calcu(720px);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,201 @@
+/**
+* --------------------------------
+* About CSS
+* --------------------------------
+*/
+
+.about {
+    position:relative;
+    background-image:linear-gradient(to bottom, #fff , #e7e9ec);
+
+    &:before {
+        content:"";
+        position:absolute;
+        bottom:0;
+        right:0;
+        width:100vw;
+        height:616px;
+        background-image:url($dirSub+'bg-about.jpg');
+        background-position:0 bottom;
+    }
+
+    > .cont {
+        @include clearfix;
+
+        position:relative;
+        z-index:1;
+
+        .about-area {
+            @include clearfix;
+
+            img {
+                float:left;
+            }
+
+            .txt-about {
+                float:left;
+                width:708px;
+                margin-left:92px;
+
+                strong {
+                    display:block;
+                    font-size:48px;
+                    line-height:64px;
+                    margin-bottom:49px;
+                }
+
+                p {
+                    @include notoSans();
+
+                    font-size:20px;
+                    line-height:34px;
+                    color:$colorGray;
+                    margin-top:19px;
+
+                    &:first-child {
+                        margin-top:0;
+                    }
+                }
+            }
+        }
+
+        .major-area {
+            @include clearfix;
+
+            margin-top:100px;
+
+            > div {
+                float:left;
+                width:650px;
+                margin-left:60px;
+
+                &:first-of-type {
+                    margin-left:0;
+                }
+
+                div {
+                    @include notoSans();
+
+                    text-align:center;
+                    padding:60px 0;
+                    background-color:#fff;
+
+                    strong {
+                        font-weight:350;
+                        font-size:36px;
+                    }
+
+                    p {
+                        margin:18px 0 40px;
+                    }
+
+                    a {
+                        width:290px;
+                    }
+                }
+            }
+        }
+
+        .story-area {
+            margin-top:130px;
+
+            > div {
+                div {
+                    @include clearfix;
+
+                    padding:60px 80px;
+                    background-color:#fff;
+
+                    strong {
+                        float:left;
+                        width:286px;
+                        font-size:36px;
+                    }
+
+                    p {
+                        float:left;
+                        width:914px;
+                        line-height:26px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .about {
+        &:before {
+            height:100vh;
+            background-size:100%;
+            background-repeat:no-repeat;
+        }
+
+        > .cont {
+            .about-area {
+                img {
+                    float:none;
+                    width:100%;
+                }
+
+                .txt-about {
+                    float:none;
+                    width:100%;
+                    margin-left:0;
+
+                    strong {
+                        font-size:38px;
+                        line-height:50px;
+                    }
+                }
+            }
+
+            .major-area {
+                > div {
+                    float:none;
+                    width:100%;
+                    margin-left:0;
+                    margin-top:60px;
+
+                    &:first-of-type {
+                        margin-top:0;
+                    }
+
+                    img {
+                        width:100%;
+                    }
+
+                    div {
+                        padding:60px 15px;
+                    }
+                }
+            }
+
+            .story-area {
+                margin-top:130px;
+
+                > div {
+
+                    img {
+                        width:100%;
+                    }
+
+                    div {
+                        padding:60px 15px;
+
+                        strong {
+                            float:none;
+                            width:100%;
+                        }
+
+                        p {
+                            float:none;
+                            width:100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

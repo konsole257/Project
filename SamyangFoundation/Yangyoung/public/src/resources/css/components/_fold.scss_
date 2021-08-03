@@ -1,0 +1,45 @@
+/* fold */
+.fold {
+    > .btn-fold {
+        position:relative;
+        width:100%;
+        height:calcu(111px);
+        font-weight:700;
+        font-size:calcu(42px);
+        text-align:left !important;
+        color:#767676;
+
+        &:after {
+            @include bgList(1, 1);
+
+            content:"";
+            transform:rotate(180deg);
+            position:absolute;
+            top:0;
+            bottom:0;
+            width:calcu(30px);
+            height:calcu(17px);
+            vertical-align:middle;
+            margin:auto;
+            margin-left:calcu(24px);
+            background-image:url($dirCommon+"btn-arrow.png");
+            background-size:calcu(900px) auto;
+        }
+    }
+
+    > .content {
+        display:none;
+    }
+
+    &.active {
+        > .btn-fold {
+            &:after {
+                transform:rotate(0);
+            }
+        }
+
+        > .content {
+            display:block;
+        }
+    }
+}

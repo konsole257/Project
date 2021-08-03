@@ -1,0 +1,79 @@
+/**
+* --------------------------------
+* policy CSS
+* --------------------------------
+*/
+
+.policy {
+    #contents  {
+        > .header {
+            .tit {
+                height:160px !important;
+                line-height:160px !important;
+                background-image:url($dirSub+"bg-service-header.jpg");
+            }
+
+            .path {
+                width:1080px !important;
+            }
+        }
+
+        > .cont {
+            width:1080px !important;
+            font-weight:350;
+            font-family:"Noto Sans KR", Malgungothic, 맑은고딕, sans-serif;
+
+            .menu {
+                padding:40px;
+
+                border:2px solid $colorLightGray;
+                overflow:hidden;
+
+                > div {
+                    float:left;
+                    width:50%;
+
+                    > div {
+                        margin-top:16px;
+
+                        &:first-child {
+                            margin-top:0;
+                        }
+                    }
+                }
+            }
+
+            .txt {
+                strong {
+                    display:block;
+                    font-size:18px;
+                    line-height:72px;
+                    margin-top:20px;
+                }
+
+                p {
+                    line-height:28px;
+                    color:$colorGray;
+
+                    span {
+                        display:block;
+                        line-height:48px;
+                        color:$colorDefault;
+                    }
+
+                    .depth2 {
+                        color:$colorGray;
+                        line-height:28px;
+                        margin-left:20px;
+                    }
+
+                    .depth3 {
+                        color:$colorGray;
+                        line-height:28px;
+                        margin-left:42px;
+                    }
+                }
+            }
+        }
+    }
+}

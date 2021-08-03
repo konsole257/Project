@@ -1,0 +1,470 @@
+/**
+* --------------------------------
+* Research CSS
+* --------------------------------
+*/
+
+.research {
+    overflow:hidden;
+
+    .info-area {
+        .txt {
+            @include clearfix;
+
+            margin-top:70px;
+
+            strong {
+                float:left;
+                font-size:48px;
+                line-height:64px;
+            }
+
+            p {
+                float:right;
+                font-size:18px;
+                line-height:34px;
+            }
+        }
+    }
+
+    .result-area {
+        margin-top:130px;
+
+        h3.tit {
+            font-weight:400;
+            margin-bottom:30px !important;
+        }
+
+        .txt {
+            @include notoSans();
+
+            font-size:20px;
+            text-align:center;
+            line-height:32px;
+            color:#888;
+        }
+
+        .result {
+            text-align:center;
+            margin-top:60px;
+
+            p {
+                display:inline-flex;
+                align-items:center;
+                justify-content:center;
+                position:relative;
+                width:220px;
+                height:220px;
+                vertical-align:top;
+                margin-left:89px;
+                border-radius:100%;
+                background-color:#f9f9fa;
+
+                span {
+                    font-size:18px;
+
+                    span {
+                        display:block;
+                        color:$colorGray;
+                        margin-top:18px;
+
+                        em {
+                            font-weight:500;
+                            font-size:40px;
+                            color:$colorBlue;
+                        }
+                    }
+                }
+
+                &:before {
+                    @include bgList(15, 2);
+
+                    content:"";
+                    position:absolute;
+                    left:-70px;
+                    top:0;
+                    bottom:0;
+                    width:53px;
+                    height:4px;
+                    margin:auto;
+                    background-image:url($dirCommon+'icon.png');
+                }
+
+                &:first-child {
+                    margin-left:0;
+
+                    &:before {
+                        display:none;
+                    }
+                }
+            }
+
+            small {
+                @include notoSans();
+
+                display:block;
+                font-size:14px;
+                text-align:center;
+                color:#999;
+                margin-top:18px;
+            }
+        }
+    }
+
+    .apply-area {
+        width:100vw;
+        padding:80px 0 65px;
+        margin-top:130px;
+        margin-left:calc((-100vw + 1080px) / 2);
+        background-color:#f9f9f9;
+
+        > .inner {
+            width:1080px;
+            margin:0 auto;
+        }
+
+        h3.tit {
+            margin-bottom:30px !important;
+        }
+
+        .txt {
+            @include notoSans();
+
+            font-size:20px;
+            text-align:center;
+            line-height:32px;
+            color:#888;
+        }
+
+        ul {
+            @include clearfix;
+
+            margin-top:80px;
+
+            li {
+                @include notoSans();
+
+                float:left;
+                position:relative;
+                font-size:24px;
+                text-align:center;
+                line-height:32px;
+                margin-left:52px;
+
+                &:before {
+                    content:"";
+                    display:block;
+                    width:174px;
+                    height:174px;
+                    margin-bottom:20px;
+                    border-radius:100%;
+                    background-color:$colorWhite;
+                }
+
+                &:after {
+                    content:"";
+                    position:absolute;
+                    z-index:1;
+                    top:52px;
+                    left:0;
+                    right:0;
+                    height:71px;
+                    margin:auto;
+                    background-image:url($dirCommon+'icon.png');
+                }
+
+                &:first-child {
+                    margin-left:0;
+                }
+
+                &:nth-child(1):after {
+                    @include bgList(1, 6);
+
+                    width:62px;
+                }
+
+                &:nth-child(2):after {
+                    @include bgList(4, 6);
+
+                    width:63px;
+                }
+
+                &:nth-child(3):after {
+                    @include bgList(7, 6);
+
+                    width:56px;
+                }
+
+                &:nth-child(4):after {
+                    @include bgList(9, 6);
+
+                    width:78px;
+                }
+
+                &:nth-child(5):after {
+                    @include bgList(12, 6);
+
+                    width:67px;
+                }
+
+                small {
+                    font-size:14px;
+                    color:#999;
+                }
+            }
+        }
+    }
+
+    .target-area {
+        font-size:18px;
+        line-height:32px;
+        padding-top:108px;
+
+        dt {
+            position:absolute;
+            font-weight:700;
+            padding-top:26px;
+            margin-top:26px;
+        }
+
+        dd {
+            text-indent:-10px;
+            padding-left:190px;
+            margin-top:10px;
+
+            &:last-of-type {
+                padding-bottom:26px;
+                border-bottom:1px solid #e6e6e6;
+            }
+        }
+
+        dt + dd {
+            padding-top:26px;
+            margin-top:26px;
+            border-top:1px solid #e6e6e6;
+        }
+
+        dt:first-of-type {
+            margin-top:0;
+
+            & + dd {
+                border-top:none;
+                margin-top:0;
+            }
+        }
+    }
+
+    .txt-info {
+        padding-bottom:73px;
+        margin-top:90px;
+        border-bottom:1px solid #efefef;
+
+        strong {
+            display:block;
+            font-size:20px;
+            line-height:42px;
+            text-align:center;
+
+            &:before {
+                @include bgList(1, 9);
+
+                content:"";
+                display:block;
+                width:89px;
+                height:89px;
+                margin:0 auto 16px;
+                background-image:url($dirCommon+'icon.png');
+            }
+        }
+
+        p {
+            @include notoSans();
+
+            line-height:24px;
+            color:#444;
+            text-align:center;
+        }
+    }
+
+    .btn-area {
+        text-align:center;
+        margin-top:60px;
+
+        .btn-apply {
+            width:290px;
+        }
+    }
+}
+
+@include mobile {
+    .research {
+        overflow:hidden;
+
+        .info-area {
+            img {
+                width:100%;
+            }
+
+            .txt {
+                strong {
+                    float:none;
+                    font-size:38px;
+                    line-height:50px;
+                }
+
+                p {
+                    float:none;
+                }
+            }
+        }
+
+        .result-area {
+            h3.tit {
+                font-weight:400;
+                margin-bottom:30px !important;
+            }
+
+            .result {
+                p {
+                    display:flex;
+                    margin:20px auto 0;
+
+                    span {
+                        font-size:18px;
+
+                        span {
+                            display:block;
+                            color:$colorGray;
+                            margin-top:18px;
+
+                            em {
+                                font-weight:500;
+                                font-size:40px;
+                                color:$colorBlue;
+                            }
+                        }
+                    }
+
+                    &:before {
+                        display:none;
+                    }
+
+                    &:first-child {
+                        margin:0 auto;
+
+                        &:before {
+                            display:none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .apply-area {
+            padding:80px 26px 65px;
+            margin-top:130px;
+            margin-left:-26px;
+            background-color:#f9f9f9;
+
+            > .inner {
+                width:100%;
+            }
+
+            ul {
+                li {
+                    float:none;
+                    margin-left:0;
+                    margin-top:50px;
+
+                    &:before {
+                        margin:0 auto 20px;
+                    }
+
+                    &:first-child {
+                        margin-top:0;
+                    }
+                }
+            }
+        }
+
+        .target-area {
+            font-size:18px;
+            line-height:32px;
+            padding-top:108px;
+
+            dt {
+                position:static;
+                font-weight:700;
+                padding-top:26px;
+                margin-top:26px;
+            }
+
+            dd {
+                text-indent:0;
+                padding-left:0;
+                margin-top:0;
+
+                &:last-of-type {
+                    padding-bottom:26px;
+                    border-bottom:1px solid #e6e6e6;
+                }
+            }
+
+            dt + dd {
+                padding-top:0;
+                margin-top:0;
+                border-top:none;
+            }
+
+            dt:first-of-type {
+                margin-top:0;
+
+                & + dd {
+                    border-top:none;
+                    margin-top:0;
+                }
+            }
+        }
+
+        .txt-info {
+            padding-bottom:73px;
+            margin-top:90px;
+            border-bottom:1px solid #efefef;
+
+            strong {
+                display:block;
+                font-size:20px;
+                line-height:42px;
+                text-align:center;
+
+                &:before {
+                    @include bgList(1, 9);
+
+                    content:"";
+                    display:block;
+                    width:89px;
+                    height:89px;
+                    margin:0 auto 16px;
+                    background-image:url($dirCommon+'icon.png');
+                }
+            }
+
+            p {
+                @include notoSans();
+
+                line-height:24px;
+                color:#444;
+                text-align:center;
+            }
+        }
+
+        .btn-area {
+            text-align:center;
+            margin-top:60px;
+
+            .btn-apply {
+                width:290px;
+            }
+        }
+    }
+}

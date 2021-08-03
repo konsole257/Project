@@ -1,0 +1,48 @@
+/**
+* --------------------------------
+* ResearchApply Step1 CSS
+* --------------------------------
+*/
+
+.researchApplyStep1 {
+    > .header {
+        .path {
+            display:none;
+        }
+    }
+    
+    .cont {
+        .form {
+            width:440px;
+            margin:0 auto;
+
+            .timer {
+                @include notoSans();
+
+                position:absolute;
+                top:0;
+                right:24px;
+                color:$colorGray;
+                line-height:48px;
+            }
+
+            .btn-submit {
+                margin-top:48px;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .researchApplyStep1 {
+        .cont {
+            .form {
+                width:100%;
+
+                .timer {
+                    line-height:40px;
+                }
+            }
+        }
+    }
+}

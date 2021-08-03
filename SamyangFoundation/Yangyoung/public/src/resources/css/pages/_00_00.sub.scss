@@ -1,0 +1,185 @@
+/**
+* --------------------------------
+* Sub CSS
+* --------------------------------
+*/
+
+#header {
+    &:after {
+        display:none;
+    }
+}
+
+#contents {
+    > .header {
+        position:relative;
+
+        .tit {
+            height:208px;
+            font-size:36px;
+            text-align:center;
+            line-height:160px;
+            color:$colorWhite;
+        }
+
+        .menu {
+            display:flex;
+            width:1360px;
+            margin:-48px auto 0;
+
+            li {
+                flex:1;
+                position:relative;
+
+                a {
+                    @include notoSans();
+
+                    display:block;
+                    height:48px;
+                    font-size:16px;
+                    text-align:center;
+                    line-height:48px;
+                    color:$colorWhite;
+                    background-color:rgba(0, 0, 0, 0.5);
+                }
+
+                &:before {
+                    content:"";
+                    position:absolute;
+                    top:0;
+                    left:-1px;
+                    width:1px;
+                    height:100%;
+                    background-color:rgba(255, 255, 255, 0.3);
+                }
+
+                &:first-child {
+                    &:before {
+                        display:none;
+                    }
+                }
+
+                &.active {
+                    a {
+                        color:$colorDefault;
+                        background-color:$colorWhite;
+                    }
+
+                    &:before {
+                        display:none;
+                    }
+                }
+            }
+        }
+
+        .path {
+            @include notoSans();
+
+            width:1360px;
+            margin:28px auto 0;
+            text-align:right;
+
+            a {
+                display:inline-block;
+                vertical-align:top;
+                color:$colorGray;
+
+                &:before {
+                    @include bgList(1, 1);
+
+                    content:"";
+                    display:inline-block;
+                    width:8px;
+                    height:14px;
+                    vertical-align:top;
+                    margin:2px 10px 0 7px;
+                    background-image:url($dirCommon+"path.png");
+                }
+
+                &:first-child {
+                    &:before {
+                        display:none;
+                    }
+                }
+
+                &:last-child {
+                    color:$colorDefault;
+                }
+            }
+        }
+    }
+
+    > .cont {
+        width:1080px;
+        padding:55px 0 120px;
+        margin:0 auto;
+
+        > h3.tit,
+        > * > h3.tit,
+        > * > * > h3.tit {
+            font-size:40px;
+            text-align:center;
+            margin-bottom:60px;
+
+            &:before {
+                content:"";
+                display:block;
+                width:1px;
+                height:40px;
+                margin:0 auto 40px;
+                background-color:$colorGray;
+            }
+        }
+    }
+}
+
+@include mobile {
+    #contents {
+        > .header {
+            .tit {
+                height:calcu(232px);
+                font-size:calcu(40px);
+                line-height:calcu(152px);
+                background-size:auto 100%;
+                background-position:center;
+            }
+
+            .menu {
+                display:flex;
+                width:100%;
+                margin:calcu(-80px) auto 0;
+
+                li {
+                    flex:1;
+
+                    a {
+                        display:block;
+                        height:calcu(80px);
+                        font-size:calcu(24px);
+                        line-height:calcu(80px);
+                    }
+                }
+            }
+
+            .path {
+                display:none;
+            }
+        }
+
+        > .cont {
+            width:100% !important;
+            padding:calcu(66px) calcu(52px) calcu(120px) !important;
+
+            h3.tit {
+                font-size:calcu(40px);
+                margin-bottom:calcu(48px);
+
+                &:before {
+                    width:calcu(2px);
+                    height:calcu(60px);
+                    margin:0 auto calcu(60px);
+                }
+            }
+        }
+    }
+}

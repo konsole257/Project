@@ -1,0 +1,80 @@
+/**
+* --------------------------------
+* Notice CSS
+* --------------------------------
+*/
+
+.notice {
+    > .cont {
+        .bbs-list-area {
+            position:relative;
+            margin-top:40px;
+
+            .bbs-list {
+                @include clearfix;
+
+                li {
+                    float:left;
+                    margin:84px 0 0 24px;
+
+                    &:nth-child(3n + 1) {
+                        margin-left:0;
+                    }
+
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        margin-top:0;
+                    }
+
+                    a {
+                        display:block;
+                        width:384px;
+
+                        img {
+                            width:100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .pagination {
+            margin-top:80px;
+        }
+    }
+}
+
+@include mobile {
+    .notice {
+        > .cont {
+            .bbs-list-area {
+                margin-top:calcu(40px);
+
+                .bbs-list {
+                    li {
+                        float:none;
+                        margin:calcu(80px) 0 0;
+
+                        &:first-child {
+                            margin-top:0;
+                        }
+
+                        &:nth-child(2),
+                        &:nth-child(3) {
+                            margin-top:calcu(80px);
+                        }
+
+                        a {
+                            width:100%;
+                        }
+                    }
+                }
+            }
+
+            .pagination {
+                margin-top:calcu(80px);
+            }
+        }
+    }
+}

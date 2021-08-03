@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+/**
+* --------------------------------
+* Common CSS
+* --------------------------------
+*/
+
+@font-face {
+    font-family: "SYFotf";
+    src: local("SYFotfRe00"), local("Samyang_Regular"),
+        url($dirFonts+"SYFotfRe00.woff2") format("woff2"),
+        url($dirFonts+"SYFotfRe00.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family:"SYFotf";
+	src: local("SYFotfMe00"), local("Samyang_Medium"),
+        url($dirFonts+"SYFotfMe00.woff2") format("woff2"),
+        url($dirFonts+"SYFotfMe00.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SYFotf";
+	src: local("SYFotfBo00"), local("Samyang_Bold"),
+        url($dirFonts+"SYFotfBo00.woff2") format("woff2"),
+        url($dirFonts+"SYFotfBo00.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 300;
+    src: local("Noto Sans Light"), local("NotoSans-Light"),
+    url($dirFonts+"NotoSansKR-Light-Hestia.woff") format("woff"),
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 350;
+    src: local("Noto Sans DemiLight"), local("NotoSans-DemiLight"),
+    url($dirFonts+"NotoSansKR-DemiLight-Hestia.woff") format("woff"),
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 500;
+    src: local("Noto Sans Medium"), local("NotoSans-Medium"),
+    url($dirFonts+"NotoSansKR-Medium-Hestia.woff") format("woff"),
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Noto Sans Bold"), local("NotoSans-Bold"),
+    url($dirFonts+"NotoSansKR-Bold-Hestia.woff") format("woff"),
+}
+
+* {box-sizing:border-box;}
+html {position:relative;font-family:"SYFotf", "Noto Sans KR", Malgun gothic, "맑은고딕", Dotum, "돋움", sans-serif;font-weight:400;font-size:16px;line-height:1;letter-spacing:-0.03em;color:$colorDefault;background:$colorWhite;word-break:keep-all;word-wrap:break-word;}
+h1,h2,h3,h4,h5,h6 {font-size:1rem;margin:0;}
+small {font-size:1rem;}
+ul, ol {list-style:none;margin:0;padding:0;}
+fieldset {margin:0;padding:0;border:none;}
+textarea {resize:none;outline:none;font-family:"SYFotf", "Noto Sans KR", Malgun gothic, "맑은고딕", Dotum, "돋움", sans-serif;}
+button {font-family:"SYFotf", "Noto Sans KR", Malgun gothic, "맑은고딕", Dotum, "돋움", sans-serif;cursor:pointer;padding:0;border:none;background:none;-webkit-tap-highlight-color:transparent;outline:none;}
+a {text-decoration:none;color:$colorDefault;-webkit-tap-highlight-color:transparent;}
+p {margin:0;}
+em {font-style:normal;}
+dl,dd {margin:0;}
+figure {margin:0;}
+img {vertical-align:top;}
+hr {display:none;}
+address {font-style:normal;}
+label {display:inline-block;}
+select {outline:none;font-family:"SYFotf", "Noto Sans KR", Malgun gothic, "맑은고딕", Dotum, "돋움", sans-serif;}
+.hide {
+    position:absolute;
+    top:-9999px;
+    left:-9999px;
+}

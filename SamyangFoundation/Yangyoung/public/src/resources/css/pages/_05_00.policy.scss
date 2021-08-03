@@ -1,0 +1,162 @@
+/**
+* --------------------------------
+* policy CSS
+* --------------------------------
+*/
+
+.policy {
+    #contents  {
+        > .header {
+            .tit {
+                height:160px !important;
+                line-height:160px !important;
+                background-image:url($dirSub+"bg-service-header.jpg");
+            }
+
+            .path {
+                width:1080px !important;
+            }
+        }
+
+        > .cont {
+            width:1080px !important;
+            font-weight:350;
+            font-family:"Noto Sans KR", Malgungothic, 맑은고딕, sans-serif;
+
+            .menu {
+                padding:40px;
+
+                border:2px solid $colorLightGray;
+                overflow:hidden;
+
+                > div {
+                    float:left;
+                    width:50%;
+
+                    > div {
+                        margin-top:16px;
+
+                        &:first-child {
+                            margin-top:0;
+                        }
+                    }
+                }
+            }
+
+            .txt {
+                letter-spacing:-0.03em;
+
+                strong {
+                    display:block;
+                    font-size:18px;
+                    line-height:72px;
+                    margin-top:20px;
+                }
+
+                p {
+                    line-height:28px;
+                    color:$colorGray;
+
+                    span {
+                        display:block;
+                        line-height:48px;
+                        color:$colorDefault;
+                    }
+
+                    .depth1 {
+                        color:$colorGray;
+                        line-height:28px;
+
+                        &[class*="bullet"] {
+                            &[class*="number"] {
+                                text-indent:-20px;
+                                padding-left:20px;
+                            }
+
+                            &[class*="hyphen"] {
+                                text-indent:-10px;
+                                padding-left:10px;
+                            }
+                        }
+                    }
+
+                    .depth2 {
+                        color:$colorGray;
+                        line-height:28px;
+                        margin-left:20px;
+
+                        &[class*="bullet"] {
+                            &[class*="number"] {
+                                text-indent:-20px;
+                                padding-left:20px;
+                            }
+
+                            &[class*="hyphen"] {
+                                text-indent:-10px;
+                                padding-left:10px;
+                            }
+                        }
+                    }
+
+                    .depth3 {
+                        color:$colorGray;
+                        line-height:28px;
+                        margin-left:42px;
+
+                        &[class*="bullet"] {
+                            &[class*="number"] {
+                                text-indent:-20px;
+                                padding-left:20px;
+                            }
+
+                            &[class*="hyphen"] {
+                                text-indent:-10px;
+                                padding-left:10px;
+                            }
+                        }
+                    }
+                }
+
+                table {
+                    margin-top:40px;
+                     border-top:2px solid $colorDefault;
+                     border-bottom:1px solid $colorLightGray;
+
+                     th {
+                         height:48px;
+                         font-weight:350;
+                         border-top:1px solid #efefef;
+                         background-color:#f8f8f8;
+                     }
+
+                     td {
+                         height:48px;
+                         text-align:center;
+                         color:$colorGray;
+                         border-top:1px solid #efefef;
+                     }
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .policy {
+        #contents  {
+            > .cont {
+                width:100% !important;
+
+                .txt {
+                    table {
+                        colgroup {
+                            col {
+                                width:25% !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

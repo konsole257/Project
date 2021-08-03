@@ -1,0 +1,145 @@
+/**
+* --------------------------------
+* Location CSS
+* --------------------------------
+*/
+
+.location {
+    .cont {
+        .location-info {
+            @include clearfix;
+
+            margin-top:53px;
+
+            .info-area {
+                float:left;
+                width:533px;
+
+                dt {
+                    clear:left;
+                    float:left;
+                    width:111px;
+                    font-weight:700;
+                    font-size:18px;
+                    line-height:28px;
+                    margin-top:11px;
+
+                    &:before {
+                        content:"";
+                        display:inline-block;
+                        width:4px;
+                        height:4px;
+                        vertical-align:4px;
+                        margin-right:13px;
+                        border-radius:100%;
+                        background-color:$colorBlack;
+                    }
+                }
+
+                dd {
+                    float:left;
+                    font-size:18px;
+                    line-height:28px;
+                    margin-top:11px;
+                }
+            }
+
+            .bus-area {
+                float:left;
+                width:453px;
+
+                dt {
+                    font-weight:700;
+                    font-size:18px;
+                    line-height:28px;
+
+                    &:before {
+                        @include bgList(6, 9);
+                        content:"";
+                        display:inline-block;
+                        width:28px;
+                        height:28px;
+                        vertical-align:top;
+                        margin-right:13px;
+                        background-image:url($dirCommon+'icon.png');
+                    }
+                }
+
+                dd {
+                    font-size:18px;
+                    line-height:28px;
+                    margin:11px 0 0 40px;
+                }
+            }
+
+            .subway-area {
+                float:left;
+                width:374px;
+
+                dt {
+                    font-weight:700;
+                    font-size:18px;
+                    line-height:28px;
+
+                    &:before {
+                        @include bgList(7, 9);
+                        content:"";
+                        display:inline-block;
+                        width:28px;
+                        height:28px;
+                        vertical-align:top;
+                        margin-right:13px;
+                        background-image:url($dirCommon+'icon.png');
+                    }
+                }
+
+                dd {
+                    font-size:18px;
+                    line-height:28px;
+                    margin:11px 0 0 40px;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .location {
+        .cont {
+            img {
+                width:100%;
+            }
+
+            .location-info {
+                .info-area {
+                    float:none;
+                    width:100%;
+
+                    dt {
+                        float:none;
+                        width:100%;
+                        margin-top:11px;
+                    }
+
+                    dd {
+                        float:none;
+                        margin-top:0;
+                    }
+                }
+
+                .bus-area {
+                    float:none;
+                    width:100%;
+                    margin-top:50px;
+                }
+
+                .subway-area {
+                    float:none;
+                    width:100%;
+                    margin-top:50px;
+                }
+            }
+        }
+    }
+
+}

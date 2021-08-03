@@ -1,0 +1,72 @@
+/**
+* --------------------------------
+* RecommendApply Step3 CSS
+* --------------------------------
+*/
+
+.recommendApplyStep3 {
+    > .header {
+        .path {
+            display:none;
+        }
+    }
+    
+    .cont {
+        padding-top:131px !important;
+
+        .txt {
+            @include notoSans();
+
+            font-size:20px;
+            text-align:center;
+
+            &:before {
+                @include bgList(1, 2);
+
+                content:"";
+                display:block;
+                width:80px;
+                height:101px;
+                margin:0 auto 30px;
+                background-image:url($dirCommon+"icon.png");
+            }
+        }
+
+        .btn-area {
+            margin-top:58px;
+
+            [class^="btn"] {
+                width:280px;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .recommendApplyStep3 {
+        .cont {
+            .txt {
+                @include notoSans();
+
+                font-size:20px;
+                text-align:center;
+
+                &:before {
+                    @include bgList(1, 2);
+
+                    content:"";
+                    display:block;
+                    width:80px;
+                    height:101px;
+                    margin:0 auto 30px;
+                    background-image:url($dirCommon+"icon.png");
+                }
+            }
+
+            .btn-area {
+                margin-top:58px;
+            }
+        }
+    }
+
+}

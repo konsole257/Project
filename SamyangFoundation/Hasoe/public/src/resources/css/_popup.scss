@@ -1,0 +1,42 @@
+/* 팝업 : 조건필터 */
+// .popup-filter {
+//     .contents {
+//         section {
+//             padding:calcu(120px) calcu(84px);
+//             margin-top:calcu(27px);
+//             background-color:#fff;
+//
+//             > .tit {
+//                 font-weight:400;
+//                 margin-bottom:calcu(60px);
+//             }
+//
+//             &.price-area {
+//                 margin-top:0;
+//                 padding-bottom:calcu(180px);
+//             }
+//
+//             &.distance-area {
+//                 padding-top:0;
+//                 padding-bottom:calcu(180px);
+//                 margin-top:0;
+//             }
+//
+//             &.year-area {
+//                 padding-top:0;
+//                 padding-bottom:calcu(180px);
+//                 margin-top:0;
+//             }
+//
+//             &.fuel-area,
+//             &.transmission-area {
+//                 @include clearfix;
+//
+//                 label {
+//                     float:left;
+//                     margin:0 calcu(24px) calcu(30px) 0;
+//                 }
+//             }
+//         }
+//     }
+// }

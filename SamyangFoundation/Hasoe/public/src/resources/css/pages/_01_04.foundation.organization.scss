@@ -1,0 +1,149 @@
+/**
+* --------------------------------
+* Organization CSS
+* --------------------------------
+*/
+
+.organization {
+    .cont {
+        > h3.tit {
+            &:before {
+                display:none !important;
+            }
+        }
+
+        .secretariat-area {
+            margin-top:150px;
+
+            .info-area {
+                @include clearfix;
+
+                padding:49px 153px 41px;
+                background-color:#f8f8f8;
+
+                dt {
+                    float:left;
+                    position:relative;
+                    width:30px;
+                    height:30px;
+                    text-indent:-9999px;
+
+                    &:before {
+                        content:"";
+                        position:absolute;
+                        top:0;
+                        left:0;
+                        width:30px;
+                        height:30px;
+                        background-image:url($dirCommon+'icon.png');
+                    }
+
+                    &.location {
+                        &:before {
+                            @include bgList(4, 9);
+                        }
+                    }
+
+                    &.call {
+                        margin-left:402px;
+
+                        &:before {
+                            @include bgList(5, 9);
+                        }
+                    }
+                }
+
+                dd {
+                    float:left;
+                    font-weight:500;
+                    font-size:24px;
+                    line-height:30px;
+                    color:#444;
+                    margin-left:12px;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+
+    .organization {
+        .cont {
+            img {
+                width:100%;
+            }
+
+            .secretariat-area {
+                margin-top:70px;
+
+                .info-area {
+                    @include clearfix;
+
+                    padding:20px 15px;
+
+                    dt {
+                        clear:left;
+                        width:41px;
+                        height:30px;
+                        text-indent:-9999px;
+                        margin-top:20px;
+                        padding-top:20px;
+                        border-top:1px solid #e2e2e2;
+
+                        &:before {
+                            content:"";
+                            position:absolute;
+                            top:20px;
+                            left:auto;
+                            right:0;
+                            width:30px;
+                            height:30px;
+                            background-image:url($dirCommon+'icon.png');
+                        }
+
+                        &:first-of-type {
+                            margin-top:0;
+                            padding-top:0;
+                            border-top:none;
+
+                            &:before {
+                                top:0;
+                            }
+                        }
+
+                        &.location {
+                            &:before {
+                                @include bgList(4, 9);
+                            }
+                        }
+
+                        &.call {
+                            margin-left:0;
+
+                            &:before {
+                                @include bgList(5, 9);
+                            }
+                        }
+                    }
+
+                    dd {
+                        width:calc(100% - 41px);
+                        font-size:16px;
+                        margin-left:0;
+                        padding-left:15px;
+                        margin-top:20px;
+                        padding-top:20px;
+                        border-top:1px solid #e2e2e2;
+
+                        &:first-of-type {
+                            margin-top:0;
+                            padding-top:0;
+                            border-top:none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

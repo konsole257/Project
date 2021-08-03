@@ -1,0 +1,33 @@
+/**
+* --------------------------------
+* Library CSS
+* --------------------------------
+*/
+
+.library {
+    > .cont {
+        .bbs-list-area {
+            position:relative;
+            margin-top:40px;
+        }
+
+        .pagination {
+            margin-top:80px;
+        }
+    }
+}
+
+@include mobile {
+    .library {
+        > .cont {
+            .bbs-list-area {
+                margin-top:calcu(40px);
+            }
+
+            .pagination {
+                margin-top:calcu(80px);
+            }
+        }
+    }
+
+}

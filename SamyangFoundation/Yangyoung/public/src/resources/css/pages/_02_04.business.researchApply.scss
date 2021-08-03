@@ -1,0 +1,229 @@
+/**
+* --------------------------------
+* ResearchApply CSS
+* --------------------------------
+*/
+
+.researchApply {
+    overflow:hidden;
+
+    > .cont {
+         padding-bottom:0 !important;
+    }
+
+    .caution {
+        @include clearfix;
+
+        margin-top:70px;
+
+        strong {
+            float:left;
+            font-size:48px;
+            line-height:68px;
+        }
+
+        .txt-caution {
+            float:right;
+            font-size:18px;
+            line-height:28px;
+            color:#444;
+        }
+    }
+
+    .apply-area {
+        width:100vw;
+        padding:50px 0 120px;
+        margin-top:130px;
+        margin-left:calc((-100vw + 1080px) / 2);
+        background-color:#f9f9f9;
+
+        > .inner {
+            width:1080px;
+            margin:0 auto;
+        }
+
+        h3.tit {
+            margin-bottom:30px !important;
+        }
+
+        .txt {
+            @include notoSans();
+
+            font-size:20px;
+            text-align:center;
+            color:#888;
+        }
+
+        .btn-area {
+            margin-top:80px;
+
+            [class*="btn"] {
+                width:320px;
+                height:320px;
+                margin-left:80px;
+                border-radius:100%;
+                border-color:#f0f0f0;
+
+                span {
+                    &:before {
+                        content:"";
+                        display:block;
+                        margin:0 auto 28px;
+                        background-image:url($dirCommon+'icon.png');
+                    }
+                }
+
+                &:first-child {
+                    margin-left:0;
+                }
+
+                &.btn-apply {
+                    span {
+                        &:before {
+                            @include bgList(4, 2);
+
+                            width:57px;
+                            height:56px;
+                        }
+                    }
+                }
+
+                &.btn-view {
+                    span {
+                        &:before {
+                            @include bgList(6, 2);
+
+                            width:56px;
+                            height:51px;
+                        }
+                    }
+                }
+
+                &:hover {
+                    color:$colorWhite;
+                    border-color:$colorBlue;
+                    background-color:$colorBlue;
+
+                    &.btn-apply {
+                        span {
+                            &:before {
+                                @include bgList(4, 4);
+                            }
+                        }
+                    }
+
+                    &.btn-view {
+                        span {
+                            &:before {
+                                @include bgList(6, 4);
+                            }
+                        }
+                    }
+                }
+
+                small {
+                    display:block;
+                    line-height:20px;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .researchApply {
+        > .cont {
+            margin-bottom:-60px !important;
+
+             img {
+                 width:100%;
+             }
+        }
+
+        .caution {
+            strong {
+                float:none;
+                font-size:28px;
+                line-height:50px;
+            }
+
+            .txt-caution {
+                float:none;
+            }
+        }
+
+        .apply-area {
+            padding:50px 26px 120px;
+            margin:130px -26px 0;
+
+            > .inner {
+                width:100%;
+            }
+
+            .btn-area {
+                display:block !important;
+                text-align:center;
+
+                [class*="btn"] {
+                    display:inline-flex;
+                    margin-left:0;
+                    margin-top:80px;
+
+                    &:first-child {
+                        margin-top:0;
+                    }
+
+                    &.btn-apply {
+                        span {
+                            &:before {
+                                @include bgList(4, 2);
+
+                                width:57px;
+                                height:56px;
+                            }
+                        }
+                    }
+
+                    &.btn-view {
+                        span {
+                            &:before {
+                                @include bgList(6, 2);
+
+                                width:56px;
+                                height:51px;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        color:$colorWhite;
+                        border-color:$colorBlue;
+                        background-color:$colorBlue;
+
+                        &.btn-apply {
+                            span {
+                                &:before {
+                                    @include bgList(4, 4);
+                                }
+                            }
+                        }
+
+                        &.btn-view {
+                            span {
+                                &:before {
+                                    @include bgList(6, 4);
+                                }
+                            }
+                        }
+                    }
+
+                    small {
+                        display:block;
+                        line-height:20px;
+                    }
+                }
+            }
+        }
+    }
+
+}

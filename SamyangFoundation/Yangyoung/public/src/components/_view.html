@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<!-- config// -->
+	{{include('./shared/config.html')}}
+	<!-- //config -->
+</head>
+
+<body>
+
+<div id="wrap">
+	<!-- table// -->
+	{{include('./components/table.html', {
+		"prop": {
+			"class": "table-class",
+			"style": "2",
+	        "caption": {
+	            "text": "caption",
+	            "captionVisible": false
+	        },
+	        "colgroup": {
+	            "colWidth": [
+	                "100px",
+	                "100px"
+	            ]
+	        },
+	        "thead": {
+	            "th": [
+	                "th1",
+	                "th2"
+	            ]
+	        },
+	        "tbody": {
+	            "td": [
+	                "td1",
+	                "td2"
+	            ]
+	        }
+		}
+	})}}
+	<!-- //table -->
+
+	<!-- select// -->
+	{{include('./components/select.html', {
+		"prop": {
+			"class": "select-class",
+			"style": "1",
+			"select": [
+				"selected",
+				""
+			],
+			"option": [
+				"option1",
+				"option2"
+			]
+		}
+	})}}
+	<!-- //select -->
+
+	<!-- input : checkbox// -->
+	{{include('./components/checkbox.html', {
+		"prop": {
+			"class": "checkbox-class",
+			"style": "1",
+			"check": [
+				"checked",
+				""
+			],
+			"text": [
+				"checkbox1",
+				"checkbox2"
+			]
+		}
+	})}}
+	<!-- //input : checkbox -->
+
+	<!-- input : radio// -->
+	{{include('./components/radio.html', {
+		"prop": {
+			"class": "radio-class",
+			"style": "1",
+			"name": "radioName",
+			"check": [
+				"checked",
+				""
+			],
+			"text": [
+				"radio1",
+				"radio2"
+			]
+		}
+	})}}
+	<!-- //input : radio -->
+
+	<!-- input : button// -->
+	{{include('./components/button.html', {
+		"prop": {
+			"class": "btn-class",
+			"size": "small",
+			"style": "fill",
+			"color": "gray",
+			"type": "button",
+			"text": "button"
+		}
+	})}}
+	<!-- //input : button -->
+
+	<!-- link// -->
+	{{include('./components/link.html', {
+		"prop": {
+			"class": "link-class",
+			"href": "#",
+			"text": "홈"
+		}
+	})}}
+	<!-- //link -->
+
+    <!-- popup// -->
+	{{include('./components/popup.html', {
+		"prop": {
+			"id": "popup-share",
+			"class": "popup-share",
+	        "tit": "공유하기",
+			"content": "./popup/share.html"
+		}
+	})}}
+	<!-- //popup -->
+</div>
+
+</body>
+</html>

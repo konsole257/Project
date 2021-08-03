@@ -1,0 +1,641 @@
+/**
+* --------------------------------
+* ThesisApply Step2 CSS
+* --------------------------------
+*/
+
+[class^="thesisApplyStep2"] {
+    .cont {
+        .form {
+            margin-top:36px;
+
+            .form-fieldset {
+                margin-top:58px;
+
+                &:first-of-type {
+                    margin-top:0;
+                }
+
+                .txt-area + .form-table {
+                    margin-top:34px;
+                }
+
+                td {
+                    input,
+                    .select {
+                        width:320px;
+                    }
+
+                    &[colspan] {
+                        input,
+                        .select {
+                            width:100%;
+                        }
+                    }
+
+                    .tooltip {
+                        float:right;
+
+                        .btn-tooltip {
+                            height:48px;
+                        }
+
+                        .txt {
+                            top:46px;
+                        }
+                    }
+
+                    .bundle {
+                        @include clearfix;
+
+                        width:320px;
+
+                        &.bundle-chn {
+                            width:240px;
+
+                            .input-chn {
+                                width:208px;
+                            }
+                        }
+
+                        &.bundle-code {
+                            width:452px;
+
+                            .input-code {
+                                width:320px;
+                            }
+
+                            .btn-code {
+                                float:right;
+                                width:120px;
+                            }
+                        }
+
+                        &.bundle-radio {
+                            height:48px;
+                            padding:13px 0;
+
+                            label {
+                                margin-left:38px;
+
+                                &:first-child {
+                                    margin-left:0;
+                                }
+                            }
+                        }
+
+                        &.bundle-grade {
+                            .select-grade {
+                                width:200px;
+                            }
+
+                            label {
+                                float:right;
+                                margin:12px 0;
+                            }
+                        }
+
+                        &.bundle-company {
+                            .input-company {
+                                width:212px;
+                            }
+
+                            label {
+                                float:right;
+                                margin:12px 0;
+                            }
+                        }
+
+                        &.bundle-tax {
+                            width:100%;
+
+                            .input-tax {
+                                width:768px;
+                            }
+
+                            label {
+                                float:right;
+                                margin:12px 24px 12px 0;
+                            }
+                        }
+                    }
+                }
+
+                .textarea-research,
+                .textarea-recommend {
+                     height:320px;
+                }
+
+                .char-length {
+                    color:#444;
+                    text-align:right;
+                    margin-top:15px;
+                }
+
+                .file-bank,
+                .file-result,
+                .file-recommend,
+                .file-tax, {
+                    input {
+                        width:768px !important;
+                    }
+                }
+
+                small {
+                    display:inline-block;
+                    font-size:14px;
+                    color:$colorGray;
+                    margin-top:10px;
+                }
+
+                &.info-fieldset {
+                    input {
+                        width:240px;
+                    }
+                }
+
+                &.achieve-fieldset {
+                    @include clearfix;
+
+                    .achieve-list {
+                        li {
+                            position:relative;
+                            padding-bottom:38px;
+                            margin-top:25px;
+                            border-bottom:1px solid #dfdfdf;
+
+                            &:first-of-type {
+                                margin-top:0;
+                            }
+
+                            .btn-del {
+                                position:absolute;
+                                top:0;
+                                right:0;
+                                height:47px;
+                                font-size:14px;
+                                line-height:47px;
+                                padding:0;
+                            }
+
+                            strong {
+                                display:block;
+                                height:47px;
+                                font-weight:350;
+                                line-height:46px;
+                                margin-bottom:18px;
+                                border-bottom:1px solid #444;
+                            }
+
+                            .form-table {
+                                &:last-of-type {
+                                    position:relative;
+                                    margin-top:68px;
+
+                                    &:before {
+                                        content:"";
+                                        position:absolute;
+                                        top:-34px;
+                                        left:0;
+                                        width:100%;
+                                        height:1px;
+                                        background-color:#dfdfdf;
+                                    }
+                                }
+
+                                &:first-of-type {
+                                    position:relative;
+                                    margin-top:0;
+
+                                    &:before {
+                                        display:none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .btn-add {
+                        float:right;
+                        width:240px;
+                        margin-top:40px;
+
+                        &:before {
+                            @include bgList(14, 1);
+
+                            content:"";
+                            width:11px;
+                            height:11px;
+                            margin-right:8px;
+                            background-image:url($dirCommon+'icon.png');
+                        }
+                    }
+
+                    > .form-table {
+                        float:right;
+                        margin-top:68px;
+
+                        &:before {
+                            content:"";
+                            position:absolute;
+                            top:-34px;
+                            left:0;
+                            width:100%;
+                            height:1px;
+                            background-color:#dfdfdf;
+                        }
+                    }
+                }
+
+                &.career-fieldset {
+                    @include clearfix;
+
+                    .career-list {
+                        li {
+                            position:relative;
+                            padding-bottom:38px;
+                            margin-top:25px;
+                            border-bottom:1px solid #dfdfdf;
+
+                            &:first-of-type {
+                                margin-top:0;
+                            }
+
+                            .btn-del {
+                                position:absolute;
+                                top:0;
+                                right:0;
+                                height:47px;
+                                font-size:14px;
+                                line-height:47px;
+                                padding:0;
+                            }
+
+                            strong {
+                                display:block;
+                                height:47px;
+                                font-weight:350;
+                                line-height:46px;
+                                margin-bottom:18px;
+                                border-bottom:1px solid #444;
+                            }
+
+                            .form-table {
+                                &:last-of-type {
+                                    position:relative;
+                                    margin-top:68px;
+
+                                    &:before {
+                                        content:"";
+                                        position:absolute;
+                                        top:-34px;
+                                        left:0;
+                                        width:100%;
+                                        height:1px;
+                                        background-color:#dfdfdf;
+                                    }
+                                }
+
+                                &:first-of-type {
+                                    position:relative;
+                                    margin-top:0;
+
+                                    &:before {
+                                        display:none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .btn-add {
+                        float:right;
+                        width:240px;
+                        margin-top:40px;
+
+                        &:before {
+                            @include bgList(14, 1);
+
+                            content:"";
+                            width:11px;
+                            height:11px;
+                            margin-right:8px;
+                            background-image:url($dirCommon+'icon.png');
+                        }
+                    }
+                }
+
+                &.policy-fieldset {
+                    .agree-area {
+                        padding:38px;
+                        background-color:#f9f9f9;
+
+                        p {
+                            color:$colorGray;
+                            line-height:28px;
+                            margin-top:13px;
+
+                            &:first-child {
+                                margin-top:0;
+                            }
+
+                            span {
+                                display:inline-block;
+                                padding-left:15px;
+                            }
+                        }
+
+                        strong {
+                            display:block;
+                            font-weight:350;
+                            color:#444;
+                        }
+
+                        .txt-info {
+                            color:$colorGray;
+                            line-height:28px;
+                            padding-top:35px;
+                            margin-top:35px;
+                            border-top:1px solid #dfdfdf;
+                        }
+
+                        .check-area {
+                            text-align:right;
+                            margin-top:34px;
+
+                            label {
+                                margin-left:40px;
+
+                                &:first-child {
+                                    margin-left:0;
+                                }
+                            }
+                        }
+                    }
+
+                    > .txt {
+                        text-align:center;
+                        margin:60px 0 40px;
+                    }
+
+                    .form-table {
+                        tr:last-child {
+                            th {
+                                text-align:right;
+
+                                span {
+                                    width:180px;
+                                    text-align:left;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .btn-area {
+                padding-top:60px;
+                margin-top:60px;
+                border-top:1px solid #dfdfdf;
+
+                [class*="btn"] {
+                    width:320px;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    [class^="thesisApplyStep2"] {
+        .cont {
+            .form {
+                margin-top:36px;
+
+                .form-fieldset {
+                    margin-top:58px;
+
+                    &:first-of-type {
+                        margin-top:0;
+                    }
+
+                    .txt-area + .form-table {
+                        margin-top:34px;
+                    }
+
+                    tbody {
+                        position:relative;
+
+                        &:before {
+                            content:"";
+                            display:table-row;
+                            height:70px;
+                        }
+
+                        &:after {
+                            content:"";
+                            position:absolute;
+                            width:100%;
+                            height:1px;
+                            margin-top:35px;
+                            background-color:#dfdfdf;
+                        }
+
+                        &:first-of-type {
+                            border-top:none;
+
+                            &:before {
+                                display:none;
+                            }
+                        }
+
+                        &:last-of-type {
+                            border-top:none;
+
+                            &:after {
+                                display:none;
+                            }
+                        }
+                    }
+
+                    td {
+                        input,
+                        .select {
+                            width:100%;
+                        }
+
+                        &[colspan] {
+                            input,
+                            .select {
+                                width:100%;
+                            }
+                        }
+
+                        .tooltip {
+                            float:right;
+
+                            .btn-tooltip {
+                                height:40px;
+                            }
+
+                            .txt {
+                                top:46px;
+                            }
+                        }
+
+                        .bundle {
+                            @include clearfix;
+
+                            width:100% !important;
+
+                            &.bundle-chn {
+                                .input-chn {
+                                    width:calc(100% - 36px);
+                                }
+                            }
+
+                            &.bundle-number {
+                                .input-number {
+                                    width:calc(100% - 36px);
+                                }
+                            }
+
+                            &.bundle-code {
+                                .input-code {
+                                    width:calc(100% - 105px);
+                                }
+
+                                .btn-code {
+                                    width:93px;
+                                }
+                            }
+                        }
+                    }
+
+                    .textarea-tuition {
+                         height:80px;
+                    }
+
+                    .file-bank,
+                    .file-result,
+                    .file-recommend,
+                    .file-tax, {
+                        input {
+                            width:calc(100% - 105px) !important;
+                        }
+                    }
+
+                    small {
+                        display:inline-block;
+                        font-size:14px;
+                        color:$colorGray;
+                        margin-top:10px;
+                    }
+
+                    &.info-fieldset {
+                        input {
+                            width:100%;
+                        }
+                    }
+
+                    &.plan-fieldset {
+                        .plan-list {
+                            .question-plan {
+                                color:#444;
+                            }
+
+                            .textarea-plan {
+                                height:100px;
+                                margin-top:28px;
+                            }
+
+                            .char-length {
+                                color:#444;
+                                text-align:right;
+                                margin-top:15px;
+                            }
+                        }
+                    }
+
+
+                    &.policy-fieldset {
+                        .agree-area {
+                            padding:38px;
+                            background-color:#f9f9f9;
+
+                            p {
+                                color:$colorGray;
+                                line-height:28px;
+                                margin-top:13px;
+
+                                &:first-child {
+                                    margin-top:0;
+                                }
+
+                                span {
+                                    display:inline-block;
+                                    padding-left:15px;
+                                }
+                            }
+
+                            strong {
+                                display:block;
+                                font-weight:350;
+                                color:#444;
+                            }
+
+                            .txt-info {
+                                color:$colorGray;
+                                line-height:28px;
+                                padding-top:35px;
+                                margin-top:35px;
+                                border-top:1px solid #dfdfdf;
+                            }
+
+                            .check-area {
+                                text-align:right;
+                                margin-top:34px;
+
+                                label {
+                                    margin-left:40px;
+
+                                    &:first-child {
+                                        margin-left:0;
+                                    }
+                                }
+                            }
+                        }
+
+                        > .txt {
+                            text-align:center;
+                            margin:60px 0 40px;
+                        }
+
+                        .form-table {
+                            tr:last-child {
+                                th {
+                                    text-align:left;
+
+                                    span {
+                                        width:auto;
+                                        text-align:left;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .btn-area {
+                    padding-top:60px;
+                    margin-top:60px;
+                    border-top:1px solid #dfdfdf;
+
+                    [class*="btn"] {
+                        width:320px;
+                    }
+                }
+            }
+        }
+    }
+}

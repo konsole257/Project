@@ -1,0 +1,32 @@
+/**
+* --------------------------------
+* Nodata CSS
+* --------------------------------
+*/
+
+.nodata {
+    @include notoSans();
+
+    font-size:20px;
+    text-align:center;
+    padding:200px 0;
+
+    .btn-link {
+        width:290px;
+        height:72px;
+        margin:37px auto 0;
+    }
+}
+
+@include mobile {
+    .nodata {
+        font-size:calcu(32px);
+        padding:calcu(120px) 0;
+
+        .btn-link {
+            width:100%;
+            height:calcu(104px);
+            margin:calcu(40px) auto 0;
+        }
+    }
+}

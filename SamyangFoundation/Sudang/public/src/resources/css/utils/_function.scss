@@ -1,0 +1,7 @@
+@function calcu($value) {
+    @if (str-index(#{$value}, px)) {
+        @return $value/$multiple;
+    } @else {
+        @return $value
+    }
+}

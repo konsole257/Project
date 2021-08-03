@@ -1,0 +1,142 @@
+/**
+* --------------------------------
+* Input File CSS
+* --------------------------------
+*/
+
+.file {
+    position:relative;
+    display:inline-block;
+    width:100%;
+
+    input[type="text"] {
+        float:left;
+        color:$colorDefault;
+        background-color:$colorWhite;
+        cursor:pointer;
+    }
+
+    .btn-file {
+        float:left;
+        width:120px;
+        cursor:pointer;
+        margin-left:12px;
+    }
+
+    .btn-cancel {
+        position:absolute;
+        top:0;
+        right:142px;
+        width:48px;
+        height:48px;
+
+        &:before {
+            @include bgList(10, 1);
+
+            content:"";
+            position:absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            width:18px;
+            height:18px;
+            margin:auto;
+            background-image:url($dirCommon+'icon.png');
+        }
+    }
+
+    input[type="file"] {
+        opacity:0;
+        position:absolute;
+        z-index:2;
+        top:0;
+        left:-9999px;
+    }
+
+    &.file-picture {
+        .picture {
+            display:block;
+            position:relative;
+            width:138px;
+            height:168px;
+            padding:9px;
+            border:1px solid #dfdfdf;
+
+            span {
+                display:block;
+
+                width:118px;
+                height:148px;
+                font-size:14px;
+                text-align:center;
+                line-height:20px;
+                color:$colorGray;
+                padding-top:44px;
+                background-color:#f9f9f9;
+            }
+
+            .img {
+                position:absolute;
+                top:0;
+                right:0;
+                bottom:0;
+                left:0;
+                width:118px;
+                height:148px;
+                margin:auto;
+                overflow:hidden;
+
+                img {
+                    width:100%;
+                    height:100%;
+                    object-fit:cover;
+                }
+            }
+        }
+
+        .btn-file {
+            float:left;
+            width:138px;
+            margin:14px 0 0 0;
+        }
+    }
+}
+
+@include mobile {
+    .file {
+        position:relative;
+        display:inline-block;
+        width:100%;
+
+        input[type="text"][disabled] {
+            float:left;
+            color:$colorDefault;
+            background-color:$colorWhite;
+        }
+
+        .btn-file {
+            float:left;
+            width:93px;
+            cursor:pointer;
+            margin-left:12px;
+        }
+
+        .btn-cancel {
+            position:absolute;
+            top:0;
+            right:105px;
+            width:40px;
+            height:40px;
+        }
+
+        input[type="file"] {
+            opacity:0;
+            position:absolute;
+            z-index:2;
+            top:0;
+            left:-9999px;
+        }
+    }
+
+}

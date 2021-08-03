@@ -1,0 +1,330 @@
+/**
+* --------------------------------
+* Sub CSS
+* --------------------------------
+*/
+
+#header {
+    position:fixed;
+    top:0;
+
+    > .inner {
+        height:100px;
+        padding:26px 0 24px;
+
+        .logo {
+            top:26px;
+        }
+
+        .menu-list-area  {
+            &:hover {
+                &:after {
+                    top:100px;
+                }
+            }
+
+            .menu-list {
+                > li {
+                    > ul {
+                        top:74px;
+                    }
+
+                    &:hover {
+                        a {
+                            &:after {
+                                top:72px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#container {
+    padding-top:100px;
+    padding-bottom:0;
+}
+
+#contents {
+    > .header {
+        .path {
+            border-top:1px solid #ddd;
+            border-bottom:1px solid #ddd;
+
+            .inner {
+                @include clearfix;
+
+                width:1200px;
+                margin:0 auto;
+
+
+                [class^="menu-"] {
+                    @include notoSans();
+
+                    display:block;
+                    position:relative;
+                    width:181px;
+                    height:46px;
+                    font-size:14px;
+                    line-height:46px;
+                    vertical-align:top;
+                    color:$colorGray;
+                    border:1px solid #ddd;
+                    background-color:$colorWhite;
+                    cursor:pointer;
+
+                    &[class*="home"] {
+                        float:left;
+                        width:46px;
+                        text-indent:-9999px;
+                        padding-left:0;
+
+                        &:before {
+                            @include bgList(1, 1);
+
+                            opacity:1;
+                            content:"";
+                            position:absolute;
+                            top:0;
+                            left:0;
+                            right:0;
+                            bottom:0;
+                            width:14px;
+                            height:15px;
+                            margin:auto;
+                            background-image:url($dirCommon+"path.png");
+                        }
+                    }
+
+                    &[class*="txt"],
+                    a {
+                        color:#888;
+                        display:block;
+                        padding-left:24px;
+                    }
+
+                    &[class*="txt"] {
+                        &:before {
+                            @include bgList(2, 1);
+
+                            opacity:0.5;
+                            content:"";
+                            position:absolute;
+                            top:0;
+                            right:21px;
+                            bottom:0;
+                            width:10px;
+                            height:6px;
+                            margin:auto;
+                            background-image:url($dirCommon+"path.png");
+                        }
+
+                    }
+                }
+
+                > .menu-home {
+                    border-top-width:0;
+                    border-right-width:0;
+                    border-bottom-width:0;
+                }
+
+                .menu {
+                    float:left;
+                    position:relative;
+                    z-index:2;
+                    width:181px;
+                    height:46px;
+                    margin-left:-1px;
+
+                    &.active {
+                        .list-area {
+                            display:block;
+                        }
+                    }
+
+                    [class^="menu"] {
+                        border-top-width:0;
+                        border-bottom-width:0;
+                    }
+
+                    .list-area {
+                        display:none;
+                        position:absolute;
+                        z-index:1;
+                        top:47px;
+                        left:0;
+
+                        [class^="menu"] {
+                            position:absolute;
+                            top:0;
+                            left:0;
+                            border-bottom-width:1px;
+
+                            &:nth-child(2) {
+                                top:46px;
+                            }
+
+                            &:nth-child(3) {
+                                top:92px;
+                            }
+
+                            &:nth-child(4) {
+                                top:138px;
+                            }
+
+                            &:nth-child(5) {
+                                top:184px;
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        color:#222;
+
+                        [class^="menu"] {
+                            color:$colorDefault;
+                            border-right-width:1px;
+
+                            &:before {
+                                opacity:1;
+                            }
+
+                            a {
+                                color:$colorDefault;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    > .cont {
+        width:1200px;
+        padding:80px 0 150px;
+        margin:0 auto;
+
+        > h3.tit,
+        > * > h3.tit {
+            font-weight:500;
+            font-size:40px;
+            text-align:center;
+            margin-bottom:60px;
+
+            &:after {
+                content:"";
+                display:inline-block;
+                width:10px;
+                height:10px;
+                vertical-align:bottom;
+                margin:0 0 0 5px;
+                border-radius:100%;
+                background-color:#52876f;
+            }
+        }
+    }
+}
+
+@include mobile {
+    #header {
+        position:fixed;
+        top:0;
+
+        > .inner {
+            height:calcu(120px);
+
+            .logo {
+                top:calcu(36px);
+            }
+        }
+    }
+
+
+
+    #container {
+        padding-top:calcu(118px);
+    }
+
+    #contents {
+        > .header {
+            .tit {
+                height:calcu(232px);
+                font-size:calcu(40px);
+                line-height:calcu(152px);
+                background-size:auto 100%;
+                background-position:center;
+            }
+
+            .path {
+                .inner {
+                    display:flex;
+                    width:100%;
+
+                    .menu {
+                        flex:1;
+
+                        [class^="menu-"] {
+                            width:100%;
+
+                            &[class*="txt"],
+                            a {
+                                padding-left:calcu(40px);
+                            }
+                        }
+
+                        &:last-child {
+                            [class^="menu"] {
+                                border-right-width:0;
+
+                                &:before {
+                                }
+
+                                a {
+                                }
+                            }
+                        }
+
+                        .list-area {
+                            width:100%;
+
+                            li {
+                                a {
+                                    display:block;
+                                    height:calcu(80px);
+                                    font-size:calcu(24px);
+                                    line-height:calcu(80px);
+                                }
+                            }
+                        }
+                    }
+
+
+
+                    .menu-home {
+                        display:none;
+                    }
+                }
+            }
+        }
+
+        > .cont {
+            width:100%;
+            padding:calcu(88px) calcu(52px) calcu(120px);
+            margin:0;
+
+            > h3.tit,
+            > * > h3.tit {
+                font-weight:700;
+                font-size:calcu(40px);
+                margin-bottom:calcu(62px);
+
+                &:after {
+                    width:calcu(10px);
+                    height:calcu(10px);
+                }
+            }
+        }
+    }
+}
