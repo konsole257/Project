@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no, email=no, address=no">
+	<meta name="keywords" content="" />
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Lipss">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="">
+
+	<link rel="shortcut icon" type="image/x-icon" href="/m/mpjtCom/images/common/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/m/mpjtCom/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="/m/mpjtCom/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="/m/mpjtCom/css/font.css" />
+
+	<script type="text/javascript" src="/m/mpjtCom/js/lib/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="/m/mpjtCom/js/function.js"></script>
+	<script type="text/javascript" src="/m/mpjtCom/js/lipss.js"></script>
+
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="/m/mpjtCom/lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+	<title>LIPSS STYLE GUIDE</title>
+
+	<style>
+		#contents {max-width:1080px;margin:0 auto;}
+		.htmlprocess_tit { font-size:13px; background:#000; color:#fff; font-weight:bold; padding:5px 10px; font-family:Dotum,"돋움"; }
+		.guide_wrap { width:98%; margin:0 auto; padding:10px 0 20px; }
+		.guide_wrap .htmlprocess_tit2 { font-size:13px; color:#000; padding:5px 10px; margin:40px 0 20px; border-top:1px solid #000; background:#f2f2f2; }
+		.guide_wrap .htmlprocess_tit2:first-of-type { margin-top:0; }
+		.guide_wrap .guide {padding:10px; width:100%; background:#fff; box-sizing:border-box;}
+		code { display:block; position:relative; font-size:12px; line-height:18px; margin-top:10px; padding:10px 10px 10px 30px; border:1px solid #777; background:#fafafa; }
+		code:before { display:block; content:""; position:absolute; left:0; top:0; width:20px; height:100%; background:#777; }
+		pre span {color:#cd1212;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="contents">
+
+
+	<!--  버튼 // -->
+	<h1 class="htmlprocess_tit">버튼</h1>
+	<section class="guide_wrap">
+		<div class="guide">
+			<h2 class="htmlprocess_tit2">박스 버튼</h2>
+			<b>btn :</b> Default <br />
+			<b>btn_purple :</b> PointColor Button <br />
+			<b>btn_area : </b> 부모 class <b>'btn_area'</b>일 때 Half Button <br />
+			<br />
+			<div>
+				<a href="#" class="btn">button</a>
+				<a href="#" class="btn_purple">button</a>
+			<div><br />
+			<div class="btn_area">
+				<a href="#" class="btn">button</a>
+				<a href="#" class="btn_purple">button</a>
+			</div>
+			<br />
+			<div class="btn_area">
+				<button class="btn">button</button>
+				<button class="btn_purple">button</button>
+			</div>
+<code>
+<pre>
+&lt;!-- 박스 버튼 --&gt;
+<span>&lt;div&gt;</span>
+	&lt;a href="#" class="btn"&gt;button&lt;/a&gt;
+	&lt;a href="#" class="btn_purple"&gt;button&lt;/a&gt;
+&lt;div&gt;&lt;br /&gt;
+<span>&lt;div class="btn_area"&gt;</span>
+	&lt;a href="#" class="btn"&gt;button&lt;/a&gt;
+	&lt;a href="#" class="btn_purple"&gt;button&lt;/a&gt;
+&lt;/div&gt;
+&lt;br /&gt;
+<span>&lt;div class="btn_area"&gt;</span>
+	&lt;button class="btn"&gt;button&lt;/button&gt;
+	&lt;button class="btn_purple"&gt;button&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+</code>
+			<!-- -->
+		</div>
+	</section>
+	<!-- // 버튼 -->
+
+
+	<!-- 아이콘 // -->
+	<h1 class="htmlprocess_tit">아이콘</h1>
+	<section class="guide_wrap">
+		<div class="guide">
+			<b>icon :</b> Default <br />
+			<b>icon sns_~ :</b> SNS ICON <br />
+			<br />
+			<a class="icon"></a><br /><br />
+			<div>
+				<a class="icon sns_fb"></a>&nbsp;&nbsp;
+				<a class="icon sns_kakao"></a>&nbsp;&nbsp;
+				<a class="icon sns_naver"></a>
+			</div>
+<code>
+<pre>
+&lt;!-- icon 넣기--&gt;
+&lt;a class="icon"&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;div&gt;
+	&lt;a class="icon sns_fb"&gt;&lt;/a&gt;&nbsp;&nbsp;
+	&lt;a class="icon sns_kakao"&gt;&lt;/a&gt;&nbsp;&nbsp;
+	&lt;a class="icon sns_naver"&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+</code>
+		</div>
+	</section>
+	<!-- // 아이콘 -->
+
+
+			<!-- //contents -->
+		</div>
+	</div>
+</body>
+</html>

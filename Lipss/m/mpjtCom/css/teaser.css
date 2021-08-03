@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/**
+* --------------------------------
+* Teaser CSS
+* --------------------------------
+*/
+.teaser { position:relative; background:#000; overflow:hidden; user-select:none; }
+.wrap-teaser { position:absolute; top:0; left:0; width:100%; height:100%; }
+.wrap-teaser .wrap-canvas { position:absolute; width:100%; height:100%; }
+.wrap-teaser .wrap-canvas .canvas-wrapper { position:absolute; top:0; left:0; width:100%; height:100%; }
+.wrap-teaser .wrap-canvas .canvas-wrapper canvas {opacity:0;display:block;position:absolute;width:100% !important; height:auto !important;transform:translate(-50%, -50%) scale(1);}
+.wrap-teaser .teaser-con {position:absolute;top:50%;left:50%;width:100%;z-index:30;transform:translate(-50%, -50%);}
+.wrap-teaser .teaser-con [class^="txt"] {position:absolute;left:0;top:50%;transform:translateY(-50%);width:100%;font-size:0;color:#fff;text-align:center;font-weight:bold;box-sizing:border-box;z-index:100;}
+.wrap-teaser .teaser-con span {display:inline-block;font-size:28px;opacity:0;}
+.teaser-con .txt3 span { font-size:24px; }
+.teaser-con .txt4 .logo { display:block; width:138px; height:36px; font-size:0; margin:0 auto 10px; }
+.teaser-con .txt4 .logo img { opacity:0; width:auto; height:100%; }
+.teaser-con .txt4 span { font-weight:normal; font-size:12px; color:#bdbdbd; }
+.teaser-con .txt4 .btn { opacity:0; display:block; position:relative; width:40px; height:40px; margin:38px auto 0; padding:0; background:none;}
+.teaser-con .txt4 .btn > div { display:none; width:100%; height:100%; }
+.teaser-con .txt4 .btn > div a { display:block; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); transition-duration:500ms; width:100%; height:100%; color:#fff; border:2px solid #fff; border-radius:100%; box-sizing:border-box;}
+.teaser-con .txt4 .btn > div a img { opacity:1; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); margin:0; width:4px; }
+
+.line { position:absolute; bottom:100%; left:50%; transform:translateX(-50%); width:1px; height:0px; margin-bottom:160px; background:#fff; }
+.line.animate { animation:txt4Line 2000ms 600ms forwards; }
+.mouse { position:absolute; bottom:100px; left:50%; transform:translateX(-50%); }
+
+@keyframes txt4Line {
+    0% { height:0px; }
+    30% { opacity:1; height:120px; }
+    100% { opacity:0; bottom:50%; transform:translate(-50%, -50%); width:1px; height:0px; }
+}

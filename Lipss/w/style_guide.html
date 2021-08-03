@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" type="text/css" href="./pjtCom/css/lib/normalize.min.css" />
+	<link rel="stylesheet" type="text/css" href="./pjtCom/css/lib/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="./pjtCom/css/common.css" />
+
+	<script src="./pjtCom/js/lib/jquery-3.3.1.min.js"></script>
+	<script src="./pjtCom/js/lib/jquery-ui.min.js"></script>
+
+	<title>ServeQ STYLE GUIDE</title>
+
+	<style>
+		.htmlprocess_tit { width:1280px; font-size:13px; background:#000; color:#fff; margin:0 auto; font-weight:bold; padding:5px 10px; box-sizing:border-box; font-family:Dotum,"돋움"; }
+		.guide_wrap { width:1280px; margin:0 auto; padding:10px 0 20px !important; }
+		.guide_wrap .htmlprocess_tit2 { font-size:13px; color:#000; padding:5px 10px; margin:40px 0 20px; border-top:1px solid #000; background:#f2f2f2; }
+		.guide_wrap .htmlprocess_tit2:first-of-type { margin-top:0; }
+		.guide_wrap .guide {padding:10px; width:100%; background:#fff; box-sizing:border-box;}
+		code { display:block; position:relative; font-size:12px; line-height:18px; margin-top:10px; padding:10px 10px 10px 30px; border:1px solid #777; background:#fafafa; }
+		code:before { display:block; content:""; position:absolute; left:0; top:0; width:20px; height:100%; background:#777; }
+		/**/
+
+	</style>
+</head>
+<body class="sub">
+
+	<!-- wrap -->
+	<main id="wrap">
+
+
+		<!-- contents // -->
+		<div id="container">
+			<div>
+				<div id="contents">
+
+<!--  // -->
+<h1 class="htmlprocess_tit">FORM</h1>
+<section class="guide_wrap">
+	<div class="guide">
+	<!-- -->
+	<h2 class="htmlprocess_tit2">input</h2>
+
+	<input type="text" placeholder="text" title="text">
+	<input type="number" placeholder="number" title="number">
+	<input type="password" placeholder="password" title="password">
+
+	<code>
+	<pre>
+&lt;input type="text" placeholder="text" title="text"&gt;
+&lt;input type="number" placeholder="number" title="number"&gt;
+&lt;input type="password" placeholder="password" title="password"&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+
+	<!-- -->
+	<h2 class="htmlprocess_tit2">select</h2>
+
+		<label class="select">
+			<select>
+				<option>010</option>
+				<option>011</option>
+				<option>016</option>
+				<option>017</option>
+				<option>018</option>
+				<option>019</option>
+			</select>
+		</label>
+	<code>
+	<pre>
+&lt;label class="select"&gt;
+	&lt;select&gt;
+		&lt;option&gt;010&lt;/option&gt;
+		&lt;option&gt;011&lt;/option&gt;
+		&lt;option&gt;016&lt;/option&gt;
+		&lt;option&gt;017&lt;/option&gt;
+		&lt;option&gt;018&lt;/option&gt;
+		&lt;option&gt;019&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/label&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	<!-- -->
+	<h2 class="htmlprocess_tit2">check box</h2>
+
+	<input type="checkbox" id="checkbox1" class="chk_type1"><label for="checkbox1">체크박스</label><br><br>
+	<input type="checkbox" id="checkbox2" class="chk_type2"><label for="checkbox2">체크박스</label><br><br>
+	<input type="checkbox" id="checkbox3" class="chk_type3"><label for="checkbox3">체크박스</label>
+
+	<code>
+	<pre>
+&lt;input type="checkbox" id="checkbox" class="chk_type1"&gt;
+&lt;label for="checkbox"&gt;체크박스&lt;/label&gt;
+
+&lt;input type="checkbox" id="checkbox" class="chk_type2"&gt;
+&lt;label for="checkbox"&gt;체크박스&lt;/label&gt;
+
+&lt;input type="checkbox" id="checkbox" class="chk_type3"&gt;
+&lt;label for="checkbox"&gt;체크박스&lt;/label&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+
+	<!-- -->
+	<h2 class="htmlprocess_tit2">radio</h2>
+
+	<input type="radio" name="" id="radio" class="rdo_type1"><label for="radio">라디오</label>
+
+	<code>
+	<pre>
+&lt;input type="radio" name="" id="radio" class="rdo_type1"&gt;
+&lt;label for="radio"&gt;라디오&lt;/label&gt;
+	</pre>
+	</code>
+	<!-- -->
+	</div>
+</section>
+<!-- //  -->
+
+
+<!--  // -->
+<h1 class="htmlprocess_tit">PAGING</h1>
+<section class="guide_wrap">
+	<div class="guide">
+	<!-- -->
+	<div class="paging">
+		<a href="#" class="btn_prev">이전</a>
+		<span class="num">
+			<a href="#" class="on">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">5</a>
+		</span>
+		<a href="#" class="btn_next">다음</a>
+	</div>
+
+	<code>
+	<pre>
+&lt;div class="paging"&gt;
+	&lt;a href="#" class="btn_prev"&gt;이전&lt;/a&gt;
+	&lt;span class="num"&gt;
+		&lt;a href="#" class="on"&gt;1&lt;/a&gt;
+		&lt;a href="#"&gt;2&lt;/a&gt;
+		&lt;a href="#"&gt;3&lt;/a&gt;
+		&lt;a href="#"&gt;4&lt;/a&gt;
+		&lt;a href="#"&gt;5&lt;/a&gt;
+	&lt;/span&gt;
+	&lt;a href="#" class="btn_next"&gt;다음&lt;/a&gt;
+&lt;/div&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	</div>
+</section>
+<!-- //  -->
+
+
+<!--  // -->
+<style>
+.guide_popup .inner { width:500px; }
+</style>
+<h1 class="htmlprocess_tit">POPUP</h1>
+<section class="guide_wrap">
+	<div class="guide">
+	<!-- -->
+	<a href="#guide_popup" class="btn_popup1">POPUP OPEN</a><br><br>
+
+	<div id="guide_popup" class="popup guide_popup">
+		<div class="inner">
+			<header class="header">
+				<h2 class="tit">팝업 이름 <span>(Popup Name)</span></h2>
+
+				<button type="button" class="btn_close" onclick="fn.popupClose();">닫기</button>
+			</header>
+
+			<div class="contents">
+			팝업 내용
+			</div>
+		</div>
+	</div>
+
+	<script>
+	$('.btn_popup1').click(function(){
+		fn.popupOpen(this);
+	});
+
+	$('.popup .btn_close, .popup .btn_ok').click(function(){
+		fn.popupClose();
+	});
+	</script>
+<code>
+<pre>
+
+------------------------------------------------------------------------------
+
+// POPUP OPEN 1
+$('.btn_popup1').click(function(){
+	fn.popupOpen(this);
+});
+
+$('.popup .btn_close, .popup .btn_ok').click(function(){
+	fn.popupClose();
+});
+
+// POPUP OPEN 2
+$('.btn_popup1').click(function(){
+	fn.popupOpen('#guide_popup');
+});
+
+$('.popup .btn_close, .popup .btn_ok').click(function(){
+	fn.popupClose();
+});
+
+// POPUP OPEN 3
+&lt;a href="#popup_type1" class="btn_popup1" onclick="fn.popupOpen(this);"&gt;popup type1 open&lt;/a&gt;
+
+&lt;button type="button" class="btn_close" onclick="fn.popupClose();"&gt;닫기&lt;/button&gt;
+
+// POPUP OPEN 4
+&lt;a href="#popup_type1" class="btn_popup1" onclick="fn.popupOpen('#popup_type1');"&gt;popup type1 open&lt;/a&gt;
+
+&lt;button type="button" class="btn_close" onclick="fn.popupClose();"&gt;닫기&lt;/button&gt;
+</pre>
+</code>
+	<!-- -->
+
+	</div>
+</section>
+<!-- //  -->
+
+<!--  // -->
+<h1 class="htmlprocess_tit">TAB MENU</h1>
+<section class="guide_wrap">
+	<div class="guide">
+	<!-- -->
+	<h2 class="htmlprocess_tit2">링크이동 O</h2>
+
+	<div class="tab_menu">
+		<a href="http://www.google.com" class="on">메뉴1</a>
+		<a href="http://www.naver.com">메뉴2</a>
+	</div>
+
+	<h2 class="htmlprocess_tit2">링크이동 X</h2>
+
+	<div class="tab_menu type1">
+		<a href="#menu1" class="on">메뉴1</a>
+		<a href="#menu2">메뉴2</a>
+	</div>
+
+	<div id="menu1" class="tab_contents show">
+		내용1
+	</div>
+
+	<div id="menu2" class="tab_contents">
+		내용2
+	</div>
+
+	<code>
+	<pre>
+// 링크이동 O
+&lt;div class="tab_menu"&gt;
+	&lt;a href="http://www.google.com" class="on"&gt;메뉴1&lt;/a&gt;
+	&lt;a href="http://www.naver.com"&gt;메뉴2&lt;/a&gt;
+&lt;/div&gt;
+
+// 링크이동 X
+&lt;div class="tab_menu"&gt;
+	&lt;a href="#menu1" class="on"&gt;메뉴1&lt;/a&gt;
+	&lt;a href="#menu2"&gt;메뉴2&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div id="menu1" class="tab_contents show"&gt;
+	내용1
+&lt;/div&gt;
+
+&lt;div id="menu2" class="tab_contents"&gt;
+	내용2
+&lt;/div&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	</div>
+</section>
+<!-- //  -->
+
+				</div>
+			</div>
+		</div>
+		<!-- //contents -->
+
+	</main>
+	<!-- //wrap -->
+
+<script type="text/javascript" src="./pjtCom/js/function.js"></script>
+<script type="text/javascript" src="./pjtCom/js/lipss.js"></script>
+
+</body>
+</html>

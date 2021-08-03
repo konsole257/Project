@@ -1,0 +1,224 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+<!doctype html>
+<html lang="ko">
+<head>
+	<!-- config// -->
+	<%@ include file="/m/inCom/_config.jsp" %>
+	<!-- //config -->
+	<link rel="stylesheet" type="text/css" href="/m/mpjtCom/css/sub.css" />
+</head>
+<body class="member">
+<div id="wrap" class="login">
+
+	<!-- header//-->
+	<%@ include file="/m/inCom/_header.jsp" %>
+	<!-- //header -->
+
+	<!-- content// -->
+	<main id="contents">
+
+		<section class="log_form">
+			<div class="tab_menu">
+				<a href="#Member" class="on">회원 로그인</a>
+				<a href="#NonMember">비회원 주문 조회</a>
+			</div>
+			<div id="Member" class="tab_contents show">
+				<form>
+					<fieldset>
+						<legend class="hide">회원 로그인</legend>
+						<input type="text" title="아이디 입력" placeholder="아이디 (ID)" />
+						<input type="password" title="비밀번호 입력" placeholder="비밀번호 (Password)" class="mgt8" />
+						<label><input type="checkbox" class="chk_type1"> <span>아이디 저장</span></label>
+						<button type="submit" class="btn_purple">로그인<span>Login</span></button>
+					</fieldset>
+				</form>
+				<ul class="find_area">
+					<li><a href="#">회원가입</a></li>
+					<li><a href="#" onclick="fn.popupOpen('#popup1')">아이디 찾기</a></li>
+					<li><a href="#" onclick="fn.popupOpen('#popup3')">비밀번호 찾기</a></li>
+				</ul>
+
+				<div class="guest_order_area">
+					<a href="#" class="guest_order">비회원 구매 <span>Guest Order</span></a><!-- 비회원 주문 : 추가 : 2018.05.09 -->
+				</div>
+
+				<div class="sns_area">
+					<strong>SNS 간편 로그인</strong>
+					<ul>
+						<li><a href="#" class="icon sns_fb">페이스북</a></li>
+						<li><a href="#" class="icon sns_kakao">카카오톡</a></li>
+						<li><a href="#" class="icon sns_naver">네이버</a></li>
+					</ul>
+					<small>
+						* SNS 계정으로 LIPSS회원 가입 후<br />
+						로그인이 가능합니다.
+					</small>
+				</div>
+			</div>
+			<div id="NonMember" class="tab_contents">
+				<form>
+					<fieldset>
+						<legend class="hide">비회원 주문 조회</legend>
+						<input type="text" title="이름 입력" placeholder="이름 (Full name)" />
+						<input type="text" title="주문번호 입력" placeholder="주문번호 (Order No.)" class="mgt8" />
+						<input type="text" title="핸드폰 번호 입력" placeholder="핸드폰 번호 (Mobile number)" class="mgt8" />
+						<button type="button" class="btn_purple">주문 조회<span>Check Order</span></button>
+					</fieldset>
+				</form>
+			</div>
+		</section>
+
+	</main>
+	<!-- //content -->
+
+	<!-- popup// -->
+	<div id="popup1" class="popup find_id">
+		<div class="popup_area">
+			<div class="inner">
+				<h3>아이디 찾기 <span>(Find ID)</span></h3>
+				<div class="txt">
+					<input type="text" title="이름 입력" placeholder="이름 (Full name)" class="inp_type1" />
+					<div class="divide mgt12">
+						<input type="text" title="이메일 아이디 입력" placeholder="E-mail" class="inp_type1"/>
+						<span class="at">@</span>
+						<div class="select email">
+							<select title="이메일 도메인 선택">
+								<option>직접입력</option>
+								<option>daum.net</option>
+								<option>gmail.com</option>
+								<option>nate.com</option>
+								<option>naver.com</option>
+							</select>
+							<input type="text" class="sel_txt" title="이메일 도메인 직접 입력" placeholder="직접입력" />
+						</div>
+					</div>
+					<small class="bultype">회원가입 시 등록하신 정보를 입력해 주세요.</small>
+				</div>
+				<div class="btn_area">
+					<button type="button" class="btn_purple" onclick="fn.popupClose('#popup1');fn.popupOpen('#popup2')">찾기<span>Find</span></button>
+					<button type="button" class="btn" onclick="fn.popupClose('#popup1')">닫기<span>Close</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup2" class="popup find_idEnd">
+		<div class="popup_area">
+			<div class="inner">
+				<h3>아이디 찾기 <span>(Find ID)</span></h3>
+				<div class="txt">
+					<p>입력하신 정보와 일치하는 아이디입니다</p>
+					<b>YGM***</b>
+					<span>가입일 : 2018.03.22</span>
+				</div>
+				<div class="btn_area">
+					<button type="button" class="btn_purple">비밀번호 찾기 <span>Find P/W</span></button>
+					<button type="button" class="btn" onclick="fn.popupClose('#popup2')">닫기 <span>Close</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup3" class="popup find_pw">
+		<div class="popup_area">
+			<div class="inner">
+				<h3>비밀번호 찾기 <span>(Find PW)</span></h3>
+				<div class="txt">
+					<input type="text" title="아이디 입력" placeholder="아이디 (ID)" class="inp_type1" />
+					<input type="text" title="이름 입력" placeholder="이름 (Full name)" class="inp_type1 mgt12" />
+					<div class="divide mgt12">
+						<input type="text" title="이메일 아이디 입력" placeholder="E-mail" class="inp_type1"/>
+						<span class="at">@</span>
+						<div class="select email">
+							<select title="이메일 도메인 선택">
+								<option>직접입력</option>
+								<option>daum.net</option>
+								<option>gmail.com</option>
+								<option>nate.com</option>
+								<option>naver.com</option>
+							</select>
+							<input type="text" class="sel_txt" title="이메일 도메인 직접 입력" placeholder="직접입력" />
+						</div>
+					</div>
+					<small class="bultype">회원가입 시 등록하신 정보를 입력해 주세요.</small>
+					<small class="bultype mgt4">입력하신 이메일 주소로 임시 비밀번호가 발송됩니다.</small>
+				</div>
+				<div class="btn_area">
+					<button type="button" class="btn_purple" onclick="fn.popupClose('#popup3');fn.popupOpen('#popup4')">찾기<span>Find</span></button>
+					<button type="button" class="btn" onclick="fn.popupClose('#popup3')">닫기<span>Close</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup4" class="popup find_pwEnd">
+		<div class="popup_area">
+			<div class="inner">
+				<h3>비밀번호 찾기 <span>(Find PW)</span></h3>
+				<div class="txt">
+					<p>
+						회원가입 시 입력하신 이메일 주소로<br />
+						임시 비밀번호가 발송되었습니다.
+					</p>
+					<b>ygm****@naver.com</b>
+				</div>
+				<div class="btn_area">
+					<button type="button" class="btn_purple" onclick="fn.popupClose('#popup4');">확인<span>Ok</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 추가 : 2018.06.05// -->
+	<div id="popup5" class="popup password" style="opacity:1; top:0;">
+		<div class="popup_area">
+			<div class="inner">
+				<h3>비밀번호 변경 <span>Change Password</span></h3>
+				<div class="txt">
+					<p>
+						<span>개인정보 보호를 위해</span> <span><b>비밀번호를 변경</b>해 주세요!</span>
+					</p>
+
+					<table>
+						<caption>비밀번호변경 양식</caption>
+
+						<colgroup>
+							<col style="">
+						</colgroup>
+
+						<tbody>
+							<tr>
+								<td><input type="password" title="배송지명 입력" placeholder="Current Password" class="inp_type1" /></td>
+							</tr>
+							<tr>
+								<td><input type="password" title="이름 입력" placeholder="New Password" class="inp_type1" /></td>
+							</tr>
+							<tr>
+								<td>
+									<input type="password" title="휴대폰 번호 입력" placeholder="Re-enter New Password" class="inp_type1" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="btn_area">
+					<button class="btn_cancel" onclick="fn.popupClose('#popup5');">다음에 변경<span>Later</span></button>
+					<button class="btn_purple">지금변경<span>Change</span></button>
+				</div>
+
+				<p class="txt2">
+					개인정보를 안전하게 관리하여 개인정보 도용으로 인한
+					피해를 방지하고자 비밀번호 변경을 적극 권장하고 있습니다.
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- //추가 : 2018.06.05 -->
+	<!-- //popup -->
+
+	<!-- footer//-->
+	<%@ include file="/m/inCom/_footer.jsp" %>
+	<!-- //footer -->
+
+</div>
+
+</body>
+</html>

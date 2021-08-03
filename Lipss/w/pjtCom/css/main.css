@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+/**
+* --------------------------------
+* Main CSS
+* --------------------------------
+*/
+.intro { position:absolute; height:100%; width:100%; overflow:hidden; }
+.main { position:absolute; height:100%; width:100%; overflow:hidden; }
+.intro_area { position:absolute; top:0; left:0; width:100%; height:100%; overflow:hidden; }
+.intro_area:before { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:url("/w/pjtCom/images/main/fg_intro_vidio.png") repeat 0 0; }
+.intro_area .logo { position:absolute; top:195px; left:50%; transform:translateX(-50%); }
+.intro_area .txt { position:absolute; top:0; left:0; width:100%; }
+.intro_area .txt span { position:absolute; top:0; left:0; width:100%; text-align:center; color:#fff; }
+.intro_area .txt .txt1 { top:482px; font-size:20px; }
+.intro_area .txt .txt2 { top:515px; font-size:40px; }
+.intro_area .btn_skip { position:absolute; top:674px; left:50%; transform:translateX(-50%); height:23px; font-family:"NotoSans"; font-weight:500; font-size:14px; letter-spacing:-0.05em; color:#fff; border-bottom:1px solid #fff; background:none; }
+.intro_area .video { position:absolute; z-index:-1; top:0; left:0; width:100%; }
+/* 인트로 애니메이션 : from */
+.intro_area .logo { opacity:0; transform:translate(-50%, -20px); }
+.intro_area .txt1 { opacity:0; transform:translateY(-20px); }
+.intro_area .txt2 { opacity:0; transform:translateY(-20px); }
+.intro_area .btn_skip { opacity:0; transform:translate(-50%, -20px); }
+/* 인트로 애니메이션 : to */
+.intro_area.load .logo { opacity:1; transform:translate(-50%, 0px); transition-delay:500ms; transition-duration:1000ms; }
+.intro_area.load .txt1 { opacity:1; transform:translateY(0px); transition-delay:700ms; transition-duration:1000ms; }
+.intro_area.load .txt2 { opacity:1; transform:translateY(0px); transition-delay:900ms; transition-duration:1000ms; }
+.intro_area.load .btn_skip { opacity:1; transform:translate(-50%, 0); transition-delay:1500ms; transition-duration:1000ms; }
+
+.main_area { position:absolute; top:0; left:0; width:100%; height:100%; overflow:hidden; }
+.main_area .img_list .img { position:absolute; top:0; left:0; }
+.main_area .img_list .img img { width:1920px; }
+.main_area .img_list .btn_goods { position:fixed; left:50%; transform:translateX(-50%); text-indent:-9999px; border-radius:100%; }
+.main_area .img_list .btn_goods:before { content:"GO"; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); height:auto; font-weight:500; text-indent:0; color:#fff; }
+.main_area .img_list .btn_goods:after { content:""; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:8px; height:14px; background:url("/w/pjtCom/images/main/btn_goods.png") repeat 0 0; }
+.main_area .img_thumb_list { position:absolute; z-index:1; top:68px; right:0; }
+.main_area .img_thumb_list li { position:relative; width:344px; height:103px; font-size:14px; line-height:24px; color:rgba(255, 255, 255, 0.6); margin-top:8px; padding:24px 0 25px 24px; cursor:pointer; box-sizing:border-box; }
+.main_area .img_thumb_list li:first-child { margin-top:8px; }
+.main_area .img_thumb_list li .txt_area { position:relative; z-index:1; }
+.main_area .img_thumb_list li .txt_area span { display:block; font-size:20px; line-height:30px; }
+.main_area .img_thumb_list li .img_area { position:absolute; bottom:0; right:0; width:100%; height:100%; background:rgba(70, 41, 42, 0.8); }
+.main_area .img_thumb_list li .img_area .img { position:absolute; bottom:0; right:12px; }
+/* 메인 애니메이션 : from */
+.main_area .img_list .img { opacity:0; transition-duration:1000ms; }
+.main_area .img_list .img img
+.main_area .img_list .btn_goods { display:none; bottom:140px; animation:btnGoods 800ms infinite alternate; width:80px; height:80px; border:2px solid #fff; transition-duration:500ms; }
+.main_area .img_list .btn_goods:before { display:none; }
+.main_area .img_list .btn_goods:after { display:block; }
+.main_area .img_thumb_list li .txt_area span { color:rgba(255, 255, 255, 0.6); transition-duration:300ms; }
+.main_area .img_thumb_list li .img_area { transform:translateX(100%); transition-delay:200ms; transition-duration:500ms; transition-timing-function:cubic-bezier(0.645, 0.045, 0.355, 1); }
+.main_area .img_thumb_list li .img_area .img { transform:translateX(100%); transition-duration:600ms; transition-timing-function:cubic-bezier(0.645, 0.045, 0.355, 1); }
+/* 메인 애니메이션 : to */
+.main_area .img_list .img.show { z-index:1; opacity:1; }
+.main_area .img_list .img.show .btn_goods { display:block; }
+.main_area .img_list .img.show .btn_goods:hover { animation:none; bottom:130px; width:100px; height:100px; border:2px solid #ee144f; }
+.main_area .img_list .img.show .btn_goods:hover:before { display:block; }
+.main_area .img_list .img.show .btn_goods:hover:after { display:none; }
+.main_area .img_thumb_list li:hover .txt_area span,
+.main_area .img_thumb_list li.on .txt_area span { color:rgba(255, 255, 255, 1); }
+.main_area .img_thumb_list li:hover .img_area,
+.main_area .img_thumb_list li.on .img_area { transform:translateX(0%); transition-delay:0ms; }
+.main_area .img_thumb_list li:hover .img_area .img,
+.main_area .img_thumb_list li.on .img_area .img { transform:translateX(0%); transition-delay:200ms; }
+
+@keyframes btnGoods {
+    from {transform:translateX(-50%) scale(0.9);}
+    to {transform:translateX(-50%) scale(1);}
+}

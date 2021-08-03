@@ -1,0 +1,13 @@
+/* main */
+.main #wrap #header {border-bottom:none;}
+.main #wrap #contents {padding-top:48px;padding-bottom:0;}
+.main .mainpic ul li {display:none;position:relative;overflow:hidden;box-sizing:border-box;cursor:pointer;}
+.main .mainpic ul li .pic {margin-bottom:2px;display:block;overflow:hidden;}
+/* .main .mainpic ul li .pic img {filter:blur(2px);-webkit-filter:blur(2px);transform:scale(1.01);} */
+.main .mainpic ul li .txt {position:absolute;top:50%;left:0;display:block;margin-top:-16px;padding:0 16px;width:100%;box-sizing:border-box;}
+.main .mainpic ul li .txt strong {display:block;margin-top:0;color:#fff;font-size:15px;font-weight:normal;}
+.main .mainpic ul li .txt small {display:block;margin-top:5px;color:#fff;font-size:12px;opacity:.6;}
+.main .mainpic ul li:nth-child(1) .txt {top:70%;text-align:center;}
+.main .mainpic ul li:nth-child(1) .txt strong {margin-top:10px;font-size:16px;font-weight:bold;}
+.main .mainpic ul li:nth-child(1) .txt small {margin-top:0;font-size:14px;opacity:1;}
+/* .main .mainpic ul li.active .pic img {filter:blur(0);-webkit-filter:blur(0);} */

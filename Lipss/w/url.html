@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<script type="text/javascript" src="./pjtCom/js/lib/jquery-3.3.1.min.js"></script>
+<title>Lipss URL</title>
+<style>
+	*{margin:0; padding:0;}
+	html, body {background-color:#fff;}
+	dl,ul,ol,menu,li {list-style:none}
+	img {border:0 none;vertical-align:top;}
+	table {border-collapse:collapse;border-spacing:0}
+	a {text-decoration:none;border-collapse:separate;color:#666;}
+	label {cursor:pointer;}
+	p { word-wrap:break-word; word-break:break-all;}
+	textarea {resize:none; }
+	#wrap {margin:0;padding:0;}
+	h2 {position:relative;padding:5px 0 5px 10px;font-size:14px;line-height:30px;font-weight:bold; cursor:pointer;}
+	h2 span {font-size:11px;font-weight:normal;}
+	h2 .enddate {position:absolute;top:12px;right:10px;display:inline-block;color:#888;text-align:right;font-size:12px;line-height:24px;}
+	.sti {border-top:2px solid #585858;color:#333;background-color:#f7f7f7;}
+	.header {padding:20px;background-color:#fff;border-bottom:1px solid #585858;text-align:center; }
+	.folderbox {padding:0 20px 20px 20px;}
+	.folderbox:after {content:" ";display:block;clear:both;}
+	.folderbox dl {width:500px;}
+	.folderbox dl dt {float:left;display:inline-block;width:40%;}
+	.folderbox dl dd {float:left;display:inline-block;width:60%;}
+	.tabletype {width:100%;}
+	.tabletype table {width:100%;table-layout:fixed;color:#555;border:1px solid #e4e4e4;}
+	.tabletype table th {padding:5px 0;background:#f6f6f6;border-right:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4;}
+	.tabletype table th.l {padding:0 0 0 5px;text-align:left;}
+	.tabletype table td {padding:4px 4px 4px 4px;color:#000;text-align:center;border-right:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4;vertical-align:top;font-size:12px;}
+	.tabletype table td.l {text-align:left;}
+	.tabletype table td.r {text-align:right;}
+	.tabletype table td.m {vertical-align:middle;}
+	.lstype {width:100%;border-top:1px solid #585858;}
+	.lstype ul li {position:relative;padding:5px;border-bottom:1px solid #ccc;line-height:22px;font-size:12px;}
+	.lstype ul li dl {width:100%;}
+	.lstype ul li dl:after {content:" ";display:block;clear:both;}
+	.lstype ul li dl dt {position:relative;float:left;width:20%;}
+	.lstype ul li dl dd {position:relative;float:left;width:80%;}
+	.lstype ul li dl dd a {position:relative;display:inline-block;width:100%;}
+	.enddate {position:absolute;top:0;right:5px;display:inline-block;color:#888;text-align:right;font-size:12px;line-height:24px;}
+	.bar0 {background-color:none;}
+	.bar1 {background-color:#fff0f0;}
+	.bar2 {background-color:#fffff0;}
+	.bar3 {background-color:#f0fff7;}
+	.bar4 {background-color:#f0f1ff;}
+	.bar5 {background-color:#fef0ff;}
+	.barx{background-color:#fff;}
+	.txt_blue {color:#2465ec;}
+	.txt_white {color:#fff;}
+	.htmlprocess {padding:0 20px;}
+	.htmlprocess .htmlprocess_tit {padding:5px;background:#777; color:#fff; font-weight:bold;margin-top:10px;}
+	.htmlprocess table {width: 100%; font-size:13px; margin-bottom:30px;}
+	.htmlprocess table th {border:1px solid #ccc; background:#eee;}
+	.htmlprocess table td {border:1px solid #ccc; text-align:right; padding:2px 5px 1px 5px;}
+	.htmlprocess .processbar {display:block;margin:5px;height:20px;background-color:rgba(0, 199, 240, 0.1);text-align:left;}
+	.htmlprocess .processbar span {display:inline-block;height:20px;background-color:#fb53ab;}
+	.fin {border-radius:2px;background:#efccc6;}
+</style>
+<script type="text/javascript">
+//<![CDATA[
+	$(function(){
+		$(".lstype").hide(0);
+		$(".lstype2").slideDown(800);
+		$(".lstype3").slideDown(800);
+		$(".sti").click(function(){
+			if( $(this).next("div").css('display') == 'none' ){
+				$(this).next("div").slideDown(400);
+			}else{
+				$(this).next("div").slideUp(400);
+			}
+		});
+		$(".folderbox").slideUp(800);
+		$(".foldersti").click(function(){
+			if( $(".folderbox").css('display') == 'none' ){
+				$(".folderbox").slideDown(400);
+			}else{
+				$(".folderbox").slideUp(400);
+			}
+		});
+	});
+//]]>
+</script>
+</head>
+<body>
+
+<div id="wrap">
+	<div class="header">
+		<h1><img src="/pjtCom/images/common/h_logo.png" alt="" /></h1>
+	</div>
+	<h2 class="foldersti">- 폴더 네이밍<span> : 실제 작업 시 변경 될 수 있습니다.</span></h2>
+	<div class="folderbox">
+		<div class="tabletype">
+			<table summary="">
+				<caption></caption>
+				<colgroup>
+					<col width="10%" />
+					<col width="45%" />
+					<col width="*" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th colspan="2">메뉴명</th>
+						<th>폴더명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="l" rowspan="12">WEB</td>
+						<td class="l">메인</td>
+						<td class="l">/</td>
+					</tr>
+					<tr>
+						<td class="l">GOODS</td>
+						<td class="l">/goods/</td>
+					</tr>
+					<tr>
+						<td class="l">일반상품</td>
+						<td class="l">/other/</td>
+					</tr>
+					<tr>
+						<td class="l">LIPSS RANKING</td>
+						<td class="l">/ranking/</td>
+					</tr>
+					<tr>
+						<td class="l">LIPSS TALK</td>
+						<td class="l">/talk/</td>
+					</tr>
+					<tr>
+						<td class="l">LIPSS?</td>
+						<td class="l">/about/</td>
+					</tr>
+					<tr>
+						<td class="l">마이페이지</td>
+						<td class="l">/mypage/</td>
+					</tr>
+					<tr>
+						<td class="l">주문결제</td>
+						<td class="l">/order/</td>
+					</tr>
+					<tr>
+						<td class="l">멤버</td>
+						<td class="l">/member/</td>
+					</tr>
+					<tr>
+						<td class="l">고객센터</td>
+						<td class="l">/customer/</td>
+					</tr>
+					<tr>
+						<td class="l">이벤트</td>
+						<td class="l">/event/</td>
+					</tr>
+					<tr>
+						<td class="l">이용약관, 개인정보취급방침</td>
+						<td class="l">/policy/</td>
+					</tr>
+					<tr>
+						<td class="l">공통파일(css, js, images) 등</td>
+						<td class="l">/pjtCom/</td>
+					</tr>
+					<tr>
+						<td class="l">인클루드파일(header, footer, lnb)</td>
+						<td class="l">/inCom/</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<h2 class="sti sti2">- WEB<span class="enddate">완료일</span></h2>
+	<div class="htmlprocess">
+		<script type="text/javascript">
+			$(function(){
+				var totalfile = $(".frontlist dd > a").length - 1;
+				var finfile =$(".fin").length;
+				var ingfile =totalfile-finfile
+				var processper=(finfile / totalfile) * 100;
+				$(".totalfile").text(totalfile);
+				$(".finfile").text(finfile);
+				$(".ingfile").text(ingfile);
+				$(".processper").text(processper.toFixed(3)+' %'); // 소수자리 지정
+				$(".processbar span").css({"width":+processper+"%"});
+			})
+		</script>
+		<style type="text/css">
+		.htmlprocess {}
+		.htmlprocess .htmlprocess_tit {background:#777; color:#fff; font-weight:bold;margin-top:20px; }
+		.htmlprocess table {width: 100%; font-size:13px; margin-top:10px; margin-bottom:30px;}
+		.htmlprocess table th {border:1px solid #ccc; background:#eee;}
+		.htmlprocess table td {border:1px solid #ccc; text-align:right; padding:2px 5px 1px 0;}
+		</style>
+
+		<p class="htmlprocess_tit">HTML 작업공정률</p>
+		<table>
+		<colgroup><col width="150" /><col width="150" /><col width="150" /><col width="150" /><col width="*" /></colgroup>
+			<tr>
+				<th>파일수</th>
+				<th>완료</th>
+				<th>대기</th>
+				<th>작업률</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td class="totalfile"></td>
+				<td class="finfile"></td>
+				<td class="ingfile"></td>
+				<td class="processper"></td>
+				<td><span class="processbar"><span></span></span></td>
+			</tr>
+		</table>
+	</div>
+	<div class="lstype lstype2 frontlist">
+		<ul>
+			<li class="bar0">
+				<dl>
+					<dt><a href="./style_guide.html" target="_blank">GUIDE</a></dt>
+					<dd>
+						<a href="./style_guide.html" target="_blank">style_guide<span class="txt_white">.dddd</span> <span class="enddate"></span></a><br />
+					</dd>
+				</dl>
+			</li>
+			<li class="bar1">
+				<dl>
+					<dt>인트로</dt>
+					<dd>
+						<a href="./index.jsp" target="_blank" class="fin">인트로<span class="enddate">2018.04.24</span></a><br /><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+			<li class="bar1">
+				<dl>
+					<dt>메인</dt>
+					<dd>
+						<a href="./main.jsp" target="_blank" class="fin">메인<span class="enddate">2018.04.24</span></a><br /><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+			<li class="bar2">
+				<dl>
+					<dt>GOODS</dt>
+					<dd>
+						<a href="./goods/index.jsp" target="_blank" class="fin">GOODS 목록/상세<span class="enddate"><span class="txt_blue">2018.05.10수정 2018.05.04수정 2018.05.03수정 2018.04.30수정 2018.04.25수정 2018.04.19수정</span> 2018.04.16</span></a><br /><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+			<li class="bar3">
+				<dl>
+					<dt>OTHER</dt>
+					<dd>
+						<a href="./other/index.jsp" target="_blank" class="fin">일반상품 목록<span class="enddate">2018.11.05</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./other/detail.jsp" target="_blank" class="fin">일반상품 상세 - 상품평 팝업<span class="enddate">2018.11.05</span></a><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+			<li class="bar4">
+				<dl>
+					<dt>LIPSS TALK</dt>
+					<dd>
+						<a href="./talk/talk_list.jsp" target="_blank">TALK<span class="enddate"></span></a><br /><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+			<li class="bar5">
+				<dl>
+					<dt>LIPSS RANKING</dt>
+					<dd>
+						<a href="./ranking/ranking_list.jsp" target="_blank">RANKING<span class="enddate"></span></a><br /><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar1">
+				<dl>
+					<dt>LIPSS?</dt>
+					<dd>
+						<a href="./about/lipss.jsp" target="_blank">LIPSS?<span class="enddate"></span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./about/goods.jsp" target="_blank">제품 소개<span class="enddate"></span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./about/company.jsp" target="_blank">회사 소개<span class="enddate"></span></a><br /><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar2">
+				<dl>
+					<dt>마이페이지</dt>
+					<dd>
+						<a href="./mypage/index.jsp" target="_blank" class="fin">메인<span class="enddate"><span class="txt_blue">2018.05.29수정</span> 2018.04.26</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/order_list.jsp" target="_blank" class="fin">주문내역조회<span class="enddate"><span class="txt_blue">2018.11.05수정</span> 2018.04.20</span></a><br /><br /><!-- 완료 후 class="fin" -->
+
+						<a href="./mypage/order_view.jsp" target="_blank" class="fin">주문내역 상세 - 상품평 등록 팝업<span class="enddate"><span class="txt_blue">2018.11.05수정 2018.05.11수정 .05.04수정</span> 2018.04.20</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/order_view_abroad.jsp" target="_blank" class="fin">주문내역 상세 - 해외배송<span class="enddate"> 2018.10.17</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/review_possible.jsp" target="_blank" class="fin">LIPSS TALK - 작성가능한 후기 / 상품평 등록 팝업<span class="enddate">2018.11.07</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/review_complete.jsp" target="_blank" class="fin">LIPSS TALK - 작성한 후기 / 상품평 팝업<span class="enddate">2018.11.07</span></a><br /><br /><!-- 완료 후 class="fin" -->
+
+						<a href="./mypage/coupon.jsp" target="_blank" class="fin">쿠폰<span class="enddate">2018.04.25</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/wish.jsp" target="_blank" class="fin">WISH LIST<span class="enddate">2018.04.30</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/qna.jsp" target="_blank" class="fin">1:1 문의 내역<span class="enddate"><span class="txt_blue">2018.05.04수정</span> 2018.04.30</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/qna_write.jsp" target="_blank" class="fin">1:1 문의 작성<span class="enddate"><span class="txt_blue">2018.05.04수정</span> 2018.04.30</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/address.jsp" target="_blank" class="fin">배송지 관리<span class="enddate">2018.04.25</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/modify_step1.jsp" target="_blank" class="fin">회원정보수정 인증<span class="enddate">2018.04.23</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/modify_step2.jsp" target="_blank" class="fin">회원정보수정<span class="enddate"><span class="txt_blue">2018.05.04수정</span> 2018.04.23</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/modify_sns_step1.jsp" target="_blank" class="fin">SNS 회원정보수정 인증<span class="enddate">2018.04.23</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/modify_sns_step2.jsp" target="_blank" class="fin">SNS 회원정보수정<span class="enddate"><span class="txt_blue">2018.05.04수정</span> 2018.04.23</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/withdrawal.jsp" target="_blank" class="fin">회원탈퇴<span class="enddate"><span class="txt_blue">2018.05.04수정</span> 2018.04.23</span></a><br /><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar3">
+				<dl>
+					<dt>주문결제</dt>
+					<dd>
+						<a href="./order/order_step1.jsp" target="_blank" class="fin">주문결제<span class="enddate"><span class="txt_blue">2018.05.29수정 2018.04.27수정 2018.04.26수정</span> 2018.04.19</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./order/order_step1_abroad.jsp" target="_blank" class="fin">주문결제 - 해외배송<span class="enddate">2018.10.17</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./order/order_step2.jsp" target="_blank" class="fin">주문결제 완료<span class="enddate"><span class="txt_blue">2018.04.27수정 2018.04.26수정</span> 2018.04.19</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./order/cart.jsp" target="_blank" class="fin">장바구니<span class="enddate"><span class="txt_blue">2018.10.17수정 2018.05.15수정 2018.05.09수정 2018.04.30수정 2018.04.26수정 2018.04.19수정</span> 2018.04.17</span></a><br /><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar4">
+				<dl>
+					<dt>멤버</dt>
+					<dd>
+						<a href="./member/login.jsp" target="_blank" class="fin">로그인 / 비회원 주문 조회 / 회원가입 선택/ 아이디,비밀번호 찾기/ 아이디,비밀번호 찾기결과<span class="enddate"><span class="txt_blue">2018.04.17수정</span> 2018.04.16</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./member/join_step1.jsp" target="_blank" class="fin">회원가입 STEP1 - 일반가입 정보입력<span class="enddate"><span class="txt_blue">2018.05.17수정 2018.05.11수정</span> 2018.04.16</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./member/join_step1_sns.jsp" target="_blank" class="fin">회원가입 STEP1 - SNS가입 정보입력<span class="enddate"><span class="txt_blue">2018.05.17수정 2018.05.11수정</span> 2018.04.16</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./member/join_step2.jsp" target="_blank" class="fin">회원가입 STEP2 - 가입완료<span class="enddate">2018.04.16</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./member/nonmemberorder.jsp" target="_blank" class="fin">비회원 구매 개인정보 수집 동의<span class="enddate">20180511</span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar5">
+				<dl>
+					<dt>고객센터</dt>
+					<dd>
+						<a href="./customer/notice_list.jsp" target="_blank" class="fin">공지사항 목록<span class="enddate">2018.04.26</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./customer/notice_view.jsp" target="_blank" class="fin">공지사항 상세<span class="enddate"><span class="txt_blue">2018.05.29수정</span> 2018.04.26</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./customer/faq.jsp" target="_blank" class="fin">FAQ<span class="enddate">2018.04.27</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./customer/qna_login.jsp" target="_blank" class="fin">1:1문의 로그인 확인<span class="enddate">2018.04.27</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./customer/qna.jsp" target="_blank" class="fin">1:1문의<span class="enddate">2018.04.27</span></a><br /><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar1">
+				<dl>
+					<dt>정책</dt>
+					<dd>
+						<a href="./policy/terms.jsp" target="_blank" class="fin">이용약관<span class="enddate">2018.05.11</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./policy/privacy.jsp" target="_blank" class="fin">개인정보취급방침<span class="enddate">2018.05.11</span></a><br /><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar2">
+				<dl>
+					<dt>메일</dt>
+					<dd>
+						<a href="./mail/join.html" target="_blank" class="fin">회원가입<span class="enddate">2018.05.15</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./mail/password.html" target="_blank" class="fin">임시비밀번호<span class="enddate">2018.05.15</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./mail/order_end.html" target="_blank" class="fin">결제완료<span class="enddate">2018.05.16</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./mail/order_delivery.html" target="_blank" class="fin">상품발송<span class="enddate">2018.05.16</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./mail/order_cancel.html" target="_blank" class="fin">주문취소<span class="enddate">2018.05.16</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./mail/order_payment.html" target="_blank" class="fin">입금전<span class="enddate">2018.05.16</span></a><br /><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar3">
+				<dl>
+					<dt>에러페이지</dt>
+					<dd>
+						<a href="./error/error_inspect.jsp" target="_blank" class="fin">시스템 에러<span class="enddate">2018.05.17</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./error/error_null.jsp" target="_blank" class="fin">페이지 없음<span class="enddate">2018.05.17</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./error/error_system.jsp" target="_blank" class="fin">시스템에러<span class="enddate">2018.05.17</span></a><br /><br /><!-- 완료 후 class="fin" -->
+						<a href="./error/error_order.jsp" target="_blank" class="fin">주문에러<span class="enddate">2018.05.17</span></a><br /><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar2">
+				<dl>
+					<dt>이벤트</dt>
+					<dd>
+						<a href="./event/event_list.jsp" target="_blank" class="fin">이벤트 목록<span class="enddate"><span class="txt_blue">2018.10.17수정 </span>2018.09.18</span></a><br /><br />
+						<a href="./event/event_list_end.jsp" target="_blank" class="fin">이벤트 목록 - 종료 이벤트<span class="enddate">2018.10.17</span></a><br /><br />
+						<a href="./event/event_view.jsp" target="_blank" class="fin">이벤트 상세 : 팝업 - 파일첨부<span class="enddate">2018.09.18</span></a><br /><br />
+					</dd>
+				</dl>
+			</li>
+
+		</ul>
+	</div>
+</div>
+</body>
+</html>
