@@ -1,0 +1,81 @@
+@charset "euc-kr";
+
+/* default */
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: Dotum, "µ¸¿ò", sans-serif;
+	font-size: 12px;
+}
+
+/* base style */
+table {
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+img { border: 0 none; }
+
+dl, ul, ol, li { list-style: none; }
+
+h1, h2, h3, h4, h5, h6,
+dl, dt, dd, ul, li, ol,
+th, td, p, blockquote,
+form, fieldset, legend { margin: 0; padding: 0; }
+
+p, div, th, td, select, input, textarea {
+	color: #565656;
+	font-size: 12px;
+	line-height: 18px;
+	margin: 0;
+	padding: 0;
+}
+
+/* link base style */
+a:link, a:active, a:visited, a:hover {
+	color: #565656;
+	text-decoration: none;
+}
+
+/* form style */
+.input		{ background-color: #ffffff; border: 1px solid #c2c2c2; height: 19px; }
+.area		{ background-color: #ffffff; border: 1px solid #c2c2c2; }
+.select		{ background-color: #ffffff; border: 1px solid #c2c2c2; }
+
+/* common */
+.marginT10 {
+	margin-top: 10px;
+}
+.marginT25 {
+	margin-top: 25px;
+}
+.marginB5 {
+	margin-bottom: 5px;
+}
+.marginB20 {
+	margin-bottom: 20px;
+}
+
+.f11 {
+	font-size: 11px;
+}
+
+.gray {
+	color: #979797;
+}
+.orange {
+	color: #fe5200;
+}
+
+
+/* etc */
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+
+.clear { clear: both; }
+.clear1 { clear: both; line-height: 1px; font-size: 1px; height: 1px; }

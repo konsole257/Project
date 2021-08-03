@@ -1,0 +1,437 @@
+﻿@import url(layout.css);
+
+#middle {
+	margin-top:24px;
+	overflow:hidden;
+}
+
+
+/*[s]About us*/
+/*History*/
+div.hisCon1 {
+	margin:0;
+}
+div.hisCon2 {
+	clear:both;
+	padding:0 0 0 0;
+}
+table.hisTable1 {
+	width: 100%;
+	table-layout: fixed;
+	border-top: 1px solid #b3b3b3;
+	border-bottom: 2px solid #b3b3b3;
+}
+table.hisTable1 th {
+	border-top: 1px solid #b3b3b3;
+	padding:5px 0 5px 10px;
+	color:#000000;
+	vertical-align:top;
+}
+table.hisTable1 td {
+	border-top: 1px solid #b3b3b3;
+	padding:5px 0 5px 10px;
+	color:#565656;
+	vertical-align:top;
+}
+table.hisTable1 td.month {
+	font-weight:bold;
+}
+/*Message from president*/
+div.messageCon1 {
+	background: url(/en/images/aboutus/message_img4.jpg) no-repeat 100% 0;
+	padding:0 0 0 10px;
+}
+div.messageCon1 strong {font-size:16px;}
+/*Organization*/
+div.organCon1 {
+	padding:0;
+}
+/*[e]About us*/
+
+/*[s]Contact us*/
+div.contactusBox1 {
+	background: url(/en/images/contactus/box1_s.gif) no-repeat top left;
+	padding-top:5px;
+}
+div.contactusBox1 .con {
+	background: url(/en/images/contactus/box1_e.gif) no-repeat left bottom;
+	padding:5px 30px 10px 30px;
+	line-height:18px;
+}
+/*[e]Contact us*/
+
+/*[s]bbs Style*/
+table.bbsTableList1 {
+	width: 100%;
+	table-layout: fixed;
+	border-bottom: 1px solid #cdc8bd;
+}
+table.bbsTableList1 th {
+	background-color:#ebe6db;
+	text-align:center;
+}
+table.bbsTableList1 td {
+	border-bottom: 1px solid #cdc8bd;
+	padding:9px 0 9px 0;
+	color:#565656;
+	text-align:center;
+}
+table.bbsTableList1 td.subject {
+	padding:9px 0 9px 10px;
+	text-align:left;
+}
+table.bbsTableList1 td img.pic {
+	border: 1px solid #eeeeee;
+}
+table.bbsTableList2 {
+	width: 100%;
+	table-layout: fixed;
+	border-top: 2px solid #ebe6db;
+}
+table.bbsTableList2 th {
+	text-align:center;
+	padding:0 0 0 0;
+}
+table.bbsTableList2 td {
+	padding:10px 0 0 0;
+	color:#565656;
+	vertical-align:top;
+}
+table.bbsTableList2 td.bar1 {
+	background: url(/en/images/common/bbs_dot1.gif) repeat-y top left;
+}
+table.bbsTableList2 td.bar2 {
+	border-bottom: 1px solid #cdc8bd;
+}
+table.bbsTableRead1 {
+	width: 100%;
+	table-layout: fixed;
+}
+table.bbsTableRead1 th {
+	padding:0 0 0 20px;
+	background: url(/en/images/common/bbsrft_bar1.gif) no-repeat top right;
+	border-bottom: 1px solid #cdc8bd;
+}
+table.bbsTableRead1 td {
+	padding:0 0 0 20px;
+	border-bottom: 1px solid #cdc8bd;
+}
+table.bbsTableRead1 th.ti {
+	background-color:#ebe6db;
+	border-bottom: 0px solid #cdc8bd;
+}
+table.bbsTableRead1 td.ti {
+	background-color:#ebe6db;
+	font-weight:bold;
+	border-bottom: 0px solid #cdc8bd;
+}
+table.bbsTableRead1 td.contents {
+	padding:20px 20px 20px 20px;
+	line-height:18px;
+	border-bottom: 2px solid #cdc8bd;
+}
+table.bbsTableRead1 th.list {
+	background-color:#e1dfd9;
+	border-bottom: 0px solid #cdc8bd;
+}
+table.bbsTableRead1 td.list {
+	background-color:#e1dfd9;
+	border-bottom: 0px solid #cdc8bd;
+}
+/*[e]bbs Style*/
+
+
+.about_03 .con {
+	width:98%;
+	margin:0 auto;
+}
+.about_03 .con .anchor-menu {
+	text-align:center;
+	padding:15px;
+	border:1px solid #d0dce7;
+	background-color:#ecf1f6;
+}
+.about_03 .con .anchor-menu > div {
+	display:inline-block;
+	width:60%;
+	text-align:left;
+}
+.about_03 .con .anchor-menu > div > div {
+	float:left;
+	width:50%;
+}
+.about_03 .con .txt-area {
+	margin-top:19px;
+}
+.about_03 .con .txt-area div {
+	width:98%;
+	margin:0 auto;
+	padding:3px;
+}
+.about_03 .con.txt-area div > p {
+	padding:3px;
+}
+.about_03 .con .txt-area div div p {
+	padding-left:14px;
+}
+.about_03 .con .txt-area div div p span {
+	display:inline-block;
+	width:14px;
+	text-align:center;
+	margin-left:-14px;
+}
+
+.about_04_01 .con {
+	text-align:center;
+	font-size:12px;
+	line-height:18px;
+}
+
+.about_06 .con .top {
+	overflow:hidden;
+}
+.about_06 .con .top div {
+	float:left;
+}
+.about_06 .con .top div.left {
+	padding-left:10px;
+}
+.about_06 .con .top div.right {
+	width:587px;
+	padding:0 20px;
+	box-sizing:border-box;
+}
+.about_06 .con .bottom a {
+	display:block;
+	width:105px;
+	margin:12px auto 0;
+}
+
+.about_06_01 .con {
+	width:706px;
+	margin:0 auto;
+}
+.about_06_01 .con .bottom {
+	margin-top:20px;
+	overflow:hidden;
+}
+.about_06_01 .con .bottom .left {
+	float:left;
+	margin-left:20px;
+}
+.about_06_01 .con .bottom .right {
+	float:left;
+	margin-left:89px;
+}
+.about_06_01 .con .bottom .btn {
+	margin-left:20px;
+}
+
+.list_2019 .con > table {
+	margin-top:10px;
+}
+.list_2019 .con .btn-area {
+	text-align:center;
+	margin-top:10px;
+}
+
+.movie_02 .con .img-area {
+	width:656px;
+	padding:25px;
+	background-color:#fdf9dd;
+	border:1px solid #e6d8be;
+	margin:0 0 143px 15px;
+	overflow:hidden;
+}
+.movie_02 .con .img-area div:nth-child(1) {
+	float:left;
+}
+.movie_02 .con .img-area div:nth-child(2) {
+	float:right;
+	margin-top:35px;
+}
+
+.movie_04_2019 .con {
+	overflow:hidden;
+}
+.movie_04_2019 .con .img {
+	float:left;
+}
+.movie_04_2019 .con .table {
+	float:right;
+	width:497px;
+}
+
+.book_2019 .con .top {
+	padding-bottom:7px;
+	overflow:hidden;
+}
+.book_2019 .con .top a {
+	float:right;
+	margin-top:27px;
+}
+.book_2019 .con .list-area-wrap {
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+}
+.book_2019 .con .list-area {
+	border-top:4px solid #f3f3f3;
+	border-bottom:4px solid #f3f3f3;
+	overflow:hidden;
+}
+.book_2019 .con .list-area li {
+	float:left;
+	position:relative;
+	width:50%;
+	padding:16px 0;
+	box-sizing:border-box;
+}
+.book_2019 .con .list-area li:after {
+	content:"";
+	position:absolute;
+	bottom:-1px;
+	left:0;
+	width:100%;
+	height:1px;
+	background:#ccc;
+}
+.book_2019 .con .list-area li > a {
+	float:left;
+}
+.book_2019 .con .list-area li > div {
+	float:left;
+	margin-left:15px;
+}
+.book_2019 .con .list-area li > div > div {
+	margin-top:10px;
+}
+.book_2019 .con .list-area li > div > div:first-child {
+	margin-top:0;
+}
+.book_2019 .con .list-area li > div > div img {
+	margin:6px 10px 0 0;
+}
+
+/*[s]bbs Style*/
+.bbs table.bbsTableList1 {
+	width: 100%;
+	table-layout: fixed;
+	border-bottom: 1px solid #cdc8bd;
+}
+.bbs table.bbsTableList1 th {
+	background-color:#d0dbe9;
+	text-align:center;
+}
+.bbs table.bbsTableList1 td {
+	border-bottom: 1px solid #cdc8bd;
+	padding:9px 0 9px 0;
+	color:#565656;
+	text-align:center;
+	font-size:12px;
+}
+.bbs table.bbsTableList1 td.subject {
+	padding:9px 0 9px 10px;
+	text-align:left;
+}
+.bbs table.bbsTableList1 td img.pic {
+	border: 1px solid #eeeeee;
+}
+.bbs div.page2 {
+	float:left;
+	/*width:280px;  20120320 검색박스 제거로 인한 사이즈 확장*/
+	width:100%;
+	text-align: center;
+	font-size: 11px;
+	padding: 20px 0 0 0;
+}
+.bbs div.page2 span.current {
+	color: #f26522;
+	font-weight: bold;
+}
+.bbs div.page2 a, div.page2 a:link, div.page2 a:visited, div.page2 a:hover, div.page2 a:active {
+	padding: 0 3px 0 3px;
+	color: #5e5e5e;
+}
+.bbs div.bbsSearch {
+	float:right;
+	padding: 20px 10px 0 0;
+}
+.bbs div.bbsSearch img {
+	vertical-align:top;
+
+}
+.bbs div.bbsSearch p.s1 {
+	float:left;
+	padding:1px 0 0 0;
+}
+.bbs div.bbsSearch p.s2 {
+	float:left;
+	padding:0 0 0 3px;
+}
+.bbs div.bbsSearch p.s3 {
+	float:left;
+	padding:0 0 0 3px;
+}
+/* form style */
+.bbs input.text{
+	border: 1px solid #c2c2c2;
+	background-color:#ffffff;
+	padding:3px 5px 0 5px;
+}
+.bbs textarea.text {
+	border: 1px solid #dacbbc;
+	background-color:#ffffff;
+}
+.bbs select.text{
+	background-color:#ffffff;
+	font-size:12px;
+}
+
+.bbs .page2 img {
+	vertical-align:initial;
+}
+
+	/*[s]bbs Style*/
+.bbs table.bbsTableRead1 {
+		width: 100%;
+		table-layout: fixed;
+	}
+.bbs table.bbsTableRead1 th {
+		padding:0 0 0 12px;
+		background: url(/en/images/common/bbsrft_bar1.gif) no-repeat top right;
+		border-bottom: 1px solid #cdc8bd;
+		font-size:12px;
+		text-align:left;
+	}
+.bbs table.bbsTableRead1 td {
+		padding:0 0 0 20px;
+		border-bottom: 1px solid #cdc8bd;
+		font-size:12px;
+		color:#565656;
+	}
+.bbs table.bbsTableRead1 th.ti {
+		background-color:#d0dbe9;
+		border-bottom: 0px solid #cdc8bd;
+	}
+.bbs table.bbsTableRead1 td.ti {
+		background-color:#d0dbe9;
+		font-weight:bold;
+		border-bottom: 0px solid #cdc8bd;
+	}
+.bbs table.bbsTableRead1 td.contents {
+		padding:20px 20px 20px 20px;
+		line-height:18px;
+		border-bottom: 2px solid #cdc8bd;
+	}
+.bbs table.bbsTableRead1 th.list {
+		background-color:#e1dfd9;
+		border-bottom: 0px solid #cdc8bd;
+	}
+.bbs table.bbsTableRead1 td.list {
+		background-color:#e1dfd9;
+		border-bottom: 0px solid #cdc8bd;
+	}
+.bbs div.btnCenter {
+		text-align:center;
+		padding:20px 0 0 0;
+	}

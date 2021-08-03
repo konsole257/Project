@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+/* body base style */
+html, body {
+	margin:0;
+	padding:0;
+	text-align:center;
+	line-height: 1.6em;
+	font-family:"돋움",Dotum,"굴림",Gulim,AppleGothic,Sans-serif;
+	background-color: #ffffff;
+}
+/* form base style */
+form, dl { margin:0; padding:0; }
+ul, ol, li { margin:0; padding:0; list-style:none; }
+img { border: 0 none; }
+
+/* font base style */
+p, div, th, td, select, input, textarea {
+	color: #333333;
+	font-size:12px;
+	line-height:1.6em;
+	margin:0;
+}
+
+img {
+	vertical-align:top;
+}
+
+/* link base style */
+a:link,a:active, a:visited {
+	color: #333333;
+	text-decoration: none;
+}
+a:hover {
+	color: #666666;
+	text-decoration: underline;
+}
+
+/* form style */
+input.text{
+	border: 1px solid #c2c2c2;
+	background-color:#ffffff;
+	padding:3px 5px 0 5px;
+}
+textarea.text {
+	border: 1px solid #dacbbc;
+	background-color:#ffffff;
+}
+select.text{
+	background-color:#ffffff;
+	font-size:12px;
+}
+
+/* font style */
+.ln16 {
+	line-height:16px;
+}
+.ln18 {
+	line-height:18px;
+}
+.ln20 {
+	line-height:20px;
+}
+.ln22 {
+	line-height:22px;
+}
+.ln25 {
+	line-height:25px;
+}
+
+.small_title {font-size: 11px; font-family:"돋움",Dotum,"굴림",Gulim,AppleGothic,Sans-serif; color:#999999;}
+.white {font-size: 13px; font-family:"돋움",Dotum,"굴림",Gulim,AppleGothic,Sans-serif; color:#ffffff; font-weight: bold;}
+
+/* board */
+
+a:link {
+	color: #666666; font-family:"돋움",dotum,"굴림",gulim,applegothic,sans-serif; font-size: 12px; text-decoration: none
+}
+a:active {
+	color: #666666; font-family:"돋움",dotum,"굴림",gulim,applegothic,sans-serif; font-size: 12px; text-decoration: none
+}
+a:visited {
+	color: #666666; font-family:"돋움",dotum,"굴림",gulim,applegothic,sans-serif; font-size: 12px; text-decoration: none
+}
+a:hover {
+	color: #000000; font-family:"돋움",dotum,"굴림",gulim,applegothic,sans-serif; font-size:12px; text-decoration: underline;
+}
+
+A.root:link		{font-family:"돋움",Dotum,"굴림",Gulim,AppleGothic,Sans-serif; font-size:8pt;color:#999999; text-decoration:none}
+A.root:visited	{font-family:"돋움",Dotum,"굴림",Gulim,AppleGothic,Sans-serif; font-size:8pt;color:#999999; text-decoration:none}
+A.root:active	{font-family:"돋움",Dotum,"굴림",Gulim,AppleGothic,Sans-serif; font-size:8pt;color:#999999; text-decoration:none}
+A.root:hover	{font-family:"돋움",Dotum,"굴림",Gulim,AppleGothic,Sans-serif; font-size:8pt;color:#999999; text-decoration:underline}
+
+.s-kor { font-family:"돋움",Dotum,"굴림",Gulim,AppleGothic,Sans-serif; font-size:11px; letter-spacing:-1px}
+.justify { text-align: justify}
+.root { font-family:"돋움",Dotum,"굴림",Gulim,AppleGothic,Sans-serif; font-size:8pt}
+.date { font-family:"돋움",Dotum,"굴림",Gulim,AppleGothic,Sans-serif; font-size:8pt;color:#999999}
+.search{font-family:"돋움",Dotum,"굴림",Gulim,AppleGothic,Sans-serif; font-size:9pt;color:#333333;background-color:#FFFFFF;height:20px}
+.input{
+	border:solid 1 #d2d2d2;
+	font-family:"돋움",Dotum,"굴림",Gulim,AppleGothic,Sans-serif;
+	font-size:9pt;
+	padding:1px;
+	color:#333333;
+	background-color:#FFFFFF;
+	height:14px;
+	margin-right:-2px;
+	margin-left:2px;
+	vertical-align:middle;
+}
+.textarea{border:solid 1 #CCCCCC ;font-family:"돋움",Dotum,"굴림",Gulim,AppleGothic,Sans-serif; font-size:9pt;color:#333333;background-color:#FFFFFF; height: 16px;}
+.button {border:solid 0 #CCCCCC; font-family: "돋움",Dotum,"굴림",Gulim,AppleGothic,Sans-serif; font-size: 9pt; color: #666666; background-color: #F5F5F5; height:20px}
+.board {
+	border-top: 1 solid DFDFDF;
+	border-right: none;
+	border-bottom: none;
+	border-left: none; }
+.board1 {
+	border-top: 1 dotted #CCCCCC;
+	border-right: none;
+	border-bottom: none;
+	border-left: none; }
+.bg1{
+	background-image: url(imgs/bar_01.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-attachment: fixed; }
+
+.title {
+	COLOR: #FFFFFF;
+	FONT-FAMILY:"돋움",Dotum,"굴림",Gulim,AppleGothic,Sans-serif;
+	background-color:#007EA2;
+	line-height:150%;
+	height:20px;
+	font-weight: bold;
+	padding-left:10px;
+}
+.main_text {
+	line-height:1.5em;
+}
+.main_text_eng {
+	line-height:1.4em;
+}
+
+.verdana {  font-family:"돋움",Dotum,"굴림",Gulim,AppleGothic,Sans-serif; font-size: 11px; font-style: normal}
+
+.about_txt1 {font-size:16px;font-weight:bold;color:#333;}
+.about_txt2 {font-size:13px;font-weight:bold;color:#1d5393;}
+.about_txt3 {font-size:12px;color:#1d5393;}

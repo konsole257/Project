@@ -1,0 +1,122 @@
+@import url(base.css);
+
+#wrap { /* ��ü ���δ� div */
+	position: relative;
+	width: 100%;
+	height: auto !important;
+	height: 100%;
+	min-height: 100%;
+	margin: 0 auto;
+}
+#header {
+	width: 1024px;
+	height: 40px;
+	position: relative;
+	z-index:1;
+}
+#middle {
+	width: 1024px;
+}
+#footer {
+	clear: both;
+	width: 1024px;
+	height: ;
+}
+
+/* Middle Contents */
+#left {
+	width: 160px;
+	min-height: 433px;
+	padding: 0 0 0 15px;
+	background: url('/cms_manager/ko/images/common/lm_bg_bar.gif') no-repeat right top;
+	float: left;
+}
+#content {
+	width: 815px;
+	float: left;
+	padding: 0 15px 0 19px;
+}
+
+/* Header Contents */
+div.h_menu {
+	position: absolute;
+	top: 23px;
+	right: 26px;
+}
+ul.h_menuList li {
+	display: inline;
+	font-size: 11px;
+	font-weight: bold;
+}
+ul.h_menuList li a {
+	color: #565656;
+}
+ul.h_menuList li img.bar {
+	width: 1px;
+	height: 8px;
+	background: #969696;
+	margin: 0 8px 0 11px;
+}
+
+/* Left Contents */
+img.l_ti {
+	margin-bottom: 5px;
+}
+ul.l_menu {
+	margin-left: 10px;
+}
+ul.l_menu li {
+	font-size: 11px;
+	font-weight: bold;
+	background: url('/cms_manager/ko/images/common/dt_01.gif') no-repeat left 7px;
+	padding: 0 0 6px 10px;
+}
+ul.l_menu li a {
+	color: #565656;
+}
+ul.l_menu ul.l_menu_s li {
+	font-weight: normal;
+	background: url('/cms_manager/ko/images/common/dt_02.gif') no-repeat left 7px;
+	padding: 0 0 0 10px;
+}
+ul.l_menu ul.l_menu_s li.current a {
+	color: #ff7200;
+}
+
+/* Login */
+#login_wrap {
+	position: relative;
+	width: 346px;
+	height: auto !important;
+	height: 100%;
+	min-height: 100%;
+	margin: 0 auto;
+}
+#login_middle {
+	padding-top: 231px;
+}
+#login_middle img.login_ti {
+	margin: 0 0 3px 29px;
+}
+div.login_box {
+	width: 303px;
+	height: 90px;
+	background: url('/cms_manager/ko/images/common/loginbox_bg.gif') no-repeat left top;
+	padding: 41px 0 0 43px;
+}
+div.login_box dl.info {
+	float: left;
+	width: 160px;
+}
+div.login_box dl.info dt {
+	float: left;
+	width: 28px;
+	padding-top: 4px;
+}
+div.login_box dl.info dd {
+	float: left;
+	margin-bottom: 1px;
+}
+div.login_box img.btn {
+	float: left;
+}

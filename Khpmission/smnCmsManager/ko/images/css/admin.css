@@ -1,0 +1,132 @@
+@import url(layout.css);
+
+div.ti {
+	font-weight: bold;
+	color: #565656;
+	border-bottom: 2px solid #dfdfdf;
+	padding: 8px 0 3px 0;
+	margin-bottom: 15px;
+}
+
+/* List  Style */
+table.boardList1 {
+	table-layout: fixed;
+	width: 100%;
+	border-bottom: 2px solid #cdc8bd;
+}
+table.boardList1 th {
+	background: #ebe6db;
+	border-right: 1px solid #cdc8bd;
+	padding: 7px 0 5px 0;
+}
+table.boardList1 td {
+	border-right: 1px solid #cdc8bd;
+	border-bottom: 1px solid #cdc8bd;
+	padding: 10px 0 5px 0;
+	text-align: center;
+	line-height: 15px;
+}
+table.boardList1 td.sub {
+	text-align: left;
+	padding-left: 5px;
+}
+table.boardList1 td.sub2 {
+	text-align: left;
+	padding: 11px 0 5px 5px;
+}
+table.boardList1 td.sub2 img {
+	vertical-align: middle;
+	margin-top: -7px;
+}
+table.boardList1 th.e, table.boardList1 td.e {
+	border-right: none;
+}
+
+table.boardList2 {
+	table-layout: fixed;
+	width: 100%;
+	border-top: 1px solid #cdc8bd;
+}
+table.boardList2 th {
+	background: #ebe6db;
+	border-bottom: 1px solid #cdc8bd;
+	padding: 7px 0 5px 0;
+}
+table.boardList2 td {
+	border-bottom: 1px solid #cdc8bd;
+	padding: 8px 0 7px 10px;
+	line-height: 15px;
+}
+table.boardList2 td img {
+	vertical-align: middle;
+}
+table.boardList2 td input {
+	vertical-align: middle;
+}
+table.boardList2 td.sub {
+	padding: 3px 0 4px 10px;
+}
+table.boardList2 td.sub2 {
+	padding: 9px 0 8px 10px;
+}
+
+table.boardList2_view {
+	border-bottom: 2px solid #cdc8bd;
+}
+table.boardList2_view td.title {
+	font-weight: bold;
+}
+table.boardList2_view td.con {
+	padding: 14px 15px 20px 23px;
+}
+
+table.listView {
+	table-layout: fixed;
+	width: 100%;
+}
+table.listView th {
+	background: #e1dfd9 url('/cms_manager/ko/images/common/list_bg_bar.gif') no-repeat right 11px;
+	border-bottom: 1px solid #fff;
+	padding: 11px 0 10px 0;
+}
+table.listView td {
+	background: #e1dfd9;
+	border-bottom: 1px solid #fff;
+	padding: 2px 0 0 16px;
+}
+
+div.search {
+	margin: 25px 0 20px 0;
+}
+div.search p.txt {
+	margin: 3px 8px 0 0;
+}
+p.txt {
+	font-weight: bold;
+	background: url('/cms_manager/ko/images/common/dt_03.gif') no-repeat 3px 6px;
+	padding-left: 15px;
+}
+
+/* Paging */
+div.paging {
+	text-align: center;
+	margin-top: 15px;
+}
+div.paging a {
+	color: #5e5e5e;
+	margin-right: 4px;
+}
+div.paging a.current {
+	color: #f26522;
+	font-weight: bold;
+}
+div.paging img {
+	vertical-align: middle;
+	margin-bottom: 2px;
+}
+
+/* Btn */
+div.btnC {
+	margin-top: 15px;
+	text-align: center;
+}

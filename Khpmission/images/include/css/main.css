@@ -1,0 +1,102 @@
+@import url(layout.css);
+
+#content {
+	width:100%;
+	margin-left:0;
+	overflow:hidden;
+}
+
+#middle {
+	padding-left:0;
+}
+
+.menu {
+	overflow:hidden;
+	display: flex;
+}
+.menu li {
+	flex:1;
+	float:left;
+	position:relative;
+}
+.menu li:before {
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	width:1px;
+	height:10px;
+	margin:auto;
+	background-color:#c2c2c2;
+}
+.menu li:first-child:before {
+	display:none;
+}
+.menu li a {
+	display:block;
+	padding:14px 0;
+	text-align:center;
+}
+
+.left {
+	float:left;
+}
+.left .txt-box {
+	display:inline-block;
+	padding:16px 25px 15px;
+	border:1px solid #e6d8be;
+	background-color:#fdf9dd;
+}
+.left .txt-box div {
+	text-align:right;
+}
+
+.right {
+	float:right;
+}
+.right > div {
+	margin-top:8px;
+}
+.right > div:first-child {
+	margin-top:0;
+}
+.right > div.banner1 {
+	padding:5px 4px 5px 5px;
+	background-color:#edecec;
+	overflow:hidden;
+}
+.right > div.banner1 a {
+	float:left;
+	margin-left:6px;
+}
+.right > div.banner1 a:first-child {
+	margin-left:0;
+}
+
+
+p.mainTxt1 {
+	font-size:16px;
+	font-weight:bold;
+	color:#333333;
+	line-height:25px;
+	margin:0 0 0 20px;
+}
+p.mainTxt2 {
+	font-size:14px;
+	color:#333333;
+	line-height:25px;
+}
+p.mainBtn1 {
+	text-align:right;
+	margin:0 20px 0 0;
+}
+div.mainImg {
+	float:right;
+	margin:0 20px 0 0;
+}
+
+.mainTxt3 {margin:10px 0 0 0;font-size:16px;font-weight:bold;color:#333;line-height:25px;text-align:center;}
+.mainTxt4 {margin:20px 0 0 0;font-size:14px;color:#333;line-height:20px;}
+.mainTxt4 ul {}
+.mainTxt4 ul li {padding:0 0 5px 8px;line-height:20px;background:url('/en/images/common/bl_gray2x2.gif') 0 10px no-repeat;}
