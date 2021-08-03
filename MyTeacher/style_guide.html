@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" type="text/css" href="/pjtCom/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="/pjtCom/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="/pjtCom/css/sub.css" />
+
+	<script type="text/javascript" src="/pjtCom/lib/js/jquery-1.11.3.min.js"></script>
+
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="/pjtCom/lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+	<title>MY Teacher STYLE GUIDE</title>
+
+	<style>
+		.htmlprocess_tit { font-size:13px; background:#000; color:#fff; font-weight:bold; padding:5px 10px; font-family:Dotum,"돋움"; }
+		.guide_wrap { width:98%; margin:0 auto; padding:10px 0 20px; }
+		.guide_wrap .htmlprocess_tit2 { font-size:13px; color:#000; padding:5px 10px; margin:40px 0 20px; border-top:1px solid #000; background:#f2f2f2; }
+		.guide_wrap .htmlprocess_tit2:first-of-type { margin-top:0; }
+		.guide_wrap .guide {padding:10px; width:100%; background:#fff; box-sizing:border-box;}
+		code { display:block; position:relative; font-size:12px; line-height:18px; margin-top:10px; padding:10px 10px 10px 30px; border:1px solid #777; background:#fafafa; }
+		code:before { display:block; content:""; position:absolute; left:0; top:0; width:20px; height:100%; background:#777; }
+		/**/
+
+	</style>
+</head>
+<body class="sub">
+
+	<!-- wrap -->
+	<main id="wrap">
+
+
+		<!-- contents // -->
+		<div id="container">
+			<div>
+				<div id="contents">
+													
+<!--  // -->
+<h1 class="htmlprocess_tit">FORM</h1>
+<section class="guide_wrap">
+	<div class="guide">
+	<!-- -->
+	<h2 class="htmlprocess_tit2">select</h2>
+
+	<label class="select" style="width:100px;">
+		<select>
+			<option>010</option>
+			<option>010</option>
+			<option>010</option>
+		</select>
+	</label>
+
+<code>
+<pre>
+&lt;label class="select"&gt;
+	&lt;select&gt;
+		&lt;option&gt;010&lt;/option&gt;
+		&lt;option&gt;010&lt;/option&gt;
+		&lt;option&gt;010&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/label&gt;
+</pre>
+</code>
+	<!-- -->
+	
+	<!-- -->
+	<h2 class="htmlprocess_tit2">check box</h2>
+
+	<input type="checkbox" id="chk_secret">
+	<label for="chk_secret"><span>비밀글로 질문하기</span></label>
+
+<code>
+<pre>
+&lt;input type="checkbox" id=""&gt;
+&lt;label for=""&gt;&lt;span&gt;비밀글로 질문하기&lt;/span&gt;&lt;/label&gt;
+</pre>
+</code>
+	<!-- -->
+
+
+	<!-- -->
+	<h2 class="htmlprocess_tit2">radio</h2>
+
+	<input type="radio" name="" id="choice1">
+	<label for="choice1"><span>물었다</span></label>
+
+<code>
+<pre>
+&lt;input type="radio" name="" id=""&gt;
+&lt;label for=""&gt;&lt;span&gt;물었다&lt;/span&gt;&lt;/label&gt;
+</pre>
+</code>
+	<!-- -->
+	</div>
+</section>
+<!-- //  -->
+
+
+
+<!--  // -->
+<h1 class="htmlprocess_tit">PAGING</h1>
+<section class="guide_wrap">
+	<div class="guide">
+	<!-- -->
+	<div class="paging">
+		<a href="#" class="btn first icon">처음으로</a>
+		<a href="#" class="btn prev icon">이전</a>
+		<span class="num">
+			<a href="#" class="on">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">5</a>
+		</span>
+		<a href="#" class="btn next icon">다음</a>
+		<a href="#" class="btn last icon">끝으로</a>
+	</div>
+	<style>
+	.paging .btn { font-size:0 !important; line-height:0 !important; background:none !important; }
+	</style>
+
+<code>
+<pre>
+&lt;div class="paging"&gt;
+	&lt;a href="#" class="btn first icon"&gt;처음으로&lt;/a&gt;
+	&lt;a href="#" class="btn prev icon"&gt;이전&lt;/a&gt;
+	&lt;span class="num"&gt;
+		&lt;a href="#" class="on"&gt;1&lt;/a&gt;
+		&lt;a href="#"&gt;2&lt;/a&gt;
+		&lt;a href="#"&gt;3&lt;/a&gt;
+		&lt;a href="#"&gt;4&lt;/a&gt;
+		&lt;a href="#"&gt;5&lt;/a&gt;
+	&lt;/span&gt;
+	&lt;a href="#" class="btn next icon"&gt;다음&lt;/a&gt;
+	&lt;a href="#" class="btn last icon"&gt;끝으로&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+</code>
+	<!-- -->
+
+	</div>
+</section>
+<!-- //  -->
+
+
+
+<!--  // -->
+<h1 class="htmlprocess_tit">ICON</h1>
+<section class="guide_wrap">
+	<div class="guide">
+	<!-- -->
+	<h2 class="htmlprocess_tit2">:after</h2>
+
+	<span class="secret icon">비밀글 입니다.</span>
+	<style>
+	.secret:after { width:11px; height:15px; vertical-align:middle; margin-left:8px; background-position:0 -12px; }
+	</style>
+
+<code>
+<pre>
+&lt;span class="secret icon"&gt;비밀글 입니다.&lt;/span&gt;
+
+&lt;style&gt;
+.icon:after { background-position:0 -12px; }
+&lt;/style&gt;
+</pre>
+</code>
+	<!-- -->
+
+	<!-- -->
+<h2 class="htmlprocess_tit2">:before</h2>
+
+<span class="marster icon">master</span>
+<style>
+.marster:before { width:27px; height:35px; font-size:13px; vertical-align:middle; color:#a31338; margin-right:7px; background-position:-363px 0; }
+</style>
+
+<code>
+<pre>
+&lt;span class="marster icon"&gt;master&lt;/span&gt;
+
+&lt;style&gt;
+.marster:before { background-position:-363px 0; }
+&lt;/style&gt;
+</pre>
+</code>
+	<!-- -->
+
+	</div>
+</section>
+<!-- //  -->
+
+
+
+<!--  // -->
+<h1 class="htmlprocess_tit">BUTTON</h1>
+<section class="guide_wrap">
+	<div class="guide">
+	<!-- -->
+	<h2 class="htmlprocess_tit2"></h2>
+
+	<div class="btn_area">
+		<button type="submit" class="btn box next">정답확인 ( button )</button>
+		<a href="#none" class="btn box next">어휘 풀기 ( a )</a>
+	</div>
+	<style>
+	.btn.next { width:198px; height:60px; font-weight:600; font-size:18px; letter-spacing:-0.05em; line-height:60px; color:#fff; background:#39393e; }
+	</style>
+
+<code>
+<pre>
+&lt;button type="submit" class="btn box next"&gt;정답확인 ( button )&lt;/button&gt;
+&lt;a href="#none" class="btn box next"&gt;어휘 풀기 ( a )&lt;/a&gt;
+</pre>
+</code>
+	<!-- -->
+
+	<!-- -->
+	<h2 class="htmlprocess_tit2">BUTTON + ICON</h2>
+
+	<a href="#none" class="btn box icon beginning">처음부터 학습하기</a>
+	<style>
+	.btn.beginning { width:198px; height:60px; font-size:18px; vertical-align:middle; line-height:60px; color:#004d8d; border:1px solid #004d8d; box-sizing:border-box; }
+	.btn.beginning:after { width:7px; height:10px; vertical-align:2px; margin-left:23px; background-position:-28px -12px; }
+	</style>
+
+<code>
+<pre>
+&lt;a href="#" class="btn box icon beginning"&gt;처음부터 학습하기&lt;/a&gt;
+</pre>
+</code>
+	<!-- -->
+
+	</div>
+</section>
+<!-- //  -->
+
+
+
+<!--  // -->
+<h1 class="htmlprocess_tit">달력</h1>
+<section class="guide_wrap">
+	<div class="guide">
+
+	<!-- -->
+	<div class="calendar type_year" style="display:inline-block;">
+		<table>
+			<caption>
+				<div class="year">
+					<input type="text" title="년도" value="" readonly>
+					<div class="btn_area">
+						<button type="button" class="btn next icon" style="line-height:1;">다음 년도</button>
+						<button type="button" class="btn prev icon">이전 년도</button>
+					</div>
+				</div>
+			</caption>
+
+			<colgroup>
+				<col style="width:25%;">
+				<col style="width:25%;">
+				<col style="width:25%;">
+				<col style="width:25%;">
+			</colgroup>
+
+			<tbody>
+				<tr>
+					<td><a href="#">1월</a></td>
+					<td><a href="#">2월</a></td>
+					<td><a href="#">3월</a></td>
+					<td><a href="#">4월</a></td>
+				</tr>
+				<tr>
+					<td><a href="#">5월</a></td>
+					<td><a href="#">6월</a></td>
+					<td><a href="#">7월</a></td>
+					<td><a href="#">8월</a></td>
+				</tr>
+				<tr>
+					<td><a href="#">9월</a></td>
+					<td><a href="#">10월</a></td>
+					<td><a href="#">11월</a></td>
+					<td><a href="#">12월</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="dimd"></div>
+	</div>
+	
+	<div class="calendar type_month" style="display:inline-block;">
+		<table>
+			<caption>
+				<div class="year">
+					<input type="text" title="년도" value="" readonly>
+					<div class="btn_area">
+						<button type="button" class="btn next icon" style="line-height:1;">다음 년도</button>
+						<button type="button" class="btn prev icon">이전 년도</button>
+					</div>
+				</div>
+
+				<div class="month">
+					<input type="text" title="월" value="" readonly>
+					<div class="btn_area">
+						<button type="button" class="btn next icon" style="line-height:1;">다음 월</button>
+						<button type="button" class="btn prev icon">이전 월</button>
+					</div>
+				</div>
+			</caption>
+
+			<colgroup>
+				<col style="width:25px;">
+				<col style="width:25px;">
+				<col style="width:25px;">
+				<col style="width:25px;">
+				<col style="width:25px;">
+				<col style="width:25px;">
+				<col style="width:25px;">
+			</colgroup>
+
+			<thead>
+				<tr>
+					<th scope="col">일</th>
+					<th scope="col">월</th>
+					<th scope="col">화</th>
+					<th scope="col">수</th>
+					<th scope="col">목</th>
+					<th scope="col">금</th>
+					<th scope="col">토</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<!-- <tr>
+					<td><a href="#">1</a></td>
+					<td><a href="#">2</a></td>
+					<td><a href="#">3</a></td>
+					<td><a href="#">4</a></td>
+					<td><a href="#">5</a></td>
+					<td><a href="#">6</a></td>
+					<td><a href="#">7</a></td>
+				</tr> -->
+			</tbody>
+		</table>
+		<div class="dimd"></div>
+	</div>
+
+<code>
+<pre>
+&lt;!-- 년도 달력 --&gt;
+&lt;div class="calendar type_year" style="display:inline-block;"&gt;
+	&lt;table&gt;
+		&lt;caption&gt;
+			&lt;div class="year"&gt;
+				&lt;input type="text" title="년도" value="" readonly&gt;
+				&lt;div class="btn_area"&gt;
+					&lt;button type="button" class="btn next icon" style="line-height:1;"&gt;다음 년도&lt;/button&gt;
+					&lt;button type="button" class="btn prev icon"&gt;이전 년도&lt;/button&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/caption&gt;
+
+		&lt;colgroup&gt;
+			&lt;col style="width:25%;"&gt;
+			&lt;col style="width:25%;"&gt;
+			&lt;col style="width:25%;"&gt;
+			&lt;col style="width:25%;"&gt;
+		&lt;/colgroup&gt;
+
+		&lt;tbody&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;a href="#"&gt;1월&lt;/a&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;a href="#"&gt;2월&lt;/a&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;a href="#"&gt;3월&lt;/a&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;a href="#"&gt;4월&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;a href="#"&gt;5월&lt;/a&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;a href="#"&gt;6월&lt;/a&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;a href="#"&gt;7월&lt;/a&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;a href="#"&gt;8월&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;a href="#"&gt;9월&lt;/a&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;a href="#"&gt;10월&lt;/a&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;a href="#"&gt;11월&lt;/a&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;a href="#"&gt;12월&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+	&lt;div class="dimd"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+fn.calendar('load', 'year');
+
+$('.calendar .btn').click(function(){
+	fn.calendar('change', 'year', this);
+});
+
+$('.calendar a, .calendar .dimd').click(function(){
+	$('.calendar').hide();
+});
+
+$('.calendar_view').click(function(){
+	$('.calendar').show();
+});
+&lt;/script&gt;
+
+&lt;!-- 월 달력 --&gt;
+&lt;div class="calendar type_month" style="display:inline-block;"&gt;
+	&lt;table&gt;
+		&lt;caption&gt;
+			&lt;div class="year"&gt;
+				&lt;input type="text" title="년도" value="" readonly&gt;
+				&lt;div class="btn_area"&gt;
+					&lt;button type="button" class="btn next icon" style="line-height:1;"&gt;다음 년도&lt;/button&gt;
+					&lt;button type="button" class="btn prev icon"&gt;이전 년도&lt;/button&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div class="month"&gt;
+				&lt;input type="text" title="월" value="" readonly&gt;
+				&lt;div class="btn_area"&gt;
+					&lt;button type="button" class="btn next icon" style="line-height:1;"&gt;다음 월&lt;/button&gt;
+					&lt;button type="button" class="btn prev icon"&gt;이전 월&lt;/button&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/caption&gt;
+
+		&lt;colgroup&gt;
+			&lt;col style="width:25px;"&gt;
+			&lt;col style="width:25px;"&gt;
+			&lt;col style="width:25px;"&gt;
+			&lt;col style="width:25px;"&gt;
+			&lt;col style="width:25px;"&gt;
+			&lt;col style="width:25px;"&gt;
+			&lt;col style="width:25px;"&gt;
+		&lt;/colgroup&gt;
+
+		&lt;thead&gt;
+			&lt;tr&gt;
+				&lt;th scope="col"&gt;일&lt;/th&gt;
+				&lt;th scope="col"&gt;월&lt;/th&gt;
+				&lt;th scope="col"&gt;화&lt;/th&gt;
+				&lt;th scope="col"&gt;수&lt;/th&gt;
+				&lt;th scope="col"&gt;목&lt;/th&gt;
+				&lt;th scope="col"&gt;금&lt;/th&gt;
+				&lt;th scope="col"&gt;토&lt;/th&gt;
+			&lt;/tr&gt;
+		&lt;/thead&gt;
+
+		&lt;tbody&gt;
+			&lt;!-- &lt;tr&gt;
+				&lt;td&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;a href="#"&gt;6&lt;/a&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;a href="#"&gt;7&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt; --&gt;
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+	&lt;div class="dimd"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+fn.calendar('load', 'month');
+
+$('.calendar .btn').click(function(){
+	fn.calendar('change', 'month', this);
+});
+
+$('.calendar a, .calendar .dimd').click(function(){
+	$('.calendar').hide();
+});
+
+$('.calendar_view').click(function(){
+	$('.calendar').show();
+});
+&lt;/script&gt;
+</pre>
+</code>
+	<!-- -->
+
+	</div>
+</section>
+<!-- //  -->
+
+
+				</div>
+			</div>
+		</div>
+		<!-- //contents -->
+
+	</main>
+	<!-- //wrap -->
+
+</body>
+</html>
