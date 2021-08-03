@@ -1,0 +1,253 @@
+<div class="scrollbar">
+    <div class="inner">
+        <h3 class="tit">활동관리</h3>
+
+        <div class="tab-menu">
+            <a href="#">게시글 관리</a>
+            <a href="#">매물 관리</a>
+            <a href="#">참여내역관리</a>
+            <a href="#">견적관리</a>
+            <a href="#" class="active">북마크 관리</a>
+            <a href="#">구독 관리</a>
+            <a href="#">리뷰 관리</a>
+        </div>
+
+        <div class="header">
+            <h4 class="tit">북마크 관리</h4>
+        </div>
+
+        <div class="bookmark-folder">
+            <div class="tit">북마크 관리</div>
+            <div class="list">
+                <a href="#" class="active">전체</a>
+                <a href="#">인허가찾기</a>
+                <a href="#">부동산매물</a>
+                <a href="#">게시글</a>
+                <div class="custom-folder">
+                    <input type="text" value="@사용자 정의 폴더@" readonly disabled>
+                    <span class="fold-name">
+                        <a href="#" class="ti">@사용자 정의 폴더@</a>
+                        <a href="#" class="fold-setting" onclick="event.stopPropagation();fn.addActive($(this).next('.setting-area'));">설정</a>
+                        <div class="setting-area">
+                            <button type="button" class="btn-naming">이름바꾸기</button>
+                            <button type="button" class="btn-del">삭제</button>
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <button class="btn-add" onclick="createFolder();">북마크 추가</button>    <!-- 클릭 시 'class="custom-folder"' 위 코드에 사용자가 임의로 생성한 폴더 생성 -->
+
+            <script>
+                //class=custom-folder ,    edit-mode 클래스 여부에 따라 입력모드 전환
+
+                //아이콘 클릭시 - 사용자가 만든 폴더 이름 변경하기
+                document.querySelector('.custom-folder .btn-naming').addEventListener('click',function(e){
+                    e.preventDefault();
+                    if(!this.parentNode.parentNode.parentNode.classList.contains('edit-mode')){
+                        this.parentNode.parentNode.parentNode.classList.toggle('edit-mode');
+                        this.parentNode.parentNode.parentNode.querySelector('input[type="text"]').removeAttribute('disabled');
+                        this.parentNode.parentNode.parentNode.querySelector('input[type="text"]').removeAttribute('readonly');
+                        this.parentNode.parentNode.parentNode.querySelector('input[type="text"]').focus();
+                        this.parentNode.parentNode.parentNode.querySelector('input[type="text"]').selectionStart = this.parentNode.parentNode.querySelector('input[type="text"]').value.length;
+                    }
+                });
+
+                //입력창 focusout 시 - 입력된 정보로 업데이트
+                document.querySelector('.custom-folder input').addEventListener('focusout',function(e){
+                    this.setAttribute('disabled','disabled');
+                    this.setAttribute('readonly','readonly');
+                    this.parentNode.querySelector('.fold-name .ti').innerText = this.value;
+                    this.parentNode.classList.remove('edit-mode');
+                });
+
+                //테스트용 함수 : 수정 : 2020.01.21
+                function createFolder(){
+                    var txt = '';
+                        txt += '<div class="custom-folder edit-mode">';
+                        txt += '    <input type="text" value="신규폴더">';
+                        txt += '    <span class="fold-name">';
+                        txt += '        <a href="#" class="ti">신규폴더</a>';
+                        txt += '        <a href="#" class="fold-setting" onclick=event.stopPropagation();fn.addActive($(this).next(".setting-area"));>설정</a>';
+                        txt += '        <div class="setting-area">';
+                        txt += '            <button type="button" class="btn-naming">이름바꾸기</button>';
+                        txt += '            <button type="button" class="btn-del">삭제</button>';
+                        txt += '        </div>';
+                        txt += '    </span>';
+                        txt += '</div>';
+
+                    $('.bookmark-folder .list').append(txt);
+
+                    document.querySelector('.bookmark-folder .custom-folder:last-child .btn-naming').addEventListener('click',function(e){
+                        e.preventDefault();
+                        if(!this.parentNode.parentNode.parentNode.classList.contains('edit-mode')){
+                            this.parentNode.parentNode.parentNode.classList.toggle('edit-mode');
+                            this.parentNode.parentNode.parentNode.querySelector('input[type="text"]').removeAttribute('disabled');
+                            this.parentNode.parentNode.parentNode.querySelector('input[type="text"]').removeAttribute('readonly');
+                            this.parentNode.parentNode.parentNode.querySelector('input[type="text"]').focus();
+                            this.parentNode.parentNode.parentNode.querySelector('input[type="text"]').selectionStart = this.parentNode.parentNode.parentNode.querySelector('input[type="text"]').value.length;
+                        }
+                    });
+
+                    //입력창 focusout 시 - 입력된 정보로 업데이트
+                    document.querySelector('.bookmark-folder .custom-folder:last-child input').addEventListener('focusout',function(e){
+                        this.setAttribute('disabled','disabled');
+                        this.setAttribute('readonly','readonly');
+                        this.parentNode.querySelector('.fold-name .ti').innerText = this.value;
+                        this.parentNode.classList.remove('edit-mode');
+                    });
+
+                    document.querySelector('.bookmark-folder .custom-folder:last-child input').focus();
+                    document.querySelector('.bookmark-folder .custom-folder:last-child input').setSelectionRange(0,10);
+                }
+            </script>
+        </div>
+
+        <div class="bookmark-area">
+            <ul class="company-info half-layout">    <!-- class="half-layout" 두줄 레이아웃 -->
+                <li class="company">
+                    <a href="#">
+                        <div class="state step1"><!-- 허가 : class="step1", 착공예정 : class="step2", 착공 : class="step3", 착공연기 : class="step4", 승인 : class="step5" -->
+                            <b>허가</b>
+                            <span class="date">19.11.14</span>
+                        </div>
+
+                        <div class="info">
+                            <h4 class="tit">정남 IC사거리 투자용 단독주택 추천!(도로인접)</h4>
+
+                            <div class="division-area type2">    <!-- type2 : division 사이 막대기 -->
+                                <span class="division bullet">단독주택(다가구주택)</span>
+                                <span class="division bullet">신축</span>
+                            </div>
+
+                            <div class="division-area">
+                                <span class="division bullet blue">매매 6억 (207만/3.3㎡)</span>    <!-- class="red" 파랑 -->
+                            </div>
+
+                            <div class="division-area">
+                                <span class="division bullet red">소유자확인 : 2019.10.18</span>    <!-- class="red" 빨강 -->
+                            </div>
+
+                            <div class="division-area">
+                                <span class="division bullet">㈜가가건설</span>
+                                <span class="division bullet">2019.10.11</span>
+                            </div>
+
+                            <div class="folder">인허가찾기</div>
+                        </div>
+                    </a>
+                    <div class="btn-area udt">
+                        <a href="#" onclick="fn.popupOpen('#popup-bookmarkupdate');">수정</a>
+                        <a href="#">삭제</a>
+                    </div>
+                </li>
+
+                <li class="company">
+                    <a href="#">
+                        <figure class="img">
+                            <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                        </figure>
+
+                        <div class="info">
+                            <h4 class="tit">정남 IC사거리 투자용 단독주택 추천!(도로인접)</h4>
+
+                            <div class="division-area">
+                                <span class="division bullet">단독/다가구</span>
+                                <span class="division bullet">955㎡ (288.98평)</span>
+                            </div>
+
+                            <div class="division-area">
+                                <span class="division bullet blue">매매 6억 (207만/3.3㎡)</span>
+                            </div>
+
+                            <div class="division-area">
+                                <span class="division bullet">양지공인중개사사무소</span>
+                                <span class="division bullet">2019.10.11</span>
+                            </div>
+
+                            <div class="folder">부동산매물</div>
+                        </div>
+                    </a>
+                    <div class="btn-area udt">
+                        <a href="#" onclick="fn.popupOpen('#popup-bookmarkupdate');">수정</a>
+                        <a href="#">삭제</a>
+                    </div>
+                </li>
+
+                <li class="company">
+                    <a href="#">
+                        <figure class="img">
+                            <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                        </figure>
+
+                        <div class="info">
+                            <h4 class="tit">정남 IC사거리 투자용 단독주택 추천!(도로인접)</h4>
+
+                            <div class="division-area">
+                                <span class="division bullet">단독/다가구</span>
+                                <span class="division bullet">955㎡ (288.98평)</span>
+                            </div>
+
+                            <div class="division-area">
+                                <span class="division bullet blue">매매 6억 (207만/3.3㎡)</span>
+                            </div>
+
+                            <div class="division-area">
+                                <span class="division bullet">양지공인중개사사무소</span>
+                                <span class="division bullet">2019.10.11</span>
+                            </div>
+
+                            <div class="folder">부동산매물</div>
+                        </div>
+                    </a>
+                    <div class="btn-area udt">
+                        <a href="#" onclick="fn.popupOpen('#popup-bookmarkupdate');">수정</a>
+                        <a href="#">삭제</a>
+                    </div>
+                </li>
+
+                <li class="company delete">    <!-- class="delete" 삭제된 컨텐츠-->
+                    <a href="#">
+                        <figure class="img">
+                            <span class="del">삭제된<br>컨텐츠입니다.</span>
+                            <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                        </figure>
+
+                        <div class="info">
+                            <h4 class="tit">정남 IC사거리 투자용 단독주택 추천!(도로인접)</h4>
+
+                            <div class="division-area">
+                                <span class="division bullet">단독/다가구</span>
+                                <span class="division bullet">955㎡ (288.98평)</span>
+                            </div>
+
+                            <div class="division-area">
+                                <span class="division bullet blue">매매 6억 (207만/3.3㎡)</span>
+                            </div>
+
+                            <div class="division-area">
+                                <span class="division bullet">양지공인중개사사무소</span>
+                                <span class="division bullet">2019.10.11</span>
+                            </div>
+
+                            <div class="folder">부동산매물</div>
+                        </div>
+                    </a>
+                    <div class="btn-area udt">
+                        <a href="#" onclick="fn.popupOpen('#popup-bookmarkupdate');">수정</a>
+                        <a href="#">삭제</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!--
+        <div class="nodata">
+            저장한 북마크가 없습니다.
+        </div>
+        -->
+    </div>
+
+    <!-- footer : 추가 : 2020.01.08 // -->
+	@@include('./include/sub_footer.html')
+	<!-- //footer -->
+</div>

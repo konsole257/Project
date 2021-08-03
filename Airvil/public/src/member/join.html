@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<!-- config// -->
+	@@include('./include/config.html')
+	<!-- //config -->
+</head>
+
+<body>
+
+<div id="wrap">
+	<!-- header// -->
+	@@include('./include/header.html')
+	<!-- //header -->
+
+	<!-- contents// -->
+	<main id="container">
+		<div id="contents">
+			<!-- member 팝업 // -->
+			@@include('./include/member/join.html', {
+				"member-classname": "join active"
+			})
+			<!-- // member 팝업 -->
+
+			<!-- 채팅목록 // -->
+			@@include('./include/chat/list.html')
+			<!-- // 채팅목록 -->
+
+			<!-- 채팅상세 // -->
+			@@include('./include/chat/join.html')
+			<!-- // 채팅상세 -->
+
+			<!-- 알림목록 : 추가 : 2020.01.23 // -->
+			@@include('./include/notify/list.html')
+			<!-- // 알림목록 -->
+
+			<!-- 지도 // -->
+			<div class="map">
+				<img src="@@common/resources/images/common/map.jpg" alt="">
+			</div>
+			<!-- // 지도 -->
+		</div>
+	</main>
+	<!-- //contents -->
+
+	<!-- footer// -->
+	@@include('./include/footer.html')
+	<!-- //footer -->
+</div>
+
+</body>
+</html>

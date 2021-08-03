@@ -1,0 +1,107 @@
+<article class="member-area @@member-classname">
+    <!-- 제목 상단 // -->
+    <header class="header">
+        <div class="inner">
+            <button type="button" class="btn mute btn-close" onclick="fn.removeActive('.member-area');">닫기</button>
+
+            <h2 class="tit">비밀번호 찾기</h2>
+        </div>
+    </header>
+    <!-- // 제목 상단 -->
+
+    <!-- 컨텐츠 영역 // -->
+    <div class="contents">
+        <div class="inner">
+            <h2 class="hide">비밀번호 찾기</h2>
+
+            <div class="scrollbar">
+                <!-- 비밀번호 찾기 입력 // -->
+                <!-- 입력 // -->
+                <form class="form-area">
+                    <fieldset>
+                        <legend class="hide">비밀번호 찾기 입력</legend>
+<!-- 2020.01.13 수정// -->
+                        <div class="field-input field-phone">
+                            <input type="number" placeholder="휴대폰번호(숫자만 입력)" title="휴대폰번호 입력" onclick="this.parentNode.querySelector('.alert').style.display='block'">
+                            <button type="button" class="btn big fill gray" onclick="fn.deltaTimer('.timelimit',180);">인증번호전송</button>
+                            <small class="alert" style="display:none">잘못된 휴대폰번호 형식입니다.</small>
+                        </div>
+
+                        <div class="field-input field-otp">
+                            <input type="text" placeholder="인증번호 입력" title="인증번호 입력" onclick="this.parentNode.querySelector('.alert').style.display='block'">
+                            <div class="timelimit"></div>
+                            <small class="alert" style="display:none">인증번호를 다시 확인해주세요.</small>
+                        </div>
+<!-- //2020.01.13 수정 -->
+                    </fieldset>
+                </form>
+                <!-- // 입력 -->
+
+                <!-- 버튼 // -->
+                <div class="btn-area">
+                    <button type="button" class="btn big fill blue btn-update" onclick="
+                        this.parentNode.parentNode.children[0].style.display='none';
+                        this.parentNode.parentNode.children[1].style.display='none';
+                        this.parentNode.parentNode.children[2].style.display='none';
+                        this.parentNode.parentNode.children[3].style.display='block';
+                        this.parentNode.parentNode.children[4].style.display='block';
+                        this.parentNode.parentNode.children[5].style.display='block'
+                    ">비밀번호 찾기</button>
+                </div>
+                <!-- // 버튼 -->
+                <div class="txt-area">
+                    <p>회원 가입 시 입력한 휴대폰번호로 임시비밀번호를 발송해드립니다.</p>
+                    <p>비밀번호 찾기에 어려움이 있다면 고객센터(031-267-3307)로 문의해주세요.</p>
+                </div>
+                <!-- // 비밀번호 찾기 입력 -->
+
+
+                <!-- 비밀번호 재설정 출력 // -->
+                <form class="form-area" style="display:none;">
+                    <fieldset>
+                        <legend class="hide">비밀번호 재설정 입력</legend>
+                        <div class="field-input field-pw">
+                            <input type="password" placeholder="비밀번호 재설정" title="휴대폰번호 입력" onclick="this.parentNode.querySelector('.alert').classList.remove('gray')">
+                            <small class="alert gray">4자 이상의 영문,숫자 또는 영문+숫자 입력가능</small>
+                        </div>
+
+                        <div class="field-input">
+                            <input type="password" placeholder="비밀번호 확인" title="비밀번호 입력" onclick="this.parentNode.querySelector('.alert').style.display='block'">
+                            <small class="alert" style="display:none">비밀번호를 다시 확인해주세요.</small>
+                        </div>
+                    </fieldset>
+                </form>
+
+                <p class="tx pw-upt" style="display:none;">
+                    비밀번호 변경이 완료되었습니다.
+                </p>
+
+                <!-- 버튼 // -->
+                <div class="btn-area" style="display:none;">
+                    <button type="button" class="btn big fill blue btn-log" onclick="
+                        this.parentNode.parentNode.children[3].style.display='none';
+                        this.parentNode.parentNode.children[4].style.display='none';
+                        this.parentNode.parentNode.children[5].style.display='none';
+                        this.parentNode.parentNode.children[6].style.display='block';
+                        this.parentNode.parentNode.children[7].style.display='block';
+                    ">확인</button>
+                </div>
+                <!-- // 버튼 -->
+                <!-- // 비밀번호 재설정 출력 -->
+
+                <!-- 아이디 정보 없음 - nodata // -->
+                <p class="tx" style="display:none;">
+                    회원 정보를 찾을 수 없습니다.
+                </p>
+
+                <!-- 버튼 // -->
+                <div class="btn-area" style="display:none;">
+                    <button type="button" class="btn big fill blue btn-ok">확인</button>
+                </div>
+                <!-- // 버튼 -->
+                <!-- // 아이디 정보 없음 - nodata -->
+            </div>
+        </div>
+    </div>
+    <!-- //컨텐츠 영역 -->
+</article>

@@ -1,0 +1,75 @@
+.mypage .contract > .scrollbar > .scrollbar > .inner > .header { position:relative; }
+.mypage .contract > .scrollbar > .scrollbar > .inner > .header .tit { display:inline-block; font-size:16px; color:#4a4a4a; }
+.mypage .contract > .scrollbar > .scrollbar > .inner > .header .number { display:inline-block; margin-left:15px; }
+.mypage .contract > .scrollbar > .scrollbar > .inner > .header .select { position:absolute; top:0; right:0; width:70px; height:32px; }
+.mypage .contract > .scrollbar > .scrollbar > .inner > .header .select .ui-selectmenu-text { text-align:left; line-height:32px; }
+
+.mypage .contract.bbs.list .contract-area { margin-top:18px; font-size:0; }
+.mypage .contract.bbs.list .contract-area a { width:158px; font-size:14px; height:30px; line-height:28px; color:#b4b4b4; border:1px solid #e0e0e0; box-sizing:border-box; border-radius:0; background:#f8f8f8; }
+.mypage .contract.bbs.list .contract-area a + a { border-left:none; }
+.mypage .contract.bbs.list .contract-area a:nth-child(1),
+.mypage .contract.bbs.list .contract-area a:nth-child(2) { width:157px; }
+.mypage .contract.bbs.list .contract-area a.active { font-size:14px; background:#1d53bf; color:#fff; }
+
+.mypage .contract.bbs.list .search-area { position:relative; margin-top:32px; }
+.mypage .contract.bbs.list .search-area .form-area { width:352px; }
+.mypage .contract.bbs.list .search-area .form-area input { height:40px; line-height:38px; }
+.mypage .contract.bbs.list .search-area .form-area .btn-search { position:absolute; top:0px; right:0; width:40px; height:40px; text-indent:-9999px; }
+.mypage .contract.bbs.list .search-area .form-area .btn-search:before { content:""; position:absolute; top:0; left:0; bottom:0; right:0; width:16px; height:16px; margin:auto; background:url("@@css/resources/images/common/btn.png") no-repeat -98px 0; }
+
+.mypage .contract.bbs.list .search-area .form-area .btn-del { display:none; position:absolute; top:0; right:40px; width:21px; height:40px; }
+.mypage .contract.bbs.list .search-area .form-area .btn-del:before { content:""; position:absolute; top:0; left:0; bottom:0; right:0; width:13px; height:13px; margin:auto; background:url("@@css/resources/images/common/btn.png") no-repeat -175px -34px; }
+.mypage .contract.bbs.list .search-area .form-area .btn-del.active { display:block; }
+
+.mypage .contract.bbs.list .search-area .autocompleate-area { position:absolute; z-index:4; top:39px; left:0px; width:352px; background:#fff; border:1px solid #b4b4b4; box-sizing:border-box; }
+.mypage .contract.bbs.list .search-area .autocompleate-area > div { max-height:190px; border-top:4px solid #e0e0e0; }
+.mypage .contract.bbs.list .search-area .autocompleate-area > div:first-child { border-top:none; }
+.mypage .contract.bbs.list .search-area .autocompleate-area > div ul { padding:17px 0 20px; }
+.mypage .contract.bbs.list .search-area .autocompleate-area > div:first-child ul { padding-top:21px; }
+.mypage .contract.bbs.list .search-area .autocompleate-area li { margin-top:14px; }
+.mypage .contract.bbs.list .search-area .autocompleate-area li:first-child { margin-top:0; }
+.mypage .contract.bbs.list .search-area .autocompleate-area a { display:block; position:relative; padding-left:15px; }
+.mypage .contract.bbs.list .search-area .autocompleate-area a:after { content:""; position:absolute; z-index:-1; top:50%; left:0; transform:translateY(-50%); width:100%; height:100%; padding:9px 0; background:#ebf1ff; }
+.mypage .contract.bbs.list .search-area .autocompleate-area a span { display:block; position:relative; font-size:14px; line-height:20px; color:#4a4a4a; }
+
+.mypage .contract.bbs.list .search-area .autocompleate-area a span em { color:#1d53bf; }
+.mypage .contract.bbs.list .search-area .autocompleate-area a small { font-size:12px; line-height:17px; color:#767676; }
+/* .mypage .contract.bbs.list .search-area .autocompleate-area - default */
+.mypage .contract.bbs.list .search-area .autocompleate-area { transform:translateX(-9999px); }
+.mypage .contract.bbs.list .search-area .autocompleate-area a:after { display:none; }
+/* .mypage .contract.bbs.list .search-area .autocompleate-area - transition */
+.mypage .contract.bbs.list .search-area .autocompleate-area.active { transform:translateX(0); }
+.mypage .contract.bbs.list .search-area .autocompleate-area a:hover:after { display:block; }
+
+.mypage .contract.bbs.list .search-area .btn-upload { position:absolute; right:0; top:4px; background:#61b842; }
+.mypage .contract.bbs.list .search-area .btn-down { position:absolute; right:156px; top:4px; }
+
+.mypage .contract.bbs.list .table.type3 table { margin-top:32px; }
+.mypage .contract.bbs.list .table.type3 tbody td { text-align:center; }
+.mypage .contract.bbs.list .table.type3 tbody td input[type="text"] { width:80px; }
+.mypage .contract.bbs.list .nodata { margin-top:32px; height:145px; padding-top:60px; text-align:center; font-size:14px; color:#202020; box-sizing:border-box; }
+.mypage .contract.bbs.list .possible-contract { margin:9px 0 7px; font-size:14px; line-height:16px; }
+.mypage .contract.bbs.list .possible-contract b { color:#1d53bf; }
+.mypage .contract.bbs.list .inner > .btn-area { margin-top:32px; text-align:center; font-size:0; }
+.mypage .contract.bbs.list .inner > .btn-area .btn + .btn { margin-left:6px; }
+.mypage .contract.bbs.list .possible-contract + .btn-area { margin-top:0px; }
+
+.mypage .contract.bbs.list .caution { margin-top:40px; padding:17px 26px; box-sizing:border-box; font-size:13px; line-height:24px; background:#efefef; border-radius:10px; }
+.mypage .contract.bbs.list .caution dl + dl { margin-top:24px; }
+.mypage .contract.bbs.list .caution dl dt { color:#202020; }
+.mypage .contract.bbs.list .caution dl dd { color:#767676; }
+
+.mypage .contract.bbs.list.apply .table tbody td { padding-top:8px; padding-bottom:8px; }
+.mypage .contract.bbs.list.apply .table .btn { width:76px; font-size:13px; }
+.mypage .contract.bbs.list.apply .table .btn + .btn { margin-left:6px; }
+.mypage .contract.bbs.list.apply .table .btn-pdf { background:#062a73; }
+.mypage .contract.bbs.list.apply .table .btn-xls { background:#61b842; }
+.mypage .contract.bbs.list.apply .table .btn-pdf:after,
+.mypage .contract.bbs.list.apply .table .btn-xls:after { content:''; display:inline-block; margin-left:4px; width:9px; height:10px; background:url("@@css/resources/images/common/icon.png") no-repeat -349px 0; }
+.mypage .contract.bbs.list.apply .nodata { padding:72px 0; background:#efefef; text-align:center; font-size:14px; color:#202020; }
+
+.mypage .contract.bbs.list.apply-detail .table table { margin-top:20px; }
+.mypage .contract.bbs.list.apply-detail .table tbody td { padding-left:5px; padding-right:5px; }
+.mypage .contract.bbs.list.apply-detail .table tbody td:nth-child(3) { text-align:left; }
+.mypage .contract.bbs.list.apply-detail .table tbody td.blue { color:#1d53bf; }
+.mypage .contract.bbs.list.apply-detail .table tbody td.gray { color:#767676; }

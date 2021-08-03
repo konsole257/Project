@@ -1,0 +1,151 @@
+<div class="scrollbar">
+    <div class="inner">
+        <h3 class="tit">활동관리</h3>
+
+        <div class="tab-menu">
+            <a href="@@common/mypage/activity/bbsList.html" class="active">게시글 관리</a>
+            <a href="#">매물 관리</a>
+            <a href="#">참여내역관리</a>
+            <a href="#">견적관리</a>
+            <a href="#">북마크 관리</a>
+            <a href="#">구독 관리</a>
+            <a href="#">리뷰 관리</a>
+        </div>
+
+        <div class="header">
+            <h4 class="tit">게시글 관리</h4>
+            <div class="number">총 999건</div>
+        </div>
+
+        <div class="search-area">
+            <form class="form-area">
+                <fieldset>
+                    <legend class="hide">검색</legend>
+                    <div class="field-input">
+                        <input type="text" placeholder="" title="게시글 검색 입력">
+
+                        <button type="submit" class="btn btn-search">검색</button>
+                    </div>
+                </fieldset>
+            </form>
+            <a href="#" class="btn big fill blue btn-create">게시글 등록</a>
+        </div>
+
+        <div class="table type3">
+            <div class="chk-filter">
+                <label><input type="checkbox" class="type1"><span>게시 중 게시글만 보기</span></label>
+            </div>
+            <span class="select type2">
+                <select title="옵션 선택">
+                    <option>최신순</option>
+                    <option>조회순</option>
+                    <option>참여순</option>
+                    <option>좋아요순</option>
+                </select>
+            </span>
+        	<table>
+        		<caption class="hide">게시글 목록</caption>
+
+        		<colgroup>
+        			<col style="width:70px;">
+        			<col style="width:334px;">
+        			<col style="width:220px;">
+                    <col style="width:94px;">
+        			<col style="width:94px;">
+                    <col style="width:62px;">
+                    <col style="width:80px;">
+        		</colgroup>
+
+                <thead>
+        			<tr>
+        				<th>번호</th>
+                        <th>제목</th>
+                        <th>주소</th>
+                        <th>등록일</th>
+                        <th>게시일</th>
+                        <th>조회</th>
+                        <th>좋아요수</th>
+        			</tr>
+        		</thead>
+
+        		<tbody>
+                    <!-- 반복영역 // -->
+        			<tr>
+        				<td>9999</td>
+                        <td><a href="#">가가건설의 새 건축물을 소개합니다!</a></td>
+                        <td>서울특별시 강남구 역삼동 12-2</td>
+                        <td>2019.08.08</td>
+                        <td>2019.08.08</td>
+                        <td>999</td>
+                        <td>99</td>
+        			</tr>
+                    <!-- // 반복영역 -->
+
+                    <tr>
+        				<td>9999</td>
+                        <td><a href="#">가가건설의 새 건축물을 소개합니다!</a></td>
+                        <td>서울특별시 강남구 역삼동 12-2</td>
+                        <td>2019.08.08</td>
+                        <td>2019.08.08</td>
+                        <td>999</td>
+                        <td>99</td>
+        			</tr>
+
+                    <tr>
+        				<td>9999</td>
+                        <td><a href="#">가가건설의 새 건축물을 소개합니다!</a></td>
+                        <td>서울특별시 강남구 역삼동 12-2</td>
+                        <td>2019.08.08</td>
+                        <td>2019.08.08</td>
+                        <td>999</td>
+                        <td>99</td>
+        			</tr>
+
+                    <tr>
+        				<td>9999</td>
+                        <td><a href="#">가가건설의 새 건축물을 소개합니다!</a></td>
+                        <td>서울특별시 강남구 역삼동 12-2</td>
+                        <td>2019.08.08</td>
+                        <td>2019.08.08</td>
+                        <td>999</td>
+                        <td>99</td>
+        			</tr>
+
+                    <tr>
+        				<td>9999</td>
+                        <td><a href="#">가가건설의 새 건축물을 소개합니다!</a></td>
+                        <td>서울특별시 강남구 역삼동 12-2</td>
+                        <td>2019.08.08</td>
+                        <td>2019.08.08</td>
+                        <td>999</td>
+                        <td>99</td>
+        			</tr>
+        		</tbody>
+        	</table>
+        </div>
+
+        <div class="pagination">
+            <a href="#" class="first">처음</a>
+            <a href="#" class="prev">이전</a>
+            <span class="number">
+                <a href="#" class="active">1</a><!-- 페이지 활성화 class="active" -->
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+            </span>
+            <a href="#" class="next">다음</a>
+            <a href="#" class="last">마지막</a>
+        </div>
+
+        <!-- nodata
+        <div class="nodata">
+            등록된 게시글이 없습니다.
+        </div>
+         -->
+    </div>
+
+    <!-- footer : 추가 : 2020.01.08 // -->
+	@@include('./include/sub_footer.html')
+	<!-- //footer -->
+</div>

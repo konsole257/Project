@@ -1,0 +1,79 @@
+<article class="member-area @@member-classname">
+    <!-- 제목 상단 // -->
+    <header class="header">
+        <div class="inner">
+            <button type="button" class="btn mute btn-close" onclick="fn.removeActive('.member-area');">닫기</button>
+
+            <h2 class="tit">비밀번호 변경 안내</h2>
+        </div>
+    </header>
+    <!-- // 제목 상단 -->
+
+    <!-- 컨텐츠 영역 // -->
+    <div class="contents">
+        <div class="inner">
+            <h2 class="hide">비밀번호 변경 안내</h2>
+
+            <div class="scrollbar">
+                <!-- 비밀번호 변경 // -->
+                <p class="tx">
+                    장기간 동일한 비밀번호를 사용하는 경우<br>
+                    안전한 개인정보 보호를 위해 비밀번호 변경을<br>
+                    권장하고 있습니다.<br>
+                    <br>
+                    <b>소중한 개인정보 보호를 위해 비밀번호를 변경해주세요.</b>
+                </p>
+
+                <!-- 입력 // -->
+                <form class="form-area">
+                    <fieldset>
+                        <legend class="hide">비밀번호 입력</legend>
+                        <div class="field-input">
+                            <input type="password" placeholder="현재 비밀번호" title="현재 비밀번호 입력" onclick="this.parentNode.querySelector('.alert').style.display='block'">
+                            <small class="alert" style="display:none">비밀번호를 확인해주세요.</small>
+                        </div>
+
+                        <div class="field-input">
+                            <input type="password" placeholder="새 비밀번호(4자 이상 20자 이하)" title="새 비밀번호 입력" onclick="this.parentNode.querySelector('.alert').style.display='block'">
+                            <small class="alert" style="display:none">입력한 비밀번호를 확인해주세요.</small>
+                        </div>
+
+                        <div class="field-input">
+                            <input type="password" placeholder="새 비밀번호 확인(4자 이상 20자 이하)" title="새 비밀번호 재입력" onclick="this.parentNode.querySelector('.alert').style.display='block'">
+                            <small class="alert" style="display:none">입력한 비밀번호를 확인해주세요.</small>
+                        </div>
+                    </fieldset>
+                </form>
+                <!-- // 입력 -->
+
+                <!-- 버튼 // -->
+                <div class="btn-area">
+                    <button type="button" class="btn big stroke gray btn-later">6개월 후 변경</button>
+                    <button type="button" class="btn big fill blue btn-update" onclick="
+                        this.parentNode.parentNode.children[0].style.display='none';
+                        this.parentNode.parentNode.children[1].style.display='none';
+                        this.parentNode.parentNode.children[2].style.display='none';
+                        this.parentNode.parentNode.children[3].style.display='block';
+                        this.parentNode.parentNode.children[4].style.display='block'
+                    ">비밀번호 변경</button>
+                </div>
+                <!-- // 버튼 -->
+                <!-- // 비밀번호 변경 -->
+
+
+                <!-- 비밀번호 변경완료 // -->
+                <p class="tx" style="display:none;">
+                    비밀번호 변경이 완료되었습니다
+                </p>
+
+                <!-- 버튼 // -->
+                <div class="btn-area" style="display:none;">
+                    <button type="button" class="btn big fill blue btn-ok">확인</button>
+                </div>
+                <!-- // 버튼 -->
+                <!-- // 비밀번호 변경완료 -->
+            </div>
+        </div>
+    </div>
+    <!-- //컨텐츠 영역 -->
+</article>

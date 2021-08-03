@@ -1,0 +1,34 @@
+.cscenter { padding-left:83px; }
+.cscenter #contents { background:#f8f8f8; }
+.cscenter #contents > .scrollbar > .scrollbar > .inner { min-height:calc(100vh - 181px); width:1006px; padding: 80px 0 43px 60px;box-sizing: border-box; }
+
+.cscenter #contents > .scrollbar > .scrollbar > .inner > .tit { font-size:20px; }
+.cscenter .tab-menu { padding-left:181px; margin:-26px 0 60px; }
+.cscenter #contents > .scrollbar { max-height:calc(100vh); }
+.cscenter .notice > .scrollbar > .scrollbar > .inner > .header { position:relative; }
+.cscenter .notice > .scrollbar > .scrollbar > .inner > .header .tit { display:inline-block; font-size:16px; color:#4a4a4a; }
+.cscenter .notice > .scrollbar > .scrollbar > .inner > .header .number { display:inline-block; margin-left:15px; }
+.cscenter .notice.bbs.list .search-area { position:relative; margin-top:20px; }
+.cscenter .notice.bbs.list .search-area .form-area { width:352px; }
+.cscenter .notice.bbs.list .search-area .form-area input { height:40px; line-height:38px; }
+.cscenter .notice.bbs.list .search-area .form-area .btn-search { position:absolute; top:0px; right:0; width:40px; height:40px; text-indent:-9999px; }
+.cscenter .notice.bbs.list .search-area .form-area .btn-search:before { content:""; position:absolute; top:0; left:0; bottom:0; right:0; width:16px; height:16px; margin:auto; background:url("@@css/resources/images/common/btn.png") no-repeat -98px 0; }
+.cscenter .notice.bbs.list .table.type3 .tag { min-width:48px; display:inline-block; padding:0 5px; font-size:12px; line-height:24px; color:#fff; background:#1d53bf; border-radius:12px; box-sizing:border-box; }
+.cscenter .notice.bbs.list .table.type3 .tag.new { background:#2c7a41; }
+.cscenter .notice.bbs.list .table.type3 table { margin-top:32px; }
+.cscenter .notice.bbs.list .table.type3 tbody td:nth-child(3) { text-align:center; }
+.cscenter .notice.bbs.list .table.type3 tbody td[colspan="3"] { padding:0; }
+.cscenter .notice.bbs.list .table.type3 tbody td .nodata { height:272px; padding-top:102px; font-size:16px; background:#f8f8f8; box-sizing:border-box; }
+.cscenter .notice.bbs.list .table.type3 tbody td .nodata:before { content:''; display:block; width:40px; height:39px; margin:0 auto 16px; background:url("@@css/resources/images/common/icon.png") no-repeat -110px -55px; }
+
+.cscenter .notice .qna-area { position:relative; padding:24px 196px 24px 40px; margin-top:60px; border-radius:8px; background:#efefef; }
+.cscenter .notice .qna-area p { position:relative; font-size:14px; line-height:36px; }
+.cscenter .notice .qna-area p:before { content:''; position:absolute; left:-12px; top:50%; display:block; width:2px; height:2px; background:#929292; }
+.cscenter .notice .qna-area p b { color:#1d53bf; }
+.cscenter .notice .qna-area .btn { position:absolute; right:24px; top:24px; }
+
+.cscenter .notice.view .inner > .header { margin-top:36px; padding-right:70px; padding-bottom:16px; border-bottom:1px solid #cfcfcf; }
+.cscenter .notice.view .inner > .header .date { position:absolute; right:0; top:0; line-height:20px; color:#767676; }
+.cscenter .notice.view .view-area { padding:40px 24px 24px; border-bottom:1px solid #e0e0e0; box-sizing:border-box;}
+.cscenter .notice.view .view-area img { max-width:100%; }
+.cscenter .notice.view .btn-area { margin-top:32px; text-align:center; }

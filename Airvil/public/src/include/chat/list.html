@@ -1,0 +1,508 @@
+<article class="list-area chat">
+            <!-- 채팅 상단 // -->
+            <header class="header">
+                <div class="inner">
+                    <button type="button" class="btn mute btn-close" onclick="fn.chatListClose(this);">닫기</button>
+
+                    <h2 class="tit">에어빌톡</h2>
+                </div>
+            </header>
+            <!-- // 채팅 상단 -->
+
+            <!-- 채팅 검색 // -->
+            <div class="search-area">
+                <div class="inner">
+                    <!-- 검색 // -->
+                    <form class="form-area">
+                        <fieldset>
+                            <legend class="hide">검색</legend>
+                            <div class="field-input">
+                                <input type="text" placeholder="채팅방 이름 참여자 입력" title="채팅방 이름 참여자 입력">
+
+                                <button type="submit" class="btn btn-search">검색</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <!-- // 채팅 검색 -->
+
+            <div class="inner">
+                <h2 class="hide">검색결과 목록</h2>
+
+                <!-- 목록 // -->
+                <div class="scrollbar">
+                    <div class="skip">
+                        <a href="#list-area-end">검색결과 목록 건너뛰기</a>
+                    </div>
+
+                    <ul class="list">
+                        <!-- 반복영역 // -->
+                        <li class="pin noalarm"><!-- 목록 상단고정 class="pin" --><!-- 알림 끔 class="noalarm" --><!-- 차단 class="block" -->
+                            <div class="inner">
+                                <figure class="img" oncontextmenu="fn.imgContextmenu(this);">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name"><span class="ellipsis">서울특별시 강남구 역삼동 112-123</span></div>
+                                    <p class="txt ellipsis">저희 회사에서는 허가자한테 우편우편우편우편우편우편우편우편우편우편우편우편우편우편우편</p>
+                                    <div class="peoples"><span class="hide">참여자 : </span>12</div>
+                                    <div class="date"><span class="hide">마지막 채팅 시간 : </span>15:26</div>
+                                    <div class="no-reading"><div class="inner"><span class="hide">안읽은 메세지 : </span>300</div></div>
+
+                                    <button type="button" class="btn btn-detail" oncontextmenu="fn.chatContextmenu(this);" ondblclick="fn.viewerOpen(this, 'chat');">채팅참여</button> <!-- 채팅참여 -->
+                                </div>
+                            </div>
+
+                            <!-- 우클릭 컨텍스트 메뉴 : 추가 : 2020.01.20 // -->
+                            <div class="img-context">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <b class="name">가가건설</b>
+                                <ul>
+                                    <li><button type="button" class="btn small fill yellow btn-chat">1:1 채팅</button></li>
+                                    <li><button type="button" class="btn small btn-block">차단</button></li>
+                                </ul>
+                            </div>
+
+                            <div class="chat-context">
+                                <ul>
+                                    <li><button type="button">목록 맨 위에 고정</button></li>
+                                    <li><button type="button">알림 끄기</button></li>
+                                    <li><button type="button">나가기</button></li>
+                                </ul>
+                            </div>
+                            <!-- // 우클릭 컨텍스트 메뉴 -->
+                        </li>
+                        <!-- // 반복영역 -->
+
+                        <li class="pin block">
+                            <div class="inner">
+                                <figure class="img" oncontextmenu="fn.imgContextmenu(this);">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name"><span class="ellipsis">서울특별시</span></div>
+                                    <p class="txt ellipsis">저희 회사에서는 허가자한테 우편우편우편우편우편우편우편우편우편우편우편우편우편우편우편</p>
+                                    <div class="peoples"><span class="hide">참여자 : </span>12</div>
+                                    <div class="date"><span class="hide">마지막 채팅 시간 : </span>2019.12.12</div>
+                                    <div class="no-reading"><div class="inner"><span class="hide">안읽은 메세지 : </span>8</div></div>
+
+                                    <button type="button" class="btn btn-detail" oncontextmenu="fn.chatContextmenu(this);" ondblclick="fn.viewerOpen(this, 'chat');">채팅참여</button>
+                                </div>
+                            </div>
+
+                            <div class="img-context">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <b class="name">가가건설</b>
+                                <ul>
+                                    <li><button type="button" class="btn small fill yellow btn-chat">1:1 채팅</button></li>
+                                    <li><button type="button" class="btn small btn-block">차단</button></li>
+                                </ul>
+                            </div>
+
+                            <div class="chat-context">
+                                <ul>
+                                    <li><button type="button">목록 맨 위에 고정</button></li>
+                                    <li><button type="button">알림 끄기</button></li>
+                                    <li><button type="button">나가기</button></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="pin noalarm">
+                            <div class="inner">
+                                <figure class="img" oncontextmenu="fn.imgContextmenu(this);">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name"><span class="ellipsis">서울특별시 강남구 역삼동 112-123</span></div>
+                                    <p class="txt ellipsis">저희 회사에서는 허가자한테 우편우편우편우편우편우편우편우편우편우편우편우편우편우편우편</p>
+                                    <div class="peoples"><span class="hide">참여자 : </span>12</div>
+                                    <div class="date"><span class="hide">마지막 채팅 시간 : </span>15:26</div>
+                                    <div class="no-reading"><div class="inner"><span class="hide">안읽은 메세지 : </span>300</div></div>
+
+                                    <button type="button" class="btn btn-detail" oncontextmenu="fn.chatContextmenu(this);" ondblclick="fn.viewerOpen(this, 'chat');">채팅참여</button>
+                                </div>
+                            </div>
+
+                            <div class="img-context">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <b class="name">가가건설</b>
+                                <ul>
+                                    <li><button type="button" class="btn small fill yellow btn-chat">1:1 채팅</button></li>
+                                    <li><button type="button" class="btn small btn-block">차단</button></li>
+                                </ul>
+                            </div>
+
+                            <div class="chat-context">
+                                <ul>
+                                    <li><button type="button">목록 맨 위에 고정</button></li>
+                                    <li><button type="button">알림 끄기</button></li>
+                                    <li><button type="button">나가기</button></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="pin noalarm">
+                            <div class="inner">
+                                <figure class="img" oncontextmenu="fn.imgContextmenu(this);">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name"><span class="ellipsis">서울특별시 강남구 역삼동 112-123</span></div>
+                                    <p class="txt ellipsis">저희 회사에서는 허가자한테 우편우편우편우편우편우편우편우편우편우편우편우편우편우편우편</p>
+                                    <div class="peoples"><span class="hide">참여자 : </span>12</div>
+                                    <div class="date"><span class="hide">마지막 채팅 시간 : </span>15:26</div>
+                                    <div class="no-reading"><div class="inner"><span class="hide">안읽은 메세지 : </span>300</div></div>
+
+                                    <button type="button" class="btn btn-detail" oncontextmenu="fn.chatContextmenu(this);" ondblclick="fn.viewerOpen(this, 'chat');">채팅참여</button>
+                                </div>
+                            </div>
+
+                            <div class="img-context">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <b class="name">가가건설</b>
+                                <ul>
+                                    <li><button type="button" class="btn small fill yellow btn-chat">1:1 채팅</button></li>
+                                    <li><button type="button" class="btn small btn-block">차단</button></li>
+                                </ul>
+                            </div>
+
+                            <div class="chat-context">
+                                <ul>
+                                    <li><button type="button">목록 맨 위에 고정</button></li>
+                                    <li><button type="button">알림 끄기</button></li>
+                                    <li><button type="button">나가기</button></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="pin noalarm">
+                            <div class="inner">
+                                <figure class="img" oncontextmenu="fn.imgContextmenu(this);">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name"><span class="ellipsis">서울특별시 강남구 역삼동 112-123</span></div>
+                                    <p class="txt ellipsis">저희 회사에서는 허가자한테 우편우편우편우편우편우편우편우편우편우편우편우편우편우편우편</p>
+                                    <div class="peoples"><span class="hide">참여자 : </span>12</div>
+                                    <div class="date"><span class="hide">마지막 채팅 시간 : </span>15:26</div>
+                                    <div class="no-reading"><div class="inner"><span class="hide">안읽은 메세지 : </span>300</div></div>
+
+                                    <button type="button" class="btn btn-detail" oncontextmenu="fn.chatContextmenu(this);" ondblclick="fn.viewerOpen(this, 'chat');">채팅참여</button>
+                                </div>
+                            </div>
+
+                            <div class="img-context">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <b class="name">가가건설</b>
+                                <ul>
+                                    <li><button type="button" class="btn small fill yellow btn-chat">1:1 채팅</button></li>
+                                    <li><button type="button" class="btn small btn-block">차단</button></li>
+                                </ul>
+                            </div>
+
+                            <div class="chat-context">
+                                <ul>
+                                    <li><button type="button">목록 맨 위에 고정</button></li>
+                                    <li><button type="button">알림 끄기</button></li>
+                                    <li><button type="button">나가기</button></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="pin noalarm">
+                            <div class="inner">
+                                <figure class="img" oncontextmenu="fn.imgContextmenu(this);">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name"><span class="ellipsis">서울특별시 강남구 역삼동 112-123</span></div>
+                                    <p class="txt ellipsis">저희 회사에서는 허가자한테 우편우편우편우편우편우편우편우편우편우편우편우편우편우편우편</p>
+                                    <div class="peoples"><span class="hide">참여자 : </span>12</div>
+                                    <div class="date"><span class="hide">마지막 채팅 시간 : </span>15:26</div>
+                                    <div class="no-reading"><div class="inner"><span class="hide">안읽은 메세지 : </span>300</div></div>
+
+                                    <button type="button" class="btn btn-detail" oncontextmenu="fn.chatContextmenu(this);" ondblclick="fn.viewerOpen(this, 'chat');">채팅참여</button>
+                                </div>
+                            </div>
+
+                            <div class="img-context">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <b class="name">가가건설</b>
+                                <ul>
+                                    <li><button type="button" class="btn small fill yellow btn-chat">1:1 채팅</button></li>
+                                    <li><button type="button" class="btn small btn-block">차단</button></li>
+                                </ul>
+                            </div>
+
+                            <div class="chat-context">
+                                <ul>
+                                    <li><button type="button">목록 맨 위에 고정</button></li>
+                                    <li><button type="button">알림 끄기</button></li>
+                                    <li><button type="button">나가기</button></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="pin noalarm">
+                            <div class="inner">
+                                <figure class="img" oncontextmenu="fn.imgContextmenu(this);">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name"><span class="ellipsis">서울특별시 강남구 역삼동 112-123</span></div>
+                                    <p class="txt ellipsis">저희 회사에서는 허가자한테 우편우편우편우편우편우편우편우편우편우편우편우편우편우편우편</p>
+                                    <div class="peoples"><span class="hide">참여자 : </span>12</div>
+                                    <div class="date"><span class="hide">마지막 채팅 시간 : </span>15:26</div>
+                                    <div class="no-reading"><div class="inner"><span class="hide">안읽은 메세지 : </span>300</div></div>
+
+                                    <button type="button" class="btn btn-detail" oncontextmenu="fn.chatContextmenu(this);" ondblclick="fn.viewerOpen(this, 'chat');">채팅참여</button>
+                                </div>
+                            </div>
+
+                            <div class="img-context">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <b class="name">가가건설</b>
+                                <ul>
+                                    <li><button type="button" class="btn small fill yellow btn-chat">1:1 채팅</button></li>
+                                    <li><button type="button" class="btn small btn-block">차단</button></li>
+                                </ul>
+                            </div>
+
+                            <div class="chat-context">
+                                <ul>
+                                    <li><button type="button">목록 맨 위에 고정</button></li>
+                                    <li><button type="button">알림 끄기</button></li>
+                                    <li><button type="button">나가기</button></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="pin noalarm">
+                            <div class="inner">
+                                <figure class="img" oncontextmenu="fn.imgContextmenu(this);">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name"><span class="ellipsis">서울특별시 강남구 역삼동 112-123</span></div>
+                                    <p class="txt ellipsis">저희 회사에서는 허가자한테 우편우편우편우편우편우편우편우편우편우편우편우편우편우편우편</p>
+                                    <div class="peoples"><span class="hide">참여자 : </span>12</div>
+                                    <div class="date"><span class="hide">마지막 채팅 시간 : </span>15:26</div>
+                                    <div class="no-reading"><div class="inner"><span class="hide">안읽은 메세지 : </span>300</div></div>
+
+                                    <button type="button" class="btn btn-detail" oncontextmenu="fn.chatContextmenu(this);" ondblclick="fn.viewerOpen(this, 'chat');">채팅참여</button>
+                                </div>
+                            </div>
+
+                            <div class="img-context">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <b class="name">가가건설</b>
+                                <ul>
+                                    <li><button type="button" class="btn small fill yellow btn-chat">1:1 채팅</button></li>
+                                    <li><button type="button" class="btn small btn-block">차단</button></li>
+                                </ul>
+                            </div>
+
+                            <div class="chat-context">
+                                <ul>
+                                    <li><button type="button">목록 맨 위에 고정</button></li>
+                                    <li><button type="button">알림 끄기</button></li>
+                                    <li><button type="button">나가기</button></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="pin noalarm">
+                            <div class="inner">
+                                <figure class="img" oncontextmenu="fn.imgContextmenu(this);">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name"><span class="ellipsis">서울특별시 강남구 역삼동 112-123</span></div>
+                                    <p class="txt ellipsis">저희 회사에서는 허가자한테 우편우편우편우편우편우편우편우편우편우편우편우편우편우편우편</p>
+                                    <div class="peoples"><span class="hide">참여자 : </span>12</div>
+                                    <div class="date"><span class="hide">마지막 채팅 시간 : </span>15:26</div>
+                                    <div class="no-reading"><div class="inner"><span class="hide">안읽은 메세지 : </span>300</div></div>
+
+                                    <button type="button" class="btn btn-detail" oncontextmenu="fn.chatContextmenu(this);" ondblclick="fn.viewerOpen(this, 'chat');">채팅참여</button>
+                                </div>
+                            </div>
+
+                            <div class="img-context">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <b class="name">가가건설</b>
+                                <ul>
+                                    <li><button type="button" class="btn small fill yellow btn-chat">1:1 채팅</button></li>
+                                    <li><button type="button" class="btn small btn-block">차단</button></li>
+                                </ul>
+                            </div>
+
+                            <div class="chat-context">
+                                <ul>
+                                    <li><button type="button">목록 맨 위에 고정</button></li>
+                                    <li><button type="button">알림 끄기</button></li>
+                                    <li><button type="button">나가기</button></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="pin noalarm">
+                            <div class="inner">
+                                <figure class="img" oncontextmenu="fn.imgContextmenu(this);">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name"><span class="ellipsis">서울특별시 강남구 역삼동 112-123</span></div>
+                                    <p class="txt ellipsis">저희 회사에서는 허가자한테 우편우편우편우편우편우편우편우편우편우편우편우편우편우편우편</p>
+                                    <div class="peoples"><span class="hide">참여자 : </span>12</div>
+                                    <div class="date"><span class="hide">마지막 채팅 시간 : </span>15:26</div>
+                                    <div class="no-reading"><div class="inner"><span class="hide">안읽은 메세지 : </span>300</div></div>
+
+                                    <button type="button" class="btn btn-detail" oncontextmenu="fn.chatContextmenu(this);" ondblclick="fn.viewerOpen(this, 'chat');">채팅참여</button>
+                                </div>
+                            </div>
+
+                            <div class="img-context">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <b class="name">가가건설</b>
+                                <ul>
+                                    <li><button type="button" class="btn small fill yellow btn-chat">1:1 채팅</button></li>
+                                    <li><button type="button" class="btn small btn-block">차단</button></li>
+                                </ul>
+                            </div>
+
+                            <div class="chat-context">
+                                <ul>
+                                    <li><button type="button">목록 맨 위에 고정</button></li>
+                                    <li><button type="button">알림 끄기</button></li>
+                                    <li><button type="button">나가기</button></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="pin noalarm">
+                            <div class="inner">
+                                <figure class="img" oncontextmenu="fn.imgContextmenu(this);">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name"><span class="ellipsis">서울특별시 강남구 역삼동 112-123</span></div>
+                                    <p class="txt ellipsis">저희 회사에서는 허가자한테 우편우편우편우편우편우편우편우편우편우편우편우편우편우편우편</p>
+                                    <div class="peoples"><span class="hide">참여자 : </span>12</div>
+                                    <div class="date"><span class="hide">마지막 채팅 시간 : </span>15:26</div>
+                                    <div class="no-reading"><div class="inner"><span class="hide">안읽은 메세지 : </span>300</div></div>
+
+                                    <button type="button" class="btn btn-detail" oncontextmenu="fn.chatContextmenu(this);" ondblclick="fn.viewerOpen(this, 'chat');">채팅참여</button>
+                                </div>
+                            </div>
+
+                            <div class="img-context">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <b class="name">가가건설</b>
+                                <ul>
+                                    <li><button type="button" class="btn small fill yellow btn-chat">1:1 채팅</button></li>
+                                    <li><button type="button" class="btn small btn-block">차단</button></li>
+                                </ul>
+                            </div>
+
+                            <div class="chat-context">
+                                <ul>
+                                    <li><button type="button">목록 맨 위에 고정</button></li>
+                                    <li><button type="button">알림 끄기</button></li>
+                                    <li><button type="button">나가기</button></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="pin noalarm">
+                            <div class="inner">
+                                <figure class="img" oncontextmenu="fn.imgContextmenu(this);">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name"><span class="ellipsis">서울특별시 강남구 역삼동 112-123</span></div>
+                                    <p class="txt ellipsis">저희 회사에서는 허가자한테 우편우편우편우편우편우편우편우편우편우편우편우편우편우편우편</p>
+                                    <div class="peoples"><span class="hide">참여자 : </span>12</div>
+                                    <div class="date"><span class="hide">마지막 채팅 시간 : </span>15:26</div>
+                                    <div class="no-reading"><div class="inner"><span class="hide">안읽은 메세지 : </span>300</div></div>
+
+                                    <button type="button" class="btn btn-detail" oncontextmenu="fn.chatContextmenu(this);" ondblclick="fn.viewerOpen(this, 'chat');">채팅참여</button>
+                                </div>
+                            </div>
+
+                            <div class="img-context">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <b class="name">가가건설</b>
+                                <ul>
+                                    <li><button type="button" class="btn small fill yellow btn-chat">1:1 채팅</button></li>
+                                    <li><button type="button" class="btn small btn-block">차단</button></li>
+                                </ul>
+                            </div>
+
+                            <div class="chat-context">
+                                <ul>
+                                    <li><button type="button">목록 맨 위에 고정</button></li>
+                                    <li><button type="button">알림 끄기</button></li>
+                                    <li><button type="button">나가기</button></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!-- 결과없음 : 추가 : 2020.01.20 // -->
+                        <li class="pin">
+                            <div class="inner">
+                                <div class="nodata">
+                                    <p>
+                                        참여중인 채팅이 없습니다.
+                                        <span>에어빌의 회원들과 채팅을 시작해보세요.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 결과없음 // -->
+                    </ul>
+                </div>
+                <!-- // 목록 -->
+            </div>
+        </article>
+
+        <hr id="chat-list-area-end">

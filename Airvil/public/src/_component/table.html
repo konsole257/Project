@@ -1,0 +1,21 @@
+<table class="@@class">
+	<caption @@if (!context.captionVisible) {class="hide"}>@@caption.text</caption>
+
+	@@if (context.colgroup) {
+	<colgroup>
+		@@for (var i = 0; i < context.colgroup.colWidth.length; i++) { <col style="width:`+colgroup.colWidth[i]+`"> }
+	</colgroup>
+	} @@if (context.thead) {
+	<thead>
+		<tr>
+			@@for (var i = 0; i < context.thead.th.length; i++) { <th>`+thead.th[i]+`</th> }
+		</tr>
+	</thead>
+	} @@if (context.tbody) {
+	<tbody>
+		<tr>
+			@@for (var i = 0; i < context.tbody.td.length; i++) { <td>`+tbody.td[i]+`</td> }
+		</tr>
+	</tbody>
+	}
+</table>

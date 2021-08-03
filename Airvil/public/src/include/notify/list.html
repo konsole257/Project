@@ -1,0 +1,76 @@
+<article class="list-area notify">
+            <!-- 알림 상단 // -->
+            <header class="header">
+                <div class="inner">
+                    <button type="button" class="btn mute btn-close" onclick="fn.notifyListClose(this);">닫기</button>
+
+                    <h2 class="tit">에어빌 알림 <span>38</span></h2>
+                </div>
+            </header>
+            <!-- // 알림 상단 -->
+
+            <!-- 목록 없을경우 비노출 // -->
+            <div class="btn-area">
+                <button type="button" class="btn stroke gray btn-read">읽은 알림 삭제</button>
+                <button type="button" class="btn fill gray btn-all">모두 삭제</button>
+            </div>
+            <!-- // 목록 없을경우 비노출 -->
+
+            <div class="inner">
+                <h2 class="hide">검색결과 목록</h2>
+
+                <!-- 목록 // -->
+                <div class="scrollbar">
+                    <div class="skip">
+                        <a href="#list-area-end">검색결과 목록 건너뛰기</a>
+                    </div>
+
+                    <ul class="list">
+                        <!-- 반복영역 // -->
+                        <li class="new"><!-- 새로운알림 class="new" -->
+                            <div class="inner">
+                                <p class="txt">(주)가가건설님의 1:1문의에 답변이 등록되었습니다.</p>
+                                <p class="txt">답변 내용이 부족하거나 다른 질문이 있으면 추가 문의를 남겨주세요.</p>
+
+                                <span class="date">15:26</span>
+                            </div>
+                        </li>
+                        <!-- // 반복영역 -->
+
+                        <li class="new">
+                            <div class="inner">
+                                <p class="txt">(주)가가건설님이 참여한 <span>서울특별시 서초구 서초동 12-3</span>의 우편 참여하기가 마감되었습니다.</p>
+
+                                <span class="date">15:26</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="inner">
+                                <p class="txt">(주)가가건설님의 포인트 충전 안내드립니다.</p>
+                                <p class="txt"><span>- 충전액: 10,000원</span></p>
+                                <p class="txt"><span>- 총 보유액: 10,200원</span></p>
+
+                                <span class="date">15:26</span>
+                            </div>
+                        </li>
+
+                        <!-- 결과없음 // -->
+                        <li>
+                            <div class="inner">
+                                <div class="nodata">
+                                    <p>
+                                        새로운 알림이 없습니다.
+                                        <span>알림은 최대 30일까지 보관됩니다.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 결과없음 // -->
+                    </ul>
+                </div>
+                <!-- // 목록 -->
+            </div>
+        </article>
+
+        <hr id="notify-list-area-end">

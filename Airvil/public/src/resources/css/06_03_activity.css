@@ -1,0 +1,257 @@
+.mypage .activity > .scrollbar > .scrollbar > .inner > .header { position:relative; }
+.mypage .activity > .scrollbar > .scrollbar > .inner > .header .tit { display:inline-block; font-size:16px; color:#4a4a4a; }
+.mypage .activity > .scrollbar > .scrollbar > .inner > .header .bul { margin-left:10px; font-size:12px; line-height:16px; color:#767676; }
+.mypage .activity > .scrollbar > .scrollbar > .inner > .header .bul:before { content:'*'; position:relative; top:2px; display:inline-block; margin-right:4px; font-size:12px; color:#cc0a0a; }
+.mypage .activity > .scrollbar > .scrollbar > .inner > .header .number { display:inline-block; margin-left:15px; }
+.mypage .activity > .scrollbar > .scrollbar > .inner > .header .select { position:absolute; top:0; right:0; width:70px; height:32px; }
+.mypage .activity > .scrollbar > .scrollbar > .inner > .header .select .ui-selectmenu-text { text-align:left; line-height:32px; }
+
+.mypage .activity.bbs.list .btn-write { display:block; width:148px; margin:37px auto 0; }
+.mypage .activity.bbs.list .search-area { position:relative; margin-top:20px; }
+.mypage .activity.bbs.list .search-area .form-area { width:352px; }
+.mypage .activity.bbs.list .search-area .form-area input { height:40px; line-height:38px; }
+.mypage .activity.bbs.list .search-area .form-area .btn-search { position:absolute; top:0px; right:0; width:40px; height:40px; text-indent:-9999px; }
+.mypage .activity.bbs.list .search-area .form-area .btn-search:before { content:""; position:absolute; top:0; left:0; bottom:0; right:0; width:16px; height:16px; margin:auto; background:url("@@css/resources/images/common/btn.png") no-repeat -98px 0; }
+.mypage .activity.bbs.list .search-area .btn-create { position:absolute; right:0; top:2px; }
+.mypage .activity.bbs.list .search-area .btn-filter { position:absolute; right:156px; top:4px; width:66px; margin-left:8px; border-radius:2px; }
+.mypage .activity.bbs.list .search-area .btn-filter:before { content:""; display:inline-block; width:12px; height:10px; margin-right:6px; background:url("@@css/resources/images/common/icon.png") no-repeat -419px -22px; }
+.mypage .activity.bbs.list .search-area .btn-filter.active { color:#fff; border:none; background:#062a73; }
+.mypage .activity.bbs.list .search-area .btn-filter.active:before { background-position:-419px -32px; }
+.mypage .activity.bbs.list .select.type2 { float:right; width:108px; }
+.mypage .activity.bbs.list .select.type2 + table { float:left; width:100%; clear:both; }
+.mypage .activity.bbs.list .scrollbar > .inner > .nodata { margin-top:32px; width:100%; padding:72px 0; background:#efefef; font-size:14px; color:#202020; text-align:center; }
+.mypage .activity.bbs.list .table { position:relative; margin-top:28px; }
+.mypage .activity.bbs.list .table:after { content:''; display:block; clear:both; }
+.mypage .activity.bbs.list .table.type3 tbody td { text-align:center; }
+.mypage .activity.bbs.list .table.type3 tbody td.blue { color:#1d53bf; }
+.mypage .activity.bbs.list .table.type3 tbody td.gray { color:#767676; }
+.mypage .activity.bbs.list .table.type3 .chk-filter { position:absolute; left:0; top:10px; }
+
+.mypage .activity.write .inner > .header { position:relative; padding-bottom:18px; border-bottom:1px solid #b4b4b4; }
+.mypage .activity.write .inner > .header .tit { font-size:16px; }
+.mypage .activity.write .inner > .header .tit span { margin-left:20px; font-size:14px; line-height:20px; color:#767676; vertical-align:top; }
+.mypage .activity.write .inner > .header .tit span:before { content:''; position:relative; top:7px; margin-right:24px; display:inline-block; width:1px; height:8px; background:#b4b4b4; vertical-align:top; }
+.mypage .activity.write .inner > .header .chk-upload { float:right; }
+.mypage .activity.write .inner > .header .chk-upload span { padding-left:20px; }
+.mypage .activity.write .inner > .header .chk-upload span:before { margin-left:-20px; }
+.mypage .activity.write .contents { margin-top:24px; }
+
+.mypage .activity.write .post-area .input-area .row { display:flex; }
+.mypage .activity.write .post-area .input-area .row + .row { margin-top:10px; }
+.mypage .activity.write .post-area .input-area .row .field-tit { display:inline-block; width:120px; font-size:14px; line-height:40px; }
+.mypage .activity.write .post-area .input-area .row .field-tit .bul { position:relative; top:2px; margin-left:3px; display:inline-block; vertical-align:top; color:#cc0a0a; }
+.mypage .activity.write .post-area .input-area .row .field-input { display:block; width:calc(100% - 120px); }
+.mypage .activity.write .post-area .input-area .row .field-input input { height:40px; line-height:40px; box-sizing:border-box; }
+.mypage .activity.write .post-area .input-area .row.row-address .field-input {font-size:0;}
+.mypage .activity.write .post-area .input-area .row.row-address .field-input input { width:240px; }
+.mypage .activity.write .post-area .input-area .row.row-address .field-input .btn { width:108px; height:40px; line-height:38px; }
+.mypage .activity.write .post-area .input-area .row.row-address .field-input .w351 { margin-left:8px; width:351px; }
+.mypage .activity.write .post-area .input-area .row.row-address .field-input .w710 { margin-left:116px; margin-top:10px; width:710px; }
+.mypage .activity.write .post-area .input-area .row.row-address .map-area { width:calc(100% + 120px); margin:24px 0 14px -120px; }
+.mypage .activity.write .post-area .input-area .row.row-address .chk-area { margin-top:10px; text-align:right; }
+.mypage .activity.write .post-area .input-area .row.row-address .chk-area label { margin-left:20px; }
+
+.mypage .activity.write .post-area .input-area .row.row-kinds .field-tit { line-height:30px; }
+.mypage .activity.write .post-area .input-area .row.row-kinds .field-input { display:flex; flex-wrap:wrap; }
+.mypage .activity.write .post-area .input-area .row.row-kinds .field-input label { position:relative; display:block; width:16.6666%; height:30px; border:1px solid #b4b4b4; box-sizing:border-box; margin-top:-1px; border-left:none; }
+.mypage .activity.write .post-area .input-area .row.row-kinds .field-input label span { position:relative; z-index:1; width:100%; height:100%; line-height:28px; text-align:center; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; box-sizing:border-box; background:#fff; }
+.mypage .activity.write .post-area .input-area .row.row-kinds .field-input label:nth-child(1),
+.mypage .activity.write .post-area .input-area .row.row-kinds .field-input label:nth-child(2),
+.mypage .activity.write .post-area .input-area .row.row-kinds .field-input label:nth-child(3),
+.mypage .activity.write .post-area .input-area .row.row-kinds .field-input label:nth-child(4),
+.mypage .activity.write .post-area .input-area .row.row-kinds .field-input label:nth-child(5),
+.mypage .activity.write .post-area .input-area .row.row-kinds .field-input label:nth-child(6) { margin-top:0; }
+.mypage .activity.write .post-area .input-area .row.row-kinds .field-input label:nth-child(6n - 5) { border-left:1px solid #b4b4b4; }
+.mypage .activity.write .post-area .input-area .row.row-kinds .field-input input[type="checkbox"]:checked + span,
+.mypage .activity.write .post-area .input-area .row.row-kinds .field-input input[type="radio"]:checked + span { background:#062a73; color:#fff; }
+.mypage .activity.write .post-area .input-area .row.row-kinds .field-input input[type="radio"] + span:before { display:none; }
+.mypage .activity.write .post-area .input-area .row.row-file { position:relative; margin-top:41px; }
+.mypage .activity.write .post-area .input-area .row.row-file:before { content:''; position:absolute; left:0; top:-20px; display:block; width:100%; height:1px; background:#e0e0e0; }
+.mypage .activity.write .post-area .input-area .row.row-file .file { font-size:0; }
+.mypage .activity.write .post-area .input-area .row.row-file .file input[type="text"] { width:313px; }
+.mypage .activity.write .post-area .input-area .row.row-file .file .btn { width:108px; height:40px; line-height:40px; margin-left:8px; }
+.mypage .activity.write .post-area .input-area .row.row-file .file-list { font-size:0; }
+.mypage .activity.write .post-area .input-area .row.row-file .file-list picture { margin-top:10px; margin-left:11px; display:inline-block; position:relative; width:156px; height:104px; }
+.mypage .activity.write .post-area .input-area .row.row-file .file-list picture:nth-child(5n - 4) { margin-left:0; }
+.mypage .activity.write .post-area .input-area .row.row-file .file-list picture img { width:100%; height:100%; }
+.mypage .activity.write .post-area .input-area .row.row-file .file-list picture .btn-close { position:absolute; right:10px; top:10px; width:12px; height:12px; background:url("@@css/resources/images/common/btn.png") no-repeat -341px 0; font-size:0; }
+.mypage .activity.write .post-area .input-area .row.row-file .file-list picture .btn-close:before { content:''; position:absolute; left:-10px; top:-10px; display:block; width:100%; height:100%; padding:10px; }
+.mypage .activity.write .post-area .input-area .row.row-fileinfo .field-input { position:relative; }
+.mypage .activity.write .post-area .input-area .row.row-fileinfo2 .field-tit { position:relative; line-height:20px; }
+
+.mypage .activity.write .post-area .input-area .row.row-option label { width:100%; }
+.mypage .activity.write .post-area .input-area .row.row-option .column { display:flex; flex-wrap:wrap; width:50%; }
+.mypage .activity.write .post-area .input-area .row.row-option .column:nth-child(1) { padding-right:40px; }
+.mypage .activity.write .post-area .input-area .row.row-option .column:nth-child(2) { padding-left:40px; }
+.mypage .activity.write .post-area .input-area .row.row-option .column .field-tit { width:120px; }
+.mypage .activity.write .post-area .input-area .row.row-option .column .field-input .select.type1 { height:40px; line-height:40px; }
+.mypage .activity.write .post-area .input-area .row.row-option .column .field-input .select.type1 .ui-selectmenu-button.ui-button { vertical-align:top; }
+.mypage .activity.write .post-area .input-area .row.row-option .column .field-input label { position:relative; display:block; height:40px; }
+.mypage .activity.write .post-area .input-area .row.row-option .column .field-input label input.right { text-align:right; }
+.mypage .activity.write .post-area .input-area .row.row-option .column .field-input .unit { position:absolute; right:0; top:0; height:40px; font-size:13px; line-height:40px; padding:0 17px 0 6px; color:#6d6e71; }
+.mypage .activity.write .post-area .input-area .row.row-option .column .field-input.field-half { font-size:0; }
+.mypage .activity.write .post-area .input-area .row.row-option .column .field-input.field-half label { display:inline-block; width:calc(50% - 4px); font-size:13px; vertical-align:top; }
+.mypage .activity.write .post-area .input-area .row.row-option .column .field-input.field-half label + label { margin-left:8px; }
+
+.mypage .activity.write .post-area .input-area + .btn-area { margin-top:32px; text-align:center; font-size:0; }
+.mypage .activity.write .post-area .input-area + .btn-area button + button { margin-left:6px; }
+.mypage .activity.write .edit-area { margin-top:24px; }
+.mypage .activity.write .btn-area.create { position:relative; margin-top:32px; font-size:0; text-align:center; }
+.mypage .activity.write .btn-area.create .btn + .btn { margin-left:6px; }
+.mypage .activity.write .btn-area.update { position:relative; margin-top:32px; font-size:0; text-align:right; }
+.mypage .activity.write .btn-area.update .btn + .btn { margin-left:6px; }
+.mypage .activity.write .btn-area.update .btn-del { position:absolute; left:0; top:0; }
+
+.mypage .activity.bbs.list .tab-area { margin-top:22px; font-size:0; }
+.mypage .activity.bbs.list .tab-area .btn { font-size:14px; }
+.mypage .activity.bbs.list .tab-area .btn:first-child { border-top-right-radius:0; border-bottom-right-radius:0; }
+.mypage .activity.bbs.list .tab-area .btn:last-child { border-top-left-radius:0; border-bottom-left-radius:0; }
+.mypage .activity.bbs.list .tab-area .btn.gray { background:#f8f8f8; color:#b4b4b4; }
+
+.mypage .activity.bbs.list.board .table.type3 { margin-top:38px; }
+.mypage .activity.bbs.list.board .table.type3 tbody td:nth-child(2),
+.mypage .activity.bbs.list.board .table.type3 tbody td:nth-child(3) { text-align:left; padding:12px 2px; }
+.mypage .activity.write.board .post-area .input-area .row.row-file { margin-top:10px; }
+.mypage .activity.write.board .post-area .input-area .row.row-file:before { display:none; }
+
+.mypage .activity.write.product .edit-area { margin-bottom:14px; }
+.mypage .activity.write.product .post-area .input-area .row.row-address .map-area { margin-bottom:0; }
+.mypage .activity.write.product .row.row-address + .row.row-option { position:relative; margin-top:41px; }
+.mypage .activity.write.product .row.row-address + .row.row-option:before { content:''; position:absolute; left:0; top:-20px; display:block; width:100%; height:1px; background:#e0e0e0; }
+.mypage .activity.bbs.list.product .table.type3 tbody td:nth-child(3),
+.mypage .activity.bbs.list.product .table.type3 tbody td:nth-child(4),
+.mypage .activity.bbs.list.product .table.type3 tbody td:nth-child(5) { padding:0 2px; text-align:left; }
+
+.mypage .activity.bbs.list.party .tab-area + .table { margin-top:20px; }
+.mypage .activity.bbs.list.party .table.type3 tbody td:nth-child(2),
+.mypage .activity.bbs.list.party .table.type3 tbody td:nth-child(7) { text-align:left; }
+
+.mypage .activity.party .scrollbar .header { padding-bottom:0; border-bottom:none; }
+.mypage .activity.party .scrollbar .header .btn { position:absolute; right:0; top:-2px; width:108px; }
+.mypage .activity.party .file { display:inline-block; height:20px; vertical-align:top; }
+.mypage .activity.party .file input[type="text"] { width:0; height:0; padding:0; border:none; }
+.mypage .activity.party .file .btn { margin-top:-4px; height:28px; line-height:28px; }
+.mypage .activity.party .input-area { margin-top:24px; }
+.mypage .activity.party .input-area .map-area { margin-top:14px; }
+.mypage .activity.party .table table th { background:#efefef; }
+.mypage .activity.party .table table td span { vertical-align:top; }
+.mypage .activity.party .table table td span + span:before { content:''; display:inline-block; margin:0 10px; width:1px; height:12px; background:#b4b4b4; }
+
+.mypage .activity.bbs.list.estimate .tab-area + .table { margin-top:20px; }
+.mypage .activity.bbs.list.estimate .table.type3 tbody td:nth-child(2),
+.mypage .activity.bbs.list.estimate .table.type3 tbody td:nth-child(3),
+.mypage .activity.bbs.list.estimate .table.type3 tbody td:nth-child(6) { text-align:left; }
+
+.mypage .activity.estimate .scrollbar .header { padding-bottom:0; border-bottom:none; }
+.mypage .activity.estimate .scrollbar .header .btn { position:absolute; right:0; top:-2px; width:108px; }
+.mypage .activity.estimate .file { display:inline-block; height:20px; vertical-align:top; }
+.mypage .activity.estimate .file input[type="text"] { width:0; height:0; padding:0; border:none; }
+.mypage .activity.estimate .file .btn { margin-top:-4px; height:28px; line-height:28px; }
+.mypage .activity.estimate .input-area { margin-top:24px; }
+.mypage .activity.estimate .input-area .map-area { margin-top:14px; }
+.mypage .activity.estimate .table table th { background:#efefef; }
+.mypage .activity.estimate .table table td span { vertical-align:top; }
+.mypage .activity.estimate .table table td span + span:before { content:''; display:inline-block; margin:0 10px; width:1px; height:12px; background:#b4b4b4; }
+.mypage .activity.estimate .table table td.company { padding-right:24px; }
+.mypage .activity.estimate .table table td.company .ti { display:inline-block; max-width:calc(100% - 82px); vertical-align:top; }
+.mypage .activity.estimate .table table td.company .btn-area { margin-left:4px; display:inline-block; height:20px; vertical-align:top; }
+.mypage .activity.estimate .table table td .btn.yellow { position:relative; top:-4px; }
+
+.mypage .activity .bookmark-folder { position:relative; display:flex; flex-wrap:wrap; padding:10px 68px 10px 30px; border:1px solid #e0e0e0; box-sizing:border-box; }
+.mypage .activity .bookmark-folder .tit { position:relative; width:90px; font-size:14px; line-height:28px; color:#4a4a4a; }
+.mypage .activity .bookmark-folder .tit:after { content:''; position:absolute; right:0; top:10px; display:block; width:1px; height:8px; background:#b4b4b4; }
+.mypage .activity .bookmark-folder .list { width:calc(100% - 90px); box-sizing:border-box; }
+.mypage .activity .bookmark-folder .list > a { display:inline-block; margin:0 24px; font-size:14px; line-height:28px; vertical-align:top; }
+.mypage .activity .bookmark-folder .list > a:hover { color:#062a73; }
+.mypage .activity .bookmark-folder .list a.active { color:#1d53bf; }
+
+.mypage .activity .bookmark-folder .list .custom-folder { position:relative; display:inline-block; margin-left:24px; padding-right:24px; line-height:20px; vertical-align:top; }
+.mypage .activity .bookmark-folder .list .custom-folder.active { color:#1d53bf; }
+.mypage .activity .bookmark-folder .list .custom-folder .fold-name { position:relative;display:block; height:28px; font-size:14px; line-height:28px; }
+.mypage .activity .bookmark-folder .list .custom-folder .fold-name .ti { white-space:nowrap; }
+.mypage .activity .bookmark-folder .list .custom-folder .fold-setting { position:absolute; left:100%; top:50%; margin-left:4px; margin-top:-6px; display:block; width:14px; height:14px; background:url("@@css/resources/images/common/btn.png") no-repeat -198px -34px; font-size:0; opacity:0; }
+.mypage .activity .bookmark-folder .list .custom-folder .setting-area { display:none; position:absolute; z-index:1; top:28px; left:50%; transform:translateX(-50%); min-width:80px; width:100%; border:1px solid #b4b4b4; background:#fff; }
+.mypage .activity .bookmark-folder .list .custom-folder .setting-area.active { display:block; }
+.mypage .activity .bookmark-folder .list .custom-folder .setting-area button { display:block; height:28px; font-size:13px; color:#767676; padding-left:10px; }
+.mypage .activity .bookmark-folder .list .custom-folder .setting-area button:hover { color:#202020; }
+.mypage .activity .bookmark-folder .list .custom-folder:not(.edit-mode):hover .fold-name { color:#062a73; }
+.mypage .activity .bookmark-folder .list .custom-folder:not(.edit-mode):hover .fold-setting { opacity:1; }
+.mypage .activity .bookmark-folder .list .custom-folder input[type="text"] { display:none; position:absolute; left:0; top:0; z-index:1; width:100%; height:100%; font-size:14px; line-height:26px; padding:0 4px; text-align:center; }
+.mypage .activity .bookmark-folder .list .custom-folder.edit-mode { min-width:80px; }
+.mypage .activity .bookmark-folder .list .custom-folder.edit-mode .fold-name { opacity:0; }
+.mypage .activity .bookmark-folder .list .custom-folder.edit-mode input[type="text"] { display:block; }
+
+
+.mypage .activity .bookmark-folder .btn-add { position:absolute; right:26px; top:17px; width:15px; height:15px; font-size:0; }
+.mypage .activity .bookmark-folder .btn-add:before { content:''; position:absolute; left:7px; top:0; display:block; width:1px; height:15px; background:#000000; }
+.mypage .activity .bookmark-folder .btn-add:after { content:''; position:absolute; left:0px; top:7px; display:block; width:15px; height:1px; background:#000000; }
+
+.mypage .activity .company-info .company { position:relative; padding:20px 0; border-bottom:1px solid #e0e0e0; }
+.mypage .activity .company-info .company > a { display:flex; flex-wrap:wrap; width:100%; }
+.mypage .activity .company-info .company .btn-area.udt { position:absolute; padding:5px 10px; right:10px; bottom:5px; }
+.mypage .activity .company-info .company .btn-area.udt a { position:relative; display:inline-block; font-size:11px; color:#4a4a4a; vertical-align:top;}
+.mypage .activity .company-info .company .btn-area.udt a + a { margin-left:12px; }
+.mypage .activity .company-info .company .btn-area.udt a + a:before { content:''; position:absolute; left:-6px; top:2px; display:inline-block; width:1px; height:8px; background:#b4b4b4; }
+
+.mypage .activity .company-info .state { display:inline-block; width:88px; height:88px; font-size:14px; line-height:16px; text-align:center; vertical-align:top; padding-top:30px; margin:0 34px; background:url("@@css/resources/images/licensing/icon.png") no-repeat 0 0; box-sizing:border-box; }
+.mypage .activity .company-info .state.step1 { color:#2c7a41; background-position:0 0; }
+.mypage .activity .company-info .state.step2 { color:#1d53bf; background-position:-98px 0; }
+.mypage .activity .company-info .state.step3 { color:#1d53bf; background-position:-98px 0; }
+.mypage .activity .company-info .state.step4 { color:#1d53bf; background-position:-98px 0; }
+.mypage .activity .company-info .state.step5 { color:#062a73; background-position:-196px 0; }
+.mypage .activity .company-info .state .date { display:block; font-size:11px; color:#767676; }
+
+.mypage .activity .company-info .img { position:relative; width:156px; height:104px; border:1px solid #e0e0e0; border-radius:4px; background:#f8f8f8; overflow:hidden; box-sizing:border-box; }
+.mypage .activity .company-info .img img { position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); max-width:156px; max-height:106px; }
+.mypage .activity .company-info .info { width:calc(100% - 176px); margin-left:20px; }
+.mypage .activity .company-info .info > .tit { position:relative; top:-3px; line-height:20px; color:#202020; }
+.mypage .activity .company-info .info .division { font-size:12px; line-height:17px; color:#727272; }
+.mypage .activity .company-info .info .division-area.type2 .division + .division:before { width:1px; height:8px; }
+
+.mypage .activity .company-info .info .rating { vertical-align:top; line-height:12px; margin-top:4px; }
+.mypage .activity .company-info .info .rating label { line-height:12px; vertical-align:top;}
+.mypage .activity .company-info .info .rating .output { position:relative; top:-1px; }
+.mypage .activity .company-info .info .reviews { display:inline-block; font-size:12px; line-height:12px; color:#767676;vertical-align:top; margin-top:4px; }
+.mypage .activity .company-info .info .folder { position:relative; font-size:12px; line-height:17px; color:#767676; }
+.mypage .activity .company-info .info .folder:before { content:''; display:inline-block; width:12px; height:10px; margin-right:5px; background:url("@@css/resources/images/common/icon.png") no-repeat -488px 0; }
+
+.mypage .activity .company-info .info .address-area { margin-top:4px; }
+.mypage .activity .company-info .info .address { line-height:20px; color:#767676; }
+.mypage .activity .company-info .info .address:before { content:""; display:inline-block; width:9px; height:12px; vertical-align:top; margin:5px 5px 0 0; background:url("@@css/resources/images/common/icon.png") no-repeat -170px 0; }
+.mypage .activity .company-info .info .tel { line-height:20px; color:#767676; }
+.mypage .activity .company-info .info .tel:before { content:""; display:inline-block; width:9px; height:12px; vertical-align:top; margin:5px 5px 0 0; background:url("@@css/resources/images/common/icon.png") no-repeat -189px 0; }
+.mypage .activity .company-info .info .txt { line-height:18px; color:#767676; margin-top:5px; }
+.mypage .activity .company-info .info .blue { color:#cc0a0a; }
+.mypage .activity .company-info .info .red { color:#0a4bcc; }
+.mypage .activity .company-info .company.delete:before { content:''; position:absolute; left:0; top:0; z-index:1; display:block; width:100%; height:100%; background:rgba(255,255,255,0.8); }
+.mypage .activity .company-info .company.delete .img .del { position:absolute; left:0; top:0; padding-top:31px; z-index:10; width:100%; height:100%; font-size:14px; line-height:20px; color:#1d53bf; border:1px solid #4975cb; box-sizing:border-box; border-radius:4px; text-align:center; }
+
+.mypage .activity .company-info.half-layout { display:flex; flex-wrap:wrap; }
+.mypage .activity .company-info.half-layout .company { margin-top:20px; width:calc(50% - 10px); padding:20px; border-bottom:none; background:#fff; box-sizing:border-box; }
+.mypage .activity .company-info.half-layout .company:nth-child(2n) { margin-left:20px; }
+.mypage .activity .company-info.half-layout .company:nth-child(1),
+.mypage .activity .company-info.half-layout .company:nth-child(2) { margin-top:0; }
+.mypage .activity .company-info.half-layout .company .btn-area.udt { right:5px; }
+
+.mypage .activity.bookmark .header .tit { padding-bottom:20px; }
+.mypage .activity.bookmark .bookmark-area { margin-top:32px; }
+.mypage .activity.subscribe .header .tit { padding-bottom:20px; }
+.mypage .activity.review .header .tit { width:100%; padding-bottom:20px; border-bottom:1px solid #e0e0e0; }
+
+.mypage .activity.bookmark .popup.popup-bookmarkupdate > .inner { width:430px; padding:40px; box-sizing:border-box; }
+.mypage .activity.bookmark .popup.popup-bookmarkupdate .header { padding:0; border-bottom:1px solid #4a4a4a; }
+.mypage .activity.bookmark .popup.popup-bookmarkupdate .header .tit  { height:46px; font-size:20px; line-height:46px; padding:0; }
+.mypage .activity.bookmark .popup.popup-bookmarkupdate .header .btn-close { right:-9px; }
+.mypage .activity.bookmark .popup.popup-bookmarkupdate .header .btn-close:before { background-position:-175px -34px; }
+.popup.popup-bookmarkupdate .contents .input-area { margin-top:24px; }
+.popup.popup-bookmarkupdate .contents .row { display:flex; flex-wrap:wrap; }
+.popup.popup-bookmarkupdate .contents .row + .row { margin-top:10px; }
+.popup.popup-bookmarkupdate .contents .row .field-tit { width:110px; font-size:14px; line-height:36px; }
+.popup.popup-bookmarkupdate .contents .row .field-input { width:calc(100% - 110px); }
+.popup.popup-bookmarkupdate .contents .row .field-input input,
+.popup.popup-bookmarkupdate .contents .row .field-input .select.type1,
+.popup.popup-bookmarkupdate .contents .row .field-input textarea { font-size:13px; }
+.popup.popup-bookmarkupdate .contents .btn-area { margin-top:24px; font-size:0; text-align:center; }
+.popup.popup-bookmarkupdate .contents .btn-area .btn + .btn { margin-left:6px; }
+
+.mypage .activity.subscribe .company.delete .img .del { padding-top:42px; }

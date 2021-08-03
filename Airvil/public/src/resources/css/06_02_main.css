@@ -1,0 +1,84 @@
+.mypage .main .point-area { width:946px; }
+.mypage .main .point-area .header { position:relative; }
+.mypage .main .point-area .header > .tit { font-size:20px; }
+.mypage .main .point-area .header > .tit:before { content:""; display:inline-block; width:24px; height:22px; vertical-align:middle; margin:-3px 10px 0 0; background:url("@@css/resources/images/mypage/icon.png") no-repeat 0 -116px; }
+.mypage .main .point-area .header > .tit b { color:#1d53bf; }
+.mypage .main .point-area .header .benefit { position:absolute; top:3px; right:0; color:#727272; }
+.mypage .main .point-area .header .benefit:after { content:""; display:inline-block; width:18px; height:18px; vertical-align:middle; margin:-3px 0 0 10px; border-radius:100%; background:url("@@css/resources/images/common/icon.png") no-repeat -201px -22px; }
+.mypage .main .point-area .header .benefit .tooltip { display:none; position:absolute; z-index:1; top:18px; right:0; width:345px; height:116px; font-size:12px; color:#767676; padding:10px; border-radius:3px; background:#ebf1ff; box-sizing:border-box; }
+.mypage .main .point-area .header .benefit .tooltip li { font-size:14px; line-height:32px; color:#4a4a4a; }
+.mypage .main .point-area .header .benefit .tooltip li:before { content:""; display:inline-block; width:2px; height:2px; margin-right:8px; vertical-align:middle; background:#919296; }
+.mypage .main .point-area .header .benefit .tooltip li span { color:#1d53bf; }
+.mypage .main .point-area .header .benefit:hover .tooltip { display:block; }
+.mypage .main .point-area .contents { margin-top:22px; border-radius:3px; background:#fff; overflow:hidden; }
+.mypage .main .point-area .contents > div { float:left; position:relative; width:33.33%; height:160px; padding:30px 40px 32px; box-sizing:border-box; }
+.mypage .main .point-area .contents > div:before { content:""; position:absolute; top:0; left:0; bottom:0; width:1px; height:96px; margin:auto; background:#f3f3f3; }
+.mypage .main .point-area .contents > div:after { content:""; position:absolute; top:63px; right:40px; width:60px; height:60px; background:url("@@css/resources/images/mypage/icon.png") no-repeat 0 0; }
+.mypage .main .point-area .contents > div.holding:after { background-position:0 0; }
+.mypage .main .point-area .contents > div.charging:after { background-position:-70px 0; }
+.mypage .main .point-area .contents > div.activity:after { background-position:-140px 0; }
+.mypage .main .point-area .contents .tit { display:inline-block; font-size:14px; color:#767676; }
+.mypage .main .point-area .contents > div.activity .tit:after { content:""; display:inline-block; width:18px; height:18px; vertical-align:middle; margin:-3px 0 0 10px; border-radius:100%; background:url("@@css/resources/images/common/icon.png") no-repeat -201px -22px; }
+.mypage .main .point-area .contents > div.activity .tit .tooltip { display:none; position:absolute; z-index:1; top:47px; left:115px; width:190px; font-size:12px; color:#767676; padding:20px; border-radius:3px; background:#ebf1ff; }
+.mypage .main .point-area .contents > div.activity .tit .tooltip a { display:block; font-size:14px; color:#1d53bf; margin-top:5px; }
+.mypage .main .point-area .contents > div.activity .tit .tooltip a:after { content:""; display:inline-block; width:5px; height:9px; margin:10px 0 0 6px; background:url("@@css/resources/images/common/icon.png") no-repeat -477px 0; }
+.mypage .main .point-area .contents > div.activity .tit:hover .tooltip { display:block; }
+.mypage .main .point-area .contents .price { display:block; font-size:16px; margin:20px 0 13px; }
+.mypage .main .point-area .contents .price b { font-size:24px; }
+.mypage .main .point-area .contents.holding .price { color:#1d53bf; }
+.mypage .main .point-area .contents .btn { border-radius:2px; }
+.mypage .main .point-area .contents .btn-charging[disabled] { border:none; color:#767676; background:#e0e0e0; }
+.mypage .main .point-area .contents .destroy { display:inline-block; height:24px; font-size:12px; color:#767676; line-height:24px; padding:0 15px; border-radius:12px; background:#e0e0e0; }
+.mypage .main .list-group { width:946px; margin-top:60px; overflow:hidden; }
+.mypage .main .list-group > article { float:left; width:451px; margin-left:44px; }
+.mypage .main .list-group > article:first-child { margin-left:0; }
+.mypage .main .list-group > article .header { position:relative; }
+.mypage .main .list-group > article .header > .tit { font-weight:normal; font-size:12px; color:#767676; }
+.mypage .main .list-group > article .header > .tit b { display:inline-block; font-size:20px; color:#202020; margin-right:22px; }
+.mypage .main .list-group > article .contents { margin-top:20px; border-radius:3px; overflow:hidden; }
+.mypage .main .list-group > article .contents > div { float:left; position:relative; width:215px; height:95px; padding:18px 15px 20px 15px; margin-left:21px; background:#fff; box-sizing:border-box; }
+.mypage .main .list-group > article .contents > div:first-child { margin-left:0; }
+.mypage .main .list-group > article.licensing-area .contents > div { background:#ebf1ff; }
+.mypage .main .list-group > article .contents > div:after { content:""; position:absolute; top:15px; right:15px; width:36px; height:36px; background:url("@@css/resources/images/mypage/icon.png") no-repeat 0 0; }
+.mypage .main .list-group > article .contents > div.ing:after { background-position:0 -70px; }
+.mypage .main .list-group > article .contents > div.complete:after { background-position:-46px -70px; }
+.mypage .main .list-group > article .contents > div.request:after { background-position:-92px -70px; }
+.mypage .main .list-group > article .contents > div.send:after { background-position:-138px -70px; }
+.mypage .main .list-group > article .contents > div.calculate { padding:0; }
+.mypage .main .list-group > article .contents > div.calculate:after { display:none; }
+.mypage .main .list-group > article .contents .tit { display:block; font-size:14px; color:#767676; }
+.mypage .main .list-group > article .contents .price { display:block; font-weight:bold; font-size:18px; margin:20px 0 13px; }
+.mypage .main .list-group > article .contents .price b { font-size:24px; }
+.mypage .main .bookmark-area { width:946px; margin-top:60px; }
+.mypage .main .bookmark-area .header { position:relative; }
+.mypage .main .bookmark-area .header > .tit { font-size:20px; }
+.mypage .main .bookmark-area .header .more { position:absolute; top:0; right:0; color:#727272 }
+.mypage .main .bookmark-area .header .more:after { content:""; display:inline-block; width:5px; height:9px; margin:10px 0 0 6px; background:url("@@css/resources/images/common/icon.png") no-repeat -477px 0; }
+.mypage .main .bookmark-area .contents { margin-top:22px; }
+.mypage .main .bookmark-area .contents:after { content:""; display:block; clear:both; }
+.mypage .main .bookmark-area .contents > div { float:left; position:relative; width:302px; margin-left:20px; box-sizing:border-box; }
+.mypage .main .bookmark-area .contents > div:first-child { margin-left:0; }
+.mypage .main .bookmark-area .contents .img-area { height:200px; font-size:0; border-radius:3px; overflow:hidden; }
+.mypage .main .bookmark-area .contents .img-area .img { display:inline-block; position:relative; width:100%; height:99px; margin:2px 0 0 2px; background:#e0e0e0; }
+.mypage .main .bookmark-area .contents .img-area .img:nth-child(1) { margin:0; }
+.mypage .main .bookmark-area .contents .img-area .img:nth-child(2) { width:150px; margin-left:0; }
+.mypage .main .bookmark-area .contents .img-area .img:nth-child(3) { width:150px; }
+.mypage .main .bookmark-area .contents .img-area .img img { position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); max-width:302px; max-height:99px; }
+.mypage .main .bookmark-area .contents .img-area .img:nth-child(2) img,
+.mypage .main .bookmark-area .contents .img-area .img:nth-child(3) img{ max-width:150px; }
+.mypage .main .bookmark-area .contents .tit { display:block; font-weight:bold; font-size:16px; color:#202020; margin-top:15px; }
+.mypage .main .bookmark-area .contents .number { font-size:12px; color:#767676; }
+.mypage .main .subscribe-area { width:946px; margin-top:60px; overflow:hidden; }
+.mypage .main .subscribe-area .header { float:left; width:236px; }
+.mypage .main .subscribe-area .header > .tit { font-size:20px; }
+.mypage .main .subscribe-area .header .more { color:#727272 }
+.mypage .main .subscribe-area .header .more:after { content:""; display:inline-block; width:5px; height:9px; margin:10px 0 0 6px; background:url("@@css/resources/images/common/icon.png") no-repeat -477px 0; }
+.mypage .main .subscribe-area .contents { float:left; width:710px; }
+.mypage .main .subscribe-area .contents .nodata { font-size:14px; color:#202020; line-height:50px; }
+.mypage .main .subscribe-area .contents ul { overflow:hidden; }
+.mypage .main .subscribe-area .contents li { float:left; width:33.33%; }
+.mypage .main .subscribe-area .contents .img { float:left; position:relative; width:50px; height:50px; border-radius:100%; background:#e0e0e0; overflow:hidden; }
+.mypage .main .subscribe-area .contents .img img { position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); max-width:50px; max-height:50px; }
+.mypage .main .subscribe-area .contents .name { float:left; padding:8px 0; margin-left:20px; }
+.mypage .main .subscribe-area .contents .name span { font-weight:bold; font-size:14px; }
+.mypage .main .subscribe-area .contents .name .division-area span { font-weight:normal; font-size:12px; color:#727272; margin-top:8px; }

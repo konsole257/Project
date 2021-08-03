@@ -1,0 +1,115 @@
+<div class="scrollbar">
+    <div class="inner">
+        <h3 class="tit">활동관리</h3>
+
+        <!-- 탭메뉴 // -->
+        <div class="tab-menu">
+            <a href="@@common/mypage/ad/write.html">광고 등록</a>
+            <a href="@@common/mypage/ad/list.html" class="active">광고 내역</a>
+        </div>
+        <!-- // 탭메뉴 -->
+
+        <section>
+            <div class="header">
+                <h4 class="tit">광고 내역</h4>
+                <label><input type="checkbox" class="type1"><span>게시 광고만 보기</span></label>
+            </div>
+
+            <div class="contents">
+                <div class="table type3">
+                	<table>
+                		<caption class="hide">광고 목록</caption>
+
+                		<colgroup>
+                			<col style="width:135px;">
+                			<col style="width:381px;">
+                			<col style="width:89px;">
+                            <col style="width:167px;">
+                            <col style="width:174px;">
+                		</colgroup>
+
+                        <thead>
+                			<tr>
+                				<th>광고번호</th>
+                                <th>광고제목</th>
+                                <th>등록일</th>
+                                <th>게재기간</th>
+                                <th>진행</th>
+                			</tr>
+                		</thead>
+
+                		<tbody>
+                            <!-- 반복영역 // -->
+                			<tr>
+                				<td>AD-1234-5678</td>
+                                <td>가가건설 홍보_메인_상세화면에게재_12월_03</td>
+                                <td>2019.11.16</td>
+                                <td>2019.12.25 - 2019.12.30</td>
+                                <td><span class="schedule">예정</span> <a href="#" class="btn small stroke gray">수정</a></td>
+                                <!-- <td><span class="ing">진행중</span> <a href="#" class="btn small stroke gray">수정</a></td> -->
+                                <!-- <td><span class="end">종료</span></td> -->
+                			</tr>
+                            <!-- // 반복영역 -->
+
+                            <tr>
+                				<td>AD-1234-5678</td>
+                                <td>가가건설 홍보_메인_상세화면에게재_12월_03</td>
+                                <td>2019.11.16</td>
+                                <td>2019.12.25 - 2019.12.30</td>
+                                <td><span class="ing">진행중</span> <a href="#" class="btn small stroke gray">수정</a></td>
+                			</tr>
+                            <tr>
+                				<td>AD-1234-5678</td>
+                                <td>가가건설 홍보_메인_상세화면에게재_12월_03</td>
+                                <td>2019.11.16</td>
+                                <td>2019.12.25 - 2019.12.30</td>
+                                <td><span class="end">종료</span></td>
+                			</tr>
+                            <tr>
+                				<td>AD-1234-5678</td>
+                                <td>가가건설 홍보_메인_상세화면에게재_12월_03</td>
+                                <td>2019.11.16</td>
+                                <td>2019.12.25 - 2019.12.30</td>
+                                <td><span class="end">종료</span></td>
+                			</tr>
+                            <tr>
+                				<td>AD-1234-5678</td>
+                                <td>가가건설 홍보_메인_상세화면에게재_12월_03</td>
+                                <td>2019.11.16</td>
+                                <td>2019.12.25 - 2019.12.30</td>
+                                <td><span class="end">종료</span></td>
+                			</tr>
+                            <tr>
+                				<td>AD-1234-5678</td>
+                                <td>가가건설 홍보_메인_상세화면에게재_12월_03</td>
+                                <td>2019.11.16</td>
+                                <td>2019.12.25 - 2019.12.30</td>
+                                <td><span class="end">종료</span></td>
+                			</tr>
+                		</tbody>
+                	</table>
+                </div>
+
+                <div class="pagination">
+                    <a href="#" class="first">처음</a>
+                    <a href="#" class="prev">이전</a>
+                    <span class="number">
+                        <a href="#" class="active">1</a><!-- 페이지 활성화 class="active" -->
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                    </span>
+                    <a href="#" class="next">다음</a>
+                    <a href="#" class="last">마지막</a>
+                </div>
+
+                <p class="nodata">내역이 없습니다.</p><!-- 목록 없는경우 -->
+            </div>
+        </section>
+    </div>
+
+    <!-- footer : 추가 : 2020.01.08 // -->
+	@@include('./include/sub_footer.html')
+	<!-- //footer -->
+</div>

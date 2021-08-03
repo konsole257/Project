@@ -1,0 +1,315 @@
+<div class="scrollbar">
+    <div class="inner">
+        <h3 class="tit">활동관리</h3>
+
+        <div class="tab-menu">
+            <a href="#">게시글 관리</a>
+            <a href="@@common/mypage/activity/bbsList_product.html" class="active">매물 관리</a>
+            <a href="#">참여내역관리</a>
+            <a href="#">견적관리</a>
+            <a href="#">북마크 관리</a>
+            <a href="#">구독 관리</a>
+            <a href="#">리뷰 관리</a>
+        </div>
+
+        <div class="header">
+            <h4 class="tit">
+                매물 등록
+                <!--<span>매물번호 AB-1234-5678</span>-->
+                <small class="bul">필수 입력</small>
+            </h4>
+
+            <label class="chk-upload">
+                <input type="checkbox" class="type1"><span>매물광고</span>
+            </label>
+        </div>
+
+        <!-- 매물 등록 // -->
+        <section class="post-area">
+            <div class="contents">
+                <div class="input-area">
+                    <div class="row">
+                        <span class="field-tit">제목<small class="bul">*</small></span>
+
+                        <span class="field-input">
+                            <input type="text" placeholder="제목 입력(최대 40자)">
+                        </span>
+                    </div>
+
+                    <div class="row row-kinds">
+                        <span class="field-tit">거래종류<small class="bul">*</small></span>
+
+                        <span class="field-input">
+                            <label><input type="radio" name="rdo1"><span>매매</span></label>
+                            <label><input type="radio" name="rdo1"><span>전세</span></label>
+                            <label><input type="radio" name="rdo1"><span>월세</span></label>
+                        </span>
+                    </div>
+
+                    <div class="row row-kinds">
+                        <span class="field-tit">매물종류<small class="bul">*</small></span>
+
+                        <span class="field-input">
+                            <label><input type="radio" name="rdo2"><span>아파트</span></label>
+                            <label><input type="radio" name="rdo2"><span>오피스텔</span></label>
+                            <label><input type="radio" name="rdo2"><span>연립 다세대</span></label>
+                            <label><input type="radio" name="rdo2"><span>원룸/투룸</span></label>
+                            <label><input type="radio" name="rdo2"><span>단독/다가구</span></label>
+
+                            <label><input type="radio" name="rdo2"><span>상가</span></label>
+                            <label><input type="radio" name="rdo2"><span>사무실</span></label>
+                            <label><input type="radio" name="rdo2"><span>공장/창고</span></label>
+                            <label><input type="radio" name="rdo2"><span>건물/빌딩</span></label>
+                            <label><input type="radio" name="rdo2"><span>분양권</span></label>
+                            <label><input type="radio" name="rdo2"><span>토지</span></label>
+                            <label></label>
+                        </span>
+                    </div>
+
+                    <div class="row row-address">
+                        <span class="field-tit">주소<small class="bul">*</small></span>
+
+                        <span class="field-input">
+                            <button type="button" class="btn big fill gray">주소 검색</button>
+                            <input type="text" class="w351" readonly>
+                            <input type="text" class="w351" readonly>
+                            <input type="text" class="w710" placeholder="상세주소 입력(선택)">
+
+                            <!--
+                            <div class="map-area">
+                                <img src="@@common/resources/images/temp/mypage_map.jpg" alt="">
+                            </div>
+                            -->
+
+                            <div class="chk-area">
+                                <label><input type="checkbox" class="type1"><span>광고지도미노출</span></label>
+                                <label><input type="checkbox" class="type1"><span>매물정보자동입력</span></label>
+                            </div>
+                        </span>
+                    </div>
+
+                    <!-- 매물 옵션 // -->
+                    <div class="row row-option">
+                        <span class="field-tit">건물명</span>
+
+                        <span class="field-input">
+                            <label><input type="text" value="마포자이2차"></label>
+                        </span>
+                    </div>
+
+                    <div class="row row-option">
+                        <span class="field-tit">건물명</span>
+
+                        <span class="field-input">
+                            <span class="select type1">
+                                <select title="옵션 선택">
+                                    <option>가람마을 10단지</option>
+                                    <option>가람마을 11단지</option>
+                                    <option>가람마을 12단지</option>
+                                    <option>가람마을 13단지</option>
+                                    <option>가람마을 14단지</option>
+                                </select>
+                            </span>
+                        </span>
+                    </div>
+
+                    <div class="row row-option">
+                        <div class="column">
+                            <span class="field-tit">건물명</span>
+
+                            <span class="field-input">
+                                <label><input type="text" value="마포자이2차"></label>
+                            </span>
+                        </div>
+
+                        <div class="column">
+                            <span class="field-tit">동</span>
+
+                            <span class="field-input">
+                                <label><input type="text" class="right" value="101"><span class="unit">동</span></label>    <!-- class="right" 폰트 우측정렬 -->
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="row row-option">
+                        <div class="column">
+                            <span class="field-tit">층</span>
+
+                            <span class="field-input field-half">    <!-- class="field-half" 폼입력 2개일 때 -->
+                                <label>
+                                    <span class="select type1">
+                                    	<select title="옵션 선택">
+                                    		<option>지상</option>
+                                    		<option>천국</option>
+                                    		<option>지하</option>
+                                    	</select>
+                                    </span>
+                                </label>
+                                <label><input type="text" class="right" value="14"><span class="unit">층</span></label>    <!-- class="right" 폰트 우측정렬 -->
+                            </span>
+                        </div>
+
+                        <div class="column">
+                            <span class="field-tit">호</span>
+
+                            <span class="field-input">
+                                <label><input type="text" class="right" value="1405"><span class="unit">호</label>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="row row-option">
+                        <div class="column">
+                            <span class="field-tit">거래면적<small class="bul">*</small></span>
+
+                            <span class="field-input field-half">    <!-- class="field-half" 폼입력 2개일 때 -->
+                                <label><input type="text" class="right" value="33"><span class="unit">평</span></label>
+                                <label><input type="text" class="right" value="110"><span class="unit">㎡</span></label>
+                            </span>
+                        </div>
+
+                        <div class="column">
+                            <span class="field-tit">전용면적</span>
+
+                            <span class="field-input field-half">    <!-- class="field-half" 폼입력 2개일 때 -->
+                                <label><input type="text" class="right" value="25.69"><span class="unit">평</span></label>
+                                <label><input type="text" class="right" value="25.69"><span class="unit">㎡</span></label>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="row row-option">
+                        <div class="column">
+                            <span class="field-tit">매매가<small class="bul">*</small></span>
+
+                            <span class="field-input">
+                                <label><input type="text" class="right" value="15000"><span class="unit">만원</span></label>
+                            </span>
+                        </div>
+
+                        <div class="column">
+                            <span class="field-tit">평단가<small class="bul">*</small></span>
+
+                            <span class="field-input">
+                                <label><input type="text" class="right" value="454"><span class="unit">만원</span></label>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="row row-option">
+                        <div class="column">
+                            <span class="field-tit">방수</span>
+
+                            <span class="field-input">
+                                <label><input type="text" class="right" value="3"><span class="unit">개</span></label>
+                            </span>
+                        </div>
+
+                        <div class="column">
+                            <span class="field-tit">욕실수</span>
+
+                            <span class="field-input">
+                                <label><input type="text" class="right" value="2"><span class="unit">개</span></label>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- fn.pdUnit 단위 class="unit" 글자 여백조정 스크립트 -->
+                    <script>
+                        fn.pdUnit();
+                    </script>
+
+                    <!-- // 매물 옵션 -->
+
+                    <div class="row row-file">
+                        <span class="field-tit">상단 이미지 등록</span>
+
+                        <span class="field-input">
+                            <span class="file">
+                                <input type="text" placeholder="목록에 노출되는 대표이미지 / 10MB 이하 / JPG" disabled>
+                                <span class="btn big fill gray btn-file" onclick="fn.fileBtn(this);">파일선택</span>
+                                <input type="file" title="파일찾기" onchange="fn.file(this);">
+                            </span>
+
+                            <!--
+                            <div class="file-list">
+                                <picture>
+                                    <img src="@@common/resources/images/temp/mypage_file.png" alt="">
+                                    <a href="#" class="btn-close">닫기</a>
+                                </picture>
+
+                                <picture>
+                                    <img src="@@common/resources/images/temp/mypage_file.png" alt="">
+                                    <a href="#" class="btn-close">닫기</a>
+                                </picture>
+
+                                <picture>
+                                    <img src="@@common/resources/images/temp/mypage_file.png" alt="">
+                                    <a href="#" class="btn-close">닫기</a>
+                                </picture>
+
+                                <picture>
+                                    <img src="@@common/resources/images/temp/mypage_file.png" alt="">
+                                    <a href="#" class="btn-close">닫기</a>
+                                </picture>
+
+                                <picture>
+                                    <img src="@@common/resources/images/temp/mypage_file.png" alt="">
+                                    <a href="#" class="btn-close">닫기</a>
+                                </picture>
+                            </div>
+                            -->
+                        </span>
+                    </div>
+
+                    <div class="row row-fileinfo">
+                        <span class="field-tit">상단 동영상 설명</span>
+
+                        <span class="field-input">
+                            <input type="text" placeholder="동영상 url 입력">
+                        </span>
+                    </div>
+
+                    <div class="row row-fileinfo2">
+                        <span class="field-tit">상단 이미지/<br>동영상 설명</span>
+
+                        <span class="field-input">
+                            <input type="text" placeholder="제목 입력(최대 40자)">
+                        </span>
+                    </div>
+
+                    <div class="row row-hash">
+                        <span class="field-tit">해시태그<small class="bul">*</small></span>
+
+                        <span class="field-input">
+                            <input type="text" placeholder="#에어빌, #신축원룸, #서울특별시, #누수공사 등 자세하게 입력">
+                        </span>
+                    </div>
+
+                    <div class="row">
+                        <div class="edit-area">
+                            <img src="@@common/resources/images/temp/editor.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <span class="field-tit">비공개 메모</span>
+
+                        <span class="field-input">
+                            <input type="text" placeholder="비공개 메모 입력">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- // 매물 등록 -->
+
+        <div class="btn-area create">
+            <button type="button" class="btn big stroke gray">취소</button>
+            <button type="button" class="btn big fill blue">등록</button>
+        </div>
+    </div>
+
+    <!-- footer : 추가 : 2020.01.08 // -->
+	@@include('./include/sub_footer.html')
+	<!-- //footer -->
+</div>

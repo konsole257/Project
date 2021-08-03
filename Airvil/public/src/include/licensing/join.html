@@ -1,0 +1,238 @@
+<article class="viewer join-area">
+                <!-- 참여하기 상단 // -->
+                <header class="header">
+                    <div class="inner">
+                        <button type="button" class="btn mute btn-close" onclick="fn.viewerClose('join');">닫기</button>
+
+                        <h2 class="tit">참여하기</h2>
+                    </div>
+                </header>
+                <!-- // 참여하기 상단 -->
+
+                <!-- 참여하기 내용 // -->
+                <div class="contents">
+                    <div class="scrollbar">
+                        <div class="inner">
+                            <!-- 추가 : 2019.12.18 // -->
+                            <div class="member-service">
+                                <p class="tit">회원 전용 서비스</p>
+                                <p class="txt">
+                                    에어빌 회원에게만 제공하는 서비스입니다.<br>
+                                    로그인 후 특별한 서비스를 이용해보세요.
+                                </p>
+                                <a href="@@common/" class="btn big fill blue btn-login">로그인</a>
+                            </div>
+                            <!-- // 추가 : 2019.12.18 -->
+
+                            <form class="form-area">
+                            	<fieldset>
+                            		<legend class="hide">참여하기</legend>
+                            		<div class="input-area">
+                                        <!-- 다중참여하기 // -->
+                                        <div class="row">
+                            				<div class="column vertical">
+                            					<span class="field-input input-multi">
+                                                    <div class="scrollbar">
+                                						<ul>
+                                                            <li><button type="button">서울특별시 강남구 테헤란로 24길 <span class="hide">삭제</span></button></li><!-- 다중견적받기시 한개씩 추가 -->
+                                                            <li class="post-disabled"><button type="button">서울특별시 강남구 테헤란로 24길 <span class="hide">삭제</span></button></li><!-- 우편불가 class="post-disabled" : 추가 : 2019.12.18 -->
+                                                            <li><button type="button">서울특별시 강남구 테헤란로 24길 <span class="hide">삭제</span></button></li>
+                                                            <li><button type="button">서울특별시 강남구 테헤란로 24길 <span class="hide">삭제</span></button></li>
+                                                            <li><button type="button">서울특별시 강남구 테헤란로 24길 <span class="hide">삭제</span></button></li>
+                                                            <li><button type="button">서울특별시 강남구 테헤란로 24길 <span class="hide">삭제</span></button></li>
+                                                            <li><button type="button">서울특별시 강남구 테헤란로 24길 <span class="hide">삭제</span></button></li>
+                                                        </ul>
+                                                    </div>
+                            					</span>
+                            				</div>
+                            			</div>
+                                        <!-- // 다중참여하기 -->
+
+                                        <!-- 참여업무 // -->
+                            			<div class="row">
+                            				<div class="column vertical">
+                            					<!--<span class="field-tit tit-work">참여업무</span>--><!-- 참여업무 미선택시 -->
+                                                <span class="field-tit tit-work">
+                                                    <ol>
+                                                        <li><button type="button">건축설계</button></li><!-- 참여업무 선택시 한개씩 추가 -->
+                                                        <li><button type="button">건축설계</button></li>
+                                                    </ol>
+                                                </span>
+                                                <!-- 수정 : 2019.12.06 // -->
+                                                <span class="field-input input-work">
+                            						<span class="inner">
+
+                                                        <div>
+                                                            <label><input name="work" type="radio"><span>시멘트몰탈미장</span></label>
+                                                            <label><input name="work" type="radio"><span>회반죽바름</span></label>
+                                                            <label><input name="work" type="radio"><span>단열몰탈</span></label>
+                                                            <label><input name="work" type="radio"><span>회반죽바름</span></label>
+                                                            <label><input name="work" type="radio"><span>단열몰탈</span></label>
+                                                            <label><input name="work" type="radio"><span>시멘트몰탈미장</span></label>
+                                                            <label><input name="work" type="radio"><span>회반죽바름</span></label>
+                                                        </div>
+                            						</span>
+                            					</span>
+                                                <!-- // 수정 : 2019.12.06 -->
+                            				</div>
+                            			</div>
+                                        <!-- // 참여업무 -->
+
+                                        <!-- 상세업무 : 삭제 : 2019.12.06 //
+                                        <div class="row row-detail">
+                            				<div class="column vertical">
+                            					<span class="field-tit">상세업무</span>
+                            					<span class="field-input input-detail">
+                            						<span class="inner">
+                                                        <div class="checkbox-area">
+                                                            <label><input type="checkbox"><span>시멘트몰탈미장</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>시멘트몰탈미장</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>시멘트몰탈미장</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>시멘트몰탈미장</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>시멘트몰탈미장</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>시멘트몰탈미장</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>시멘트몰탈미장</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                        </div>
+                            						</span>
+                            					</span>
+                            				</div>
+                            			</div>-->
+                                        <!-- // 상세업무 -->
+
+                                        <!-- 제안금액 // -->
+                                        <div class="row">
+                            				<div class="column vertical">
+                            					<span class="field-tit">제안금액</span>
+                            					<span class="field-input input-price">
+                            						<span class="inner">
+                                                        <!-- 수정 : 2019.12.06 // -->
+                                                        <span class="unit">평당</span><!-- 평당 금액일경우 -->
+                                                        <!-- <span class="unit">총</span>--><!-- 총 금액일경우 -->
+                                                        <!-- <span class="unit">인당</span>--><!-- 인당 금액일경우 -->
+                                                        <input type="number" title="제안금액 입력">
+                                                        <span class="price">만원</span>
+                                                        <!-- // 수정 : 2019.12.06 -->
+
+                                                        <!-- 삭제 : 2019.12.06
+                                                        button type="button" class="btn stroke gray btn-change">평</button>
+                                                        <button type="button" class="btn stroke gray btn-change"><span class="m2">m<sup>2</sup></span></button>
+                                                        -->
+                            						</span>
+                            					</span>
+                            				</div>
+                            			</div>
+                                        <!-- // 제안금액 -->
+
+                                        <!-- 상세내용 // -->
+                                        <div class="row">
+                            				<div class="column vertical">
+                            					<span class="field-tit">상세내용</span>
+                            					<span class="field-input input-txt">
+                            						<span class="inner">
+                                                        <textarea placeholder="허가자에게 제안하고 싶은 내용을 입력해주세요. 구체적일수록 계약 확률이 높아집니다." title="상세내용 입력"></textarea><!-- 수정 : 2019.12.06 -->
+                            						</span>
+                            					</span>
+                            				</div>
+                            			</div>
+                                        <!-- // 상세내용 -->
+
+                                        <!-- 우편발송 : 수정 : 2019.12.06 // -->
+                                        <div class="row">
+                            				<div class="column horizontal">
+                            					<span class="field-tit tit-post">우편발송</span>
+                            					<span class="field-input input-post">
+                            						<span class="inner">
+                                                        <div>
+                                                            <label><input type="radio" checked name="post1"><span>신청</span></label>
+                                                            <label><input type="radio" name="post1"><span>미신청</span></label>
+                                                        </div>
+                            						</span>
+                            					</span>
+                                                <div class="description">
+                                                    <dl>
+                                                        <dt>대상</dt>
+                                                        <dd>
+                                                            해당 지번의 토지 소유자 주소가 확인된 경우 토지대장 기준 첫 번째 소유자 주소로 우편이 발송됩니다.
+                                                            (국가 소유 토지이거나 주소가 명확하지 않은 경우 소유자가 확인되었더라도 우편 발송이 불가능합니다.)
+                                                            설계사무소 또는 시공사가 선정되어 업체가 확인된 경우는 토지 소유자가 아닌 해당 업체의 주소로 우편이 발송됩니다.
+                                                        </dd>
+
+                                                        <dt>방법</dt>
+                                                        <dd>
+                                                            참여 기간 동안 우편 발송을 신청한 모든 업체들의 우편이 함께 발송됩니다.
+                                                            우편 발송 신청 시 등록과 동시에 800포인트가 차감되며 참여 마감 기준으로 2명인 경우 200포인트 3명인 경우 400포인트 4명 이상인 경우 최대 600포인트가 반환됩니다.
+                                                            참여한 내용은 수정이 불가능하며 재 참여를 희망할 경우 참여 취소 후 가능합니다.
+                                                            첨부한 회사 소개서는 A4 기준 최대 3장까지 출력되며 미 첨부 시 에어빌 프로필이 출력됩니다. 발송된 우편은 반송될 가능성이 있으며 반송되더라도 재발송되지 않습니다.
+                                                        </dd>
+
+                                                        <dt>기간</dt>
+                                                        <dd>
+                                                            참여 마감 기준으로 다음 영업일에 제작이 시작되며 제작일로부터 4일 이내에 우체국에 접수됩니다. (※ 우체국 배달 기간은 각 우체국 사정에 의해 변경될수 있습니다.)
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                            				</div>
+                            			</div>
+                                        <!-- // 우편발송 -->
+
+                                        <!-- 파일첨부 // -->
+                                        <div class="row">
+                            				<div class="column vertical">
+                            					<span class="field-tit">파일첨부</span>
+                            					<span class="field-input input-file">
+                            						<span class="inner">
+                                                        <span class="file">
+                                                            <input type="text" placeholder="회사소개서 첨부 / PDF, JPG" disabled><!-- 수정 : 2019.12.18 -->
+            												<span class="btn big fill gray btn-file" onclick="fn.fileBtn(this);">파일첨부</span>
+            											    <input type="file" title="파일찾기" onchange="fn.file(this);">
+            											</span>
+                            						</span>
+                            					</span>
+                            				</div>
+                            			</div>
+                                        <!-- // 파일첨부 -->
+
+                                        <div class="txt-area">
+                                            <p>우편 발송 신청 시 등록과 동시에 800원이 차감되며 신청 후에는 취소할 수 없습니다.</p>
+                                            <p>회사소개서 파일을 첨부하지 않을 경우 프로필이 우편에 동봉됩니다.</p>
+                                        </div>
+
+                                        <button type="button" class="btn big fill gray btn-join">참여하기</button>
+                            		</div>
+                            	</fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- // 참여하기 내용 -->
+            </article>
+
+            <hr id="join-area-end">

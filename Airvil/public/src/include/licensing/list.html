@@ -1,0 +1,234 @@
+<article class="list-area active">
+            <div class="inner">
+                <h2 class="hide">검색결과 목록</h2>
+
+                <!-- 소팅 영역 // -->
+                <div class="sort-area">
+                    <span class="total">총 5,234개</span>
+
+                    <span class="select type2">
+                        <select title="옵션 선택">
+                            <option>최신순</option>
+                            <option>조회순</option>
+                            <option>참여순</option>
+                            <option>좋아요순</option>
+                        </select>
+                    </span>
+
+                    <!-- 수정 : 2020.01.16 // -->
+                    <div class="btn-area">
+                        <button type="button" class="btn stroke gray btn-multijoin" onclick="fn.multiJoin(this);">다중참여하기</button>
+                        <button type="button" class="btn stroke gray btn-filter" onclick="fn.toggleActive('.filter-area, .btn-fold'); fn.toggleActive(this);">필터</button>
+                    </div>
+                    <!-- // 수정 : 2020.01.16 -->
+                </div>
+                <!-- // 소팅 영역 -->
+
+                <!-- 목록 // -->
+                <div class="scrollbar">
+                    <div class="skip">
+                        <a href="#list-area-end">검색결과 목록 건너뛰기</a>
+                    </div>
+
+                    <ul class="list">
+                        <!-- 반복영역 // -->
+                        <li>
+                            <div class="inner">
+                                <div class="state step1"><!-- 허가 : class="step1", 착공예정 : class="step2", 착공 : class="step3", 착공연기 : class="step4", 승인 : class="step5" -->
+                                    <b>허가</b>
+                                    <span class="date">19.11.14</span>
+                                </div>
+                                <div class="info">
+                                    <div class="name">서울특별시 강남구 테헤란로 24길</div>
+                                    <small class="type">단독주택(다가구주택) <span class="building">신축</span></small>
+
+                                    <!-- 수정 : 2019.12.30 // -->
+                                    <div class="division-area">
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>999</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>999</span></span>
+                                    </div>
+
+                                    <div class="confirm">소유자확인 : 2019.10.18</div>
+                                    <!-- // 수정 : 2019.12.30 -->
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button> <!-- 상세보기 -->
+
+                                    <div class="btn-area">
+                                        <button type="button" class="btn big fill blue btn-join" onclick="fn.viewerOpen(this, 'join');">참여하기</button> <!-- 참여하기 -->
+                                        <!-- <button type="button" class="btn big fill sky btn-chat" onclick="fn.viewerOpen(this, 'chat');">채팅하기</button> --> <!-- 채팅하기 : 수정 : 2019.12.11 -->
+                                        <label><input type="checkbox" class="type2" onchange="fn.multiJoinCheck(this);" disabled><span></span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- // 반복영역 -->
+
+                        <li>
+                            <div class="inner">
+                                <div class="state step2">
+                                    <b>착공예정</b>
+                                    <span class="date">19.11.14</span>
+                                </div>
+                                <div class="info">
+                                    <div class="name">서울특별시 강남구 테헤란로 24길</div>
+                                    <small class="type">단독주택(다가구주택) <span class="building">신축</span></small>
+
+                                    <div class="division-area">
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>999</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>999</span></span>
+                                    </div>
+
+                                    <div class="confirm">소유자확인 : 2019.10.18</div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button>
+
+                                    <div class="btn-area">
+                                        <button type="button" class="btn big fill yellow btn-chat" onclick="fn.viewerOpen(this, 'chat');">채팅하기</button>
+                                        <label><input type="checkbox" class="type2" onchange="fn.multiJoinCheck(this);" disabled><span></span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="inner">
+                                <div class="state step3">
+                                    <b>착공</b>
+                                    <span class="date">19.11.14</span>
+                                </div>
+                                <div class="info">
+                                    <div class="name">서울특별시 강남구 테헤란로 24길</div>
+                                    <small class="type">단독주택(다가구주택) <span class="building">신축</span></small>
+
+                                    <div class="division-area">
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>999</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>999</span></span>
+                                    </div>
+
+                                    <div class="confirm">소유자확인 : 2019.10.18</div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button>
+
+                                    <div class="btn-area">
+                                        <button type="button" class="btn big fill blue btn-join" onclick="fn.viewerOpen(this, 'join');">참여하기</button>
+                                        <label><input type="checkbox" class="type2" onchange="fn.multiJoinCheck(this);" disabled><span></span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="inner">
+                                <div class="state step4">
+                                    <b>착공연기</b>
+                                    <span class="date">19.11.14</span>
+                                </div>
+                                <div class="info">
+                                    <div class="name">서울특별시 서초구 서초동 1502-121</div>
+                                    <small class="type">단독주택(다가구주택) <span class="building">신축</span></small>
+
+                                    <div class="division-area">
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>999</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>999</span></span>
+                                    </div>
+
+                                    <div class="confirm">소유자확인 : 2019.10.18</div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button>
+
+                                    <div class="btn-area">
+                                        <button type="button" class="btn big fill blue btn-join" onclick="fn.viewerOpen(this, 'join');">참여하기</button>
+                                        <label><input type="checkbox" class="type2" onchange="fn.multiJoinCheck(this);" disabled><span></span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- 광고 : 추가 : 2019.01.08 // -->
+                        <li id="ad-list">
+                            <div class="inner">
+                                <div class="ad-list">
+                                    <img src="@@common/resources/images/temp/ad_list.jpg" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <!-- // 광고 -->
+
+                        <li>
+                            <div class="inner">
+                                <div class="state step5">
+                                    <b>승인</b>
+                                    <span class="date">19.11.14</span>
+                                </div>
+                                <div class="info">
+                                    <div class="name">서울특별시 강남구 테헤란로 24길</div>
+                                    <small class="type">단독주택(다가구주택) <span class="building">신축</span></small>
+
+                                    <div class="division-area">
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>999</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>999</span></span>
+                                    </div>
+
+                                    <div class="confirm">소유자확인 : 2019.10.18</div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button>
+
+                                    <div class="btn-area">
+                                        <button type="button" class="btn big fill blue btn-join" onclick="fn.viewerOpen(this, 'join');">참여하기</button>
+                                        <label><input type="checkbox" class="type2" onchange="fn.multiJoinCheck(this);" disabled><span></span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="inner">
+                                <div class="state step2">
+                                    <b>착공예정</b>
+                                    <span class="date">19.11.14</span>
+                                </div>
+                                <div class="info">
+                                    <div class="name">서울특별시 강남구 테헤란로 24길</div>
+                                    <small class="type">단독주택(다가구주택) <span class="building">신축</span></small>
+
+                                    <div class="division-area">
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>999</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>999</span></span>
+                                    </div>
+
+                                    <div class="confirm">소유자확인 : 2019.10.18</div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button>
+
+                                    <div class="btn-area">
+                                        <button type="button" class="btn big fill blue btn-join" onclick="fn.viewerOpen(this, 'join');">참여하기</button>
+                                        <label><input type="checkbox" class="type2" onchange="fn.multiJoinCheck(this);" disabled><span></span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- 2020.01.31 // -->
+                        <li>
+                            <div class="inner">
+                                <div class="nodata">
+                                    <p>
+                                        조회 결과가 없습니다.
+                                        <span>
+                                            조회 결과에 대한 문의는 고객센터로 연락주시기 바랍니다.<br>
+                                            고객센터: 031-267-3307
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- // 2020.01.31 -->
+                    </ul>
+                </div>
+                <!-- // 목록 -->
+            </div>
+
+            <button type="button" class="btn mute stroke gray btn-fold">인허가 찾기 목록 접기</button>
+        </article>
+
+        <hr id="list-area-end">

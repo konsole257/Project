@@ -1,0 +1,450 @@
+<div class="scrollbar">
+    <div class="inner">
+        <h3 class="tit">활동관리</h3>
+
+        <!-- 탭메뉴 // -->
+        <div class="tab-menu">
+            <a href="@@common/mypage/ad/write.html" class="active">광고 등록</a>
+            <a href="@@common/mypage/ad/list.html">광고 내역</a>
+        </div>
+        <!-- // 탭메뉴 -->
+
+        <!-- 광고 등록 // -->
+        <section class="subject-area">
+            <header class="header">
+                <h4 class="tit">광고 등록</h4>
+            </header>
+
+            <div class="contents">
+                <span class="tit">
+                    광고 제목
+                    <div class="tooltip">
+                        <p>
+                            광고관리를 위한 제목입니다.<br>
+                            광고영역에 노출되지 않습니다.
+                        </p>
+                    </div>
+                </span>
+                <input type="text">
+            </div>
+        </section>
+        <!-- // 광고 등록 -->
+
+        <!-- 게재 위치 // -->
+        <section class="offset-area">
+            <header class="header">
+                <h4 class="tit">게재 위치</h4>
+                <small>광고 게재할 위치는 지정해주세요.</small>
+            </header>
+
+            <div class="contents">
+                <ul class="menu">
+                    <li class="main active">
+                        <button type="button" onclick="fn.adOffsetMenuToggle(this);">메인</button>
+                        <ul>
+                            <li><button type="button" onmouseover="fn.adOffsetMenuHover(this, 'main');">인허가찾기</button></li>
+                            <li><button type="button" onmouseover="fn.adOffsetMenuHover(this, 'main');">전문가찾기</button></li>
+                            <li><button type="button" onmouseover="fn.adOffsetMenuHover(this, 'main');">부동산매물</button></li>
+                            <li><button type="button" onmouseover="fn.adOffsetMenuHover(this, 'main');">게시글</button></li>
+                        </ul>
+                    </li>
+                    <li class="list">
+                        <button type="button" onclick="fn.adOffsetMenuToggle(this);">목록</button>
+                        <ul>
+                            <li>
+                                <button type="button" onmouseover="fn.adOffsetMenuHover(this, 'list');">인허가찾기</button>
+                                <div class="filter-area">
+                                    <div class="filter-group">
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="radio" name="licensing"><span>첫 페이지</span></label>
+                                                <label><input type="radio" name="licensing"><span>2번째부터 랜덤</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <button type="button" onmouseover="fn.adOffsetMenuHover(this, 'list');">전문가찾기</button>
+                                <div class="filter-area">
+                                    <div class="filter-group">
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="radio" name="expert"><span>첫 페이지</span></label>
+                                                <label><input type="radio" name="expert"><span>2번째부터 랜덤</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <button type="button" onmouseover="fn.adOffsetMenuHover(this, 'list');">부동산매물</button>
+                                <div class="filter-area">
+                                    <div class="filter-group">
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="radio" name="land"><span>첫 페이지</span></label>
+                                                <label><input type="radio" name="land"><span>2번째부터 랜덤</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <button type="button" onmouseover="fn.adOffsetMenuHover(this, 'list');">게시글</button>
+                                <div class="filter-area">
+                                    <div class="filter-group">
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="radio" name="post"><span>첫 페이지</span></label>
+                                                <label><input type="radio" name="post"><span>2번째부터 랜덤</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="view">
+                        <button type="button" onclick="fn.adOffsetMenuToggle(this);">상세</button>
+                        <ul>
+                            <li>
+                                <button type="button" onmouseover="fn.adOffsetMenuHover(this, 'licensing');">인허가찾기</button>
+                                <div class="filter-area">
+                                    <div class="filter-group">
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="radio" name="region-licensing"><span>전체</span></label>
+                                                <label><input type="radio" name="region-licensing"><span>서울특별시</span></label>
+                                                <label><input type="radio" name="region-licensing"><span>부산광역시</span></label>
+                                                <label><input type="radio" name="region-licensing"><span>대구광역시</span></label>
+                                                <label><input type="radio" name="region-licensing"><span>인천광역시</span></label>
+                                                <label><input type="radio" name="region-licensing"><span>광주광역시</span></label>
+                                                <label><input type="radio" name="region-licensing"><span>대전광역시</span></label>
+                                                <label><input type="radio" name="region-licensing"><span>울산광역시</span></label>
+                                                <label><input type="radio" name="region-licensing"><span>세종특별자치시</span></label>
+                                                <label><input type="radio" name="region-licensing"><span>경기도</span></label>
+                                                <label><input type="radio" name="region-licensing"><span>강원도</span></label>
+                                                <label><input type="radio" name="region-licensing"><span>충청북도</span></label>
+                                                <label><input type="radio" name="region-licensing"><span>충청남도</span></label>
+                                                <label><input type="radio" name="region-licensing"><span>전라북도</span></label>
+                                                <label><input type="radio" name="region-licensing"><span>전라남도</span></label>
+                                                <label><input type="radio" name="region-licensing"><span>경상북도</span></label>
+                                                <label><input type="radio" name="region-licensing"><span>경상남도</span></label>
+                                                <label><input type="radio" name="region-licensing"><span>제주특별자치도</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <button type="button" onmouseover="fn.adOffsetMenuHover(this, 'expert');">전문가찾기</button>
+                                <div class="filter-area">
+                                    <div class="filter-group">
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="radio" name="region-expert"><span>전체</span></label>
+                                                <label><input type="radio" name="region-expert"><span>서울특별시</span></label>
+                                                <label><input type="radio" name="region-expert"><span>부산광역시</span></label>
+                                                <label><input type="radio" name="region-expert"><span>대구광역시</span></label>
+                                                <label><input type="radio" name="region-expert"><span>인천광역시</span></label>
+                                                <label><input type="radio" name="region-expert"><span>광주광역시</span></label>
+                                                <label><input type="radio" name="region-expert"><span>대전광역시</span></label>
+                                                <label><input type="radio" name="region-expert"><span>울산광역시</span></label>
+                                                <label><input type="radio" name="region-expert"><span>세종특별자치시</span></label>
+                                                <label><input type="radio" name="region-expert"><span>경기도</span></label>
+                                                <label><input type="radio" name="region-expert"><span>강원도</span></label>
+                                                <label><input type="radio" name="region-expert"><span>충청북도</span></label>
+                                                <label><input type="radio" name="region-expert"><span>충청남도</span></label>
+                                                <label><input type="radio" name="region-expert"><span>전라북도</span></label>
+                                                <label><input type="radio" name="region-expert"><span>전라남도</span></label>
+                                                <label><input type="radio" name="region-expert"><span>경상북도</span></label>
+                                                <label><input type="radio" name="region-expert"><span>경상남도</span></label>
+                                                <label><input type="radio" name="region-expert"><span>제주특별자치도</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <button type="button" onmouseover="fn.adOffsetMenuHover(this, 'land');">부동산매물</button>
+                                <div class="filter-area">
+                                    <div class="filter-group">
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="radio" name="region-land"><span>전체</span></label>
+                                                <label><input type="radio" name="region-land"><span>서울특별시</span></label>
+                                                <label><input type="radio" name="region-land"><span>부산광역시</span></label>
+                                                <label><input type="radio" name="region-land"><span>대구광역시</span></label>
+                                                <label><input type="radio" name="region-land"><span>인천광역시</span></label>
+                                                <label><input type="radio" name="region-land"><span>광주광역시</span></label>
+                                                <label><input type="radio" name="region-land"><span>대전광역시</span></label>
+                                                <label><input type="radio" name="region-land"><span>울산광역시</span></label>
+                                                <label><input type="radio" name="region-land"><span>세종특별자치시</span></label>
+                                                <label><input type="radio" name="region-land"><span>경기도</span></label>
+                                                <label><input type="radio" name="region-land"><span>강원도</span></label>
+                                                <label><input type="radio" name="region-land"><span>충청북도</span></label>
+                                                <label><input type="radio" name="region-land"><span>충청남도</span></label>
+                                                <label><input type="radio" name="region-land"><span>전라북도</span></label>
+                                                <label><input type="radio" name="region-land"><span>전라남도</span></label>
+                                                <label><input type="radio" name="region-land"><span>경상북도</span></label>
+                                                <label><input type="radio" name="region-land"><span>경상남도</span></label>
+                                                <label><input type="radio" name="region-land"><span>제주특별자치도</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="example-area">
+                    <div class="">
+                        <button type="button">인허가찾기 메인</button><!-- menu에서 선택시 하나씩 추가 -->
+                        <button type="button">인허가 상세화면 전체지역</button>
+                    </div>
+
+                    <figure class="img">
+                        <img src="@@common/resources/images/mypage/ad_offset_main.jpg" alt="">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <!-- // 게재 위치 -->
+
+        <!-- 예산 및 기간 // -->
+        <section class="period-area">
+            <header class="header">
+                <h4 class="tit">예산 및 기간</h4>
+                <small>광고게재 위치, 기간 설정에 따라 단가가 달라 질 수 있습니다.</small>
+            </header>
+
+            <div class="contents">
+                <div class="inquiry-area">
+                    <b class="tit">기간</b>
+                    <label><input type="text" class="datepicker"></label>
+                    <span class="hyphen">~</span>
+                    <label><input type="text" class="datepicker"></label>
+                    <strong class="cuation">6 일 동안 광고 됩니다.</strong>
+                    <button type="button" class="btn small fill gray btn-inquiry">설정</button>
+                </div>
+
+                <div class="table type3">
+                	<table>
+                		<caption class="hide">게시글 목록</caption>
+
+                		<colgroup>
+                			<col style="width:466px;">
+                			<col style="width:240px;">
+                			<col style="width:240px;">
+                		</colgroup>
+
+                        <thead>
+                			<tr>
+                				<th>위치</th>
+                                <th>단가</th>
+                                <th>예상금액</th>
+                			</tr>
+                		</thead>
+
+                		<tbody>
+                            <!-- 반복영역 // -->
+                            <tr>
+                				<td>메인</td>
+                                <td>1,000</td>
+                                <td>6,000</td>
+                			</tr>
+                            <!-- // 반복영역 -->
+
+                            <tr>
+                				<td>목록 첫 페이지</td>
+                                <td>1,000</td>
+                                <td>6,000</td>
+                			</tr>
+                            <tr>
+                				<td>목록 두번째 페이지부터(랜덤)</td>
+                                <td>1,000</td>
+                                <td>6,000</td>
+                			</tr>
+                            <tr>
+                				<td>상세 전체</td>
+                                <td>1,000</td>
+                                <td>6,000</td>
+                			</tr>
+                            <tr>
+                				<td>상세 1지역</td>
+                                <td>1,000</td>
+                                <td></td>
+                			</tr>
+                		</tbody>
+                	</table>
+                </div>
+
+                <b class="price">3,120 원 예상 금액입니다.</b>
+            </div>
+        </section>
+        <!-- // 예산 및 기간 -->
+
+        <!-- 배너 가이드 // -->
+        <section class="guide-area">
+            <header class="header">
+                <h4 class="tit">형식(배너 가이드)</h4>
+                <small>광고 배너 업로드와 방문 웹페이지 URL을 입력하세요.</small>
+                <a href="#" class="btn-info" onclick="fn.addActive('.ad-info');">광고배너 예시 +</a>
+                <div class="ad-info">
+                    <button type="button" class="btn mute btn-close" onclick="fn.removeActive('.ad-info');">서비스안내 닫기</button>
+                    <img src="@@sub/resources/images/mypage/ad_info.png" alt="">
+                </div>
+            </header>
+
+            <div class="contents">
+                <div class="guide-area">
+                    <!-- 메인광고 // -->
+                    <div class="guide">
+                        <b class="tit">메인</b>
+
+                        <div class="preview-area" id="preview1">
+                            <p>배너크기 : <b>300px*200px</b></p>
+                            <p>파일 형식 : <b>jpg</b></p>
+                            <p>용량 : <b>200KB 미만</b></p>
+                            <p>라인 제외</p>
+                        </div>
+
+                        <div class="form-area">
+                            <div class="input-area">
+                    			<div class="row">
+                    				<div class="column vertical">
+                    					<span class="field-tit">파일첨부</span>
+                    					<span class="field-input input-file">
+                    						<span class="inner">
+                                                <span class="file">
+                                                    <input type="text" placeholder="선택된 파일 없음" disabled>
+    												<span class="btn big fill gray btn-file" onclick="fn.fileBtn(this);">파일선택</span>
+    											    <input type="file" title="파일찾기" onchange="fn.file(this); fn.filePreview(this, '#preview1');">
+    											</span>
+                    						</span>
+                    					</span>
+                    				</div>
+                    			</div>
+
+                                <div class="row">
+                    				<div class="column vertical">
+                    					<span class="field-tit">URL</span>
+                    					<span class="field-input">
+                    						<span class="inner">
+                    							<input type="text" placeholder="http://www.airvil.com" title="URL 입력">
+                    						</span>
+                    					</span>
+                    				</div>
+                    			</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 메인광고 -->
+
+                    <!-- 목록광고 // -->
+                    <div class="guide">
+                        <b class="tit">목록</b>
+
+                        <div class="preview-area" id="preview2">
+                            <p>배너크기 : <b>348px*135px</b></p>
+                            <p>파일 형식 : <b>jpg</b></p>
+                            <p>용량 : <b>200KB 미만</b></p>
+                            <p>라인 제외</p>
+                        </div>
+
+                        <div class="form-area">
+                            <div class="input-area">
+                    			<div class="row">
+                    				<div class="column vertical">
+                    					<span class="field-tit">파일첨부</span>
+                    					<span class="field-input input-file">
+                    						<span class="inner">
+                                                <span class="file">
+                                                    <input type="text" placeholder="선택된 파일 없음" disabled>
+    												<span class="btn big fill gray btn-file" onclick="fn.fileBtn(this);">파일선택</span>
+    											    <input type="file" title="파일찾기"  onchange="fn.file(this); fn.filePreview(this, '#preview2');">
+    											</span>
+                    						</span>
+                    					</span>
+                    				</div>
+                    			</div>
+
+                                <div class="row">
+                    				<div class="column vertical">
+                    					<span class="field-tit">URL</span>
+                    					<span class="field-input">
+                    						<span class="inner">
+                    							<input type="text" placeholder="http://www.airvil.com" title="URL 입력">
+                    						</span>
+                    					</span>
+                    				</div>
+                    			</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 목록광고 -->
+
+                    <!-- 상세광고 // -->
+                    <div class="guide">
+                        <b class="tit">상세</b>
+
+                        <div class="preview-area" id="preview3">
+                            <p>배너크기 : <b>815px*70px</b></p>
+                            <p>파일 형식 : <b>jpg</b></p>
+                            <p>용량 : <b>200KB 미만</b></p>
+                            <p>라인 제외</p>
+                        </div>
+
+                        <div class="form-area">
+                            <div class="input-area">
+                    			<div class="row">
+                    				<div class="column vertical">
+                    					<span class="field-tit">파일첨부</span>
+                    					<span class="field-input input-file">
+                    						<span class="inner">
+                                                <span class="file">
+                                                    <input type="text" placeholder="선택된 파일 없음" disabled>
+    												<span class="btn big fill gray btn-file" onclick="fn.fileBtn(this);">파일선택</span>
+    											    <input type="file" title="파일찾기" onchange="fn.file(this); fn.filePreview(this, '#preview3');">
+    											</span>
+                    						</span>
+                    					</span>
+                    				</div>
+                    			</div>
+
+                                <div class="row">
+                    				<div class="column vertical">
+                    					<span class="field-tit">URL</span>
+                    					<span class="field-input">
+                    						<span class="inner">
+                    							<input type="text" placeholder="http://www.airvil.com" title="URL 입력">
+                    						</span>
+                    					</span>
+                    				</div>
+                    			</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 상세광고 -->
+                </div>
+
+                <div class="btn-area">
+                    <button type="button" class="btn big stroke gray btn-cancel">취소</button>
+                    <button type="button" class="btn big fill blue btn-payment" onclick="fn.popupOpen('#popup-payment');">결제</button>
+                </div>
+            </div>
+        </section>
+        <!-- // 배너 가이드 -->
+
+    </div>
+
+    <!-- footer : 추가 : 2020.01.08 // -->
+	@@include('./include/sub_footer.html')
+	<!-- //footer -->
+</div>
+
+<!-- 팝업 // -->
+@@include('./include/mypage/ad/popup.html')
+<!-- // 팝업 -->

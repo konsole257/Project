@@ -1,0 +1,323 @@
+<article class="list-area active">
+            <div class="inner">
+                <h2 class="hide">검색결과 목록</h2>
+
+                <!-- 소팅 영역 // -->
+                <div class="sort-area">
+                    <span class="total">총 5,234개</span>
+
+                    <span class="select type2">
+                        <select title="옵션 선택">
+                            <option>최신순</option>
+                            <option>조회순</option>
+                            <option>참여순</option>
+                            <option>좋아요순</option>
+                        </select>
+                    </span>
+
+                    <!-- 수정 : 2020.01.20 // -->
+                    <div class="btn-area">
+                        <button type="button" class="btn stroke gray btn-myview" onclick="fn.toggleActive(this);">내 게시글보기</button><!-- 활성화 class="active" --><!-- 추가 : 2019.12.30 -->
+                    </div>
+                    <!-- // 수정 : 2020.01.20 -->
+                </div>
+                <!-- // 소팅 영역 -->
+
+                <!-- 목록 // -->
+                <div class="scrollbar">
+                    <div class="skip">
+                        <a href="#list-area-end">검색결과 목록 건너뛰기</a>
+                    </div>
+
+                    <ul class="list">
+                        <!-- 반복영역 // -->
+                        <li>
+                            <div class="inner">
+                                <!-- <a href="#" target="_blank" class="blog">--><!-- 블로그 글일경우 a태그 -->
+                                <!-- <a href="#" target="_blank" class="cafe">--><!-- 네이버카페 글일경우 a태그 추가 : 2019.12.24-->
+                                    <figure class="img">
+                                        <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                    </figure>
+
+                                    <div class="info">
+                                        <div class="name">정남 IC사거리 투자용 단독주택 추천! (도로인접)</div>
+                                        <div class="address">서울시 서초구 서초2동 192</div>
+
+                                        <div class="price">매매 6억 <span>(207만/3.3㎡)</span></div>
+
+                                        <div class="writer">양지공인중개사사무소</div>
+
+                                        <div class="origin ellipsis">[출처] NAVER 블로그 | 박철호의 경매경매경매경매경매</div>
+
+                                        <div class="division-area date">
+                                            <span class="division bullet"><span class="date">2019.10.11</span></span>
+                                            <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>254</span></span>
+                                            <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>324</span></span>
+                                        </div>
+
+                                        <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button> <!-- 상세보기 --><!-- 블로그 게시글일경우 삭제 -->
+                                    </div>
+                                <!-- </a> -->
+                            </div>
+                        </li>
+                        <!-- // 반복영역 -->
+
+                        <!-- 내 게시글 : 추가 : 2019.01.31 // -->
+                        <li class="on"><!-- 게시했을경우 class="on" : 2020.01.31 -->
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name">정남 IC사거리 투자용 단독주택 추천! (도로인접)</div>
+                                    <div class="address">서울시 서초구 서초2동 192</div>
+
+                                    <div class="price">매매 6억 <span>(207만/3.3㎡)</span></div>
+
+                                    <div class="writer">양지공인중개사사무소</div>
+
+                                    <div class="origin ellipsis">[출처] NAVER 블로그 | 박철호의 경매경매경매경매경매</div>
+
+                                    <div class="division-area date">
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>254</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>324</span></span>
+                                    </div>
+
+                                    <div class="division-area date">
+                                        <span class="division bullet">등록일 : 2019.10.11</span>
+                                        <span class="division bullet">게시일 : 2019.10.11</span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button> <!-- 상세보기 --><!-- 블로그 게시글일경우 삭제 -->
+                                </div>
+                            </div>
+                        </li>
+                        <!-- // 내 게시글 -->
+
+                        <!-- 블로그 게시글 경우 // -->
+                        <li>
+                            <div class="inner">
+                                <a href="#" target="_blank" class="blog">
+                                    <figure class="img">
+                                        <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                    </figure>
+
+                                    <div class="info">
+                                        <div class="name">정남 IC사거리 투자용 단독주택 추천! (도로인접)</div>
+                                        <div class="address">서울시 서초구 서초2동 192</div>
+
+                                        <div class="price">매매 6억 <span>(207만/3.3㎡)</span></div>
+
+                                        <div class="writer">양지공인중개사사무소</div>
+
+                                        <div class="origin ellipsis">[출처] NAVER 블로그 | 박철호의 경매경매경매경매경매</div>
+
+                                        <div class="division-area date">
+                                            <span class="division bullet"><span class="date">2019.10.11</span></span>
+                                            <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>254</span></span>
+                                            <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>324</span></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <!-- // 블로그 게시글일 경우 -->
+
+                        <!-- 네이버카페 게시글 경우 // -->
+                        <li>
+                            <div class="inner">
+                                <a href="#" target="_blank" class="cafe">
+                                    <figure class="img">
+                                        <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                    </figure>
+
+                                    <div class="info">
+                                        <div class="name">정남 IC사거리 투자용 단독주택 추천! (도로인접)</div>
+                                        <div class="address">서울시 서초구 서초2동 192</div>
+
+                                        <div class="price">매매 6억 <span>(207만/3.3㎡)</span></div>
+
+                                        <div class="writer">양지공인중개사사무소</div>
+
+                                        <div class="origin ellipsis">[출처] NAVER 블로그 | 박철호의 경매경매경매경매경매</div>
+
+                                        <div class="division-area date">
+                                            <span class="division bullet"><span class="date">2019.10.11</span></span>
+                                            <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>254</span></span>
+                                            <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>324</span></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <!-- // 네이버카페 게시글일 경우 -->
+
+                        <li>
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name">정남 IC사거리 투자용 단독주택 추천! (도로인접)</div>
+                                    <div class="address">서울시 서초구 서초2동 192</div>
+
+                                    <div class="price">매매 6억 <span>(207만/3.3㎡)</span></div>
+
+                                    <div class="writer">양지공인중개사사무소</div>
+
+                                    <div class="division-area date">
+                                        <span class="division bullet"><span class="date">2019.10.11</span></span>
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>254</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>324</span></span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button> <!-- 상세보기 -->
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- 광고 : 추가 : 2019.01.08 // -->
+                        <li id="ad-list">
+                            <div class="inner">
+                                <div class="ad-list">
+                                    <img src="@@common/resources/images/temp/ad_list.jpg" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <!-- // 광고 -->
+
+                        <li>
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name">정남 IC사거리 투자용 단독주택 추천! (도로인접)</div>
+                                    <div class="address">서울시 서초구 서초2동 192</div>
+
+                                    <div class="price">매매 6억 <span>(207만/3.3㎡)</span></div>
+
+                                    <div class="writer">양지공인중개사사무소</div>
+
+                                    <div class="division-area date">
+                                        <span class="division bullet"><span class="date">2019.10.11</span></span>
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>254</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>324</span></span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button> <!-- 상세보기 -->
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name">정남 IC사거리 투자용 단독주택 추천! (도로인접)</div>
+                                    <div class="address">서울시 서초구 서초2동 192</div>
+
+                                    <div class="price">매매 6억 <span>(207만/3.3㎡)</span></div>
+
+                                    <div class="writer">양지공인중개사사무소</div>
+
+                                    <div class="division-area date">
+                                        <span class="division bullet"><span class="date">2019.10.11</span></span>
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>254</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>324</span></span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button> <!-- 상세보기 -->
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name">정남 IC사거리 투자용 단독주택 추천! (도로인접)</div>
+                                    <div class="address">서울시 서초구 서초2동 192</div>
+
+                                    <div class="price">매매 6억 <span>(207만/3.3㎡)</span></div>
+
+                                    <div class="writer">양지공인중개사사무소</div>
+
+                                    <div class="division-area date">
+                                        <span class="division bullet"><span class="date">2019.10.11</span></span>
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>254</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>324</span></span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button> <!-- 상세보기 -->
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name">정남 IC사거리 투자용 단독주택 추천! (도로인접)</div>
+                                    <div class="address">서울시 서초구 서초2동 192</div>
+
+                                    <div class="price">매매 6억 <span>(207만/3.3㎡)</span></div>
+
+                                    <div class="writer">양지공인중개사사무소</div>
+
+                                    <div class="division-area date">
+                                        <span class="division bullet"><span class="date">2019.10.11</span></span>
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>254</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>324</span></span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button> <!-- 상세보기 -->
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name">정남 IC사거리 투자용 단독주택 추천! (도로인접)</div>
+                                    <div class="address">서울시 서초구 서초2동 192</div>
+
+                                    <div class="price">매매 6억 <span>(207만/3.3㎡)</span></div>
+
+                                    <div class="writer">양지공인중개사사무소</div>
+
+                                    <div class="division-area date">
+                                        <span class="division bullet"><span class="date">2019.10.11</span></span>
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>254</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>324</span></span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button> <!-- 상세보기 -->
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- // 목록 -->
+            </div>
+
+            <button type="button" class="btn mute stroke gray btn-fold">인허가 찾기 목록 접기</button>
+        </article>
+
+        <hr id="list-area-end">

@@ -1,0 +1,127 @@
+.mypage .ad.write section { margin-top:60px; }
+.mypage .ad.write section .header { position:relative; padding-bottom:20px; border-bottom:1px solid #b4b4b4; }
+.mypage .ad.write section .header .tit { display:inline-block; font-size:16px; color:#4a4a4a; }
+.mypage .ad.write section .header small { display:inline-block; font-size:12px; color:#767676; margin-left:10px; }
+.mypage .ad.write .subject-area .contents { margin-top:25px; }
+.mypage .ad.write .subject-area .contents:after { content:""; display:block; clear:both; }
+.mypage .ad.write .subject-area .contents .tit { float:left; position:relative; width:120px; line-height:40px; font-size:14px; color:#4a4a4a; }
+.mypage .ad.write .subject-area .contents .tit:after { content:""; display:inline-block; width:18px; height:18px; vertical-align:middle; margin:-3px 0 0 10px; border-radius:100%; background:url("@@css/resources/images/common/icon.png") no-repeat -201px -22px; }
+.mypage .ad.write .subject-area .contents .tit .tooltip { display:none; position:absolute; z-index:1; top:36px; left:60px; width:218px; font-size:14px; line-height:20px; color:#767676; padding:16px 10px; border-radius:3px; background:#ebf1ff; box-sizing:border-box; }
+.mypage .ad.write .subject-area .contents .tit .tooltip p { padding-left:10px; }
+.mypage .ad.write .subject-area .contents .tit .tooltip p:before { content:""; display:inline-block; width:2px; height:2px; vertical-align:middle; margin:-2px 6px 0 -10px; background:#929396; }
+.mypage .ad.write .subject-area .contents .tit:hover .tooltip { display:block; }
+.mypage .ad.write .subject-area .contents input { float:left; width:826px; height:40px; }
+.mypage .ad.write .guide-area .header .btn-info { position:absolute; top:3px; right:0; font-size:12px; color:#202020; }
+.mypage .ad.write .guide-area .ad-info { display:none; position:relative; margin-top:20px; }
+.mypage .ad.write .guide-area .ad-info.active { display:block; }
+.mypage .ad.write .guide-area .ad-info .btn-close { position:absolute; top:30px; right:30px; width:32px; height:32px; }
+.mypage .ad.write .offset-area .contents { margin-top:25px; }
+.mypage .ad.write .offset-area .contents:after { content:""; display:block; clear:both; }
+.mypage .ad.write .offset-area .contents .menu { float:left; width:120px; }
+.mypage .ad.write .offset-area .contents .menu > li { margin-top:3px; }
+.mypage .ad.write .offset-area .contents .menu > li:first-child { margin-top:0; }
+.mypage .ad.write .offset-area .contents .menu > li > button { position:relative; width:100%; height:47px; font-size:16px; text-align:left; color:#202020; padding-left:28px; border-bottom:1px solid #e0e0e0; }
+.mypage .ad.write .offset-area .contents .menu > li > button:before { content:""; position:absolute; top:0; left:0; bottom:0; width:18px; height:18px; margin:auto; background:url("@@css/resources/images/common/icon.png") no-repeat 0 0; }
+.mypage .ad.write .offset-area .contents .menu > li:nth-child(1) > button:before { background-position:-260px -22px; }
+.mypage .ad.write .offset-area .contents .menu > li:nth-child(2) > button:before { background-position:-288px -22px; }
+.mypage .ad.write .offset-area .contents .menu > li:nth-child(3) > button:before { background-position:-315px -22px; }
+.mypage .ad.write .offset-area .contents .menu > li > button:after { content:""; position:absolute; top:0; right:7px; bottom:0; transform:rotate(-270deg); width:7px; height:13px; margin:auto; background:url("@@css/resources/images/common/icon.png") no-repeat -313px 0; }
+.mypage .ad.write .offset-area .contents .menu > li.active > button:after { transform:rotate(-90deg); }
+.mypage .ad.write .offset-area .contents .menu > li > ul { display:none; }
+.mypage .ad.write .offset-area .contents .menu > li.active > ul { display:block; }
+.mypage .ad.write .offset-area .contents .menu > li > ul > li { position:relative; margin-top:3px; }
+.mypage .ad.write .offset-area .contents .menu > li > ul > li:first-child { margin-top:0; }
+.mypage .ad.write .offset-area .contents .menu > li > ul > li > button { width:100%; height:36px; text-align:left; font-size:14px; color:#767676; padding-left:28px; }
+.mypage .ad.write .offset-area .contents .menu > li > ul > li .filter-area { display:none; position:absolute; transform:translateX(0); top:0; left:120px; height:auto; background:#ebf1ff; box-shadow:none; border:none; }
+.mypage .ad.write .offset-area .contents .menu > li > ul > li .filter-area:before { display:none; }
+.mypage .ad.write .offset-area .contents .menu > li.list li .filter-area .filter-group { width:225px; }
+.mypage .ad.write .offset-area .contents .menu > li.list li .filter-area .inner { border:1px solid #9e9e9e; overflow:hidden; }
+.mypage .ad.write .offset-area .contents .menu > li.list li .filter-area label { width:50%; }
+.mypage .ad.write .offset-area .contents .menu > li.list li .filter-area label:nth-child(2) input + span { border-right:none; }
+.mypage .ad.write .offset-area .contents .menu > li > ul > li:hover > button { font-weight:bold; color:#062a73; background:#ebf1ff; }
+.mypage .ad.write .offset-area .contents .menu > li > ul > li:hover .filter-area { display:block; }
+.mypage .ad.write .offset-area .contents .menu .filter-area { z-index:1; padding:20px 30px 27px 35px; box-sizing:border-box; }
+.mypage .ad.write .offset-area .contents .menu .filter-area:after { content:""; display:block; clear:both; }
+.mypage .ad.write .offset-area .contents .menu .filter-area .filter-group { width:336px; }
+.mypage .ad.write .offset-area .contents .menu .filter-area .filter-group:after { content:""; display:block; clear:both; }
+.mypage .ad.write .offset-area .contents .menu .filter-area .filter-title { font-weight:bold; color:#4a4a4a; }
+.mypage .ad.write .offset-area .contents .menu .filter-area .filter-input > .inner { display:block; position:relative; width:100%; border:1px solid #9e9e9e; box-sizing:border-box; overflow:hidden; }
+.mypage .ad.write .offset-area .contents .menu .filter-area label { float:left; width:33.33%; margin-bottom:-1px; }
+.mypage .ad.write .offset-area .contents .menu .filter-area input[type="radio"] + span,
+.mypage .ad.write .offset-area .contents .menu .filter-area input[type="checkbox"] + span { display:flex; align-items:center; justify-content: center; width:100%; height:100%; position:relative;
+    text-align:center; line-height:18px; padding:5px 0; border:1px solid #9e9e9e; border-left:none; background:#fff; box-sizing:border-box; }
+.mypage .ad.write .offset-area .contents .menu .filter-area.dbl input[type="radio"] + span,
+.mypage .ad.write .offset-area .contents .menu .filter-area.dbl input[type="checkbox"] + span { height:48px; }
+.mypage .ad.write .offset-area .contents .menu .filter-area input[type="radio"] + span:before,
+.mypage .ad.write .offset-area .contents .menu .filter-area input[type="checkbox"] + span:before { display:none; }
+.mypage .ad.write .offset-area .contents .menu .filter-area input[type="radio"]:checked + span,
+.mypage .ad.write .offset-area .contents .menu .filter-area input[type="checkbox"]:checked + span { color:#fff; background:#062a73; }
+.mypage .ad.write .offset-area .contents .menu .filter-area label:nth-child(3n + 3) input[type="radio"] + span,
+.mypage .ad.write .offset-area .contents .menu .filter-area label:nth-child(3n + 3) input[type="checkbox"] + span { border-right:none; }
+.mypage .ad.write .offset-area .contents .menu .filter-area label:nth-child(1) input[type="radio"] + span,
+.mypage .ad.write .offset-area .contents .menu .filter-area label:nth-child(1) input[type="checkbox"] + span,
+.mypage .ad.write .offset-area .contents .menu .filter-area label:nth-child(2) input[type="radio"] + span,
+.mypage .ad.write .offset-area .contents .menu .filter-area label:nth-child(2) input[type="checkbox"] + span,
+.mypage .ad.write .offset-area .contents .menu .filter-area label:nth-child(3) input[type="radio"] + span,
+.mypage .ad.write .offset-area .contents .menu .filter-area label:nth-child(3) input[type="checkbox"] + span { border-top:none; }
+
+
+.mypage .ad.write .offset-area .contents .example-area { float:left; margin-left:40px; }
+.mypage .ad.write.update .offset-area .contents .example-area { float:none; margin-left:0; }
+.mypage .ad.write .offset-area .contents .example-area > div { font-size:0; }
+.mypage .ad.write .offset-area .contents .example-area > div span,
+.mypage .ad.write .offset-area .contents .example-area > div button { display:inline-block; height:28px; font-size:13px; text-align:center; line-height:28px; color:#fff; padding:0 18px; margin-left:8px; border-radius:2px; background:#062a73; }
+.mypage .ad.write .offset-area .contents .example-area > div button:after { content:""; display:inline-block; width:12px; height:12px; vertical-align:middle; margin:-2px 0 0 10px; background:url("../../resources/images/common/btn.png") no-repeat -341px 0; }
+.mypage .ad.write .offset-area .contents .example-area > div span:first-child,
+.mypage .ad.write .offset-area .contents .example-area > div button:first-child { margin-left:0; }
+.mypage .ad.write .offset-area .contents .example-area .img { margin-top:10px; }
+.mypage .ad.write .period-area .header { border-bottom:none; }
+.mypage .ad.write.update .period-area .header { border-bottom:1px solid #b4b4b4; cursor:pointer; }
+.mypage .ad.write.update .period-area .header:after { content:""; position:absolute; top:0; right:15px; bottom:0; width:15px; height:8px; margin:auto; background:url("@@css/resources/images/common/form.png") no-repeat 0 0; }
+.mypage .ad.write.update .period-area .header .division-area { font-size:14px; color:#202020; }
+.mypage .ad.write.update .period-area .header .division-area b { color:#1d53bf; }
+.mypage .ad.write.update .period-area .contents { display:none; }
+.mypage .ad.write.update .period-area.active .header:after { transform:rotate(180deg); }
+.mypage .ad.write.update .period-area.active .contents { display:block; }
+.mypage .ad.write .period-area .contents .inquiry-area { position:relative; font-size:0; text-align:center; padding:15px 0; border:1px solid #e0e0e0; background:#fff; }
+.mypage .ad.write .period-area .contents .tit { font-size:14px; line-height:28px; color:#4a4a4a; vertical-align:top; margin-right:14px; }
+.mypage .ad.write .period-area .contents label { display:inline-block; position:relative; vertical-align:top; }
+.mypage .ad.write .period-area .contents label:after { content:""; position:absolute; top:0; bottom:0; right:11px; width:18px; height:18px; margin:auto;  background:url("@@css/resources/images/common/icon.png") no-repeat -343px -22px; }
+.mypage .ad.write .period-area .contents input { width:143px; height:28px; font-size:13px; color:#333; }
+.mypage .ad.write .period-area .contents .hyphen { display:inline-block; width:20px; height:28px; font-size:14px; line-height:28px; vertical-align:top;  color:#333; }
+.mypage .ad.write .period-area .contents .cuation { position:absolute; top:0; bottom:0; right:40px; height:28px; line-height:28px; font-size:14px; color:#1d53bf; margin:auto; }
+.mypage .ad.write.update .period-area .contents .cuation { display:inline-block; position:static; margin-top:20px; }
+.mypage .ad.write .period-area .contents .btn-inquiry { font-size:14px; color:#fff; margin-left:8px; }
+.mypage .ad.write .period-area .contents .table td { text-align:center; }
+.mypage .ad.write .period-area .contents .table td:nth-child(1) { padding-left:40px; text-align:left; }
+.mypage .ad.write .period-area .contents .price { display:block; text-align:right; font-size:14px; color:#1d53bf; margin-top:15px; }
+.mypage .ad.write .guide-area .contents { margin-top:25px; }
+.mypage .ad.write .guide-area .contents .guide-area:after { content:""; display:block; clear:both; }
+.mypage .ad.write .guide-area .contents .guide { float:left; width:289px; margin-left:40px; }
+.mypage .ad.write .guide-area .contents .guide:first-child { margin-left:0; }
+.mypage .ad.write .guide-area .contents .guide:nth-child(2) { width:288px; }
+.mypage .ad.write .guide-area .contents .guide .tit { font-size:14px; color:#4a4a4a; }
+.mypage .ad.write .guide-area .contents .guide input[type="text"] { font-size:13px; }
+.mypage .ad.write .guide-area .contents .guide .preview-area { position:relative; margin:10px 0 24px; padding:22px 0 22px 26px; border-radius:4px; background:#e0e0e0; }
+.mypage .ad.write .guide-area .contents .guide .preview-area .img { position:absolute; top:0; left:0; width:100%; height:100%; background:#fff; overflow:hidden; }
+.mypage .ad.write .guide-area .contents .guide .preview-area img { position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:100%; }
+.mypage .ad.write .guide-area .contents .guide .preview-area p { font-size:16px; line-height:24px; color:#4a4a4a; }
+.mypage .ad.write .guide-area .covntents .guide .preview-area p span { color:#767676; }
+.mypage .ad.write .guide-area .contents .guide .input-file { font-size:0; }
+.mypage .ad.write .guide-area .contents .guide .input-file input[type="text"] { width:calc(100% - 88px); background:#fff; }
+.mypage .ad.write .guide-area .contents .guide .input-file .btn-file { width:80px; margin-left:8px; }
+.mypage .ad.write .guide-area .contents .guide .input-file .file .btn-del { position:absolute; top:1px; right:89px; width:34px; height:34px; border-radius:4px; background:#fff; }
+.mypage .ad.write .guide-area .contents .guide .input-file .file .btn-del:after { content:""; position:absolute; top:0; right:0; bottom:0; left:0; margin:auto; width:13px; height:13px; background:url("@@css/resources/images/common/btn.png") no-repeat -284px 0; }
+.mypage .ad.write .guide-area .contents .btn-area { text-align:center; margin-top:60px; }
+.mypage .ad.write .guide-area .contents .btn-area .btn { margin-left:5px; }
+.mypage .ad.write .guide-area .contents .btn-area .btn:first-child { margin-left:0; }
+
+.mypage .ad.list .header { position:relative; }
+.mypage .ad.list .header label { position:absolute; top:0; right:0; }
+.mypage .ad.list .contents .table td:nth-child(3) { text-align:center; }
+.mypage .ad.list .contents .table th:nth-child(5),
+.mypage .ad.list .contents .table td:nth-child(5) { text-align:left; padding-left:20px; }
+.mypage .ad.list .contents .table th:nth-child(5) { padding-left:27px; }
+.mypage .ad.list .contents .table td:nth-child(5) span { display:inline-block; width:38px; text-align:center; vertical-align:middle; margin-right:20px; }
+.mypage .ad.list .contents .table td:nth-child(5) span.ing { color:#1d53bf; }
+.mypage .ad.list .contents .nodata { height:236px; line-height:236px; font-size:14px; text-align:center; color:#202020; }

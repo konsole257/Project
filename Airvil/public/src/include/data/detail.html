@@ -1,0 +1,795 @@
+<article class="viewer detail-area">
+				<!-- 정보 상단 // -->
+				<div class="scrollbar">
+					<header class="header">
+						<div class="inner">
+							<button type="button" class="btn mute btn-close" onclick="fn.viewerClose('detail');">닫기</button>
+
+							<div class="swiper-container detail-swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><img src="@@common/resources/images/temp/img_880x586.jpg" alt=""></div>
+									<div class="swiper-slide"><div id="video"></div></div>
+									<div class="swiper-slide"><img src="@@common/resources/images/temp/img_880x586.jpg" alt=""></div>
+									<div class="swiper-slide"><img src="@@common/resources/images/temp/img_880x586.jpg" alt=""></div>
+									<div class="swiper-slide"><img src="@@common/resources/images/temp/img_880x586.jpg" alt=""></div>
+								</div>
+								<button class="btn mute btn-zoom">이미지 확대보기</button>
+							</div>
+							<div class="detail-thumbs-wrap">
+								<div class="swiper-container detail-thumbs">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide"><img src="@@common/resources/images/temp/img_880x586.jpg" alt=""></div>
+										<div class="swiper-slide"><img src="@@common/resources/images/temp/img_156x104.jpg" alt=""></div>
+										<div class="swiper-slide"><img src="@@common/resources/images/temp/img_880x586.jpg" alt=""></div>
+										<div class="swiper-slide"><img src="@@common/resources/images/temp/img_880x586.jpg" alt=""></div>
+										<div class="swiper-slide"><img src="@@common/resources/images/temp/img_880x586.jpg" alt=""></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="indicator">
+								<div class="swiper-pagination"></div>
+
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-toggle pause"></div>
+							</div>
+							<!-- 2019.11.29 : 추가 // -->
+						   <script>
+						   var player, playing = false;
+						   function onYouTubeIframeAPIReady() {
+							  player = new YT.Player('video', {
+								  height: '586',
+								  width: '880',
+								  videoId: 'A5GrSunRWUw', // videoId 입력
+								  events: {
+									  'onStateChange': onPlayerStateChange
+								  }
+							  });
+						   }
+
+						   function onPlayerStateChange(event) {
+							  if(!playing){
+								  $('.detail-swiper ~ .indicator .swiper-button-toggle').trigger('click');
+								  playing = true;
+							  } else {
+								  $('.detail-swiper ~ .indicator .swiper-button-toggle').trigger('click');
+							  }
+						   }
+						   </script>
+						   <!-- // 2019.11.29 : 추가 -->
+
+							<div class="txt-area">
+								<p class="name">정남 IC사거리 투자용 단독주택 추천! (도로인접)</p>
+								<small class="type">
+									<span class="division-area">
+										<span class="division bullet">단독/다가구</span>
+										<span class="division bullet">955㎡ (288.98평)</span>
+									</span>
+								</small>
+							</div>
+
+							<!-- 회사 정보 // -->
+							<address class="info-area">
+								<div class="top">
+									<h2 class="tit">경기도 화성시 정남면 내리 6 <small>경기도 화성시 정남면 가장로 405</small></h2>
+
+									<div class="land-info division-area">
+										<span class="division bullet">매물번호 AA-1234-5678</span> <span class="division bullet">21세기공인중개사무소</span>
+									</div>
+
+									<div class="btn-area">
+										<div class="hits"><span class="hide">조회수 : </span>999</div>
+										<label>
+											<input type="checkbox" checked=""><!-- 좋아요 : checked -->
+											<span class="btn stroke gray btn-like">
+												<span class="hide">좋아요 : </span>
+												<span>324</span>
+											</span>
+										</label>
+										<button type="button" class="btn small stroke gray btn-chat">1:1 채팅</button>
+										<button type="button" class="btn mute stroke gray btn-bookmark">북마크</button>
+										<button type="button" class="btn mute stroke gray btn-share">공유</button>
+									</div>
+								</div>
+
+								<div class="address">
+									<div class="row">
+										<div class="column"><span>거래구분</span> 매매</div>
+										<div class="column"><span>매물구분</span> 단독주택</div>
+										<div class="column"><span>매매금액</span> 6억</div>
+										<div class="column"><span>3.3㎡가격</span> 207만원</div>
+									</div>
+
+									<div class="row">
+										<div class="column"><span>거래면적</span> 955㎡(288.89평)</div>
+										<div class="column"><span>전용면적</span> -</div>
+										<div class="column"><span>지목</span> -</div>
+									</div>
+								</div>
+							</address>
+
+							<ul class="hashtag">
+								<li>#단독주택</li>
+								<li>#단독주택</li>
+								<li>#단독주택</li>
+								<li>#단독주택</li>
+								<li>#단독주택</li>
+							</ul>
+							<!-- // 회사 정보 -->
+
+							<!-- 탭메뉴 // -->
+							<div class="tab-menu">
+								<a href="#article" class="active">매물</a>
+								<a href="#price">실거래가</a>
+								<a href="#expect">예상매물</a>
+								<a href="#public">공공정보</a>
+								<a href="#reply">댓글(227)</a>
+							</div>
+							<!-- // 탭메뉴 -->
+						</div>
+					</header>
+					<!-- // 정보 상단 -->
+
+					<!-- 탭 컨텐츠 // -->
+					<div class="tab-contents">
+						<div class="inner">
+							<!-- 시공능력 // -->
+							<section id="article" class="section article">
+								<h2 class="tit">매물</h2>
+
+								<!-- 에디터 글 영역 // -->
+								<div>
+									<img src="@@common/resources/images/temp/article.jpg" alt="">
+								</div>
+								<!-- // 에디터 글 영역 -->
+							</section>
+							<!-- // 시공능력 -->
+
+							<!-- 실거래가 // -->
+							<section id="price" class="section price">
+								<h2 class="tit">실거래가</h2>
+
+								<dl class="type">
+									<dt>매물종류</dt>
+									<dd>아파트</dd>
+								</dl>
+
+								<!-- 면적 선택 // -->
+								<div class="swiper-btn-wrap">
+									<div class="swiper-container swiper-btn">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide"><button type="button" class="btn small stroke gray btn-area active">42㎡</button></div><!-- 활성화 class="active" -->
+											<div class="swiper-slide"><button type="button" class="btn small stroke gray btn-area">49㎡</button></div>
+											<div class="swiper-slide"><button type="button" class="btn small stroke gray btn-area">59㎡</button></div>
+											<div class="swiper-slide"><button type="button" class="btn small stroke gray btn-area">62㎡</button></div>
+											<div class="swiper-slide"><button type="button" class="btn small stroke gray btn-area">72㎡</button></div>
+											<div class="swiper-slide"><button type="button" class="btn small stroke gray btn-area">85㎡</button></div>
+											<div class="swiper-slide"><button type="button" class="btn small stroke gray btn-area">95㎡</button></div>
+											<div class="swiper-slide"><button type="button" class="btn small stroke gray btn-area">110㎡</button></div>
+											<div class="swiper-slide"><button type="button" class="btn small stroke gray btn-area">114㎡</button></div>
+											<div class="swiper-slide"><button type="button" class="btn small stroke gray btn-area">119㎡</button></div>
+											<div class="swiper-slide"><button type="button" class="btn small stroke gray btn-area">124㎡</button></div>
+											<div class="swiper-slide"><button type="button" class="btn small stroke gray btn-area">124㎡</button></div>
+										</div>
+									</div>
+
+									<div class="swiper-button-next"></div>
+									<div class="swiper-button-prev"></div>
+								</div>
+								<!-- // 면적 선택 -->
+
+								<div class="table type1">
+									<table>
+										<caption class="hide">매물정보</caption>
+
+										<colgroup>
+											<col style="width:168px;">
+											<col style="width:168px;">
+											<col style="width:149px;">
+											<col style="width:176px;">
+											<col style="width:155px;">
+										</colgroup>
+
+										<thead>
+											<tr>
+												<th>거래일</th>
+												<th>거래종류</th>
+												<th>거래금액</th>
+												<th>층수</th>
+												<th>전용면적</th>
+											</tr>
+										</thead>
+
+										<tbody class="scrollbar">
+											<tr>
+												<td>2019.11.08</td>
+												<td>매매</td>
+												<td>5억 1,500만원</td>
+												<td>9층</td>
+												<td>42㎡</td>
+											</tr>
+
+											<tr>
+												<td>2019.11.08</td>
+												<td>매매</td>
+												<td>5억 1,500만원</td>
+												<td>9층</td>
+												<td>42㎡</td>
+											</tr>
+
+											<tr>
+												<td>2019.11.08</td>
+												<td>매매</td>
+												<td>5억 1,500만원</td>
+												<td>9층</td>
+												<td>42㎡</td>
+											</tr>
+
+											<tr>
+												<td>2019.11.08</td>
+												<td>매매</td>
+												<td>5억 1,500만원</td>
+												<td>9층</td>
+												<td>42㎡</td>
+											</tr>
+
+											<tr>
+												<td>2019.11.08</td>
+												<td>매매</td>
+												<td>5억 1,500만원</td>
+												<td>9층</td>
+												<td>42㎡</td>
+											</tr>
+
+											<tr>
+												<td>2019.11.08</td>
+												<td>매매</td>
+												<td>5억 1,500만원</td>
+												<td>9층</td>
+												<td>42㎡</td>
+											</tr>
+
+											<tr>
+												<td>2019.11.08</td>
+												<td>매매</td>
+												<td>5억 1,500만원</td>
+												<td>9층</td>
+												<td>42㎡</td>
+											</tr>
+
+											<tr>
+												<td>2019.11.08</td>
+												<td>매매</td>
+												<td>5억 1,500만원</td>
+												<td>9층</td>
+												<td>42㎡</td>
+											</tr>
+
+											<tr>
+												<td>2019.11.08</td>
+												<td>매매</td>
+												<td>5억 1,500만원</td>
+												<td>9층</td>
+												<td>42㎡</td>
+											</tr>
+
+											<tr>
+												<td>2019.11.08</td>
+												<td>매매</td>
+												<td>5억 1,500만원</td>
+												<td>9층</td>
+												<td>42㎡</td>
+											</tr>
+
+											<tr>
+												<td>2019.11.08</td>
+												<td>매매</td>
+												<td>5억 1,500만원</td>
+												<td>9층</td>
+												<td>42㎡</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</section>
+							<!-- // 실거래가 -->
+
+							<!-- 예상매물 -->
+							<section id="expect" class="section expect">
+								<h2 class="tit">예상매물</h2>
+
+								<dl class="type">
+									<dt>매물종류</dt>
+									<dd>아파트</dd>
+								</dl>
+
+								<div class="table type1">
+									<table>
+										<caption class="hide">매물정보</caption>
+
+										<colgroup>
+											<col style="width:180px;">
+											<col style="width:228px;">
+											<col style="width:180px;">
+											<col style="width:228px;">
+										</colgroup>
+
+										<tbody>
+											<tr>
+												<th>일자</th>
+												<td>2019.11.13</td>
+												<th>상태</th>
+												<td>당첨자 계약</td>
+											</tr>
+
+											<tr>
+												<th>타입</th>
+												<td>아파트</td>
+												<th>단지명</th>
+												<td>대봉 더샵 센트럴파크 1차</td>
+											</tr>
+
+											<tr>
+												<th>주소</th>
+												<td colspan="3">대구광역시 중구 대봉동 169-11</td>
+											</tr>
+
+											<tr>
+												<th>홈페이지</th>
+												<td colspan="3">www.cstone.co.kr</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<section>
+									<h3 class="tit">인허가내역</h3>
+
+									<!-- 진행 현황 // -->
+									<ol>
+										<li class="step1"> <!-- 현재 진행중 class="active" -->
+											<span class="name">건축허가일</span>
+											<small class="date">2018.06.22</small>
+										</li>
+										<li class="step2">
+											<span class="name">착공예정일</span>
+											<small class="date">-</small>
+										</li>
+										<li class="step3">
+											<span class="name">착공연기일</span>
+											<small class="date">-</small>
+										</li>
+										<li class="step4">
+											<span class="name">실제착공일</span>
+											<small class="date">2019.09.31</small>
+										</li>
+										<li class="step5 active">
+											<span class="name">사용승인일</span>
+											<small class="date">2019.10.22</small>
+										</li>
+									</ol>
+									<!-- // 진행 현황 -->
+								</section>
+
+								<section>
+									<h3 class="tit">담당업체</h3>
+
+									<!-- 설계사 // -->
+									<section class="business">
+										<h3 class="tit">설계사</h3>
+
+										<div class="contents">
+											<!-- 업체명 확인 된 경우 // -->
+											<figure class="img">
+												<img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+											</figure>
+
+											<div class="info">
+												<h4 class="tit">최주남건축설계사무소</h4>
+
+												<div class="division-area">
+													<span class="division bullet type">건축설계사무소</span>
+													<span class="division bullet name">대표 : 최주남</span>
+												</div>
+
+												<div class="rating">
+													<span class="output"></span>
+													<div>
+														<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>1점</span></label>
+														<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>2점</span></label>
+														<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>3점</span></label>
+														<label><input type="checkbox" disabled checked onchange="fn.rating(this);"><span>4점</span></label>
+														<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>5점</span></label>
+													</div>
+												</div>
+												<span class="reviews"><span class="hide">리뷰수 : </span>(234)</span>
+
+												<div class="address-area">
+													<div class="address">서울특별시 마포구 신수동 1-3 서강빌딩 6층</div>
+													<div class="tel">02-3211-0786</div>
+												</div>
+											</div>
+										</div>
+									</section>
+									<!-- // 설계사 -->
+
+									<!-- 감리사 // -->
+									<section class="business">
+										<h3 class="tit">감리사</h3>
+
+										<div class="contents">
+											<!-- 업체명 확인 된 경우 // -->
+											<figure class="img">
+												<img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+											</figure>
+
+											<div class="info">
+												<h4 class="tit">최주남건축설계사무소</h4>
+
+												<div class="division-area">
+													<span class="division bullet type">건축설계사무소</span>
+													<span class="division bullet name">대표 : 최주남</span>
+												</div>
+
+												<div class="rating">
+													<span class="output"></span>
+													<div>
+														<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>1점</span></label>
+														<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>2점</span></label>
+														<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>3점</span></label>
+														<label><input type="checkbox" disabled checked onchange="fn.rating(this);"><span>4점</span></label>
+														<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>5점</span></label>
+													</div>
+												</div>
+												<span class="reviews"><span class="hide">리뷰수 : </span>(234)</span>
+
+												<div class="address-area">
+													<div class="address">서울특별시 마포구 신수동 1-3 서강빌딩 6층</div>
+													<div class="tel">02-3211-0786</div>
+												</div>
+											</div>
+										</div>
+									</section>
+									<!-- // 감리사 -->
+
+									<!-- 시공사 // -->
+									<section class="business">
+										<h3 class="tit">시공사</h3>
+
+										<div class="contents">
+											<!-- 업체명 확인 된 경우 // -->
+											<figure class="img">
+												<img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+											</figure>
+
+											<div class="info">
+												<h4 class="tit">최주남건축설계사무소</h4>
+
+												<div class="division-area">
+													<span class="division bullet type">건축설계사무소</span>
+													<span class="division bullet name">대표 : 최주남</span>
+												</div>
+
+												<div class="rating">
+													<span class="output"></span>
+													<div>
+														<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>1점</span></label>
+														<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>2점</span></label>
+														<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>3점</span></label>
+														<label><input type="checkbox" disabled checked onchange="fn.rating(this);"><span>4점</span></label>
+														<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>5점</span></label>
+													</div>
+												</div>
+												<span class="reviews"><span class="hide">리뷰수 : </span>(234)</span>
+
+												<div class="address-area">
+													<div class="address">서울특별시 마포구 신수동 1-3 서강빌딩 6층</div>
+													<div class="tel">02-3211-0786</div>
+												</div>
+											</div>
+										</div>
+									</section>
+									<!-- // 시공사 -->
+								</section>
+								<!-- // 담당업체 -->
+							</section>
+							<!-- // 예상매물 -->
+
+							<!-- 공공정보 // -->
+							<section id="public" class="section public">
+								<h2 class="tit">공공정보</h2>
+
+								<div class="txt-area">
+									<p>공공정보는 공공데이터 포탈(data.go.kr) 등의 정보를 기반으로 생성하였습니다.</p>
+									<p>본 정보는 단순 참고 자료로 실제 사항을 담보하지는 않습니다.</p>
+									<p>정확한 정보를 원하시는 경우 관련 등기사항 등을 확인 하시기 바랍니다.</p>
+								</div>
+
+								<div class="table type1 table-value">
+									<table>
+										<caption>토지 소유 및 공시지가</caption>
+
+										<colgroup>
+											<col style="width:137px;">
+											<col style="width:135px;">
+											<col style="width:135px;">
+											<col style="width:134px;">
+											<col style="width:140px;">
+											<col style="width:135px;">
+										</colgroup>
+
+										<thead>
+											<tr>
+												<th>소유구분</th>
+												<th>소유권변동일자</th>
+												<th>소유권변동원인</th>
+												<th>공유인원</th>
+												<th>공시지가</th>
+												<th>기준년월</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr>
+												<td>개인</td>
+												<td>2015.09.10</td>
+												<td>주소변경</td>
+												<td>0</td>
+												<td>7,752,000</td>
+												<td>2019.01</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<div class="table type1">
+									<table>
+										<caption>기본정보</caption>
+
+										<colgroup>
+											<col style="width:180px;">
+											<col style="width:228px;">
+											<col style="width:180px;">
+											<col style="width:228px;">
+										</colgroup>
+
+										<tbody>
+											<tr>
+												<th>지목</th>
+												<td>대</td>
+												<th>면적</th>
+												<td>1,218m2 (358.41평)</td>
+											</tr>
+											<tr>
+												<th>이용상황</th>
+												<td>주상기타</td>
+												<th>용도지역</th>
+												<td>제3층일반주거지역</td>
+											</tr>
+											<tr>
+												<th>도로조건</th>
+												<td>소로각지</td>
+												<th>형상</th>
+												<td>사다리형</td>
+											</tr>
+											<tr>
+												<th>고저</th>
+												<td>평지</td>
+												<th>기준일</th>
+												<td>2019.08.08</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<div class="table type1 table-plan">
+									<table>
+										<caption>토지 이용 계획</caption>
+
+										<colgroup>
+											<col style="width:300px;">
+											<col style="width:516px;">
+										</colgroup>
+
+										<tbody>
+											<tr>
+												<th>[국토의 계획 및 이용에 관한 법률]에 따른 지역・지구등</th>
+												<td>
+													<ul>
+														<li>도시지역포함</li>
+														<li>제3층일반주거지역포함</li>
+													</ul>
+												</td>
+											</tr>
+
+											<tr>
+												<th>다른 방법 등에 따른 지역・지구 등</th>
+												<td>
+													<ul>
+														<li>대공방어협도구역지역포함</li>
+														<li>지역 수도권정비게획법 과밀억제권역포함</li>
+														<li>가축분뇨의 관리 및 이용에 관한 법률 가축사육제한구역포함</li>
+													</ul>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</section>
+							<!-- // 공공정보 -->
+
+							<!-- 댓글 // -->
+							<section id="reply" class="section reply">
+								<h2 class="tit">댓글</h2>
+
+								<div class="write">
+									<form class="form-area">
+										<fieldset>
+											<legend class="hide">댓글 등록</legend>
+
+											<textarea placeholder="댓글을 입력해주세요" title="댓글 입력" maxlength="300"></textarea>
+
+											<div class="bottom-area">
+												<span class="characters"><span class="current">0</span>/300</span>
+												<button type="button" class="btn small fill gray btn-register">등록</button>
+											</div>
+										</fieldset>
+									</form>
+								</div>
+
+								<div class="reply-list">
+									<p class="number">댓글 17개</p>
+
+									<button type="button" class="btn small stroke gray btn-view">참여자만 보기</button>
+
+									<ul>
+										<!-- 반복영역 // -->
+										<li>
+											<div class="inner">
+												<!-- 댓글 // -->
+												<div class="reply">
+													<div class="division-area">
+														<span class="division bullet name">손예진</span>
+														<span class="division bullet date">2019.09.24</span>
+													</div>
+
+													<p class="txt-area">
+														친절하고 좋았어요. 그런데 바빠서 그런지 전화 연락이 잘 안되는 단점이 있었습니다. 그래서 별 하나 뺍니다. 하지만 공사 내용은 진짜 좋았습니다!<br>
+														또 공사할 일 있으면 연락드릴게요~
+													</p>
+
+													<div class="btn-area">
+														<button type="button" class="btn btn-recommend"><span class="hide">추천</span>245</button>
+														<button type="button" class="btn btn-reply">답글쓰기</button>
+														<button type="button" class="btn btn-report">신고</button>
+													</div>
+												</div>
+												<!-- // 댓글 -->
+
+												<!-- 대댓글 작성 // -->
+												<div class="write">
+													<form class="form-area">
+														<fieldset>
+															<legend class="hide">댓글 등록</legend>
+
+															<textarea placeholder="댓글을 입력해주세요" title="댓글 입력" maxlength="300"></textarea>
+
+															<div class="bottom-area">
+																<span class="characters"><span class="current">0</span>/300</span>
+																<button type="button" class="btn small fill gray btn-register">등록</button>
+															</div>
+														</fieldset>
+													</form>
+												</div>
+												<!-- // 대댓글 작성 -->
+
+												<!-- 대댓글 // -->
+												<div class="reply-reply">
+													<div class="inner">
+														<div class="division-area">
+															<span class="division bullet name">손예진</span>
+															<span class="division bullet date">2019.09.24</span>
+														</div>
+
+														<div class="txt-area">
+															친절하고 좋았어요. 그런데 바빠서 그런지 전화 연락이 잘 안되는 단점이 있었습니다. 그래서 별 하나 뺍니다. 하지만 공사 내용은 진짜 좋았습니다!<br>
+															또 공사할 일 있으면 연락드릴게요~<br><br>
+															<img src="@@common/resources/images/temp/img_600x400.jpg" alt="">
+														</div>
+
+														<div class="btn-area">
+															<button type="button" class="btn btn-update">수정</button>
+															<button type="button" class="btn btn-delete">삭제</button>
+														</div>
+													</div>
+												</div>
+												<!-- // 대댓글 -->
+											</div>
+										</li>
+										<!-- // 반복영역 -->
+									</ul>
+								</div>
+							</section>
+							<!-- // 댓글 -->
+
+							<!-- 매물 // -->
+							<section id="property" class="section property">
+								<h2 class="tit">추천매물</h2>
+
+								<div class="bbs list type1">
+									<ul>
+										<!-- 반복영역 // -->
+										<li>
+											<a href="#">
+												<figure class="img">
+													<img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+												</figure>
+
+												<div class="info">
+													<p class="subject">동교동 카페류 추천 상가임대</p>
+													<p class="address">서울특별시 마포구 동교동</p>
+													<p class="price"><span class="type1">분양</span>월세 5000만/450만</p>
+													<p class="txt">
+														이안테라리움 방화 분양중 오피스텔 / 민간분양 / 분양 299세대/ 19㎡
+													</p>
+													<span class="name">최주남건축설계사무소</span>
+													<span class="date"><span class="hide">등록일 : </span>2019.11.02</span>
+													<span class="hits"><span class="hide">조회수 : </span>234</span>
+													<span class="likes"><span class="hide">좋아요수 : </span>324</span>
+
+													<ul class="hashtag">
+														<li>#경기도여주</li>
+														<li>#경기도여주</li>
+														<li>#경기도여주</li>
+													</ul>
+												</div>
+											</a>
+										</li>
+										<!-- // 반복영역 -->
+
+										<li>
+											<a href="#">
+												<figure class="img">
+													<img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+												</figure>
+
+												<div class="info">
+													<p class="subject">동교동 카페류 추천 상가임대</p>
+													<p class="address">서울특별시 마포구 동교동</p>
+													<p class="price"><span class="type2">매매</span>월세 5000만/450만</p>
+													<p class="txt">
+														이안테라리움 방화 분양중 오피스텔 / 민간분양 / 분양 299세대/ 19㎡
+													</p>
+													<span class="name">최주남건축설계사무소</span>
+													<span class="date"><span class="hide">등록일 : </span>2019.11.02</span>
+													<span class="hits"><span class="hide">조회수 : </span>234</span>
+													<span class="likes"><span class="hide">좋아요수 : </span>324</span>
+
+													<ul class="hashtag">
+														<li>#경기도여주</li>
+														<li>#경기도여주</li>
+														<li>#경기도여주</li>
+													</ul>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</section>
+							<!-- // 매물 -->
+						</div>
+					</div>
+					<!-- // 탭 컨텐츠 -->
+				</div>
+			</article>
+
+			<!-- 확대이미지 : 추가 : 2019.11.29 // -->
+			<div class="img-zoom">
+			   <button type="button" class="btn mute btn-close" onclick="">닫기</button>
+
+			   <img src="" alt="">
+			</div>
+			<!-- // 확대이미지 : 추가 : 2019.11.29 -->
+
+			<hr id="detail-area-end">

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<!-- config// -->
+	@@include('./include/config.html')
+	<!-- //config -->
+</head>
+
+<body>
+
+<div id="wrap">
+	<!-- header// -->
+	@@include('./include/header.html', {
+		"dataActive": "active",
+		"dataDevelopActive": "active"
+	})
+	<!-- //header -->
+
+	<!-- contents// -->
+	<main id="container" class="data">
+		<div id="contents" class="develop">
+			<!-- 건축인허가 필터 // -->
+			@@include('./include/data/develop/menu.html')
+			<!-- // 건축인허가 필터 -->
+
+			<!-- 추천필터 : 추가 : 2019.12.30 // -->
+			@@include('./include/data/recommend.html')
+			<!-- // 추천필터 -->
+
+			<!-- 건축인허가 내용 // -->
+			@@include('./include/data/develop/detail.html')
+			<!-- // 건축인허가 내용 -->
+
+			<!-- 채팅목록 : 추가 : 2019.12.11 // -->
+			@@include('./include/chat/list.html')
+			<!-- // 채팅목록 -->
+
+			<!-- 채팅상세 : 추가 : 2019.12.11 // -->
+			@@include('./include/chat/join.html')
+			<!-- // 채팅상세 -->
+
+			<!-- 알림목록 : 추가 : 2020.01.23 // -->
+			@@include('./include/notify/list.html')
+			<!-- // 알림목록 -->
+		</div>
+	</main>
+	<!-- //contents -->
+
+	<!-- footer// -->
+	@@include('./include/footer.html')
+	<!-- //footer -->
+</div>
+
+</body>
+</html>

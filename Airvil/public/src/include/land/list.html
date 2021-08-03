@@ -1,0 +1,301 @@
+<article class="list-area active">
+            <div class="inner">
+                <h2 class="hide">검색결과 목록</h2>
+
+                <!-- 소팅 영역 // -->
+                <div class="sort-area">
+                    <span class="total">총 5,234개</span>
+
+                    <span class="select type2">
+                        <select title="옵션 선택">
+                            <option>최신순</option>
+                            <option>조회순</option>
+                            <option>참여순</option>
+                            <option>좋아요순</option>
+                        </select>
+                    </span>
+
+                    <!-- 수정 : 2020.01.16 // -->
+                    <div class="btn-area">
+                        <button type="button" class="btn stroke gray btn-myview" onclick="fn.toggleActive(this);">내 매물보기</button><!-- 추가 : 2019.12.30 -->
+                        <button type="button" class="btn stroke gray btn-filter" onclick="fn.toggleActive('.filter-area, .btn-fold'); fn.toggleActive(this);">필터</button>
+                    </div>
+                    <!-- // 수정 : 2020.01.16 -->
+                </div>
+                <!-- // 소팅 영역 -->
+
+                <!-- 목록 // -->
+                <div class="scrollbar">
+                    <div class="skip">
+                        <a href="#list-area-end">검색결과 목록 건너뛰기</a>
+                    </div>
+
+                    <ul class="list">
+                        <!-- 반복영역 // -->
+                        <li>
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name ellipsis">정남 IC사거리 투자용 단독주택 추천! (도로인접 정남 IC사거리 투자용 단독주택 추천! (도로인접)</div><!-- class="ellipsis" 추가 : 2019.12.16 -->
+                                    <small class="type">
+                                        <span class="division-area">
+                                            <span class="division bullet">단독/다가구</span>
+                                            <span class="division bullet">955㎡ (288.98평)</span>
+                                        </span>
+                                    </small>
+
+                                    <div class="price">매매 6억 <span>(207만/3.3㎡)</span></div>
+
+                                    <div class="writer">양지공인중개사사무소</div><!-- 추가 : 2019.12.03 -->
+
+                                    <div class="division-area date">
+                                        <span class="division bullet"><span class="date">2019.10.11</span></span>
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>254</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>324</span></span>
+                                    </div>
+
+                                    <button type="button" class="btn mute btn-join" onclick="fn.viewerOpen(this, 'join');">체크리스트</button>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button> <!-- 상세보기 -->
+                                </div>
+                            </div>
+                        </li>
+                        <!-- // 반복영역 -->
+
+                        <!-- 매물보기일때 : 추가 : 2019.01.08 // -->
+                        <li class="on"><!-- 게시했을경우 class="on" : 2020.01.31 -->
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name ellipsis">정남 IC사거리 투자용 단독주택 추천! (도로인접 정남 IC사거리 투자용 단독주택 추천! (도로인접)</div><!-- class="ellipsis" 추가 : 2019.12.16 -->
+                                    <small class="type">
+                                        <span class="division-area">
+                                            <span class="division bullet">단독/다가구</span>
+                                            <span class="division bullet">955㎡ (288.98평)</span>
+                                        </span>
+                                    </small>
+
+                                    <div class="price">매매 6억 <span>(207만/3.3㎡)</span></div>
+
+                                    <div class="writer">양지공인중개사사무소</div>
+
+                                    <div class="division-area number">
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>254</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>324</span></span>
+                                    </div>
+
+                                    <div class="division-area date">
+                                        <span class="division bullet">등록일 : 2019.10.11</span>
+                                        <span class="division bullet">게시일 : 2019.10.11</span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button> <!-- 상세보기 -->
+                                </div>
+                            </div>
+                        </li>
+                        <!-- // 내 매물보기일때 -->
+
+                        <li>
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name ellipsis">정남 IC사거리 투자용 단독주택 추천! (도로인접)</div>
+                                    <small class="type">
+                                        <span class="division-area">
+                                            <span class="division bullet">단독/다가구</span>
+                                            <span class="division bullet">955㎡ (288.98평)</span>
+                                        </span>
+                                    </small>
+
+                                    <div class="price">매매 6억 <span>(207만/3.3㎡)</span></div>
+
+                                    <div class="writer">양지공인중개사사무소</div>
+
+                                    <div class="division-area date">
+                                        <span class="division bullet"><span class="date">2019.10.11</span></span>
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>254</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>324</span></span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button> <!-- 상세보기 -->
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name ellipsis">정남 IC사거리 투자용 단독주택 추천! (도로인접)</div>
+                                    <small class="type">
+                                        <span class="division-area">
+                                            <span class="division bullet">단독/다가구</span>
+                                            <span class="division bullet">955㎡ (288.98평)</span>
+                                        </span>
+                                    </small>
+
+                                    <div class="price">매매 6억 <span>(207만/3.3㎡)</span></div>
+
+                                    <div class="writer">양지공인중개사사무소</div>
+
+                                    <div class="division-area date">
+                                        <span class="division bullet"><span class="date">2019.10.11</span></span>
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>254</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>324</span></span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button> <!-- 상세보기 -->
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- 광고 : 추가 : 2019.01.08 // -->
+                        <li id="ad-list">
+                            <div class="inner">
+                                <div class="ad-list">
+                                    <img src="@@common/resources/images/temp/ad_list.jpg" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <!-- // 광고 -->
+
+                        <li>
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name ellipsis">정남 IC사거리 투자용 단독주택 추천! (도로인접)</div>
+                                    <small class="type">
+                                        <span class="division-area">
+                                            <span class="division bullet">단독/다가구</span>
+                                            <span class="division bullet">955㎡ (288.98평)</span>
+                                        </span>
+                                    </small>
+
+                                    <div class="price">매매 6억 <span>(207만/3.3㎡)</span></div>
+
+                                    <div class="writer">양지공인중개사사무소</div>
+
+                                    <div class="division-area date">
+                                        <span class="division bullet"><span class="date">2019.10.11</span></span>
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>254</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>324</span></span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button> <!-- 상세보기 -->
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name ellipsis">정남 IC사거리 투자용 단독주택 추천! (도로인접)</div>
+                                    <small class="type">
+                                        <span class="division-area">
+                                            <span class="division bullet">단독/다가구</span>
+                                            <span class="division bullet">955㎡ (288.98평)</span>
+                                        </span>
+                                    </small>
+
+                                    <div class="price">매매 6억 <span>(207만/3.3㎡)</span></div>
+
+                                    <div class="writer">양지공인중개사사무소</div>
+
+                                    <div class="division-area date">
+                                        <span class="division bullet"><span class="date">2019.10.11</span></span>
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>254</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>324</span></span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button> <!-- 상세보기 -->
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name ellipsis">정남 IC사거리 투자용 단독주택 추천! (도로인접)</div>
+                                    <small class="type">
+                                        <span class="division-area">
+                                            <span class="division bullet">단독/다가구</span>
+                                            <span class="division bullet">955㎡ (288.98평)</span>
+                                        </span>
+                                    </small>
+
+                                    <div class="price">매매 6억 <span>(207만/3.3㎡)</span></div>
+
+                                    <div class="writer">양지공인중개사사무소</div>
+
+                                    <div class="division-area date">
+                                        <span class="division bullet"><span class="date">2019.10.11</span></span>
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>254</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>324</span></span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button> <!-- 상세보기 -->
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name ellipsis">정남 IC사거리 투자용 단독주택 추천! (도로인접)</div>
+                                    <small class="type">
+                                        <span class="division-area">
+                                            <span class="division bullet">단독/다가구</span>
+                                            <span class="division bullet">955㎡ (288.98평)</span>
+                                        </span>
+                                    </small>
+
+                                    <div class="price">매매 6억 <span>(207만/3.3㎡)</span></div>
+
+                                    <div class="writer">양지공인중개사사무소</div>
+
+                                    <div class="division-area date">
+                                        <span class="division bullet"><span class="date">2019.10.11</span></span>
+                                        <span class="division bullet"><span class="hits"><span class="hide">조회수 : </span>254</span></span>
+                                        <span class="division bullet"><span class="likes"><span class="hide">좋아요수 : </span>324</span></span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button> <!-- 상세보기 -->
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- // 목록 -->
+            </div>
+
+            <button type="button" class="btn mute stroke gray btn-fold">인허가 찾기 목록 접기</button>
+        </article>
+
+        <hr id="list-area-end">

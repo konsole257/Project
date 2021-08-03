@@ -1,0 +1,77 @@
+
+.mypage .profile.write h3.tit { display:inline-block; width:100%; padding-bottom:20px; font-size:16px; color:#202020; border-bottom:1px solid #b4b4b4; }
+.mypage .profile.write h3.tit .bul { margin-left:10px; font-size:12px; line-height:16px; color:#767676; }
+.mypage .profile.write h3.tit .bul:before { content:'*'; position:relative; top:2px; display:inline-block; margin-right:4px; font-size:12px; color:#cc0a0a; }
+.mypage .profile.write .inner > .header { position:relative; padding-bottom:18px; border-bottom:1px solid #b4b4b4; }
+.mypage .profile.write .inner > .header .tit { font-size:16px; }
+.mypage .profile.write .contents { margin-top:24px; }
+
+.mypage .profile.write .profile-area .input-area .row { display:flex; }
+.mypage .profile.write .profile-area .input-area .row + .row { margin-top:10px; }
+.mypage .profile.write .profile-area .input-area .row .column { width:433px; display:flex; flex-wrap:wrap; }
+.mypage .profile.write .profile-area .input-area .row .column + .column { padding-left:8px; width:calc(100% - 433px); box-sizing:border-box; }
+.mypage .profile.write .profile-area .input-area .row .column + .column .field-tit { width:190px; text-align:center; }
+.mypage .profile.write .profile-area .input-area .row .column + .column .field-input { width:calc(100% - 190px); }
+.mypage .profile.write .profile-area .input-area .row .field-tit { display:inline-block; width:120px; font-size:14px; line-height:40px; }
+.mypage .profile.write .profile-area .input-area .row .field-tit .bul { position:relative; top:2px; margin-left:3px; display:inline-block; vertical-align:top; color:#cc0a0a; }
+.mypage .profile.write .profile-area .input-area .row .field-input { display:block; width:calc(100% - 120px); }
+.mypage .profile.write .profile-area .input-area .row .field-input input { height:40px; line-height:40px; box-sizing:border-box; }
+
+.mypage .profile.write .profile-area .input-area .row.row-establish .field-input input { width:313px; }
+
+.mypage .profile.write .profile-area .input-area .row.row-address .field-input {font-size:0;}
+.mypage .profile.write .profile-area .input-area .row.row-address .field-input input { width:240px; }
+.mypage .profile.write .profile-area .input-area .row.row-address .field-input .btn { width:108px; height:40px; line-height:38px; }
+.mypage .profile.write .profile-area .input-area .row.row-address .field-input .w351 { margin-left:8px; width:351px; }
+.mypage .profile.write .profile-area .input-area .row.row-address .field-input .w710 { margin-left:116px; margin-top:10px; width:710px; }
+.mypage .profile.write .profile-area .input-area .row.row-address .map-area { width:calc(100% + 120px); margin:24px 0 14px -120px; }
+
+.mypage .profile.write .profile-area .input-area .row.row-kinds .field-tit { line-height:30px; }
+.mypage .profile.write .profile-area .input-area .row.row-kinds .field-input { display:flex; flex-wrap:wrap; }
+.mypage .profile.write .profile-area .input-area .row.row-kinds .field-input label { width:calc(100% / 6); height:30px; box-sizing:border-box; border:1px solid #b4b4b4; margin-top:-1px; }
+.mypage .profile.write .profile-area .input-area .row.row-kinds .field-input label + label { border-left:none; }
+.mypage .profile.write .profile-area .input-area .row.row-kinds .field-input label span { width:100%; height:100%; line-height:28px; text-align:center; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
+.mypage .profile.write .profile-area .input-area .row.row-kinds .field-input label:nth-child(1),
+.mypage .profile.write .profile-area .input-area .row.row-kinds .field-input label:nth-child(2),
+.mypage .profile.write .profile-area .input-area .row.row-kinds .field-input label:nth-child(3),
+.mypage .profile.write .profile-area .input-area .row.row-kinds .field-input label:nth-child(4),
+.mypage .profile.write .profile-area .input-area .row.row-kinds .field-input label:nth-child(5),
+.mypage .profile.write .profile-area .input-area .row.row-kinds .field-input label:nth-child(6) { margin-top:0; }
+.mypage .profile.write .profile-area .input-area .row.row-kinds .field-input label:nth-child(6n - 5) { border-left:1px solid #b4b4b4; }
+.mypage .profile.write .profile-area .input-area .row.row-kinds .field-input input[type="checkbox"]:checked + span { background:#062a73; color:#fff; }
+
+.mypage .profile.write .profile-area .input-area .row.row-file .file { font-size:0; }
+.mypage .profile.write .profile-area .input-area .row.row-file .file input[type="text"] { width:313px; }
+.mypage .profile.write .profile-area .input-area .row.row-file .file .btn { width:108px; height:40px; line-height:40px; margin-left:8px; }
+.mypage .profile.write .profile-area .input-area + .btn-area { margin-top:32px; text-align:center; font-size:0; }
+.mypage .profile.write .profile-area .input-area + .btn-area button + button { margin-left:6px; }
+
+.mypage .profile.write .portfolio-area { margin-top:20px; border-top:1px solid #e0e0e0; }
+.mypage .profile.write .portfolio-area .contents .guide-tit { line-height:28px; }
+.mypage .profile.write .portfolio-area .contents .guide-tit .bul { margin-left:3px; display:inline-block; line-height:28px; vertical-align:top; color:#cc0a0a; }
+.mypage .profile.write .portfolio-area .contents .guide-tit .btn { float:right; vertical-align:top; width:108px; }
+.mypage .profile.write .portfolio-area .contents .guide-area { margin-top:10px; }
+.mypage .profile.write .portfolio-area .contents .guide-area:after { content:""; display:block; clear:both; }
+.mypage .profile.write .portfolio-area .contents .guide { position:relative; float:left; width:289px; margin-top:41px; margin-left:40px; }
+.mypage .profile.write .portfolio-area .contents .guide:nth-child(3n -2) { margin-left:-1px; clear:both; }
+.mypage .profile.write .portfolio-area .contents .guide:nth-child(3n -2):before { content:''; position:absolute; left:0; top:-20px; display:block; width:946px; height:1px; background:#e0e0e0; }
+.mypage .profile.write .portfolio-area .contents .guide:nth-child(2) { width:288px; }
+.mypage .profile.write .portfolio-area .contents .guide:nth-child(1),
+.mypage .profile.write .portfolio-area .contents .guide:nth-child(2),
+.mypage .profile.write .portfolio-area .contents .guide:nth-child(3) { margin-top:0; }
+.mypage .profile.write .portfolio-area .contents .guide:nth-child(1):before { display:none; }
+.mypage .profile.write .portfolio-area .contents .guide .tit { font-size:14px; color:#4a4a4a; }
+.mypage .profile.write .portfolio-area .contents .guide .preview-area { margin:10px 0 24px; border-radius:4px; background:#efefef; }
+.mypage .profile.write .portfolio-area .contents .guide .preview-area img { width:100%; height:140px; }
+.mypage .profile.write .portfolio-area .contents .guide .input-file { font-size:0; }
+.mypage .profile.write .portfolio-area .contents .guide .input-file input[type="text"] { width:calc(100% - 88px); background:#fff; }
+.mypage .profile.write .portfolio-area .contents .guide .input-file .btn-file { width:80px; margin-left:8px; }
+.mypage .profile.write .portfolio-area .contents .guide .btn-area { margin-top:15px; text-align:center; }
+.mypage .profile.write .portfolio-area .contents .guide .btn-area .btn { width:76px; height:28px; line-height:28px; }
+.mypage .profile.write .portfolio-area .contents .edit-area { margin-top:24px; }
+
+.mypage .profile.write .btn-area.create { font-size:0; text-align:center; margin-top:32px; }
+.mypage .profile.write .btn-area.create .btn { margin-left:5px; }
+.mypage .profile.write .btn-area.create .btn:first-child { margin-left:0; }
+.mypage .profile.write .btn-area.create button + button { margin-left:6px; }
+/**/

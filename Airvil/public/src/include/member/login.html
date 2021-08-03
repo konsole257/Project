@@ -1,0 +1,63 @@
+<article class="member-area @@member-classname">
+    <!-- 제목 상단 // -->
+    <header class="header">
+        <div class="inner">
+            <button type="button" class="btn mute btn-close" onclick="fn.removeActive('.member-area');">닫기</button>
+
+            <h2 class="tit">로그인</h2>
+        </div>
+    </header>
+    <!-- // 제목 상단 -->
+
+    <!-- 컨텐츠 영역 // -->
+    <div class="contents">
+        <div class="inner">
+            <h2 class="hide">로그인 입력</h2>
+
+            <div class="scrollbar">
+                <!-- 입력 // -->
+                <form class="form-area">
+                    <fieldset>
+                        <legend class="hide">로그인 입력</legend>
+                        <div class="field-input">
+                            <input type="text" placeholder="아이디" title="아이디 입력" onclick="this.parentNode.querySelector('.alert').style.display='block'">
+                            <small class="alert" style="display:none">아이디를 확인해주세요.</small>
+                        </div>
+                        <div class="field-input">
+                            <input type="password" placeholder="비밀번호" title="비밀번호 입력" onclick="this.parentNode.querySelector('.alert').style.display='block'">
+                            <small class="alert" style="display:none">비밀번호를 확인해주세요.</small>
+                        </div>
+                        <div class="field-input">
+                            <label><input type="checkbox" class="type1"><span>아이디 저장</span></label>
+                        </div>
+                        <div class="btn-area">
+                            <button type="button" class="btn big fill blue btn-login">로그인</button>
+                        </div>
+                    </fieldset>
+                </form>
+                <!-- // 입력 -->
+
+                <div class="member-link">
+                    <a href="#">회원가입</a>
+                    <a href="#">아이디 찾기</a>
+                    <a href="#">비밀번호 찾기</a>
+                </div>
+
+                <!-- sns 가입 // -->
+                <div class="sns-area">
+                    <a href="#"><img src="@@common/resources/images/temp/member_snslink_naver.png" alt="네이버로 시작하기"></a>
+                    <a href="#"><img src="@@common/resources/images/temp/member_snslink_kakao.png" alt="카카오로 시작하기"></a>
+                </div>
+                <!-- // sns 가입 -->
+            </div>
+
+            <!-- footer link // -->
+            <div class="footer-link">
+                <a href="#">공지사항</a>
+                <a href="#">광고, 제휴 문의</a>
+            </div>
+            <!-- //footer link -->
+        </div>
+    </div>
+    <!-- //컨텐츠 영역 -->
+</article>

@@ -1,0 +1,86 @@
+.mypage .user > .scrollbar > .scrollbar > .inner > .header { position:relative; }
+.mypage .user > .scrollbar > .scrollbar > .inner > .header .tit { display:inline-block; font-size:16px; color:#4a4a4a; }
+.mypage .user > .scrollbar > .scrollbar > .inner > .header .number { display:inline-block; margin-left:15px; }
+.mypage .user > .scrollbar > .scrollbar > .inner > .header .select { position:absolute; top:0; right:0; width:70px; height:32px; }
+.mypage .user > .scrollbar > .scrollbar > .inner > .header .select .ui-selectmenu-text { text-align:left; line-height:32px; }
+.mypage .user > .scrollbar > .scrollbar > .inner > .header { padding-bottom:20px; border-bottom:1px solid #b4b4b4; }
+.mypage .user.write .post-area { padding-top:24px; padding-bottom:24px; border-bottom:1px solid #b4b4b4; }
+.mypage .user.write .row { display:flex; width:100%; }
+.mypage .user.write .row + .row { position:relative; margin-top:10px; }
+.mypage .user.write .row.row-topline { margin-top:49px; }
+.mypage .user.write .row.row-topline:before { content:''; position:absolute; left:0; top:-28px; display:block; width:100%; height:1px; background:#e0e0e0; }
+.mypage .user.write .row .field-tit { width:120px; line-height:40px; }
+.mypage .user.write .row .field-input { position:relative; width:410px; }
+.mypage .user.write .row .field-input input { height:40px; line-height:40px; box-sizing:border-box; }
+.mypage .user.write .row .field-input .select.type1 { height:40px; }
+.mypage .user.write .row .field-input .btn { height:40px; line-height:40px; }
+.mypage .user.write .row .field-input .alert { display:block; padding-bottom:4px; font-size:12px; line-height:24px;color:#cc0a0a;}
+
+.mypage .user.write .row.row-email .field-input { font-size:0; }
+.mypage .user.write .row.row-email .field-input > input { width:190px; vertical-align:top; }
+.mypage .user.write .row.row-email .field-input .at { display:inline-block; width:20px; font-size:14px; height:40px; line-height:40px; vertical-align:top; text-align:center; }
+.mypage .user.write .row.row-email .field-input .select { width:200px; font-size:14px; vertical-align:top; }
+.mypage .user.write .row.row-phone .field-input { font-size:0; }
+.mypage .user.write .row.row-phone .field-input input { width:294px; }
+.mypage .user.write .row.row-phone .field-input .btn { width:108px; margin-left:8px; }
+.mypage .user.write .row.row-otp .field-input { font-size:0; }
+.mypage .user.write .row.row-otp .field-input input { width:294px; padding-right:56px; }
+.mypage .user.write .row.row-otp .field-input .timelimit { position:absolute; left:238px; top:0; width:56px; height:40px; line-height:40px; font-size:13px; color:#cc0a0a; text-align:center; }
+.mypage .user.write .row.row-otp .field-input .btn { width:108px; margin-left:8px; }
+.mypage .user.write .row.row-otp .field-input .alert { margin-bottom:-10px; }
+.mypage .user.write .row.row-otp .field-input .alert.gray { color:#767676; }
+.mypage .user.write .inner > .btn-area { margin-top:32px; text-align:center; font-size:0; }
+.mypage .user.write .inner > .btn-area .btn + .btn { margin-left:6px; }
+
+.mypage .user .popup.popup-pwupdate > .inner { width:430px; padding:40px; box-sizing:border-box; }
+.mypage .user .popup.popup-pwupdate .header { padding:0; border-bottom:1px solid #4a4a4a; }
+.mypage .user .popup.popup-pwupdate .header .tit  { height:46px; font-size:20px; line-height:46px; padding:0; }
+.mypage .user .popup.popup-pwupdate .header .btn-close { right:-9px; }
+.mypage .user .popup.popup-pwupdate .header .btn-close:before { background-position:-175px -34px; }
+.popup.popup-pwupdate .contents .input-area { margin-top:24px; }
+.popup.popup-pwupdate .contents .row { display:flex; flex-wrap:wrap; }
+.popup.popup-pwupdate .contents .row + .row { margin-top:10px; }
+.popup.popup-pwupdate .contents .row .field-tit { width:110px; font-size:14px; line-height:36px; }
+.popup.popup-pwupdate .contents .row .field-input { width:calc(100% - 110px); }
+.popup.popup-pwupdate .contents .row .field-input .alert.gray { color:#767676; }
+.popup.popup-pwupdate .contents .row:nth-child(3) .field-input .alert { margin-bottom:-10px; }
+.popup.popup-pwupdate .contents .btn-area { margin-top:24px; font-size:0; text-align:center; }
+.popup.popup-pwupdate .contents .btn-area .btn + .btn { margin-left:6px; }
+
+
+.mypage .user.secession .row { display:flex; width:100%; flex-wrap:wrap; }
+.mypage .user.secession .row + .row { position:relative; margin-top:10px; }
+.mypage .user.secession .row .field-tit { width:120px; line-height:40px; }
+.mypage .user.secession .row .field-input { position:relative; width:calc(100% - 120px); }
+.mypage .user.secession .row .field-input input { height:40px; line-height:40px; box-sizing:border-box; }
+.mypage .user.secession .row .field-input .select.type1 { height:40px; }
+.mypage .user.secession .row .field-input .btn { height:40px; line-height:40px; }
+.mypage .user.secession .row .field-input .alert { display:block; padding-bottom:4px; font-size:12px; line-height:24px;color:#cc0a0a;}
+.mypage .user.secession .benefit-area { font-size:0; padding:20px 0;background:#ebf1ff; border-radius:4px; }
+.mypage .user.secession .benefit-area .tx { display:inline-block; width:630px; font-size:16px; line-height:24px; text-align:center; vertical-align:middle; }
+.mypage .user.secession .benefit-area .tx b { color:#1d53bf; }
+.mypage .user.secession .benefit-area .point { position:relative; display:inline-block; width:316px; font-size:14px; padding:10px 0 10px 38px; border-left:1px solid #e7eaf3; box-sizing:border-box; vertical-align:middle; }
+.mypage .user.secession .benefit-area .point:after { content:''; position:absolute; right:40px; top:50%; margin-top:-30px; display:block; width:60px; height:60px; background:url('@@css/resources/images/mypage/icon.png') no-repeat 0 0; }
+.mypage .user.secession .benefit-area .point b { display:block; margin-top:18px; font-size:24px; color:#1d53bf; }
+.mypage .user.secession .header { margin-top:40px; }
+.mypage .user.secession > .scrollbar > .scrollbar > .inner > .header { border-bottom:none; }
+.mypage .user.secession > .scrollbar > .scrollbar > .inner > .header + .secession-area,
+.mypage .user.secession > .scrollbar > .scrollbar > .inner > .header + .otp-area { border-top:1px solid #b4b4b4; }
+.mypage .user.secession .secession-area { padding-top:13px; padding-bottom:13px; }
+.mypage .user.secession .secession-area .row-reason .field-input { padding-top:6px; }
+.mypage .user.secession .secession-area .row-reason label { display:inline-block; height:28px; line-height:28px; margin-right:40px; }
+.mypage .user.secession .secession-area .row-reason + .row { margin-top:40px; }
+.mypage .user.secession .secession-area .row-reason + .row:before { content:''; position:absolute; left:0; top:-23px; display:block; width:100%; height:1px; background:#e0e0e0; }
+.mypage .user.secession .otp-area { padding-top:24px; }
+.mypage .user.secession .otp-area .field-input { position:relative; }
+.mypage .user.secession .otp-area .btn-push { width:108px; }
+.mypage .user.secession .otp-area .btn-push + input { margin-left:8px; width:294px; }
+.mypage .user.secession .otp-area .btn-ok { width:108px; margin-left:8px; }
+.mypage .user.secession .otp-area .field-input { font-size:0; }
+.mypage .user.secession .otp-area .field-input .timelimit { position:absolute; left:353px; top:0; width:56px; height:40px; line-height:40px; font-size:13px; color:#cc0a0a; text-align:center; }
+.mypage .user.secession .otp-area .field-input .alert { margin-left:116px; margin-bottom:-10px; }
+.mypage .user.secession .btn-area.end { margin-top:32px; text-align:center; font-size:0; }
+.mypage .user.secession .btn-area.end .btn + .btn { margin-left:6px; }
+.mypage .user.secession .info-txt { margin-top:40px; padding:18px 32px; background:#efefef; border-radius:10px; }
+.mypage .user.secession .info-txt li { position:relative; font-size:13px; line-height:24px; color:#767676; }
+.mypage .user.secession .info-txt li:before { content:''; position:absolute; left:-8px; top:50%; margin-top:-1px; display:block; width:2px; height:2px; background:#767676; }

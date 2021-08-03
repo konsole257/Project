@@ -1,0 +1,44 @@
+<article class="data-menu"><!-- class 변경 : 2020.01.16 -->
+                <header class="header">
+                    <h2 class="tit">부동산<br> 비서</h2>
+
+                    <!-- 삭제 : 2020.01.16
+                    <div class="type">
+                        <a href="@@common/dataAiLand.html" class="active">토지</a>
+                        <a href="@@common/dataAiBuilding.html">건물</a>
+                    </div> -->
+                </header>
+
+                <!-- 수정 : 2020.01.16 // -->
+                <ul class="menu">
+                    <li class="active">
+                        <a href="@@common/dataAiLand.html">부동산비서</a>
+                        <ul>
+                            <li><a href="@@common/dataAiLand.html">토지</a></li>
+                            <li class="active"><a href="@@common/dataAiBuilding.html">일반건물</a></li>
+                            <li><a href="@@common/dataAiBuilding.html">집합건물</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="@@common/dataBuild.html">건축인허가</a>
+                    </li>
+                    <li>
+                        <a href="@@common/dataDevelop.html">개발행위허가</a>
+                    </li>
+                </ul>
+                <!-- // 수정 : 2020.01.16 -->
+
+                <div class="btn-area">
+                    <button type="button" class="btn small fill blue btn-filter" onclick="fn.toggleActive('.filter-area');">필터</button>
+                    <a href="#popup-list-settings" class="btn small stroke gray btn-settings" onclick="fn.popupOpen('#popup-list-settings');">목록설정</a>
+                    <button type="button" class="btn small fill blue btn-excel">EXCEL</button>
+                </div>
+            </article>
+
+            <!-- 필터 : 2020.01.16 : 추가 // -->
+            @@include('./include/data/ai/building/filter.html')
+            <!-- // 필터 -->
+
+            <!-- 목록 설정 // -->
+            @@include('./include/data/ai/building/settings.html')
+            <!-- // 목록 설정 -->

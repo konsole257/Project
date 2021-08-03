@@ -1,0 +1,286 @@
+<article class="filter-area">
+                <!-- 필터 상단 // -->
+                <header class="header">
+                    <div class="inner">
+                        <button type="button" class="btn mute btn-close" onclick="fn.removeActive('.filter-area, .btn-filter'); ">닫기</button>
+
+                        <h2 class="tit">필터</h2>
+                    </div>
+                </header>
+                <!-- // 필터 상단 -->
+
+                <!-- 필터 내용 // -->
+                <div class="contents">
+                    <div class="scrollbar">
+                        <div class="inner">
+                            <div class="row">
+                                <div class="field-tit">최근 설정 필터</div>
+                                <div class="field-con con-latest">
+                                    <ul class="scrollbar">
+                                        <li><button type="button" class="active"><div class="ellipsis"><span>개포동</span><span>단독주택</span><span>공동주택</span><span>가설건축물</span><span>개포동</span><span>단독주택</span></div></button><button type="button" class="btn mute btn-close">삭제</button></li><!-- 수정 : 2020.01.22 --><!-- 선택시 class="active" : 수정 : 2020.01.31  -->
+                                        <li><button type="button"><div class="ellipsis"><span>개포동</span><span>단독주택</span><span>공동주택</span></div></button><button type="button" class="btn mute btn-close">삭제</button></li>
+                                        <li><button type="button"><div class="ellipsis"><span>개포동</span><span>단독주택</span><span>공동주택</span><span>가설건축물</span></div></button><button type="button" class="btn mute btn-close">삭제</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- 지역 // -->
+                            <div class="row">
+                                <div class="field-tit">지역</div>
+                                <div class="field-con con-region">
+                                    <ol>
+                                        <li>
+                                            <span class="select type2">
+                                            	<select title="지역 선택">
+                                            		<option>서울특별시</option>
+                                            		<option>부산광역시</option>
+                                            		<option>인천광역시</option>
+                                                    <option>광주광역시</option>
+                                                    <option>광주광역시</option>
+                                            	</select>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="select type2">
+                                            	<select title="지역 선택">
+                                            		<option>강남구</option>
+                                            		<option>강남구</option>
+                                            		<option>강남구</option>
+                                                    <option>강남구</option>
+                                                    <option>강남구</option>
+                                            	</select>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="select type2">
+                                            	<select title="지역 선택">
+                                            		<option>개포동</option>
+                                            		<option>개포동</option>
+                                                    <option>개포동</option>
+                                                    <option>개포동</option>
+                                                    <option>개포동</option>
+                                            	</select>
+                                            </span>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <!-- // 지역 -->
+
+                            <!-- 주용도 // -->
+                            <div class="row">
+                                <div class="field-tit line">주용도 <label><input type="checkbox" class="type1" data-all onchange="fn.filterReset(this);"><span>전체</span></label></div>
+                                <div class="field-con">
+                                    <div class="filter">
+                                        <div class="filter-tit" onclick="fn.toggleActive(this);">주거용</div>
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>단독주택</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>공동주택</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter">
+                                        <div class="filter-tit" onclick="fn.toggleActive(this);">상업용</div>
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>제1종근린</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>제2종근린</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>판매시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>위락시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>숙박시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>운수시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>위험물저장/처리</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>자동차시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>야영장시설</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter">
+                                        <div class="filter-tit" onclick="fn.toggleActive(this);">문교사회용</div>
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>문화집회시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>종교시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>의료시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>교육연구시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>노유자시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>수련시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>운동시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>관광휴게시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>묘지시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>장례시설</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter">
+                                        <div class="filter-tit" onclick="fn.toggleActive(this);">업무용</div>
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>동/식물관련</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>공장</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>창고시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>자원순환시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>교정및군사</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>방송통신시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>발전시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>업무시설</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter">
+                                        <div class="filter-tit" onclick="fn.toggleActive(this);">가설건축물</div>
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>가설건축물</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>기타및미분류</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 주용도 -->
+
+                            <!-- 허가구분 // -->
+                            <div class="row">
+                                <div class="field-tit line">허가구분 <label><input type="checkbox" class="type1" onchange="fn.filterReset(this);"><span>전체</span></label></div>
+                                <div class="field-con">
+                                    <div class="filter dbl">
+                                        <div class="filter-tit" onclick="fn.toggleActive(this);">건축신고</div>
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>신축신고</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>개축신고</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>대수선신고</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>용도변경신고</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>재축신고</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>중축신고</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>이전신고</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>가설건축물신고</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>발코니구조변경<br> 신고</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>주거환경지구<br> 신고</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>개발제한구역<br> 가설신고</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>개발제한구역<br> 건축신고</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>행위신고용도<br> 변경</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>행위신고증축</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter dbl">
+                                        <div class="filter-tit" onclick="fn.toggleActive(this);">건축허가</div>
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>신축허가</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>개축허가</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>대수선허가</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>용도변경허가</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>재축허가</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>중축허가</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>재개발건축허가</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>재건축건축허가</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>주거환경지구<br> 허가</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>개발제한구역<br> 건축허가</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>행위허가증설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>행위허가증축</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>행위허가개축</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>행위허가대수선</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>행위허가<br> 용도변경</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>공용건축물</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>협의건축물</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter dbl">
+                                        <div class="filter-tit" onclick="fn.toggleActive(this);">사업승인</div>
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>재개발사업승인</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>재건축사업승인</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>주택건설사업<br> 계획승인</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>대지조성사업<br> 계획승인</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 허가구분 -->
+
+                            <!-- 건축단계 // -->
+                            <div class="row">
+                                <div class="field-tit">건축단계</div>
+                                <div class="field-con">
+                                    <div class="filter">
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>허가</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>착공예정</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>착공</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>착공연기</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>승인</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 건축단계 -->
+
+                            <!-- 인허가일 // -->
+                            <div class="row">
+                                <div class="field-tit">인허가일</div>
+                                <div class="field-con">
+                                    <div class="filter">
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>1주</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>1개월</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>3개월</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>6개월</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>1년</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>2년</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>3년</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>5년</span></label>
+                                            </span>
+                                        </div>
+
+                                        <div class="ea-area">
+                                            <input type="text" title="개월 입력">
+                                            <span class="unit">개월</span>
+                                        </div>
+                                        <span class="hyphen">~</span>
+                                        <div class="ea-area">
+                                            <input type="text" title="개월 입력">
+                                            <span class="unit">개월</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 인허가일 -->
+                        </div>
+                    </div>
+                    <!-- 수정 : 2020.01.21 // -->
+                    <div class="btn-area">
+                        <button type="button" class="btn big stroke gray" onclick="fn.filterAllReset(this);">초기화</button>
+                        <button type="button" class="btn big fill blue">적용</button>
+                    </div>
+                    <!-- // 수정 : 2020.01.21 -->
+                </div>
+                <!-- // 참여하기 내용 -->
+            </article>
+
+            <hr id="filter-area-end">

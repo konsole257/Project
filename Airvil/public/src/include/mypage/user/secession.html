@@ -1,0 +1,102 @@
+<div class="scrollbar">
+    <div class="inner">
+        <h3 class="tit">회원정보</h3>
+
+        <div class="tab-menu">
+            <a href="#">회원정보 수정</a>
+            <a href="#" class="active">회원 탈퇴</a>
+        </div>
+
+        <div class="header">
+            <h4 class="tit">소멸예정 혜택</h4>
+        </div>
+
+        <section class="benefit-area">
+            <div class="contents">
+                <div class="tx">
+                    <b>그 동안 에어빌 서비스를 이용해주셔서 감사합니다.</b><br>
+                    회원 탈퇴 전 다음 사항을 숙지해 주시기 바랍니다.
+                </div>
+                <div class="point">
+                    보유 포인트
+                    <b>19,900원</b>
+                </div>
+            </div>
+        </section>
+
+        <div class="header">
+            <h4 class="tit">회원탈퇴 신청</h4>
+        </div>
+
+        <!-- 회원탈퇴 신청 // -->
+        <section class="secession-area">
+            <div class="contents">
+                <div class="input-area">
+                    <div class="row row-reason">
+                        <span class="field-tit">탈퇴사유</span>
+
+                        <span class="field-input">
+                            <label><input type="radio" name="reason"><span>컨텐츠 등 이용할만한 서비스 부족</span></label>
+                            <label><input type="radio" name="reason"><span>이용 빈도 낮음</span></label>
+                            <label><input type="radio" name="reason"><span>사이트 속도 및 안정성 불만</span></label>
+                            <label><input type="radio" name="reason"><span>실질적인 혜택 부족</span></label>
+                            <label><input type="radio" name="reason"><span>사이트 이용 불편</span></label>
+                            <label><input type="radio" name="reason"><span>기타</span></label>
+                        </span>
+                    </div>
+
+                    <div class="row row-otp">
+                        <span class="field-tit">개선 사항</span>
+
+                        <span class="field-input">
+                            <input type="text" placeholder="개선 사항을 입력해주세요">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- // 회원탈퇴 신청 -->
+
+        <div class="header">
+            <h4 class="tit">회원 탈퇴 의사 확인을 위해 인증번호를 받고 회원 탈퇴를 진행해주세요.</h4>
+        </div>
+
+        <!-- 인증번호 // -->
+        <section class="otp-area">
+            <div class="contents">
+                <div class="input-area">
+                    <div class="row row-otp">
+                        <span class="field-tit">인증번호</span>
+
+                        <span class="field-input">
+                            <button type="button" class="btn fill big gray btn-push">인증번호 전송</button>
+                            <input type="text" placeholder="인증번호 입력" onclick="this.parentNode.querySelector('.alert').style.display='block'">
+                            <span class="timelimit"></span>
+                            <button type="button" class="btn fill big gray btn-ok" onclick="fn.deltaTimer('.timelimit',180);">확인</button>    <!-- fn.deltaTimer('타겟 선택자','시간 초단위로 입력 (3분 = 180)') -->
+                            <small class="alert" style="display:none;">인증번호를 다시 확인해주세요.</small>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- // 인증번호 -->
+
+        <div class="btn-area end">
+            <button type="button" class="btn big stroke gray">취소</button>
+            <button type="button" class="btn big fill blue">회원 탈퇴</button>
+        </div>
+
+        <div class="info-txt">
+            <ul>
+                <li>충전 포인트 잔액이 남아 있는 경우 탈퇴가 불가능합니다.</li>
+                <li>회원탈퇴 후 재가입 시 기존 아이디는 사용이 불가능합니다.</li>
+                <li>회원 탈퇴 시점에 참여한 이벤트가 있을 경우 당첨 무효 처리됩니다.</li>
+                <li>회원 탈퇴가 진행되는 과정에서 뉴스레터가 발송될 수 있습니다.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- footer : 추가 : 2020.01.08 // -->
+	@@include('./include/sub_footer.html')
+	<!-- //footer -->
+</div>

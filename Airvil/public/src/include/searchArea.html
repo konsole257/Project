@@ -1,0 +1,155 @@
+<div id="search-area" class="active"><!-- class="active"추가 : 2019.12.04 -->
+			<div class="inner">
+				<!-- 검색 // -->
+				<form class="form-area">
+					<fieldset>
+						<legend class="hide">검색</legend>
+						<div class="field-input">
+							@@if (context.searchPlaceHolder !== "expert") {
+								<input type="text" placeholder="주소 또는 해시태그 입력" title="주소 또는 해시태그 입력" onkeyup="fn.autoCompleate(); fn.inputWordDel(this, '#search-area .btn-del');" onfocus="fn.autoCompleate(); fn.inputWordDel(this, '#search-area .btn-del');" onblur="fn.autoCompleate('close'); fn.inputWordDel(this, '#search-area .btn-del');"><!-- 수정 : 2020.01.22 --><!-- 전문가찾기 외 input -->
+								<!--<input type="text" placeholder="전문가명 또는 해시태그 입력" title="주소 또는 해시태그 입력" onkeyup="fn.autoCompleate()" onfocus="fn.autoCompleate()" onblur="fn.autoCompleate('close');">--><!-- 전문가찾기 input -->
+							} @@if (context.searchPlaceHolder === "expert") {
+								<!--<input type="text" placeholder="주소 또는 해시태그 입력" title="주소 또는 해시태그 입력" onkeyup="fn.autoCompleate()" onfocus="fn.autoCompleate()" onblur="fn.autoCompleate('close');">--><!-- 전문가찾기 외 input -->
+								<input type="text" placeholder="전문가명 또는 해시태그 입력" title="주소 또는 해시태그 입력" onkeyup="fn.autoCompleate(); fn.inputWordDel(this, '#search-area .btn-del');" onfocus="fn.autoCompleate(); fn.inputWordDel(this, '#search-area .btn-del');" onblur="fn.autoCompleate('close'); fn.inputWordDel(this, '#search-area .btn-del');"><!-- 수정 : 2020.01.22 --><!-- 전문가찾기 input -->
+							}
+							<button type="reset" class="btn mute btn-del">검색어 삭제</button><!-- 추가 : 2020.01.22 -->
+							<button type="submit" class="btn mute btn-search">검색</button>
+						</div>
+					</fieldset>
+				</form>
+				<!-- // 검색 -->
+
+				<!-- 자동검색어완성 // -->
+				<div class="autocompleate-area">
+					<!-- 북마크 저장 주소지 // -->
+					<div class="bookmark"><!-- 수정 : class="scroll삭제" : 2019.12.13 -->
+						<ul>
+							<!-- 반복영역 // -->
+							<li>
+								<a href="#">
+									<span>서울시 서초구 반포1동 10-33</span>
+									<small>서초구원룸에 저장됨</small>
+								</a>
+							</li>
+							<!-- // 반복영역 -->
+							<li>
+								<a href="#">
+									<span>서울시 서초구 반포1동 10-33</span>
+									<small>서초구원룸에 저장됨</small>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>서울시 서초구 반포1동 10-33</span>
+									<small>서초구원룸에 저장됨</small>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>서울시 서초구 반포1동 10-33</span>
+									<small>서초구원룸에 저장됨</small>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- // 북마크 저장 주소지 -->
+
+					<!-- 구독 저장 리스트 : 추가 : 2020.01.21 // -->
+					<div class="subscribe">
+						<ul>
+							<!-- 반복영역 // -->
+							<li>
+								<a href="#">
+									<span>㈜가가인테리어</span>
+									<small>전문가찾기에 저장됨</small>
+								</a>
+							</li>
+							<!-- // 반복영역 -->
+							<li>
+								<a href="#">
+									<span>㈜가가인테리어</span>
+									<small>전문가찾기에 저장됨</small>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>㈜가가인테리어</span>
+									<small>전문가찾기에 저장됨</small>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>㈜가가인테리어</span>
+									<small>전문가찾기에 저장됨</small>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- // 구독 저장 리스트 -->
+
+					<!-- 해시태그 자동완성 // -->
+					<div class="hashtag"><!-- 수정 : class="scroll삭제" : 2019.12.13 -->
+						<ul>
+							<!-- 반복영역 // -->
+							<li><a href="#"><span>서울시 서초구 반포1동 10-33</span></a></li>
+							<!-- // 반복영역 -->
+							<li><a href="#"><span>서울시 서초구 반포1동 10-33</span></a></li>
+							<li><a href="#"><span>서울시 서초구 반포1동 10-33</span></a></li>
+							<li><a href="#"><span>서울시 서초구 반포1동 10-33</span></a></li>
+							<li><a href="#"><span>서울시 서초구 반포1동 10-33</span></a></li>
+						</ul>
+					</div>
+					<!-- // 해시태그 자동완성  -->
+
+					<!-- 지역 자동완성 // -->
+					<div class="area"><!-- 수정 : class="scroll삭제" : 2019.12.13 -->
+						<ul>
+							<!-- 반복영역 // -->
+							<li><a href="#"><span>서울시 서초구 반포1동 10-33</span></a></li>
+							<!-- // 반복영역 -->
+							<li><a href="#"><span>서울시 서초구 반포1동 10-33</span></a></li>
+							<li><a href="#"><span>서울시 서초구 반포1동 10-33</span></a></li>
+							<li><a href="#"><span>서울시 서초구 반포1동 10-33</span></a></li>
+							<li><a href="#"><span>서울시 서초구 반포1동 10-33</span></a></li>
+						</ul>
+					</div>
+					<!-- // 지역 자동완성 -->
+				</div>
+				<!-- // 자동검색어완성 -->
+
+				<!-- 키워드 // -->
+				<div class="keyword-area">
+					<h2 class="hide">키워드 검색</h2>
+
+					<div class="inner">
+						<label><input type="checkbox"><span>위탁시설</span></label>
+						<label><input type="checkbox"><span>서울도배</span></label>
+						<label><input type="checkbox"><span>신축</span></label>
+						<label><input type="checkbox"><span>단독주택</span></label>
+						<label><input type="checkbox"><span>위탁시설</span></label>
+						<label><input type="checkbox"><span>서울도배</span></label>
+						<label><input type="checkbox"><span>신축</span></label>
+						<label><input type="checkbox"><span>단독주택</span></label>
+						<label><input type="checkbox"><span>위탁시설</span></label>
+						<label><input type="checkbox"><span>서울도배</span></label>
+						<label><input type="checkbox"><span>신축</span></label>
+						<label><input type="checkbox"><span>단독주택</span></label>
+						<label><input type="checkbox"><span>위탁시설</span></label>
+						<label><input type="checkbox"><span>서울도배</span></label>
+						<label><input type="checkbox"><span>신축</span></label>
+						<label><input type="checkbox"><span>단독주택</span></label>
+						<label><input type="checkbox"><span>위탁시설</span></label>
+						<label><input type="checkbox"><span>서울도배</span></label>
+						<label><input type="checkbox"><span>신축</span></label>
+						<label><input type="checkbox"><span>단독주택</span></label>
+						<label><input type="checkbox"><span>위탁시설</span></label>
+						<label><input type="checkbox"><span>서울도배</span></label>
+						<label><input type="checkbox"><span>신축</span></label>
+						<label><input type="checkbox"><span>단독주택</span></label>
+					</div>
+
+					<button type="button" class="btn mute btn-keyword">키워드 열기/닫기</button><!-- 추가 : 2019.11.29 -->
+				</div>
+				<!-- // 키워드 -->
+			</div>
+		</div>

@@ -1,0 +1,131 @@
+<div class="scrollbar">
+    <div class="inner">
+        <h3 class="tit">활동관리</h3>
+
+        <div class="tab-menu">
+            <a href="#">게시글 관리</a>
+            <a href="#">매물 관리</a>
+            <a href="#" class="active">참여내역관리</a>
+            <a href="#">견적관리</a>
+            <a href="#">북마크 관리</a>
+            <a href="#">구독 관리</a>
+            <a href="#">리뷰 관리</a>
+        </div>
+
+        <div class="header">
+            <h4 class="tit">
+                인허가 참여 내역
+            </h4>
+
+            <button type="button" class="btn stroke small gray">참여하기 취소</button>
+        </div>
+
+        <!-- 인허가 내역 // -->
+        <section class="post-area">
+            <div class="contents">
+                <div class="table type1">
+                	<table>
+                		<caption class="hide">인허가 참여 정보</caption>
+
+                		<colgroup>
+                			<col style="width:180px;">
+                			<col style="width:292px;">
+                			<col style="width:180px;">
+                			<col>
+                		</colgroup>
+
+                		<tbody>
+                			<tr>
+                				<th>주소</th>
+                				<td>서울특별시 서초구 서초동 32-22</td>
+                				<th>주용도 /  건축구분</th>
+                				<td>
+                                    <span>단독주택(다가구주택)</span>
+                                    <span>신축</span>
+                                </td>
+                			</tr>
+
+                            <tr>
+                				<th>참여종류</th>
+                				<td>우편 / 2차</td>
+                				<th>참여상태</th>
+                				<td>발송대기</td>
+                			</tr>
+
+                            <tr>
+                				<th>소유자확인</th>
+                				<td>2019.11.23</td>
+                				<th>참여일</th>
+                				<td>2019.12.18</td>
+                			</tr>
+
+                            <tr>
+                				<th>제안업무</th>
+                				<td>토목공사업</td>
+                				<th>제안가</th>
+                				<td>총 1,202만원</td>
+                			</tr>
+
+                            <tr>
+                				<th>상세내용</th>
+                				<td colspan="3">
+                                    다가구주택만 전문으로 짓고 있는 가가건설입니다. 귀하의 서초동 부지에 7층 다가구주택 건축을 제안합니다.
+                                    1년에 약 7,000만원의 수익을 창출할 수 있을 것이라 예상합니다. 저희 회사 포트폴리오 보시고 꼭 연락주세요.
+                                    최선을 다해 시공하겠습니다. 감사합니다. 다가구주택만 전문으로 짓고 있는 가가건설입니다.
+                                    귀하의 서초동 부지에 7층 다가구주택 건축을 제안합니다. 1년에 약 7,000만원의 수익을 창출할 수 있을 것이라 예상합니다.
+                                    저희 회사 포트폴리오 보시고 꼭 연락주세요. 최선을 다해 시공하겠습니다. 감사합니다.
+                                </td>
+                			</tr>
+
+                            <tr>
+                				<th>파일첨부(회사소개서)</th>
+                				<td colspan="3">
+                                    가가건설소개서_2019ver.pdf
+                                    <span class="file">
+                                        <input type="text" placeholder="가가건설소개서_2019ver.pdf" disabled>
+                                        <span class="btn big fill gray btn-file" onclick="fn.fileBtn(this);">파일변경</span>
+                                        <input type="file" title="파일찾기" onchange="fn.file(this);">
+                                    </span>
+                                </td>
+                			</tr>
+                		</tbody>
+                	</table>
+                </div>
+
+                <div class="input-area">
+                    <div class="row">
+                        <span class="field-tit">비공개 메모</span>
+
+                        <span class="field-input">
+                            <input type="text" placeholder="비공개 메모 입력">
+                        </span>
+                    </div>
+
+                    <div class="row">
+                        <div class="map-area">
+                            <img src="@@common/resources/images/temp/mypage_map.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- // 인허가 내역 -->
+
+        <div class="btn-area create">
+            <button type="button" class="btn big stroke gray">취소</button>
+            <button type="button" class="btn big fill blue">수정</button>
+        </div>
+
+        <!-- 완료/취소 // -->
+        <!--
+        <div class="btn-area create">
+            <button type="button" class="btn big fill blue">목록</button>
+        </div>
+        -->
+        <!-- // 완료/취소 -->
+    </div>
+
+    <!-- footer : 추가 : 2020.01.08 // -->
+	@@include('./include/sub_footer.html')
+	<!-- //footer -->
+</div>

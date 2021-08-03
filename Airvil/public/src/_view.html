@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<!-- config// -->
+	@@include('./include/config.html')
+	<!-- //config -->
+</head>
+
+<body>
+
+<div id="wrap">
+	<!-- table// -->
+	@@include('./_component/table.html', {
+		"class": "table type2",
+        "caption": {
+            "text": "caption1",
+            "captionVisible": false
+        },
+        "colgroup": {
+            "colWidth": [
+                "100px",
+                "100px"
+            ]
+        },
+        "thead": {
+            "th": [
+                "th1",
+                "th2"
+            ]
+        },
+        "tbody": {
+            "td": [
+                "td1",
+                "td2"
+            ]
+        }
+	})
+	<!-- //table -->
+
+	<!-- select// -->
+	@@include('./_component/select.html', {
+		"settings": {
+			"class": "select type1",
+			"option": [
+				"option1",
+				"option2"
+			]
+		}
+	})
+	<!-- //select -->
+
+	<!-- input : checkbox // -->
+	@@include('./_component/checkbox.html', {
+		"settings": {
+			"class": "type1",
+			"text": [
+				"checkbox1",
+				"checkbox2"
+			]
+		}
+	})
+	<!-- // input : checkbox -->
+
+	<!-- input : radio // -->
+	@@include('./_component/radio.html', {
+		"settings": {
+			"class": "type1",
+			"name": "name1",
+			"text": [
+				"radio1",
+				"radio2"
+			]
+		}
+	})
+	<!-- // input : radio -->
+
+    <!-- popup// -->
+	<!-- @@include('./_component/popup.html', {
+		"name": "popup-share",
+        "tit": "공유하기",
+		"contents": "./_popup/popup-share.html"
+	}) -->
+	<!-- //popup -->
+</div>
+
+</body>
+</html>

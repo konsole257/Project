@@ -1,0 +1,490 @@
+<article class="filter-area">
+                <!-- 필터 상단 // -->
+                <header class="header">
+                    <div class="inner">
+                        <button type="button" class="btn mute btn-close" onclick="fn.removeActive('.filter-area'); ">닫기</button>
+
+                        <h2 class="tit">필터</h2>
+                    </div>
+                </header>
+                <!-- // 필터 상단 -->
+
+                <!-- 필터 내용 // -->
+                <div class="contents">
+                    <div class="scrollbar">
+                        <div class="inner">
+                            <div class="row">
+                                <div class="field-tit">최근 설정 필터</div>
+                                <div class="field-con con-latest">
+                                    <ul class="scrollbar">
+                                        <li><button type="button" class="active"><div class="ellipsis"><span>개포동</span><span>단독주택</span><span>공동주택</span><span>가설건축물</span><span>개포동</span><span>단독주택</span></div></button><button type="button" class="btn mute btn-close">삭제</button></li><!-- 수정 : 2020.01.22 --><!-- 선택시 class="active" : 수정 : 2020.01.31  -->
+                                        <li><button type="button"><div class="ellipsis"><span>개포동</span><span>단독주택</span><span>공동주택</span></div></button><button type="button" class="btn mute btn-close">삭제</button></li>
+                                        <li><button type="button"><div class="ellipsis"><span>개포동</span><span>단독주택</span><span>공동주택</span><span>가설건축물</span></div></button><button type="button" class="btn mute btn-close">삭제</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- 지역 // -->
+                            <div class="row">
+                                <div class="field-tit">지역</div>
+                                <div class="field-con con-map">
+                                    <div class="btn-area">
+                                        <button type="button" class="active">법정동</button><!-- 버튼 활성화 class="active" -->
+                                        <button type="button">특정위치<br> 부근</button>
+                                        <button type="button">지하철역<br> 부근</button>
+                                        <button type="button">학교 부근</button>
+                                    </div>
+                                    <!-- 법정동 셀렉트 : 추가 : 2020.01.31 // -->
+                                    <ol>
+                                        <li>
+                                            <span class="select type2">
+                                            	<select title="지역 선택">
+                                            		<option>서울특별시</option>
+                                            		<option>부산광역시</option>
+                                            		<option>인천광역시</option>
+                                                    <option>광주광역시</option>
+                                                    <option>광주광역시</option>
+                                            	</select>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="select type2">
+                                            	<select title="지역 선택">
+                                            		<option>강남구</option>
+                                            		<option>강남구</option>
+                                            		<option>강남구</option>
+                                                    <option>강남구</option>
+                                                    <option>강남구</option>
+                                            	</select>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="select type2">
+                                            	<select title="지역 선택">
+                                            		<option>개포동</option>
+                                            		<option>개포동</option>
+                                                    <option>개포동</option>
+                                                    <option>개포동</option>
+                                                    <option>개포동</option>
+                                            	</select>
+                                            </span>
+                                        </li>
+                                    </ol>
+                                    <!-- // 법정동 셀렉트 -->
+
+            						<div id="search-area" class="search">
+                                        <div class="field-input">
+        							    	<input type="text" title="검색어 입력" onkeyup="fn.autoCompleate()" onfocus="fn.autoCompleate()" onblur="fn.autoCompleate('close');">
+                							<button type="submit" class="btn btn-search">검색</button>
+                                        </div>
+
+                                        <!-- 자동검색어완성 지역일때 // -->
+                                        <!-- <div class="autocompleate-area">
+                                            <div class="scrollbar area"> class="scrollbar" 추가 : 2020.01.31
+                                                <ul>
+                                                    <li><a href="#"><span>서울시 서초구 반포1동 10-33</span></a></li>
+                                                    <li><a href="#"><span>서울시 서초구 반포1동 10-33</span></a></li>
+                                                    <li><a href="#"><span>서울시 서초구 반포1동 10-33</span></a></li>
+                                                    <li><a href="#"><span>서울시 서초구 반포1동 10-33</span></a></li>
+                                                    <li><a href="#"><span>서울시 서초구 반포1동 10-33</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div> -->
+                                        <!-- // 자동검색어완성 지역일때 -->
+
+                                        <!-- 자동검색어완성 지하철역일때 : 2020.01.31 // -->
+                        				<div class="autocompleate-area">
+                        					<div class="scrollbar subway"><!-- class="scrollbar" 추가 : 2020.01.31 -->
+                        						<ul>
+                                                    <!-- *네이버 노선도 참고* -->
+                                                    <!-- 서울 1호선 ~ 9호선 : line1 ~ 9 -->
+                                                    <!-- 인천 1호선 ~ 2호선 : line21 ~ 22 -->
+                                                    <!-- 분당 : line100 -->
+                                                    <!-- 공항 : line101 -->
+                                                    <!-- 자기부상 : line102 -->
+                                                    <!-- 경의중앙선 : line104 -->
+                                                    <!--  에버라인 : line107 -->
+                                                    <!-- 경춘 : line108 -->
+                                                    <!-- 신분당 : line109 -->
+                                                    <!-- 의정부 : line110 -->
+                                                    <!-- 수인 : line111 -->
+                                                    <!--  경강 : line112 -->
+                                                    <!--  우이신설 : line113 -->
+                                                    <!--  서해 : line114 -->
+                                                    <!--  김포골드 : line115 -->
+
+                                                    <!--  부산 1호선 ~ 4호선 : line71 ~ 74 -->
+                                                    <!--  동해 : line78 -->
+                                                    <!--  부산김해경전철 : line79 -->
+
+                                                    <!--  대구 1호선 ~ 3호선 : line41 ~ 43 -->
+
+                                                    <!--  광주 1호선 : line51 -->
+
+                                                    <!--  대전 1호선 : line31 -->
+
+                        							<!-- 반복영역 // -->
+                        							<li><a href="#"><span>대흥역</span><img src="@@common/resources/images/common/line1.png" alt=""></a></li>
+                        							<!-- // 반복영역 -->
+                        							<li><a href="#"><span>대흥역</span><img src="@@common/resources/images/common/line41.png" alt=""></a></li>
+                                                    <li><a href="#"><span>대흥역</span><img src="@@common/resources/images/common/line113.png" alt=""></a></li>
+                                                    <li><a href="#"><span>대흥역</span><img src="@@common/resources/images/common/line107.png" alt=""></a></li>
+                                                    <li><a href="#"><span>대흥역</span><img src="@@common/resources/images/common/line79.png" alt=""></a></li>
+                        						</ul>
+                        					</div>
+                        				</div>
+                        				<!-- // 자동검색어완성 지하철역일때 -->
+            						</div>
+
+                                    <div class="map"><img src="@@common/resources/images/temp/filter_map.jpg" alt=""></div>
+                                </div>
+                            </div>
+                            <!-- // 지역 -->
+
+                            <!-- 학교로부터 도보 시간 // -->
+                            <div class="row">
+                                <div class="field-tit">학교로부터 도보 시간</div>
+                                <div class="field-con">
+                                    <div class="filter">
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>10분 이내</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>20분 이내</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>30분 이내</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 학교로부터 도보 시간 -->
+
+                            <!-- 용도지역 // -->
+                            <div class="row">
+                                <div class="field-tit">용도지역</div>
+                                <div class="field-con">
+                                    <div class="filter">
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>1종전용주거지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>2종전용주거지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>1종일반주거지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>2종일반주거지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>3종일반주거지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>준주거지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>일반상업지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>근린상업지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>중심상업지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>유통상업지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>준공업지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>일반공업지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>전용공업지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>보전녹지지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>생산녹지지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>자연녹지지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>관리지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>보전관리지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>생산관리지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>계획관리지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>농림지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>자연환경보전지역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>개발제한구역</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>용도미지정</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 용도지역 -->
+
+                            <!-- 도로조건 // -->
+                            <div class="row">
+                                <div class="field-tit">도로조건</div>
+                                <div class="field-con">
+                                    <div class="filter">
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>광대한면</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>광대소각</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>광대세각</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>중로한면</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>중로각지</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>소로한면</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>소로각지</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>세로한면(가)</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>세로각지(가)</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>세로한면(불)</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>세로각지(불)</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>맹지</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 도로조건 -->
+
+                            <!-- 주용도 // -->
+                            <div class="row">
+                                <div class="field-tit">주용도</div>
+                                <div class="field-con">
+                                    <div class="filter">
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>단독주택</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>공동주택</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>제1종근린</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>제2종근린</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>판매시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>위락시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>숙박시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>운수시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>위험물저장/처리</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>자동차시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>야영장시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>문화집회시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>종교시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>의료시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>교육연구시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>노유자시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>수련시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>운동시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>관광휴게시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>묘지시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>장례시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>동/식물관련</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>공장</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>창고시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>자원순환시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>교정및군사</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>방송통신시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>발전시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>업무시설</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>가설건축물</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>기타및미분류</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 주용도 -->
+
+                            <!-- 주구조 // -->
+                            <div class="row">
+                                <div class="field-tit">주구조</div>
+                                <div class="field-con">
+                                    <div class="filter">
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>전채</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>벽돌구조</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>블록구조</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>석구조</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>조적구조</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>라멘조</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>철근콘크리트구조</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>철골콘크리트구조</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>철골철근콘크리트구조</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>콘크리트구조</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>프리케스트콘크리트</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>트러스구조</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>철골구조</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>경량철골구조</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>파이프구조</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>공업화박판강구조</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>강구조</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>판넬구조</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>목구조</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>통나무구조</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>트러스목구조</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>컨테이너</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>스틸하우스조</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>기타구조</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 주구조 -->
+
+                            <!-- 지붕구조 // -->
+                            <div class="row">
+                                <div class="field-tit">지붕구조</div>
+                                <div class="field-con">
+                                    <div class="filter">
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>철근콘크리트</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>기와</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>슬레이트</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>기타지붕</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 지붕구조 -->
+
+                            <!-- 준공년도 // -->
+                            <div class="row">
+                                <div class="field-tit">준공년도</div>
+                                <div class="field-con">
+                                    <div class="filter">
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>2년</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>5년</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>10년</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>15년</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>20년</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>25년</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>25년~</span></label>
+                                            </span>
+                                        </div>
+
+                                        <div class="ea-area">
+                                            <input type="text" title="년 입력">
+                                            <span class="unit">년</span>
+                                        </div>
+                                        <span class="hyphen">~</span>
+                                        <div class="ea-area">
+                                            <input type="text" title="년 입력">
+                                            <span class="unit">년</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 준공년도 -->
+
+                            <!-- 층수 // -->
+                            <div class="row">
+                                <div class="field-tit">층수</div>
+                                <div class="field-con">
+                                    <div class="filter">
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>1층</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>5층</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>10층</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>15층</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>20층</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>25층</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>25층~</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 층수 -->
+
+                            <!-- 대지면적 // -->
+                            <div class="row">
+                                <div class="field-tit">대지면적</div>
+                                <div class="field-con">
+                                    <div class="filter">
+                                        <div class="ea-area">
+                                            <input type="text" title="m² 입력">
+                                            <span class="unit">m²</span>
+                                        </div>
+                                        <span class="hyphen">~</span>
+                                        <div class="ea-area">
+                                            <input type="text" title="m² 입력">
+                                            <span class="unit">m²</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 대지면적 -->
+
+                            <!-- 건축면적 // -->
+                            <div class="row">
+                                <div class="field-tit">건축면적</div>
+                                <div class="field-con">
+                                    <div class="filter">
+                                        <div class="ea-area">
+                                            <input type="text" title="m² 입력">
+                                            <span class="unit">m²</span>
+                                        </div>
+                                        <span class="hyphen">~</span>
+                                        <div class="ea-area">
+                                            <input type="text" title="m² 입력">
+                                            <span class="unit">m²</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 건축면적 -->
+
+                            <!-- 연면적 // -->
+                            <div class="row">
+                                <div class="field-tit">연면적</div>
+                                <div class="field-con">
+                                    <div class="filter">
+                                        <div class="ea-area">
+                                            <input type="text" title="m² 입력">
+                                            <span class="unit">m²</span>
+                                        </div>
+                                        <span class="hyphen">~</span>
+                                        <div class="ea-area">
+                                            <input type="text" title="m² 입력">
+                                            <span class="unit">m²</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 연면적 -->
+
+                            <!-- 건폐율 // -->
+                            <div class="row">
+                                <div class="field-tit">건폐율</div>
+                                <div class="field-con">
+                                    <div class="filter">
+                                        <div class="ea-area">
+                                            <input type="text" title="% 입력">
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <span class="hyphen">~</span>
+                                        <div class="ea-area">
+                                            <input type="text" title="% 입력">
+                                            <span class="unit">%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 건폐율 -->
+
+                            <!-- 용적율 // -->
+                            <div class="row">
+                                <div class="field-tit">용적율</div>
+                                <div class="field-con">
+                                    <div class="filter">
+                                        <div class="ea-area">
+                                            <input type="text" title="% 입력">
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <span class="hyphen">~</span>
+                                        <div class="ea-area">
+                                            <input type="text" title="% 입력">
+                                            <span class="unit">%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 용적율 -->
+                        </div>
+                    </div>
+                    <!-- 수정 : 2020.01.21 // -->
+                    <div class="btn-area">
+                        <button type="button" class="btn big stroke gray" onclick="fn.filterAllReset(this);">초기화</button>
+                        <button type="button" class="btn big fill blue">적용</button>
+                    </div>
+                    <!-- // 수정 : 2020.01.21 -->
+                </div>
+                <!-- // 참여하기 내용 -->
+            </article>
+
+            <hr id="filter-area-end">

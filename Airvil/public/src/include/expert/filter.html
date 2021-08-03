@@ -1,0 +1,262 @@
+<article class="filter-area">
+                <!-- 필터 상단 // -->
+                <header class="header">
+                    <div class="inner">
+                        <button type="button" class="btn mute btn-close" onclick="fn.removeActive('.filter-area, .btn-filter'); ">닫기</button>
+
+                        <h2 class="tit">필터</h2>
+                    </div>
+                </header>
+                <!-- // 필터 상단 -->
+
+                <!-- 필터 내용 // -->
+                <div class="contents">
+                    <div class="scrollbar">
+                        <div class="inner">
+                            <div class="row">
+                                <div class="field-tit">최근 설정 필터</div>
+                                <div class="field-con con-latest">
+                                    <ul class="scrollbar">
+                                        <li><button type="button" class="active"><div class="ellipsis"><span>개포동</span><span>단독주택</span><span>공동주택</span><span>가설건축물</span><span>개포동</span><span>단독주택</span></div></button><button type="button" class="btn mute btn-close">삭제</button></li><!-- 수정 : 2020.01.22 --><!-- 선택시 class="active" : 수정 : 2020.01.31  -->
+                                        <li><button type="button"><div class="ellipsis"><span>개포동</span><span>단독주택</span><span>공동주택</span></div></button><button type="button" class="btn mute btn-close">삭제</button></li>
+                                        <li><button type="button"><div class="ellipsis"><span>개포동</span><span>단독주택</span><span>공동주택</span><span>가설건축물</span></div></button><button type="button" class="btn mute btn-close">삭제</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- 지역 // -->
+                            <div class="row">
+                                <div class="field-tit">지역</div>
+                                <div class="field-con con-region">
+                                    <ol>
+                                        <li>
+                                            <span class="select type2">
+                                            	<select title="지역 선택">
+                                            		<option>서울특별시</option>
+                                            		<option>부산광역시</option>
+                                            		<option>인천광역시</option>
+                                                    <option>광주광역시</option>
+                                                    <option>광주광역시</option>
+                                            	</select>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="select type2">
+                                            	<select title="지역 선택">
+                                            		<option>강남구</option>
+                                            		<option>강남구</option>
+                                            		<option>강남구</option>
+                                                    <option>강남구</option>
+                                                    <option>강남구</option>
+                                            	</select>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="select type2">
+                                            	<select title="지역 선택">
+                                            		<option>개포동</option>
+                                            		<option>개포동</option>
+                                                    <option>개포동</option>
+                                                    <option>개포동</option>
+                                                    <option>개포동</option>
+                                            	</select>
+                                            </span>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <!-- // 지역 -->
+
+                            <!-- 업종 // -->
+                            <div class="row">
+                                <div class="field-tit line">업종 <label><input type="checkbox" class="type1" onchange="fn.filterReset(this);"><span>전체</span></label></div>
+                                <div class="field-con">
+                                    <div class="filter">
+                                        <div class="filter-tit" onclick="fn.toggleActive(this);">건축설계</div>
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>토목설계</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>건축설계</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter">
+                                        <div class="filter-tit" onclick="fn.toggleActive(this);">종합건설</div>
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>토목건축공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>토목공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>건축공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>조경공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>산업환경설비공사업</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter dbl">
+                                        <div class="filter-tit" onclick="fn.toggleActive(this);">전문건설</div>
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>가스시설공업제1종</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>가스시설공업제2종</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>가스시설공업제3종</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>강구조물공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>금속구조물/창호<br>온실공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>기계설비공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>난방시공업제1종</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>난방시공업제2종</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>난방시공업제3종</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>도장공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>보링/그라우팅<br>공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>비계/구조물해체<br>공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>삭도설치공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>상/하수도설비<br>공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>석공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>수중공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>습식/방수공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>승강기설치공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>시설물유지관리업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>실내건축공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>조경시설물설치<br>공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>조경식재공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>준설공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>지붕판금/건축물<br>조립공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>철강재설치공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>철근/콘크리트<br>공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>철도/궤도공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>토공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>포장공사업</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter">
+                                        <div class="filter-tit" onclick="fn.toggleActive(this);">개별건설</div>
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>전기공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>소방시설공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>정보통신공사업</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>문화재수리업</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter">
+                                        <div class="filter-tit" onclick="fn.toggleActive(this);">부동산</div>
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>부동산중개</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>분양</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter">
+                                        <div class="filter-tit" onclick="fn.toggleActive(this);">건설기계</div>
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>건설기계매매</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>건설기계대여</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter">
+                                        <div class="filter-tit" onclick="fn.toggleActive(this);">건축자재</div>
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>인테리어재</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>건축자재</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter">
+                                        <div class="filter-tit" onclick="fn.toggleActive(this);">주택수리</div>
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>주택수리종합</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>미장타일도배도장</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>유리창호</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>난방보일러배관</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>가스설비</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>수도설비</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>조립칸막이/파티션</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter">
+                                        <div class="filter-tit" onclick="fn.toggleActive(this);">인력/고용/용역알선</div>
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>인력공급/고용알선</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>가사도우미알선</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter">
+                                        <div class="filter-tit" onclick="fn.toggleActive(this);">법무세무회계</div>
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>법무서비스</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>세무서비스</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>회계서비스</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter">
+                                        <div class="filter-tit" onclick="fn.toggleActive(this);">이사/운송</div>
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>종합이삿짐대행</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>이삿짐보관</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>화물운송</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>용달/개별화물</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter">
+                                        <div class="filter-tit" onclick="fn.toggleActive(this);">가전가구</div>
+                                        <div class="filter-input">
+                                            <span class="inner">
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>가구소매</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>가전재품소매</span></label>
+                                                <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>사무용기기소매</span></label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 업종 -->
+                        </div>
+                    </div>
+
+                    <!-- 수정 : 2020.01.21 // -->
+                    <div class="btn-area">
+                        <button type="button" class="btn big stroke gray" onclick="fn.filterAllReset(this);">초기화</button>
+                        <button type="button" class="btn big fill blue">적용</button>
+                    </div>
+                    <!-- // 수정 : 2020.01.21 -->
+                </div>
+                <!-- // 참여하기 내용 -->
+            </article>
+
+            <hr id="filter-area-end">

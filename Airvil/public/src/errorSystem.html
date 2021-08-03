@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<!-- config// -->
+	@@include('./include/config.html')
+	<!-- //config -->
+</head>
+
+<body>
+
+<div id="wrap">
+	<!-- header// -->
+	@@include('./include/header.html')
+	<!-- //header -->
+
+	<!-- contents// -->
+	<main id="container" class="error">
+		<div id="contents" class="system">
+			<div class="txt-area">
+				<img src="@@common/resources/images/common/error.png" alt="">
+
+				<div class="tit"><b>시스템 에러가 발생</b>하였습니다.</div>
+
+				<div class="box">
+					<span>
+						요청하신 데이터를 불러 오는 중<br>
+						예기치 않은 시스템 에러가 발생하였습니다.
+					</span>
+				</div>
+
+				<p class="txt">
+					불편을 드려 대단히 죄송합니다.
+				</p>
+
+				<a href="@@common/" class="btn fill blue">메인</a>
+			</div>
+		</div>
+	</main>
+	<!-- //contents -->
+
+	<!-- footer// -->
+	@@include('./include/footer.html')
+	<!-- //footer -->
+</div>
+
+</body>
+</html>

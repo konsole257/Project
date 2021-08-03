@@ -1,0 +1,91 @@
+<div class="scrollbar">
+    <div class="inner">
+        <h3 class="tit">서비스관리</h3>
+
+        <div class="tab-menu">
+            <a href="@@common/mypage/service/useList.html">이용서비스</a>
+            <a href="@@common/mypage/service/pointList.html">포인트관리</a>
+            <a href="@@common/mypage/service/qnaList.html" class="active">1:1문의</a>
+        </div>
+
+        <section class="qna-area">
+            <div class="header">
+                <h4 class="tit">1:1문의등록</h4>
+            </div>
+
+            <div class="contents">
+                <div class="form-area">
+                    <div class="row">
+        				<div class="column horizontal">
+        					<span class="field-tit">제목</span>
+        					<span class="field-input">
+        						<span class="inner">
+        							<input type="text" title="제목 입력">
+        						</span>
+        					</span>
+        				</div>
+        			</div>
+
+                    <div class="row">
+        				<div class="column horizontal">
+        					<span class="field-tit">구분</span>
+        					<span class="field-input">
+        						<span class="inner">
+                                    <span class="select type1">
+                                    	<select title="옵션 선택">
+                                    		<option>서비스이용</option>
+                                    		<option>전문가 정보 수정권한 요청</option>
+                                    		<option>소유자 리스트(DB)요청</option>
+                                            <option>소유자 우편발송(DM)대행 요청</option>
+                                            <option>광고/제휴</option>
+                                            <option>중개회원변경/문의</option>
+                                            <option>기타</option>
+                                    	</select>
+                                    </span>
+        						</span>
+        					</span>
+        				</div>
+        			</div>
+
+                    <div class="row">
+        				<div class="column horizontal">
+                            <div class="editor-area">
+                                <img src="@@common/resources/images/temp/editor.jpg" alt="">
+                            </div>
+        				</div>
+        			</div>
+
+                    <div class="row">
+        				<div class="column horizontal">
+                            <span class="field-tit">첨부파일</span>
+                            <span class="field-input input-file">
+                                <span class="inner">
+                                    <span class="file">
+                                        <input type="text" placeholder="파일용량: 10MB 이하" disabled>
+                                        <span class="btn big fill gray btn-file" onclick="fn.fileBtn(this);">파일첨부</span>
+                                        <input type="file" title="파일찾기" onchange="fn.file(this);">
+                                    </span>
+                                </span>
+
+                                <p class="caution">*첨부파일은 이미지,MS-office, pdf에 한하여 1개 등록 가능합니다.</p>
+                            </span>
+        				</div>
+        			</div>
+                </div>
+
+                <div class="btn-area">
+                    <a href="#" class="btn big stroke gray">취소</a>
+                    <a href="#" class="btn big fill blue">등록</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- footer : 추가 : 2020.01.08 // -->
+	@@include('./include/sub_footer.html')
+	<!-- //footer -->
+</div>
+
+<!-- 팝업 // -->
+@@include('./include/mypage/service/useListPopup.html')
+<!-- // 팝업 -->

@@ -1,0 +1,261 @@
+<article class="list-area active">
+            <div class="inner">
+                <h2 class="hide">검색결과 목록</h2>
+
+                <!-- 소팅 영역 // -->
+                <div class="sort-area">
+                    <span class="total">총 5,234개</span>
+
+                    <span class="select type2">
+                        <select title="옵션 선택">
+                            <option>최신순</option>
+                            <option>조회순</option>
+                            <option>참여순</option>
+                            <option>좋아요순</option>
+                        </select>
+                    </span>
+
+                    <!-- 수정 : 2020.01.16 // -->
+                    <div class="btn-area">
+                        <button type="button" class="btn stroke gray btn-multijoin" onclick="fn.multiJoin(this);">다중견적받기</button>
+                        <button type="button" class="btn stroke gray btn-filter" onclick="fn.toggleActive('.filter-area, .btn-fold'); fn.toggleActive(this);">필터</button>
+                    </div>
+                    <!-- // 수정 : 2020.01.16 -->
+                </div>
+                <!-- // 소팅 영역 -->
+
+                <!-- 목록 // -->
+                <div class="scrollbar">
+                    <div class="skip">
+                        <a href="#list-area-end">검색결과 목록 건너뛰기</a>
+                    </div>
+
+                    <ul class="list">
+                        <!-- 반복영역 // -->
+                        <li>
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name">㈜가가건설</div>
+                                    <small class="type">종합건설</small>
+                                    <!-- <p class="address">서울특별시 강남구 역삼동 2</p> --><!-- 비회원일경우 출력 : 추가 : 2019.12.12 -->
+                                    <!-- <p class="tel">02-3428-3829</p> --><!-- 비회원일경우 출력 : 추가 : 2019.12.12 -->
+
+                                    <!-- 회원일경우 출력 // -->
+                                    <div>
+                                        <!-- 수정 : 2020.01.20 // -->
+                                        <div class="rating">
+                                            <span class="output">4.5</span>
+                                            <div>
+                                                <span class="one"></span>
+                                                <span class="one"></span>
+                                                <span class="one"></span>
+                                                <span class="one"></span>
+                                                <span class="half"></span>
+                                            </div>
+                                        </div>
+                                        <!-- // 수정 : 2020.01.20 -->
+                                        <span class="division-area">
+                                            <span class="division reviews"><span class="hide">리뷰수 : </span>(234)</span>
+                                            <span class="division bookmarks"><span>구독 </span>101</span>
+                                        </span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button> <!-- 상세보기 -->
+
+                                    <div class="btn-area">
+                                        <button type="button" class="btn big fill blue btn-join" onclick="fn.viewerOpen(this, 'join');">견적받기</button>
+                                        <label><input type="checkbox" class="type2" onchange="fn.multiJoinCheck(this);" disabled><span></span></label>
+                                    </div>
+                                    <!-- // 회원일경우 출력 -->
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <!-- // 반복영역 -->
+
+                        <li>
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name">㈜가가건설</div>
+                                    <small class="type">종합건설</small>
+                                    <p class="address">서울특별시 강남구 역삼동 2</p>
+                                    <p class="tel">02-3428-3829</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name">㈜가가건설</div>
+                                    <small class="type">종합건설</small>
+
+                                    <div>
+                                        <!-- 수정 : 2020.01.20 // -->
+                                        <div class="rating">
+                                            <span class="output">4.5</span>
+                                            <div>
+                                                <span class="one"></span>
+                                                <span class="one"></span>
+                                                <span class="one"></span>
+                                                <span class="one"></span>
+                                                <span class="half"></span>
+                                            </div>
+                                        </div>
+                                        <!-- // 수정 : 2020.01.20 -->
+                                        <span class="reviews"><span class="hide">리뷰수 : </span>(234)</span>
+                                        <span class="bookmarks"><span>구독 </span>101</span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button>
+
+                                    <div class="btn-area">
+                                        <button type="button" class="btn big fill blue btn-join" onclick="fn.viewerOpen(this, 'join');">견적받기</button>
+                                        <label><input type="checkbox" class="type2" onchange="fn.multiJoinCheck(this);" disabled><span></span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name">㈜가가건설</div>
+                                    <small class="type">종합건설</small>
+
+                                    <div>
+                                        <!-- 수정 : 2020.01.20 // -->
+                                        <div class="rating">
+                                            <span class="output">4.5</span>
+                                            <div>
+                                                <span class="one"></span>
+                                                <span class="one"></span>
+                                                <span class="one"></span>
+                                                <span class="one"></span>
+                                                <span class="half"></span>
+                                            </div>
+                                        </div>
+                                        <!-- // 수정 : 2020.01.20 -->
+                                        <span class="reviews"><span class="hide">리뷰수 : </span>(234)</span>
+                                        <span class="bookmarks"><span>구독 </span>101</span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button>
+
+                                    <div class="btn-area">
+                                        <button type="button" class="btn big fill blue btn-join" onclick="fn.viewerOpen(this, 'join');">견적받기</button>
+                                        <label><input type="checkbox" class="type2" onchange="fn.multiJoinCheck(this);" disabled><span></span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- 광고 : 추가 : 2019.01.08 // -->
+                        <li id="ad-list">
+                            <div class="inner">
+                                <div class="ad-list">
+                                    <img src="@@common/resources/images/temp/ad_list.jpg" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <!-- // 광고 -->
+
+                        <li>
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name">㈜가가건설</div>
+                                    <small class="type">종합건설</small>
+
+                                    <div>
+                                        <!-- 수정 : 2020.01.20 // -->
+                                        <div class="rating">
+                                            <span class="output">4.5</span>
+                                            <div>
+                                                <span class="one"></span>
+                                                <span class="one"></span>
+                                                <span class="one"></span>
+                                                <span class="one"></span>
+                                                <span class="half"></span>
+                                            </div>
+                                        </div>
+                                        <!-- // 수정 : 2020.01.20 -->
+                                        <span class="reviews"><span class="hide">리뷰수 : </span>(234)</span>
+                                        <span class="bookmarks"><span>구독 </span>101</span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button>
+
+                                    <div class="btn-area">
+                                        <button type="button" class="btn big fill blue btn-join" onclick="fn.viewerOpen(this, 'join');">견적받기</button>
+                                        <label><input type="checkbox" class="type2" onchange="fn.multiJoinCheck(this);" disabled><span></span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="inner">
+                                <figure class="img">
+                                    <img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+                                </figure>
+
+                                <div class="info">
+                                    <div class="name">㈜가가건설</div>
+                                    <small class="type">종합건설</small>
+
+                                    <div>
+                                        <!-- 수정 : 2020.01.20 // -->
+                                        <div class="rating">
+                                            <span class="output">4.5</span>
+                                            <div>
+                                                <span class="one"></span>
+                                                <span class="one"></span>
+                                                <span class="one"></span>
+                                                <span class="one"></span>
+                                                <span class="half"></span>
+                                            </div>
+                                        </div>
+                                        <!-- // 수정 : 2020.01.20 -->
+                                        <span class="reviews"><span class="hide">리뷰수 : </span>(234)</span>
+                                        <span class="bookmarks"><span>구독 </span>101</span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-detail" onclick="fn.viewerOpen(this, 'detail');">상세보기</button>
+
+                                    <div class="btn-area">
+                                        <button type="button" class="btn big fill blue btn-join" onclick="fn.viewerOpen(this, 'join');">견적받기</button>
+                                        <label><input type="checkbox" class="type2" onchange="fn.multiJoinCheck(this);" disabled><span></span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- // 목록 -->
+            </div>
+
+            <button type="button" class="btn mute stroke gray btn-fold">인허가 찾기 목록 접기</button>
+        </article>
+
+        <hr id="list-area-end">

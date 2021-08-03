@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<!-- config// -->
+	@@include('./include/config.html')
+	<!-- //config -->
+</head>
+
+<body>
+
+<div id="wrap">
+	<!-- header// -->
+	@@include('./include/header.html', {
+		"mypageActive": "active"
+	})
+	<!-- //header -->
+
+	<!-- contents// -->
+	<main id="container" class="mypage">
+		<div id="contents" class="user write">
+			<!-- 마이페이지 메뉴 // -->
+			@@include('./include/mypage/menu.html', {
+                "mypageUserActive": "active"
+            })
+			<!-- // 마이페이지 메뉴 -->
+
+			<!-- 마이페이지 회원 수정 // -->
+			@@include('./include/mypage/user/update_personal.html')
+			<!-- // 마이페이지 회원 수정 -->
+
+			<!-- 채팅목록 // -->
+			@@include('./include/chat/list.html')
+			<!-- // 채팅목록 -->
+
+			<!-- 채팅상세 // -->
+			@@include('./include/chat/join.html')
+			<!-- // 채팅상세 -->
+
+			<!-- 알림목록 : 추가 : 2020.01.23 // -->
+			@@include('./include/notify/list.html')
+			<!-- // 알림목록 -->
+
+			<!-- 팝업 : 비밀번호 변경하기 // -->
+			<div id="popup-pwupdate" class="popup popup-pwupdate">
+				<div class="inner">
+					<header class="header">
+						 <h2 class="tit">비밀번호 변경하기</h2>
+						<button type="button" class="btn mute btn-close" onclick="fn.popupClose(this);">닫기</button>
+					</header>
+
+					<div class="contents">
+						<form>
+							<fieldset>
+								<legend class="hide">입력하기</legend>
+								<div class="input-area">
+				                    <div class="row">
+				                        <span class="field-tit">기존 비밀번호</span>
+
+				                        <span class="field-input">
+				                            <input type="password" onclick="this.parentNode.querySelector('.alert').style.display='block'" placeholder="현재 비밀번호">
+											<small class="alert" style="display:none;">비밀번호를 다시 확인해주세요.</small>
+				                        </span>
+				                    </div>
+
+									<div class="row">
+				                        <span class="field-tit">새 비밀번호</span>
+
+				                        <span class="field-input">
+				                            <input type="password" onclick="this.parentNode.querySelector('.alert').style.display='block';this.parentNode.querySelector('.alert').classList.remove('gray')" placeholder="새 비밀번호">
+											<small class="alert gray">4자 이상의 영문,숫자 또는 영문+숫자 입력가능</small>
+				                        </span>
+				                    </div>
+
+									<div class="row">
+				                        <span class="field-tit">비밀번호 확인</span>
+
+				                        <span class="field-input">
+				                            <input type="password" onclick="this.parentNode.querySelector('.alert').style.display='block'" placeholder="비밀번호 확인">
+											<small class="alert" style="display:none;">비밀번호를 다시 확인해주세요.</small>
+				                        </span>
+				                    </div>
+				                </div>
+
+								<div class="btn-area">
+									<button type="button" class="btn stroke big gray">취소</button>
+									<button type="button" class="btn fill big blue">변경</button>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- // 팝업 : 비밀번호 변경하기 -->
+		</div>
+	</main>
+	<!-- //contents -->
+
+	<!-- footer// -->
+	@@include('./include/footer.html')
+	<!-- //footer -->
+</div>
+
+</body>
+</html>

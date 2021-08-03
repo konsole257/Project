@@ -1,0 +1,462 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<!-- config// -->
+	@@include('./include/config.html')
+	<!-- //config -->
+</head>
+
+<body>
+
+<div id="wrap">
+	<!-- header// -->
+	@@include('./include/header.html', {
+		"expertActive": "active"
+	})
+	<!-- //header -->
+
+	<!-- contents// -->
+	<main id="container" class="expert">
+		<div id="contents">
+			<!-- 검색영역 : 추가 : 2019.12.06 // -->
+			@@include('./include/searchArea.html', {
+				"searchPlaceHolder": "expert"
+			})
+			<!-- // 검색영역 -->
+
+			<!-- 목록 영역 // -->
+			@@include('./include/expert/list.html')
+			<!-- // 목록 영역 -->
+
+			<!-- 필터 영역 : 추가 : 2020.01.16 // -->
+			@@include('./include/expert/filter.html')
+			<!-- // 필터 영역 -->
+
+			<!-- 정보 보기 // -->
+			@@include('./include/expert/detail.html')
+			<!-- // 정보 보기 -->
+
+			<!-- 참여하기 // -->
+			@@include('./include/expert/join.html')
+			<!-- // 참여하기 -->
+
+			<!-- 채팅목록 : 추가 : 2019.12.11 // -->
+			@@include('./include/chat/list.html')
+			<!-- // 채팅목록 -->
+
+			<!-- 채팅상세 : 추가 : 2019.12.11 // -->
+			@@include('./include/chat/join.html')
+			<!-- // 채팅상세 -->
+
+			<!-- 알림목록 : 추가 : 2020.01.23 // -->
+			@@include('./include/notify/list.html')
+			<!-- // 알림목록 -->
+
+			<!-- 공유하기 팝업 : 추가 : 2020.01.22 // -->
+			@@include('./include/sharePopup.html')
+			<!-- // 공유하기 팝업 -->
+
+			<!-- 광고 : 추가 : 2019.01.08 // -->
+			<div class="ad-main">
+				<button type="button" class="btn mute btn-close" onclick="fn.adClose(this);">닫기</button>
+				<img src="@@common/resources/images/temp/ad_main.jpg" alt="">
+			</div>
+			<!-- // 광고 -->
+
+			<!-- 모의견적받기 : 2019.12.20 // -->
+			<!-- 수정 : 2019.12.23 // -->
+			<div id="popup-calculate-tag" class="popup popup-calculate-tag">
+				<header class="header">
+					<button type="button" class="btn mute btn-close" onclick="fn.popupClose(this);">닫기</button>
+				</header>
+				<a href="#popup-calculate" class="inner" onclick="fn.popupOpen('#popup-calculate');">
+					<div class="contents">
+						예비 건축주를 위한 <b>모의견적받기</b>
+					</div>
+				</a>
+			</div>
+			<!-- // 수정 : 2019.12.23 -->
+
+			<div id="popup-calculate" class="popup popup-calculate">
+				<div class="inner">
+					<header class="header">
+						 <h2 class="tit">모의견적받기</h2>
+						<button type="button" class="btn mute btn-close" onclick="fn.popupClose(this);">닫기</button>
+					</header>
+
+					<div class="contents">
+						<p class="txt">
+							건축 기획 시 예산 수립에 참고할 수 있도록 모의견적 서비스를 제공합니다.<br>
+							<strong>실제 공사비와 다를 수 있으니 꼭 전문가와 상담하시기 바랍니다.</strong>
+						</p>
+
+						<div class="form-area">
+							<div class="input-area">
+								<div class="row">
+									<div class="column horizontal">
+										<span class="field-tit">연면적</span>
+										<span class="field-input">
+											<span class="inner">
+												<input type="text" placeholder="연면적을 입력해주세요" title="연면적을 입력">
+												<span class="unit">m²</span>
+											</span>
+										</span>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="column horizontal">
+										<span class="field-tit">용도</span>
+										<span class="field-input">
+											<span class="inner">
+												<span class="select type1">
+													<select>
+														<option>용도를 선택해주세요</option>
+														<option>용도를 선택해주세요1</option>
+														<option>용도를 선택해주세요2</option>
+													</select>
+												</span>
+											</span>
+										</span>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="column horizontal">
+										<span class="field-tit">구조</span>
+										<span class="field-input">
+											<span class="inner">
+												<span class="select type1">
+													<select>
+														<option>구조를 선택해주세요</option>
+														<option>구조를 선택해주세요</option>
+														<option>구조를 선택해주세요</option>
+													</select>
+												</span>
+											</span>
+										</span>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="column horizontal">
+										<span class="field-tit">지붕구조1</span>
+										<span class="field-input">
+											<span class="inner">
+												<span class="select type1">
+													<select>
+														<option>지붕구조를 선택해주세요</option>
+														<option>지붕구조를 선택해주세요</option>
+														<option>지붕구조를 선택해주세요</option>
+													</select>
+												</span>
+											</span>
+										</span>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="column horizontal">
+										<span class="field-tit">지붕구조2</span>
+										<span class="field-input">
+											<span class="inner">
+												<span class="select type1">
+													<select>
+														<option>지붕구조를 선택해주세요</option>
+													</select>
+												</span>
+											</span>
+										</span>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="column horizontal">
+										<span class="field-tit">설계비</span>
+										<span class="field-input cost">
+											<span class="inner">
+												<label><input type="radio" name="plan" checked><span>기본</span></label>
+												<label><input type="radio" name="plan"><span>중급</span></label>
+												<label><input type="radio" name="plan"><span>상급</span></label>
+												<label><input type="radio" name="plan"><span>미포함</span></label>
+											</span>
+										</span>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="column horizontal">
+										<span class="field-tit">감리비</span>
+										<span class="field-input cost">
+											<span class="inner">
+												<label><input type="radio" name="supervision" checked><span>포함</span></label>
+												<label><input type="radio" name="supervision"><span>미포함</span></label>
+											</span>
+										</span>
+									</div>
+								</div>
+							</div>
+
+							<button type="button" class="btn big fill blue btn-result" onclick="$('.count-num').rCounter({duration:30});">조회하기</button>
+
+						</div>
+
+						<div class="result-area">
+							<dl>
+								<dt>공사비</dt>
+								<dd>
+									<span id="a" class="count-num">7,123</span>만원  ~  <span class="count-num">7,123</span>만원
+
+									<dl>
+										<dt>평균 공사비</dt>
+										<dd><span class="count-num">7,123</span>만원  ~  <span class="count-num">7,123</span>만원</dd>
+										<dt>㎡당 공사비</dt>
+										<dd><span class="count-num">7,123</span>만원  ~  <span class="count-num">7,123</span>만원</dd>
+										<dt>평당 공사비</dt>
+										<dd><span class="count-num">7,123</span>만원  ~  <span class="count-num">7,123</span>만원</dd>
+									</dl>
+								</dd>
+
+								<dt>설계비</dt>
+								<dd><span class="count-num">7,123</span>만원  ~ <span class="count-num"> 7,123</span>만원</dd>
+
+								<dt>감리비</dt>
+								<dd><span class="count-num">7,123</span>만원  ~  <span class="count-num">7,123</span>만원</dd>
+							</dl>
+							<p class="txt">모의견적은 어떻게 산출되나요?</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- // 모의견적받기 : 2019.12.20 -->
+
+			<!-- 주소검색 팝업 : 추가 : 2020.01.30// -->
+			<div id="popup-zip" class="popup popup-zip">
+				<div class="inner">
+					<header class="header">
+						 <h2 class="tit">주소검색</h2>
+						<button type="button" class="btn mute btn-close" onclick="fn.popupClose(this);">닫기</button>
+					</header>
+
+					<div class="contents">
+						<form class="form-area">
+                            <fieldset>
+                                <legend class="hide">검색</legend>
+                                <div class="field-input">
+
+                                    <input type="text" placeholder="검색할 내용을 입력하세요." title="검색할 내용 입력" onkeyup="fn.autoCompleate(); fn.inputWordDel(this, '#popup-zip .btn-del');" onfocus="fn.autoCompleate(); fn.inputWordDel(this, '#popup-zip .btn-del');" onblur="fn.autoCompleate('close'); fn.inputWordDel(this, '#popup-zip .btn-del');">
+
+                                    <button type="reset" class="btn mute btn-del">검색어 삭제</button><!-- 추가 : 2020.01.22 -->
+                                    <button type="submit" class="btn mute btn-search">검색</button>
+                                </div>
+                            </fieldset>
+                        </form>
+
+						<!-- 검색결과 없을시 //-->
+						<!-- <div class="nodata">
+							<p><span>신수동12-3</span> 검색결과가 존재하지 않습니다. </p>
+						</div> -->
+						<!-- // 검색결과 없을시 -->
+
+						<div class="scrollbar">
+							<ul>
+								<!-- 반복영역 // -->
+								<li>
+									<button type="button">
+										<span class="name">서강대학교</span>
+										<span class="old">서울특별시 마포구 신수동 1-1</span>
+										<span class="new">서울특별시 마포구 백범로 35</span>
+									</button>
+								</li>
+								<!-- // 반복영역 -->
+
+								<li>
+									<button type="button">
+										<span class="name">서강대학교</span>
+										<span class="old">서울특별시 마포구 신수동 1-1</span>
+										<span class="new">서울특별시 마포구 백범로 35</span>
+									</button>
+								</li>
+
+								<li>
+									<button type="button">
+										<span class="name">서강대학교</span>
+										<span class="old">서울특별시 마포구 신수동 1-1</span>
+										<span class="new">서울특별시 마포구 백범로 35</span>
+									</button>
+								</li>
+
+								<li>
+									<button type="button">
+										<span class="name">서강대학교</span>
+										<span class="old">서울특별시 마포구 신수동 1-1</span>
+										<span class="new">서울특별시 마포구 백범로 35</span>
+									</button>
+								</li>
+
+								<li>
+									<button type="button">
+										<span class="name">서강대학교</span>
+										<span class="old">서울특별시 마포구 신수동 1-1</span>
+										<span class="new">서울특별시 마포구 백범로 35</span>
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- // 주소검색 팝업 -->
+
+			<!-- 지도 // -->
+			<div class="map">
+				<!-- 추가 : 2020.01.14 // -->
+				<!-- 맵 컨트롤 // -->
+				<div class="mapcontrol">
+					<div class="viewcontrol">
+						<button type="button" class="btn mute btn-roadview active">로드뷰</button><!-- 선택한 버튼 class="active" -->
+						<button type="button" class="btn mute btn-usedistrict">지적도</button>
+						<button type="button" class="btn mute btn-skyview">스카이뷰</button>
+					</div>
+
+					<div class="zoomcontrol">
+						<button type="button" class="btn mute btn-zoomin">줌인</button>
+						<button type="button" class="btn mute btn-zoomout">줌아웃</button>
+					</div>
+
+					<div class="tools">
+						<button type="button" class="btn mute btn-distance">거리재기</button>
+						<button type="button" class="btn mute btn-area">면적재기</button>
+						<button type="button" class="btn mute btn-radius">반경재기</button>
+					</div>
+				</div>
+				<!-- // 맵 컨트롤 -->
+
+				<div style="position:absolute; top:500px; left:600px;">
+					<!-- 마커 // -->
+					<div class="cluster-marker">
+						<span class="cluster-number"><span>5</span></span>
+						<div class="marker-area">
+							<div class="marker">
+								<div class="number">3개의 전문가</div>
+								<ul class="scrollbar">
+									<li><span>21세기공인중개사무소</span><span>인력/고용/용역알선</span></li>
+									<li><span>㈜가가건설</span><span>종합건설</span></li>
+									<li><span>㈜가가건설</span><span>종합건설</span></li>
+									<li><span>㈜가가건설</span><span>종합건설</span></li>
+									<li><span>㈜가가건설</span><span>종합건설</span></li>
+									<li><span>㈜가가건설</span><span>종합건설</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- // 마커 -->
+				</div>
+
+				<div style="position:absolute; top:520px; left:600px;">
+					<!-- 마커 // -->
+					<div class="cluster-marker">
+						<span class="cluster-number"><span>5</span></span>
+						<div class="marker-area">
+							<div class="marker">
+								<div class="number">3개의 전문가</div>
+								<ul class="scrollbar">
+									<li><span>21세기공인중개사무소</span><span>인력/고용/용역알선</span></li>
+									<li><span>㈜가가건설</span><span>종합건설</span></li>
+									<li><span>㈜가가건설</span><span>종합건설</span></li>
+									<li><span>㈜가가건설</span><span>종합건설</span></li>
+									<li><span>㈜가가건설</span><span>종합건설</span></li>
+									<li><span>㈜가가건설</span><span>종합건설</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- // 마커 -->
+				</div>
+
+				<div style="position:absolute; top:500px; left:900px;">
+					<!-- 현재위치 // -->
+					<div class="location-marker"></div>
+					<!-- // 현재위치 -->
+				</div>
+
+				<div style="position:absolute; top:100px; left:1100px;">
+					<!-- 반경계산 // -->
+					<div class="circles-info">
+						<button type="button" class="btn mute btn-close">삭제</button>
+						<div class="result"><span class="tit">반경</span> <b class="number">345m</b></div>
+						<div class="txt"><span class="tit">지정완료 :</span> <span>마우스 우클릭</span></div>
+					</div>
+					<!-- // 반경계산 -->
+				</div>
+
+				<div style="position:absolute; top:180px; left:1100px;">
+					<!-- 반경계산 결과 // -->
+					<div class="circles-info">
+						<button type="button" class="btn mute btn-close">삭제</button>
+						<div class="result"><span class="tit">반경</span> <b class="number">345m</b></div>
+						<div class="btn-area"><button type="button" class="btn fill blue">건축인허가 검색</button></div>
+						<!-- <div class="btn-area"><button type="button" class="btn fill blue">부동산비서 검색</button></div> -->
+					</div>
+					<!-- // 반경계산 결과 -->
+				</div>
+
+				<div style="position:absolute; top:300px; left:1100px;">
+					<!-- 면적계산 // -->
+					<div class="circles-info">
+						<button type="button" class="btn mute btn-close">삭제</button>
+						<div class="txt"><span class="tit">지정완료 :</span> <span>마우스 우클릭</span></div>
+					</div>
+					<!-- // 면적계산 -->
+				</div>
+
+				<div style="position:absolute; top:350px; left:1100px;">
+					<!-- 반경계산 결과 // -->
+					<div class="circles-info">
+						<button type="button" class="btn mute btn-close">삭제</button>
+						<div class="result"><span class="tit">총면적</span> <b class="number">67.3평</b> ( 222.5㎡ )</div>
+						<div class="txt"><span class="tit">지정완료 :</span> <span>마우스 우클릭</span></div>
+					</div>
+					<!-- // 반경계산 결과 -->
+				</div>
+
+
+				<!-- 컨텍스트 메뉴 // -->
+				<div class="context" style="top:500px; left:700px;">
+					<div class="inner">
+						<button type="button" class="btn mute btn-close">닫기</button>
+						<span class="address">대흥동 12-3</span>
+						<ul class="menu">
+							<li><button type="button" onclick="fn.popupOpen('#popup-publicinfo');">공공정보 보기</button></li>
+							<li><button type="button">매물 등록</button></li>
+							<li><button type="button">공부열람 신청</button></li>
+							<li><button type="button" onclick="fn.popupOpen('#popup-suggestion');">의견보내기</button></li>
+						</ul>
+					</div>
+				</div>
+				<!-- // 컨텍스트 메뉴 -->
+
+				<!-- 현재 위치 // -->
+				<div class="map-location">서울 동작구 흑석동</div>
+				<!-- // 현재 위치 -->
+				<!-- // 추가 : 2020.01.14 -->
+				<img src="@@common/resources/images/common/map.jpg" alt="">
+			</div>
+			<!-- // 지도 -->
+
+			<!-- 컨텍스트메뉴 팝업 : 추가 : 2020.01.14 // -->
+			@@include('./include/mapPopup.html')
+			<!-- // 컨텍스트메뉴 팝업 -->
+
+		</div>
+	</main>
+	<!-- //contents -->
+
+	<!-- footer// -->
+	@@include('./include/footer.html')
+	<!-- //footer -->
+</div>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<div class="scrollbar">
+    <div class="inner">
+        <h3 class="tit">회원정보</h3>
+
+        <div class="tab-menu">
+            <a href="#" class="active">회원정보 수정</a>
+            <a href="#">회원 탈퇴</a>
+        </div>
+
+        <div class="header">
+            <h4 class="tit">회원정보 수정</h4>
+        </div>
+
+        <!-- 회원정보 수정 // -->
+        <section class="post-area">
+            <div class="contents">
+                <div class="input-area">
+                    <div class="row">
+                        <span class="field-tit">아이디</span>
+
+                        <span class="field-input">
+                            <input type="text" value="cstone_architecture" disabled>
+                        </span>
+                    </div>
+
+                    <div class="row">
+                        <span class="field-tit">닉네임</span>
+
+                        <span class="field-input">
+                            <input type="text" value="지네네네ㅔ">
+                        </span>
+                    </div>
+
+                    <div class="row row-email">
+                        <span class="field-tit">이메일</span>
+
+                        <span class="field-input">
+                            <input type="text" onclick="this.parentNode.querySelector('.alert').style.display='block'">
+                            <span class="at">@</span>
+                            <span class="select type1">
+                                <select title="옵션 선택">
+                                    <option>직접입력</option>
+                                    <option>naver.com</option>
+                                    <option>gmail.com</option>
+                                </select>
+                            </span>
+                            <small class="alert" style="display:none;">잘못된 이메일 형식입니다.</small>
+                        </span>
+                    </div>
+
+                    <div class="row row-phone">
+                        <span class="field-tit">휴대폰번호</span>
+
+                        <span class="field-input">
+                            <input type="text" value="" onclick="this.parentNode.querySelector('.alert').style.display='block'">
+                            <button type="button" class="btn fill big gray" onclick="fn.deltaTimer('.timelimit',180);">인증번호전송</button>    <!-- fn.deltaTimer('타겟 선택자','시간 초단위로 입력 (3분 = 180)') -->
+                            <small class="alert" style="display:none;">잘못된 휴대폰번호 형식입니다.</small>
+                        </span>
+                    </div>
+
+                    <div class="row row-otp">
+                        <span class="field-tit">인증번호</span>
+
+                        <span class="field-input">
+                            <input type="text" placeholder="인증번호 입력" onclick="this.parentNode.querySelector('.alert').style.display='block'">
+                            <span class="timelimit"></span>
+                            <button type="button" class="btn fill big gray">확인</button>
+                            <small class="alert" style="display:none;">인증번호를 다시 확인해주세요.</small>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- // 회원정보 수정 -->
+
+        <div class="btn-area update">
+            <button type="button" class="btn big stroke gray" onclick="fn.popupOpen('#popup-pwupdate')">비밀번호 변경</button>
+            <button type="button" class="btn big fill blue">정보 수정</button>
+        </div>
+    </div>
+
+    <!-- footer : 추가 : 2020.01.08 // -->
+	@@include('./include/sub_footer.html')
+	<!-- //footer -->
+</div>

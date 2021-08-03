@@ -1,0 +1,194 @@
+<!-- 결제 팝업 // -->
+<div id="popup-payment" class="popup popup-payment">
+    <div class="inner">
+        <header class="header">
+            <h2 class="tit">결제</h2>
+            <button type="button" class="btn mute btn-close" onclick="fn.popupClose(this);">닫기</button>
+        </header>
+
+        <div class="contents">
+            <dl class="pay">
+                <dt>
+                    <b>결제 금액</b>
+                    보유 포인트에서 차감하여 결제합니다.
+                </dt>
+                <dd>22,000원</dd>
+            </dl>
+
+            <div class="point-area">
+                <dl class="point-total">
+                    <dt>보유 포인트</dt>
+                    <dd><b>2,000</b>원</dd>
+                </dl>
+
+                <dl class="point-activity">
+                    <dt>활동 포인트</dt>
+                    <dd>22,000원</dd>
+                </dl>
+                <dl class="point-charge">
+                    <dt>충전 포인트</dt>
+                    <dd>22,000원</dd>
+                </dl>
+
+                <dl class="point-rest">
+                    <dt>잔여 포인트</dt>
+                    <dd><b>22,000</b>원</dd>
+                </dl>
+            </div>
+
+            <dl class="point-recharge">
+                <dt>
+                    충전할 포인트
+                    <span>1,000원 단위로 충전 가능합니다. </span>
+                </dt>
+                <dd><b>22,000</b>원</dd>
+
+                <button type="button" class="btn small fill blue btn-recharge" onclick="fn.popupClose('#popup-payment'); fn.popupOpen('#popup-recharge');">충전</button>
+            </dl>
+
+            <div class="agree-area">
+                <label><input type="checkbox" class="type1"><span>위 구매조건 확인 및 결제진행에 동의</span></label>
+            </div>
+
+            <div class="btn-area">
+                <button type="button" class="btn big stroke gray btn-cancel">취소</button>
+                <button type="button" class="btn big fill blue btn-pay" onclick="fn.popupClose('#popup-payment'); fn.popupOpen('#popup-paymentcomplete');">결제</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // 결제 팝업 -->
+
+<!-- 결제 완료 팝업 // -->
+<div id="popup-paymentcomplete" class="popup popup-paymentcomplete">
+    <div class="inner">
+        <header class="header">
+            <h2 class="tit">완료</h2>
+            <button type="button" class="btn mute btn-close" onclick="fn.popupClose(this);">닫기</button>
+        </header>
+
+        <div class="contents">
+            <p class="txt">
+                <b>광고 등록 됐습니다.</b>
+                광고내역에서 확인하실 수 있습니다.
+            </p>
+
+            <div class="table type1">
+            	<table>
+            		<caption class="hide">결제 정보</caption>
+
+            		<colgroup>
+            			<col style="width:130px;">
+            			<col style="width:220px;">
+            		</colgroup>
+
+            		<tbody>
+            			<tr>
+            				<th>광고번호</th>
+            				<td>AD-1234-5678</td>
+            			</tr>
+                        <tr>
+            				<th>광고명</th>
+            				<td>가가건설 홍보_메인_상세화면 에게재_12월_03</td>
+            			</tr>
+                        <tr>
+            				<th>기간</th>
+            				<td>2019.12.25 - 2019.12.30</td>
+            			</tr>
+                        <tr>
+            				<th>금액</th>
+            				<td>8,310 원</td>
+            			</tr>
+            		</tbody>
+            	</table>
+            </div>
+
+
+            <div class="btn-area">
+                <button type="button" class="btn big fill blue btn-ok" onclick="fn.popupClose('#popup-paymentcomplete');">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // 결제 완료 팝업 -->
+
+<!-- 포인트 충전 팝업 // -->
+<div id="popup-recharge" class="popup popup-recharge">
+    <div class="inner">
+        <header class="header">
+            <h2 class="tit">포인트 충전</h2>
+            <button type="button" class="btn mute btn-close" onclick="fn.popupClose(this);">닫기</button>
+        </header>
+
+        <div class="contents">
+            <div class="form-area">
+                <div class="row price">
+    				<div class="column horizontal">
+    					<span class="field-tit">충전금액</span>
+    					<span class="field-input">
+    						<span class="inner">
+    							<input type="text" title="충전금액 입력">
+                                <span class="unit">원</span>
+    						</span>
+    					</span>
+    				</div>
+    			</div>
+
+                <div class="row unit">
+    				<div class="column horizontal">
+    					<span class="field-tit">충전단위</span>
+    					<span class="field-input">
+    						<span class="inner">
+                                <label><input type="radio" name="unit" checked><span>1,000원</span></label>
+                                <label><input type="radio" name="unit"><span>5,000원</span></label>
+                                <label><input type="radio" name="unit"><span>10,000원</span></label>
+                                <label><input type="radio" name="unit"><span>50,000원</span></label>
+    						</span>
+    					</span>
+    				</div>
+    			</div>
+
+                <div class="row method">
+    				<div class="column horizontal">
+    					<span class="field-tit">결제방법</span>
+    					<span class="field-input">
+    						<span class="inner">
+                                <label><input type="radio" name="method" onclick="fn.addActive('.row.name');" checked><span>무통장 입금</span></label>
+                                <label><input type="radio" name="method" onclick="fn.removeActive('.row.name');"><span>신용카드</span></label>
+                                <label><input type="radio" name="method" onclick="fn.removeActive('.row.name');"><span>카카오페이</span></label>
+    						</span>
+    					</span>
+    				</div>
+    			</div>
+
+                <div class="row name active">
+    				<div class="column horizontal">
+    					<span class="field-tit">입금자</span>
+    					<span class="field-input">
+    						<span class="inner">
+                                <input type="text" title="입금자 입력">
+
+                                <div class="bank">농협 355-0057-4768-93 주식회사 예금주 : 굿시티</div>
+    						</span>
+    					</span>
+    				</div>
+    			</div>
+            </div>
+
+            <div class="agree-area">
+                <label><input type="checkbox" class="type1"><span>위 구매조건 확인 및 결제진행에 동의</span></label>
+            </div>
+
+            <div class="btn-area">
+                <button type="button" class="btn big stroke gray btn-cancel">취소</button>
+                <button type="button" class="btn big fill blue btn-pay">충전</button>
+            </div>
+
+            <div class="txt-area">
+                <p>충전된 포인트에 대해서 환불이 가능하며, 환불 시 환불수수료(10%)를 제외한 나머지 금액이 환불됩니다.</p>
+                <p>현금영수증, 세금계산서 발행은 031-333-4444로 연락주시기 바랍니다.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // 포인트 충전 팝업 -->

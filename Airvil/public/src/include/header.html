@@ -1,0 +1,91 @@
+<noscript>
+	이 사이트를 이용하기 위해서 자바스크립트를 활성화 시킬 필요가 있습니다.
+	<a href="http://www.enable-javascript.com/ko/" target="_blank">브라우저에서 자바스크립트를 활성화하는 방법</a>을 참고 하세요.
+	</noscript>
+
+	<div class="skip">
+		 <a href="#container">본문으로 건너뛰기</a>
+	</div>
+
+	<header id="header">
+		<h1 class="logo"><a href="@@common/">airvil</a></h1>
+
+		<nav>
+			<h2 class="hide">주 메뉴</h2>
+
+			<div class="scrollbar">
+				<ul id="gnb">
+					<li class="@@licensingActive"><!-- 메뉴 활성화 class="active" -->
+						<a href="@@common/"><span>인허가 찾기</span></a>
+
+						<!-- 인허가 찾기 필터 목록 : 삭제 : 2020.01.16 // // -->
+						<!-- // 인허가 찾기 필터 목록 -->
+					</li>
+
+					<li class="@@expertActive">
+						<a href="@@common/expert.html"><span>전문가 찾기</span></a>
+
+						<!-- 전문가 찾기 필터 목록 : 삭제 : 2020.01.16 // // -->
+						<!-- // 전문가 찾기 필터 목록 -->
+					</li>
+
+					<li class="@@landActive">
+						<a href="@@common/land.html"><span>부동산 매물</span></a>
+
+						<!-- 부동산 매물 필터 목록 : 삭제 : 2020.01.16 // -->
+						<!-- // 부동산 매물 필터 목록 -->
+					</li>
+
+					<li class="@@dataActive">
+						<a href="@@common/dataAiLand.html"><span>나만의 데이터</span></a>
+
+						<!-- 나만의 데이터 필터 목록 : 삭제 : 2020.01.16 // // -->
+						<!-- // 나만의 데이터 필터 목록 -->
+					</li>
+
+					<li class="@@postActive">
+						<a href="@@common/post.html"><span>게시글</span></a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 개인화 메뉴 : 수정 : 2019.12.11 // -->
+			<ul class="personal">
+				<li><button type="button" class="btn mute btn-chat new" data-number="80" onclick="fn.chatListOpen(this);">채팅하기</button></li><!-- 신규 채팅 메시지 발생 시 class="new" data-number="메세지 수" : 수정 : 2019.12.12 -->
+				<li><button type="button" class="btn mute btn-alert new" data-number="80" onclick="fn.notifyListOpen(this);">알림</button></li><!-- 신규 알림 발생 시 class="new" --><!-- data-number="알림 수" : 수정 : 2019.12.12 -->
+				<li><button type="button" class="btn mute btn-mypage @@mypageActive" onmouseover="fn.addActive('.personal-area');" onmouseout="fn.removeActive('.personal-area');">마이페이지</button></li><!-- 추가 : 2020.01.22-->
+			</ul>
+			<!-- // 개인화 메뉴 -->
+
+			<!-- 마이페이지 오버 레이어 : 추가 : 2020.01.22 // -->
+			<div class="personal-area">
+				<div class="top-area">
+					<figure class="img">
+	                    <img src="@@common/resources/images/" onerror="this.src='@@common/resources/images/common/noimg.png'" alt="">
+	                </figure>
+					<div class="info">
+						<b class="name">가가건설_김지은 님</b>
+
+						<div class="menu">
+							<a href="#">개인정보관리</a>
+							<a href="#">서비스관리</a>
+						</div>
+
+						<button type="button" class="btn small fill gray btn-logout">로그아웃</button>
+					</div>
+				</div>
+				<div class="btn-area">
+					<a href="#" class="btn-mypage">마이페이지</a>
+					<a href="#" class="btn-cscenter">고객센터</a>
+				</div>
+			</div>
+			<!-- // 마이페이지 오버 레이어 -->
+		</nav>
+
+		<!-- 검색영역 : 삭제 : 2019.12.06 // -->
+		<!-- // 검색영역 -->
+	</header>
+
+
+
+	<hr>

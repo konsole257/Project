@@ -1,0 +1,230 @@
+<article class="viewer join-area">
+                <!-- 견적받기 상단 // -->
+                <header class="header">
+                    <div class="inner">
+                        <button type="button" class="btn mute btn-close" onclick="fn.viewerClose('join');">닫기</button>
+
+                        <h2 class="tit">견적받기</h2>
+                    </div>
+                </header>
+                <!-- // 견적받기 상단 -->
+
+                <!-- 참여하기 내용 // -->
+                <div class="contents">
+                    <div class="scrollbar">
+                        <div class="inner">
+                            <!-- 추가 : 2019.12.20 // -->
+                            <div class="member-service">
+                                <p class="tit">회원 전용 서비스</p>
+                                <p class="txt">
+                                    에어빌 회원에게만 제공하는 서비스입니다.<br>
+                                    로그인 후 특별한 서비스를 이용해보세요.
+                                </p>
+                                <a href="@@common/" class="btn big fill blue btn-login">로그인</a>
+                            </div>
+                            <!-- // 추가 : 2019.12.20 -->
+
+                            <form class="form-area">
+                            	<fieldset>
+                            		<legend class="hide">견적받기</legend>
+                            		<div class="input-area">
+                                        <!-- 다중견적받기 // -->
+                                        <div class="row">
+                            				<div class="column vertical">
+                            					<span class="field-input input-multi">
+                                                    <div class="scrollbar">
+                                						<ul>
+                                                            <li><button type="button">서울특별시 강남구 테헤란로 24길 <span class="hide">삭제</span></button></li><!-- 다중견적받기시 한개씩 추가 -->
+                                                            <li><button type="button">서울특별시 강남구 테헤란로 24길 <span class="hide">삭제</span></button></li>
+                                                            <li><button type="button">서울특별시 강남구 테헤란로 24길 <span class="hide">삭제</span></button></li>
+                                                            <li><button type="button">서울특별시 강남구 테헤란로 24길 <span class="hide">삭제</span></button></li>
+                                                            <li><button type="button">서울특별시 강남구 테헤란로 24길 <span class="hide">삭제</span></button></li>
+                                                            <li><button type="button">서울특별시 강남구 테헤란로 24길 <span class="hide">삭제</span></button></li>
+                                                            <li><button type="button">서울특별시 강남구 테헤란로 24길 <span class="hide">삭제</span></button></li>
+                                                        </ul>
+                                                    </div>
+                            					</span>
+                            				</div>
+                            			</div>
+                                        <!-- // 다중견적받기 -->
+
+                                        <!-- 주소 // -->
+                                        <div class="row">
+                            				<div class="column vertical">
+                            					<span class="field-tit">주소</span>
+                            					<span class="field-input input-address">
+                            						<span class="inner">
+                                                        <button type="button" class="btn big fill gray btn-zip" onclick="fn.popupOpen('#popup-zip');">주소찾기</button><input type="text" title="주소 입력">
+                                                        <input type="text" placeholder="[선택] 상세주소 입력" title="상세주소 입력">
+                            						</span>
+                            					</span>
+                            				</div>
+                            			</div>
+                                        <!-- // 주소 -->
+
+                                        <!-- 예정일 : 추가 : 2019.12.06 // -->
+                            			<div class="row">
+                            				<div class="column vertical">
+                                                <span class="field-tit tit-work">예정일</span>
+                                                <span class="field-input input-work">
+                            						<span class="inner">
+
+                                                        <div>
+                                                            <label><input name="work" type="radio"><span>미정</span></label>
+                                                            <label><input name="work" type="radio"><span>1개월 이내</span></label>
+                                                            <label><input name="work" type="radio"><span>3개월 이내</span></label>
+                                                        </div>
+                            						</span>
+                            					</span>
+                            				</div>
+                            			</div>
+                                        <!-- // 예정일 -->
+
+                                        <!-- 요청업무 // -->
+                            			<div class="row">
+                            				<div class="column vertical">
+                                                <!--<span class="field-tit tit-work">요청업무</span>--><!-- 요청업무 미선택시 -->
+                                                <span class="field-tit tit-work">
+                                                    <ol>
+                                                        <li><button type="button">건축설계</button></li><!-- 요청업무 선택시 한개씩 추가 -->
+                                                        <li><button type="button">건축설계</button></li>
+                                                    </ol>
+                                                </span>
+                                                <!-- 수정 : 2019.12.06 // -->
+                                                <span class="field-input input-work">
+                            						<span class="inner">
+
+                                                        <div>
+                                                            <label><input name="work" type="radio"><span>건축설계</span></label>
+                                                            <label><input name="work" type="radio"><span>종합건설</span></label>
+                                                            <label><input name="work" type="radio"><span>전문건설</span></label>
+                                                            <label><input name="work" type="radio"><span>개별건설</span></label>
+                                                            <label><input name="work" type="radio"><span>건설기계</span></label>
+                                                            <label><input name="work" type="radio"><span>건축자제</span></label>
+                                                            <label><input name="work" type="radio"><span>부동산</span></label>
+                                                            <label><input name="work" type="radio"><span>법무세무회계</span></label>
+                                                            <label><input name="work" type="radio"><span>주택수리</span></label>
+                                                            <label><input name="work" type="radio"><span>이사/운송</span></label>
+                                                            <label><input name="work" type="radio"><span>가전가구</span></label>
+                                                            <label><input name="work" type="radio"><span>인력/고용/용역알선</span></label>
+                                                            <label><input name="work" type="radio"><span>직접입력</span></label>
+                                                        </div>
+                            						</span>
+                            					</span>
+                                                <!-- // 수정 : 2019.12.06 -->
+                            				</div>
+                            			</div>
+                                        <!-- // 요청업무 -->
+
+                                        <!-- 상세업무 : 삭제 : 2019.12.06 //
+                                        <div class="row row-detail">
+                            				<div class="column vertical">
+                            					<span class="field-tit">상세업무</span>
+                            					<span class="field-input input-detail">
+                            						<span class="inner">
+                                                        <div class="checkbox-area">
+                                                            <label><input type="checkbox"><span>시멘트몰탈미장</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>시멘트몰탈미장</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>시멘트몰탈미장</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>시멘트몰탈미장</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>시멘트몰탈미장</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>시멘트몰탈미장</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>시멘트몰탈미장</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                            <label><input type="checkbox"><span>회반죽바름</span></label>
+                                                            <label><input type="checkbox"><span>단열몰탈</span></label>
+                                                        </div>
+                            						</span>
+                            					</span>
+                            				</div>
+                            			</div>-->
+                                        <!-- // 상세업무 -->
+
+                                        <!-- 상세내용 // -->
+                                        <div class="row">
+                            				<div class="column vertical">
+                            					<span class="field-tit">상세내용</span>
+                            					<span class="field-input input-txt">
+                            						<span class="inner">
+                                                        <textarea placeholder="전문가에게 제안견적을 받고 싶은 내용을 입력해주세요." title="상세내용 입력"></textarea>
+                            						</span>
+                            					</span>
+                            				</div>
+                            			</div>
+                                        <!-- // 상세내용 -->
+
+                                        <!-- 파일첨부 // -->
+                                        <div class="row">
+                            				<div class="column vertical">
+                            					<span class="field-tit">파일첨부</span>
+                            					<span class="field-input input-file">
+                            						<span class="inner">
+                                                        <span class="file">
+                                                            <input type="text" placeholder="파일용량: 10MB 이하" disabled>
+            												<span class="btn big fill gray btn-file" onclick="fn.fileBtn(this);">파일첨부</span>
+            											    <input type="file" title="파일찾기" onchange="fn.file(this);">
+            											</span>
+                            						</span>
+                            					</span>
+                            				</div>
+                            			</div>
+                                        <!-- // 파일첨부 -->
+
+                                        <div class="txt-area">
+                                            <p>
+                                                개인정보의 수집 및 이용에 대한 동의를 거부할 권리가 있습니다.<br>
+                                                다만, 이러한 개인정보의 수집·이용에 동의하지 않을 경우 거래관계의<br>
+                                                설정 또는 유지가 불가능할 수 있습니다.
+                                            </p>
+                                        </div>
+
+                                        <!-- 이용동의 // -->
+                                        <div class="row">
+                                            <div class="column vertical">
+                            					<span class="field-input input-check">
+                            						<span class="inner">
+                                                        <label><input type="checkbox" class="type1"><span>개인정보 수집 및 이용동의</span></label>
+                            						</span>
+                            					</span>
+                            				</div>
+                            			</div>
+                                        <!-- // 이용동의 -->
+
+
+
+                                        <button type="button" class="btn big fill gray btn-join">견적받기</button>
+                            		</div>
+                            	</fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- // 참여하기 내용 -->
+            </article>
+
+            <hr id="join-area-end">

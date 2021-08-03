@@ -1,0 +1,349 @@
+<div class="scrollbar">
+    <div class="inner">
+        <h3 class="tit">프로필 관리<small class="bul">필수 입력</small></h3>
+
+        <!-- 프로필 등록 // -->
+        <section class="profile-area">
+            <div class="contents">
+                <div class="input-area">
+                    <div class="row">
+                        <span class="field-tit">법인명(단체명)</span>
+
+                        <span class="field-input">
+                            <input type="text" value="(주)코너스톤 건축연구소" readonly>
+                        </span>
+                    </div>
+
+                    <div class="row row-address">
+                        <span class="field-tit">주소<small class="bul">*</small></span>
+
+                        <span class="field-input">
+                            <button type="button" class="btn big fill gray">주소 검색</button>
+                            <input type="text" class="w351" readonly>
+                            <input type="text" class="w351" readonly>
+                            <input type="text" class="w710" placeholder="상세주소 입력(선택)">
+
+                            <div class="map-area">
+                                <img src="@@common/resources/images/temp/mypage_map.jpg" alt="">
+                            </div>
+                        </span>
+                    </div>
+
+                    <div class="row row-phone">
+                        <div class="column">
+                            <span class="field-tit">전화번호<small class="bul">*</small></span>
+
+                            <span class="field-input">
+                                <input type="number" placeholder="전화번호 숫자만 입력(029876532)">
+                            </span>
+                        </div>
+
+                        <div class="column">
+                            <span class="field-tit">팩스번호<small class="bul">*</small></span>
+
+                            <span class="field-input">
+                                <input type="number" placeholder="팩스번호 숫자만 입력(029876532)">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="row row-establish">
+                        <span class="field-tit">설립일<small class="bul">*</small></span>
+
+                        <span class="field-input">
+                            <input type="number" placeholder="숫자만 입력(20190501)">
+                        </span>
+                    </div>
+
+                    <div class="row row-kinds">
+                        <span class="field-tit">세부업종<small class="bul">*</small></span>
+
+                        <span class="field-input">
+                            <label><input type="checkbox"><span>토목건축공사업</span></label>
+                            <label><input type="checkbox"><span>토목공사업</span></label>
+                            <label><input type="checkbox"><span>건축공사업</span></label>
+                            <label><input type="checkbox"><span>조경공사업</span></label>
+                            <label><input type="checkbox"><span>산업환경설비공사업</span></label>
+
+                            <label><input type="checkbox"><span>토목건축공사업 토목건축공사업</span></label>
+                            <label><input type="checkbox"><span>토목공사업</span></label>
+                            <label><input type="checkbox"><span>건축공사업</span></label>
+                            <label><input type="checkbox"><span>조경공사업</span></label>
+                            <label><input type="checkbox"><span>산업환경설비공사업</span></label>
+
+                            <label></label>
+                            <label></label>
+                        </span>
+                    </div>
+
+                    <div class="row row-hash">
+                        <span class="field-tit">해시태그<small class="bul">*</small></span>
+
+                        <span class="field-input">
+                            <input type="text" placeholder="#에어빌, #신축원룸, #서울특별시, #누수공사 등 자세하게 입력">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- // 프로필 등록 -->
+
+        <!-- 포트폴리오 등록 // -->
+        <section class="portfolio-area">
+            <div class="contents">
+                <div class="guide-tit">
+                    포트폴리오 등록<small class="bul">*</small>
+                    <button type="button" class="btn fill small blue">포트폴리오 추가</button>
+                </div>
+
+                <div class="guide-area">
+                    <!-- 포트폴리오 // -->
+                    <div class="guide">
+                        <div class="preview-area">
+                            <img src="@@common/resources/images/mypage/profile_write_file.jpg" alt="">
+                        </div>
+
+                        <div class="form-area">
+                            <div class="input-area">
+                    			<div class="row">
+                    				<div class="column vertical">
+                    					<span class="field-tit">파일첨부</span>
+                    					<span class="field-input input-file">
+                    						<span class="inner">
+                                                <span class="file">
+                                                    <input type="text" placeholder="선택된 파일 없음" disabled>
+    												<span class="btn big fill gray btn-file" onclick="fn.fileBtn(this);">파일선택</span>
+    											    <input type="file" title="파일찾기" onchange="fn.file(this);">
+    											</span>
+                    						</span>
+                    					</span>
+                    				</div>
+                    			</div>
+
+                                <div class="row">
+                    				<div class="column vertical">
+                    					<span class="field-tit">제목</span>
+                    					<span class="field-input">
+                    						<span class="inner">
+                    							<input type="text" placeholder="제목 입력(최대 40자)" title="제목 입력">
+                    						</span>
+                    					</span>
+                    				</div>
+                    			</div>
+                            </div>
+                        </div>
+
+                        <div class="btn-area delete">
+                            <button type="button" class="btn fill gray">삭제</button>
+                        </div>
+                    </div>
+                    <!-- // 포트폴리오 -->
+
+                    <!-- 포트폴리오 // -->
+                    <div class="guide">
+                        <div class="preview-area">
+                            <img src="@@common/resources/images/mypage/profile_write_file.jpg" alt="">
+                        </div>
+
+                        <div class="form-area">
+                            <div class="input-area">
+                    			<div class="row">
+                    				<div class="column vertical">
+                    					<span class="field-tit">파일첨부</span>
+                    					<span class="field-input input-file">
+                    						<span class="inner">
+                                                <span class="file">
+                                                    <input type="text" placeholder="선택된 파일 없음" disabled>
+    												<span class="btn big fill gray btn-file" onclick="fn.fileBtn(this);">파일선택</span>
+    											    <input type="file" title="파일찾기" onchange="fn.file(this);">
+    											</span>
+                    						</span>
+                    					</span>
+                    				</div>
+                    			</div>
+
+                                <div class="row">
+                    				<div class="column vertical">
+                    					<span class="field-tit">제목</span>
+                    					<span class="field-input">
+                    						<span class="inner">
+                    							<input type="text" placeholder="제목 입력(최대 40자)" title="제목 입력">
+                    						</span>
+                    					</span>
+                    				</div>
+                    			</div>
+                            </div>
+                        </div>
+
+                        <div class="btn-area delete">
+                            <button type="button" class="btn fill gray">삭제</button>
+                        </div>
+                    </div>
+                    <!-- // 포트폴리오 -->
+
+                    <!-- 포트폴리오 // -->
+                    <div class="guide">
+                        <div class="preview-area">
+                            <img src="@@common/resources/images/mypage/profile_write_file.jpg" alt="">
+                        </div>
+
+                        <div class="form-area">
+                            <div class="input-area">
+                    			<div class="row">
+                    				<div class="column vertical">
+                    					<span class="field-tit">파일첨부</span>
+                    					<span class="field-input input-file">
+                    						<span class="inner">
+                                                <span class="file">
+                                                    <input type="text" placeholder="선택된 파일 없음" disabled>
+    												<span class="btn big fill gray btn-file" onclick="fn.fileBtn(this);">파일선택</span>
+    											    <input type="file" title="파일찾기" onchange="fn.file(this);">
+    											</span>
+                    						</span>
+                    					</span>
+                    				</div>
+                    			</div>
+
+                                <div class="row">
+                    				<div class="column vertical">
+                    					<span class="field-tit">제목</span>
+                    					<span class="field-input">
+                    						<span class="inner">
+                    							<input type="text" placeholder="제목 입력(최대 40자)" title="제목 입력">
+                    						</span>
+                    					</span>
+                    				</div>
+                    			</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 포트폴리오 -->
+
+                    <!-- 포트폴리오 // -->
+                    <div class="guide">
+                        <div class="preview-area">
+                            <img src="@@common/resources/images/mypage/profile_write_file.jpg" alt="">
+                        </div>
+
+                        <div class="form-area">
+                            <div class="input-area">
+                    			<div class="row">
+                    				<div class="column vertical">
+                    					<span class="field-tit">파일첨부</span>
+                    					<span class="field-input input-file">
+                    						<span class="inner">
+                                                <span class="file">
+                                                    <input type="text" placeholder="선택된 파일 없음" disabled>
+    												<span class="btn big fill gray btn-file" onclick="fn.fileBtn(this);">파일선택</span>
+    											    <input type="file" title="파일찾기" onchange="fn.file(this);">
+    											</span>
+                    						</span>
+                    					</span>
+                    				</div>
+                    			</div>
+
+                                <div class="row">
+                    				<div class="column vertical">
+                    					<span class="field-tit">제목</span>
+                    					<span class="field-input">
+                    						<span class="inner">
+                    							<input type="text" placeholder="제목 입력(최대 40자)" title="제목 입력">
+                    						</span>
+                    					</span>
+                    				</div>
+                    			</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 포트폴리오 -->
+
+                    <!-- 포트폴리오 // -->
+                    <div class="guide">
+                        <div class="preview-area">
+                            <img src="@@common/resources/images/mypage/profile_write_file.jpg" alt="">
+                        </div>
+
+                        <div class="form-area">
+                            <div class="input-area">
+                    			<div class="row">
+                    				<div class="column vertical">
+                    					<span class="field-tit">파일첨부</span>
+                    					<span class="field-input input-file">
+                    						<span class="inner">
+                                                <span class="file">
+                                                    <input type="text" placeholder="선택된 파일 없음" disabled>
+    												<span class="btn big fill gray btn-file" onclick="fn.fileBtn(this);">파일선택</span>
+    											    <input type="file" title="파일찾기" onchange="fn.file(this);">
+    											</span>
+                    						</span>
+                    					</span>
+                    				</div>
+                    			</div>
+
+                                <div class="row">
+                    				<div class="column vertical">
+                    					<span class="field-tit">제목</span>
+                    					<span class="field-input">
+                    						<span class="inner">
+                    							<input type="text" placeholder="제목 입력(최대 40자)" title="제목 입력">
+                    						</span>
+                    					</span>
+                    				</div>
+                    			</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 포트폴리오 -->
+
+                    <!-- 포트폴리오 // -->
+                    <div class="guide">
+                        <div class="preview-area">
+                            <img src="@@common/resources/images/mypage/profile_write_file.jpg" alt="">
+                        </div>
+
+                        <div class="form-area">
+                            <div class="input-area">
+                    			<div class="row">
+                    				<div class="column vertical">
+                    					<span class="field-tit">파일첨부</span>
+                    					<span class="field-input input-file">
+                    						<span class="inner">
+                                                <span class="file">
+                                                    <input type="text" placeholder="선택된 파일 없음" disabled>
+    												<span class="btn big fill gray btn-file" onclick="fn.fileBtn(this);">파일선택</span>
+    											    <input type="file" title="파일찾기" onchange="fn.file(this);">
+    											</span>
+                    						</span>
+                    					</span>
+                    				</div>
+                    			</div>
+
+                                <div class="row">
+                    				<div class="column vertical">
+                    					<span class="field-tit">제목</span>
+                    					<span class="field-input">
+                    						<span class="inner">
+                    							<input type="text" placeholder="제목 입력(최대 40자)" title="제목 입력">
+                    						</span>
+                    					</span>
+                    				</div>
+                    			</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 포트폴리오 -->
+                </div>
+
+                <div class="edit-area">
+                    <img src="@@common/resources/images/temp/editor.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- // 포트폴리오 등록 -->
+
+        <div class="btn-area create">
+            <button type="button" class="btn big stroke gray">취소</button>
+            <button type="button" class="btn big fill blue">등록</button>
+        </div>
+    </div>
+</div>

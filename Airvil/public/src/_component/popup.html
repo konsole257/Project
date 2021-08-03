@@ -1,0 +1,12 @@
+<div id="@@name" class="popup @@name" style="display:block;">
+    <div class="inner">
+        <header class="header">
+            <h2 class="tit">@@tit</h2>
+            <button type="button" class="btn mute btn-close" onclick="fn.popupClose(this);">닫기</button>
+        </header>
+
+        <div class="contents">
+            @@if (context.contents) { @@include('@@contents') }
+        </div>
+    </div>
+</div>

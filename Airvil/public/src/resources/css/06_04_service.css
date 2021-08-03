@@ -1,0 +1,110 @@
+.mypage .service section .header { position:relative; }
+.mypage .service section .header .tit { display:inline-block; font-size:16px; color:#4a4a4a; }
+
+.mypage .service.use .service-area .header .btn-info { position:absolute; top:0; right:0; }
+.mypage .service.use .service-area .service-info { display:none; position:relative; margin-top:20px; }
+.mypage .service.use .service-area .service-info.active { display:block; }
+.mypage .service.use .service-area .service-info .btn-close { position:absolute; top:30px; right:30px; width:32px; height:32px; }
+.mypage .service.use .service-area .contents .use-area { position:relative; height:120px; font-size:0; margin-top:20px; border-radius:4px; border:1px solid #ebf1ff; overflow:hidden; background:#fff; box-sizing:border-box; }
+.mypage .service.use .service-area .contents .use-area .tit { display:inline-block; width:296px; height:100%; font-size:20px; text-align:center; line-height:118px; color:#062a73; background:#ebf1ff; }
+.mypage .service.use .service-area .contents .use-area .day { display:inline-block; width:200px; height:100%; font-size:16px; text-align:center; line-height:118px; color:#202020; }
+.mypage .service.use .service-area .contents .use-area .price { display:inline-block; width:220px; height:100%; font-size:14px; text-align:right; line-height:118px; color:#202020; }
+.mypage .service.use .service-area .contents .use-area .price b { font-size:16px; }
+.mypage .service.use .service-area .contents .use-area .btn-use { position:absolute; top:0; bottom:0; right:40px; font-size:13px; color:#fff; margin:auto; }
+.mypage .service.use .service-area .contents .info-area { position:relative; margin-top:10px; padding:12px 0 12px 330px; border-radius:4px; border:1px solid #e0e0e0; background:#fff; overflow:hidden; }
+.mypage .service.use .service-area .contents .info-area dt { position:absolute; top:0; bottom:0; left:0; width:300px; height:60px; font-weight:bold; font-size:16px; color:#4a4a4a;  line-height:60px; padding-left:40px; margin:auto; box-sizing:border-box; }
+.mypage .service.use .service-area .contents .info-area dt:after { content:""; position:absolute; top:0; right:0; width:1px; height:100%; background:#e0e0e0; }
+.mypage .service.use .service-area .contents .info-area dd { font-size:13px; color:#767676; line-height:24px; }
+.mypage .service.use .service-area .contents .table { margin-top:40px; }
+.mypage .service.use .service-area .contents .table th:nth-child(3) { text-align:left; padding-left:58px; }
+.mypage .service.use .service-area .contents .table td .btn-cancel { margin-left:65px; }
+.mypage .service.use .service-area .contents .txt-area { margin-top:60px; padding:17px 25px; border-radius:4px; background:#efefef; }
+.mypage .service.use .service-area .contents .txt-area p { line-height:24px; color:#767676; }
+.mypage .service.use .service-area .contents .txt-area p:before { content:""; display:inline-block; width:2px; height:2px; vertical-align:middle; margin:-3px 6px 0 0; background:#929292; }
+.mypage .service.use .service-area .contents .nodata { height:236px; line-height:236px; font-size:14px; text-align:center; color:#202020; }
+
+.mypage .service.point .point-area .contents { margin-top:20px; background:#ebf1ff; overflow:hidden; }
+.mypage .service.point .point-area .contents > div { float:left; position:relative; width:25%; height:160px; padding:30px 40px 32px; box-sizing:border-box; }
+.mypage .service.point .point-area .contents > div:before { content:""; position:absolute; top:0; left:0; bottom:0; width:1px; height:96px; margin:auto; background:#e7eaf3; }
+.mypage .service.point .point-area .contents > div:after { content:""; position:absolute; top:63px; right:40px; width:60px; height:60px; background:url("@@css/resources/images/mypage/icon.png") no-repeat 0 0; }
+.mypage .service.point .point-area .contents > div.holding:after { background-position:0 0; }
+.mypage .service.point .point-area .contents > div.charging:after { background-position:-70px 0; }
+.mypage .service.point .point-area .contents > div.activity:after { background-position:-140px 0; }
+.mypage .service.point .point-area .contents > div.destroy:after { background-position:-210px 0; }
+.mypage .service.point .point-area .contents .tit { display:inline-block; font-size:14px; color:#767676; }
+.mypage .service.point .point-area .contents > div.activity .tit:after { content:""; display:inline-block; width:18px; height:18px; vertical-align:middle; margin:-3px 0 0 10px; border-radius:100%; background:url("@@css/resources/images/common/icon.png") no-repeat -201px -22px; }
+.mypage .service.point .point-area .contents > div.activity .tit .tooltip { display:none; position:absolute; z-index:1; top:47px; left:115px; width:190px; font-size:12px; color:#767676; padding:20px; border-radius:3px; background:#fff; }
+.mypage .service.point .point-area .contents > div.activity .tit .tooltip a { display:block; font-size:14px; color:#1d53bf; margin-top:5px; }
+.mypage .service.point .point-area .contents > div.activity .tit .tooltip a:after { content:""; display:inline-block; width:5px; height:9px; margin:10px 0 0 6px; background:url("@@css/resources/images/common/icon.png") no-repeat -477px 0; }
+.mypage .service.point .point-area .contents > div.activity .tit:hover .tooltip { display:block; }
+.mypage .service.point .point-area .contents .price { display:block; font-size:16px; margin:20px 0 13px; }
+.mypage .service.point .point-area .contents .price b { font-size:24px; }
+.mypage .service.point .point-area .contents.holding .price { color:#1d53bf; }
+.mypage .service.point .point-area .contents .btn { border-radius:2px; }
+.mypage .service.point .point-area .contents .btn-charging[disabled] { border:none; color:#767676; background:#e0e0e0; }
+.mypage .service.point .period-area { margin-top:40px; }
+.mypage .service.point .period-area .contents { position:relative; }
+.mypage .service.point .period-area .contents .inquiry-area { position:relative; font-size:0; text-align:center; padding:15px 0; margin-top:20px; border:1px solid #e0e0e0; background:#fff; }
+.mypage .service.point .period-area .contents .inquiry-area .btn-month { font-size:13px; margin-left:8px; }
+.mypage .service.point .period-area .contents .inquiry-area .btn-month:first-child { margin-left:0; }
+.mypage .service.point .period-area .contents .inquiry-area .btn-month.active { color:#fff; border-color:#062a73; background:#062a73; }
+.mypage .service.point .period-area .contents .inquiry-area label { display:inline-block; position:relative; vertical-align:top; }
+.mypage .service.point .period-area .contents .inquiry-area label:after { content:""; position:absolute; top:0; bottom:0; right:11px; width:18px; height:18px; margin:auto;  background:url("@@css/resources/images/common/icon.png") no-repeat -343px -22px; }
+.mypage .service.point .period-area .contents .inquiry-area label:first-of-type { margin-left:20px; }
+.mypage .service.point .period-area .contents .inquiry-area input { width:143px; height:28px; font-size:13px; color:#333; }
+.mypage .service.point .period-area .contents .inquiry-area .hyphen { display:inline-block; width:20px; height:28px; font-size:14px; line-height:28px; vertical-align:top;  color:#333; }
+.mypage .service.point .period-area .contents .inquiry-area .btn-inquiry { font-size:14px; color:#fff; margin-left:8px; }
+.mypage .service.point .period-area .contents .select { position:absolute; top:80px; left:860px; width:70px; height:32px; }
+.mypage .service.point .period-area .contents .select .ui-selectmenu-text { text-indent: 0; line-height:32px; }
+.mypage .service.point .period-area .contents .table { margin-top:65px; }
+.mypage .service.point .period-area .contents .table td:nth-child(3) { text-align:center; }
+.mypage .service.point .period-area .contents .txt-area { margin-top:60px; padding:17px 25px; border-radius:4px; background:#efefef; }
+.mypage .service.point .period-area .contents .txt-area p { line-height:24px; color:#767676; }
+.mypage .service.point .period-area .contents .txt-area p:before { content:""; display:inline-block; width:2px; height:2px; vertical-align:middle; margin:-3px 6px 0 0; background:#929292; }
+.mypage .service.point .period-area .contents .nodata { height:236px; line-height:236px; font-size:14px; text-align:center; color:#202020; }
+
+.mypage .service.qna.list .search-area { position:relative; margin-top:20px; overflow:hidden; }
+.mypage .service.qna.list .search-area .field-input { position:relative; width:352px; float:left; }
+.mypage .service.qna.list .search-area .field-input input { width:100%; height:40px; }
+.mypage .service.qna.list .search-area .btn-search { position:absolute; top:0; right:0; width:40px; height:40px; text-indent:-9999px; }
+.mypage .service.qna.list .search-area .btn-search:before { content:""; position:absolute; top:0; left:0; bottom:0; right:0; width:16px; height:16px; margin:auto; background:url("/resources/images/common/btn.png") no-repeat -98px 0; }
+.mypage .service.qna.list .search-area .btn-write { float:right; margin-top:2px; }
+.mypage .service.qna.list section .header .result { color:#767676; margin-left:15px; }
+.mypage .service.qna.list .contents .table td:nth-child(3) { text-align:center; }
+.mypage .service.qna.list .contents .table td.wait { color:#767676; }
+.mypage .service.qna.list .contents .table td.complete { color:#1d53bf; }
+.mypage .service.qna.list .contents .nodata { height:236px; line-height:236px; font-size:14px; text-align:center; color:#202020; }
+
+.mypage .service.qna.view .header { padding-bottom:12px; border-bottom:1px solid #b4b4b4; }
+.mypage .service.qna.view .header .state { display:inline-block; font-size:13px; line-height:26px; margin-right:8px; padding:0 8px; border-radius:2px; }
+.mypage .service.qna.view .header .state.wait { color:#202020; border:1px solid #b4b4b4; }
+.mypage .service.qna.view .header .state.complete { color:#fff; border:1px solid #1d53bf; background:#1d53bf; }
+.mypage .service.qna.view .header .division-area { position:absolute; top:0; right:0; bottom:0; margin:auto; }
+.mypage .service.qna.view .header .division { line-height:28px; }
+.mypage .service.qna.view .header .type { color:#1d53bf }
+.mypage .service.qna.view .header .date { color:#767676; }
+.mypage .service.qna.view .editor-area { margin-top:35px; line-height:21px; color:#767676; }
+.mypage .service.qna.view .file { margin-top:85px; }
+.mypage .service.qna.view .file .tit { display:inline-block; color:202020; line-height:21px; margin-right:30px; }
+.mypage .service.qna.view .file a { display:inline-block; color:#767676; line-height:21px; }
+.mypage .service.qna.view .reply-area { position:relative; line-height:21px; padding:40px; margin-top:40px; background:#efefef; }
+.mypage .service.qna.view .reply-area .tit { font-size:16px; color:#4a4a4a; }
+.mypage .service.qna.view .reply-area .date { position:absolute; top:40px; right:40px; color:#767676; }
+.mypage .service.qna.view .reply-area .txt-area { color:#767676; margin-top:22px; }
+.mypage .service.qna.view .btn-area { text-align:center; margin-top:32px; }
+.mypage .service.qna.view .file + .btn-area { padding-top:32px; border-top:1px solid #e0e0e0; }
+.mypage .service.qna.view .btn-area .btn { margin-left:6px; }
+.mypage .service.qna.view .btn-area .btn:first-child { margin-left:0; }
+
+.mypage .service.qna.write .inner > .header { padding-bottom:12px; margin-bottom:24px; border-bottom:1px solid #b4b4b4; }
+.mypage .service.qna.write .contents .field-tit { font-weight:bold; }
+.mypage .service.qna.write .contents .file input { width:270px; background:#fff; }
+.mypage .service.qna.write .contents .file .btn-file { width:108px; margin-left:8px; }
+.mypage .service.qna.write .contents .caution { margin-top:10px; color:#767676; }
+.mypage .service.qna.write .contents .btn-area { text-align:center; margin-top:32px; }
+.mypage .service.qna.write .contents .btn-area .btn { margin-left:6px; }
+.mypage .service.qna.write .contents .btn-area .btn:first-child { margin-left:0; }
+.mypage .service.qna section .header .result { color:#767676; margin-left:15px; }
+.mypage .service.qna .contents .table td:nth-child(3) { text-align:center; }
+.mypage .service.qna .contents .table td.wait { color:#767676; }
+.mypage .service.qna .contents .table td.complete { color:#1d53bf; }

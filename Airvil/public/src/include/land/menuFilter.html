@@ -1,0 +1,243 @@
+<!-- 추가 : 2019.12.18 // -->
+                    <div class="reset-area">
+                        <span>필터</span>
+                        <button type="button" class="btn mute btn-reset" onclick="fn.filterAllReset(this);">초기화</button>
+                    </div>
+                    <!-- // 추가 : 2019.12.18 -->
+
+                    <ul class="depth2">
+                        <!-- 지역 // -->
+                        <li>
+                            <button type="button"><span>지역</span></button>
+
+                            <!-- 지역 필터 // -->
+                            <div class="filter-area">
+                                <button type="button" class="btn mute btn-reset" onclick="fn.filterReset(this);">초기화</button>
+
+                                <ol class="root">
+                                    <li><button type="button">서울특별시</button></li><!-- 지역 선택시 하나씩 추가 -->
+                                    <li><button type="button">강남구</button></li>
+                                    <li><button type="button">개포동</button></li>
+                                </ol>
+
+                                <div class="filter-group">
+                                    <div class="filter-input">
+                                        <span class="inner">
+                                            <label><input type="checkbox"><span>서울특별시</span></label>
+                                            <label><input type="checkbox"><span>부산광역시</span></label>
+                                            <label><input type="checkbox"><span>대구광역시</span></label>
+                                            <label><input type="checkbox"><span>인천광역시</span></label>
+                                            <label><input type="checkbox"><span>광주광역시</span></label>
+                                            <label><input type="checkbox"><span>대전광역시</span></label>
+                                            <label><input type="checkbox"><span>울산광역시</span></label>
+                                            <label><input type="checkbox"><span>세종특별자치시</span></label>
+                                            <label><input type="checkbox"><span>경기도</span></label>
+                                            <label><input type="checkbox"><span>강원도</span></label>
+                                            <label><input type="checkbox"><span>충청북도</span></label>
+                                            <label><input type="checkbox"><span>충청남도</span></label>
+                                            <label><input type="checkbox"><span>전라북도</span></label>
+                                            <label><input type="checkbox"><span>전라남도</span></label>
+                                            <label><input type="checkbox"><span>경상북도</span></label>
+                                            <label><input type="checkbox"><span>경상남도</span></label>
+                                            <label><input type="checkbox"><span>제주특별자치도</span></label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 지역 필터 -->
+                        </li>
+                        <!-- // 지역 -->
+
+                        <!-- 매물구분 // -->
+                        <li>
+                            <button type="button"><span>매물구분</span></button><!-- 수정 : 2019.12.24 -->
+
+                            <!-- 매물구분 필터 // -->
+                            <div class="filter-area">
+                                <button type="button" class="btn mute btn-reset" onclick="fn.filterReset(this);">초기화</button>
+
+                                <div class="filter-group">
+                                    <div class="filter-input">
+                                        <span class="inner">
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>아파트</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>오피스텔</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>연립/다세대</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>원룸/투룸</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>단독/다가구</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>상가</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>사무실</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>공장/창고</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>건물/빌딩</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>분양권</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>토지</span></label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 매물구분 필터 -->
+                        </li>
+                        <!-- // 매물구분 -->
+
+                        <!-- 거래구분 // -->
+                        <li>
+                            <button type="button"><span>거래구분</span></button><!-- 수정 : 2019.12.24 -->
+
+                            <!-- 거래구분 필터 // -->
+                            <div class="filter-area">
+                                <button type="button" class="btn mute btn-reset" onclick="fn.filterReset(this);">초기화</button>
+
+                                <div class="filter-group">
+                                    <div class="filter-input">
+                                        <span class="inner">
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>매매</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>전세</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>월세</span></label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 거래구분 필터 -->
+                        </li>
+                        <!-- // 거래구분 -->
+
+                        <!-- 거래금액 // -->
+                        <li>
+                            <button type="button"><span>거래금액</span></button>
+
+                            <!-- 거래금액 필터 // -->
+                            <ul class="depth3">
+                                <li>
+                                    <button type="button"><span>매매가</span></button>
+
+                                    <div class="filter-area">
+                                        <button type="button" class="btn mute btn-reset" onclick="fn.filterReset(this);">초기화</button>
+
+                                        <div class="filter-group">
+                                            <div class="filter-input">
+                                                <span class="inner">
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>~5천</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>1억</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>2억</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>3억</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>4억</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>5억</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>6억</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>8억</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>10억</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>15억</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>20억</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>20억~</span></label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button type="button"><span>전세가</span></button>
+
+                                    <div class="filter-area">
+                                        <button type="button" class="btn mute btn-reset" onclick="fn.filterReset(this);">초기화</button>
+
+                                        <div class="filter-group">
+                                            <div class="filter-input">
+                                                <span class="inner">
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>~5천</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>1억</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>2억</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>3억</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>4억</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>5억</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>6억</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>8억</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>10억</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>15억</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>20억</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>20억~</span></label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button type="button"><span>월세가</span></button>
+
+                                    <div class="filter-area">
+                                        <button type="button" class="btn mute btn-reset" onclick="fn.filterReset(this);">초기화</button>
+
+                                        <div class="filter-group">
+                                            <div class="filter-input">
+                                                <span class="inner">
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>10</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>20</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>30</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>40</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>50</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>60</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>70</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>80</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>90</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>1백</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>2백</span></label>
+                                                    <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>2백~</span></label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- // 거래금액 필터 -->
+                        </li>
+                        <!-- // 거래금액 -->
+
+                        <!-- 거래면적 // -->
+                        <li>
+                            <button type="button"><span>거래면적</span></button>
+
+                            <!-- 거래면적 필터 // -->
+                            <div class="filter-area">
+                                <button type="button" class="btn mute btn-reset" onclick="fn.filterReset(this);">초기화</button>
+
+                                <div class="filter-group">
+                                    <div class="filter-input input-surface"><!-- class 수정 : 2019.12.26 // -->
+                                        <span class="inner">
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);" data-init checked><span>전체</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>~10평</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>20평</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>30평</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>40평</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>50평</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>60평</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>100평</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>200평</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>300평</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>600평</span></label>
+                                            <label><input type="checkbox" onchange="fn.filterCheck(this);"><span>800평</span></label>
+                                        </span>
+
+                                        <!-- 추가 : 2019.12.26 // -->
+                                        <div class="ea-area">
+                                            <input name="qty" type="text" title="수량 입력" value="최소" data-init-value="최소" data-min="1m²" data-max="99m²" onfocus="fn.optionEaFocus(this);" onblur="fn.optionEaBlur(this, 'm²');"><!-- data-min="최소값" data-max="최대값" -->
+                                            <button type="button" class="btn-down" onclick="fn.optionEa(this, 'down', 'm²');">낮추기</button>
+                                            <button type="button" class="btn-up" onclick="fn.optionEa(this, 'up', 'm²');">올리기</button>
+                                        </div>
+                                        <span class="hyphen">~</span>
+                                        <div class="ea-area">
+                                            <input name="qty" type="text" title="수량 입력" value="최대" data-init-value="최대" data-min="1m²" data-max="99m²" onfocus="fn.optionEaFocus(this);" onblur="fn.optionEaBlur(this, 'm²');"><!-- data-min="최소값" data-max="최대값" -->
+                                            <button type="button" class="btn-down" onclick="fn.optionEa(this, 'down', 'm²');">낮추기</button>
+                                            <button type="button" class="btn-up" onclick="fn.optionEa(this, 'up', 'm²');">올리기</button>
+                                        </div>
+                                        <!-- 추가 : 2019.12.26 // -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 거래면적 필터 -->
+                        </li>
+                        <!-- // 거래면적 -->
+                    </ul>

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<!-- config// -->
+	@@include('./include/config.html')
+	<!-- //config -->
+</head>
+
+<body>
+
+<div id="wrap">
+	<!-- header// -->
+	@@include('./include/header.html', {
+		"mypageActive": "active"
+	})
+	<!-- //header -->
+
+	<!-- contents// -->
+	<main id="container" class="mypage">
+		<div id="contents" class="main">
+			<!-- 마이페이지 메뉴 // -->
+			@@include('./include/mypage/menu.html')
+			<!-- // 마이페이지 메뉴 -->
+
+			<!-- 마이페이지 메인 // -->
+			@@include('./include/mypage/main/main.html')
+			<!-- // 마이페이지 메인 -->
+
+			<!-- 채팅목록 // -->
+			@@include('./include/chat/list.html')
+			<!-- // 채팅목록 -->
+
+			<!-- 채팅상세 // -->
+			@@include('./include/chat/join.html')
+			<!-- // 채팅상세 -->
+
+			<!-- 알림목록 : 추가 : 2020.01.23 // -->
+			@@include('./include/notify/list.html')
+			<!-- // 알림목록 -->
+		</div>
+	</main>
+	<!-- //contents -->
+
+	<!-- footer// -->
+	@@include('./include/footer.html')
+	<!-- //footer -->
+</div>
+
+</body>
+</html>

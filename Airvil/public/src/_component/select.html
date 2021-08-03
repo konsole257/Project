@@ -1,0 +1,7 @@
+@@if (context.settings) {
+<span class="@@settings.class">
+	<select title="옵션 선택">
+		@@for (var i = 0; i < context.settings.option.length; i++) { <option>`+settings.option[i]+`</option> }
+	</select>
+</span>
+}

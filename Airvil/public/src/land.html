@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<!-- config// -->
+	@@include('./include/config.html')
+	<!-- //config -->
+</head>
+
+<body>
+
+<div id="wrap">
+	<!-- header// -->
+	@@include('./include/header.html', {
+		"landActive": "active"
+	})
+	<!-- //header -->
+
+	<!-- contents// -->
+	<main id="container" class="land">
+		<div id="contents">
+			<!-- 검색영역 : 추가 : 2019.12.06 // -->
+			@@include('./include/searchArea.html', {
+				"searchPlaceHolder": "land"
+			})
+			<!-- // 검색영역 -->
+
+			<!-- 목록 영역 // -->
+			@@include('./include/land/list.html')
+			<!-- // 목록 영역 -->
+
+			<!-- 필터 영역 : 추가 : 2020.01.16 // -->
+			@@include('./include/land/filter.html')
+			<!-- // 필터 영역 -->
+
+			<!-- 정보 보기 // -->
+			@@include('./include/land/detail.html')
+			<!-- // 정보 보기 -->
+
+			<!-- 참여하기 // -->
+			@@include('./include/land/join.html')
+			<!-- // 참여하기 -->
+
+			<!-- 채팅목록 : 추가 : 2019.12.11 // -->
+			@@include('./include/chat/list.html')
+			<!-- // 채팅목록 -->
+
+			<!-- 채팅상세 : 추가 : 2019.12.11 // -->
+			@@include('./include/chat/join.html')
+			<!-- // 채팅상세 -->
+
+			<!-- 알림목록 : 추가 : 2020.01.23 // -->
+			@@include('./include/notify/list.html')
+			<!-- // 알림목록 -->
+
+			<!-- 공유하기 팝업 : 추가 : 2020.01.22 // -->
+			@@include('./include/sharePopup.html')
+			<!-- // 공유하기 팝업 -->
+
+			<!-- 광고 : 추가 : 2019.01.08 // -->
+			<div class="ad-main">
+				<button type="button" class="btn mute btn-close" onclick="fn.adClose(this);">닫기</button>
+				<img src="@@common/resources/images/temp/ad_main.jpg" alt="">
+			</div>
+			<!-- // 광고 -->
+
+			<!-- 지도 // -->
+			<div class="map">
+				<!-- 추가 : 2020.01.14 // -->
+				<!-- 맵 컨트롤 // -->
+				<div class="mapcontrol">
+					<div class="viewcontrol">
+						<button type="button" class="btn mute btn-roadview active">로드뷰</button><!-- 선택한 버튼 class="active" -->
+						<button type="button" class="btn mute btn-usedistrict">지적도</button>
+						<button type="button" class="btn mute btn-skyview">스카이뷰</button>
+					</div>
+
+					<div class="zoomcontrol">
+						<button type="button" class="btn mute btn-zoomin">줌인</button>
+						<button type="button" class="btn mute btn-zoomout">줌아웃</button>
+					</div>
+
+					<div class="tools">
+						<button type="button" class="btn mute btn-distance">거리재기</button>
+						<button type="button" class="btn mute btn-area">면적재기</button>
+						<button type="button" class="btn mute btn-radius">반경재기</button>
+					</div>
+				</div>
+				<!-- // 맵 컨트롤 -->
+
+				<!-- 분류 // -->
+				<div class="sort-area">
+					<span class="select type2">
+						<select title="옵션 선택">
+							<option>2019년</option>
+							<option>2018년</option>
+							<option>2017년</option>
+							<option>2016년</option>
+						</select>
+					</span>
+
+					<button type="button" class="btn small stroke gray active">실거래가</button><!-- 활성화 class="active" -->
+					<button type="button" class="btn small stroke gray">예상매물</button>
+				</div>
+				<!-- // 분류 -->
+
+				<div style="position:absolute; top:300px; left:600px;">
+					<!-- 마커 // -->
+					<div class="cluster-marker trading big"><!--세줄인경우 class="big" 추가 -->
+						<span class="cluster-number">
+							<b>매 4.5억</b>
+							<b>매 4.5억</b>
+							32평
+							<span class="number">99</span>
+							<span class="sort in">입주예정</span><!-- 입주예정:in, 분양예정:parcel, 예상매물:expect, 실거래가:price -->
+						</span>
+					</div>
+					<!-- // 마커 -->
+				</div>
+				<div style="position:absolute; top:400px; left:600px;">
+					<!-- 마커 // -->
+					<div class="cluster-marker trading">
+						<span class="cluster-number">
+							<b>매 4.5억</b>
+							32평
+							<span class="number">2</span>
+							<span class="sort parcel">분양예정</span><!-- 입주예정:in, 분양예정:parcel, 예상매물:expect, 실거래가:price -->
+						</span>
+					</div>
+					<!-- // 마커 -->
+				</div>
+				<div style="position:absolute; top:500px; left:600px;">
+					<!-- 마커 // -->
+					<div class="cluster-marker trading">
+						<span class="cluster-number">
+							<b>매 4.5억</b>
+							32평
+							<span class="number">7</span>
+							<span class="sort expect">예상매물</span><!-- 입주예정:in, 분양예정:parcel, 예상매물:expect, 실거래가:price -->
+						</span>
+					</div>
+					<!-- // 마커 -->
+				</div>
+				<div style="position:absolute; top:600px; left:600px;">
+					<!-- 마커 // -->
+					<div class="cluster-marker trading big">
+						<span class="cluster-number">
+							<b>매 4.5억</b>
+							<b>매 4.5억</b>
+							32평
+							<span class="number">3</span>
+							<span class="sort price">실 17억</span><!-- 입주예정:in, 분양예정:parcel, 예상매물:expect, 실거래가:price -->
+						</span>
+					</div>
+					<!-- // 마커 -->
+				</div>
+
+				<div style="position:absolute; top:100px; left:1000px;">
+					<!-- 마커 // -->
+					<div class="cluster-marker in"><!-- 입주예정:in, 분양예정:parcel, 예상매물:expect, 실거래가:price -->
+						<span class="cluster-number"><b>입주예정</b> 2020.12</span>
+						<div class="marker-area">
+							<div class="marker">
+								<div class="sort">입주예정</div>
+								<div class="info">
+									<span>아파트</span><span>마포자이2차</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- // 마커 -->
+				</div>
+
+				<div style="position:absolute; top:200px; left:1000px;">
+					<!-- 마커 // -->
+					<div class="cluster-marker parcel">
+						<span class="cluster-number"><b>분양예정</b> 2020.12</span>
+						<div class="marker-area">
+							<div class="marker">
+								<div class="sort">분양예정</div>
+								<div class="info">
+									<span>아파트</span><span>마포자이2차</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- // 마커 -->
+				</div>
+
+				<div style="position:absolute; top:300px; left:1000px;">
+					<!-- 마커 // -->
+					<div class="cluster-marker expect">
+						<span class="cluster-number"><b>예상매물</b> 2020.12</span>
+						<div class="marker-area">
+							<div class="marker">
+								<div class="sort">예상매물</div>
+								<div class="info">
+									<span>아파트</span><span>마포자이2차</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- // 마커 -->
+				</div>
+
+				<div style="position:absolute; top:350px; left:1000px;">
+					<!-- 마커 // -->
+					<div class="cluster-marker price">
+						<span class="cluster-number"><b>실거래가</b> 32평</span>
+						<div class="marker-area">
+							<div class="marker">
+								<div class="sort">실거래가</div>
+								<div class="info">
+									<span>아파트</span><span>2019.05</span>
+									<b>월 99억9999만/999만</b>
+									<div>마포자이2차 101동 12층</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- // 마커 -->
+				</div>
+
+				<div style="position:absolute; top:500px; left:900px;">
+					<!-- 현재위치 // -->
+					<div class="location-marker"></div>
+					<!-- // 현재위치 -->
+				</div>
+
+				<div style="position:absolute; top:100px; left:1100px;">
+					<!-- 반경계산 // -->
+					<div class="circles-info">
+						<button type="button" class="btn mute btn-close">삭제</button>
+						<div class="result"><span class="tit">반경</span> <b class="number">345m</b></div>
+						<div class="txt"><span class="tit">지정완료 :</span> <span>마우스 우클릭</span></div>
+					</div>
+					<!-- // 반경계산 -->
+				</div>
+
+				<div style="position:absolute; top:180px; left:1100px;">
+					<!-- 반경계산 결과 // -->
+					<div class="circles-info">
+						<button type="button" class="btn mute btn-close">삭제</button>
+						<div class="result"><span class="tit">반경</span> <b class="number">345m</b></div>
+						<div class="btn-area"><button type="button" class="btn fill blue">건축인허가 검색</button></div>
+						<!-- <div class="btn-area"><button type="button" class="btn fill blue">부동산비서 검색</button></div> -->
+					</div>
+					<!-- // 반경계산 결과 -->
+				</div>
+
+				<div style="position:absolute; top:300px; left:1100px;">
+					<!-- 면적계산 // -->
+					<div class="circles-info">
+						<button type="button" class="btn mute btn-close">삭제</button>
+						<div class="txt"><span class="tit">지정완료 :</span> <span>마우스 우클릭</span></div>
+					</div>
+					<!-- // 면적계산 -->
+				</div>
+
+				<div style="position:absolute; top:350px; left:1100px;">
+					<!-- 반경계산 결과 // -->
+					<div class="circles-info">
+						<button type="button" class="btn mute btn-close">삭제</button>
+						<div class="result"><span class="tit">총면적</span> <b class="number">67.3평</b> ( 222.5㎡ )</div>
+						<div class="txt"><span class="tit">지정완료 :</span> <span>마우스 우클릭</span></div>
+					</div>
+					<!-- // 반경계산 결과 -->
+				</div>
+
+
+				<!-- 컨텍스트 메뉴 // -->
+				<div class="context" style="top:500px; left:700px;">
+					<div class="inner">
+						<button type="button" class="btn mute btn-close">닫기</button>
+						<span class="address">대흥동 12-3</span>
+						<ul class="menu">
+							<li><button type="button" onclick="fn.popupOpen('#popup-publicinfo');">공공정보 보기</button></li>
+							<li><button type="button">매물 등록</button></li>
+							<li><button type="button">공부열람 신청</button></li>
+							<li><button type="button" onclick="fn.popupOpen('#popup-suggestion');">의견보내기</button></li>
+						</ul>
+					</div>
+				</div>
+				<!-- // 컨텍스트 메뉴 -->
+
+				<!-- 현재 위치 // -->
+				<div class="map-location">서울 동작구 흑석동</div>
+				<!-- // 현재 위치 -->
+				<!-- // 추가 : 2020.01.14 -->
+
+				<img src="@@common/resources/images/common/map.jpg" alt="">
+			</div>
+			<!-- // 지도 -->
+
+			<!-- 컨텍스트메뉴 팝업 : 추가 : 2020.01.14 // -->
+			@@include('./include/mapPopup.html')
+			<!-- // 컨텍스트메뉴 팝업 -->
+
+		</div>
+	</main>
+	<!-- //contents -->
+
+	<!-- footer// -->
+	@@include('./include/footer.html')
+	<!-- //footer -->
+</div>
+
+</body>
+</html>

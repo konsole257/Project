@@ -1,0 +1,844 @@
+<article class="viewer detail-area">
+				<!-- 정보 상단 // -->
+				<div class="scrollbar">
+					<header class="header">
+						<div class="inner">
+							<button type="button" class="btn mute btn-close" onclick="fn.viewerClose('detail');">닫기</button>
+
+							<!-- 이미지 없을경우 비노출 : 2019.12.20 // -->
+							<!-- <div class="swiper-container detail-swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><img src="@@common/resources/images/temp/img_880x586.jpg" alt=""></div>
+									<div class="swiper-slide"><div id="video"></div></div>
+									<div class="swiper-slide"><img src="@@common/resources/images/temp/img_880x586.jpg" alt=""></div>
+									<div class="swiper-slide"><img src="@@common/resources/images/temp/img_880x586.jpg" alt=""></div>
+									<div class="swiper-slide"><img src="@@common/resources/images/temp/img_880x586.jpg" alt=""></div>
+								</div>
+								<button class="btn mute btn-zoom">이미지 확대보기</button>
+							</div>
+							<div class="detail-thumbs-wrap">
+								<div class="swiper-container detail-thumbs">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide"><img src="@@common/resources/images/temp/img_880x586.jpg" alt=""></div>
+										<div class="swiper-slide"><img src="@@common/resources/images/temp/img_156x104.jpg" alt=""></div>
+										<div class="swiper-slide"><img src="@@common/resources/images/temp/img_880x586.jpg" alt=""></div>
+										<div class="swiper-slide"><img src="@@common/resources/images/temp/img_880x586.jpg" alt=""></div>
+										<div class="swiper-slide"><img src="@@common/resources/images/temp/img_880x586.jpg" alt=""></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="indicator">
+								<div class="swiper-pagination"></div>
+
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-toggle pause"></div>
+							</div> -->
+							 <!-- 2019.11.29 : 추가 // -->
+							<!-- <script>
+							var player, playing = false;
+							function onYouTubeIframeAPIReady() {
+							   player = new YT.Player('video', {
+							       height: '586',
+							       width: '880',
+							       videoId: 'A5GrSunRWUw', // videoId 입력
+							       events: {
+							           'onStateChange': onPlayerStateChange
+							       }
+							   });
+							}
+
+							function onPlayerStateChange(event) {
+							   if(!playing){
+							       $('.detail-swiper ~ .indicator .swiper-button-toggle').trigger('click');
+							       playing = true;
+							   } else {
+							       $('.detail-swiper ~ .indicator .swiper-button-toggle').trigger('click');
+							   }
+							}
+							</script> -->
+							<!-- // 2019.11.29 : 추가 -->
+
+							<!-- <div class="txt-area">
+								<p class="name">경함재(景椷齋) : 전통 생활공간과 현대인의 삶이 만나는 집 현대인의 삶이 만나는 집</p>
+								<p class="address">서울특별시 은평구 진관동 39-1</<p></p>
+							</div> -->
+							<!-- // 이미지 없을경우 비노출 : 2019.12.20 -->
+
+							<!-- 회사 정보 // -->
+							<address class="info-area">
+								<div class="top">
+									<h2 class="tit">주식회사 가가건설</h2>
+
+									<!-- 수정 : 2019.12.12 // -->
+									<span class="division-area">
+										<small class="division type">종합건설</small>
+
+										<div class="division bullet rating">
+											<span class="output"></span>
+											<div>
+												<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>1점</span></label>
+												<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>2점</span></label>
+												<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>3점</span></label>
+												<label><input type="checkbox" checked disabled onchange="fn.rating(this);"><span>4점</span></label> <!-- 해당 점수에 checked 추가 -->
+												<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>5점</span></label>
+											</div>
+											<span class="reviews"><span class="hide">리뷰수 : </span>(234)</span>
+										</div>
+									</span>
+									<!-- // 수정 : 2019.12.12 -->
+
+									<div class="btn-area">
+										<span class="subscribe">구독수 129</span>
+										<button type="button" class="btn small stroke gray btn-subscribe">구독하기</button><!-- 구독하기 전 -->
+										<!-- <button type="button" class="btn small stroke gray btn-subscribe active">구독중</button> --><!-- 구독하기 후 -->
+										<button type="button" class="btn small stroke gray btn-chat">1:1 채팅</button>
+										<button type="button" class="btn small mute stroke gray btn-share" onclick="fn.popupOpen('#popup-share');">공유</button><!-- 수정 : 2020.01.22 -->
+									</div>
+								</div>
+
+								<div class="address">
+									<div class="row">
+										<div class="column"><span>대표자</span> 박상순</div>
+										<div class="column"><span>전화번호</span> 02-338-4611</div>
+										<div class="column"><span>소재지</span> 경기도 수원시 팔달구 인계동 1017</div>
+									</div>
+
+									<div class="row">
+										<div class="column"><span>설립일</span> 1982.11.01</div>
+										<div class="column"><span>기술자수</span> 36명</div>
+										<div class="column"><span>주력업종</span> 종합건설</div>
+										<div class="column"><span>주력공정</span> 단독주택</div>
+									</div>
+
+									<div class="row">
+										<div class="column"><span>등록업종</span> 기계설비공사업 , 상·하수도설비공사업 , 토공사업</div>
+									</div>
+								</div>
+							</address>
+
+							<!-- 추가 : 2019.12.12 // -->
+							<ul class="hashtag">
+								<li>#단독주택</li>
+								<li>#단독주택</li>
+								<li>#단독주택</li>
+								<li>#단독주택</li>
+								<li>#단독주택</li>
+							</ul>
+							<!-- // 추가 : 2019.12.12 -->
+							<!-- // 회사 정보 -->
+
+							<!-- 광고 : 추가 : 2019.01.08 // -->
+							<div class="ad-view">
+								<img src="@@common/resources/images/temp/ad_view.jpg" alt="">
+							</div>
+							<!-- // 광고 -->
+
+							<!-- 탭메뉴 // -->
+							<div class="tab-menu">
+								<a href="#profile" class="active">프로필</a>
+								<a href="#build">시공능력</a>
+								<a href="#bbs">게시글(123)</a>
+								<a href="#review">리뷰(245)</a>
+								<a href="#property">매물(153)</a>
+							</div>
+							<!-- // 탭메뉴 -->
+						</div>
+					</header>
+					<!-- // 정보 상단 -->
+
+					<!-- 탭 컨텐츠 // -->
+					<div class="tab-contents">
+						<div class="inner">
+							<!-- 프로필 // -->
+							<section id="profile" class="section profile">
+								<h2 class="tit">프로필</h2><!-- 추가 : 2019.12.20 -->
+
+								<!-- 프로필 없을때 : 추가 : 2019.12.20 // -->
+								<div class="nodata">
+									<p>
+										등록된 프로필이 없습니다.
+									</p>
+								</div>
+								<!-- // 프로필 없을때 -->
+
+								<img src="@@common/resources/images/temp/profile.jpg" alt="">
+							</section>
+							<!-- // 프로필 -->
+
+							<!-- 시공능력 // -->
+							<section id="build" class="section build">
+								<h2 class="tit">시공능력</h2>
+
+								<!-- 수정 : 2019.12.16 // -->
+								<section class="business">
+									<h3 class="tit">2018년 수원시 건축 시공능력 평가순위</h3>
+
+									<div class="chart">
+										<canvas id="radar-chart1" style="width:740px; height:370px;"></canvas>
+									</div>
+									<script>
+									var radarChart1ctx = document.getElementById('radar-chart1').getContext('2d');
+									var radarChart1 = new Chart(radarChart1ctx, {
+									    type: 'radar',
+									    data: {
+									        labels: ['시공능력평가', '공사실적평가', '경영평가', '기술능력평가', '신인도평가'],
+									        datasets: [
+									            {
+									                data: [80, 60, 57, 96, 56], // 시공능력평가 data, 공사실적평가 data, 경영평가 data, 기숭능력평가 data, 신인도평 data
+													backgroundColor: [ 'rgba(97, 184, 66, 0.3)' ],
+									                borderColor: [ 'rgba(97, 184, 66, 1)' ],
+													pointBorderWidth: 5,
+									                pointBorderColor: 'rgba(97, 184, 66, 1)',
+									                pointHoverBorderWidth: 3,
+									                pointHoverBackgroundColor: 'rgba(97, 184, 66, 1)',
+									                pointHoverBorderColor: 'rgba(97, 184, 66, 1)',
+									            },
+									        ]
+									    },
+									    options: {
+											responsive: false,
+									        legend: {
+									            display: false
+									        },
+									        scale: {
+												ticks: {
+											        beginAtZero: true,
+													suggestedMin: 0,
+													stepSize: 20,
+									             	suggestedMax: 100
+											    }
+									        },
+									    }
+									});
+									</script>
+
+									<div class="table type1">
+										<table>
+											<caption>대한건설자료협회 자료(단위 : 백만원)</caption>
+
+											<colgroup>
+												<col style="width:175px;">
+												<col style="width:120px;">
+												<col style="width:130px;">
+												<col style="width:120px;">
+												<col style="width:140px;">
+												<col style="width:130px;">
+											</colgroup>
+
+											<thead>
+												<tr>
+													<th>구분</th>
+													<th>시공능력</th>
+													<th>공사실적</th>
+													<th>경영</th>
+													<th>기술능력</th>
+													<th>신인도</th>
+												</tr>
+											</thead>
+
+											<tbody>
+												<tr>
+													<td>토공사업</td>
+													<td>5,007</td>
+													<td>5,112</td>
+													<td>5,023</td>
+													<td>5,061</td>
+													<td>5,003</td>
+												</tr>
+												<tr>
+													<td>철근콘크리트</td>
+													<td>5,007</td>
+													<td>5,112</td>
+													<td>5,023</td>
+													<td>5,061</td>
+													<td>5,003</td>
+												</tr>
+												<tr>
+													<td>포장</td>
+													<td>5,007</td>
+													<td>5,112</td>
+													<td>5,023</td>
+													<td>5,061</td>
+													<td>5,003</td>
+												</tr>
+												<tr>
+													<td>수중</td>
+													<td>5,007</td>
+													<td>5,112</td>
+													<td>5,023</td>
+													<td>5,061</td>
+													<td>5,003</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</section>
+
+
+								<section class="business">
+									<h3 class="tit">년도/업종별 평가총액 추이</h3>
+
+									<div class="chart">
+										<canvas id="line-chart1" style="width:610px; height:355px;"></canvas>
+										<ul class="line-chart1-list">
+											<li>토공사업</li>
+											<li>철근콘크리트</li>
+											<li>포장</li>
+											<li>수중</li>
+										</ul>
+									</div>
+									<script>
+									var lineChart1ctx = document.getElementById('line-chart1').getContext('2d');
+									var lineChart1 = new Chart(lineChart1ctx, {
+									    type: 'line',
+									    data: {
+									        labels: ['2015', '2016', '2017', '2019'],
+									        datasets: [
+									            {
+									                label: '토공사업',
+									                data: [3000, 1900, 2100, 3300], // 토공사업 data
+									                fill: false,
+									                borderColor: ['rgba(97, 184, 66, 1)'],
+									                borderWidth: 3,
+									                lineTension: 0,
+									                pointBorderWidth: 6,
+									                pointBorderColor: 'rgba(97, 184, 66, 1)',
+									                pointHoverBorderWidth: 4,
+									                pointHoverBackgroundColor: 'rgba(97, 184, 66, 1)',
+									                pointHoverBorderColor: 'rgba(97, 184, 66, 1)',
+									            },
+									            {
+									                label: '철근콘크리트',
+									                data: [2100, 1700, 3800, 4300], // 철근콘크리트 data
+									                fill: false,
+									                borderColor: ['rgba(196, 224, 81, 1)'],
+									                borderWidth: 3,
+									                lineTension: 0,
+									                pointBorderWidth: 6,
+									                pointBorderColor: 'rgba(196, 224, 81, 1)',
+									                pointHoverBorderWidth: 4,
+									                pointHoverBackgroundColor: 'rgba(196, 224, 81, 1)',
+									                pointHoverBorderColor: 'rgba(196, 224, 81, 1)',
+									            },
+									            {
+									                label: '포장',
+									                data: [4200, 6100, 5700, 8100], // 포장 data
+									                fill: false,
+									                borderColor: ['rgba(44, 122, 65, 1)'],
+									                borderWidth: 3,
+									                lineTension: 0,
+									                pointBorderWidth: 6,
+									                pointBorderColor: 'rgba(44, 122, 65, 1)',
+									                pointHoverBorderWidth: 4,
+									                pointHoverBackgroundColor: 'rgba(44, 122, 65, 1)',
+									                pointHoverBorderColor: 'rgba(44, 122, 65, 1)',
+									            },
+									            {
+									                label: '수종',
+									                data: [6050, 3900, 6010, 5920], // 수종 data
+									                fill: false,
+									                borderColor: ['rgba(235, 245, 196, 1)'],
+									                borderWidth: 3,
+									                lineTension: 0,
+									                pointBorderWidth: 6,
+									                pointBorderColor: 'rgba(235, 245, 196, 1)',
+									                pointHoverBorderWidth: 4,
+									                pointHoverBackgroundColor: 'rgba(235, 245, 196, 1)',
+									                pointHoverBorderColor: 'rgba(235, 245, 196, 1)',
+									            }
+									        ]
+									    },
+									    options: {
+											responsive: false,
+									        legend: {
+									            display: false
+									        },
+									        scales: {
+									            xAxes: [{
+									                gridLines: {
+									                    display: false,
+									                },
+									            }],
+									            yAxes: [{
+									                gridLines: {
+									                    drawBorder: false,
+									                },
+									                ticks: {
+									                    min: 0,
+									                    max: 10000,
+									                    stepSize: 2000,
+									                    padding: 20,
+														userCallback: function(value, index, values) {
+															value = value.toString();
+															value = value.split(/(?=(?:...)*$)/);
+															value = value.join(',');
+															return value;
+														},
+									                }
+									            }]
+									        }
+									    }
+									});
+									</script>
+								</section>
+								<!-- // 수정 : 2019.12.16 -->
+							</section>
+							<!-- // 시공능력 -->
+
+							<!-- 게시글 // -->
+							<section id="bbs" class="section bbs">
+								<h2 class="tit">게시글</h2>
+
+								<!-- 게시글 없을때 : 추가 : 2019.12.20 // -->
+								<div class="nodata">
+									<p>
+										등록된 게시글이 없습니다.
+									</p>
+								</div>
+								<!-- // 게시글 없을때 -->
+
+								<div class="bbs list type1">
+									<ul>
+										<!-- 반복영역 // -->
+										<li>
+											<a href="#">
+												<figure class="img">
+													<img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+												</figure>
+
+												<div class="info">
+													<p class="subject ellipsis">여주 단독주택 남한강 줄기에 도심형 인프라 줄기에 도심형 인프라 줄기에 도심형 인프라 줄기에 도심형 인프라 줄기에 도심형 인프라</p><!-- class="ellipsis" 추가 : 2019.12.16 -->
+													<!-- 수정 : 2019.11.29 // -->
+													<p class="ellipsis txt">
+														다가구주택만 전문으로 짓고 있는 가가건설입니다. 귀하의 서초동 부지에 7층 다가구주택 건축을 제안합니다.
+														1년에 약 7,000만원의 수익을 창출할 수 있을 것이라 예상합니다. 저희 회사 포트폴리오 보시고 꼭 연락주세요.
+														최선을 다해 시공하겠습니다. 감사합니다.
+														다가구주택만 전문으로 짓고 있는 가가건설입니다. 귀하의 서초동 부지에 7층 다가구주택 건축을 제안합니다.
+														1년에 약 7,000만원의 수익을 창출할 수 있을 것이라 예상합니다. 저희 회사 포트폴리오 보시고 꼭 연락주세요.
+														최선을 다해 시공하겠습니다. 감사합니다.
+														다가구주택만 전문으로 짓고 있는 가가건설입니다. 귀하의 서초동 부지에 7층 다가구주택 건축을 제안합니다.
+														1년에 약 7,000만원의 수익을 창출할 수 있을 것이라 예상합니다. 저희 회사 포트폴리오 보시고 꼭 연락주세요.
+														최선을 다해 시공하겠습니다. 감사합니다.
+													</p>
+													<!-- // 수정 : 2019.11.29 -->
+
+													<span class="division-area">
+														<span class="division bullet name">최주남건축설계사무소</span>
+														<span class="division bullet date"><span class="hide">등록일 : </span>2019.11.02</span>
+													</span>
+													<span class="hits"><span class="hide">조회수 : </span>234</span>
+													<span class="likes"><span class="hide">좋아요수 : </span>324</span>
+
+													<ul class="hashtag">
+														<li>#경기도여주</li>
+														<li>#경기도여주</li>
+														<li>#경기도여주</li>
+													</ul>
+												</div>
+											</a>
+										</li>
+										<!-- // 반복영역 -->
+
+										<li>
+											<a href="#">
+												<figure class="img">
+													<img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+												</figure>
+
+												<div class="info">
+													<p class="subject ellipsis">여주 단독주택 남한강 줄기에 도심형 인프라 줄기에 도심형 인프라 줄기에 도심형 인프라 줄기에 도심형 인프라 줄기에 도심형 인프라</p>
+													<p class="ellipsis txt">
+														다가구주택만 전문으로 짓고 있는 가가건설입니다. 귀하의 서초동 부지에 7층 다가구주택 건축을 제안합니다.
+														1년에 약 7,000만원의 수익을 창출할 수 있을 것이라 예상합니다. 저희 회사 포트폴리오 보시고 꼭 연락주세요.
+														최선을 다해 시공하겠습니다. 감사합니다.
+													</p>
+
+													<span class="division-area">
+														<span class="division bullet name">최주남건축설계사무소</span>
+														<span class="division bullet date"><span class="hide">등록일 : </span>2019.11.02</span>
+													</span>
+													<span class="hits"><span class="hide">조회수 : </span>234</span>
+													<span class="likes"><span class="hide">좋아요수 : </span>324</span>
+
+													<ul class="hashtag">
+														<li>#경기도여주</li>
+														<li>#경기도여주</li>
+														<li>#경기도여주</li>
+													</ul>
+												</div>
+											</a>
+										</li>
+									</ul>
+									<button type="button" class="btn btn-more"><span>게시글</span> 더보기</button>
+								</div>
+							</section>
+							<!-- // 게시글 -->
+
+							<!-- 리뷰 -->
+							<section id="review" class="section review">
+								<h2 class="tit">리뷰</h2>
+
+								<!-- 리뷰 없을때 : 추가 : 2019.12.20 // -->
+								<div class="nodata">
+									<p>
+										등록된 리뷰가 없습니다.
+									</p>
+								</div>
+								<!-- // 리뷰 없을때 -->
+
+								<!-- 추가 : 2019.12.13 // -->
+								<div class="assess-area">
+									<div class="point">
+										<!-- 수정 : 2020.01.20 // -->
+										<div class="rating">
+											<span class="output">4.5</span>
+											<div>
+												<span class="one"></span>
+												<span class="one"></span>
+												<span class="one"></span>
+												<span class="one"></span>
+												<span class="half"></span>
+											</div>
+										</div>
+										<!-- // 수정 : 2020.01.20 -->
+
+										<p class="txt">총 <span>1,129개</span>의 평가가 있습니다.</p>
+									</div>
+
+									<div class="graph">
+										<div>
+											<div class="bar"><span  style="width:80%;"></span></div>
+										</div>
+										<div>
+											<div class="bar"><span style="width:70%;"></span></div>
+										</div>
+										<div>
+											<div class="bar"><span style="width:67%;"></span></div>
+										</div>
+										<div>
+											<div class="bar"><span style="width:50%;"></span></div>
+										</div>
+										<div>
+											<div class="bar"><span style="width:20%;"></span></div>
+										</div>
+									</div>
+								</div>
+								<!-- // 추가 : 2019.12.13 -->
+
+								<div class="write">
+									<form class="form-area">
+										<fieldset>
+											<legend class="hide">리뷰 등록</legend>
+
+											<!-- 2019.12.13 : 수정 // -->
+											<div class="division-area rating-area">
+												<span class="division bullet name">공효진</span>
+												<span class="division bullet rating">
+													<span class="output"></span>
+													<div>
+														<label><input type="checkbox" onchange="fn.rating(this);"><span>1점</span></label>
+														<label><input type="checkbox" onchange="fn.rating(this);"><span>2점</span></label>
+														<label><input type="checkbox" onchange="fn.rating(this);"><span>3점</span></label>
+														<label><input type="checkbox" onchange="fn.rating(this);"><span>4점</span></label>
+														<label><input type="checkbox" checked onchange="fn.rating(this);"><span>5점</span></label>
+													</div>
+												</span>
+											</div>
+
+											<div class="textarea">
+												<textarea placeholder="리뷰를 남겨주세요." title="리뷰 입력" maxlength="300"></textarea>
+
+												<div class="bottom-area">
+													<span class="characters"><span class="current">0</span>/300</span>
+													<button type="button" class="btn small fill gray btn-register">등록</button>
+												</div>
+											</div>
+											<!-- // 2019.12.13 : 수정 -->
+										</fieldset>
+									</form>
+								</div>
+
+								<div class="review-list">
+									<p class="number">리뷰 17개</p>
+
+									<!-- 추가 : 2019.12.23 // -->
+									<span class="select type2">
+				                        <select title="옵션 선택">
+				                            <option>최신순</option>
+				                            <option>조회순</option>
+				                            <option>참여순</option>
+				                            <option>좋아요순</option>
+				                        </select>
+				                    </span>
+									<!-- // 추가 : 2019.12.23 -->
+
+									<ul>
+										<!-- 반복영역 // -->
+										<li>
+											<div class="inner">
+												<!-- 리뷰 // -->
+												<div class="review">
+													<div class="division-area">
+														<span class="division bullet name">손예진</span>
+														<span class="division bullet date">2019.09.24</span>
+
+														<div class="division bullet rating">
+															<span class="output"></span>
+															<div>
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>1점</span></label>
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>2점</span></label>
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>3점</span></label>
+																<label><input type="checkbox" checked disabled onchange="fn.rating(this);"><span>4점</span></label> <!-- 해당 점수에 checked 추가 -->
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>5점</span></label>
+															</div>
+														</div>
+													</div>
+
+													<p class="txt-area">
+														친절하고 좋았어요. 그런데 바빠서 그런지 전화 연락이 잘 안되는 단점이 있었습니다. 그래서 별 하나 뺍니다. 하지만 공사 내용은 진짜 좋았습니다!<br>
+														또 공사할 일 있으면 연락드릴게요~
+													</p>
+												</div>
+												<!-- // 리뷰 -->
+											</div>
+										</li>
+										<!-- // 반복영역 -->
+
+										<li>
+											<div class="inner">
+												<div class="review">
+													<div class="division-area">
+														<span class="division bullet name">손예진</span>
+														<span class="division bullet date">2019.09.24</span>
+
+														<div class="division bullet rating">
+															<span class="output"></span>
+															<div>
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>1점</span></label>
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>2점</span></label>
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>3점</span></label>
+																<label><input type="checkbox" checked disabled onchange="fn.rating(this);"><span>4점</span></label> <!-- 해당 점수에 checked 추가 -->
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>5점</span></label>
+															</div>
+														</div>
+													</div>
+
+													<p class="txt-area">
+														친절하고 좋았어요. 그런데 바빠서 그런지 전화 연락이 잘 안되는 단점이 있었습니다. 그래서 별 하나 뺍니다. 하지만 공사 내용은 진짜 좋았습니다!<br>
+														또 공사할 일 있으면 연락드릴게요~
+													</p>
+												</div>
+											</div>
+										</li>
+
+										<li>
+											<div class="inner">
+												<div class="review">
+													<div class="division-area">
+														<span class="division bullet name">손예진</span>
+														<span class="division bullet date">2019.09.24</span>
+
+														<div class="division bullet rating">
+															<span class="output"></span>
+															<div>
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>1점</span></label>
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>2점</span></label>
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>3점</span></label>
+																<label><input type="checkbox" checked disabled onchange="fn.rating(this);"><span>4점</span></label> <!-- 해당 점수에 checked 추가 -->
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>5점</span></label>
+															</div>
+														</div>
+													</div>
+
+													<p class="txt-area">
+														친절하고 좋았어요. 그런데 바빠서 그런지 전화 연락이 잘 안되는 단점이 있었습니다. 그래서 별 하나 뺍니다. 하지만 공사 내용은 진짜 좋았습니다!<br>
+														또 공사할 일 있으면 연락드릴게요~
+													</p>
+												</div>
+											</div>
+										</li>
+
+										<li>
+											<div class="inner">
+												<div class="review">
+													<div class="division-area">
+														<span class="division bullet name">손예진</span>
+														<span class="division bullet date">2019.09.24</span>
+
+														<div class="division bullet rating">
+															<span class="output"></span>
+															<div>
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>1점</span></label>
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>2점</span></label>
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>3점</span></label>
+																<label><input type="checkbox" checked disabled onchange="fn.rating(this);"><span>4점</span></label> <!-- 해당 점수에 checked 추가 -->
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>5점</span></label>
+															</div>
+														</div>
+													</div>
+
+													<p class="txt-area">
+														친절하고 좋았어요. 그런데 바빠서 그런지 전화 연락이 잘 안되는 단점이 있었습니다. 그래서 별 하나 뺍니다. 하지만 공사 내용은 진짜 좋았습니다!<br>
+														또 공사할 일 있으면 연락드릴게요~
+													</p>
+												</div>
+											</div>
+										</li>
+
+										<li>
+											<div class="inner">
+												<div class="review">
+													<div class="division-area">
+														<span class="division bullet name">손예진</span>
+														<span class="division bullet date">2019.09.24</span>
+
+														<div class="division bullet rating">
+															<span class="output"></span>
+															<div>
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>1점</span></label>
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>2점</span></label>
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>3점</span></label>
+																<label><input type="checkbox" checked disabled onchange="fn.rating(this);"><span>4점</span></label> <!-- 해당 점수에 checked 추가 -->
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>5점</span></label>
+															</div>
+														</div>
+													</div>
+
+													<p class="txt-area">
+														친절하고 좋았어요. 그런데 바빠서 그런지 전화 연락이 잘 안되는 단점이 있었습니다. 그래서 별 하나 뺍니다. 하지만 공사 내용은 진짜 좋았습니다!<br>
+														또 공사할 일 있으면 연락드릴게요~
+													</p>
+												</div>
+											</div>
+										</li>
+
+										<li>
+											<div class="inner">
+												<div class="review">
+													<div class="division-area">
+														<span class="division bullet name">손예진</span>
+														<span class="division bullet date">2019.09.24</span>
+
+														<div class="division bullet rating">
+															<span class="output"></span>
+															<div>
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>1점</span></label>
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>2점</span></label>
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>3점</span></label>
+																<label><input type="checkbox" checked disabled onchange="fn.rating(this);"><span>4점</span></label> <!-- 해당 점수에 checked 추가 -->
+																<label><input type="checkbox" disabled onchange="fn.rating(this);"><span>5점</span></label>
+															</div>
+														</div>
+													</div>
+
+													<p class="txt-area">
+														친절하고 좋았어요. 그런데 바빠서 그런지 전화 연락이 잘 안되는 단점이 있었습니다. 그래서 별 하나 뺍니다. 하지만 공사 내용은 진짜 좋았습니다!<br>
+														또 공사할 일 있으면 연락드릴게요~
+													</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<button type="button" class="btn btn-more"><span>리뷰</span> 더보기</button>
+							</section>
+							<!-- // 리뷰 -->
+
+							<!-- 매물 // -->
+							<section id="property" class="section property">
+								<h2 class="tit">매물</h2>
+
+								<!-- 매물 없을때 : 추가 : 2019.12.20 // -->
+								<div class="nodata">
+									<p>
+										등록된 매물이 없습니다.
+									</p>
+								</div>
+								<!-- // 매물 없을때 -->
+
+								<div class="bbs list type1">
+									<ul>
+										<!-- 반복영역 // -->
+										<!-- 수정 : 2019.12.26 // -->
+										<li>
+											<a href="#">
+												<figure class="img">
+													<img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+												</figure>
+
+												<div class="info">
+													<p class="subject">방학동 오피스텔 분양합니다!</p>
+													<div class="division-area address">
+														<span class="division line">서울특별시 마포구 동교동</span>
+														<span class="division line">오피스텔</span>
+														<span class="division line">19㎡</span>
+													</div>
+													<p class="price">매매 3억2천만원 (207만/3.3㎡)</p>
+													<p class="txt ellipsis">임대수익을 확보하면서도 정부의 부동산 규제는 임대수익을 확보하면서도 정부의 부동산 규제는</p>
+													<span class="name">최주남건축설계사무소</span>
+													<span class="date"><span class="hide">등록일 : </span>2019.11.02</span>
+													<span class="hits"><span class="hide">조회수 : </span>234</span>
+													<span class="likes"><span class="hide">좋아요수 : </span>324</span>
+
+													<ul class="hashtag">
+														<li>#경기도여주</li>
+														<li>#경기도여주</li>
+														<li>#경기도여주</li>
+													</ul>
+												</div>
+											</a>
+										</li>
+										<!-- // 수정 : 2019.12.26 -->
+										<!-- // 반복영역 -->
+
+										<li>
+											<a href="#">
+												<figure class="img">
+													<img src="@@common/resources/images/" alt="" onerror="this.src='@@common/resources/images/common/noimg.png'">
+												</figure>
+
+												<div class="info">
+													<p class="subject">방학동 오피스텔 분양합니다!</p>
+													<div class="division-area address">
+														<span class="division line">서울특별시 마포구 동교동</span>
+														<span class="division line">오피스텔</span>
+														<span class="division line">19㎡</span>
+													</div>
+													<p class="price">매매 3억2천만원 (207만/3.3㎡)</p>
+													<p class="txt ellipsis">임대수익을 확보하면서도 정부의 부동산 규제는 임대수익을 확보하면서도 정부의 부동산 규제는</p>
+													<span class="name">최주남건축설계사무소</span>
+													<span class="date"><span class="hide">등록일 : </span>2019.11.02</span>
+													<span class="hits"><span class="hide">조회수 : </span>234</span>
+													<span class="likes"><span class="hide">좋아요수 : </span>324</span>
+
+													<ul class="hashtag">
+														<li>#경기도여주</li>
+														<li>#경기도여주</li>
+														<li>#경기도여주</li>
+													</ul>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</section>
+							<!-- // 매물 -->
+						</div>
+					</div>
+					<!-- // 탭 컨텐츠 -->
+				</div>
+			</article>
+
+			<!-- 확대이미지 : 수정 : 2020.01.22 : 추가 : 2019.11.29 // -->
+			<div class="img-zoom">
+				<div class="inner">
+				   <button type="button" class="btn mute btn-close" onclick="">닫기</button>
+
+				   <img src="" alt="">
+			   </div>
+			</div>
+			<!-- // 확대이미지 : 수정 : 2020.01.22 : 추가 : 2019.11.29 -->
+
+			<hr id="detail-area-end">

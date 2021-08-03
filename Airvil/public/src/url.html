@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<script type="text/javascript" src="./resources/js/lib/jquery-3.3.1.min.js"></script>
+<title>airvil URL</title>
+<style>
+	*{margin:0; padding:0;}
+	html, body {background-color:#fff;}
+	dl,ul,ol,menu,li {list-style:none}
+	img {border:0 none;vertical-align:top;}
+	table {border-collapse:collapse;border-spacing:0}
+	a {text-decoration:none;border-collapse:separate;color:#666;}
+	label {cursor:pointer;}
+	p { word-wrap:break-word; word-break:break-all;}
+	textarea {resize:none; }
+	#wrap {margin:0;padding:0;}
+	h2 {position:relative;padding:5px 0 5px 10px;font-size:14px;line-height:30px;font-weight:bold; cursor:pointer;}
+	h2 span {font-size:11px;font-weight:normal;}
+	h2 .enddate {position:absolute;top:12px;right:10px;display:inline-block;color:#888;text-align:right;font-size:12px;line-height:24px;}
+	.sti {border-top:2px solid #585858;color:#333;background-color:#f7f7f7;}
+	.header {padding:20px;background-color:#fff;border-bottom:1px solid #585858;text-align:center; }
+	.folderbox {padding:0 20px 20px 20px;}
+	.folderbox:after {content:" ";display:block;clear:both;}
+	.folderbox dl {width:500px;}
+	.folderbox dl dt {float:left;display:inline-block;width:40%;}
+	.folderbox dl dd {float:left;display:inline-block;width:60%;}
+	.tabletype {width:100%;}
+	.tabletype table {width:100%;table-layout:fixed;color:#555;border:1px solid #e4e4e4;}
+	.tabletype table th {padding:5px 0;background:#f6f6f6;border-right:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4;}
+	.tabletype table th.l {padding:0 0 0 5px;text-align:left;}
+	.tabletype table td {padding:4px 4px 4px 4px;color:#000;text-align:center;border-right:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4;vertical-align:top;font-size:12px;}
+	.tabletype table td.l {text-align:left;}
+	.tabletype table td.r {text-align:right;}
+	.tabletype table td.m {vertical-align:middle;}
+	.lstype {width:100%;border-top:1px solid #585858;}
+	.lstype ul li {position:relative;padding:5px;border-bottom:1px solid #ccc;line-height:22px;font-size:12px;}
+	.lstype ul li dl {width:100%;}
+	.lstype ul li dl:after {content:" ";display:block;clear:both;}
+	.lstype ul li dl dt {position:relative;float:left;width:20%;}
+	.lstype ul li dl dd {position:relative;float:left;width:80%;}
+	.lstype ul li dl dd a {position:relative;display:inline-block;width:100%;}
+	.enddate {position:absolute;top:0;right:5px;display:inline-block;color:#888;text-align:right;font-size:12px;line-height:24px;}
+	.bar0 {background-color:none;}
+	.bar1 {background-color:#fff0f0;}
+	.bar2 {background-color:#fffff0;}
+	.bar3 {background-color:#f0fff7;}
+	.bar4 {background-color:#f0f1ff;}
+	.bar5 {background-color:#fef0ff;}
+	.barx{background-color:#fff;}
+	.txt_blue {color:#2465ec;}
+	.txt_white {color:#fff;}
+	.htmlprocess {padding:0 20px;}
+	.htmlprocess .htmlprocess_tit {padding:5px;background:#777; color:#fff; font-weight:bold;margin-top:10px;}
+	.htmlprocess table {width: 100%; font-size:13px; margin-bottom:30px;}
+	.htmlprocess table th {border:1px solid #ccc; background:#eee;}
+	.htmlprocess table td {border:1px solid #ccc; text-align:right; padding:2px 5px 1px 5px;}
+	.htmlprocess .processbar {display:block;margin:5px;height:20px;background-color:rgba(0, 199, 240, 0.1);text-align:left;}
+	.htmlprocess .processbar span {display:inline-block;height:20px;background-color:#fb53ab;}
+	.fin {border-radius:2px;background:#efccc6;}
+	.pub {font-weight:bold;color:#000;} /* 기획 전달 */
+</style>
+<script type="text/javascript">
+//<![CDATA[
+	$(function(){
+		$(".lstype").hide(0);
+		$(".lstype2").slideDown(800);
+		$(".lstype3").slideDown(800);
+		$(".sti").click(function(){
+			if( $(this).next("div").css('display') == 'none' ){
+				$(this).next("div").slideDown(400);
+			}else{
+				$(this).next("div").slideUp(400);
+			}
+		});
+		$(".folderbox").slideUp(800);
+		$(".foldersti").click(function(){
+			if( $(".folderbox").css('display') == 'none' ){
+				$(".folderbox").slideDown(400);
+			}else{
+				$(".folderbox").slideUp(400);
+			}
+		});
+	});
+//]]>
+</script>
+</head>
+<body>
+
+<div id="wrap">
+	<div class="header">
+		<h1>airvil</h1>
+	</div>
+	<h2 class="foldersti">- 폴더 네이밍<span> : 실제 작업 시 변경 될 수 있습니다.</span></h2>
+	<div class="folderbox">
+		<div class="tabletype">
+			<table summary="">
+				<caption></caption>
+				<colgroup>
+					<col width="10%" />
+					<col width="45%" />
+					<col width="*" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th colspan="2">메뉴명</th>
+						<th>폴더명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="l">WEB</td>
+						<td class="l">메인</td>
+						<td class="l">/</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<h2 class="sti sti2">- WEB<span class="enddate">완료일</span></h2>
+	<div class="htmlprocess">
+		<script type="text/javascript">
+			$(function(){
+				var totalfile = $(".frontlist dd > a").length - 1;
+				var finfile =$(".fin").length;
+				var ingfile =totalfile-finfile
+				var processper=(finfile / totalfile) * 100;
+				$(".totalfile").text(totalfile);
+				$(".finfile").text(finfile);
+				$(".ingfile").text(ingfile);
+				$(".processper").text(processper.toFixed(3)+' %'); // 소수자리 지정
+				$(".processbar span").css({"width":+processper+"%"});
+			})
+		</script>
+		<style type="text/css">
+		.htmlprocess {}
+		.htmlprocess .htmlprocess_tit {background:#777; color:#fff; font-weight:bold;margin-top:20px; }
+		.htmlprocess table {width: 100%; font-size:13px; margin-top:10px; margin-bottom:30px;}
+		.htmlprocess table th {border:1px solid #ccc; background:#eee;}
+		.htmlprocess table td {border:1px solid #ccc; text-align:right; padding:2px 5px 1px 0;}
+		</style>
+
+		<p class="htmlprocess_tit">HTML 작업공정률</p>
+		<table>
+		<colgroup><col width="150" /><col width="150" /><col width="150" /><col width="150" /><col width="*" /></colgroup>
+			<tr>
+				<th>파일수</th>
+				<th>완료</th>
+				<th>대기</th>
+				<th>작업률</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td class="totalfile"></td>
+				<td class="finfile"></td>
+				<td class="ingfile"></td>
+				<td class="processper"></td>
+				<td><span class="processbar"><span></span></span></td>
+			</tr>
+		</table>
+	</div>
+	<div class="lstype lstype2 frontlist">
+		<ul>
+			<li class="bar0">
+				<dl>
+					<dt><a href="./style_guide.html" target="_blank">GUIDE</a></dt>
+					<dd>
+						<a href="./style_guide.html" target="_blank">style_guide<span class="txt_white">.dddd</span> <span class="enddate"></span></a><br />
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar1">
+				<dl>
+					<dt>메인</dt>
+					<dd>
+						<a href="./index.html" target="_blank" class="fin">인허가찾기<span class="enddate"><span class="txt_blue">수정 2020.01.31 / 2020.01.23 / 2020.01.22 / 2020.01.21 / 2020.01.20 / 2020.01.16 / 2020.01.14 / 2020.01.08 / 2019.12.30 / 2019.12.18 / 2019.12.16 / 2019.12.13 / 2019.12.12 / 2019.12.11 / 2019.12.10 / 2019.12.06 / 2019.12.04 / 2019.11.29 / 2019.11.28</span> 완료 2019.11.27</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./expert.html" target="_blank" class="fin">전문가찾기<span class="enddate"><span class="txt_blue">수정 2020.01.31 / 2020.01.22 / 2020.01.21 / 2020.01.20 / 2020.01.16 / 2020.01.14 / 2020.01.08 / 2019.12.26 / 2019.12.23 / 2019.12.20 / 2019.12.18 / 2019.12.16 / 2019.12.13 / 2019.12.12 / 2019.12.11 / 2019.12.10 / 2019.12.06 / 2019.12.04 / 2019.11.29 / 2019.11.28</span> 완료 2019.11.27</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./land.html" target="_blank" class="fin">부동산매물<span class="enddate"><span class="txt_blue">수정 2020.01.31 / 2020.01.22 / 2020.01.20 / 2020.01.16 / 2020.01.14 / 2020.01.08 / 2019.12.30 / 2019.12.26 / 2019.12.20 / 2019.12.18 / 2019.12.16 / 2019.12.13 / 2019.12.12 / 2019.12.11 / 2019.12.10 / 2019.12.06 / 2019.12.04 / 2019.11.29 / 2019.11.28</span> 완료 2019.11.28</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./dataAiLand.html" target="_blank" class="fin">나만의데이터 - 부동산 비서 - 토지<span class="enddate"><span class="txt_blue">수정 2020.01.31 / 2020.01.21 / 2020.01.16 / 2020.01.03 / 2019.12.30 / 2019.12.18 / 2019.12.16 / 2019.12.13 / 2019.12.12 / 2019.12.11</span>완료 2019.12.10</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./dataAiBuilding.html" target="_blank" class="fin">나만의데이터 - 부동산 비서 - 건물<span class="enddate"><span class="txt_blue">수정 2020.01.31 / 2020.01.21 / 2020.01.16 / 2020.01.03 / 2019.12.30 / 2019.12.18 / 2019.12.16 / 2019.12.13 / 2019.12.12 / 2019.12.11</span> 완료 2019.12.10</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./dataBuild.html" target="_blank" class="fin">나만의데이터 - 건축인허가<span class="enddate"><span class="txt_blue">수정 2020.01.31 / 2020.01.21 / 2020.01.16 / 2020.01.03 / 2019.12.30 / 2019.12.18 / 2019.12.16 / 2019.12.13 / 2019.12.12 / 2019.12.11</span> 완료 2019.12.10</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./dataDevelop.html" target="_blank" class="fin">나만의데이터 - 개발행위허가<span class="enddate"><span class="txt_blue">수정 2020.01.31 / 2020.01.21 / 2020.01.16 / 2020.01.03 / 2019.12.30 / 2019.12.18 / 2019.12.16 / 2019.12.13 / 2019.12.12 / 2019.12.11</span> 완료 2019.12.10</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./post.html" target="_blank" class="fin">게시물<span class="enddate"><span class="txt_blue">수정 2020.01.31 / 2020.01.22 / 2020.01.20 / 2020.01.16 / 2020.01.14 / 2020.01.08 / 2019.12.30 / 2019.12.18 / 2019.12.16 / 2019.12.13 / 2019.12.12 / 2019.12.11 / 2019.12.10 / 2019.12.06 / 2019.12.04</span> 완료 2019.12.03</span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar3">
+				<dl>
+					<dt>마이페이지</dt>
+					<dd>
+						<a href="./mypage/" target="_blank" class="fin">마이페이지 - 메인<span class="enddate"><span class="txt_blue">수정 2020.01.22 / 2020.01.08</span> 2019.12.26</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/profile/write.html" target="_blank" class="fin">마이페이지 - 프로필관리 - 프로필 등록<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+
+						<a href="./mypage/activity/bbsList.html" target="_blank" class="fin">마이페이지 - 활동관리 - 게시물관리 - 목록<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/activity/bbsList_nodata.html" target="_blank" class="fin">마이페이지 - 활동관리 - 게시물관리 - 목록 정보없음<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/activity/write.html" target="_blank" class="fin">마이페이지 - 활동관리 - 게시물관리 - 등록<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/activity/update.html" target="_blank" class="fin">마이페이지 - 활동관리 - 게시물관리 - 수정<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+
+						<a href="./mypage/activity/bbsList_product.html" target="_blank" class="fin">마이페이지 - 활동관리 - 매물관리 - 목록<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/activity/bbsList_product_nodata.html" target="_blank" class="fin">마이페이지 - 활동관리 - 매물관리 - 목록 정보없음<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/activity/write_product.html" target="_blank" class="fin">마이페이지 - 활동관리 - 매물관리 - 등록<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/activity/update_product.html" target="_blank" class="fin">마이페이지 - 활동관리 - 매물관리 - 수정<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+
+						<a href="./mypage/activity/bbsList_party.html" target="_blank" class="fin">마이페이지 - 활동관리 - 참여내역관리 - 목록<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/activity/bbsList_party_nodata.html" target="_blank" class="fin">마이페이지 - 활동관리 - 참여내역관리 - 목록 정보없음<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/activity/write_party.html" target="_blank" class="fin">마이페이지 - 활동관리 - 참여내역관리 - 등록<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+
+						<a href="./mypage/activity/bbsList_estimate.html" target="_blank" class="fin">마이페이지 - 활동관리 - 견적관리 - 목록<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/activity/write_estimate.html" target="_blank" class="fin">마이페이지 - 활동관리 - 견적관리 - 등록<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+
+						<a href="./mypage/activity/bbsList_bookmark.html" target="_blank" class="fin">마이페이지 - 활동관리 - 북마크관리<span class="enddate"><span class="txt_blue">수정 2020.01.21</span> 2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/activity/bbsList_bookmark_nodata.html" target="_blank" class="fin">마이페이지 - 활동관리 - 북마크관리 정보없음<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/activity/bbsList_subscribe.html" target="_blank" class="fin">마이페이지 - 활동관리 - 구독관리<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/activity/bbsList_subscribe_nodata.html" target="_blank" class="fin">마이페이지 - 활동관리 - 구독관리 정보없음<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/activity/bbsList_review.html" target="_blank" class="fin">마이페이지 - 활동관리 - 리뷰관리<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/activity/bbsList_review_nodata.html" target="_blank" class="fin">마이페이지 - 활동관리 - 리뷰관리 정보없음<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/service/useList.html" target="_blank" class="fin">마이페이지 - 서비스관리 - 이용서비스<span class="enddate"><span class="txt_blue">수정 2020.01.08</span> 2020.01.02</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/service/pointList.html" target="_blank" class="fin">마이페이지 - 서비스관리 - 포인트관리<span class="enddate"><span class="txt_blue">수정 2020.01.21 / 2020.01.08</span> 2020.01.03</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/service/qnaList.html" target="_blank" class="fin">마이페이지 - 서비스관리 - 1:1문의 - 목록<span class="enddate"><span class="txt_blue">수정 2020.01.08</span> 2020.01.06</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/service/qnaView.html" target="_blank" class="fin">마이페이지 - 서비스관리 - 1:1문의 - 상세<span class="enddate"><span class="txt_blue">수정 2020.01.08</span> 2020.01.06</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/service/qnaWrite.html" target="_blank" class="fin">마이페이지 - 서비스관리 - 1:1문의 - 등록<span class="enddate"><span class="txt_blue">수정 2020.01.08</span> 2020.01.06</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/ad/write.html" target="_blank" class="fin">마이페이지 - 광고관리 - 등록<span class="enddate"><span class="txt_blue">수정 2020.01.08</span> 2020.01.07</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/ad/list.html" target="_blank" class="fin">마이페이지 - 광고관리 - 목록<span class="enddate"><span class="txt_blue">수정 2020.01.08</span> 2020.01.07</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/ad/update.html" target="_blank" class="fin">마이페이지 - 광고관리 - 수정<span class="enddate">2020.01.08</span></a><br /><!-- 완료 후 class="fin" -->
+
+						<a href="./mypage/contract/bbsList.html" target="_blank" class="fin">마이페이지 - 공부열람 - 신청하기<span class="enddate"><span class="txt_blue">수정 2020.01.31 / 2020.01.21</span> 2020.01.13</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/contract/bbsList_apply.html" target="_blank" class="fin">마이페이지 - 공부열람 - 신청내역<span class="enddate">2020.01.13</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/contract/bbsList_applydetail.html" target="_blank" class="fin">마이페이지 - 공부열람 - 신청내역 상세페이지<span class="enddate">2020.01.13</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/user/update.html" target="_blank" class="fin">마이페이지 - 회원정보 - 회원정보수정(사업자)<span class="enddate">2020.01.13</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/user/update_personal.html" target="_blank" class="fin">마이페이지 - 회원정보 - 회원정보수정(개인)<span class="enddate">2020.01.13</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/user/secession.html" target="_blank" class="fin">마이페이지 - 회원정보 - 탈퇴<span class="enddate">2020.01.13</span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar4">
+				<dl>
+					<dt>멤버쉽</dt>
+					<dd>
+						<a href="./member/login.html" target="_blank" class="fin">로그인<span class="enddate">2020.01.03</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./member/dormancy.html" target="_blank" class="fin">휴먼계정<span class="enddate">2020.01.03</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./member/pw_update.html" target="_blank" class="fin">비밀번호 변경안내<span class="enddate">2020.01.03</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./member/id_find.html" target="_blank" class="fin">아이디 찾기<span class="enddate"><span class="txt_blue">수정 2020.01.13</span> 2020.01.03</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./member/pw_find.html" target="_blank" class="fin">비밀번호 찾기<span class="enddate"><span class="txt_blue">수정 2020.01.13</span> 2020.01.03</span></a><br /><!-- 완료 후 class="fin" -->
+
+						<a href="./member/join.html" target="_blank" class="fin">회원가입 - 가입 유형선택<span class="enddate">2019.00.00</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./member/join_personal_step.html" target="_blank" class="fin">회원가입 - 개인회원 정보입력<span class="enddate"><span class="txt_blue">수정 2020.01.21 / 2020.01.13</span> 2019.01.03</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./member/join_personal_fin.html" target="_blank" class="fin">회원가입 - 개인회원 가입완료<span class="enddate">2019.01.03</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./member/join_business_step.html" target="_blank" class="fin">회원가입 - 사업자회원 정보입력<span class="enddate"><span class="txt_blue">수정 2020.01.21 / 2020.01.13</span> 2019.01.03</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./member/join_business_fin.html" target="_blank" class="fin">회원가입 - 사업자회원 가입완료<span class="enddate">2019.01.03</span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar5">
+				<dl>
+					<dt>고객센터</dt>
+					<dd>
+						<a href="./cscenter/notice/bbsList.html" target="_blank" class="fin">고객센터 - 공지사항 리스트<span class="enddate">2020.01.13</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./cscenter/notice/view.html" target="_blank" class="fin">고객센터 - 공지사항 상세페이지<span class="enddate">2020.01.13</span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar0">
+				<dl>
+					<dt>정책</dt>
+					<dd>
+						<a href="./policy/service.html" target="_blank" class="fin">이용약관<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./policy/privacy.html" target="_blank" class="fin">개인정보 처리방침<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./policy/lbs.html" target="_blank" class="fin">위치기반 서비스 이용약관<span class="enddate">2020.01.09</span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar1">
+				<dl>
+					<dt>에러</dt>
+					<dd>
+						<a href="./errorService.html" target="_blank" class="fin">서비스점검<span class="enddate">2020.01.23</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./error404.html" target="_blank" class="fin">없는페이지<span class="enddate">2020.01.23</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./errorSystem.html" target="_blank" class="fin">시스템<span class="enddate">2020.01.23</span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

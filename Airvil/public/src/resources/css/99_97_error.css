@@ -1,0 +1,22 @@
+/**
+* --------------------------------
+* Error CSS
+* --------------------------------
+*/
+
+/* .error */
+.error { padding-left:83px; }
+.error .txt-area { position:absolute; top:50%; left:50%; transform:translate(-50%, -50.3%); text-align:center; }
+.error .txt-area img { display:block; margin:0 auto; }
+.error .txt-area .tit { font-size:38px; color:#202020; margin-top:30px; }
+.error .txt-area .tit b { color:#1d53bf; }
+.error .txt-area .box { display:block; width:489px; height:69px; text-align:center; font-size:16px; margin-top:30px; background:#f8f8f8; }
+.error .txt-area .box span { display:inline-block; vertical-align:middle; }
+.error .txt-area .box:after { content:""; display:inline-block; width:0; height:100%; vertical-align:middle; }
+.error .txt-area .txt { font-size:16px; line-height:22px; color:#767676; margin-top:20px; }
+.error .txt-area .txt span { display:block; color:#4a4a4a; }
+.error .txt-area .btn { margin-top:37px; }
+
+.error .not .txt-area .tit { font-weight:bold; }
+.error .service .txt-area .box span { font-weight:bold; color:#1d53bf; line-height:69px; }
+.error .system .txt-area .box span { color:#767676; line-height:22px; }

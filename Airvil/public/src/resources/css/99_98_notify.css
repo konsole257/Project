@@ -1,0 +1,33 @@
+/**
+* --------------------------------
+* Notify CSS
+* --------------------------------
+*/
+.notify.list-area { position:fixed; z-index:5; top:0; left:84px; height:100%; overflow:hidden; }
+.notify.list-area .header { margin-bottom:24px; padding:20px 32px 0; }
+.notify.list-area .header > .inner { position:relative; }
+.notify.list-area .header > .inner > .tit { font-size:16px; }
+.notify.list-area .header > .inner > .tit span { display:inline-block; height:18px; font-size:12px; color:#fff; line-height:18px; padding:0 7px; margin-left:8px; border-radius:9px; background:#cc0a0a; }
+.notify.list-area .header .btn-close { position:absolute; top:0; right:-8px; width:32px; }
+.notify.list-area .header .btn-close:before { content:""; position:absolute; top:0; right:0; bottom:0; left:0; width:18px; height:18px; margin:auto; background:url("@@css/resources/images/common/btn.png") no-repeat -217px 0; }
+.notify.list-area .btn-area { padding:8px 20px; border-top:4px solid #e0e0e0; background:#f8f8f8; text-align:right; }
+.notify.list-area .btn-area .btn-read { width:100px; }
+.notify.list-area .btn-area .btn-all { width:73px; }
+.notify.list-area .list { padding:4px 25px; }
+.notify.list-area .list li:after { display:none; }
+.notify.list-area > .inner > .scrollbar { height:calc(100% - 124px); }
+.notify.list-area li { position:relative; }
+.notify.list-area li.new:before { content:""; position:absolute; top:13px; left:3px; width:4px; height:4px; background:#cc0a0a; border-radius:100%; }
+.notify.list-area li > .inner { padding:12px 0 12px 8px; cursor:auto; }
+.notify.list-area li > .inner:before { width:344px; }
+.notify.list-area li .txt { width:280px; font-size:12px; line-height:16px; color:#767676; }
+.notify.list-area li .txt span { color:#1d53bf; }
+.notify.list-area li .date { position:absolute; top:10px; right:0; width:60px; font-size:12px; text-align:center; color:#b4b4b4; line-height:20px; margin-top:0; }
+.notify.list-area li .nodata { font-size:20px; text-align:center; color:#202020; height:calc(100vh - 124px - 24px - 8px); background:#fff; }
+.notify.list-area li .nodata:after { content:""; display:inline-block; width:0px; height:100%; vertical-align:middle; }
+.notify.list-area li .nodata p { display:inline-block; vertical-align:middle; }
+.notify.list-area li .nodata p:before { content:""; display:block; width:54px; height:54px; margin:0 auto 20px; background:url("@@css/resources/images/common/icon.png") no-repeat -46px -55px; }
+.notify.list-area li .nodata span { display:block; font-size:14px; color:#767676; margin-top:20px; }
+
+.notify.list-area.active { left:84px; }
+.view.notify .notify.join-area { left:485px; transform:translateX(0); }

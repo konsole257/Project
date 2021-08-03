@@ -1,0 +1,170 @@
+<article class="viewer join-area">
+                <!-- 체크리스트 상단 // -->
+                <header class="header">
+                    <div class="inner">
+                        <button type="button" class="btn mute btn-close" onclick="fn.viewerClose('join');">닫기</button>
+
+                        <h2 class="tit">에어빌과 함께 완벽하게 준비하세요!</h2>
+                    </div>
+                </header>
+                <!-- // 체크리스트 상단 -->
+
+                <!-- 체크리스트 내용 // -->
+                <div class="contents">
+                    <div class="scrollbar">
+                        <div class="inner">
+                            <form class="form-area">
+                            	<fieldset>
+                            		<legend class="hide">참여하기</legend>
+                            		<div class="input-area">
+                                        <!-- 매물구분 // -->
+                            			<div class="row">
+                            				<div class="column vertical">
+                            					<span class="field-tit">매물구분</span>
+                            					<span class="field-input input-type">
+                            						<span class="inner">
+                                                        <div class="checkbox-area">
+                                                            <label><input type="radio" name="type" checked><span>아파트</span></label>
+                                                            <label><input type="radio" name="type"><span>상가</span></label>
+                                                            <label><input type="radio" name="type"><span>토지</span></label>
+                                                            <label><input type="radio" name="type"><span>공장창고</span></label>
+                                                            <label><input type="radio" name="type"><span>원룸</span></label>
+                                                            <label><input type="radio" name="type"><span>단독주택</span></label>
+                                                        </div>
+                            						</span>
+                            					</span>
+                            				</div>
+                            			</div>
+                                        <!-- // 매물구분 -->
+
+                                        <!-- 체크리스트 // -->
+                                        <div class="row">
+                            				<div class="column vertical">
+                            					<span class="field-tit">
+                                                    아파트 체크리스트
+                                                    <span class="special">특약사항 <button type="button" class="btn small fill blue btn-pdf">PDF</button></span><!-- 추가 : 2020.01.08 -->
+                                                </span>
+                            					<span class="field-input input-checklist">
+                            						<span class="inner">
+                                                        <ol>
+                                                            <li class="complete"><button type="button" class="btn btn-checklist" onclick="fn.checklist(this);">사전조사</button></li><!-- 완료된 체크리스트 class="complete" -->
+                                                            <li class="ing"><button type="button" class="btn btn-checklist" onclick="fn.checklist(this);">매물선정</button></li><!-- 작성중인 체크리스트 class="ing" -->
+                                                            <li><button type="button" class="btn btn-checklist" onclick="fn.checklist(this);">현장방문</button></li>
+                                                            <li><button type="button" class="btn btn-checklist" onclick="fn.checklist(this);">계약진행</button></li>
+                                                        </ol>
+                            						</span>
+                            					</span>
+                            				</div>
+                            			</div>
+                                        <!-- // 체크리스트 -->
+
+                                        <!-- 체크리스트 내용 // -->
+                                        <div class="row">
+                                            <div class="choose">
+                                				<div class="column vertical">
+                                					<span class="field-tit">1. 사전조사</span>
+                                					<span class="field-input input-choose">
+                                						<span class="inner">
+                                                            <label><input type="checkbox" class="type1" checked onclick="fn.inputChoose(this);"><span>부동산 매물 또는 나만의 데이터를 통해 매물 비교하기</span></label>
+                                                            <label><input type="checkbox" class="type1" checked onclick="fn.inputChoose(this);"><span>공공정보 실거래 가격과 사이트 내 호가를 통해 시세를 정확하게 파악하기</span></label>
+                                                            <label><input type="checkbox" class="type1" checked onclick="fn.inputChoose(this);"><span>집을 마련할 때 비용 확인하기<br>(부동산 취등록세, 중개수수료 등)</span></label>
+                                                            <label><input type="checkbox" class="type1" checked onclick="fn.inputChoose(this);"><span>집을 소유할 때 비용 확인하기<br>(부동산 세금, 이자, 유지보수비용 등)</span></label>
+                                                            <label><input type="checkbox" class="type1" checked onclick="fn.inputChoose(this);"><span>주변 생활편의시설 또는 기피시설 확인하기</span></label>
+                                                            <label><input type="checkbox" class="type1" checked onclick="fn.inputChoose(this);"><span>관리비 유무와 금액 확인하기</span></label>
+                                                            <label><input type="checkbox" class="type1" checked onclick="fn.inputChoose(this);"><span>도시가스 여부 확인하기</span></label>
+                                                            <label><input type="checkbox" class="type1" checked onclick="fn.inputChoose(this);"><span>에어빌톡으로 공인중개사님께 매물에 대해 추가 사항 문의하기</span></label>
+                                                            <label><input type="checkbox" class="type1" checked onclick="fn.inputChoose(this);"><span>에어빌톡 또는 안심번호로 현장 방문 예약하기</span></label>
+
+                                                            <p class="txt"><b>사전조사</b> 단계에 <span class="number">9</span>개의 확인 사항이 남아있습니다.</p>
+                                						</span>
+                                					</span>
+                                				</div>
+                                			</div>
+
+                                            <div class="choose active">
+                                				<div class="column vertical">
+                                					<span class="field-tit">2. 매물선정</span>
+                                					<span class="field-input input-choose">
+                                						<span class="inner">
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>부동산 매물 또는 나만의 데이터를 통해 매물 비교하기</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>공공정보 실거래 가격과 사이트 내 호가를 통해 시세를 정확하게 파악하기</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>집을 마련할 때 비용 확인하기<br>(부동산 취등록세, 중개수수료 등)</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>집을 소유할 때 비용 확인하기<br>(부동산 세금, 이자, 유지보수비용 등)</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>주변 생활편의시설 또는 기피시설 확인하기</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>관리비 유무와 금액 확인하기</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>도시가스 여부 확인하기</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>에어빌톡으로 공인중개사님께 매물에 대해 추가 사항 문의하기</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>에어빌톡 또는 안심번호로 현장 방문 예약하기</span></label>
+
+                                                            <p class="txt"><b>매물선정</b> 단계에 <span class="number">9</span>개의 확인 사항이 남아있습니다.</p>
+                                						</span>
+                                					</span>
+                                				</div>
+                                			</div>
+                                            <div class="choose">
+                                				<div class="column vertical">
+                                					<span class="field-tit">3. 현장방문</span>
+                                					<span class="field-input input-choose">
+                                						<span class="inner">
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>부동산 매물 또는 나만의 데이터를 통해 매물 비교하기</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>공공정보 실거래 가격과 사이트 내 호가를 통해 시세를 정확하게 파악하기</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>집을 마련할 때 비용 확인하기<br>(부동산 취등록세, 중개수수료 등)</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>집을 소유할 때 비용 확인하기<br>(부동산 세금, 이자, 유지보수비용 등)</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>주변 생활편의시설 또는 기피시설 확인하기</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>관리비 유무와 금액 확인하기</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>도시가스 여부 확인하기</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>에어빌톡으로 공인중개사님께 매물에 대해 추가 사항 문의하기</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>에어빌톡 또는 안심번호로 현장 방문 예약하기</span></label>
+
+                                                            <p class="txt"><b>현장방문</b> 단계에 <span class="number">9</span>개의 확인 사항이 남아있습니다.</p>
+                                						</span>
+                                					</span>
+                                				</div>
+                                			</div>
+                                            <div class="choose">
+                                				<div class="column vertical">
+                                					<span class="field-tit">4. 계약진행</span>
+                                					<span class="field-input input-choose">
+                                						<span class="inner">
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>부동산 매물 또는 나만의 데이터를 통해 매물 비교하기</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>공공정보 실거래 가격과 사이트 내 호가를 통해 시세를 정확하게 파악하기</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>집을 마련할 때 비용 확인하기<br>(부동산 취등록세, 중개수수료 등)</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>집을 소유할 때 비용 확인하기<br>(부동산 세금, 이자, 유지보수비용 등)</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>주변 생활편의시설 또는 기피시설 확인하기</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>관리비 유무와 금액 확인하기</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>도시가스 여부 확인하기</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>에어빌톡으로 공인중개사님께 매물에 대해 추가 사항 문의하기</span></label>
+                                                            <label><input type="checkbox" class="type1" onclick="fn.inputChoose(this);"><span>에어빌톡 또는 안심번호로 현장 방문 예약하기</span></label>
+
+                                                            <p class="txt"><b>계약진행</b> 단계에 <span class="number">9</span>개의 확인 사항이 남아있습니다.</p>
+                                						</span>
+                                					</span>
+                                				</div>
+                                			</div>
+                                        </div>
+                                        <!-- // 체크리스트 내용 -->
+
+                                        <!-- 메모 : 추가 : 2020.01.08 // -->
+                                        <div class="row">
+                            				<div class="column vertical">
+                            					<span class="field-tit">메모</span>
+                            					<span class="field-input input-memo">
+                            						<span class="inner">
+                                                        <textarea placeholder="매물에 맞는 메모를 입력해주세요" title="메모입력"></textarea>
+                            						</span>
+                            					</span>
+                            				</div>
+                            			</div>
+                                        <!-- // 메모 -->
+
+                                        <button type="button" class="btn big fill blue btn-save">저장하기</button>
+                            		</div>
+                            	</fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- // 체크리스트 내용 -->
+            </article>
+
+            <hr id="join-area-end">

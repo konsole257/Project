@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<!-- config// -->
+	@@include('./include/config.html')
+	<!-- //config -->
+</head>
+
+<body>
+
+<div id="wrap">
+	<!-- header// -->
+	@@include('./include/header.html', {
+		"mypageActive": "active"
+	})
+	<!-- //header -->
+
+	<!-- contents// -->
+	<main id="container" class="mypage">
+		<div id="contents" class="activity bbs list bookmark">
+			<!-- 마이페이지 메뉴 // -->
+			@@include('./include/mypage/menu.html', {
+                "mypageActivityActive": "active"
+            })
+			<!-- // 마이페이지 메뉴 -->
+
+			<!-- 마이페이지 메인 // -->
+			@@include('./include/mypage/activity/bbs/detail_bookmark_nodata.html')
+			<!-- // 마이페이지 메인 -->
+
+			<!-- 채팅목록 // -->
+			@@include('./include/chat/list.html')
+			<!-- // 채팅목록 -->
+
+			<!-- 채팅상세 // -->
+			@@include('./include/chat/join.html')
+			<!-- // 채팅상세 -->
+
+			<!-- 알림목록 : 추가 : 2020.01.23 // -->
+			@@include('./include/notify/list.html')
+			<!-- // 알림목록 -->
+
+			<!-- 팝업 : 수정하기 // -->
+			<div id="popup-bookmarkupdate" class="popup popup-bookmarkupdate">
+				<div class="inner">
+					<header class="header">
+						 <h2 class="tit">수정하기</h2>
+						<button type="button" class="btn mute btn-close" onclick="fn.popupClose(this);">닫기</button>
+					</header>
+
+					<div class="contents">
+						<form>
+							<fieldset>
+								<legend class="hide">입력하기</legend>
+								<div class="input-area">
+				                    <div class="row">
+				                        <span class="field-tit">제목</span>
+
+				                        <span class="field-input">
+				                            <input type="text" value="서울특별시 서초구 서초동 32-22" disabled>
+				                        </span>
+				                    </div>
+
+				                    <div class="row row-address">
+				                        <span class="field-tit">폴더</span>
+
+				                        <span class="field-input">
+											<span class="select type1">
+			                                	<select title="옵션 선택">
+			                                		<option>단독주택</option>
+			                                		<option>복층주택</option>
+			                                		<option>아파트</option>
+			                                	</select>
+			                                </span>
+				                        </span>
+				                    </div>
+
+				                    <div class="row row-hash">
+				                        <span class="field-tit">메모</span>
+
+				                        <span class="field-input">
+				                            <textarea>서초구 단독주택.우편 참여 有담당: 김가은실장</textarea>
+				                        </span>
+				                    </div>
+				                </div>
+
+								<div class="btn-area">
+									<button type="button" class="btn stroke big gray">취소</button>
+									<button type="button" class="btn fill big blue">수정</button>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- // 팝업 : 수정하기 -->
+		</div>
+	</main>
+	<!-- //contents -->
+
+	<!-- footer// -->
+	@@include('./include/footer.html')
+	<!-- //footer -->
+</div>
+
+</body>
+</html>

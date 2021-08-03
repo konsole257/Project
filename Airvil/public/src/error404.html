@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<!-- config// -->
+	@@include('./include/config.html')
+	<!-- //config -->
+</head>
+
+<body>
+
+<div id="wrap">
+	<!-- header// -->
+	@@include('./include/header.html')
+	<!-- //header -->
+
+	<!-- contents// -->
+	<main id="container" class="error">
+		<div id="contents" class="not">
+			<div class="txt-area">
+				<img src="@@common/resources/images/common/error.png" alt="">
+
+				<div class="tit">요청하신 페이지가 없습니다.</div>
+
+				<a href="@@common/" class="btn fill blue">메인</a>
+			</div>
+		</div>
+	</main>
+	<!-- //contents -->
+
+	<!-- footer// -->
+	@@include('./include/footer.html')
+	<!-- //footer -->
+</div>
+
+</body>
+</html>

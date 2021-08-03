@@ -1,0 +1,76 @@
+/**
+* --------------------------------
+* Post CSS
+* --------------------------------
+*/
+
+.post .cluster { transform-origin:50%; transition-duration:300ms; transform:translate(-50%, -50%); position:absolute; top:50%; left:50%; width:40px; height:40px; font-weight:bold; font-size:16px; text-align:center; line-height:40px; color:#fff; border-radius:100%; background:#79a1f2; cursor:pointer; user-select:none; box-shadow:0 0px 7px 0px rgba(0, 0, 0, 0.5); }
+.post .cluster:hover { z-index:1; width:60px; height:60px; line-height:60px; background:#79a1f2; }
+.post .list-area .sort-area .btn-area { width:100px; }
+
+.post .detail-area .header { padding:20px 32px 0; }
+.post .detail-area .header > .inner { position:relative; }
+.post .detail-area .header .info > .tit { width:560px; margin-bottom:18px; }
+.post .detail-area .header .info .writer { font-size:12px; color:#4a4a4a; }
+.post .detail-area .header .info .date { font-size:12px; color:#767676; }
+.post .detail-area .header .info .rating { font-size:12px; color:#767676; }
+.post .detail-area .header .info .rating .output { font-size:12px; color:#4a4a4a; margin-right:5px; }
+.post .detail-area .header .info .subscribe { font-size:12px; color:#767676; }
+.post .detail-area .header .info .address { color:#767676; margin-top:8px; }
+.post .detail-area .header .info .address:before { content:""; display:inline-block; width:9px; height:12px; vertical-align:middle; margin:-3px 5px 0 0; background:url("@@css/resources/images/common/icon.png") no-repeat -170px 0; }
+.post .detail-area .header .btn-area { position:absolute; top:0; right:48px; }
+.post .detail-area .header .btn-area .hits { float:left; height:28px; line-height:28px; color:#4a4a4a; margin-right:10px; }
+.post .detail-area .header .btn-area .hits:before { content:""; display:inline-block; width:12px; height:10px; margin-right:5px; background:url("@@css/resources/images/common/icon.png") no-repeat -56px 0; }
+.post .detail-area .header .btn-area label,
+.post .detail-area .header .btn-area .btn { float:left; height:28px; line-height:26px; margin-left:8px; border-radius:2px; }
+.post .detail-area .header .btn-area .btn-like { width:auto; padding:0 30px 0 10px; margin-left:0; }
+.post .detail-area .header .btn-area .btn-bookmark { width:32px; }
+.post .detail-area .header .btn-area .btn-share { width:32px; }
+.post .detail-area .header .btn-area .btn:after { content:""; position:absolute; top:0; right:0; bottom:0; left:0; margin:auto; background:url("@@css/resources/images/common/btn.png") no-repeat 0 0; }
+.post .detail-area .header .btn-area input[type=checkbox] + .btn-like:before { display:none; }
+.post .detail-area .header .btn-area input[type=checkbox] + .btn-like:after { left:auto; right:10px; width:16px; height:14px; background-position:0 -34px; }
+.post .detail-area .header .btn-area input[type=checkbox]:checked + .btn-like:after { background-position:0 -48px; }
+.post .detail-area .header .btn-area .btn-like span { display:inline-block; vertical-align:top; margin-top:-2px; }
+.post .detail-area .header .btn-area .btn-bookmark:after { width:14px; height:16px; background-position:-26px -34px; }
+.post .detail-area .header .btn-area .btn-share:after { width:16px; height:16px; background-position:-50px -34px; }
+.post .detail-area .header .tab-menu { padding:0 12px; margin:28px -32px 0; }
+.post .detail-area .header .btn-area:after { content:""; display:block; clear:both; }
+.post .detail-area .header .btn-close { position:absolute; top:0; right:-8px; width:32px; }
+.post .detail-area .header .btn-close:before { content:""; position:absolute; top:0; right:0; bottom:0; left:0; width:18px; height:18px; margin:auto; background:url("@@css/resources/images/common/btn.png") no-repeat -217px 0; }
+.post .detail-area .tab-contents { height:calc(100% - 196px); }
+.post .detail-area .tab-contents > .scrollbar { height:100%; }
+.post .detail-area .tab-contents .scroll-content > .inner { padding:0 32px 36px; }
+.post .detail-area .tab-contents .hashtag { font-size:0; margin-bottom:35px; }
+.post .detail-area .tab-contents .hashtag li { display:inline-block; height:24px; line-height:24px; font-size:12px; color:#062a73; padding:0 11px; margin:0 5px 5px 0; border-radius:12px; background:#ebf1ff; }
+.post .detail-area .tab-contents .hashtag li:first-child { margin-left:0; }
+
+.post .detail-area .tab-contents .section { padding-top:24px; }
+.post .detail-area .tab-contents .section.reply .write .form-area .textarea { height:120px; border:1px solid #e0e0e0; border-radius:4px; }
+.post .detail-area .tab-contents .section.reply .write .form-area textarea { height:72px; border:none; }
+.post .detail-area .tab-contents .section.reply .write .form-area .bottom-area { padding:9px; text-align:right; line-height:28px; }
+.post .detail-area .tab-contents .section.reply .write .form-area .characters { font-size:14px; color:#b4b4b4; }
+.post .detail-area .tab-contents .section.reply .write .form-area .characters span { color:#4a4a4a; }
+.post .detail-area .tab-contents .section.reply .write .form-area .btn-register { float:right; margin-left:15px; }
+.post .detail-area .tab-contents .section.reply .reply-list { position:relative; margin-top:49px; }
+.post .detail-area .tab-contents .section.reply .reply-list .number { font-weight:bold; font-size:16px; line-height:28px; color:#4a4a4a; margin-bottom:9px; }
+.post .detail-area .tab-contents .section.reply .reply-list .btn-view { position:absolute; top:0; right:0; width:106px; }
+.post .detail-area .tab-contents .section.reply .reply-list ul { border-top:1px solid #e0e0e0; border-bottom:1px solid #e0e0e0; }
+.post .detail-area .tab-contents .section.reply .reply-list li { padding:16px 0; border-top:1px solid #e0e0e0; }
+.post .detail-area .tab-contents .section.reply .reply-list li:first-child { border-top:none; }
+.post .detail-area .tab-contents .section.reply .reply-list li > .inner { position:relative; }
+.post .detail-area .tab-contents .section.reply .reply-list .name { font-size:12px; color:#767676; }
+.post .detail-area .tab-contents .section.reply .reply-list .date { font-size:12px; color:#767676; }
+.post .detail-area .tab-contents .section.reply .reply-list .txt-area { font-size:13px; line-height:20px; color:#202020; margin-top:7px; }
+.post .detail-area .tab-contents .section.reply .reply-list .txt-area * { max-width:100%; }
+.post .detail-area .tab-contents .section.reply .reply-list .btn-area { position:absolute; top:0; right:0; }
+.post .detail-area .tab-contents .section.reply .reply-list .btn-area .btn { width:auto; height:20px; font-size:11px; line-height:20px; color:#4a4a4a; padding-left:7px; margin-left:7px; }
+.post .detail-area .tab-contents .section.reply .reply-list .btn-area .btn:before { content:""; position:absolute; left:0; top:0; bottom:0; width:1px; height:8px; margin:auto; background:#b4b4b4; }
+.post .detail-area .tab-contents .section.reply .reply-list .btn-area .btn-recommend:before { position:Static; display:inline-block; width:12px; height:12px; vertical-align:middle; margin:-2px 5px 0 0; background:url("@@css/resources/images/common/icon.png") no-repeat -270px 0; }
+.post .detail-area .tab-contents .section.reply .reply-list .reply-reply { padding-left:24px; margin-top:15px; }
+.post .detail-area .tab-contents .section.reply .reply-list .reply-reply > .inner { position:relative; padding:20px 20px 20px 24px; border-radius:4px; background:#f8f8f8; }
+.post .detail-area .tab-contents .section.reply .reply-list .reply-reply .btn-area { top:20px; right:20px; }
+.post .detail-area .tab-contents .section.reply .reply-list .reply-reply .btn-area .btn:first-child:before { display:none; }
+.post .detail-area .tab-contents .section.reply .reply-list .write { padding:20px 0 0 24px; margin-top:15px; border-top:1px solid #e0e0e0; }
+.post .detail-area .tab-contents .section.reply .btn-more { width:100%; height:40px; font-size:14px; color:#4a4a4a; }
+.post .detail-area .tab-contents .section.reply .btn-more span { color:#1d53bf; }
+.post .detail-area .tab-contents .section.reply .btn-more:after { content:""; display:inline-block; width:9px; height:5px; vertical-align:middle; margin-left:13px; background:url("@@css/resources/images/common/icon.png") no-repeat -207px 0; }
