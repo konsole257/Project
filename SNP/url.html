@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<script type="text/javascript" src="./pjtCom/pc/js/lib/jquery-3.3.1.min.js"></script>
+<title>SNP URL</title>
+<style>
+	*{margin:0; padding:0;}
+	html, body {background-color:#fff;}
+	dl,ul,ol,menu,li {list-style:none}
+	img {border:0 none;vertical-align:top;}
+	table {border-collapse:collapse;border-spacing:0}
+	a {text-decoration:none;border-collapse:separate;color:#666;}
+	label {cursor:pointer;}
+	p { word-wrap:break-word; word-break:break-all;}
+	textarea {resize:none; }
+	#wrap {margin:0;padding:0;}
+	h2 {position:relative;padding:5px 0 5px 10px;font-size:14px;line-height:30px;font-weight:bold; cursor:pointer;}
+	h2 span {font-size:11px;font-weight:normal;}
+	h2 .enddate {position:absolute;top:12px;right:10px;display:inline-block;color:#888;text-align:right;font-size:12px;line-height:24px;}
+	.sti {border-top:2px solid #585858;color:#333;background-color:#f7f7f7;}
+	.header {padding:20px;background-color:#fff;border-bottom:1px solid #585858;text-align:center; }
+	.folderbox {padding:0 20px 20px 20px;}
+	.folderbox:after {content:" ";display:block;clear:both;}
+	.folderbox dl {width:500px;}
+	.folderbox dl dt {float:left;display:inline-block;width:40%;}
+	.folderbox dl dd {float:left;display:inline-block;width:60%;}
+	.tabletype {width:100%;}
+	.tabletype table {width:100%;table-layout:fixed;color:#555;border:1px solid #e4e4e4;}
+	.tabletype table th {padding:5px 0;background:#f6f6f6;border-right:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4;}
+	.tabletype table th.l {padding:0 0 0 5px;text-align:left;}
+	.tabletype table td {padding:4px 4px 4px 4px;color:#000;text-align:center;border-right:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4;vertical-align:top;font-size:12px;}
+	.tabletype table td.l {text-align:left;}
+	.tabletype table td.r {text-align:right;}
+	.tabletype table td.m {vertical-align:middle;}
+	.lstype {width:100%;border-top:1px solid #585858;}
+	.lstype ul li {position:relative;padding:5px;border-bottom:1px solid #ccc;line-height:22px;font-size:12px;}
+	.lstype ul li dl {width:100%;}
+	.lstype ul li dl:after {content:" ";display:block;clear:both;}
+	.lstype ul li dl dt {position:relative;float:left;width:20%;}
+	.lstype ul li dl dd {position:relative;float:left;width:80%;}
+	.lstype ul li dl dd a {position:relative;display:inline-block;width:100%;}
+	.enddate {position:absolute;top:0;right:5px;display:inline-block;color:#888;text-align:right;font-size:12px;line-height:24px;}
+	.bar0 {background-color:none;}
+	.bar1 {background-color:#fff0f0;}
+	.bar2 {background-color:#fffff0;}
+	.bar3 {background-color:#f0fff7;}
+	.bar4 {background-color:#f0f1ff;}
+	.bar5 {background-color:#fef0ff;}
+	.barx{background-color:#fff;}
+	.txt_blue {color:#2465ec;}
+	.txt_white {color:#fff;}
+	.htmlprocess {padding:0 20px;}
+	.htmlprocess .htmlprocess_tit {padding:5px;background:#777; color:#fff; font-weight:bold;margin-top:10px;}
+	.htmlprocess table {width: 100%; font-size:13px; margin-bottom:30px;}
+	.htmlprocess table th {border:1px solid #ccc; background:#eee;}
+	.htmlprocess table td {border:1px solid #ccc; text-align:right; padding:2px 5px 1px 5px;}
+	.htmlprocess .processbar {display:block;margin:5px;height:20px;background-color:rgba(0, 199, 240, 0.1);text-align:left;}
+	.htmlprocess .processbar span {display:inline-block;height:20px;background-color:#fb53ab;}
+	.fin {border-radius:2px;background:#efccc6;}
+	.pub {font-weight:bold;color:#000;} /* 기획 전달 */
+</style>
+<script type="text/javascript">
+//<![CDATA[
+	$(function(){
+		$(".lstype").hide(0);
+		$(".lstype2").slideDown(800);
+		$(".lstype3").slideDown(800);
+		$(".sti").click(function(){
+			if( $(this).next("div").css('display') == 'none' ){
+				$(this).next("div").slideDown(400);
+			}else{
+				$(this).next("div").slideUp(400);
+			}
+		});
+		$(".folderbox").slideUp(800);
+		$(".foldersti").click(function(){
+			if( $(".folderbox").css('display') == 'none' ){
+				$(".folderbox").slideDown(400);
+			}else{
+				$(".folderbox").slideUp(400);
+			}
+		});
+	});
+//]]>
+</script>
+</head>
+<body>
+
+<div id="wrap">
+	<div class="header">
+		<h1>SNP</h1>
+	</div>
+	<h2 class="foldersti">- 폴더 네이밍<span> : 실제 작업 시 변경 될 수 있습니다.</span></h2>
+	<div class="folderbox">
+		<div class="tabletype">
+			<table summary="">
+				<caption></caption>
+				<colgroup>
+					<col width="10%" />
+					<col width="45%" />
+					<col width="*" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th colspan="2">메뉴명</th>
+						<th>폴더명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="l" rowspan="12">WEB</td>
+						<td class="l">메인</td>
+						<td class="l">/</td>
+					</tr>
+
+					<tr>
+						<td class="l">PRODUCT</td>
+						<td class="l">/product/</td>
+					</tr>
+					<tr>
+						<td class="l">EVENT</td>
+						<td class="l">/event/</td>
+					</tr>
+					<tr>
+						<td class="l">REVIEW</td>
+						<td class="l">/review/</td>
+					</tr>
+					<tr>
+						<td class="l">MEDIA</td>
+						<td class="l">/media/</td>
+					</tr>
+					<tr>
+						<td class="l">CS센터</td>
+						<td class="l">/cscenter/</td>
+					</tr>
+					<tr>
+						<td class="l">CART/ORDER & PAYMENT</td>
+						<td class="l">/order/</td>
+					</tr>
+					<tr>
+						<td class="l">MY PAGE</td>
+						<td class="l">/mypage/</td>
+					</tr>
+					<tr>
+						<td class="l">로그인/회원가입</td>
+						<td class="l">/member/</td>
+					</tr>
+					<tr>
+						<td class="l">기타/검색</td>
+						<td class="l">/etc/</td>
+					</tr>
+					<tr>
+						<td class="l">인클루드파일(header, footer, lnb)</td>
+						<td class="l">/inCom/</td>
+					</tr>
+					<tr>
+						<td class="l">공통파일(css, js, images) 등</td>
+						<td class="l">/pjtCom/</td>
+					</tr>
+					<tr>
+						<td class="l">ADMIN</td>
+						<td class="l">관리자 템플릿</td>
+						<td class="l">/cmsManager/</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<h2 class="sti sti1">- ADMIN<span class="enddate">완료일</span></h2>
+	<div class="lstype lstype1">
+		<ul>
+			<li class="bar1">
+				<dl>
+					<dt>관리자</dt>
+					<dd>
+						<a href="/cmsManager/login.html" target="_blank">로그인 <span class="enddate"></span></a><br />
+						<a href="/cmsManager/product_list.html" target="_blank">목록 <span class="enddate"></span></a><br />
+						<a href="/cmsManager/product_write.html" target="_blank">등록, 팝업창 <span class="enddate"></span></a><br />
+						<a href="/cmsManager/title.html" target="_blank">타이틀 문구 <span class="enddate"></span></a><br />
+					</dd>
+				</dl>
+			</li>
+		</ul>
+	</div>
+
+	<h2 class="sti sti2">- WEB<span class="enddate">완료일</span></h2>
+	<div class="htmlprocess">
+		<script type="text/javascript">
+			$(function(){
+				var totalfile = $(".frontlist dd > a").length - 1;
+				var finfile =$(".fin").length;
+				var ingfile =totalfile-finfile
+				var processper=(finfile / totalfile) * 100;
+				$(".totalfile").text(totalfile);
+				$(".finfile").text(finfile);
+				$(".ingfile").text(ingfile);
+				$(".processper").text(processper.toFixed(3)+' %'); // 소수자리 지정
+				$(".processbar span").css({"width":+processper+"%"});
+			})
+		</script>
+		<style type="text/css">
+		.htmlprocess {}
+		.htmlprocess .htmlprocess_tit {background:#777; color:#fff; font-weight:bold;margin-top:20px; }
+		.htmlprocess table {width: 100%; font-size:13px; margin-top:10px; margin-bottom:30px;}
+		.htmlprocess table th {border:1px solid #ccc; background:#eee;}
+		.htmlprocess table td {border:1px solid #ccc; text-align:right; padding:2px 5px 1px 0;}
+		</style>
+
+		<p class="htmlprocess_tit">HTML 작업공정률</p>
+		<table>
+		<colgroup><col width="150" /><col width="150" /><col width="150" /><col width="150" /><col width="*" /></colgroup>
+			<tr>
+				<th>파일수</th>
+				<th>완료</th>
+				<th>대기</th>
+				<th>작업률</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td class="totalfile"></td>
+				<td class="finfile"></td>
+				<td class="ingfile"></td>
+				<td class="processper"></td>
+				<td><span class="processbar"><span></span></span></td>
+			</tr>
+		</table>
+	</div>
+	<div class="lstype lstype2 frontlist">
+		<ul>
+			<li class="bar0">
+				<dl>
+					<dt><a href="./style_guide.html" target="_blank">GUIDE</a></dt>
+					<dd>
+						<a href="./style_guide.html" target="_blank">style_guide<span class="txt_white">.dddd</span> <span class="enddate"></span></a><br />
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar1">
+				<dl>
+					<dt>메인</dt>
+					<dd>
+						<a href="./index.php" target="_blank" class="fin">메인 - SD SHOP<span class="enddate"><span class="txt_blue">2019.04.22</span> 2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./snp.php" target="_blank" class="fin">메인 - SNP<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./snp2.php" target="_blank" class="fin">메인 - SNP ( LIKE IT, SPECIAL 위치 변경 )<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./hddn.php" target="_blank" class="fin">메인 - hddn=lab<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./msolic.php" target="_blank" class="fin">메인 - M'SOLIC<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./daywith.php" target="_blank" class="fin">메인 - DAYWITH<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar5">
+				<dl>
+					<dt>브랜드</dt>
+					<dd>
+						<a href="./brand/snp.php" target="_blank" class="fin">SNP<span class="enddate">2019.06.11</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./brand/hddn.php" target="_blank" class="fin">hddn=lab<span class="enddate">2019.06.11</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./brand/msolic.php" target="_blank" class="fin">M'SOLIC<span class="enddate">2019.06.11</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./brand/daywith.php" target="_blank" class="fin">DAYWITH<span class="enddate">2019.06.11</span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar2">
+				<dl>
+					<dt>PRODUCT</dt>
+					<dd>
+						<a href="./product/productList.php" target="_blank" class="fin">상품 - 목록<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./product/productListSet.php" target="_blank" class="fin">상품 - 세트 목록<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./product/productListBest.php" target="_blank" class="fin">상품 - 베스트 목록<span class="enddate">2018.04.25</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./product/productList_nodata.php" target="_blank" class="fin">상품 - 목록 없을때<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./product/productView.php" target="_blank" class="fin">상품 - 상세<span class="enddate"><span class="txt_blue">2019.03.15</span> 2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<br>
+						<a href="./product/search.php" target="_blank" class="fin">검색 - 상품<span class="enddate">2019.03.25</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./product/searchArchive.php" target="_blank" class="fin">검색 - 미디어<span class="enddate">2019.03.25</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./product/searchEvent.php" target="_blank" class="fin">검색 - 이벤트<span class="enddate">2019.03.25</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./product/search_nodata.php" target="_blank" class="fin">검색 - 결과 없을때<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar3">
+				<dl>
+					<dt>EVENT</dt>
+					<dd>
+						<a href="./event/ingList.php" target="_blank" class="fin">진행중인 이벤트 - 목록<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./event/ingView.php" target="_blank" class="fin">진행중인 이벤트 - 상세<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./event/ingViewComment.php" target="_blank" class="fin">진행중인 이벤트 - 상세 - 댓글응모<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./event/ingViewApply.php" target="_blank" class="fin">진행중인 이벤트 - 상세 - 신청<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./event/ingViewApply_pro1.php" target="_blank" class="fin">진행중인 이벤트 - 상세 - 신청 상품선택 - 선착순인경우<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./event/ingViewApply_pro2.php" target="_blank" class="fin">진행중인 이벤트 - 상세 - 신청 상품선택 - 선착순아닌경우<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./event/ingViewApply_pro3.php" target="_blank" class="fin">진행중인 이벤트 - 상세 - 신청 상품선택 - 상품1개<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./event/ingViewPlan.php" target="_blank" class="fin">진행중인 이벤트 - 상세 - 일반기획전,임직원전용<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./event/ingViewTime.php" target="_blank" class="fin">진행중인 이벤트 - 상세 - 타임특가<span class="enddate"><span class="txt_blue">2019.03.15</span> 2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<br>
+						<a href="./event/endList.php" target="_blank" class="fin">종료된 이벤트 - 목록<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<br>
+						<a href="./event/resultList.php" target="_blank" class="fin">당첨자 발표 - 목록<span class="enddate"><span class="txt_blue">2019.03.15</span> 2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./event/resultView.php" target="_blank" class="fin">당첨자 발표 - 상세<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<br />
+						<a href="./event/benefit.php" target="_blank" class="fin">회원혜택<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar4">
+				<dl>
+					<dt>REVIEW</dt>
+					<dd>
+						<a href="./review/review.php" target="_blank" class="fin">리뷰<span class="enddate"><span class="txt_blue">2019.03.15</span> 2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar5">
+				<dl>
+					<dt>MEDIA</dt>
+					<dd>
+						<a href="./media/media.php" target="_blank" class="fin">MEDIA<span class="enddate">2019.02.08</span></a><br /><!-- 완료 후 class="fin" -->
+						<!-- <a href="./media/movie.php" target="_blank" class="">MOVIE<span class="enddate"></span></a><br />
+						<br />
+						<a href="./media/prList.php" target="_blank" class="">PR - 목록<span class="enddate"></span></a><br />
+						<a href="./media/prView.php" target="_blank" class="">PR - 상세<span class="enddate"></span></a><br />
+						<br />
+						<a href="./media/magazineList.php" target="_blank" class="">MAGAZINE - 목록<span class="enddate"></span></a><br />
+						<a href="./media/magazineView.php" target="_blank" class="">MAGAZINE - 상세<span class="enddate"></span></a><br />
+						<br />
+						<a href="./media/sns.php" target="_blank" class="">SNS<span class="enddate"></span></a><br /> -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar0">
+				<dl>
+					<dt>CS센터</dt>
+					<dd>
+						<a href="./cscenter/noticeList.php" target="_blank" class="fin">공지사항 - 목록<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./cscenter/noticeList_nodata.php" target="_blank" class="fin">공지사항 - 목록 - 없을때<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./cscenter/noticeView.php" target="_blank" class="fin">공지사항 - 상세<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<br />
+						<a href="./cscenter/faq.php" target="_blank" class="fin">FAQ<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<br />
+						<a href="./cscenter/store.php" target="_blank" class="fin">국내공식판매처<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<br />
+						<a href="./cscenter/location.php" target="_blank" class="fin">찾아오시는 길<span class="enddate">2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar3">
+				<dl>
+					<dt>ORDER & PAYMENT</dt>
+					<dd>
+						<a href="./order/cart.php" target="_blank" class="fin">장바구니<span class="enddate"><span class="txt_blue">2019.03.15</span> 2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./order/cart_nodata.php" target="_blank" class="fin">장바구니 - 없을때<span class="enddate"><span class="txt_blue">2019.03.15</span> 2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<br>
+						<a href="./order/order.php" target="_blank" class="fin">주문결제<span class="enddate"><span class="txt_blue">2019.03.15</span> 2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./order/orderGifts.php" target="_blank" class="fin">주문결제 - 사은품선택시<span class="enddate"><span class="txt_blue">2019.03.15</span> 2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./order/order_nonmember.php" target="_blank" class="fin">주문결제 - 비회원<span class="enddate"><span class="txt_blue">2019.03.15</span> 2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./order/order_nonmember_agree.php" target="_blank" class="fin">주문결제 - 비회원 약관동의<span class="enddate">2018.01.19</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./order/orderEnd.php" target="_blank" class="fin">결제완료<span class="enddate"><span class="txt_blue">2019.03.15</span> 2018.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./order/orderFail.php" target="_blank" class="fin">결제실패<span class="enddate">2019.03.28</span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar1">
+				<dl>
+					<dt>MY PAGE</dt>
+					<dd>
+						<a href="./mypage/index.php" target="_blank" class="fin">메인<span class="enddate">2019.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/index_nodata.php" target="_blank" class="fin">메인 - 없을때<span class="enddate">2019.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<br />
+						<a href="./mypage/oderList.php" target="_blank" class="fin">주문배송조회 - 목록<span class="enddate">2019.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/oderList_nonmember.php" target="_blank" class="fin">주문배송조회 - 목록 - 비회원<span class="enddate">2019.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/oderList_nodata.php" target="_blank" class="fin">주문배송조회 - 목록 - 없을때<span class="enddate">2019.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/oderView.php" target="_blank" class="fin">주문배송조회 - 상세 - 주문접수, 결제완료<span class="enddate"><span class="txt_blue">2019.03.15</span> 2019.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/oderView_ready.php" target="_blank" class="fin">주문배송조회 - 상세 - 상품준비중<span class="enddate"><span class="txt_blue">2019.03.15</span> 2019.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/oderView_delivery.php" target="_blank" class="fin">주문배송조회 - 상세 - 출고완료, 배송중, 배송완료<span class="enddate"><span class="txt_blue">2019.03.15</span> 2019.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/oderView_nonmember.php" target="_blank" class="fin">주문배송조회 - 상세 - 비회원<span class="enddate"><span class="txt_blue">2019.03.15</span> 2019.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<br />
+						<a href="./mypage/claimList.php" target="_blank" class="fin">취소/교환/반품 조회 - 취소/교환/반품 신청 - 목록<span class="enddate"><span class="txt_blue">2019.03.15</span> 2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/claimList_nonmember.php" target="_blank" class="fin">취소/교환/반품 조회 - 취소/교환/반품 신청 - 목록 - 비회원<span class="enddate"><span class="txt_blue">2019.03.15</span> 2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/claimList_nodata.php" target="_blank" class="fin">취소/교환/반품 조회 - 취소/교환/반품 신청 - 목록 - 없을때<span class="enddate">2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/claim_cancel.php" target="_blank" class="fin">취소/교환/반품 조회 - 취소/교환/반품 신청 - 주문취소<span class="enddate">2019.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/claim_exchange.php" target="_blank" class="fin">취소/교환/반품 조회 - 취소/교환/반품 신청 - 교환/반품<span class="enddate"><span class="txt_blue">2019.03.15</span> 2019.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+
+						<a href="./mypage/claimList_history.php" target="_blank" class="fin">취소/교환/반품 조회 - 신청내역 - 목록<span class="enddate"><span class="txt_blue">2019.03.15</span> 2019.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/claimList_history_nodata.php" target="_blank" class="fin">취소/교환/반품 조회 - 신청내역 - 목록 - 없을때<span class="enddate"><span class="txt_blue">2019.03.15</span> 2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/claimList_history_view.php" target="_blank" class="fin">취소/교환/반품 조회 - 신청내역 - 상세 - 주문취소 접수/완료 - 현금결제<span class="enddate"><span class="txt_blue">2019.03.15</span> 2019.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/claimList_history_view_card.php" target="_blank" class="fin">취소/교환/반품 조회 - 신청내역 - 상세 - 주문취소 접수/완료 - 카드결제<span class="enddate"><span class="txt_blue">2019.03.15</span> 2019.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/claimList_history_view_exchange.php" target="_blank" class="fin">취소/교환/반품 조회 - 신청내역 - 상세 - 교환 접수, 교환 완료<span class="enddate"><span class="txt_blue">2019.03.15</span> 2019.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/claimList_history_view_refund.php" target="_blank" class="fin">취소/교환/반품 조회 - 신청내역 - 상세 - 반품 접수, 반품 완료<span class="enddate"><span class="txt_blue">2019.03.15</span> 2019.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<br />
+						<a href="./mypage/coupon.php" target="_blank" class="fin">쿠폰내역 - 사용가능<span class="enddate"><span class="txt_blue">2019.03.15</span> 2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/coupon_nodata.php" target="_blank" class="fin">쿠폰내역 - 사용가능 - 없을때<span class="enddate">2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/coupon_complete.php" target="_blank" class="fin">쿠폰내역 - 사용완료<span class="enddate">2019.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/coupon_complete_nodata.php" target="_blank" class="fin">쿠폰내역 - 사용완료 - 없을때<span class="enddate"><span class="txt_blue">2019.03.15</span> 2019.01.30</span></a><br /><!-- 완료 후 class="fin" -->
+						<br />
+						<a href="./mypage/point.php" target="_blank" class="fin">포인트내역<span class="enddate">2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/point_nodata.php" target="_blank" class="fin">포인트내역 - 없을때<span class="enddate"><span class="txt_blue">2019.03.15</span> 2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<br />
+						<a href="./mypage/reviewList.php" target="_blank" class="fin">나의 리뷰 - 리뷰 작성 가능한 상품<span class="enddate"><span class="txt_blue">2019.03.15</span> 2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/reviewList_nodata.php" target="_blank" class="fin">나의 리뷰 - 리뷰 작성 가능한 상품 - 없을때<span class="enddate">2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/myreview.php" target="_blank" class="fin">나의 리뷰 - 작성한 리뷰내역<span class="enddate">2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<br />
+						<a href="./mypage/qna.php" target="_blank" class="fin">내 글 관리 - 1:1상담<span class="enddate">2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/qna_nodata.php" target="_blank" class="fin">내 글 관리 - 1:1상담 - 없을때<span class="enddate">2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/qnaView_no.php" target="_blank" class="fin">내 글 관리 - 1:1상담 - 상세 - 답변 없는 경우<span class="enddate">2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/qnaView.php" target="_blank" class="fin">내 글 관리 - 1:1상담 - 상세 - 답변 있는 경우<span class="enddate">2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/qnaView_img.php" target="_blank" class="fin">내 글 관리 - 1:1상담 - 상세 - 이미지 있는 경우<span class="enddate">2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/qna_pro.php" target="_blank" class="fin">내 글 관리 - 상품문의 - 목록 & 상세<span class="enddate">2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/qna_pro_nodata.php" target="_blank" class="fin">내 글 관리 - 상품문의 - 목록 & 상세 - 없을때 <span class="enddate">2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<br />
+						<a href="./mypage/modify.php" target="_blank" class="fin">회원정보수정<span class="enddate"><span class="txt_blue">2019.03.15</span> 2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mypage/withdrawal.php" target="_blank" class="fin">회원탈퇴<span class="enddate">2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar2">
+				<dl>
+					<dt>로그인</dt>
+					<dd>
+						<a href="./member/login.php" target="_blank" class="fin">로그인/비회원 주문 조회 (아이디/비밀번호 찾기)<span class="enddate"><span class="txt_blue">2019.03.15</span>  2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<br />
+						<a href="./member/signupStep1.php" target="_blank" class="fin">회원가입 STEP1 - 약관동의<span class="enddate">2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./member/signupStep2.php" target="_blank" class="fin">회원가입 STEP2 - 정보입력<span class="enddate">2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./member/signupStep2Sns.php" target="_blank" class="fin">회원가입 STEP2 - 정보입력 - SNS<span class="enddate">2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./member/signupStep3.php" target="_blank" class="fin">회원가입 STEP3 - 가입완료<span class="enddate">2019.01.29</span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar3">
+				<dl>
+					<dt>FOOTER</dt>
+					<dd>
+						<a href="./etc/service.php" target="_blank" class="fin">회원이용약관<span class="enddate">2019.02.08</span></a><br /><!-- 완료 후 class="fin" -->
+						<br />
+						<a href="./etc/privacy.php" target="_blank" class="fin">개인정보처리방침<span class="enddate">2019.02.08</span></a><br /><!-- 완료 후 class="fin" -->
+						<br />
+						<a href="./etc/mailReject.php" target="_blank" class="fin">이메일무단수집거부<span class="enddate">2019.02.08</span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar4">
+				<dl>
+					<dt>MAIL</dt>
+					<dd>
+						<a href="./mail/mailSignup.php" target="_blank" class="fin">메일 - 회원가입<span class="enddate">2019.03.27</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mail/mailPeriodic.php" target="_blank" class="fin">메일 - 광고성정보수신재동의<span class="enddate">2019.03.27</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mail/mailDormant.php" target="_blank" class="fin">메일 - 휴면회원전환예정안내<span class="enddate">2019.03.27</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mail/mailDormantWithdraw.php" target="_blank" class="fin">메일 - 휴면회원탈퇴처리<span class="enddate">2019.03.27</span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./mail/mailWithdraw.php" target="_blank" class="fin">메일 - 탈퇴처리완료<span class="enddate">2019.03.27</span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar5">
+				<dl>
+					<dt>ERROR</dt>
+					<dd>
+						<a href="./server.php" target="_blank" class="fin">서버점검<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./error.php" target="_blank" class="fin">시스템에러<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<section class="con4">
+	<h2 class="tit"><img src="/pjtCom/pc/images/main/daywith/con4_tit.png" alt="REVIEW"></h2>
+
+	<div class="inner">
+		<div class="con4-swiper-wrap">
+			<div class="swiper-container con4-swiper">
+				<div class="swiper-wrapper">
+					<!-- 반복영역 // -->
+					<div class="swiper-slide">
+						<img src="/pjtCom/pc/images/temp/review_460x340.jpg" alt="" class="img">
+					</div>
+					<!-- // 반복영역 -->
+
+					<div class="swiper-slide">
+						<img src="/pjtCom/pc/images/temp/review_460x340.jpg" alt="" class="img">
+					</div>
+
+					<div class="swiper-slide">
+						<img src="/pjtCom/pc/images/temp/review_460x340.jpg" alt="" class="img">
+					</div>
+				</div>
+			</div>
+
+			<div class="txt-area">
+				<div class="grade">
+					<div>
+						<span class="one"></span><!-- 1점 ( 0.5점 없음 ) -->
+						<span class="one"></span>
+						<span class="one"></span>
+						<span class="one"></span>
+						<span class="blank"></span><!-- 0점 ( 0.5점 없음 ) -->
+					</div>
+					<span class="point">4</span>
+				</div>
+
+				<p class="who">문채원 님의 후기입니다.</p>
+
+				<div class="txt ellipsis">
+					피부에 부드러운 보습막을 형성해줘서 수분 증발 방지를 해준다고 해요. 동시에!! 유수분 밸런스까지 최적화시켜준답니다:-) 연한 블루 컬러의 크림으로 피부에 부담감이 전혀 없고 시원한 쿨링감까지 있어서 겨울 뿐 만 아니라 여름에 사용해도 무관할 거 같아요.
+					속부터 촉촉하게 차오르는 느낌과정말 끈적임 없이 가볍고 실키한 제형이에요. 끈적임 1도 없고, 발림성도 굉장히 매끄러워요! 칙칙한 피부톤을 환하게 해주는 미백효과와 늘어진 피부에 탄력감을 선사해 주는 주름개선, 유분을 최소화 시킨 제형으로 번들거림과 끈적임 없이 흡수할수 있는 짱짱한 환절기 수분크림♥ 수분부족형 지성 피부분들께 강,추 드려요!!!
+					피부에 부드러운 보습막을 형성해줘서 수분 증발 방지를 해준다고해요. 동시에!! 유수분 밸런스까지 최적화시켜준답니다:-)
+				</div>
+
+				<a href="#" class="btn-more">more</a>
+			</div>
+
+			<div class="indicator">
+				<div class="swiper-pagination"></div>
+
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+		</div>
+	</div>
+</section>

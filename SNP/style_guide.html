@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" type="text/css" href="/pjtCom/pc/css/lib/normalize.min.css" />
+	<link rel="stylesheet" type="text/css" href="/pjtCom/pc/css/lib/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="/pjtCom/pc/css/lib/jquery.scrollbar.css" />
+	<link rel="stylesheet" type="text/css" href="/pjtCom/pc/css/lib/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="/pjtCom/pc/css/common.css" />
+
+	<script src="/pjtCom/pc/js/lib/jquery-3.3.1.min.js"></script>
+	<script src="/pjtCom/pc/js/lib/jquery-ui.min.js"></script>
+	<script src="/pjtCom/pc/js/lib/jquery.scrollbar.min.js"></script>
+	<script src="/pjtCom/pc/js/lib/swiper.min.js"></script>
+	<script src="/pjtCom/pc/js/function.js"></script>
+	<script src="/pjtCom/pc/js/snp.js"></script>
+
+	<title>SNP STYLE GUIDE</title>
+
+	<style>
+		#wrap { height:auto; }
+		#container { min-height:auto; padding:0; overflow:hidden; }
+		#contents { padding:0; }
+		.htmlprocess-tit { width:1220px; font-size:16px; background:#000; color:#fff; margin:0 auto; font-weight:bold; padding:5px 10px; box-sizing:border-box; }
+		.guide-wrap { width:1220px; margin:0 auto; padding:10px 0 20px !important;  }
+		.guide-wrap .htmlprocess-tit2 { font-size:16px; color:#000; padding:5px 10px; margin:40px 0 20px; border-top:1px solid #000; background:#f2f2f2; }
+		.guide-wrap .htmlprocess-tit2:first-of-type { margin-top:0; }
+		.guide-wrap .guide {padding:10px; width:100%; background:#fff; box-sizing:border-box;}
+		code { display:block; position:relative; font-size:14px; letter-spacing:0; line-height:20px; margin-top:10px; padding:10px 10px 10px 30px; border:1px solid #777; background:#fafafa; }
+		code:before { display:block; content:""; position:absolute; left:0; top:0; width:20px; height:100%; background:#777; }
+		.guide-menu { position:fixed; z-index:1; top:200px; right:50px; width:150px; }
+		.guide-menu a { display:block; font-size:13px; line-height:40px; color:blue; padding:0 20px; border-bottom:1px solid #ccc; }
+		.guide-menu a:hover { background:#eee; }
+		.guide-menu span { display:block;  font-weight:bold; line-height:40px; padding:0 20px; background:#ddd; }
+		/**/
+
+	</style>
+</head>
+<body class="sub">
+
+	<div class="guide-menu">
+		<a href="#font">Font</a>
+		<a href="#form">Form</a>
+		<a href="#button">Button</a>
+		<a href="#tabmenu">Tab Menu</a>
+		<a href="#text">Text</a>
+		<a href="#pagination">Pagination</a>
+		<a href="#popup">Popup</a>
+		<a href="#productlist">Product List</a>
+		<a href="#grade">Grade</a>
+	</div>
+
+	<!-- wrap -->
+	<main id="wrap">
+		<!-- contents // -->
+		<div id="container">
+			<div>
+				<div id="contents">
+<!--  // -->
+<h1 class="htmlprocess-tit" id="font">Font</h1>
+<section class="guide-wrap">
+	<div class="guide">
+	<!-- -->
+	<div style="font-size:30px;">
+		<p style="font-weight:300;">나눔스퀘어 Light</p>
+		<p style="font-weight:400;">나눔스퀘어 Ragular</p>
+		<p style="font-family:'NanumSquareBold'; font-weight:700;">나눔스퀘어 Bold (Extra Bold가 깨질경우 사용)</p>
+		<p style="font-weight:800;">나눔스퀘어 Extra-Bold</p><br>
+		<p style="font-family:'Barlow Condensed'; font-weight:400; letter-spacing:0;">Barlow Ragular</p>
+		<p style="font-family:'Barlow Condensed'; font-weight:600; letter-spacing:0;">Barlow Semi-Bold</p>
+		<p style="font-family:'Barlow Condensed'; font-weight:700; letter-spacing:0;">Barlow Bold</p>
+	</div>
+
+	<code>
+	<pre>
+나눔스퀘어 Light : &lt;style&gt;font-weight:300;&lt;/style&gt;
+나눔스퀘어 Ragular : &lt;style&gt;font-weight:400;&lt;/style&gt;
+나눔스퀘어 Bold : &lt;style&gt;font-family:'NanumSquareBold'; font-weight:700;&lt;/style&gt;
+나눔스퀘어 Extra-Bold : &lt;style&gt;font-weight:800;&lt;/style&gt;
+
+Barlow Ragular : &lt;style&gt;font-family:'Barlow Condensed'; font-weight:400; letter-spacing:0;&lt;/style&gt;
+Barlow Semi-Bold : &lt;style&gt;font-family:'Barlow Condensed'; font-weight:600; letter-spacing:0;&lt;/style&gt;
+Barlow Bold : &lt;style&gt;font-family:'Barlow Condensed'; font-weight:700; letter-spacing:0;&lt;/style&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	</div>
+</section>
+<!-- //  -->
+
+<!--  // -->
+<h1 class="htmlprocess-tit" id="form">Form</h1>
+<section class="guide-wrap">
+	<div class="guide">
+	<!-- -->
+	<h2 class="htmlprocess-tit2">Set</h2>
+
+	<div style="width:680px;">
+		<form class="form-area">
+			<fieldset>
+				<legend>Form</legend>
+
+				<div class="input-area">
+					<div>
+						<div>
+							<span class="field-tit">휴대폰 번호</span>
+							<span class="field-input phone">
+								<span class="inner">
+									<span class="select">
+										<select title="국번 선택">
+											<option>010</option>
+											<option>011</option>
+											<option>016</option>
+											<option>017</option>
+											<option>018</option>
+											<option>019</option>
+										</select>
+									</span>
+									<input type="number" placeholder="‘-’ 없이 숫자만" title="휴대폰 번호 입력">
+
+									<!--
+										인증 타이머 호출
+										- fn.timer('분:초');
+									-->
+									<button type="button" class="btn stroke black btn-check" onclick="fn.timer('3:00');">중복체크</button>
+								</span>
+
+								<strong class="validate-pass">사용 가능한 휴대폰번호 입니다.</strong><!-- 입력한 정보가 맞을경우 출력 -->
+								<strong class="validate-error">해당 휴대폰번호로 가입을 진행 할 수 없습니다.</strong><!-- 입력한 정보가 틀릴경우 출력 -->
+							</span>
+						</div>
+					</div>
+
+					<!-- 휴대폰번호 중복확인 후 출력 // -->
+					<div>
+						<div>
+							<span class="field-tit">인증번호</span>
+							<span class="field-input confirm">
+								<span class="inner">
+									<input type="number" placeholder="인증번호 입력" title="인증번호 입력">
+									<p class="timer"></p>
+
+									<button type="button" class="btn fill black btn-submit">확인</button>
+								</span>
+
+								<strong class="validate-pass">인증이 완료되었습니다.</strong><!-- 입력한 정보가 맞을경우 출력 -->
+								<strong class="validate-error">인증번호를 다시 확인해주세요.</strong><!-- 입력한 정보가 틀릴경우 출력 -->
+							</span>
+						</div>
+					</div>
+					<!-- // 휴대폰번호 중복확인 후 출력 -->
+
+					<div>
+						<div>
+							<span class="field-tit">아이디</span>
+							<span class="field-input id">
+								<span class="inner">
+									<input type="text" placeholder="4-12자 영문 대/소문자" title="아이디 입력">
+								</span>
+
+								<strong class="validate-pass right">사용 가능한 아이디 입니다.</strong><!-- 입력한 정보가 맞을경우 출력 -->
+								<strong class="validate-error right">이미 사용중인 아이디입니다.</strong><!-- 입력한 정보가 틀릴경우 출력 -->
+							</span>
+						</div>
+					</div>
+
+					<div>
+						<div>
+							<span class="field-tit">비밀번호</span>
+							<span class="field-input pw">
+								<span class="inner">
+									<input type="password" placeholder="대소문자 구별, 영문숫자 혼합 6-13자리" title="비밀번호 입력">
+								</span>
+
+								<strong class="validate-error right">대소문자 구별, 영문숫자 혼합<br> 6~13자리를 사용해주세요.</strong><!-- 입력한 정보가 틀릴경우 출력 -->
+							</span>
+						</div>
+					</div>
+
+					<div>
+						<div>
+							<span class="field-tit">비밀번호 확인</span>
+							<span class="field-input pw">
+								<span class="inner">
+									<input type="password" title="비밀번호 입력">
+								</span>
+
+								<strong class="validate-error right">비밀번호가 일치하지 않습니다.</strong><!-- 입력한 정보가 틀릴경우 출력 -->
+							</span>
+						</div>
+					</div>
+
+					<div>
+						<div>
+							<span class="field-tit">이름</span>
+							<span class="field-input name">
+								<span class="inner">
+									<input type="text" title="이름 입력">
+								</span>
+							</span>
+						</div>
+					</div>
+
+					<div>
+						<div>
+							<span class="field-tit">이메일</span>
+							<span class="field-input mail">
+								<span class="inner">
+									<input type="text" title="이메일 아이디 입력">
+									<span class="at">@</span>
+									<span class="select direct">
+										<input type="text" placeholder="직접입력" title="직접입력">
+										<select title="이메일 선택">
+											<option value="direct">직접입력</option>
+											<option>naver.com</option>
+											<option>daum.net</option>
+											<option>hanmail.net</option>
+											<option>nate.com</option>
+											<option>gmail.com</option>
+											<option>hotmail.com</option>
+										</select>
+									</span>
+									<button type="button" class="btn stroke black btn-check">중복체크</button>
+								</span>
+
+								<strong class="validate-pass right">사용 가능한 이메일 입니다.</strong><!-- 입력한 정보가 맞을경우 출력 -->
+								<strong class="validate-error right">사용하실 수 없는 이메일 입니다.</strong><!-- 입력한 정보가 틀릴경우 출력 -->
+							</span>
+						</div>
+					</div>
+
+					<div>
+						<div>
+							<span class="field-tit">이벤트 수신 여부</span>
+							<span class="field-input event">
+								<span class="inner">
+									<dl>
+										<dt>SMS</dt>
+										<dd>
+											<label><input type="radio" name="sms"><span>수신</span></label>
+											<label><input type="radio" name="sms" checked><span>미수신</span></label>
+										</dd>
+
+										<dt>이메일</dt>
+										<dd>
+											<label><input type="radio" name="mail"><span>라디오</span></label>
+											<label><input type="radio" name="mail" checked><span>라디오</span></label>
+										</dd>
+									</dl>
+								</span>
+
+								<div class="info-txt">
+									<p>다양한 이벤트와 회원혜택 정보를 받아보실 수 있습니다.</p>
+									<p>주문/결제/배송알림 및 SNP화장품 주요정책 관련 메시지 등은 수신동의 여부와<br> 관계없이 발송됩니다.</p>
+								</div>
+							</span>
+						</div>
+					</div>
+
+					<div>
+						<div>
+							<span class="field-tit">생년월일</span>
+							<span class="field-input birth">
+								<span class="inner">
+									<input type="number" placeholder="예)19990101" title="생년월일 입력">
+								</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+
+		<strong class="validate-error">입력하신 정보를 다시 확인해주세요.</strong>(로그인, 회원찾기 등등.. 에서 사용)<!-- 입력한 정보가 틀릴경우 출력 -->
+	</div>
+
+	<code>
+	<pre>
+&lt;form class="form-area"&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;Form&lt;/legend&gt;
+
+		&lt;div class="input-area"&gt;
+			&lt;div&gt;
+				&lt;div&gt;
+					&lt;span class="field-tit"&gt;휴대폰 번호&lt;/span&gt;
+					&lt;span class="field-input phone"&gt;
+						&lt;span class="inner"&gt;
+							&lt;span class="select"&gt;
+								&lt;select title="국번 선택"&gt;
+									&lt;option&gt;010&lt;/option&gt;
+									&lt;option&gt;011&lt;/option&gt;
+									&lt;option&gt;016&lt;/option&gt;
+									&lt;option&gt;017&lt;/option&gt;
+									&lt;option&gt;018&lt;/option&gt;
+									&lt;option&gt;019&lt;/option&gt;
+								&lt;/select&gt;
+							&lt;/span&gt;
+							&lt;input type="number" placeholder="‘-’ 없이 숫자만" title="휴대폰 번호 입력"&gt;
+
+							&lt;!--
+								인증 타이머 호출
+								- fn.timer('분:초');
+							--&gt;
+							&lt;button type="button" class="btn stroke black btn-check" onclick="fn.timer('3:00');"&gt;중복체크&lt;/button&gt;
+						&lt;/span&gt;
+
+						&lt;strong class="validate-pass"&gt;사용 가능한 휴대폰번호 입니다.&lt;/strong&gt;&lt;!-- 입력한 정보가 맞을경우 출력 --&gt;
+						&lt;strong class="validate-error"&gt;해당 휴대폰번호로 가입을 진행 할 수 없습니다.&lt;/strong&gt;&lt;!-- 입력한 정보가 틀릴경우 출력 --&gt;
+					&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;!-- 휴대폰번호 중복확인 후 출력 // --&gt;
+			&lt;div&gt;
+				&lt;div&gt;
+					&lt;span class="field-tit"&gt;인증번호&lt;/span&gt;
+					&lt;span class="field-input confirm"&gt;
+						&lt;span class="inner"&gt;
+							&lt;input type="number" placeholder="인증번호 입력" title="인증번호 입력"&gt;
+							&lt;p class="timer"&gt;&lt;/p&gt;
+
+							&lt;button type="button" class="btn fill black btn-submit"&gt;확인&lt;/button&gt;
+						&lt;/span&gt;
+
+						&lt;strong class="validate-pass"&gt;인증이 완료되었습니다.&lt;/strong&gt;&lt;!-- 입력한 정보가 맞을경우 출력 --&gt;
+						&lt;strong class="validate-error"&gt;인증번호를 다시 확인해주세요.&lt;/strong&gt;&lt;!-- 입력한 정보가 틀릴경우 출력 --&gt;
+					&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;!-- // 휴대폰번호 중복확인 후 출력 --&gt;
+
+			&lt;div&gt;
+				&lt;div&gt;
+					&lt;span class="field-tit"&gt;아이디&lt;/span&gt;
+					&lt;span class="field-input id"&gt;
+						&lt;span class="inner"&gt;
+							&lt;input type="text" placeholder="4-12자 영문 대/소문자" title="아이디 입력"&gt;
+						&lt;/span&gt;
+
+						&lt;strong class="validate-pass right"&gt;사용 가능한 아이디 입니다.&lt;/strong&gt;&lt;!-- 입력한 정보가 맞을경우 출력 --&gt;
+						&lt;strong class="validate-error right"&gt;이미 사용중인 아이디입니다.&lt;/strong&gt;&lt;!-- 입력한 정보가 틀릴경우 출력 --&gt;
+					&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div&gt;
+				&lt;div&gt;
+					&lt;span class="field-tit"&gt;비밀번호&lt;/span&gt;
+					&lt;span class="field-input pw"&gt;
+						&lt;span class="inner"&gt;
+							&lt;input type="password" placeholder="대소문자 구별, 영문숫자 혼합 6-13자리" title="비밀번호 입력"&gt;
+						&lt;/span&gt;
+
+						&lt;strong class="validate-error right"&gt;대소문자 구별, 영문숫자 혼합&lt;br&gt; 6~13자리를 사용해주세요.&lt;/strong&gt;&lt;!-- 입력한 정보가 틀릴경우 출력 --&gt;
+					&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div&gt;
+				&lt;div&gt;
+					&lt;span class="field-tit"&gt;비밀번호 확인&lt;/span&gt;
+					&lt;span class="field-input pw"&gt;
+						&lt;span class="inner"&gt;
+							&lt;input type="password" title="비밀번호 입력"&gt;
+						&lt;/span&gt;
+
+						&lt;strong class="validate-error right"&gt;비밀번호가 일치하지 않습니다.&lt;/strong&gt;&lt;!-- 입력한 정보가 틀릴경우 출력 --&gt;
+					&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div&gt;
+				&lt;div&gt;
+					&lt;span class="field-tit"&gt;이름&lt;/span&gt;
+					&lt;span class="field-input name"&gt;
+						&lt;span class="inner"&gt;
+							&lt;input type="text" title="이름 입력"&gt;
+						&lt;/span&gt;
+					&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div&gt;
+				&lt;div&gt;
+					&lt;span class="field-tit"&gt;이메일&lt;/span&gt;
+					&lt;span class="field-input mail"&gt;
+						&lt;span class="inner"&gt;
+							&lt;input type="text" title="이메일 아이디 입력"&gt;
+							&lt;span class="at"&gt;@&lt;/span&gt;
+							&lt;span class="select direct"&gt;
+								&lt;input type="text" placeholder="직접입력" title="직접입력"&gt;
+								&lt;select title="이메일 선택"&gt;
+									&lt;option value="direct"&gt;직접입력&lt;/option&gt;
+									&lt;option&gt;naver.com&lt;/option&gt;
+									&lt;option&gt;daum.net&lt;/option&gt;
+									&lt;option&gt;hanmail.net&lt;/option&gt;
+									&lt;option&gt;nate.com&lt;/option&gt;
+									&lt;option&gt;gmail.com&lt;/option&gt;
+									&lt;option&gt;hotmail.com&lt;/option&gt;
+								&lt;/select&gt;
+							&lt;/span&gt;
+							&lt;button type="button" class="btn stroke black btn-check"&gt;중복체크&lt;/button&gt;
+						&lt;/span&gt;
+
+						&lt;strong class="validate-pass right"&gt;사용 가능한 이메일 입니다.&lt;/strong&gt;&lt;!-- 입력한 정보가 맞을경우 출력 --&gt;
+						&lt;strong class="validate-error right"&gt;사용하실 수 없는 이메일 입니다.&lt;/strong&gt;&lt;!-- 입력한 정보가 틀릴경우 출력 --&gt;
+					&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div&gt;
+				&lt;div&gt;
+					&lt;span class="field-tit"&gt;이벤트 수신 여부&lt;/span&gt;
+					&lt;span class="field-input event"&gt;
+						&lt;span class="inner"&gt;
+							&lt;dl&gt;
+								&lt;dt&gt;SMS&lt;/dt&gt;
+								&lt;dd&gt;
+									&lt;label&gt;&lt;input type="radio" name="sms"&gt;&lt;span&gt;수신&lt;/span&gt;&lt;/label&gt;
+									&lt;label&gt;&lt;input type="radio" name="sms" checked&gt;&lt;span&gt;미수신&lt;/span&gt;&lt;/label&gt;
+								&lt;/dd&gt;
+
+								&lt;dt&gt;이메일&lt;/dt&gt;
+								&lt;dd&gt;
+									&lt;label&gt;&lt;input type="radio" name="mail"&gt;&lt;span&gt;라디오&lt;/span&gt;&lt;/label&gt;
+									&lt;label&gt;&lt;input type="radio" name="mail" checked&gt;&lt;span&gt;라디오&lt;/span&gt;&lt;/label&gt;
+								&lt;/dd&gt;
+							&lt;/dl&gt;
+						&lt;/span&gt;
+
+						&lt;div class="info-txt"&gt;
+							&lt;p&gt;다양한 이벤트와 회원혜택 정보를 받아보실 수 있습니다.&lt;/p&gt;
+							&lt;p&gt;주문/결제/배송알림 및 SNP화장품 주요정책 관련 메시지 등은 수신동의 여부와&lt;br&gt; 관계없이 발송됩니다.&lt;/p&gt;
+						&lt;/div&gt;
+					&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div&gt;
+				&lt;div&gt;
+					&lt;span class="field-tit"&gt;생년월일&lt;/span&gt;
+					&lt;span class="field-input birth"&gt;
+						&lt;span class="inner"&gt;
+							&lt;input type="number" placeholder="예)19990101" title="생년월일 입력"&gt;
+						&lt;/span&gt;
+					&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/fieldset&gt;
+&lt;/form&gt;
+
+&lt;strong class="validate-error"&gt;입력하신 정보를 다시 확인해주세요.&lt;/strong&gt;&lt;!-- 입력한 정보가 틀릴경우 출력 --&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	<!-- -->
+	<h2 class="htmlprocess-tit2">input</h2>
+
+	<input type="text" placeholder="text" title="입력">
+	<input type="number" placeholder="number" title="숫자 입력">
+	<input type="password" placeholder="password" title="패스워드 입력">
+
+	<!-- <input type="text" placeholder="text required" title="입력" required> -->
+	<input type="text" placeholder="text readonly" title="입력" readonly>
+	<input type="text" placeholder="text disabled" title="입력" disabled>
+
+	<code>
+	<pre>
+&lt;input type="text" placeholder="text" title="입력"&gt;
+&lt;input type="number" placeholder="number" title="숫자 입력"&gt;
+&lt;input type="password" placeholder="password" title="패스워드 입력"&gt;
+<!-- &lt;input type="text" placeholder="text required" title="입력" required&gt; -->
+&lt;input type="text" placeholder="text readonly" title="입력" readonly&gt;
+&lt;input type="text" placeholder="text disabled" title="입력" disabled&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	<!-- -->
+	<h2 class="htmlprocess-tit2">File</h2>
+
+	<span class="file">
+		<span class="btn smaller stroke black btn-file" onclick="fn.filePreviewBtn(this);">파일첨부</span>
+		<input type="file" title="파일찾기" onchange="fn.filePreview(this);">
+		<input type="file" title="파일찾기" onchange="fn.filePreview(this);">
+		<input type="file" title="파일찾기" onchange="fn.filePreview(this);">
+		<input type="file" title="파일찾기" onchange="fn.filePreview(this);">
+		<input type="file" title="파일찾기" onchange="fn.filePreview(this);">
+		<p class="txt">이미지는 최대 5개 까지 등록 가능합니다.</p>
+	</span>
+
+	<code>
+	<pre>
+&lt;span class="file"&gt;
+	&lt;span class="btn smaller stroke black btn-file" onclick="fn.filePreviewBtn(this);"&gt;파일첨부&lt;/span&gt;
+	&lt;input type="file" title="파일찾기" onchange="fn.filePreview(this);"&gt;
+	&lt;input type="file" title="파일찾기" onchange="fn.filePreview(this);"&gt;
+	&lt;input type="file" title="파일찾기" onchange="fn.filePreview(this);"&gt;
+	&lt;input type="file" title="파일찾기" onchange="fn.filePreview(this);"&gt;
+	&lt;input type="file" title="파일찾기" onchange="fn.filePreview(this);"&gt;
+	&lt;p class="txt"&gt;이미지는 최대 5개 까지 등록 가능합니다.&lt;/p&gt;
+&lt;/span&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+
+
+
+
+	<!-- -->
+	<h2 class="htmlprocess-tit2">textarea</h2>
+
+	<textarea placeholder="textarea" title="입력"></textarea>
+
+	<!-- <textarea placeholder="textarea required" title="입력" required></textarea> -->
+	<textarea placeholder="textarea readonly" title="입력" readonly></textarea>
+	<textarea placeholder="textarea disabled" title="입력" disabled></textarea>
+
+	<code>
+	<pre>
+&lt;textarea placeholder="textarea" title="입력"&gt;&lt;/textarea&gt;
+<!-- &lt;textarea placeholder="textarea required" title="입력" required&gt;&lt;/textarea&gt; -->
+&lt;textarea placeholder="textarea readonly" title="입력" readonly&gt;&lt;/textarea&gt;
+&lt;textarea placeholder="textarea readonly" title="입력" disabled&gt;&lt;/textarea&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	<!-- -->
+	<h2 class="htmlprocess-tit2">select</h2>
+
+	<div style="width:300px;">
+		<span class="select">
+			<select title="옵션 선택">
+				<option>010</option>
+				<option>011</option>
+				<option>016</option>
+				<option>017</option>
+				<option>018</option>
+				<option>019</option>
+			</select>
+		</span>
+	</div>
+
+	<div style="width:300px;">
+		<span class="select direct">
+			<input type="text" placeholder="직접입력" title="직접입력">
+			<select title="옵션 선택">
+				<option value="direct">직접입력</option>
+				<option>010</option>
+				<option>011</option>
+				<option>016</option>
+				<option>017</option>
+				<option>018</option>
+				<option>019</option>
+			</select>
+		</span>
+	</div>
+
+	<div style="width:300px;">
+		<span class="select">
+			<select title="옵션 선택" disabled>
+				<option>010</option>
+				<option>011</option>
+				<option>016</option>
+				<option>017</option>
+				<option>018</option>
+				<option>019</option>
+			</select>
+		</span>
+	</div>
+
+	<code>
+	<pre>
+&lt;span class="select"&gt;
+	&lt;select title="옵션 선택"&gt;
+		&lt;option&gt;010&lt;/option&gt;
+		&lt;option&gt;011&lt;/option&gt;
+		&lt;option&gt;016&lt;/option&gt;
+		&lt;option&gt;017&lt;/option&gt;
+		&lt;option&gt;018&lt;/option&gt;
+		&lt;option&gt;019&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/span&gt;
+
+&lt;span class="select direct"&gt;
+	&lt;input type="text" placeholder="직접입력" title="직접입력"&gt;
+	&lt;select title="옵션 선택"&gt;
+		&lt;option value="direct"&gt;직접입력&lt;/option&gt;
+		&lt;option&gt;010&lt;/option&gt;
+		&lt;option&gt;011&lt;/option&gt;
+		&lt;option&gt;016&lt;/option&gt;
+		&lt;option&gt;017&lt;/option&gt;
+		&lt;option&gt;018&lt;/option&gt;
+		&lt;option&gt;019&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/span&gt;
+
+&lt;span class="select"&gt;
+	&lt;select title="옵션 선택" disabled&gt;
+		&lt;option&gt;010&lt;/option&gt;
+		&lt;option&gt;011&lt;/option&gt;
+		&lt;option&gt;016&lt;/option&gt;
+		&lt;option&gt;017&lt;/option&gt;
+		&lt;option&gt;018&lt;/option&gt;
+		&lt;option&gt;019&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/span&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	<!-- -->
+	<h2 class="htmlprocess-tit2">수량</h2>
+
+	<div class="ea-area">
+		<input type="number" title="수량 입력" value="1" data-min="1" data-max="99"><!-- data-min="최소값" data-max="최대값" -->
+		<button tyle="button" class="btn-down" onclick="fn.optionEa(this, 'down');">수량 낮추기</button>
+		<button tyle="button" class="btn-up" onclick="fn.optionEa(this, 'up');">수량 올리기</button>
+	</div>
+
+	<code>
+	<pre>
+&lt;div class="ea-area"&gt;
+	&lt;input type="number" title="수량 입력" value="1" data-min="1" data-max="99"&gt;&lt;!-- data-min="최소값" data-max="최대값" --&gt;
+	&lt;button tyle="button" class="btn-down" onclick="fn.optionEa(this, 'down');"&gt;수량 낮추기&lt;/button&gt;
+	&lt;button tyle="button" class="btn-up" onclick="fn.optionEa(this, 'up');"&gt;수량 올리기&lt;/button&gt;
+&lt;/div&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	<!-- -->
+	<h2 class="htmlprocess-tit2">check box</h2>
+
+	<label><input type="checkbox"><span>체크박스</span></label><br><br>
+	<label><input type="checkbox" checked><span>체크박스 checked</span></label><br><br>
+	<!-- <label><input type="checkbox" disabled><span>체크박스 disabled</span></label><br><br>
+	<label><input type="checkbox" disabled checked><span>체크박스 disabled checked</span></label><br><br>
+	<label><input type="checkbox" class="small"><span>체크박스 small</span></label><br><br>
+	<label><input type="checkbox" class="big"><span>체크박스 big</span></label><br><br> -->
+	<code>
+	<pre>
+&lt;label&gt;&lt;input type="checkbox"&gt;&lt;span&gt;체크박스&lt;/span&gt;&lt;/label&gt;
+&lt;label&gt;&lt;input type="checkbox" checked&gt;&lt;span&gt;체크박스 checked&lt;/span&gt;&lt;/label&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	<!-- -->
+	<h2 class="htmlprocess-tit2">all check</h2>
+
+	<label><input type="checkbox" data-name="all"><span>전부 체크</span></label><br>
+	<label><input type="checkbox" data-name="check"><span>체크박스</span></label><br>
+	<label><input type="checkbox" data-name="check"><span>체크박스</span></label><br>
+	<label><input type="checkbox" data-name="check"><span>체크박스</span></label><br>
+
+	<code>
+	<pre>
+&lt;label&gt;&lt;input type="checkbox" data-name="all"&gt;&lt;span&gt;전부 체크&lt;/span&gt;&lt;/label&gt;
+&lt;label&gt;&lt;input type="checkbox" data-name="check"&gt;&lt;span&gt;체크박스&lt;/span&gt;&lt;/label&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+
+	<!-- -->
+	<h2 class="htmlprocess-tit2">radio</h2>
+
+	<label><input type="radio" name=""><span>라디오</span></label><br /><br />
+	<label><input type="radio" name="" checked><span>라디오 checked</span></label><br /><br />
+	<!-- <label><input type="radio" name="" disabled><span>라디오 disabled</span></label><br /><br />
+	<label><input type="radio" name="" disabled checked><span>라디오 disabled checked</span></label><br /><br />
+	<label><input type="radio" name="" class="small"><span>라디오 small</span></label><br><br>
+	<label><input type="radio" name="" class="big"><span>라디오 big</span></label><br><br> -->
+
+	<code>
+	<pre>
+&lt;label&gt&lt;input type="radio" name=""&gt;&lt;span&gt;라디오&lt;/span&gt;&lt;/label&gt;
+&lt;label&gt&lt;input type="radio" name="" checked&gt;&lt;span&gt;라디오&lt;/span&gt;&lt;/label&gt;
+	</pre>
+	</code>
+	<!-- -->
+	</div>
+</section>
+<!-- //  -->
+
+
+<!--  // -->
+<h1 class="htmlprocess-tit" id="button">Button</h1>
+<section class="guide-wrap">
+	<div class="guide">
+	<!-- -->
+	<div>
+		<button type="button" class="btn stroke black">btn stroke black</button><br><br>
+		<button type="button" class="btn stroke gray">btn stroke gray</button><br><br>
+		<button type="button" class="btn fill black">btn fill black</button><br><br>
+		<button type="button" class="btn fill gray">btn fill gray</button>
+	</div>
+	<br>
+	<div class="btn-area">
+		<button type="button" class="btn stroke black">btn stroke black</button>
+		<button type="button" class="btn stroke gray">btn stroke gray</button>
+		<button type="button" class="btn fill black">btn fill black</button>
+		<button type="button" class="btn fill gray">btn fill gray</button>
+	</div>
+	<br>
+	<div>
+		<button type="button" class="btn big stroke black">btn big stroke black</button><br><br>
+		<button type="button" class="btn big stroke gray">btn big stroke gray</button><br><br>
+		<button type="button" class="btn big fill black">btn big fill black</button><br><br>
+		<button type="button" class="btn big fill gray">btn big fill gray</button>
+	</div>
+	<br>
+	<div>
+		<button type="button" class="btn small stroke black">btn small stroke black</button><br><br>
+		<button type="button" class="btn small stroke gray">btn small stroke gray</button><br><br>
+		<button type="button" class="btn small fill black">btn small fill black</button><br><br>
+		<button type="button" class="btn small fill gray">btn small fill gray</button>
+	</div>
+	<br>
+	<div>
+		<button type="button" class="btn smaller stroke black">btn smaller stroke black</button><br><br>
+		<button type="button" class="btn smaller stroke gray">btn smaller stroke gray</button><br><br>
+		<button type="button" class="btn smaller fill black">btn smaller fill black</button><br><br>
+		<button type="button" class="btn smaller fill gray">btn smaller fill gray</button>
+	</div>
+
+	<code>
+	<pre>
+&lt;button type="button" class="btn stroke black"&gt;btn stroke black&lt;/button&gt;
+&lt;button type="button" class="btn stroke gray"&gt;btn stroke gray&lt;/button&gt;
+&lt;button type="button" class="btn fill black"&gt;btn fill black&lt;/button&gt;
+&lt;button type="button" class="btn fill gray"&gt;btn fill gray&lt;/button&gt;
+
+&lt;div class="btn-area"&gt;
+	&lt;button type="button" class="btn stroke black"&gt;btn stroke black&lt;/button&gt;
+	&lt;button type="button" class="btn stroke gray"&gt;btn stroke gray&lt;/button&gt;
+	&lt;button type="button" class="btn fill black"&gt;btn fill black&lt;/button&gt;
+	&lt;button type="button" class="btn fill gray"&gt;btn fill gray&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;button type="button" class="btn big stroke black"&gt;btn big stroke black&lt;/button&gt;
+&lt;button type="button" class="btn big stroke gray"&gt;btn big stroke gray&lt;/button&gt;
+&lt;button type="button" class="btn big fill black"&gt;btn big fill black&lt;/button&gt;
+&lt;button type="button" class="btn big fill gray"&gt;btn big fill gray&lt;/button&gt;
+
+&lt;button type="button" class="btn small stroke black"&gt;btn stroke black&lt;/button&gt;
+&lt;button type="button" class="btn small stroke gray"&gt;btn stroke gray&lt;/button&gt;
+&lt;button type="button" class="btn small fill black"&gt;btn fill black&lt;/button&gt;
+&lt;button type="button" class="btn small fill gray"&gt;btn fill gray&lt;/button&gt;
+
+&lt;button type="button" class="btn smaller stroke black"&gt;btn stroke black&lt;/button&gt;
+&lt;button type="button" class="btn smaller stroke gray"&gt;btn stroke gray&lt;/button&gt;
+&lt;button type="button" class="btn smaller fill black"&gt;btn fill black&lt;/button&gt;
+&lt;button type="button" class="btn smaller fill gray"&gt;btn fill gray&lt;/button&gt;
+	</pre>
+	</code>
+	<!-- -->
+	<br>
+	<h2 class="htmlprocess-tit2">게시판 버튼</h2>
+	<div class="bbsbtn-area">
+		<a href="#" class="btn stroke black">목록</a>
+		<a href="#" class="btn-prev">이전</a>
+		<a href="#" class="btn-next">다음</a>
+	</div>
+	<code>
+	<pre>
+&lt;div class="bbsbtn-area"&gt;
+	&lt;a href="#" class="btn stroke black"&gt;목록&lt;/a&gt;
+	&lt;a href="#" class="btn-prev"&gt;이전&lt;/a&gt;
+	&lt;a href="#" class="btn-next"&gt;다음&lt;/a&gt;
+&lt;/div&gt;
+	</pre>
+	</code>
+
+	</div>
+</section>
+<!-- //  -->
+
+<!--  // -->
+<h1 class="htmlprocess-tit" id="tabmenu">Tab Menu</h1>
+<section class="guide-wrap">
+	<div class="guide">
+	<!-- -->
+	<h2 class="htmlprocess-tit2">링크이동 O</h2>
+
+	<div class="tab-menu" style="width:360px;">
+		<a href="http://www.google.com" class="active" style="width:180px;">메뉴1</a>
+		<a href="http://www.naver.com" style="width:180px;">메뉴2</a>
+	</div>
+
+	<code>
+	<pre>
+&lt;div class="tab-menu"&gt;
+	&lt;a href="http://www.google.com"&gt;메뉴1&lt;/a&gt;
+	&lt;a href="http://www.naver.com"&gt;메뉴2&lt;/a&gt;
+&lt;/div&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	<!-- -->
+	<h2 class="htmlprocess-tit2">링크이동 X</h2>
+
+	<div class="tab-menu" style="width:360px;">
+		<a href="#menu1" class="active" style="width:180px;">메뉴1</a>
+		<a href="#menu2" style="width:180px;">메뉴2</a>
+	</div>
+
+	<div id="menu1" class="tab-contents active">
+		내용1
+	</div>
+
+	<div id="menu2" class="tab-contents">
+		내용2
+	</div>
+
+	<code>
+	<pre>
+&lt;div class="tab-menu"&gt;
+	&lt;a href="#menu1" class="active"&gt;메뉴1&lt;/a&gt;
+	&lt;a href="#menu2"&gt;메뉴2&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div id="menu1" class="tab-contents active"&gt;
+	내용1
+&lt;/div&gt;
+
+&lt;div id="menu2" class="tab-contents"&gt;
+	내용2
+&lt;/div&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	<h2 class="htmlprocess-tit2">앵커이동</h2>
+
+	<div class="tab-menu" style="width:360px;">
+		<a href="#anchor1" class="active" style="width:180px;">메뉴1</a>
+		<a href="#anchor2" style="width:180px;">메뉴2</a>
+	</div>
+
+	<div id="anchor1" class="tab-contents anchor active">
+		내용1
+	</div>
+
+	<div id="anchor2" class="tab-contents anchor">
+		내용2
+	</div>
+
+	<code>
+	<pre>
+// 앵커이동
+&lt;div class="tab-menu"&gt;
+	&lt;a href="#menu1" class="active"&gt;메뉴1&lt;/a&gt;
+	&lt;a href="#menu2"&gt;메뉴2&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div id="menu1" class="tab-contents anchor active"&gt;
+	내용1
+&lt;/div&gt;
+
+&lt;div id="menu2" class="tab-contents anchor"&gt;
+	내용2
+&lt;/div&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	</div>
+</section>
+<!-- //  -->
+
+<!--  // -->
+<h1 class="htmlprocess-tit" id="text">Text</h1>
+<section class="guide-wrap">
+	<div class="guide">
+	<!-- -->
+	<h2 class="htmlprocess-tit2">Info text</h2>
+
+	<div style="width:480px;">
+		<div class="info-txt">
+			<p>다양한 이벤트와 회원혜택 정보를 받아보실 수 있습니다.</p>
+			<p>주문/결제/배송알림 및 SNP화장품 주요정책 관련 메시지 등은 수신동의 여부와 관계없이 발송됩니다.</p>
+		</div>
+	</div>
+	<code>
+	<pre>
+&lt;div class="info-txt"&gt;
+	&lt;p&gt;다양한 이벤트와 회원혜택 정보를 받아보실 수 있습니다.&lt;/p&gt;
+	&lt;p&gt;주문/결제/배송알림 및 SNP화장품 주요정책 관련 메시지 등은 수신동의 여부와 관계없이 발송됩니다.&lt;/p&gt;
+&lt;/div&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	<!-- -->
+	<h2 class="htmlprocess-tit2">Info nodata</h2>
+
+	<div class="info-nodata">
+		데이터가 없습니다.
+	</div>
+	<code>
+	<pre>
+&lt;div class="info-nodata"&gt;
+	데이터가 없습니다.
+&lt;/div&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	<!-- -->
+	<h2 class="htmlprocess-tit2">Form Validate - Default</h2>
+
+	<strong class="validate-pass">사용 가능한 휴대폰번호 입니다.</strong>
+	<strong class="validate-error">아이디와 비밀번호를 다시 확인해주세요.</strong>
+	<code>
+	<pre>
+&lt;strong class="validate-pass"&gt;사용 가능한 휴대폰번호 입니다.&lt;/strong&gt;
+&lt;strong class="validate-error"&gt;아이디와 비밀번호를 다시 확인해주세요.&lt;/strong&gt;
+	</pre>
+	</code>
+
+	<h2 class="htmlprocess-tit2">Form Validate - Align Right</h2>
+	<div style="position:relative; display:inline-block; height:48px;">
+		<input type="text">
+		<strong class="validate-error right">아이디와 비밀번호를 다시 확인해주세요.</strong>
+	</div>
+	<code>
+	<pre>
+&lt;strong class="validate-pass right"&gt;사용 가능한 휴대폰번호 입니다.&lt;/strong&gt;
+&lt;strong class="validate-error right"&gt;아이디와 비밀번호를 다시 확인해주세요.&lt;/strong&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	<!-- -->
+	<h2 class="htmlprocess-tit2">Ellipsis</h2>
+
+	<div style="width:300px;">
+		<p class="ellipsis" style="max-height:50px; line-height:25px;">김수한무 거북이와 두루미 삼천갑자 동방삭 치치카포 사리사리센타 워리워리 세브리깡 무두셀라 구름이 허리케인에 담벼락 담벼락에 서생원 서생원에 고양이 고양이엔 바둑이 바둑이는 돌돌이</p>
+	</div>
+	<code>
+	<pre>
+&lt;style&gt;max-height:50px; line-height:25px;&lt;/style&gt;
+
+&lt;p class="ellipsis"&gt;텍스트&lt;/p&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	</div>
+</section>
+<!-- //  -->
+
+<!--  // -->
+<h1 class="htmlprocess-tit" id="pagination">Pagination</h1>
+<section class="guide-wrap">
+	<div class="guide">
+	<!-- -->
+	<div class="pagination">
+		<a href="#" class="btn-first">처음</a>
+		<a href="#" class="btn-prev">이전</a>
+			<a href="#" class="active">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">5</a>
+		<a href="#" class="btn-next">다음</a>
+		<a href="#" class="btn-last">끝</a>
+	</div>
+
+	<code>
+	<pre>
+&lt;div class="pagination"&gt;
+	&lt;a href="#" class="btn-first"&gt;처음&lt;/a&gt;
+	&lt;a href="#" class="btn-prev"&gt;이전&lt;/a&gt;
+	&lt;span class="num"&gt;
+		&lt;a href="#" class="active"&gt;1&lt;/a&gt;
+		&lt;a href="#"&gt;2&lt;/a&gt;
+		&lt;a href="#"&gt;3&lt;/a&gt;
+		&lt;a href="#"&gt;4&lt;/a&gt;
+		&lt;a href="#"&gt;5&lt;/a&gt;
+	&lt;/span&gt;
+	&lt;a href="#" class="btn-next"&gt;다음&lt;/a&gt;
+	&lt;a href="#" class="btn-last"&gt;끝&lt;/a&gt;
+&lt;/div&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	</div>
+</section>
+<!-- //  -->
+
+
+<!--  // -->
+<h1 class="htmlprocess-tit" id="popup">POPUP</h1>
+<section class="guide-wrap">
+	<div class="guide">
+	<!-- -->
+	<a href="#guide-alert" class="btn stroke black btn-alert" onclick="fn.popupOpen('#guide-alert');">Alert Open</a><br><br>
+	<a href="#guide-popup" class="btn stroke black btn-popup" onclick="fn.popupOpen('#guide-popup');">Popup Open</a><br><br>
+
+	<div id="guide-alert" class="alert guide-alert">
+		<div class="inner">
+			<div class="contents">
+			필수 약관 동의 항목을 체크해주세요. 필수 약관 동의 항목을 체크해주세요.
+			</div>
+
+			<div class="btn-area">
+				<button type="button" class="btn fill black btn-close" onclick="fn.popupClose();">확인</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="guide-popup" class="popup guide-popup">
+		<div class="inner">
+			<header class="header">
+				<h2 class="tit">팝업 이름</h2>
+
+				<button type="button" class="btn-close" onclick="fn.popupClose();">닫기</button>
+			</header>
+
+			<div class="contents">
+			팝업 내용
+			</div>
+
+			<div class="btn-area">
+				<button type="button" class="btn fill black btn-close" onclick="fn.popupClose();">확인</button>
+			</div>
+		</div>
+	</div>
+<code>
+<pre>
+// Popup Open 1
+&lt;script&gt;
+$('.btn-popup1').click(function(){
+	fn.popupOpen(this);
+});
+
+$('.popup .btn-close, .popup .btn-ok').click(function(){
+	fn.popupClose();
+});
+&lt;/script&gt;
+
+// Popup Open 2
+&lt;script&gt;
+$('.btn-popup1').click(function(){
+	fn.popupOpen('#guide-popup');
+});
+
+$('.popup .btn-close, .popup .btn-ok').click(function(){
+	fn.popupClose();
+});
+&lt;/script&gt;
+
+// Popup Open 3
+&lt;a href="#popup-type1" class="btn-popup1" onclick="fn.popupOpen(this);"&gt;popup type1 open&lt;/a&gt;
+
+&lt;button type="button" class="btn-close" onclick="fn.popupClose();"&gt;닫기&lt;/button&gt;
+
+// Popup Open 4
+&lt;a href="#popup-type1" class="btn-popup1" onclick="fn.popupOpen('#popup-type1');"&gt;popup type1 open&lt;/a&gt;
+
+&lt;button type="button" class="btn-close" onclick="fn.popupClose();"&gt;닫기&lt;/button&gt;
+
+------------------------------------------------------------------------------------------------------------
+
+// alert
+&lt;div id="guide-alert" class="alert guide-alert"&gt;
+	&lt;div class="inner"&gt;
+		&lt;div class="contents"&gt;
+		필수 약관 동의 항목을 체크해주세요. 필수 약관 동의 항목을 체크해주세요.
+		&lt;/div&gt;
+
+		&lt;div class="btn-area"&gt;
+			&lt;button type="button" class="btn fill black btn-close" onclick="fn.popupClose();"&gt;확인&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+// popup
+&lt;div id="guide-popup" class="popup guide-popup"&gt;
+	&lt;div class="inner"&gt;
+		&lt;header class="header"&gt;
+			&lt;h2 class="tit"&gt;팝업 이름&lt;/h2&gt;
+
+			&lt;button type="button" class="btn-close" onclick="fn.popupClose();"&gt;닫기&lt;/button&gt;
+		&lt;/header&gt;
+
+		&lt;div class="contents"&gt;
+		팝업 내용
+		&lt;/div&gt;
+
+		&lt;div class="btn-area"&gt;
+			&lt;button type="button" class="btn fill black btn-close" onclick="fn.popupClose();"&gt;확인&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</code>
+	<!-- -->
+
+	</div>
+</section>
+<!-- //  -->
+
+<!--  // -->
+<h1 class="htmlprocess-tit" id="productlist">Prodect List</h1>
+<section class="guide-wrap">
+	<div class="guide">
+	<!-- -->
+	<h2 class="htmlprocess-tit2">Default</h2>
+
+	<ul class="product-list">
+		<!-- 반복 영역 // -->
+		<li>
+			<ul class="flag">
+				<li><span style="color:#000; border:1px solid #000; background:#fff;">Bestseller</span></li><!-- 관리자에서 style등록 -->
+				<li><span style="color:#eb0f29; border:1px solid #f5b4bb; background:#fff;">Hot Item</span></li><!-- 관리자에서 style등록 -->
+				<li><span style="color:#fff; background:#b172f4;">디렉터파이 선정<br>착한 보습크림</span></li><!-- 관리자에서 style등록 -->
+			</ul>
+
+			<a href="#"><span class="thumb"><img src="/pjtCom/pc/images/temp/product_226x226_2.jpg" class="img" alt=""></span></a>
+
+			<div class="info">
+				<!-- 해시태그 등록시 노출 // -->
+				<div class="hashtag">
+					<a href="#">#원스텝클렌징</a>
+					<a href="#">#원스텝클렌징</a>
+				</div>
+				<!-- // 해시태그 등록시 노출 -->
+
+				<a href="#">
+					<p class="name ellipsis">[디렉터파이 선정] 히든랩 스킨 세이버 컨센트레이트 컨센트레이트 컨센트레이트 컨센트레이트</p>
+					<p class="txt ellipsis">미세먼지 같은 유해환경과 자외선, 블루라이트를 차단해주는 어반폴루션 크림 어반폴루션 크림 어반폴루션 크림</p>
+				</a>
+			</div>
+
+			<div class="price">
+				<del>48,000원</del>
+				<span>35,000원</span>
+			</div>
+
+
+			<a href="#cart" class="btn-cart" onclick="fn.popupOpen('#cart');">장바구니 담기/빼기</a><!-- 장바구니 담겨있을경우 class="active" -->
+		</li>
+		<!-- 반복 영역 -->
+
+		<li>
+			<ul class="flag">
+				<li><span style="color:#000; border:1px solid #000; background:#fff;">Bestseller</span></li><!-- 관리자에서 style등록 -->
+				<li><span style="color:#eb0f29; border:1px solid #f5b4bb; background:#fff;">Hot Item</span></li><!-- 관리자에서 style등록 -->
+				<li><span style="color:#fff; background:#b172f4;">디렉터파이 선정<br>착한 보습크림</span></li><!-- 관리자에서 style등록 -->
+			</ul>
+
+			<a href="#"><span class="thumb"><img src="/pjtCom/pc/images/temp/product_226x226_2.jpg" class="img" alt=""></span></a>
+
+			<div class="info">
+				<a href="#">
+					<p class="name ellipsis">[디렉터파이 선정] 히든랩 스킨 컨센트레이트</p>
+					<p class="txt ellipsis">블루라이트를 차단해주는 어반폴루션 크림</p>
+				</a>
+			</div>
+
+			<div class="price">
+				<del>48,000원</del>
+				<span>35,000원</span>
+			</div>
+
+			<a href="#cart" class="btn-cart active" onclick="fn.popupOpen('#cart');">장바구니 담기/빼기</a>
+		</li>
+	</ul>
+
+	<code>
+	<pre>
+&lt;ul class="product-list"&gt;
+	&lt;!-- 반복 영역 // --&gt;
+	&lt;li&gt;
+		&lt;ul class="flag"&gt;
+			&lt;li&gt;&lt;span style="color:#000; border:1px solid #000; background:#fff;"&gt;Bestseller&lt;/span&gt;&lt;/li&gt;&lt;!-- 관리자에서 style등록 --&gt;
+			&lt;li&gt;&lt;span style="color:#eb0f29; border:1px solid #f5b4bb; background:#fff;"&gt;Hot Item&lt;/span&gt;&lt;/li&gt;&lt;!-- 관리자에서 style등록 --&gt;
+			&lt;li&gt;&lt;span style="color:#fff; background:#b172f4;"&gt;디렉터파이 선정&lt;br&gt;착한 보습크림&lt;/span&gt;&lt;/li&gt;&lt;!-- 관리자에서 style등록 --&gt;
+		&lt;/ul&gt;
+
+		&lt;a href="#"&gt;&lt;span class="thumb"&gt;&lt;img src="/pjtCom/pc/images/temp/product_226x226_2.jpg" class="img" alt=""&gt;&lt;/span&gt;&lt;/a&gt;
+
+		&lt;div class="info"&gt;
+			&lt;!-- 해시태그 등록시 노출 // --&gt;
+			&lt;div class="hashtag"&gt;
+				&lt;a href="#"&gt;#원스텝클렌징&lt;/a&gt;
+				&lt;a href="#"&gt;#원스텝클렌징&lt;/a&gt;
+			&lt;/div&gt;
+			&lt;!-- // 해시태그 등록시 노출 --&gt;
+
+			&lt;a href="#"&gt;
+				&lt;p class="name ellipsis"&gt;[디렉터파이 선정] 히든랩 스킨 세이버 컨센트레이트&lt;/p&gt;
+				&lt;p class="txt ellipsis"&gt;미세먼지 같은 유해환경과 자외선, 블루라이트를 차단해주는 어반폴루션 크림&lt;/p&gt;
+			&lt;/a&gt;
+		&lt;/div&gt;
+
+		&lt;div class="price"&gt;
+			&lt;del&gt;48,000원&lt;/del&gt;
+			&lt;span&gt;35,000원&lt;/span&gt;
+		&lt;/div&gt;
+
+		&lt;a href="#cart" class="btn-cart" onclick="fn.popupOpen('#cart')"&gt;장바구니 담기/빼기&lt;/a&gt;&lt;!-- 장바구니 담겨있을경우 class="active" --&gt;
+	&lt;/li&gt;
+	&lt;!-- // 반복 영역 --&gt;
+&lt;/ul&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	<!-- -->
+	<h2 class="htmlprocess-tit2">Small</h2>
+
+	<ul class="product-list small">
+		<!-- 반복 영역 // -->
+		<li>
+			<ul class="flag">
+				<li><span style="color:#000; border:1px solid #000; background:#fff;">Bestseller</span></li><!-- 관리자에서 style등록 -->
+				<li><span style="color:#eb0f29; border:1px solid #f5b4bb; background:#fff;">Hot Item</span></li><!-- 관리자에서 style등록 -->
+				<li><span style="color:#fff; background:#b172f4;">디렉터파이 선정<br>착한 보습크림</span></li><!-- 관리자에서 style등록 -->
+			</ul>
+
+			<a href="#"><span class="thumb"><img src="/pjtCom/pc/images/temp/product_226x226_2.jpg" class="img" alt=""></span></a>
+
+			<div class="info">
+				<!-- 해시태그 등록시 노출 // -->
+				<div class="hashtag">
+					<a href="#">#원스텝클렌징</a>
+					<a href="#">#원스텝클렌징</a>
+				</div>
+				<!-- // 해시태그 등록시 노출 -->
+
+				<a href="#">
+					<p class="name ellipsis">[디렉터파이 선정] 히든랩 스킨 세이버 컨센트레이트 컨센트레이트 컨센트레이트 컨센트레이트</p>
+					<p class="txt ellipsis">미세먼지 같은 유해환경과 자외선, 블루라이트를 차단해주는 어반폴루션 크림 어반폴루션 크림 어반폴루션 크림</p>
+				</a>
+			</div>
+
+			<div class="price">
+				<del>48,000원</del>
+				<span>35,000원</span>
+			</div>
+
+
+			<a href="#cart" class="btn-cart" onclick="fn.popupOpen('#cart');">장바구니 담기/빼기</a><!-- 장바구니 담겨있을경우 class="active" -->
+		</li>
+		<!-- 반복 영역 -->
+
+		<li>
+			<ul class="flag">
+				<li><span style="color:#000; border:1px solid #000; background:#fff;">Bestseller</span></li><!-- 관리자에서 style등록 -->
+				<li><span style="color:#eb0f29; border:1px solid #f5b4bb; background:#fff;">Hot Item</span></li><!-- 관리자에서 style등록 -->
+				<li><span style="color:#fff; background:#b172f4;">디렉터파이 선정<br>착한 보습크림</span></li><!-- 관리자에서 style등록 -->
+			</ul>
+
+			<a href="#"><span class="thumb"><img src="/pjtCom/pc/images/temp/product_226x226_2.jpg" class="img" alt=""></span></a>
+
+			<div class="info">
+				<a href="#">
+					<p class="name ellipsis">[디렉터파이 선정] 히든랩 스킨 컨센트레이트</p>
+					<p class="txt ellipsis">블루라이트를 차단해주는 어반폴루션 크림</p>
+				</a>
+			</div>
+
+			<div class="price">
+				<del>48,000원</del>
+				<span>35,000원</span>
+			</div>
+
+			<a href="#cart" class="btn-cart active" onclick="fn.popupOpen('#cart');">장바구니 담기/빼기</a>
+		</li>
+
+		<li>
+			<ul class="flag">
+				<li><span style="color:#000; border:1px solid #000; background:#fff;">Bestseller</span></li><!-- 관리자에서 style등록 -->
+				<li><span style="color:#eb0f29; border:1px solid #f5b4bb; background:#fff;">Hot Item</span></li><!-- 관리자에서 style등록 -->
+				<li><span style="color:#fff; background:#b172f4;">디렉터파이 선정<br>착한 보습크림</span></li><!-- 관리자에서 style등록 -->
+			</ul>
+
+			<a href="#"><span class="thumb"><img src="/pjtCom/pc/images/temp/product_226x226_2.jpg" class="img" alt=""></span></a>
+
+			<div class="info">
+				<a href="#">
+					<p class="name ellipsis">[디렉터파이 선정] 히든랩 스킨 컨센트레이트</p>
+					<p class="txt ellipsis">블루라이트를 차단해주는 어반폴루션 크림</p>
+				</a>
+			</div>
+
+			<div class="price">
+				<del>48,000원</del>
+				<span>35,000원</span>
+			</div>
+
+			<a href="#cart" class="btn-cart active" onclick="fn.popupOpen('#cart');">장바구니 담기/빼기</a>
+		</li>
+
+		<li>
+			<ul class="flag">
+				<li><span style="color:#000; border:1px solid #000; background:#fff;">Bestseller</span></li><!-- 관리자에서 style등록 -->
+				<li><span style="color:#eb0f29; border:1px solid #f5b4bb; background:#fff;">Hot Item</span></li><!-- 관리자에서 style등록 -->
+				<li><span style="color:#fff; background:#b172f4;">디렉터파이 선정<br>착한 보습크림</span></li><!-- 관리자에서 style등록 -->
+			</ul>
+
+			<a href="#"><span class="thumb"><img src="/pjtCom/pc/images/temp/product_226x226_2.jpg" class="img" alt=""></span></a>
+
+			<div class="info">
+				<a href="#">
+					<p class="name ellipsis">[디렉터파이 선정] 히든랩 스킨 컨센트레이트</p>
+					<p class="txt ellipsis">블루라이트를 차단해주는 어반폴루션 크림</p>
+				</a>
+			</div>
+
+			<div class="price">
+				<del>48,000원</del>
+				<span>35,000원</span>
+			</div>
+
+			<a href="#cart" class="btn-cart active" onclick="fn.popupOpen('#cart');">장바구니 담기/빼기</a>
+		</li>
+
+		<li>
+			<ul class="flag">
+				<li><span style="color:#000; border:1px solid #000; background:#fff;">Bestseller</span></li><!-- 관리자에서 style등록 -->
+				<li><span style="color:#eb0f29; border:1px solid #f5b4bb; background:#fff;">Hot Item</span></li><!-- 관리자에서 style등록 -->
+				<li><span style="color:#fff; background:#b172f4;">디렉터파이 선정<br>착한 보습크림</span></li><!-- 관리자에서 style등록 -->
+			</ul>
+
+			<a href="#"><span class="thumb"><img src="/pjtCom/pc/images/temp/product_226x226_2.jpg" class="img" alt=""></span></a>
+
+			<div class="info">
+				<a href="#">
+					<p class="name ellipsis">[디렉터파이 선정] 히든랩 스킨 컨센트레이트</p>
+					<p class="txt ellipsis">블루라이트를 차단해주는 어반폴루션 크림</p>
+				</a>
+			</div>
+
+			<div class="price">
+				<del>48,000원</del>
+				<span>35,000원</span>
+			</div>
+
+			<a href="#cart" class="btn-cart active" onclick="fn.popupOpen('#cart');">장바구니 담기/빼기</a>
+		</li>
+	</ul>
+
+	<style>
+	.with-area .with-swiper { transform:translateX(-486px); overflow:visible; }
+	.with-area .product-list.small > li { margin-left:0; padding-bottom:14px; }
+	.with-area .swiper-slide { opacity:0.3; }
+	.with-area .swiper-slide.active,
+	.with-area .swiper-slide.active + .swiper-slide,
+	.with-area .swiper-slide.active + .swiper-slide + .swiper-slide,
+	.with-area .swiper-slide.active + .swiper-slide + .swiper-slide + .swiper-slide,
+	.with-area .swiper-slide.active + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide { opacity:1; }
+	.with-area .thumb { height:304px; margin-bottom:16px; }
+	.with-area .btn-cart { bottom:0 !important; }
+	.with-area .info { height:52px !important; }
+	.swiper-button-prev,
+	.swiper-button-next { top:112px; width:80px; height:80px; margin-top:0; background:url("/pjtCom/pc/images/sub/btn_product.png") no-repeat 0 0; }
+	.swiper-button-prev { left:-120px; transform:translateX(486px) rotate(180deg); }
+	.swiper-button-next { right:-120px; transform:translateX(486px); }
+	</style>
+	<div class="with-area">
+		<div class="swiper-container with-swiper">
+			<ul class="product-list small swiper-wrapper">
+				<!-- 반복 영역 // -->
+				<li class="swiper-slide">
+					<ul class="flag">
+						<li><span style="color:#000; border:1px solid #000; background:#fff;">Bestseller</span></li><!-- 관리자에서 style등록 -->
+						<li><span style="color:#eb0f29; border:1px solid #f5b4bb; background:#fff;">Hot Item</span></li><!-- 관리자에서 style등록 -->
+						<li><span style="color:#fff; background:#b172f4;">디렉터파이 선정<br>착한 보습크림</span></li><!-- 관리자에서 style등록 -->
+					</ul>
+
+					<a href="#"><span class="thumb"><img src="/pjtCom/pc/images/temp/product_226x226_2.jpg" class="img" alt=""></span></a>
+
+					<div class="info">
+						<a href="#">
+							<p class="name ellipsis">[디렉터파이 선정] 히든랩 스킨 세이버 컨센트레이트1</p>
+						</a>
+					</div>
+
+					<div class="price">
+						<del>48,000원</del>
+						<span>35,000원</span>
+					</div>
+
+					<a href="#cart" class="btn-cart" onclick="fn.popupOpen('#cart')">장바구니 담기/빼기</a><!-- 장바구니 담겨있을경우 class="active" -->
+				</li>
+				<!-- // 반복 영역 -->
+
+				<li class="swiper-slide">
+					<ul class="flag">
+						<li><span style="color:#000; border:1px solid #000; background:#fff;">Bestseller</span></li><!-- 관리자에서 style등록 -->
+						<li><span style="color:#eb0f29; border:1px solid #f5b4bb; background:#fff;">Hot Item</span></li><!-- 관리자에서 style등록 -->
+						<li><span style="color:#fff; background:#b172f4;">디렉터파이 선정<br>착한 보습크림</span></li><!-- 관리자에서 style등록 -->
+					</ul>
+
+					<a href="#"><span class="thumb"><img src="/pjtCom/pc/images/temp/product_226x226_2.jpg" class="img" alt=""></span></a>
+
+					<div class="info">
+						<a href="#">
+							<p class="name ellipsis">[디렉터파이 선정] 히든랩 스킨 세이버 컨센트레이트</p>
+						</a>
+					</div>
+
+					<div class="price">
+						<del>48,000원</del>
+						<span>35,000원</span>
+					</div>
+
+					<a href="#cart" class="btn-cart" onclick="fn.popupOpen('#cart')">장바구니 담기/빼기</a><!-- 장바구니 담겨있을경우 class="active" -->
+				</li>
+
+				<li class="swiper-slide">
+					<ul class="flag">
+						<li><span style="color:#000; border:1px solid #000; background:#fff;">Bestseller</span></li><!-- 관리자에서 style등록 -->
+						<li><span style="color:#eb0f29; border:1px solid #f5b4bb; background:#fff;">Hot Item</span></li><!-- 관리자에서 style등록 -->
+						<li><span style="color:#fff; background:#b172f4;">디렉터파이 선정<br>착한 보습크림</span></li><!-- 관리자에서 style등록 -->
+					</ul>
+
+					<a href="#"><span class="thumb"><img src="/pjtCom/pc/images/temp/product_226x226_2.jpg" class="img" alt=""></span></a>
+
+					<div class="info">
+						<a href="#">
+							<p class="name ellipsis">[디렉터파이 선정] 히든랩 스킨 세이버 컨센트레이트</p>
+						</a>
+					</div>
+
+					<div class="price">
+						<del>48,000원</del>
+						<span>35,000원</span>
+					</div>
+
+					<a href="#cart" class="btn-cart" onclick="fn.popupOpen('#cart')">장바구니 담기/빼기</a><!-- 장바구니 담겨있을경우 class="active" -->
+				</li>
+
+				<li class="swiper-slide">
+					<ul class="flag">
+						<li><span style="color:#000; border:1px solid #000; background:#fff;">Bestseller</span></li><!-- 관리자에서 style등록 -->
+						<li><span style="color:#eb0f29; border:1px solid #f5b4bb; background:#fff;">Hot Item</span></li><!-- 관리자에서 style등록 -->
+						<li><span style="color:#fff; background:#b172f4;">디렉터파이 선정<br>착한 보습크림</span></li><!-- 관리자에서 style등록 -->
+					</ul>
+
+					<a href="#"><span class="thumb"><img src="/pjtCom/pc/images/temp/product_226x226_2.jpg" class="img" alt=""></span></a>
+
+					<div class="info">
+						<a href="#">
+							<p class="name ellipsis">[디렉터파이 선정] 히든랩 스킨 세이버 컨센트레이트</p>
+						</a>
+					</div>
+
+					<div class="price">
+						<del>48,000원</del>
+						<span>35,000원</span>
+					</div>
+
+					<a href="#cart" class="btn-cart" onclick="fn.popupOpen('#cart')">장바구니 담기/빼기</a><!-- 장바구니 담겨있을경우 class="active" -->
+				</li>
+
+				<li class="swiper-slide">
+					<ul class="flag">
+						<li><span style="color:#000; border:1px solid #000; background:#fff;">Bestseller</span></li><!-- 관리자에서 style등록 -->
+						<li><span style="color:#eb0f29; border:1px solid #f5b4bb; background:#fff;">Hot Item</span></li><!-- 관리자에서 style등록 -->
+						<li><span style="color:#fff; background:#b172f4;">디렉터파이 선정<br>착한 보습크림</span></li><!-- 관리자에서 style등록 -->
+					</ul>
+
+					<a href="#"><span class="thumb"><img src="/pjtCom/pc/images/temp/product_226x226_2.jpg" class="img" alt=""></span></a>
+
+					<div class="info">
+						<a href="#">
+							<p class="name ellipsis">[디렉터파이 선정] 히든랩 스킨 세이버 컨센트레이트</p>
+						</a>
+					</div>
+
+					<div class="price">
+						<del>48,000원</del>
+						<span>35,000원</span>
+					</div>
+
+					<a href="#cart" class="btn-cart" onclick="fn.popupOpen('#cart')">장바구니 담기/빼기</a><!-- 장바구니 담겨있을경우 class="active" -->
+				</li>
+
+				<li class="swiper-slide">
+					<ul class="flag">
+						<li><span style="color:#000; border:1px solid #000; background:#fff;">Bestseller</span></li><!-- 관리자에서 style등록 -->
+						<li><span style="color:#eb0f29; border:1px solid #f5b4bb; background:#fff;">Hot Item</span></li><!-- 관리자에서 style등록 -->
+						<li><span style="color:#fff; background:#b172f4;">디렉터파이 선정<br>착한 보습크림</span></li><!-- 관리자에서 style등록 -->
+					</ul>
+
+					<a href="#"><span class="thumb"><img src="/pjtCom/pc/images/temp/product_226x226_2.jpg" class="img" alt=""></span></a>
+
+					<div class="info">
+						<a href="#">
+							<p class="name ellipsis">[디렉터파이 선정] 히든랩 스킨 세이버 컨센트레이트</p>
+						</a>
+					</div>
+
+					<div class="price">
+						<del>48,000원</del>
+						<span>35,000원</span>
+					</div>
+
+					<a href="#cart" class="btn-cart" onclick="fn.popupOpen('#cart')">장바구니 담기/빼기</a><!-- 장바구니 담겨있을경우 class="active" -->
+				</li>
+			</ul>
+
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div>
+	</div>
+
+	<script>
+	var withSwiper = new Swiper('.with-swiper', {
+		simulateTouch: false,
+		centeredSlides: true,
+		loop: true,
+		slidesPerView: 'auto',
+		spaceBetween: 15,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		},
+		on: {
+			slideChange: function () {
+				var activeIdx = this.activeIndex;
+				$(this.$el).find('.swiper-slide').removeClass('active');
+				$(this.$el).find('.swiper-slide:eq('+activeIdx+')').addClass('active');
+			}
+		},
+	});
+	</script>
+
+	<code>
+	<pre>
+&lt;ul class="product-list small"&gt;
+	&lt;!-- 반복 영역 // --&gt;
+	&lt;li&gt;
+		&lt;ul class="flag"&gt;
+			&lt;li&gt;&lt;span style="color:#000; border:1px solid #000; background:#fff;"&gt;Bestseller&lt;/span&gt;&lt;/li&gt;&lt;!-- 관리자에서 style등록 --&gt;
+			&lt;li&gt;&lt;span style="color:#eb0f29; border:1px solid #f5b4bb; background:#fff;"&gt;Hot Item&lt;/span&gt;&lt;/li&gt;&lt;!-- 관리자에서 style등록 --&gt;
+			&lt;li&gt;&lt;span style="color:#fff; background:#b172f4;"&gt;디렉터파이 선정&lt;br&gt;착한 보습크림&lt;/span&gt;&lt;/li&gt;&lt;!-- 관리자에서 style등록 --&gt;
+		&lt;/ul&gt;
+
+		&lt;a href="#"&gt;&lt;span class="thumb"&gt;&lt;img src="/pjtCom/pc/images/temp/product_226x226_2.jpg" class="img" alt=""&gt;&lt;/span&gt;&lt;/a&gt;
+
+		&lt;div class="info"&gt;
+			&lt;!-- 해시태그 등록시 노출 // --&gt;
+			&lt;div class="hashtag"&gt;
+				&lt;a href="#"&gt;#원스텝클렌징&lt;/a&gt;
+				&lt;a href="#"&gt;#원스텝클렌징&lt;/a&gt;
+			&lt;/div&gt;
+			&lt;!-- // 해시태그 등록시 노출 --&gt;
+
+			&lt;a href="#"&gt;
+				&lt;p class="name ellipsis"&gt;[디렉터파이 선정] 히든랩 스킨 세이버 컨센트레이트&lt;/p&gt;
+				&lt;p class="txt ellipsis"&gt;미세먼지 같은 유해환경과 자외선, 블루라이트를 차단해주는 어반폴루션 크림&lt;/p&gt;
+			&lt;/a&gt;
+		&lt;/div&gt;
+
+		&lt;div class="price"&gt;
+			&lt;del&gt;48,000원&lt;/del&gt;
+			&lt;span&gt;35,000원&lt;/span&gt;
+		&lt;/div&gt;
+
+		&lt;a href="#cart" class="btn-cart" onclick="fn.popupOpen('#cart')"&gt;장바구니 담기/빼기&lt;/a&gt;&lt;!-- 장바구니 담겨있을경우 class="active" --&gt;
+	&lt;/li&gt;
+	&lt;!-- // 반복 영역 --&gt;
+&lt;/ul&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	<!-- -->
+	<h2 class="htmlprocess-tit2">Big</h2>
+
+	<ul class="product-list big">
+		<!-- 반복 영역 // -->
+		<li>
+			<ul class="flag">
+				<li><span style="color:#000; border:1px solid #000; background:#fff;">Bestseller</span></li><!-- 관리자에서 style등록 -->
+				<li><span style="color:#eb0f29; border:1px solid #f5b4bb; background:#fff;">Hot Item</span></li><!-- 관리자에서 style등록 -->
+				<li><span style="color:#fff; background:#b172f4;">디렉터파이 선정<br>착한 보습크림</span></li><!-- 관리자에서 style등록 -->
+			</ul>
+
+			<a href="#"><span class="thumb"><img src="/pjtCom/pc/images/temp/product_226x226_2.jpg" class="img" alt=""></span></a>
+
+			<div class="info">
+				<!-- 해시태그 등록시 노출 // -->
+				<div class="hashtag">
+					<a href="#">#원스텝클렌징</a>
+					<a href="#">#원스텝클렌징</a>
+				</div>
+				<!-- // 해시태그 등록시 노출 -->
+
+				<a href="#">
+					<p class="name ellipsis">[디렉터파이 선정] 히든랩 스킨 세이버 컨센트레이트</p>
+					<p class="txt ellipsis">미세먼지 같은 유해환경과 자외선, 블루라이트를 차단해주는 어반폴루션 크림</p>
+				</a>
+			</div>
+
+			<div class="price">
+				<del>48,000원</del>
+				<span>35,000원</span>
+			</div>
+
+			<a href="#cart" class="btn-cart" onclick="fn.popupOpen('#cart');">장바구니 담기/빼기</a><!-- 장바구니 담겨있을경우 class="active" -->
+		</li>
+		<!-- // 반복 영역 -->
+
+		<li>
+			<ul class="flag">
+				<li><span style="color:#000; border:1px solid #000; background:#fff;">Bestseller</span></li><!-- 관리자에서 style등록 -->
+				<li><span style="color:#eb0f29; border:1px solid #f5b4bb; background:#fff;">Hot Item</span></li><!-- 관리자에서 style등록 -->
+				<li><span style="color:#fff; background:#b172f4;">디렉터파이 선정<br>착한 보습크림</span></li><!-- 관리자에서 style등록 -->
+			</ul>
+
+			<a href="#"><span class="thumb"><img src="/pjtCom/pc/images/temp/product_226x226_2.jpg" class="img" alt=""></span></a>
+
+			<div class="info">
+				<a href="#">
+					<p class="name ellipsis">[디렉터파이 선정] 히든랩 스킨 컨센트레이트</p>
+					<p class="txt ellipsis">블루라이트를 차단해주는 어반폴루션 크림</p>
+				</a>
+			</div>
+
+			<div class="price">
+				<del>48,000원</del>
+				<span>35,000원</span>
+			</div>
+
+			<a href="#cart" class="btn-cart active" onclick="fn.popupOpen('#cart');">장바구니 담기/빼기</a>
+		</li>
+	</ul>
+
+	<code>
+	<pre>
+&lt;ul class="product-list big"&gt;
+	&lt;!-- 반복 영역 // --&gt;
+	&lt;li&gt;
+		&lt;ul class="flag"&gt;
+			&lt;li&gt;&lt;span style="color:#000; border:1px solid #000; background:#fff;"&gt;Bestseller&lt;/span&gt;&lt;/li&gt;&lt;!-- 관리자에서 style등록 --&gt;
+			&lt;li&gt;&lt;span style="color:#eb0f29; border:1px solid #f5b4bb; background:#fff;"&gt;Hot Item&lt;/span&gt;&lt;/li&gt;&lt;!-- 관리자에서 style등록 --&gt;
+			&lt;li&gt;&lt;span style="color:#fff; background:#b172f4;"&gt;디렉터파이 선정&lt;br&gt;착한 보습크림&lt;/span&gt;&lt;/li&gt;&lt;!-- 관리자에서 style등록 --&gt;
+		&lt;/ul&gt;
+
+		&lt;a href="#"&gt;&lt;span class="thumb"&gt;&lt;img src="/pjtCom/pc/images/temp/product_226x226_2.jpg" class="img" alt=""&gt;&lt;/span&gt;&lt;/a&gt;
+
+		&lt;div class="info"&gt;
+			&lt;!-- 해시태그 등록시 노출 // --&gt;
+			&lt;div class="hashtag"&gt;
+				&lt;a href="#"&gt;#원스텝클렌징&lt;/a&gt;
+				&lt;a href="#"&gt;#원스텝클렌징&lt;/a&gt;
+			&lt;/div&gt;
+			&lt;!-- // 해시태그 등록시 노출 --&gt;
+
+			&lt;a href="#"&gt;
+				&lt;p class="name ellipsis"&gt;[디렉터파이 선정] 히든랩 스킨 세이버 컨센트레이트&lt;/p&gt;
+				&lt;p class="txt ellipsis"&gt;미세먼지 같은 유해환경과 자외선, 블루라이트를 차단해주는 어반폴루션 크림&lt;/p&gt;
+			&lt;/a&gt;
+		&lt;/div&gt;
+
+		&lt;div class="price"&gt;
+			&lt;del&gt;48,000원&lt;/del&gt;
+			&lt;span&gt;35,000원&lt;/span&gt;
+		&lt;/div&gt;
+
+
+		&lt;a href="#cart" class="btn-cart" onclick="fn.popupOpen('#cart')"&gt;장바구니 담기/빼기&lt;/a&gt;&lt;!-- 장바구니 담겨있을경우 class="active" --&gt;
+	&lt;/li&gt;
+	&lt;!-- // 반복 영역 --&gt;
+&lt;/ul&gt;
+	</pre>
+	</code>
+	<!-- -->
+
+	</div>
+</section>
+<!-- //  -->
+
+<!--  // -->
+<h1 class="htmlprocess-tit" id="grade">Grade</h1>
+<section class="guide-wrap">
+	<div class="guide">
+	<!-- -->
+	<h2 class="htmlprocess-tit2">Default</h2>
+
+	<div class="grade">
+		<div>
+			<span class="one"></span><!-- 1점 -->
+			<span class="one"></span>
+			<span class="one"></span>
+			<span class="half"></span><!-- 0.5점 -->
+			<span class="blank"></span><!-- 0점 -->
+		</div>
+		<span class="point">4.5</span><!--평균 평점 계산 : 0.5는 0.5점, 0.5미만은 0점, 0.5초과는 1점으로 계산 -->
+	</div>
+<code>
+<pre>
+&lt;div class="grade"&gt;
+	&lt;div&gt;
+		&lt;span class="one"&gt;&lt;/span&gt;&lt;!-- 1점 --&gt;
+		&lt;span class="one"&gt;&lt;/span&gt;
+		&lt;span class="one"&gt;&lt;/span&gt;
+		&lt;span class="half"&gt;&lt;/span&gt;&lt;!-- 0.5점 --&gt;
+		&lt;span class="blank"&gt;&lt;/span&gt;&lt;!-- 0점 --&gt;
+	&lt;/div&gt;
+	&lt;span class="point"&gt;4.5&lt;/span&gt;&lt;!--평균 평점 계산 : 0.5는 0.5점, 0.5미만은 0점, 0.5초과는 1점으로 계산 --&gt;
+&lt;/div&gt;
+</pre>
+</code>
+	<!-- -->
+
+	<!-- -->
+	<h2 class="htmlprocess-tit2">Small</h2>
+
+	<div class="grade small">
+		<div>
+			<span class="one"></span><!-- 1점 ( 0.5점 없음 ) -->
+			<span class="one"></span>
+			<span class="one"></span>
+			<span class="one"></span>
+			<span class="blank"></span><!-- 0점 ( 0.5점 없음 ) -->
+		</div>
+		<span class="point">4</span>
+	</div>
+<code>
+<pre>
+&lt;div class="grade small"&gt;
+	&lt;div&gt;
+		&lt;span class="one"&gt;&lt;/span&gt;&lt;!-- 1점 ( 0.5점 없음 ) --&gt;
+		&lt;span class="one"&gt;&lt;/span&gt;
+		&lt;span class="one"&gt;&lt;/span&gt;
+		&lt;span class="one"&gt;&lt;/span&gt;
+		&lt;span class="blank"&gt;&lt;/span&gt;&lt;!-- 0점 ( 0.5점 없음 ) --&gt;
+	&lt;/div&gt;
+	&lt;span class="point"&gt;4&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+</code>
+	<!-- -->
+
+	<!-- -->
+	<h2 class="htmlprocess-tit2">변경</h2>
+
+	<div class="grade small">
+		<div>
+			<label><input type="checkbox" checked onchange="fn.grade(this);"><span></span></label>
+			<label><input type="checkbox" checked onchange="fn.grade(this);"><span></span></label>
+			<label><input type="checkbox" checked onchange="fn.grade(this);"><span></span></label>
+			<label><input type="checkbox" checked onchange="fn.grade(this);"><span></span></label>
+			<label><input type="checkbox" checked onchange="fn.grade(this);"><span></span></label>
+		</div>
+		<span class="point">5</span>
+	</div>
+<code>
+<pre>
+&lt;div class="grade small"&gt;
+	&lt;div&gt;
+		&lt;label&gt;&lt;input type="checkbox" checked onchange="fn.grade(this);"&gt;&lt;span&gt;&lt;/span&gt;&lt;/label&gt;
+		&lt;label&gt;&lt;input type="checkbox" checked onchange="fn.grade(this);"&gt;&lt;span&gt;&lt;/span&gt;&lt;/label&gt;
+		&lt;label&gt;&lt;input type="checkbox" checked onchange="fn.grade(this);"&gt;&lt;span&gt;&lt;/span&gt;&lt;/label&gt;
+		&lt;label&gt;&lt;input type="checkbox" checked onchange="fn.grade(this);"&gt;&lt;span&gt;&lt;/span&gt;&lt;/label&gt;
+		&lt;label&gt;&lt;input type="checkbox" checked onchange="fn.grade(this);"&gt;&lt;span&gt;&lt;/span&gt;&lt;/label&gt;
+	&lt;/div&gt;
+	&lt;span class="point"&gt;5&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+</code>
+	<!-- -->
+
+
+
+	</div>
+</section>
+<!-- //  -->
+
+
+
+
+				</div>
+			</div>
+		</div>
+		<!-- //contents -->
+
+	</main>
+	<!-- //wrap -->
+
+</body>
+</html>

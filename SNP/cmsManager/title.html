@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SNP Admin</title>
+	<link rel="stylesheet" href="/pjtCom/cmsManager/css/bootstrap.css">
+	<link rel="stylesheet" href="/pjtCom/cmsManager/css/jquery-ui.css">
+	<link rel="stylesheet" href="/pjtCom/cmsManager/css/style.css">
+	<script src="/pjtCom/cmsManager/js/jquery-1.8.3.min.js"></script>
+	<script src="/pjtCom/cmsManager/js/bootstrap.js"></script>
+	<script src="/pjtCom/cmsManager/js/jquery-ui.js"></script>
+	<script src="/pjtCom/cmsManager/js/common.js"></script>
+	<!--[if lt IE 9]>
+		<script src="/pjtCom/cmsManager/js/html5shiv.js"></script>
+		<script src="/pjtCom/cmsManager/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+<!-- GNB -->
+<div class="navbar navbar-inverse" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<h1 class="pull-left"><a href="#" class="navbar-brand"><img src="/pjtCom/cmsManager/images/hlogo.png" alt="SD SHOP Admin"></a></h1>
+		</div>
+		<div class="navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">시스템관리</a></li>
+				<li><a href="#">회원관리</a></li>
+				<li><a href="#">상품관리</a></li>
+				<li><a href="#">주문관리</a></li>
+				<li><a href="#">이벤트/쿠폰관리</a></li>
+				<li><a href="#">전시관리</a></li>
+				<li><a href="#">사이트관리</a></li>
+				<li><a href="#">SMS관리</a></li>
+				<li><a href="#">통계관리</a></li>
+				<li><a href="#">정산관리</a></li>
+			</ul>
+		</div>
+		<p class="btn-logout"><a href="/manage/logout" class="btn btn-white btn-sm">로그아웃</a></p>
+	</div>
+</div>
+<!-- //GNB -->
+
+<div class="container">
+	<div class="row">
+		<!-- LNB -->
+		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 sidebar-offcanvas" id="sidebar" role="navigation">
+			<div class="sidebar-nav">
+				<ul class="nav">
+					<li class="active">
+						<a href="#">상품관리</a>
+						<ul>
+							<li><a href="#">메뉴코드관리</a></li>
+							<li><a href="#">코드관리</a></li>
+							<li><a href="#">상품카테고리관리</a></li>
+							<li><a href="#">회원등급관리</a></li>
+							<li><a href="#">적립금관리</a></li>
+							<li class="active"><a href="/manage/index">관리자관리</a></li>
+							<li ><a href="/comboard/index">게시판샘플</a></li>
+							<li ><a href="/adminlog/index">관리자로그인현황</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //LNB -->
+
+		<!-- contents -->
+		<div id="contents" class="col-xs-12 col-sm-12 col-md-9 col-lg-10">
+			<!-- 2019.01.23 :  대 타이틀 문구 // -->
+			<div class="row">
+				<div class="col-xs-6">
+					<h2>대 타이틀 문구</h2>
+				</div>
+				<div class="col-xs-6">
+					<ol class="breadcrumb">
+						<li><a href="#">홈</a></li>
+						<li><a href="#">회원 관리</a></li>
+						<li class="active">회원수정</li>
+					</ol>
+				</div>
+			</div>
+
+			<hr class="title_line">
+			<!-- //2019.01.23 : 대 타이틀 문구  -->
+
+			<div class="row">
+				<div class="col-md-12">
+					<form class="form-inline" role="form">
+						<!-- 2019.01.23 : 텍스트, 버튼 그룹 // -->
+						<div class="row">
+							<div class="col-xs-4">- 차은우(woo123)님의 회원정보입니다.</div>
+							<div class="col-xs-8 btns text-right">
+								<button type="button" class="btn btn-black">주문내역</button>
+								<button type="button" class="btn btn-white">쿠폰내역포인트내역</button>
+								<button type="button" class="btn btn-gray">1:1상담내역</button>
+								<button type="button" class="btn btn-red">상품문의내역</button>
+							</div>
+						</div>
+						<!-- //2019.01.23 : 텍스트, 버튼 그룹  -->
+						<div class="table-responsive mt10">
+							<table class="table table-bordered">
+								<colgroup>
+									<col class="col-lg-2">
+									<col class="col-lg-10">
+								</colgroup>
+								<tbody>
+									<th>항목 문구</th>
+									<td>
+										<input type="text" class="form-control">
+									</td>
+								</tbody>
+							</table>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<form class="form-inline" role="form">
+						<!-- 2019.01.23 : 서브 타이틀 // -->
+						<h3>서브 타이틀 문구</h3>
+						<!-- //2019.01.23 : 서브 타이틀  -->
+						<div class="table-responsive">
+							<table class="table table-bordered">
+								<colgroup>
+									<col class="col-lg-2">
+									<col class="col-lg-10">
+								</colgroup>
+								<tbody>
+									<th>항목 문구</th>
+									<td>
+										<input type="text" class="form-control">
+									</td>
+								</tbody>
+							</table>
+						</div>
+
+						<p class="btns text-right">
+							<button type="button" class="btn btn-red">버튼</button>
+							<button type="button" class="btn btn-white">버튼</button>
+						</p>
+					</form>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<form class="form-inline" role="form">
+						<h3>서브 타이틀 문구</h3>
+						<div class="table-responsive">
+							<table class="table table-bordered">
+								<colgroup>
+									<col class="col-lg-2">
+									<col class="col-lg-10">
+								</colgroup>
+								<tbody>
+									<th>항목 문구</th>
+									<td>
+										<input type="text" class="form-control">
+									</td>
+								</tbody>
+							</table>
+						</div>
+
+						<p class="btns text-right">
+							<button type="button" class="btn btn-red">버튼</button>
+							<button type="button" class="btn btn-white">버튼</button>
+						</p>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- //contents -->
+	</div>
+</div>
+
+</body>
+</html>

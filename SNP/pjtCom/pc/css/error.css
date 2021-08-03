@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+/**
+* --------------------------------
+* Error CSS
+* --------------------------------
+*/
+.error .error-area { position:absolute; top:50%; transform:translateY(-50%); width:100%; min-width:1366px;  }
+.error p { font-size:24px; text-align:center; line-height:36px; }
+.error p a { display:block; width:80px; height:80px; text-indent:-9999px; margin:0 auto 52px; background:url('/pjtCom/pc/images/common/logo.png') no-repeat 0 0; }
+.error p b { display:block; font-size:30px; margin-bottom:24px; }
+.error .btn-area { text-align:center; margin-top:60px; }

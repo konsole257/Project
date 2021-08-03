@@ -1,0 +1,496 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SNP Admin</title>
+	<link rel="stylesheet" href="/pjtCom/cmsManager/css/bootstrap.css">
+	<link rel="stylesheet" href="/pjtCom/cmsManager/css/jquery-ui.css">
+	<link rel="stylesheet" href="/pjtCom/cmsManager/css/style.css">
+	<script src="/pjtCom/cmsManager/js/jquery-1.8.3.min.js"></script>
+	<script src="/pjtCom/cmsManager/js/bootstrap.js"></script>
+	<script src="/pjtCom/cmsManager/js/jquery-ui.js"></script>
+	<script src="/pjtCom/cmsManager/js/common.js"></script>
+	<!--[if lt IE 9]>
+		<script src="/pjtCom/cmsManager/js/html5shiv.js"></script>
+		<script src="/pjtCom/cmsManager/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+<!-- GNB -->
+<div class="navbar navbar-inverse" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<h1 class="pull-left"><a href="#" class="navbar-brand"><img src="/pjtCom/cmsManager/images/hlogo.png" alt="SD SHOP Admin"></a></h1>
+		</div>
+		<div class="navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">시스템관리</a></li>
+				<li><a href="#">회원관리</a></li>
+				<li><a href="#">상품관리</a></li>
+				<li><a href="#">주문관리</a></li>
+				<li><a href="#">이벤트/쿠폰관리</a></li>
+				<li><a href="#">전시관리</a></li>
+				<li><a href="#">사이트관리</a></li>
+				<li><a href="#">SMS관리</a></li>
+				<li><a href="#">통계관리</a></li>
+				<li><a href="#">정산관리</a></li>
+			</ul>
+		</div>
+		<p class="btn-logout"><a href="/manage/logout" class="btn btn-white btn-sm">로그아웃</a></p>
+	</div>
+</div>
+<!-- //GNB -->
+
+<div class="container">
+	<div class="row">
+		<!-- contents -->
+		<div id="contents" class="col-xs-12">
+			<div class="row">
+				<div class="col-xs-6">
+					<h2>관리자 메인</h2>
+				</div>
+			</div>
+
+			<hr class="title_line">
+
+			<!-- 2019.07.15 // -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-responsive">
+						<table class="col-xs-12">
+							<colgroup>
+								<col style="">
+								<col style="width:235px">
+							</colgroup>
+							<tbody>
+								<tr>
+									<td><b>2019-07-15 14:36</b></td>
+									<td>
+										일별 - 오늘날짜 기준 실시간<br>
+										월별 – 전일까지 집계된 해당 월 집계
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="col-md-12 mt10">
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped td_center">
+							<colgroup>
+								<col style="width:16.66%;">
+								<col style="width:16.66%;">
+								<col style="width:16.66%;">
+								<col style="width:16.66%;">
+								<col style="width:16.66%;">
+								<col style="width:16.66%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>일 매출(VAT별도)</th>
+									<th>일 주문건수</th>
+									<th>월 매출(VAT별도) - 전일까지</th>
+									<th>월 주문건수-전일까지</th>
+									<th>인당 객단가(일별) </th>
+									<th>인당 객단가(월별) -전일까지</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="table table-bordered table-striped td_center">
+							<colgroup>
+								<col style="width:33.32%;">
+								<col style="width:16.66%;">
+								<col style="width:16.66%;">
+								<col style="width:33.32%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th colspan="4">일별 건수</th>
+								</tr>
+								<tr>
+									<th>결제완료</th>
+									<th>주문취소</th>
+									<th>반품/환불</th>
+									<th>전체주문건수</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- // 2019.07.15 -->
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped td_center" style="border-top:none">
+						<tbody><tr>
+							<td style="vertical-align:top;">
+							<!--DashBoard-partial 1.회원-전체현황 -->
+
+
+			<div class="row">
+				<div class="col-md-12">
+
+						<h3>회원-전체현황</h3>
+						<div class="table-responsive">
+							<table class="table table-bordered table-striped td_center">
+							<!--
+								<colgroup>
+									<col class="col-lg-1 wpx70">
+									<col class="col-lg-1 wpx100">
+									<col class="col-lg-1 wpx300">
+									<col class="col-lg-1 wpx300">
+								</colgroup>
+							-->
+								<thead>
+									<tr>
+										<th colspan="3">가입</th>
+										<th rowspan="2">휴면</th>
+										<th rowspan="2">탈퇴</th>
+										<th rowspan="2">활동</th>
+									</tr>
+									<tr>
+										<th>PC</th>
+										<th>Mobile</th>
+										<th>가입계</th>
+									</tr>
+								</thead>
+								<tbody>
+									  <tr>
+										<td>39,922</td>
+										<td>4,104</td>
+										<td>44,026</td>
+
+										<td>4,237</td>
+										<td>33,335</td>
+										<td>6,454</td>
+									  </tr>
+								</tbody>
+							</table>
+							 *.보유포인트 집계(~어제)
+							&nbsp;&nbsp;활동회원 : 30,014,045&nbsp;&nbsp;휴면회원 : 667,579							<br><br>
+						</div>
+				</div>
+			</div>
+
+
+							<!--DashBoard-partial 2.회원-일별현황(최근 X일) -->
+
+			<div class="row">
+				<div class="col-md-12">
+
+						<h3>회원-일별현황(최근 7일)</h3>
+						<div class="table-responsive">
+							<table class="table table-bordered table-striped td_center">
+							<!--
+								<colgroup>
+									<col class="col-lg-1 wpx70">
+									<col class="col-lg-1 wpx100">
+									<col class="col-lg-1 wpx300">
+									<col class="col-lg-1 wpx300">
+								</colgroup>
+							-->
+								<thead>
+									<tr>
+										<th>일자</th>
+										<th>가입</th>
+										<th>휴면</th>
+										<th>탈퇴</th>
+									</tr>
+								</thead>
+								<tbody>
+
+									  <tr>
+										<td>20190709</td>
+										<td>31</td>
+										<td>7</td>
+										<td>5</td>
+									  </tr>
+
+									  <tr>
+										<td>20190710</td>
+										<td>36</td>
+										<td>10</td>
+										<td>6</td>
+									  </tr>
+
+									  <tr>
+										<td>20190711</td>
+										<td>27</td>
+										<td>12</td>
+										<td>7</td>
+									  </tr>
+
+									  <tr>
+										<td>20190712</td>
+										<td>29</td>
+										<td>9</td>
+										<td>5</td>
+									  </tr>
+
+									  <tr>
+										<td>20190713</td>
+										<td>18</td>
+										<td>11</td>
+										<td>5</td>
+									  </tr>
+
+									  <tr>
+										<td>20190714</td>
+										<td>28</td>
+										<td>8</td>
+										<td>11</td>
+									  </tr>
+
+									  <tr>
+										<td>20190715</td>
+										<td>17</td>
+										<td>5</td>
+										<td>4</td>
+									  </tr>
+																	</tbody>
+							</table>
+						</div>
+				</div>
+			</div>
+
+							</td>
+							<td style="vertical-align:top;">
+							<!--DashBoard-partial 회원-1:1상담현황  -->
+
+			<div class="row">
+				<div class="col-md-12">
+
+						<h3>1:1상담현황 <a href="/qna/"> more&gt;&gt; </a> </h3>
+						<div class="table-responsive">
+							<table class="table table-bordered table-striped td_center">
+							<!--
+								<colgroup>
+									<col class="col-lg-1 wpx70">
+									<col class="col-lg-1 wpx100">
+									<col class="col-lg-1 wpx300">
+									<col class="col-lg-1 wpx300">
+								</colgroup>
+							-->
+								<thead>
+									<tr>
+										<th>제목</th>
+										<th>등록일</th>
+										<th>처리상태</th>
+									</tr>
+								</thead>
+								<tbody>
+
+									  <tr>
+										<td style="text-align:left;"><a href="/qna/update?IDX=2053"><b>사은품 문의</b></a></td>
+										<td>2019-07-15 11:44:28</td>
+										<td>접수</td>
+									  </tr>
+
+									  <tr>
+										<td style="text-align:left;"><a href="/qna/update?IDX=2052"><b>생리대 제조일자 문의</b></a></td>
+										<td>2019-07-11 22:48:12</td>
+										<td>접수</td>
+									  </tr>
+
+									  <tr>
+										<td style="text-align:left;"><a href="/qna/update?IDX=2051"><b>왜 쿠폰 사용이 안되는거죠?</b></a></td>
+										<td>2019-07-11 13:19:25</td>
+										<td>접수</td>
+									  </tr>
+
+									  <tr>
+										<td style="text-align:left;"><a href="/qna/update?IDX=2050"><b>포장상태</b></a></td>
+										<td>2019-07-10 08:23:09</td>
+										<td>접수</td>
+									  </tr>
+
+									  <tr>
+										<td style="text-align:left;"><a href="/qna/update?IDX=2049"><b>입금기한</b></a></td>
+										<td>2019-07-08 14:27:20</td>
+										<td>답변완료</td>
+									  </tr>
+
+									  <tr>
+										<td style="text-align:left;"><a href="/qna/update?IDX=2048"><b>오늘발송되나요?</b></a></td>
+										<td>2019-07-03 13:19:14</td>
+										<td>답변완료</td>
+									  </tr>
+
+									  <tr>
+										<td style="text-align:left;"><a href="/qna/update?IDX=1324"><b>선크림 뚜껑 불량 </b></a></td>
+										<td>2019-06-27 16:00:09</td>
+										<td>답변완료</td>
+									  </tr>
+
+									  <tr>
+										<td style="text-align:left;"><a href="/qna/update?IDX=1323"><b>소봉 선크림세트 이벤트 당첨자인데요</b></a></td>
+										<td>2019-06-23 08:16:06</td>
+										<td>답변완료</td>
+									  </tr>
+
+									  <tr>
+										<td style="text-align:left;"><a href="/qna/update?IDX=1322"><b>워시오프타입 모공수축팩이요 </b></a></td>
+										<td>2019-06-20 16:08:57</td>
+										<td>답변완료</td>
+									  </tr>
+
+									  <tr>
+										<td style="text-align:left;"><a href="/qna/update?IDX=1321"><b> 5월 신규회원 가입시 14종 샘플 이벤트 물품은 언제 배송받아볼 수 있나요? </b></a></td>
+										<td>2019-06-18 01:24:31</td>
+										<td>답변완료</td>
+									  </tr>
+																	</tbody>
+							</table>
+						</div>
+				</div>
+			</div>
+
+
+							</td>
+						</tr>
+
+						</tbody></table>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- 2019.07.15 // -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped td_center">
+							<colgroup>
+								<col style="width:25%">
+								<col style="width:25%">
+								<col style="width:25%">
+								<col style="width:25%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>순위/제품명</th>
+									<th>수량 상위</th>
+									<th>주문건수 상위</th>
+									<th>매출 상위</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped td_center">
+							<colgroup>
+								<col style="width:16.66%">
+								<col style="width:16.66%">
+								<col style="width:16.66%">
+								<col style="width:16.66%">
+								<col style="width:16.66%">
+								<col style="width:16.66%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th></th>
+									<th>연령대별 정회원수</th>
+									<th>연령대별 인당 객단가(일별</th>
+									<th>연령대별 인당 주문건수(일별)</th>
+									<th>연령대별 인당 객단가(월별)</th>
+									<th>연령대별 인당 주문건수(월별)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>10대</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>20대</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>30대</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>40대</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>50대</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>60대 이상</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- 2019.07.15 // -->
+
+		</div>
+		<!-- //contents -->
+	</div>
+</div>
+
+</body>
+</html>

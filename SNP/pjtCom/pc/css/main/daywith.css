@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/**
+* --------------------------------
+* Main CSS
+* --------------------------------
+*/
+
+[class^="con"] > .tit { font-weight:800; font-size:36px; text-align:center; }
+
+.con1 { position:relative; width:1280px; margin:0 auto; padding:108px 40px 0; box-sizing:border-box; }
+.con1 .bg { content:""; position:absolute; top:68px; right:40px; width:720px; height:520px; background:#f4e8ec; transition-duration:500ms; cursor:pointer; }
+.con1 .con1-swiper-wrap { position:relative; width:0; }
+.con1 .con1-swiper { width:760px; height:520px; margin:0; }
+
+.con1 .indicator { position:absolute; bottom:0; right:-1200px; width:144px; height:30px; }
+.con1 .swiper-button-next,
+.con1 .swiper-button-prev { top:0; left:auto; right:0; width:35px; height:28px; margin:0; border:1px solid #9e9e9e; background:none; }
+.con1 .swiper-button-next:before,
+.con1 .swiper-button-prev:before { content:""; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:5px; height:8px; background:url("/pjtCom/pc/images/main/daywith/btn.png") no-repeat 0 0; }
+.con1 .swiper-button-next { border-left:none; }
+.con1 .swiper-button-next:after { content:""; position:Absolute; top:8px; left:0; width:1px; height:12px; background:#cfcfcf; }
+.con1 .swiper-button-prev { right:36px; transform:rotate(180deg); border-left:none; }
+.con1 .swiper-pagination { left:0; bottom:0; width:auto; font-family:'NanumSquareBold'; font-weight:700; line-height:30px; letter-spacing:0; font-size:16px; color:#555555; }
+.con1 .swiper-pagination .swiper-pagination-current { color:#141414; }
+
+.con1 .txt-area { position:absolute; z-index:1; top:154px; right:100px; width:440px; height:360px; padding:80px 0 0 77px; border:3px solid #372221; box-sizing:border-box; cursor:pointer; }
+/* .con1 .txt-area:after { content:""; position:absolute; top:-30px; right:50px; width:76px; height:70px; background:url("/pjtCom/pc/images/main/daywith/icon.png") no-repeat 0 0; } */
+.con1 .txt-area > div { display:none; }
+/* .con1 .txt-area > div.active { display:block; } */
+
+.con1 .txt-area > div .txt1 { opacity:0; font-weight:800; font-size:36px; line-height:44px; color:#141414; }
+.con1 .txt-area > div .txt2 { opacity:0; font-size:18px; color:#484848; margin-top:14px; }
+.con1 .txt-area > div.active .txt1 { opacity:1; transition-delay:300ms; transition-duration:800ms; }
+.con1 .txt-area > div.active .txt2 { opacity:1; transition-delay:500ms; transition-duration:800ms; }
+
+.con1 .txt-area .btn-more { display:block; position:absolute; bottom:50px; left:77px; width:130px; height:30px; font-size:12px; color:#484848; line-height:28px; margin-top:26px; padding-left:19px; border:1px solid #9e9e9e; box-sizing:border-box;}
+.con1 .txt-area .btn-more:after { content:""; position:absolute; top:10px; right:14px; width:5px; height:8px; background:url("/pjtCom/pc/images/main/daywith/btn.png") no-repeat 0 0; }
+.con1 .txt-area .btn-more:before { content:""; position:absolute; top:8px; right:34px; width:1px; height:12px; background:#9e9e9e; }
+
+.con2 { width:1280px; margin:0 auto; padding:100px 40px 55px; box-sizing:border-box; }
+.con2 > .inner { margin-top:58px; }
+.con2 .product-list > li.small { width:285px; }
+.con2 .product-list > li.midium { width:590px; }
+.con2 .product-list > li.small a > .img { width:100%; height:472px; }
+.con2 .product-list > li.midium a > .img { width:100%; height:380px; }
+
+.con3 { position:relative; padding:80px 0 94px; background:#f5dee5 url("/pjtCom/pc/images/main/daywith/con3_bg.jpg") no-repeat center; }
+.con3 > .inner { width:1280px; margin:40px auto 0; padding:0 40px; box-sizing:border-box; }
+.con3 .vidio-area { position:relative; z-index:1; width:922px; height:480px; margin:0 auto; }
+.con3 .vidio-area iframe { position:relative; }
+.con3 .vidio-area .img { position:absolute; top:0; right:0; cursor:pointer; }
+.con3 .vidio-area iframe { width:100%; height:100%; }
+.con3 .txt-area { position:relative; width:1280px; margin:38px auto 0; padding-left:260px; }
+.con3 .txt-area span { position:absolute; top:-108px; left:0; width:202px; height:202px; font-weight:800; font-size:24px; line-height:36px; text-align:center; padding-top:98px; border:2px solid #372221; box-sizing:border-box; }
+.con3 .txt-area .tit { font-weight:800; font-size:20px; }
+.con3 .txt-area .txt {font-size:16px; color:#484848; line-height:24px; margin-top:12px; }
+.con3 .img-area { margin:-80px 0 -94px; }
+.con3 .img-area .img { position:relative; top:0; left:50%; transform:translateX(-50%); width:100%; }
+
+.con4 { position:relative; padding:100px 0 30px; overflow:hidden; }
+.con4 > .inner { width:1280px; height:463px; margin:0 auto; padding:0 40px; box-sizing:border-box; }
+.con4 .con4-swiper-wrap { position:relative; margin-top:40px; padding-left:60px; }
+.con4 .con4-swiper-wrap:before { content:""; position:absolute; z-index:-1; top:70px; left:0; width:1140px; height:394px; border:3px solid #372221; box-sizing:border-box; }
+.con4 .con4-swiper-wrap:after { content:""; display:block; clear:both; }
+.con4 .con4-swiper { float:left; width:470px; height:380px; }
+.con4 .swiper-slide .img { width:470px; height:380px; }
+.con4 .txt-area { float:left; width:670px; height:380px; padding:60px 60px 0 44px; background:#e2e2e2; box-sizing:border-box; }
+.con4 .txt-area .grade > div { width:164px; height:28px; }
+.con4 .txt-area .grade > div span { width:28px; height:28px; margin-left:6px; background:url("/pjtCom/pc/images/main/daywith/grade.png") no-repeat 0 0; }
+.con4 .txt-area .grade .blank { background-position:-34px 0; }
+.con4 .txt-area .txt-area.grade .one { background-position:0 0; }
+.con4 .txt-area .grade .point { font-size:24px; line-height:28px; color:#484848; margin-left:15px; }
+.con4 .txt-area .who { font-size:16px; margin-top:18px; }
+.con4 .txt-area .txt { max-height:120px; line-height:24px; color:#484848; margin-top:18px; }
+.con4 .txt-area .btn-more { display:block; position:relative; width:130px; height:30px; font-size:12px; color:#484848; line-height:28px; margin-top:26px; padding-left:19px; border:1px solid #9e9e9e; box-sizing:border-box;}
+.con4 .txt-area .btn-more:after { content:""; position:absolute; top:10px; right:14px; width:5px; height:8px; background:url("/pjtCom/pc/images/main/daywith/btn.png") no-repeat 0 0; }
+.con4 .txt-area .btn-more:before { content:""; position:absolute; top:8px; right:34px; width:1px; height:12px; background:#9e9e9e; }
+.con4 .con4-swiper-wrap .indicator { position:absolute; bottom:-60px; left:439px; }
+.con4 .con4-swiper-wrap .swiper-pagination { position:static; margin-left:91px; }
+.con4 .con4-swiper-wrap .swiper-pagination .swiper-pagination-bullet { opacity:0.3; width:40px; height:40px; margin-left:8px; border-radius:0px; background:none; }
+.con4 .con4-swiper-wrap .swiper-pagination .swiper-pagination-bullet:first-child { margin-left:0; }
+.con4 .con4-swiper-wrap .swiper-pagination .swiper-pagination-bullet-active { opacity:1; }
+.con4 .con4-swiper-wrap .swiper-pagination .swiper-pagination-bullet img { width:40px; height:40px; }
+.con4 .con4-swiper-wrap .swiper-button-next,
+.con4 .con4-swiper-wrap .swiper-button-prev { top:5px; left:35px; right:auto; width:35px; height:28px; margin:0; border:1px solid #9e9e9e; background:none; }
+.con4 .con4-swiper-wrap .swiper-button-next:before,
+.con4 .con4-swiper-wrap .swiper-button-prev:before { content:""; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:5px; height:8px; background:url("/pjtCom/pc/images/main/daywith/btn.png") no-repeat 0 0; }
+.con4 .con4-swiper-wrap .swiper-button-next { border-left:none; }
+.con4 .con4-swiper-wrap .swiper-button-next:after { content:""; position:Absolute; top:8px; left:0; width:1px; height:12px; background:#cfcfcf; }
+.con4 .con4-swiper-wrap .swiper-button-prev { left:0; transform:rotate(180deg); border-left:none; }
