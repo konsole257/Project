@@ -1,0 +1,38 @@
+{
+  "schedule" : [
+    {
+      "index":"05",
+      "subject":"GRAND OPENING\nFESTIVAL",
+      "period":"2016.4.18 ~ 2016.5.1",
+      "link":"/event/event_ing_detail?04"
+    },
+
+    {
+      "index":"04",
+      "subject":"[전시] ART STAND\n조세현 사진전",
+      "period":"2016.4.19 ~ 2016.5.1",
+      "link":"/art/program_now_detail?01"
+    },
+
+    {
+      "index":"03",
+      "subject":"[EVENT] MOM STAND\n선착순 50명 화분 증정",
+      "period":"2016.4.19 ~ 2016.5.15",
+      "link":"/event/event_ing_detail?02"
+    },
+
+    {
+      "index":"02",
+      "subject":"[EVENT] HEART STAND\n오픈하우스 ",
+      "period":"2016.4.23 ~ 2016.4.24",
+      "link":"/event/event_ing_detail?03"
+    },
+
+    {
+      "index":"01",
+      "subject":"[EVENT] WALKSHOP\n구매자 대상 선물 증정 ",
+      "period":"2016.4.22 ~ 2016.5.1",
+      "link":"/event/event_ing_detail?01"
+    }
+  ]
+}

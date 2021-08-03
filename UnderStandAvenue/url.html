@@ -1,0 +1,586 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="Keywords" content="UNDERSTAND AVENUE" />
+<meta name="Description" content="UNDERSTAND AVENUE" />
+<script src="/avenueCom/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<title>UNDERSTAND AVENUE URL</title>
+<style>
+	*{margin:0; padding:0;}
+	html, body {background-color:#fff;}
+	dl,ul,ol,menu,li {list-style:none}
+	img {border:0 none;vertical-align:top;}
+	table {border-collapse:collapse;border-spacing:0}
+	a {text-decoration:none;border-collapse:separate;color:#666;}
+	label {cursor:pointer;}
+	p { word-wrap:break-word; word-break:break-all;}
+	textarea {resize:none; }
+	#wrap {margin:0;padding:0;}
+	h2 {position:relative;padding:5px 0 5px 10px;font-size:14px;line-height:30px;font-weight:bold; cursor:pointer;}
+	h2 span {font-size:11px;font-weight:normal;}
+	h2 .enddate {position:absolute;top:12px;right:10px;display:inline-block;color:#888;text-align:right;font-size:12px;line-height:24px;}
+	.sti {border-top:2px solid #585858;color:#333;background-color:#f7f7f7;}
+	.header {padding:20px;background-color:#fff;border-bottom:1px solid #585858;text-align:center; }
+	.folderbox {padding:0 20px 20px 20px;}
+	.folderbox:after {content:" ";display:block;clear:both;}
+	.folderbox dl {width:500px;}
+	.folderbox dl dt {float:left;display:inline-block;width:40%;}
+	.folderbox dl dd {float:left;display:inline-block;width:60%;}
+	.tabletype {width:100%;}
+	.tabletype table {width:100%;table-layout:fixed;color:#555;border:1px solid #e4e4e4;}
+	.tabletype table th {padding:5px 0;background:#f6f6f6;border-right:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4;}
+	.tabletype table th.l {padding:0 0 0 5px;text-align:left;}
+	.tabletype table td {padding:4px 4px 4px 4px;color:#000;text-align:center;border-right:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4;vertical-align:top;font-size:12px;}
+	.tabletype table td.l {text-align:left;}
+	.tabletype table td.r {text-align:right;}
+	.tabletype table td.m {vertical-align:middle;}
+	.lstype {width:100%;border-top:1px solid #585858;}
+	.lstype ul li {position:relative;padding:5px;border-bottom:1px solid #ccc;line-height:22px;font-size:12px;}
+	.lstype ul li dl {width:100%;}
+	.lstype ul li dl:after {content:" ";display:block;clear:both;}
+	.lstype ul li dl dt {position:relative;float:left;width:20%;}
+	.lstype ul li dl dd {position:relative;float:left;width:80%;}
+	.lstype ul li dl dd a {position:relative;display:inline-block;width:100%;}
+	.enddate {position:absolute;top:0;right:5px;display:inline-block;color:#888;text-align:right;font-size:12px;line-height:24px;}
+	.bar0 {background-color:none;}
+	.bar1 {background-color:#fff0f0;}
+	.bar2 {background-color:#fffff0;}
+	.bar3 {background-color:#f0fff7;}
+	.bar4 {background-color:#f0f1ff;}
+	.bar5 {background-color:#fef0ff;}
+	.barx{background-color:#fff;}
+	.txt_blue {color:#2465ec;}
+	.txt_white {color:#fff;}
+</style>
+<script type="text/javascript">
+//<![CDATA[
+	$(function(){
+		$(".lstype").hide(0);
+		$(".lstype2").slideDown(800);
+		$(".lstype3").slideDown(800);
+		$(".sti").click(function(){
+			if( $(this).next("div").css('display') == 'none' ){
+				$(this).next("div").slideDown(400);
+			}else{
+				$(this).next("div").slideUp(400);
+			}
+		});
+		$(".folderbox").slideUp(800);
+		$(".foldersti").click(function(){
+			if( $(".folderbox").css('display') == 'none' ){
+				$(".folderbox").slideDown(400);
+			}else{
+				$(".folderbox").slideUp(400);
+			}
+		});
+	});
+	/*새창팝업*/
+	function PopupCenter(popNM, parms, width, height){
+		var sw  = screen.availWidth ;
+		var sh  = screen.availHeight ;
+		px=(sw - width)/2 ;
+		py=(sh - height)/2 ;
+		var set  = 'top=' + py + ',left=' + px ;
+		set += ',width=' + width + ',height=' + height + ',menubar = no, toolbar = no, location = no, status = no, scrollbars = yes, resizable = yes' ;
+		window.name="pop";
+		window.open (popNM + parms , '' , set) ;
+	}
+//]]>
+</script>
+</head>
+<body>
+	<button type="button" id="ftest">focus tst</button>
+	<script>
+	document.getElementById('ftest').onfocus = function(){
+		alert('!!')
+	}
+	</script>
+<div id="wrap">
+	<div class="header">
+		<h1 style="width:111px; height:61px; background:url(/avenueCom/images/common/sp_common.png) no-repeat 0 0; margin:0 auto; text-indent:-9999px;">
+			UNDERSTAND AVENUE
+		</h1>
+	</div>
+	<h2 class="foldersti">- 폴더 네이밍<span> : 실제 작업 시 변경 될 수 있습니다.</span></h2>
+	<div class="folderbox">
+		<div class="tabletype">
+			<table summary="">
+				<caption></caption>
+				<colgroup>
+					<col width="10%" />
+					<col width="45%" />
+					<col width="*" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th colspan="2">메뉴명</th>
+						<th>폴더명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="l" rowspan="2">ADMIN</td>
+						<td class="l">/</td>
+						<td class="l">/cmsManager/</td>
+					</tr>
+					<tr>
+						<td class="l">공통파일(css, js, images) 등</td>
+						<td class="l">/cmsManager/understandCom/</td>
+					</tr>
+					<tr>
+						<td class="l" rowspan="14">WEB</td>
+						<td class="l">메인</td>
+						<td class="l">/</td>
+					</tr>
+					<tr>
+						<td class="l">공통파일(css, js, images) 등</td>
+						<td class="l">/avenueCom/</td>
+					</tr>
+
+					<tr>
+						<td class="l">YOUTH STAND</td>
+						<td class="l">/youth/</td>
+					</tr>
+
+					<tr>
+						<td class="l">HEART STAND</td>
+						<td class="l">/heart/</td>
+					</tr>
+
+					<tr>
+						<td class="l">MOM STAND</td>
+						<td class="l">/mom/</td>
+					</tr>
+
+					<tr>
+						<td class="l">ART STAND</td>
+						<td class="l">/art/</td>
+					</tr>
+
+					<tr>
+						<td class="l">POWER STAND</td>
+						<td class="l">/power/</td>
+					</tr>
+
+					<tr>
+						<td class="l">SOCIAL STAND</td>
+						<td class="l">/social/</td>
+					</tr>
+
+					<tr>
+						<td class="l">OPEN STAND</td>
+						<td class="l">/open/</td>
+					</tr>
+
+					<tr>
+						<td class="l">UNDER STAND AVENUE</td>
+						<td class="l">/under/</td>
+					</tr>
+
+					<tr>
+						<td class="l">CS center</td>
+						<td class="l">/customer/</td>
+					</tr>
+
+					<tr>
+						<td class="l">Event</td>
+						<td class="l">/event/</td>
+					</tr>
+
+					<tr>
+						<td class="l">My Page</td>
+						<td class="l">/mypage/</td>
+					</tr>
+
+					<tr>
+						<td class="l">Shop</td>
+						<td class="l">/shop/</td>
+					</tr>
+
+					<tr>
+						<td class="l" rowspan="14">MOBILE</td>
+						<td class="l">메인</td>
+						<td class="l">/m</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<h2 class="sti sti2">- WEB<span class="enddate">완료일</span></h2>
+	<div class="htmlprocess">
+		<script type="text/javascript">
+			$(function(){
+				var totalfile = $(".frontlist dd > a").length;
+				var finfile =$(".fin").length;
+				var ingfile =totalfile-finfile
+				var processper=(finfile / totalfile) * 100;
+				$(".totalfile").text(totalfile);
+				$(".finfile").text(finfile);
+				$(".ingfile").text(ingfile);
+				$(".processper").text(processper.toFixed(3)); // 소수자리 지정
+			})
+		</script>
+		<style type="text/css">
+		.htmlprocess {}
+		.htmlprocess .htmlprocess_tit {background:#777; color:#fff; font-weight:bold;margin-top:20px; }
+		.htmlprocess table {width: 100%; font-size:13px; margin-top:10px; margin-bottom:30px;}
+		.htmlprocess table th {border:1px solid #ccc; background:#eee;}
+		.htmlprocess table td {border:1px solid #ccc; text-align:right; padding:2px 5px 1px 0;}
+		</style>
+
+		<p class="htmlprocess_tit">HTML 작업공정률</p>
+		<table>
+		<colgroup><col width="150" /><col width="150" /><col width="150" /><col width="150" /><col width="*" /></colgroup>
+			<tr>
+				<th>파일수</th>
+				<th>완료</th>
+				<th>대기</th>
+				<th>작업률</th>
+				<th>기타</th>
+			</tr>
+			<tr>
+				<td class="totalfile"></td>
+				<td class="finfile"></td>
+				<td class="ingfile"></td>
+				<td class="processper"></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	<div class="lstype lstype2 frontlist">
+		<ul>
+			<li class="bar0">
+				<dl>
+					<dt><a href="/style_guide.html" target="_blank">GUIDE</a></dt>
+					<dd>
+						<a href="/style_guide.html" target="_blank" >style_guide<span class="txt_white">.dddd</span> <span class="enddate"></span></a><br />
+					</dd>
+				</dl>
+			</li>
+			<li class="bar1">
+				<dl>
+					<dt>메인</dt>
+					<dd>
+						<a href="/index.jsp" target="_blank" class="fin">Under Stand Avenue<span class="enddate">2015-12-07</span></a><br /><br />
+
+						<a href="/shop/index.jsp" target="_blank" class="fin">SHOP<span class="enddate"><span class="txt_blue">NEW</span> 2016-04-15</span></a><br />
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar2">
+				<dl>
+					<dt>Youth Stand</dt>
+					<dd>
+						<a href="/youth/about.jsp" target="_blank" class="fin">About &gt; 소개<span class="enddate">2015-12-07</span></a><br />
+						<a href="/youth/curriculum.jsp" target="_blank" class="fin">About &gt; Curriculum<span class="enddate">2015-12-07</span></a><br /><br />
+
+						<a href="/youth/info_list.jsp" target="_blank" class="fin">지원신청 &gt; 모집안내 목록<span class="enddate"><span class="txt_blue">NEW</span> 2015-12-07</span></a><br />
+						<a href="/youth/info_detail.jsp" target="_blank" class="fin">지원신청 &gt; 모집안내 상세<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-02</span></a><br />
+						<a href="/youth/recruit.jsp" target="_blank" class="fin">지원신청 &gt; 지원하기<span class="enddate"><span class="txt_blue">NEW</span> 2016-02-29</span></a><br />
+						<a href="/youth/recruit_complete.jsp" target="_blank" class="fin">지원신청 &gt; 지원하기 완료<span class="enddate"><span class="txt_blue">NEW</span> 2016-02-29</span></a><br /><br />
+
+						<a href="/youth/doodle.jsp" target="_blank" class="fin">Work Place &gt; Doodle Shop<span class="enddate"><span class="txt_blue">NEW</span> 2016-04-14</span></a><br />
+						<a href="/youth/maylily.jsp" target="_blank" class="fin">Work Place &gt; May Lily<span class="enddate"><span class="txt_blue">NEW</span> 2016-04-14</span></a><br /><br />
+
+						<a href="/youth/photo_list.jsp" target="_blank" class="fin">활동사진 및 영상 &gt; 이미지 갤러리 목록<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-02</span></a><br />
+						<a href="/youth/photo_detail.jsp" target="_blank" class="fin">활동사진 및 영상 &gt; 이미지 갤러리 상세<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-02</span></a><br />
+						<a href="/youth/vidio_list.jsp" target="_blank" class="fin">활동사진 및 영상 &gt; 동영상 갤러리 목록<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-02</span></a><br />
+						<a href="/youth/vidio_detail.jsp" target="_blank" class="fin">활동사진 및 영상 &gt; 동영상 갤러리 상세<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-02</span></a>
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar3">
+				<dl>
+					<dt>Heart Stand</dt>
+					<dd>
+						<a href="/heart/about.jsp" target="_blank" class="fin">About &gt; 소개<span class="enddate">2015-12-07</span></a><br />
+						<a href="/heart/staff.jsp" target="_blank" class="fin">About &gt; 스탭&amp;자문위원<span class="enddate">2015-12-07</span></a><br /><br />
+
+						<a href="/heart/program.jsp" target="_blank" class="fin">Program<span class="enddate">2015-12-07</span></a><br />
+						<a href="/heart/program_company_list.jsp" target="_blank" class="fin">Program &gt; 기업 프로그램 목록<span class="enddate">2016-03-14</span></a><br />
+						<a href="/heart/program_company_detail.jsp" target="_blank" class="fin">Program &gt; 기업 프로그램 상세<span class="enddate">2016-03-14</span></a><br />
+						<a href="/heart/program_adult_list.jsp" target="_blank" class="fin">Program &gt; 성인 프로그램 목록<span class="enddate">2016-03-14</span></a><br />
+						<a href="/heart/program_adult_detail.jsp" target="_blank" class="fin">Program &gt; 성인 프로그램 상세<span class="enddate">2016-03-14</span></a><br />
+						<a href="/heart/program_child_list.jsp" target="_blank" class="fin">Program &gt; 아동 프로그램 목록<span class="enddate">2016-03-14</span></a><br />
+						<a href="/heart/program_child_detail.jsp" target="_blank" class="fin">Program &gt; 아동 프로그램 상세<span class="enddate">2016-03-14</span></a><br />
+						<a href="/heart/program_family_list.jsp" target="_blank" class="fin">Program &gt; 가족 프로그램 목록<span class="enddate">2016-03-14</span></a><br />
+						<a href="/heart/program_family_detail.jsp" target="_blank" class="fin">Program &gt; 가족 프로그램 상세<span class="enddate">2016-03-14</span></a><br /><br />
+
+						<a href="/heart/psychild.jsp" target="_blank" class="fin">심리테스트 &gt; 아동 <span class="enddate">2016-02-18</span></a><br />
+						<a href="/heart/psychild_emotion.jsp" target="_blank" class="fin">심리테스트 &gt; 아동 &gt; 아동 정서행동<span class="enddate">2016-02-18</span></a><br />
+						<a href="/heart/psychild_ADHD.jsp" target="_blank" class="fin">심리테스트 &gt; 아동 &gt; ADHD<span class="enddate">2016-02-18</span></a><br />
+						<a href="/heart/psychild_attitude.jsp" target="_blank" class="fin">심리테스트 &gt; 아동 &gt; 양육 태도<span class="enddate">2016-02-18</span></a><br />
+						<a href="/heart/psychild_stress.jsp" target="_blank" class="fin">심리테스트 &gt; 아동 &gt; 양육 스트레스<span class="enddate">2016-02-18</span></a><br />
+
+						<a href="/heart/psyadult.jsp" target="_blank" class="fin">심리테스트 &gt; 성인<span class="enddate">2016-02-18</span></a><br />
+						<a href="/heart/psyadult_adult.jsp" target="_blank" class="fin">심리테스트 &gt; 성인 &gt; 성인 심리검사<span class="enddate">2016-02-18</span></a><br />
+						<a href="/heart/psyadult_couple.jsp" target="_blank" class="fin">심리테스트 &gt; 성인 &gt; 커플 욕구<span class="enddate">2016-02-18</span></a><br /><br />
+
+
+						<a href="/heart/guide.jsp" target="_blank" class="fin">예약/신청하기 &gt; 이용안내<span class="enddate">2015-12-07</span></a><br />
+						<a href="/heart/request.jsp" target="_blank" class="fin">예약/신청하기 &gt; 프로그램 신청<span class="enddate">2016-03-18</span></a><br />
+						<a href="/heart/request_complete.jsp" target="_blank" class="fin">예약/신청하기 &gt; 프로그램 신청 완료<span class="enddate">2016-03-18</span></a><br /><br />
+
+						<a href="/heart/column_list.jsp" target="_blank" class="fin">칼럼게시판 목록<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-10</span></a><br />
+						<a href="/heart/column_detail.jsp" target="_blank" class="fin">칼럼게시판 상세<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-10</span></a><br />
+
+						<!--<a href="#" target="_blank">이용후기 <span class="enddate"></span></a><br />-->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar4">
+				<dl>
+					<dt>Mom Stand</dt>
+					<dd>
+						<a href="/mom/about.jsp" target="_blank" class="fin">About &gt; 소개 <span class="enddate">2015-12-07</span></a><br />
+						<a href="/mom/recruit.jsp" target="_blank" class="fin">About &gt; 채용안내<span class="enddate">2015-12-07</span></a><br />
+						<a href="/mom/recruit_write.jsp" target="_blank" class="fin">About &gt; 채용안내 입력<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-22</span></a><br />
+						<a href="/mom/recruit_complete.jsp" target="_blank" class="fin">About &gt; 채용안내 완료<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-22</span></a><br />
+						<a href="/mom/with.jsp" target="_blank" class="fin">About &gt; 함께하는 사람들<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-07</span></a><br /><br />
+
+						<a href="/mom/brinner.jsp" target="_blank" class="fin">Brinner<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-10</span></a><br /><br />
+
+						<a href="/mom/bistro.jsp" target="_blank" class="fin">Bistro<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-10</span></a><br />
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar0">
+				<dl>
+					<dt>Art Stand</dt>
+					<dd>
+						<a href="/art/about.jsp" target="_blank" class="fin">About &gt; 소개 <span class="enddate">2015-12-07</span></a><br />
+						<a href="#" target="_blank">About &gt; 이용안내 <span class="enddate">X</span></a><br /><br />
+
+						<a href="/art/program_now_list.jsp" target="_blank" class="fin">Program &gt; 현재 프로그램 목록<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-16</span></a><br />
+						<a href="/art/program_now_detail.jsp" target="_blank" class="fin">Program &gt; 현재 프로그램 상세<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-16</span></a><br />
+						<a href="/art/program_expect_list.jsp" target="_blank" class="fin">Program &gt; 예정 프로그램 목록<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-16</span></a><br />
+						<a href="/art/program_expect_detail.jsp" target="_blank" class="fin">Program &gt; 예정 프로그램 상세<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-16</span></a><br />
+						<a href="/art/program_end_list.jsp" target="_blank" class="fin">Program &gt; 지난 프로그램 목록<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-16</span></a><br />
+						<a href="/art/program_end_detail.jsp" target="_blank" class="fin">Program &gt; 지난 프로그램 상세<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-16</span></a><br /><br />
+
+						<a href="/art/rent_list.jsp" target="_blank" class="fin">대관안내 &gt; 대관안내 및 절차 (리스트) <span class="enddate"><span class="txt_blue">NEW</span> 2016-02-24</span></a><br />
+						<a href="/art/rent_detail.jsp" target="_blank" class="fin">대관안내 &gt; 대관안내 및 절차 (상세) <span class="enddate"><span class="txt_blue">NEW</span> 2016-02-24</span></a><br />
+						<a href="/art/facility.jsp" target="_blank" class="fin">대관안내 &gt; 대관시설 <span class="enddate"><span class="txt_blue">NEW</span> 2016-03-03</span></a><br />
+						<a href="/art/pay.jsp" target="_blank" class="fin">대관안내 &gt; 대관료 <span class="enddate"><span class="txt_blue">NEW</span> 2016-02-26</span></a><br />
+						<a href="/art/agreement.jsp" target="_blank" class="fin">대관안내 &gt; 대관규약 <span class="enddate"><span class="txt_blue">NEW</span> 2016-03-03</span></a><br />
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar1">
+				<dl>
+					<dt>Power Stand</dt>
+					<dd>
+						<a href="/power/about.jsp" target="_blank" class="fin">About &gt; 소개 <span class="enddate">2015-12-07</span></a><br />
+						<!--
+						<a href="#" target="_blank">About &gt; 이용안내 <span class="enddate"></span></a><br /><br />
+
+						<a href="#" target="_blank">Program &gt; 프로그램 안내 <span class="enddate"></span></a><br />
+						<a href="#" target="_blank">Program &gt; 프로그램 일정 <span class="enddate"></span></a><br /><br />
+
+						<a href="#" target="_blank">시설이용안내 &gt; 시설소개 <span class="enddate"></span></a><br />
+						<a href="#" target="_blank">시설이용안내 &gt; 시설 예약 신청 <span class="enddate"></span></a><br />-->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar2">
+				<dl>
+					<dt>Social Stand</dt>
+					<dd>
+						<a href="/social/about.jsp" target="_blank" class="fin">About &gt; 소개 <span class="enddate">2015-12-07</span></a><br /><br />
+
+						<a href="/social/brand_intro.jsp" target="_blank" class="fin">브랜드 페이지(샵) &gt; 브랜드 리스트 <span class="enddate">2016-03-11</span></a><br />
+						<a href="/social/brand_about.jsp" target="_blank" class="fin">브랜드 페이지(샵) &gt; 제품보기 <span class="enddate">2016-03-11</span></a><br />
+
+						<!--<a href="#" target="_blank">구매하기 <span class="enddate"></span></a><br />-->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar3">
+				<dl>
+					<dt>Open Stand</dt>
+					<dd>
+						<a href="/open/about.jsp" target="_blank" class="fin">About &gt; 소개 <span class="enddate">2015-12-07</span></a><br />
+
+						<a href="/open/choice.jsp" target="_blank" class="fin">선정팀 소개 <span class="enddate"><span class="txt_blue">NEW</span> 2016-04-13</span></a><br /><br />
+
+						<a href="/open/contest_list.jsp" target="_blank" class="fin">공모전 신청 목록<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-21</span></a><br />
+						<a href="/open/contest_detail.jsp" target="_blank" class="fin">공모전 신청 상세<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-23</span></a><br />
+						<a href="/open/contest_write.jsp" target="_blank" class="fin">공모전 신청서 작성<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-21</span></a><br />
+						<a href="/open/contest_complete.jsp" target="_blank" class="fin">공모전 신청 완료<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-21</span></a><br />
+
+						<a href="/open/choice.jsp" target="_blank" class="fin">탱키패밀리 스토리 <span class="enddate"><span class="txt_blue">NEW</span> 2016-04-12</span></a><br /><br />
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar4">
+				<dl>
+					<dt>UnderStandAvenue</dt>
+					<dd>
+						<a href="/under/about.jsp" target="_blank" class="fin">소개 <span class="enddate">2015-12-07</span></a><br />
+						<a href="/under/philosophy.jsp" target="_blank" class="fin">철학 <span class="enddate">2015-12-07</span></a><br />
+						<a href="/under/people.jsp" target="_blank" class="fin">함께 만드는 사람들 <span class="enddate">2015-12-07</span></a><br />
+						<a href="/under/location.jsp" target="_blank" class="fin">찾아오는 길 <span class="enddate">2015-12-07</span></a><br />
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar0">
+				<dl>
+					<dt>CS center</dt>
+					<dd>
+						<a href="/customer/notice_list.jsp" target="_blank" class="fin">공지사항 (리스트) <span class="enddate">2016-02-12</span></a><br />
+						<a href="/customer/notice_detail.jsp" target="_blank" class="fin">공지사항 (상세) <span class="enddate">2016-02-15</span></a><br />
+						<a href="/customer/faq.jsp" target="_blank" class="fin">FAQ <span class="enddate">2016-02-15</span></a><br />
+						<a href="/customer/qna.jsp" target="_blank" class="fin">1:1문의하기 <span class="enddate">2016-02-16</span></a><br />
+						<a href="/customer/qna_complete.jsp" target="_blank" class="fin">1:1문의하기 완료 <span class="enddate">2016-02-16</span></a><br />
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar1">
+				<dl>
+					<dt>Event</dt>
+					<dd>
+						<a href="/event/calendar.jsp" target="_blank" class="fin">캘린더 <span class="enddate"><span class="txt_blue">NEW</span> 2016-03-15</span></a><br />
+						<a href="/event/event_ing_list.jsp" target="_blank" class="fin">진핸중 이벤트 목록<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-15</span></a><br />
+						<a href="/event/event_ing_detail.jsp" target="_blank" class="fin">진행중 이벤트 상세<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-15</span></a><br />
+						<a href="/event/event_end_list.jsp" target="_blank" class="fin">종료된 이벤트 목록<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-15</span></a><br />
+						<a href="/event/event_winner_list.jsp" target="_blank" class="fin">당첨자 발표 목록 <span class="enddate"><span class="txt_blue">NEW</span> 2016-03-15</span></a><br />
+						<a href="/event/event_winner_detail.jsp" target="_blank" class="fin">당첨자 발표 상세<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-15</span></a><br />
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar2">
+				<dl>
+					<dt>My Page</dt>
+					<dd>
+						<a href="/mypage/mypage.jsp" target="_blank" class="fin">마이페이지 메인<span class="enddate">2016-03-17</span></a><br /><br />
+
+						<a href="/mypage/modify.jsp" target="_blank" class="fin">회원정보 관리 &gt; 개인정보변경<span class="enddate">2016-03-10</span></a><br />
+						<a href="/mypage/leave.jsp" target="_blank" class="fin">회원정보 관리 &gt; 회원탈퇴<span class="enddate">2016-03-16</span></a><br /><br />
+
+						<a href="/mypage/program_list.jsp" target="_blank" class="fin">HEART STAND &gt; 프로그램 신청 조회 목록<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-18</span></a><br />
+						<a href="/mypage/program_detail.jsp" target="_blank" class="fin">HEART STAND &gt; 프로그램 신청 조회 상세<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-18</span></a><br /><br />
+
+						<a href="/mypage/recruit_list.jsp" target="_blank" class="fin">MOM STAND &gt; 입사지원 조회 목록<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-18</span></a><br />
+						<a href="/mypage/recruit_detail.jsp" target="_blank" class="fin">MOM STAND &gt; 입사지원 조회 상세<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-18</span></a><br /><br />
+
+						<a href="/mypage/contest_list.jsp" target="_blank" class="fin">OPEN STAND &gt; 공모전 신청 내역 목록<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-18</span></a><br />
+						<a href="/mypage/contest_detail.jsp" target="_blank" class="fin">OPEN STAND &gt; 공모전 신청 내역 상세<span class="enddate"><span class="txt_blue">NEW</span> 2016-03-18</span></a><br /><br />
+
+						<a href="/mypage/cart.jsp" target="_blank" class="fin">WALK SHOP &gt; 장바구니 <span class="enddate">2016-02-03</span></a><br />
+						<a href="/mypage/cart_nomember.jsp" target="_blank" class="fin">WALK SHOP &gt; 장바구니(비회원) <span class="enddate">2016-02-03</span></a><br />
+						<a href="/mypage/pay_product.jsp" target="_blank" class="fin">WALK SHOP &gt; 주문/결제(상품) <span class="enddate">2016-02-04</span></a><br />
+						<a href="/mypage/pay_product_nomember.jsp" target="_blank" class="fin">WALK SHOP &gt; 주문/결제(상품)(비회원) <span class="enddate">2016-02-04</span></a><br />
+						<a href="/mypage/pay_ticket.jsp" target="_blank" class="fin">WALK SHOP &gt; 주문/결제(전시/공연/체험) <span class="enddate">2016-02-04</span></a><br />
+						<a href="/mypage/pay_ticket_nomember.jsp" target="_blank" class="fin">WALK SHOP &gt; 주문/결제(전시/공연/체험)(비회원) <span class="enddate">2016-02-04</span></a><br />
+						<a href="/mypage/complete_product.jsp" target="_blank" class="fin">WALK SHOP &gt; 주문완료(상품) <span class="enddate">2016-02-05</span></a><br />
+						<a href="/mypage/complete_product_nomember.jsp" target="_blank" class="fin">WALK SHOP &gt; 주문완료(상품)(비회원) <span class="enddate">2016-02-05</span></a><br />
+						<a href="/mypage/complete_ticket.jsp" target="_blank" class="fin">WALK SHOP &gt; 주문완료(전시/공연/체험) <span class="enddate">2016-02-05</span></a><br />
+						<a href="/mypage/complete_ticket_nomember.jsp" target="_blank" class="fin">WALK SHOP &gt; 주문완료(전시/공연/체험)(비회원) <span class="enddate">2016-02-05</span></a><br />
+
+						<a href="/mypage/coupon_able.jsp" target="_blank" class="fin">WALK SHOP &gt; 사용가능한 쿠폰 <span class="enddate">2016-03-14</span></a><br />
+						<a href="/mypage/coupon_download.jsp" target="_blank" class="fin">WALK SHOP &gt; 다운로드 쿠폰 <span class="enddate">2016-03-14</span></a><br />
+						<a href="/mypage/coupon_unable.jsp" target="_blank" class="fin">WALK SHOP &gt; 사용/만료 쿠폰 <span class="enddate">2016-03-14</span></a><br /><br />
+
+						<a href="/mypage/qna_list.jsp" target="_blank" class="fin">CS CENTER &gt; 1:1문의 내역 목록 <span class="enddate">2016-03-14</span></a><br />
+						<a href="/mypage/qna_detail.jsp" target="_blank" class="fin">CS CENTER &gt; 1:1문의 내역 상세 <span class="enddate">2016-03-14</span></a><br />
+						<a href="/mypage/qna_write.jsp" target="_blank" class="fin">CS CENTER &gt; 1:1문의 하기<span class="enddate">2016-03-14</span></a><br />
+						<a href="/mypage/qna_complete.jsp" target="_blank" class="fin">CS CENTER &gt; 1:1문의 하기 완료<span class="enddate">2016-03-14</span></a><br /><br />
+
+						<a href="/mypage/post_list_able.jsp" target="_blank" class="fin">WALK SHOP &gt; 작성가능한 상품 후기 <span class="enddate">2016-03-21</span></a><br />
+						<a href="/mypage/post_list_complete.jsp" target="_blank" class="fin">WALK SHOP &gt; 작성한 상품후기 <span class="enddate">2016-03-21</span></a><br />
+						<a href="/mypage/post_list_write.jsp" target="_blank" class="fin">WALK SHOP &gt; 상품후기 작성 <span class="enddate">2016-03-21</span></a><br /><br />
+
+						<a href="/mypage/inquiry_product_list.jsp" target="_blank" class="fin">WALK SHOP &gt; 주문/배송조회 목록<span class="enddate">2016-03-21</span></a><br />
+						<a href="/mypage/inquiry_product_detail.jsp" target="_blank" class="fin">WALK SHOP &gt; 주문/배송조회 상세<span class="enddate">2016-03-21</span></a><br />
+						<a href="/mypage/exchange.jsp" target="_blank" class="fin">WALK SHOP &gt; 최소/반품/교환 <span class="enddate">2016-03-21</span></a><br /><br />
+
+						<a href="/mypage/inquiry_ticket_list.jsp" target="_blank" class="fin">WALK SHOP &gt; 예매내역 목록<span class="enddate">2016-03-21</span></a><br />
+						<a href="/mypage/inquiry_ticket_detail.jsp" target="_blank" class="fin">WALK SHOP &gt; 예매내역 상세<span class="enddate">2016-03-21</span></a><br /><br />
+
+						<a href="/mypage/delivery_list.jsp" target="_blank" class="fin">WALK SHOP &gt; 배송지관리 목록 <span class="enddate">2016-03-21</span></a><br />
+						<a href="/mypage/delivery_write.jsp" target="_blank" class="fin">WALK SHOP &gt; 배송지관리 작성 <span class="enddate">2016-03-21</span></a><br />
+						<a href="/mypage/delivery_modify.jsp" target="_blank" class="fin">WALK SHOP &gt; 배송지관리 수정 <span class="enddate">2016-03-21</span></a><br />
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar3">
+				<dl>
+					<dt>Walkshop</dt>
+					<dd>
+						<a href="/shop/brand_intro.jsp" target="_blank" class="fin">브랜드 인트로 <span class="enddate">2016-02-23</span></a><br />
+						<a href="/shop/brand_list.jsp" target="_blank" class="fin">브랜드 리스트 <span class="enddate">2016-02-23</span></a><br /><br />
+
+						<a href="/shop/product_list.jsp" target="_blank" class="fin">상품 리스트 <span class="enddate">2016-02-03</span></a><br />
+						<a href="/shop/product_detail.jsp" target="_blank" class="fin">상품 상세 <span class="enddate">2016-02-03</span></a><br /><br />
+
+						<a href="/shop/culture_list.jsp" target="_blank" class="fin">컬처 리스트 <span class="enddate">2016-02-22</span></a><br />
+						<a href="/shop/culture_detail.jsp" target="_blank" class="fin">컬처 상세 <span class="enddate">2016-02-22</span></a><br /><br />
+
+						<a href="/shop/story_intro.jsp" target="_blank" class="fin">스토리 인트로<span class="enddate"><span class="txt_blue">NEW</span> 2016-02-23</span></a><br />
+						<a href="/shop/story_list.jsp" target="_blank" class="fin">스토리 리스트 <span class="enddate"><span class="txt_blue">NEW</span> 2016-02-23</span></a><br /><br />
+
+						<a href="/shop/product_search_result.jsp" target="_blank" class="fin">상품 검색결과 <span class="enddate">2016-03-10</span></a><br />
+						<a href="/shop/culture_search_result.jsp" target="_blank" class="fin">컬처 검색결과 <span class="enddate">2016-03-10</span></a><br />
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar4">
+				<dl>
+					<dt>Member</dt>
+					<dd>
+						<a href="/membership/login.jsp" target="_blank" class="fin">로그인 <span class="enddate"><span class="txt_blue"></span>2016-01-20</span></a><br />
+						<a href="/membership/password_alert.jsp" target="_blank" class="fin">비밀번호 변경 / 비밀번호 팝업<span class="enddate">2016-01-20</span></a><br />
+						<a href="/membership/inquiry.jsp?inquiryID" target="_blank" class="fin">아이디 / 비밀번호 찾기 <span class="enddate">2016-01-21</span></a><br />
+						<a href="/membership/inquiry_result_id.jsp" target="_blank" class="fin">아이디 찾기 결과 <span class="enddate">2016-01-21</span></a><br />
+						<a href="/membership/inquiry_result_pw.jsp" target="_blank" class="fin">비밀번호 찾기 결과 / 휴면계정 <span class="enddate">2016-01-21</span></a><br />
+						<a href="/membership/join_step1.jsp" target="_blank" class="fin">회원가입 - 약관동의<span class="enddate">2016-01-22</span></a><br />
+						<a href="/membership/join_step2_1.jsp" target="_blank" class="fin">회원가입 - 본인인증<span class="enddate">2016-01-22</span></a><br />
+						<a href="/membership/join_step2_2.jsp" target="_blank" class="fin">회원가입 - 정보입력<span class="enddate">2016-01-22</span></a><br />
+						<a href="/membership/join_step3.jsp" target="_blank" class="fin">회원가입 - 완료<span class="enddate">2016-01-22</span></a><br />
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar0">
+				<dl>
+					<dt>Footer</dt>
+					<dd>
+						<a href="/etc/service.jsp" target="_blank" class="fin">이용약관<span class="enddate"><span class="txt_blue">NEW</span> 2016-04-15</span></a><br />
+						<a href="/etc/privacy.jsp" target="_blank" class="fin">개인정보취급방침<span class="enddate"><span class="txt_blue">NEW</span> 2016-04-15</span></a><br />
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar1">
+				<dl>
+					<dt>error</dt>
+					<dd>
+						<a href="/error_inspect.jsp" target="_blank" class="fin">시스템점검<span class="enddate">2016-03-24</span></a><br />
+						<a href="/error_null.jsp" target="_blank" class="fin">없음<span class="enddate">2016-03-24</span></a><br />
+						<a href="/error_system.jsp" target="_blank" class="fin">시스템에러<span class="enddate">2016-03-24</span></a><br />
+						<a href="/error_coupon.jsp" target="_blank" class="fin">쿠폰에러<span class="enddate">2016-03-24</span></a><br />
+					</dd>
+				</dl>
+			</li>
+
+		</ul>
+	</div>
+</div>
+</body>
+</html>

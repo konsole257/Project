@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+/**
+ * --------------------------------
+ * avenueCom Main CSS
+ * --------------------------------
+ */
+.main .main_visual_wrap {position:relative;padding-top:140px;min-width: 1080px;}
+.main .main_visual_wrap #main_visual { position:relative; height:420px; overflow:hidden; }
+.main .main_visual_wrap #main_visual .img { position:absolute; top:0; left:0; width:100%; height:100%; overflow:hidden; }
+.main .main_visual_wrap #main_visual .img:not(:first-child) { left:100%; }
+.main .main_visual_wrap #main_visual .img img { position:absolute; top:0; left:50%; width:1920px; margin-left:-960px; }
+.main .main_visual_wrap #main_visual .img figcaption { display:block;position:absolute;top:-9999px;left:-9999px;width:1px;height:1px;line-height:0;overflow:hidden;font-size:0;text-indent:-9999px; }
+.main .main_visual_wrap .pic_list { position:absolute; z-index:10; bottom:25px; left:0; }
+.main .main_visual_wrap .pic_list span { display:inline-block; vertical-align:bottom; margin-left:5px; background:rgba(53,53,53,0.5) !important; }
+.main .main_visual_wrap .pic_list span a { display:block; width:25px; height:4px; font-size:0; text-indent:-9999px; }
+.main .main_visual_wrap .pic_list span:first-child a { margin-left:0; }
+.main .main_visual_wrap .pic_list span a.on { background-color:#ff6700; }
+.main .main_visual_wrap .btn_area { position:absolute; z-index:10; top:330px; left:50%; width:1080px; margin-left:-540px; }
+.main .main_visual_wrap button { position:absolute; width:20px; height:40px; text-indent:-9999px; background:url(/avenueCom/images/main/sp_main.png) no-repeat 0 0; }
+.main .main_visual_wrap button.btn_prev { left:0; background-position:-96px 0; }
+.main .main_visual_wrap button.btn_next { right:0; background-position:-118px 0; }
+
+.main .notice_area { width:1080px; margin:0 auto; padding:30px 0; box-sizing:border-box; overflow:hidden; }
+.main .notice_area h2 a { float:left; position:relative; font-family:"HelveticaNeue"; font-weight:800; font-size:20px; letter-spacing:-0.02em; margin-right:44px; }
+.main .notice_area h2 a:after { display:inline-block; content:""; position:absolute; top:3px; right:-19px; width:13px; height:13px; background:url(/avenueCom/images/main/sp_main.png) no-repeat -145px 0; }
+.main .notice_area li { float:left; position:relative; width:440px; font-size:15px; color:#707070; }
+.main .notice_area li:before { display:inline-block; content:"-" }
+.main .notice_area li:last-child { padding-left:95px; }
+.main .notice_area li:last-child:after { display:block; content:""; position:absolute; top:-4px; left:0; width:1px; height:30px; background:#e5e5e5; }
+.main .notice_area li .subject { display:inline-block; width:320px; height:20px; }
+.main .notice_area li .subject:hover { text-decoration:underline; }
+.main .notice_area li time { color:#bbbbbb; }
+
+.main .schedule_area { position:relative; padding:50px 0; border-top:1px solid #e5e5e5; overflow:hidden; }
+.main .schedule_area header { text-align:center; }
+.main .schedule_area header h2 { display:inline-block; font-family:"HelveticaNeue"; font-weight:800; font-size:42px; }
+.main .schedule_area header a { font-size:12px; margin-left:10px; }
+.main .schedule_area ul { position:relative; width:960px; height:282px; margin:30px auto 0; }
+/*.main .schedule_area ul:before { display:block; content:""; position:absolute; z-index:1; top:0; left:-465px; width:420px; height:282px; background:rgba(255, 255, 255, 0.8) }
+.main .schedule_area ul:after { display:block; content:""; position:absolute; z-index:1; top:0; right:-465px; width:420px; height:282px; background:rgba(255, 255, 255, 0.8) }*/
+.main .schedule_area ul li { position:absolute; top:0; left:0; width:210px; height:282px; }
+.main .schedule_area ul li img { width:210px; height:150px; }
+.main .schedule_area ul .subject_area { height:132px; padding:17px 14px; border-left:1px solid #e5e5e5; border-right:1px solid #e5e5e5; border-bottom:1px solid #bbbbbb; background:#fafafa; box-sizing:border-box; }
+.main .schedule_area ul .subject { display:block; height:66px; font-size:18px; line-height:22px; }
+.main .schedule_area ul .date { display:block; font-size:13px; color:#707070; line-height:19px; margin-top:13px; }
+.main .schedule_area .btn_area { position:absolute; top:225px; left:50%; width:1080px; margin-left:-540px; }
+.main .schedule_area button { position:absolute; width:14px; height:25px; text-indent:-9999px; background:url(/avenueCom/images/main/sp_main.png) no-repeat 0 0; }
+.main .schedule_area button.btn_prev { left:20px; background-position:-96px -42px; }
+.main .schedule_area button.btn_next { right:20px; background-position:-112px -42px; }
+
+.main .dodream_area { width:1080px; margin:0 auto; padding:50px 0; border-top:1px solid #e5e5e5; overflow:hidden; }
+.main .dodream_area .tit { font-family:"HelveticaNeue"; font-weight:800; font-size:42px; text-align:center; color:#000; }
+.main .dodream_area .txt { font-size:24px; text-align:center; margin-top:20px; }
+.main .dodream_area > ul { margin-top:30px; border:1px solid #e5e5e5; border-right:none; overflow:hidden; }
+.main .dodream_area > ul > li { float:left; height:248px; }
+.main .dodream_area > ul > li:not(.exclusive) a { display:block; position:relative; width:235px; height:100%; font-size:20px; line-height:24px; padding:30px 27px 27px 25px; border-left:1px solid #e5e5e5; box-sizing:border-box; }
+.main .dodream_area > ul > li:first-child a { border-left:none; }
+.main .dodream_area > ul > li:not(.exclusive) span { display:block; width:110px; word-break:keep-all; }
+.main .dodream_area > ul > li:not(.exclusive) .arrow { display:block; position:relative; transition-duration:0.3s; width:28px; height:11px; text-align:right; margin-top:16px; }
+.main .dodream_area > ul > li:not(.exclusive) .arrow:before { content:""; position:absolute; top:50%; left:0; transform:translateY(-50%);  width:100%; height:1px; background:#595959; }
+.main .dodream_area > ul > li:not(.exclusive) a:hover .arrow { width:48px; }
+.main .dodream_area > ul > li:not(.exclusive) .img { position:absolute; bottom:27px; right:27px; }
+.main .dodream_area .exclusive { width:139px; font-size:20px; color:#fff; padding:30px 13px 23px; background:#000; box-sizing:border-box; }
+.main .dodream_area .exclusive span { display:block; width:82px; line-height:24px; word-break:keep-all; }
+.main .dodream_area .exclusive span:after { content:""; display:block; width:28px; height:1px; margin-top:18px; background:#fff; }
+.main .dodream_area .exclusive ul { width:90px; margin-top:25px; }
+.main .dodream_area .exclusive li { line-height:12px; margin-top:7px; }
+.main .dodream_area .exclusive li:first-child { margin-top:0; }
+.main .dodream_area .exclusive a { font-size:12px;  }
+.main .dodream_area .exclusive a:hover { text-decoration:underline; }
+.main .dodream_area .exclusive a img { vertical-align:middle; margin-left:3px; }
+
+
+.main .stand_area { width:1080px; margin:0 auto; padding:50px 0; border-top:1px solid #e5e5e5; overflow:hidden; }
+.main .stand_area header { float:left; position:relative; z-index:1; width:100px; height:280px; padding:20px 20px; background:#000000; box-sizing:border-box; }
+.main .stand_area header h2 { font-family:"HelveticaNeue"; font-weight:800; font-size:18px; color:#ffffff; }
+.main .stand_area header p { font-size:12px; line-height:14px; color:#bbbbbb; }
+.main .stand_area header p:before { display:block; content:""; width:20px; height:1px; margin:25px 0 25px; border-top:1px solid #f4f4f4; }
+.main .stand_area header .btn_location { display:block; width:72px; height:72px; text-indent:-9999px; margin:30px 0 0 -6px; background:url(/avenueCom/images/main/sp_main.png) no-repeat -167px -162px; }
+.main .stand_area > article,
+.main .stand_area > div { float:left; }
+.main .stand_area article { margin-left:-1px; }
+.main .stand_area > article:first-of-type a { border-left:0; }
+.main .stand_area > div article:last-child { margin-top:-1px; }
+.main .stand_area article a { display:block; position:relative; width:141px; height:280px; padding:25px 15px; border:1px solid #e5e5e5; box-sizing:border-box; }
+.main .stand_area article.top a { padding-top:25px; }
+.main .stand_area article.right a { padding-left:160px; }
+.main .stand_area article.right.dodream a { padding-left:125px; }
+.main .stand_area article.bottom a { padding-top:165px; }
+.main .stand_area article.left a { padding-left:25px; }
+.main .stand_area > div article a { width:281px; height:140px; }
+.main .stand_area > div article:last-child a { height:141px; }
+.main .stand_area article.top a img { position:absolute; bottom:15px; right:15px; }
+.main .stand_area article.right a img { position:absolute; top:15px; left:15px; }
+.main .stand_area article.bottom a img { position:absolute; top:15px; right:15px; }
+.main .stand_area article.left a img { position:absolute; top:15px; right:15px; }
+.main .stand_area article a:hover { z-index:1; border-color:#000000; }
+.main .stand_area article h3 { width:111px; font-family:"HelveticaNeue"; font-weight:800; font-size:14px; letter-spacing:-0.03em; color:#cccccc; }
+.main .stand_area article h3 span { display:inline-block; height:13px; border-bottom:2px solid #cccccc; }
+.main .stand_area article p { width:111px; font-size:16px; line-height:18px; letter-spacing:-0.08em; color:#000000; margin-top:15px; }
+.main .stand_area article.dodream p { width:146px; }
+.main .stand_area article strong { display:block; width:111px; font-size:12px; line-height:16px; color:#707070; margin-top:8px; }
+.main .stand_area article.dodream strong { width:146px; }
+
+.main .culture_area {padding:50px 0;min-width: 1080px;background:#f4f4f4;}
+.main .culture_area p { font-size:24px; text-align:center; }
+.main .culture_area p:before { display:block; content:""; width:20px; height:3px; margin:0 auto 10px; background:#000000; }
+.main .culture_area > a { display:block; width:1080px; height:110px; text-indent:-9999px; margin:15px auto 0; background:url(/avenueCom/images/main/main_culture_link.jpg) no-repeat 0 0; }
+.main .culture_area ul { width:1080px; margin:30px auto 0; overflow:hidden; }
+.main .culture_area li { float:left; margin-left:15px; }
+.main .culture_area li:first-child { margin-left:0; }
+.main .culture_area li a { display:block; position:relative; width:350px; height:350px; }
+.main .culture_area li a img { position:absolute; }
+.main .culture_area li a .ov { z-index:0; }
+.main .culture_area li a .off { z-index:1; }
+.main .culture_area li a:hover .off { z-index:0; }
+.main .culture_area li a:hover .ov { z-index:1; }
+
+
+.main .sns { padding:55px 0 80px; }
+.main .sns > div { width:1080px; margin:0 auto; overflow:hidden; }
+.main .sns article { float:left; width:255px; margin-left:20px; }
+.main .sns article:first-child { margin-left:0; }
+.main .sns h3 { display:inline-block; font-family:"HelveticaNeue"; font-weight:800; font-size:44px; letter-spacing:-0.02em; margin-bottom:13px; }
+.main .sns .subject { display:inline-block; font-size:13px; line-height:19px; letter-spacing:-0.05em; margin:21px 0 6px; }
+.main .sns a { display:block; }
+.main .sns .btn_more { font-size:12px; color:#cacaca; }
+.main .sns .btn_more:after { display:inline-block; content:""; width:3px; height:5px; vertical-align:middle; margin-left:5px; background:url(/avenueCom/images/main/sp_main.png) no-repeat -140px 0; }
