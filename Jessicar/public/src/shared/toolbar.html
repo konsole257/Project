@@ -1,0 +1,50 @@
+<aside id="toolbar">
+    {{include('./components/skip.html', {"prop": {"id": "toolbar-end", "text": "툴바 건너뛰기"}})}}
+
+    <h2 class="hide">툴바</h2>
+
+    <ul>
+        <li class="toolbar-home">
+            <a href="/" class="{{if (context.prop.page === 'home') { active }}}"><!-- 버튼 활성화 class="active" -->
+                <div>
+                    <span class="toolbar-icon"></span>
+                    홈
+                </div>
+            </a>
+        </li>
+        <li class="toolbar-search">
+            <a href="/search/" class="{{if (context.prop.page === 'search') { active }}}">
+                <div>
+                    <span class="toolbar-icon"></span>
+                    찾기
+                </div>
+            </a>
+        </li>
+        <li class="toolbar-bookmark">
+            <a href="/bookmark/" class="{{if (context.prop.page === 'bookmark') { active }}}">
+                <div>
+                    <span class="toolbar-icon"></span>
+                    찜한차
+                </div>
+            </a>
+        </li>
+        <li class="toolbar-lately">
+            <a href="/lately/" class="{{if (context.prop.page === 'lately') { active }}}">
+                <div>
+                    <span class="toolbar-icon"></span>
+                    최근 본 차량
+                </div>
+            </a>
+        </li>
+        <li class="toolbar-more">
+            <a href="/more/" class="{{if (context.prop.page === 'more') { active }}}">
+                <div>
+                    <span class="toolbar-icon"></span>
+                    더보기
+                </div>
+            </a>
+        </li>
+    </ul>
+</aside>
+
+<hr id="toolbar-end">

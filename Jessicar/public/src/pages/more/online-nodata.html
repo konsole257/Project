@@ -1,0 +1,23 @@
+<div class="header">
+    <h2 class="tit">{{prop.pageName}}</h2>
+    <button type="button" class="btn-mute btn-close">뒤로가기</button>
+</div>
+
+<div id="contents" class="{{prop.page}}">
+    <div class="tab-menu">
+        <!-- <a href="{{dirRoot}}/more/call.html" class="menu">전화문의</a> --><!-- 2020.08.26 : 삭제 -->
+        <a href="{{dirRoot}}/more/online.html" class="menu active">온라인문의</a><!-- 버튼 활성화 class="active" -->
+        <a href="{{dirRoot}}/more/request.html" class="menu">방문판매신청</a>
+    </div>
+
+    <div class="nodata">
+        <p>
+            문의 내역이 없어요.<br>
+            고객님께 적합한 차량을 추천해 드릴까요?
+        </p>
+        <div class="btn-area">
+            <button type="button" class="btn-medium-stroke-black">차량검색</button>
+            <button type="button" class="btn-medium-fill-black">딜러 문의</button>
+        </div>
+    </div>
+</div>

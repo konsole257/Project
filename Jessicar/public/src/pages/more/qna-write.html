@@ -1,0 +1,80 @@
+<div class="header">
+    <h2 class="tit">{{prop.pageName}}</h2>
+    <button type="button" class="btn-mute btn-close">뒤로가기</button>
+</div>
+
+<div id="contents" class="{{prop.page}}">
+    <div class="tab-menu">
+        <a href="{{dirRoot}}/more/qna.html" class="menu">1:1문의내역</a>
+        <a href="{{dirRoot}}/more/qna-write.html" class="menu active">1:1문의하기</a><!-- 버튼 활성화 class="active" -->
+    </div>
+
+    <div class="write-area">
+        <div class="txt-area">
+            <p><span class="division-horizon-line"><span>상담 운영 시간</span><span>10:00 ~ 18:00 (주말, 공휴일 제외)</span></span></p>
+            <p>영업일 기준 17시 이전 접수 건에 대해서만 24시간 이내 답변 가능합니다. </p>
+            <p>욕설, 비방, 도배성 등의 문의는 답변을 하지 않습니다.</p>
+        </div>
+
+        <div class="form">
+            <form>
+                <fielset>
+                    <legend class="hide">1:1문의 내용 작성</legend>
+
+                    <span class="select">
+                    	<select title="옵션 선택">
+                    		<option>카테고리를 선택해 주세요.</option>
+                    		<option>서비스이용</option>
+                    		<option>회원</option>
+                            <option>제휴문의</option>
+                            <option>기타</option>
+                    	</select>
+                    </span>
+
+                    <div class="input-subject">
+                        <input type="text" title="제목 입력" placeholder="제목">
+                    </div>
+
+                    <div class="input-txt">
+                        <textarea placeholder="문의 내용을 상세하게 작성해 주세요."></textarea>
+                    </div>
+
+                    <!-- 첨부파일 영역 // -->
+                    <div class="file-area">
+                        <span class="file">
+                			<span class="btn-mute-fill-gray btn-file" onclick="fn.filePreviewBtn(this);">파일첨부</span>
+                			<input type="file" title="파일찾기" onchange="fn.filePreview(this);" accept=".jpg">
+                			<input type="file" title="파일찾기" onchange="fn.filePreview(this);" accept=".jpg">
+                			<input type="file" title="파일찾기" onchange="fn.filePreview(this);" accept=".jpg">
+                		</span>
+
+                        <div class="txt-area">
+                            <p>첨부파일은 최대 3개, 10MB까지 등록 가능합니다.</p>
+                            <p>파일 형식은 JPG만 가능합니다.</p>
+                        </div>
+                    </div>
+                    <!-- // 첨부파일 영역 -->
+
+                    <div class="btn-area">
+                        <!--
+                            팝업 호출 function
+                            <a href="#팝업 ID값" onclick="fn.popupOpen(this);">
+                         -->
+                        <a href="#popup-qna-write-result" class="btn-medium-fill-blue btn-send" onclick="fn.popupOpen(this);"><b>보내기</b></a>
+                    </div>
+                </fielset>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- 팝업 : 1:1문의하기 결과 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-qna-write-result",
+        "class": "popup-qna-write-result",
+        "type": "alert",
+        "content": "./pages/popup/qna-write-result.html"
+    }
+})}}
+<!-- // 팝업 : 1:1문의하기 결과 -->

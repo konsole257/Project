@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" type="text/css" href="./resources/css/lib/normalize.min.css" />
+	<link rel="stylesheet" type="text/css" href="./resources/css/lib/jquery.scrollbar.css" />
+	<link rel="stylesheet" type="text/css" href="./resources/css/lib/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="./resources/css/common.css" />
+
+	<title>Jessicar Style Guide</title>
+
+	<style>
+		#wrap { height:auto; }
+		#container { min-height:auto; height:auto; padding:0; overflow:hidden; }
+		#contents { height:auto; padding:0; }
+		.htmlprocess-tit { width:1220px; font-family:Malgun gothic,'맑은고딕'; font-size:16px; background:#000; color:#fff; margin:0 auto; font-weight:bold; padding:5px 10px; box-sizing:border-box; }
+		.guide-wrap { width:1220px; margin:0 auto; padding:10px 0 20px !important;  }
+		.guide-wrap .htmlprocess-tit2 { font-family:Malgun gothic,'맑은고딕'; font-size:16px; color:#000; padding:5px 10px; margin:40px 0 20px; border-top:1px solid #000; background:#f2f2f2; }
+		.guide-wrap .htmlprocess-tit2:first-of-type { margin-top:0; }
+		.guide-wrap .guide {padding:10px; width:100%; background:#fff; box-sizing:border-box;}
+		code { display:block; position:relative; font-size:14px; letter-spacing:0; line-height:20px; margin-top:10px; padding:10px 10px 10px 30px; border:1px solid #777; background:#fafafa; }
+		code:before { display:block; content:""; position:absolute; left:0; top:0; width:20px; height:100%; background:#777; }
+		pre { font-family:Malgun gothic,'맑은고딕'; }
+		.guide-menu { position:fixed; z-index:1; top:200px; right:50px; width:150px; }
+		.guide-menu a { display:block; font-size:13px; line-height:40px; color:blue; padding:0 20px; border-bottom:1px solid #ccc; }
+		.guide-menu a:hover { background:#eee; }
+		.guide-menu span { display:block;  font-weight:bold; line-height:40px; padding:0 20px; background:#ddd; }
+		/**/
+
+	</style>
+</head>
+<body class="sub">
+
+	<div class="guide-menu">
+		<a href="#form">Form</a>
+		<a href="#button">Button</a>
+		<a href="#rating">Rating</a>
+		<a href="#table">Table</a>
+		<a href="#bbs">BBS</a>
+		<a href="#pagination">Pagination</a>
+	</div>
+
+	<!-- wrap -->
+	<main id="wrap">
+		<!-- contents // -->
+		<div id="container">
+			<div>
+				<div id="contents">
+
+<!-- Form // -->
+<h1 class="htmlprocess-tit" id="form">Form</h1>
+<section class="guide-wrap">
+	<div class="guide">
+
+		<!-- input // -->
+		<h2 class="htmlprocess-tit2">input</h2>
+		<div>
+			<input type="text" placeholder="text" title="입력">
+			<input type="text" placeholder="search" title="검색">
+			<input type="number" placeholder="number" title="숫자 입력">
+			<input type="password" placeholder="password" title="패스워드 입력">
+			<br>
+			<input type="text" placeholder="required" title="입력" required>
+			<input type="text" placeholder="readonly" title="입력" readonly>
+			<input type="text" placeholder="disabled" title="입력" disabled>
+		</div>
+
+		<code>
+			<pre>
+&lt;input type="text" placeholder="text" title="입력"&gt;
+&lt;input type="number" placeholder="number" title="숫자 입력"&gt;
+&lt;input type="password" placeholder="password" title="패스워드 입력"&gt;
+
+&lt;input type="text" placeholder="required" title="입력" required&gt;
+&lt;input type="text" placeholder="readonly" title="입력" readonly&gt;
+&lt;input type="text" placeholder="disabled" title="입력" disabled&gt;
+			</pre>
+		</code>
+		<!-- // input -->
+
+		<!-- radio // -->
+		<h2 class="htmlprocess-tit2">radio</h2>
+		<div>
+			<label><input type="radio" checked name="radio1"><span>Radio</span></label>
+			<label><input type="radio" name="radio1"><span>Radio</span></label>
+		</div>
+
+		<code>
+			<pre>
+&lt;label&gt;&lt;input type="radio" checked name="radio1"&gt;&lt;span&gt;Radio&lt;/span&gt;&lt;/label&gt;
+&lt;label&gt;&lt;input type="radio" name="radio1"&gt;&lt;span&gt;Radio&lt;/span&gt;&lt;/label&gt;
+			</pre>
+		</code>
+		<!-- // radio -->
+
+		<!-- checkbox // -->
+		<h2 class="htmlprocess-tit2">checkbox type1</h2>
+		<div>
+			<label><input type="checkbox" class="type1" checked><span>checkbox</span></label>
+			<label><input type="checkbox" class="type1"><span>checkbox</span></label>
+		</div>
+
+		<code>
+			<pre>
+&lt;label&gt;&lt;input type="checkbox" checked&gt;&lt;span&gt;checkbox&lt;/span&gt;&lt;/label&gt;
+&lt;label&gt;&lt;input type="checkbox" &gt;&lt;span&gt;checkbox&lt;/span&gt;&lt;/label&gt;
+			</pre>
+		</code>
+
+		<h2 class="htmlprocess-tit2">checkbox type2</h2>
+		<div>
+			<label><input type="checkbox" class="type2" checked><span></span></label>
+			<label><input type="checkbox" class="type2"><span></span></label>
+			<label><input type="checkbox" class="type2" disabled><span></span></label>
+		</div>
+
+		<code>
+			<pre>
+&lt;label&gt;&lt;input type="checkbox" class="type2" checked&gt;&lt;span&gt;&lt;/span&gt;&lt;/label&gt;
+&lt;label&gt;&lt;input type="checkbox" class="type2"&gt;&lt;span&gt;&lt;/span&gt;&lt;/label&gt;
+&lt;label&gt;&lt;input type="checkbox" class="type2" disabled&gt;&lt;span&gt;&lt;/span&gt;&lt;/label&gt;
+			</pre>
+		</code>
+		<!-- // checkbox -->
+
+		<!-- textarea // -->
+		<h2 class="htmlprocess-tit2">textarea</h2>
+
+		<textarea placeholder="textarea" title="입력" maxlength="300"></textarea>
+		<textarea placeholder="required" title="입력" maxlength="300" required></textarea>
+		<br>
+		<textarea placeholder="readonly" title="입력" maxlength="300" readonly></textarea>
+		<textarea placeholder="disabled" title="입력" maxlength="300" disabled></textarea>
+
+		<code>
+			<pre>
+&lt;textarea placeholder="textarea" title="입력" maxlength="300"&gt;&lt;/textarea&gt;
+&lt;textarea placeholder="required" title="입력" maxlength="300" required&gt;&lt;/textarea&gt;
+&lt;textarea placeholder="readonly" title="입력" maxlength="300" readonly&gt;&lt;/textarea&gt;
+&lt;textarea placeholder="readonly" title="입력" maxlength="300" disabled&gt;&lt;/textarea&gt;
+			</pre>
+		</code>
+		<!-- // textarea -->
+
+		<!-- select // -->
+		<h2 class="htmlprocess-tit2">select</h2>
+
+		<label class="select">
+			<select title="옵션 선택">
+				<option>option1</option>
+				<option>option2</option>
+				<option>option3</option>
+			</select>
+		</label>
+		<br>
+		<br>
+
+		<code>
+			<pre>
+&lt;span class="select type1"&gt;
+	&lt;select title="옵션 선택"&gt;
+		&lt;option>option1&lt;/option&gt;
+		&lt;option>option2&lt;/option&gt;
+		&lt;option>option3&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/span&gt;
+			</pre>
+		</code>
+		<!-- // select -->
+	</div>
+</section>
+<!-- // Form -->
+
+<!-- Button // -->
+<h1 class="htmlprocess-tit" id="button">Button</h1>
+<section class="guide-wrap">
+	<div class="guide">
+		<h2 class="htmlprocess-tit2">Default</h2>
+		<div>
+			<button type="button" class="btn-fill-blue">button</button>
+			<button type="button" class="btn-stroke-black">button</button>
+		</div>
+
+		<code>
+			<pre>
+
+			</pre>
+		</code>
+	</div>
+</section>
+<!-- // Button -->
+
+<!-- car // -->
+<h1 class="htmlprocess-tit" id="button">Car</h1>
+<section class="guide-wrap">
+	<div class="guide">
+		<h2 class="htmlprocess-tit2">horizon</h2>
+		<a href="#" style="display:block; width:360px">
+			<div class="car-horizon">
+				<label>
+					<input type="checkbox" class="btn-bookmark" checked><!-- 찜한차일경우 checked -->
+					<span>찜</span>
+				</label>
+
+				<div class="pic-area">
+					<figure class="pic-dealer">
+						<img src="{{dirRoot}}/resources/images/temp/temp-dealer100x100.png" alt="" class="img">
+					</figure>
+
+					<figure class="pic-car">
+						<img src="{{dirRoot}}/resources/images/temp/temp-car438x300.jpg" alt="" class="img">
+					</figure>
+				</div>
+				<div class="car-info">
+					<b class="name">BMW 5시리즈 (F10) 520d</b>
+					<div class="data division-horizon-bullet">
+						<span>16년 11월식(17년형)</span>
+						<span>71,221km</span>
+						<span>가솔린</span>
+					</div>
+					<div class="margin">마진율 -10%</div>
+					<b class="price">판매가  2,350 만원</b>
+				</div>
+			</div>
+		</a>
+
+		<h2 class="htmlprocess-tit2">vertical</h2>
+		<a href="#" style="display:block; width:360px">
+			<div class="car-vertical">
+				<label>
+					<input type="checkbox" class="btn-bookmark" checked><!-- 찜한차일경우 checked -->
+					<span>찜</span>
+				</label>
+
+				<div class="pic-area">
+					<figure class="pic-dealer">
+						<img src="{{dirRoot}}/resources/images/temp/temp-dealer100x100.png" alt="" class="img">
+					</figure>
+
+					<figure class="pic-car">
+						<img src="{{dirRoot}}/resources/images/temp/temp-car438x300.jpg" alt="" class="img">
+					</figure>
+				</div>
+				<div class="car-info">
+					<b class="name">BMW 5시리즈 (F10) 520d</b>
+					<div class="data division-horizon-bullet">
+						<span>16년 11월식(17년형)</span>
+						<span>71,221km</span>
+						<span>가솔린</span>
+					</div>
+					<div class="margin">마진율 -10%</div>
+					<b class="price">판매가  2,350 만원</b>
+				</div>
+			</div>
+		</a>
+
+		<code>
+			<pre>
+&lt;!-- horizon --&gt;
+&lt;a href="#"&gt;
+	&lt;div class="car-horizon"&gt;
+		&lt;label&gt;
+			&lt;input type="checkbox" class="btn-bookmark" checked&gt;&lt;!-- 찜한차일경우 checked --&gt;
+			&lt;span&gt;찜&lt;/span&gt;
+		&lt;/label&gt;
+
+		&lt;div class="pic-area"&gt;
+			&lt;figure class="pic-dealer"&gt;
+				&lt;img src="{{dirRoot}}/resources/images/temp/temp-dealer100x100.png" alt="" class="img"&gt;
+			&lt;/figure&gt;
+
+			&lt;figure class="pic-car"&gt;
+				&lt;img src="{{dirRoot}}/resources/images/temp/temp-car438x300.jpg" alt="" class="img"&gt;
+			&lt;/figure&gt;
+		&lt;/div&gt;
+		&lt;div class="car-info"&gt;
+			&lt;b class="name"&gt;BMW 5시리즈 (F10) 520d&lt;/b&gt;
+			&lt;div class="data division-horizon-bullet"&gt;
+				&lt;span&gt;16년 11월식(17년형)&lt;/span&gt;
+				&lt;span&gt;71,221km&lt;/span&gt;
+				&lt;span&gt;가솔린&lt;/span&gt;
+			&lt;/div&gt;
+			&lt;div class="margin"&gt;마진율 -10%&lt;/div&gt;
+			&lt;b class="price"&gt;판매가  2,350 만원&lt;/b&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/a&gt;
+
+&lt;!-- vertical --&gt;
+&lt;a href="#"&gt;
+	&lt;div class="car-vertical"&gt;
+		&lt;label&gt;
+			&lt;input type="checkbox" class="btn-bookmark" checked&gt;&lt;!-- 찜한차일경우 checked --&gt;
+			&lt;span&gt;찜&lt;/span&gt;
+		&lt;/label&gt;
+
+		&lt;div class="pic-area"&gt;
+			&lt;figure class="pic-dealer"&gt;
+				&lt;img src="{{dirRoot}}/resources/images/temp/temp-dealer100x100.png" alt="" class="img"&gt;
+			&lt;/figure&gt;
+
+			&lt;figure class="pic-car"&gt;
+				&lt;img src="{{dirRoot}}/resources/images/temp/temp-car438x300.jpg" alt="" class="img"&gt;
+			&lt;/figure&gt;
+		&lt;/div&gt;
+		&lt;div class="car-info"&gt;
+			&lt;b class="name"&gt;BMW 5시리즈 (F10) 520d&lt;/b&gt;
+			&lt;div class="data division-horizon-bullet"&gt;
+				&lt;span&gt;16년 11월식(17년형)&lt;/span&gt;
+				&lt;span&gt;71,221km&lt;/span&gt;
+				&lt;span&gt;가솔린&lt;/span&gt;
+			&lt;/div&gt;
+			&lt;div class="margin"&gt;마진율 -10%&lt;/div&gt;
+			&lt;b class="price"&gt;판매가  2,350 만원&lt;/b&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/a&gt;
+			</pre>
+		</code>
+	</div>
+</section>
+<!-- // car -->
+
+				</div>
+			</div>
+		</div>
+		<!-- //contents -->
+
+	</main>
+	<!-- //wrap -->
+
+	<script src="@@common/resources/js/lib/jquery-3.3.1.min.js"></script>
+	<script src="@@common/resources/js/lib/jquery-ui.min.js"></script>
+	<script src="@@common/resources/js/lib/jquery.scrollbar.min.js"></script>
+	<script src="@@common/resources/js/lib/swiper.min.js"></script>
+
+	<script src="@@common/resources/js/function.js"></script>
+	<script src="@@common/resources/js/airvil.js"></script>
+
+</body>
+</html>

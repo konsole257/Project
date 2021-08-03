@@ -1,0 +1,96 @@
+<div class="header">
+    <h2 class="tit">{{prop.pageName}}</h2>
+    <button type="button" class="btn-mute btn-close">뒤로가기</button>
+</div>
+
+<div id="contents" class="{{prop.page}}">
+    <ul class="list-area">
+        <!-- 반복영역 // -->
+        <li>
+            <a href="#popup-notice" onclick="fn.popupOpen(this);">
+                [공지] 제시카 앱이 리뉴얼 되었습니다
+                <span class="data">2020.05.31</span>
+            </a>
+        </li>
+        <!-- // 반복영역 -->
+
+        <li>
+            <a href="#popup-notice" onclick="fn.popupOpen(this);">
+                [공지] 제시카 앱이 리뉴얼 되었습니다
+                <span class="data">2020.05.31</span>
+            </a>
+        </li>
+        <li>
+            <a href="#popup-notice" onclick="fn.popupOpen(this);">
+                [공지] 제시카 앱이 리뉴얼 되었습니다
+                <span class="data">2020.05.31</span>
+            </a>
+        </li>
+        <li>
+            <a href="#popup-notice" onclick="fn.popupOpen(this);">
+                [공지] 제시카 앱이 리뉴얼 되었습니다
+                <span class="data">2020.05.31</span>
+            </a>
+        </li>
+        <li>
+            <a href="#popup-notice" onclick="fn.popupOpen(this);">
+                [공지] 제시카 앱이 리뉴얼 되었습니다
+                <span class="data">2020.05.31</span>
+            </a>
+        </li>
+        <li>
+            <a href="#popup-notice" onclick="fn.popupOpen(this);">
+                [공지] 제시카 앱이 리뉴얼 되었습니다
+                <span class="data">2020.05.31</span>
+            </a>
+        </li>
+        <li>
+            <a href="#popup-notice" onclick="fn.popupOpen(this);">
+                [공지] 제시카 앱이 리뉴얼 되었습니다
+                <span class="data">2020.05.31</span>
+            </a>
+        </li>
+        <li>
+            <a href="#popup-notice" onclick="fn.popupOpen(this);">
+                [공지] 제시카 앱이 리뉴얼 되었습니다
+                <span class="data">2020.05.31</span>
+            </a>
+        </li>
+        <li>
+            <a href="#popup-notice" onclick="fn.popupOpen(this);">
+                [공지] 제시카 앱이 리뉴얼 되었습니다
+                <span class="data">2020.05.31</span>
+            </a>
+        </li>
+        <li>
+            <a href="#popup-notice" onclick="fn.popupOpen(this);">
+                [공지] 제시카 앱이 리뉴얼 되었습니다
+                <span class="data">2020.05.31</span>
+            </a>
+        </li>
+        <li>
+            <a href="#popup-notice" onclick="fn.popupOpen(this);">
+                [공지] 제시카 앱이 리뉴얼 되었습니다
+                <span class="data">2020.05.31</span>
+            </a>
+        </li>
+        <li>
+            <a href="#popup-notice" onclick="fn.popupOpen(this);">
+                [공지] 제시카 앱이 리뉴얼 되었습니다
+                <span class="data">2020.05.31</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!-- 팝업 : 이벤트 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-notice",
+        "class": "popup-notice",
+        "type": "full",
+        "tit": "공지",
+        "content": "./pages/popup/notice.html"
+    }
+})}}
+<!-- // 팝업 : 이벤트 -->

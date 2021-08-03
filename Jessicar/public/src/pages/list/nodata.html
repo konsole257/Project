@@ -1,0 +1,90 @@
+<div class="header">
+    <h2 class="tit">{{prop.pageName}}</h2>
+    <button type="button" class="btn btn-filter" onclick="fn.popupOpen('#popup-filter');">조건필터</button>
+    <button type="button" class="btn-mute btn-close">닫기</button>
+</div>
+
+<div id="contents" class="{{prop.page}}">
+    <!-- 적용필터 목록 // -->
+    <div class="filter-area">
+        {{include('./components/skip.html', {"prop": {"id": "filter-area-end","text": "적용필터 목록 건너뛰기"}})}}
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- 반복영역 // -->
+                <button type="button" class="swiper-slide">50km~40만km</button>
+                <!-- 반복영역 // -->
+
+                <button type="button" class="swiper-slide">디젤</button>
+                <button type="button" class="swiper-slide">루프렉</button>
+                <button type="button" class="swiper-slide">파워핸들</button>
+                <button type="button" class="swiper-slide">50km~40만km</button>
+                <button type="button" class="swiper-slide">50km~40만km</button>
+            </div>
+        </div>
+    </div>
+
+    <hr id="filter-area-end">
+    <!-- // 적용필터 목록 -->
+
+    <!-- 차종 // -->
+    <dl class="division-horizon-line model-area">
+        <dt>차종</dt>
+        <dd>랭글러</dd>
+    </dl>
+    <!-- // 차종 -->
+
+    <!-- 정렬순서 // -->
+    <div class="sort-area">
+        <div class="total">총 <b>9건</b></div>
+
+        <form>
+            <fieldset>
+                <legend class="hide">정렬</legend>
+
+                <label class="select">
+                    <select title="정렬순서 선택">
+                        <option>최근 등록순</option>
+                        <option>낮은 가격순</option>
+                        <option>낮은 주행거리순</option>
+                        <option>최근 연식순</option>
+                    </select>
+                </label>
+            </fieldset>
+        </form>
+    </div>
+    <!-- // 정렬순서 -->
+
+    <!-- 검색결과 목록 // -->
+    <section class="list-area">
+        {{include('./components/skip.html', {"prop": {"id": "special-area-end","text": "검색결과 목록 건너뛰기"}})}}
+
+        <h3 class="hide">검색결과 목록</h3>
+
+        <ul>
+            <li>
+                <p class="nodata">
+                    아쉽게도 아직 입고가 되지 않았네요.<br>
+                    원하는 차량을 딜러에게 문의해 보시겠어요?
+
+                    <button type="button">보증 딜러 찾기</button>
+                </p>
+            </li>
+        </ul>
+    </section>
+
+    <hr id="list-area-end">
+    <!-- // 검색결과 목록 -->
+</div>
+
+<!-- 팝업 : 조건필터 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-filter",
+        "class": "popup-filter",
+        "type": "full",
+        "tit": "조건필터",
+        "content": "./pages/popup/filter.html"
+    }
+})}}
+<!-- // 팝업 : 조건필터 -->

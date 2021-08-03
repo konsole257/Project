@@ -1,0 +1,53 @@
+/**
+* --------------------------------
+* Bookmark CSS
+* --------------------------------
+*/
+#container #contents.bookmark {
+    height:calc(100vh - #{calcu(150px)} - #{calcu(3px)} - #{calcu(27px)});
+    padding-bottom:calcu(150px);
+
+    > section {
+        position:relative;
+        background-color:#fff;
+        overflow:hidden;
+    }
+    .sort-area {
+        background-color:#fff;
+
+        .select {
+            height:calcu(120px);
+            text-align:right;
+
+            .ui-selectmenu-button {
+                line-height:40px;
+                border:none;
+            }
+
+            select {
+                text-align-last:right;
+                direction:rtl;
+                border:none;
+            }
+        }
+    }
+
+    .list-area {
+        height:calc(100% - #{calcu(120px)} - env(safe-area-inset-bottom));
+        padding:calcu(60px) calcu(42px) calcu(70px);
+        border-top:calcu(3px) solid #f3f3f3;
+        overflow-y:scroll;
+
+        li {
+            margin-top:calcu(70px);
+
+            &:first-child {
+                margin-top:0;
+            }
+
+            .nodata {
+                margin-top:calcu(200px);
+            }
+        }
+    }
+}

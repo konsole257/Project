@@ -1,0 +1,25 @@
+<div class="header">
+    <h2 class="tit">{{prop.pageName}}</h2>
+</div>
+
+<div id="contents" class="{{prop.page}}">
+    <!-- 최근 본 차량 목록 // -->
+    <section class="list-area">
+        {{include('./components/skip.html', {"prop": {"id": "special-area-end","text": "최근 본 차량 목록 건너뛰기"}})}}
+
+        <h3 class="hide">최근 본 차량 목록</h3>
+
+        <ul>
+            <li>
+                <p class="nodata">
+                    원하는 차량을 클릭하여<br>
+                    제시카의 정보 공개 서비스를 경험해보세요
+                </p>
+            </li>
+        </ul>
+    </section>
+
+    <hr id="list-area-end">
+    <!-- // 최근 본 차량 목록 -->
+
+</div>

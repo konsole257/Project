@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<script type="text/javascript" src="./resources/js/lib/jquery-3.3.1.min.js"></script>
+<title>Jessicar URL</title>
+<style>
+	*{margin:0; padding:0;}
+	html, body {background-color:#fff;}
+	dl,ul,ol,menu,li {list-style:none}
+	img {border:0 none;vertical-align:top;}
+	table {border-collapse:collapse;border-spacing:0}
+	a {text-decoration:none;border-collapse:separate;color:#666;}
+	label {cursor:pointer;}
+	p { word-wrap:break-word; word-break:break-all;}
+	textarea {resize:none; }
+	#wrap {margin:0;padding:0;}
+	h2 {position:relative;padding:5px 0 5px 10px;font-size:14px;line-height:30px;font-weight:bold; cursor:pointer;}
+	h2 span {font-size:11px;font-weight:normal;}
+	h2 .enddate {position:absolute;top:12px;right:10px;display:inline-block;color:#888;text-align:right;font-size:12px;line-height:24px;}
+	.sti {border-top:2px solid #585858;color:#333;background-color:#f7f7f7;}
+	.header {padding:20px;background-color:#fff;border-bottom:1px solid #585858;text-align:center; }
+	.folderbox {padding:0 20px 20px 20px;}
+	.folderbox:after {content:" ";display:block;clear:both;}
+	.folderbox dl {width:500px;}
+	.folderbox dl dt {float:left;display:inline-block;width:40%;}
+	.folderbox dl dd {float:left;display:inline-block;width:60%;}
+	.tabletype {width:100%;}
+	.tabletype table {width:100%;table-layout:fixed;color:#555;border:1px solid #e4e4e4;}
+	.tabletype table th {padding:5px 0;background:#f6f6f6;border-right:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4;}
+	.tabletype table th.l {padding:0 0 0 5px;text-align:left;}
+	.tabletype table td {padding:4px 4px 4px 4px;color:#000;text-align:center;border-right:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4;vertical-align:top;font-size:12px;}
+	.tabletype table td.l {text-align:left;}
+	.tabletype table td.r {text-align:right;}
+	.tabletype table td.m {vertical-align:middle;}
+	.lstype {width:100%;border-top:1px solid #585858;}
+	.lstype ul li {position:relative;padding:5px;border-bottom:1px solid #ccc;line-height:22px;font-size:12px;}
+	.lstype ul li dl {width:100%;}
+	.lstype ul li dl:after {content:" ";display:block;clear:both;}
+	.lstype ul li dl dt {position:relative;float:left;width:20%;}
+	.lstype ul li dl dd {position:relative;float:left;width:80%;}
+	.lstype ul li dl dd a {position:relative;display:inline-block;width:100%;}
+	.enddate {position:absolute;top:0;right:5px;display:inline-block;color:#888;text-align:right;font-size:12px;line-height:24px;}
+	.bar0 {background-color:none;}
+	.bar1 {background-color:#fff0f0;}
+	.bar2 {background-color:#fffff0;}
+	.bar3 {background-color:#f0fff7;}
+	.bar4 {background-color:#f0f1ff;}
+	.bar5 {background-color:#fef0ff;}
+	.barx{background-color:#fff;}
+	.txt_blue {color:#2465ec;}
+	.txt_white {color:#fff;}
+	.htmlprocess {padding:0 20px;}
+	.htmlprocess .htmlprocess_tit {padding:5px;background:#777; color:#fff; font-weight:bold;margin-top:10px;}
+	.htmlprocess table {width: 100%; font-size:13px; margin-bottom:30px;}
+	.htmlprocess table th {border:1px solid #ccc; background:#eee;}
+	.htmlprocess table td {border:1px solid #ccc; text-align:right; padding:2px 5px 1px 5px;}
+	.htmlprocess .processbar {display:block;margin:5px;height:20px;background-color:rgba(0, 199, 240, 0.1);text-align:left;}
+	.htmlprocess .processbar span {display:inline-block;height:20px;background-color:#fb53ab;}
+	.fin {border-radius:2px;background:#efccc6;}
+	.pub {font-weight:bold;color:#000;} /* 기획 전달 */
+</style>
+<script type="text/javascript">
+//<![CDATA[
+	$(function(){
+		$(".lstype").hide(0);
+		$(".lstype2").slideDown(800);
+		$(".lstype3").slideDown(800);
+		$(".sti").click(function(){
+			if( $(this).next("div").css('display') == 'none' ){
+				$(this).next("div").slideDown(400);
+			}else{
+				$(this).next("div").slideUp(400);
+			}
+		});
+		$(".folderbox").slideUp(800);
+		$(".foldersti").click(function(){
+			if( $(".folderbox").css('display') == 'none' ){
+				$(".folderbox").slideDown(400);
+			}else{
+				$(".folderbox").slideUp(400);
+			}
+		});
+	});
+//]]>
+</script>
+</head>
+<body>
+
+<div id="wrap">
+	<div class="header">
+		<h1>Jessicar</h1>
+	</div>
+	<h2 class="foldersti">- 폴더 네이밍<span> : 실제 작업 시 변경 될 수 있습니다.</span></h2>
+	<div class="folderbox">
+		<div class="tabletype">
+			<table summary="">
+				<caption></caption>
+				<colgroup>
+					<col width="10%" />
+					<col width="45%" />
+					<col width="*" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th colspan="2">메뉴명</th>
+						<th>폴더명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="l">WEB</td>
+						<td class="l">메인</td>
+						<td class="l">/</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<h2 class="sti sti2">- WEB<span class="enddate">완료일</span></h2>
+	<div class="htmlprocess">
+		<script type="text/javascript">
+			$(function(){
+				var totalfile = $(".frontlist dd > a").length - 1;
+				var finfile =$(".fin").length;
+				var ingfile =totalfile-finfile
+				var processper=(finfile / totalfile) * 100;
+				$(".totalfile").text(totalfile);
+				$(".finfile").text(finfile);
+				$(".ingfile").text(ingfile);
+				$(".processper").text(processper.toFixed(3)+' %'); // 소수자리 지정
+				$(".processbar span").css({"width":+processper+"%"});
+			})
+		</script>
+		<style type="text/css">
+		.htmlprocess {}
+		.htmlprocess .htmlprocess_tit {background:#777; color:#fff; font-weight:bold;margin-top:20px; }
+		.htmlprocess table {width: 100%; font-size:13px; margin-top:10px; margin-bottom:30px;}
+		.htmlprocess table th {border:1px solid #ccc; background:#eee;}
+		.htmlprocess table td {border:1px solid #ccc; text-align:right; padding:2px 5px 1px 0;}
+		</style>
+
+		<p class="htmlprocess_tit">HTML 작업공정률</p>
+		<table>
+		<colgroup><col width="150" /><col width="150" /><col width="150" /><col width="150" /><col width="*" /></colgroup>
+			<tr>
+				<th>파일수</th>
+				<th>완료</th>
+				<th>대기</th>
+				<th>작업률</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td class="totalfile"></td>
+				<td class="finfile"></td>
+				<td class="ingfile"></td>
+				<td class="processper"></td>
+				<td><span class="processbar"><span></span></span></td>
+			</tr>
+		</table>
+	</div>
+	<div class="lstype lstype2 frontlist">
+		<ul>
+			<li class="bar0">
+				<dl>
+					<dt><a href="./style_guide.html" target="_blank">GUIDE</a></dt>
+					<dd>
+						<a href="./style_guide.html" target="_blank">style_guide<span class="txt_white">.dddd</span> <span class="enddate"></span></a><br />
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar1">
+				<dl>
+					<dt>메인</dt>
+					<dd>
+						<a href="./index.html" target="_blank" class="fin">메인  <span class="enddate"><span class="txt_blue">수정 2020.05.21</span></span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar2">
+				<dl>
+					<dt>찾기</dt>
+					<dd>
+						<a href="./search/index.html" target="_blank" class="fin">브랜드 - 영문 <span class="txt_blue"></span> <span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./search/index-kr.html" target="_blank" class="fin">브랜드 - 국문 <span class="txt_blue"><span class="txt_blue"></span> <span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./search/index-model.html" target="_blank" class="fin">차종 <span class="txt_blue"><span class="txt_blue"></span> <span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./search/index.html" target="_blank" class="fin">팝업 - 검색 <span class="txt_blue"></span> <span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./search/index.html" target="_blank" class="fin">팝업 - 필터 <span class="txt_blue"></span> <span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar5">
+				<dl>
+					<dt>차량 목록 ( 검색결과 )</dt>
+					<dd>
+						<a href="./list/index.html" target="_blank" class="fin">목록<span class="txt_blue"></span> <span class="enddate"><span class="txt_blue">수정 2020.05.21</span></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./list/nodata.html" target="_blank" class="fin">목록 - nodata<span class="txt_blue"></span> <span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./list/index.html" target="_blank" class="fin">팝업 - 필터<span class="txt_blue"></span> <span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar1">
+				<dl>
+					<dt>차량 상세</dt>
+					<dd>
+						<a href="./view/index.html" target="_blank" class="fin">상세 <span class="txt_blue"></span> <span class="enddate"><span class="txt_blue">수정 2020.05.21</span></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./view/index.html" target="_blank" class="fin">팝업 - 첨부서류 보기<span class="txt_blue"></span> <span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./view/index.html" target="_blank" class="fin">팝업 - 이미지 보기<span class="txt_blue"></span> <span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./view/index.html" target="_blank" class="fin">팝업 - 시세 대비 <span class="txt_blue"></span> <span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./view/index.html" target="_blank" class="fin">팝업 - 보험 사고 이력 정보 <span class="txt_blue"></span> <span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./view/index.html" target="_blank" class="fin">팝업 - 성능 상태 기록부 <span class="txt_blue"></span> <span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./view/index.html" target="_blank" class="fin">팝업 - 차량 옵션 <span class="txt_blue"></span> <span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./view/index.html" target="_blank" class="fin">팝업 - 방문판매 신청 <span class="txt_blue"></span> <span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./view/index.html" target="_blank" class="fin">팝업 - 온라인 문의 <span class="txt_blue"></span> <span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar3">
+				<dl>
+					<dt>딜러상세</dt>
+					<dd>
+						<a href="./dealer/index.html" target="_blank" class="fin">상세 - 판매중인 차량<span class="enddate"><span class="txt_blue">수정 2020.05.21</span></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./dealer/review.html" target="_blank" class="fin">상세 - 딜러후기<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./dealer/review.html" target="_blank" class="fin">팝업 - 딜러후기 이미지보기 <span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar3">
+				<dl>
+					<dt>찜한차</dt>
+					<dd>
+						<a href="./bookmark/index.html" target="_blank" class="fin">목록<span class="enddate"><span class="txt_blue">수정 2020.05.21</span></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./bookmark/nodata.html" target="_blank" class="fin">목록 - nodata<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar4">
+				<dl>
+					<dt>최근 본 차량</dt>
+					<dd>
+						<a href="./lately/index.html" target="_blank" class="fin">목록<span class="enddate"><span class="txt_blue">수정 2020.05.21</span></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./lately/nodata.html" target="_blank" class="fin">목록 - nodata<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+
+			<li class="bar5">
+				<dl>
+					<dt>더보기</dt>
+					<dd>
+						<a href="./more/index.html" target="_blank" class="fin">메인<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+
+						<a href="./more/login.html" target="_blank" class="fin">로그인<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/login.html" target="_blank" class="fin">팝업 - 로그인 - 아이디 찾기<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/login.html" target="_blank" class="fin">팝업 - 로그인 - 비밀번호 찾기<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/join.html" target="_blank" class="fin">로그인 - 회원가입<span class="enddate"><span class="txt_blue">수정 2020.05.21</span></span></a><br /><br /><!-- 완료 후 class="fin" -->
+
+						<a href="./more/faq.html" target="_blank" class="fin">고객센터 - faq - 목록<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/faq-nodata.html" target="_blank" class="fin">고객센터 - faq - 목록 - nodata<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/faq.html" target="_blank" class="fin">팝업 - faq - 상세<span class="enddate"></span></a><br /><br /><!-- 완료 후 class="fin" -->
+
+						<a href="./more/qna.html" target="_blank" class="fin">고객센터 - 1:1문의내역<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/qna-write.html" target="_blank" class="fin">고객센터 - 1:1문의하기<span class="enddate"></span></a><br /><br /><!-- 완료 후 class="fin" -->
+
+						<a href="./more/notice.html" target="_blank" class="fin">공지사항 - 목록<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/notice.html" target="_blank" class="fin">팝업 - 공지사항 - 상세<span class="enddate"></span></a><br /><br /><!-- 완료 후 class="fin" -->
+
+						<a href="./more/event.html" target="_blank" class="fin">이벤트 - 목록<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/event.html" target="_blank" class="fin">팝업 - 이벤트 - 상세<span class="enddate"></span></a><br /><br /><!-- 완료 후 class="fin" -->
+
+						<a href="./more/call.html" target="_blank" class="fin">딜러연락내역 - 전화문의<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/call-nodata.html" target="_blank" class="fin">딜러연락내역 - 전화문의 - nodata<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/online.html" target="_blank" class="fin">딜러연락내역 - 온라인문의<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/online-nodata.html" target="_blank" class="fin">딜러연락내역 - 온라인문의 - nodata<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/request.html" target="_blank" class="fin">딜러연락내역 - 방문판매신청 <span class="enddate"><span class="txt_blue">수정 2020.05.21</span></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/request-nodata.html" target="_blank" class="fin">딜러연락내역 - 방문판매신청 - nodata <span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/review.html" target="_blank" class="fin">딜러연락내역 - 내가 쓴 후기<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/review-write.html" target="_blank" class="fin">딜러연락내역 - 후기 작성<span class="enddate"><span class="txt_blue">수정 2020.05.21</span></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/review-update.html" target="_blank" class="fin">딜러연락내역 - 후기 수정<span class="enddate"><span class="txt_blue">수정 2020.05.21</span></span></a><br /><br /><!-- 완료 후 class="fin" -->
+
+						<a href="./more/service.html" target="_blank" class="fin">서비스이용약관<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/privacy.html" target="_blank" class="fin">개인정보 취급방침<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/privacy2.html" target="_blank" class="fin">개인정보 제공 동의<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/privacy3.html" target="_blank" class="fin">개인정보 수집 및 이용 동의<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/marketing.html" target="_blank" class="fin">마케팅 활용 동의<span class="enddate"></span></a><br /><br /><!-- 완료 후 class="fin" -->
+
+						<a href="./more/mypage-update.html" target="_blank" class="fin">개인정보관리 - 정보 변경<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/password-confirm.html" target="_blank" class="fin">개인정보관리 - 비밀번호 확인<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+						<a href="./more/password-update.html" target="_blank" class="fin">개인정보관리 - 비밀번호 변경<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+
+						<a href="./more/withdraw.html" target="_blank" class="fin">서비스탈퇴<span class="enddate"></span></a><br /><!-- 완료 후 class="fin" -->
+					</dd>
+				</dl>
+			</li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

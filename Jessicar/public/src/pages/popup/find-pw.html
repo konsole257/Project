@@ -1,0 +1,27 @@
+<p class="txt">
+    비밀번호 찾기
+</p>
+
+<form>
+    <fieldset>
+        <legend class="hide">비밀번호 찾기</legend>
+
+        <div class="input-id">
+            <input type="text" title="아이디 입력" placeholder="아이디" class="type2">
+        </div>
+
+        <div class="input-name">
+            <input type="text" title="이름 입력" placeholder="이름" class="type2">
+        </div>
+
+        <div class="input-phone">
+            <input type="number" class="type2" title="휴대폰번호 입력" placeholder="휴대폰번호(숫자만)" onkeyup="$(this).val() !=='' ? $('.btn-confirm').removeAttr('disabled') : $('.btn-confirm').prop('disabled', true);">
+        </div>
+
+        <!--
+            팝업 호출 function
+            <a href="#팝업 ID값" onclick="fn.popupOpen(this);">
+         -->
+        <a href="#popup-find-pw-result" class="btn-medium-fill-blue-rounded btn-confirm" onclick="fn.popupOpen(this);" disabled><b>확인</b></a>
+    </fieldset>
+</form>

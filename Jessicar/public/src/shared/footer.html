@@ -1,0 +1,54 @@
+{{if (context.prop) {
+<hr>
+    {{if (prop.page === "home") {
+    <!-- 메인에서만 노출 // -->
+    <footer id="footer"><!-- 2020.05.21 : 수정 -->
+        <div class="info fold">
+            <button type="button" class="btn-fold" onclick="fn.fold(this);">제시카</button>
+            <dl class="content">
+                <dt>상호</dt>
+                <dd>㈜디에이치에스앤이</dd>
+
+                <dt>대표자</dt>
+                <dd>권세진</dd>
+
+                <dt>사업장 소재지</dt>
+                <dd>서울특별시 동대문구 답십리로 209 힐스포파크</dd>
+
+                <dt>사업자 등록번호</dt>
+                <dd>204-81-31268</dd>
+
+                <dt>통신판매업신고 번호</dt>
+                <dd>2019-서울동대문-1439</dd>
+            </dl>
+        </div>
+
+        <div class="link-terms division-horizon-line">
+            <a href="/">이용약관</a>
+            <a href="/">개인정보처리방침</a>
+        </div>
+
+        <p class="txt">제시카는 통신판매중개자로서 통신판매의 당사자가 아니며, 상품거래정보 및 거래에 관련한 의무와 책임은 각 판매 당사자에게 있습니다</p>
+    </footer>
+    <!-- // 메인에서만 노출 -->
+    }}}
+
+    <script src="{{dirRoot}}/resources/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="{{dirRoot}}/resources/js/lib/jquery-ui.min.js"></script>
+    <script src="{{dirRoot}}/resources/js/lib/jquery.ui.touch-punch.min.js"></script>
+    <script src="http://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="{{dirRoot}}/resources/js/lib/swiper.min.js"></script>
+    <script src="{{dirRoot}}/resources/js/function.js"></script>
+    <script src="{{dirRoot}}/resources/js/jessicar.js"></script>
+
+    <!--<script src="{{dirRoot}}/resources/js/home.js"></script> 메인 : home.js -->
+    <!-- <script src="{{dirRoot}}/resources/js/sub.js"></script> 메인제외 나머지 : sub.js -->
+
+    {{if (context.prop.page === "home") {
+        <script src="{{dirRoot}}/resources/js/home.js"></script>
+    }}}
+    {{if (context.prop.page !== "home") {
+        <script src="{{dirRoot}}/resources/js/sub.js"></script>
+    }}}
+
+}}}

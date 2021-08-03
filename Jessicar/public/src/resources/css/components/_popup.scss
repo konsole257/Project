@@ -1,0 +1,257 @@
+/**
+* --------------------------------
+* Popup CSS
+* --------------------------------
+*/
+.popup {
+    opacity:0;
+    position:fixed;
+    top:-100vh;
+    left:-100vw;
+    z-index:999;
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.8);
+    outline:none;
+
+    > .inner {
+        transform:translate(-50%, -50%);
+        position:absolute;
+        top:50%;
+        left:50%;
+        border:calcu(3px) solid #b4b4b4;
+        border-radius:calcu(12px);
+        background-color:#fff;
+        overflow:hidden;
+
+        > .header {
+            position:relative;
+
+            .tit {
+                height:calcu(150px);
+                font-size:calcu(54px);
+                line-height:calcu(150px);
+                padding:0 calcu(60px);
+                border-bottom:calcu(3px) solid #b4b4b4;
+            }
+
+            .btn-close {
+                position:absolute;
+                top:0;
+                right:calcu(45px);
+                width:calcu(96px);
+                height:100%;
+
+                &:before {
+                    @include bgList(1, 1);
+
+                    content:"";
+                    position:absolute;
+                    top:0;
+                    right:0;
+                    bottom:0;
+                    left:0;
+                    width:calcu(42px);
+                    height:calcu(42px);
+                    margin:auto;
+                    background-image:url($dirCommon+"btn-close.png");
+                    background-size:calcu(900px);
+                }
+            }
+        }
+    }
+
+    &.full {
+        > .inner {
+            transform:none;
+            transition-duration:800ms;
+            top:100%;
+            left:0;
+            width:100%;
+            height:100%;
+            border:none;
+            border-radius:0;
+
+            > .header {
+                position:relative;
+                height:calcu(150px);
+
+                .tit {
+                    height:calcu(150px);
+                    font-size:calcu(54px);
+                    text-align:center;
+                    line-height:calcu(105px);
+                    padding:calcu(23px) calcu(42px) calcu(22px);
+                    border-bottom:calcu(3px) solid #e7e7e7;
+                }
+            }
+
+            .contents {
+                height:calc(100% - #{calcu(150px)});
+                background:#eee;
+                overflow-y:scroll;
+
+                section,
+                div {
+                    ~ .btn-area {
+                        height:calcu(270px);
+                        padding-bottom:env(safe-area-inset-bottom);
+                        margin-top:calcu(27px);
+                        box-sizing:content-box;
+
+                        > .inner {
+                            @include clearfix;
+
+                            transition-duration:800ms;
+                            position:fixed;
+                            z-index:2;
+                            bottom:calcu(-270px);
+                            left:0;
+                            width:100%;
+                            padding:calcu(60px) calcu(42px) #{calcu(60px)};
+                            background-color:#fff;
+
+                            [class*="btn"] {
+                                float:left;
+                                width:calc((100% - #{calcu(24px)}) / 2);
+                                margin-left:calcu(24px);
+
+                                &:first-child {
+                                    margin-left:0;
+                                }
+
+                                &.btn-reset {
+                                    &:before {
+                                        @include bgList(2, 1);
+
+                                        content:"";
+                                        display:inline-block;
+                                        width:calcu(38px);
+                                        height:calcu(38px);
+                                        margin-right:calcu(14px);
+                                        background-image:url($dirCommon+'form.png');
+                                        background-size:calcu(900px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.search {
+        height:100vh;
+        background:#eee;
+        overflow-y:scroll;
+
+        > .inner {
+            transform:none;
+            top:0;
+            left:0;
+            width:100%;
+            // height:100%;
+            border:none;
+            border-radius:0;
+
+            > .header {
+                position:relative;
+                padding:calcu(23px) calcu(42px) calcu(22px) calcu(138px);
+                border-bottom:calcu(3px) solid #e7e7e7;
+
+                .btn-close {
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    width:calcu(108px);
+                    height:100%;
+
+                    &:before {
+                        @include bgList(2, 1);
+
+                        content:"";
+                        position:absolute;
+                        top:0;
+                        right:0;
+                        bottom:0;
+                        left:0;
+                        width:calcu(24px);
+                        height:calcu(47px);
+                        margin:auto;
+                        background-image:url($dirCommon+"btn-close.png");
+                        background-size:calcu(900px);
+                    }
+                }
+            }
+
+            .contents {
+                // height:calc(100% - #{calcu(152px)});
+                background:#eee;
+                // overflow-y:scroll;
+            }
+        }
+    }
+
+    &.alert,
+    &.confirm {
+        > .inner {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            width:calcu(870px);
+            border-radius:0;
+            border:none;
+            background-color:#fff;
+            overflow:hidden;
+
+            > .contents {
+                display:flex;
+                align-items:center;
+                flex-wrap:wrap;
+                justify-content:center;
+                position:relative;
+                min-height:calcu(480px);
+                line-height:calcu(54px);
+                text-align:center;
+                padding:0 0 calcu(150px);
+            }
+
+            .btn-area {
+                display:flex;
+                position:absolute;
+                bottom:0;
+                left:0;
+                width:100%;
+
+                .btn-close {
+                    flex:1;
+                }
+            }
+        }
+    }
+
+    &.active {
+        opacity:1;
+        top:0;
+        left:0;
+
+        &.full {
+            > .inner {
+                top:0;
+
+                .contents {
+                    section,
+                    div {
+                        ~ .btn-area {
+                            > .inner {
+                                bottom:0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

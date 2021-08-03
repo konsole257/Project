@@ -1,0 +1,216 @@
+<div class="header">
+    <h2 class="tit">{{prop.pageName}}</h2>
+</div>
+
+<div id="contents" class="{{prop.page}}">
+    <!-- 최근 본 차량 목록 // -->
+    <section class="list-area">
+        {{include('./components/skip.html', {"prop": {"id": "special-area-end","text": "최근 본 차량 목록 건너뛰기"}})}}
+
+        <h3 class="hide">최근 본 차량 목록</h3>
+
+        <ul>
+            <!-- nodata // -->
+            <!-- <li>
+                <p class="nodata">
+                    원하는 차량을 클릭하여<br>
+                    제시카의 정보 공개 서비스를 경험해보세요
+                </p>
+            </li> -->
+            <!-- // nodata -->
+
+            <!-- 반복영역 // -->
+            <li>
+                <a href="/">
+                    <div class="car-horizon">
+                        <label>
+                            <input type="checkbox" class="btn-bookmark" checked><!-- 찜한차일경우 checked -->
+                            <span>찜</span>
+                        </label>
+
+                        <div class="pic-area">
+                            <figure class="pic-dealer">
+                                <img src="{{dirRoot}}/resources/images/temp/temp-dealer100x100.png" alt="" class="img">
+                            </figure>
+
+                            <figure class="pic-car">
+                                <img src="{{dirRoot}}/resources/images/temp/temp-car438x300.jpg" alt="" class="img">
+                            </figure>
+                        </div>
+                        <div class="car-info">
+                            <b class="name">BMW 5시리즈 (F10) 520d</b>
+                            <div class="margin">딜러 마진 -10%</div><!-- 2020.05.21 : "마진율" -> "딜러마진" 텍스트 변경  -->
+                            <b class="price">판매가  2,350 만원</b>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <!-- // 반복영역 -->
+
+            <li>
+                <a href="/">
+                    <div class="car-horizon">
+                        <label><input type="checkbox" class="btn-bookmark"><span>찜</span></label>
+
+                        <div class="pic-area">
+                            <figure class="pic-dealer">
+                                <img src="{{dirRoot}}/resources/images/temp/temp-dealer100x100.png" alt="" class="img">
+                            </figure>
+
+                            <figure class="pic-car">
+                                <img src="{{dirRoot}}/resources/images/temp/temp-car438x300.jpg" alt="" class="img">
+                            </figure>
+                        </div>
+                        <div class="car-info">
+                            <b class="name">BMW 5시리즈 (F10) 520d</b>
+                            <div class="margin">딜러 마진 -10%</div>
+                            <b class="price">판매가  2,350 만원</b>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="/">
+                    <div class="car-horizon">
+                        <label><input type="checkbox" class="btn-bookmark"><span>찜</span></label>
+
+                        <div class="pic-area">
+                            <figure class="pic-dealer">
+                                <img src="{{dirRoot}}/resources/images/temp/temp-dealer100x100.png" alt="" class="img">
+                            </figure>
+
+                            <figure class="pic-car">
+                                <img src="{{dirRoot}}/resources/images/temp/temp-car438x300.jpg" alt="" class="img">
+                            </figure>
+                        </div>
+                        <div class="car-info">
+                            <b class="name">BMW 5시리즈 (F10) 520d</b>
+                            <div class="margin">딜러 마진 -10%</div>
+                            <b class="price">판매가  2,350 만원</b>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="/">
+                    <div class="car-horizon">
+                        <label><input type="checkbox" class="btn-bookmark"><span>찜</span></label>
+
+                        <div class="pic-area">
+                            <figure class="pic-dealer">
+                                <img src="{{dirRoot}}/resources/images/temp/temp-dealer100x100.png" alt="" class="img">
+                            </figure>
+
+                            <figure class="pic-car">
+                                <img src="{{dirRoot}}/resources/images/temp/temp-car438x300.jpg" alt="" class="img">
+                            </figure>
+                        </div>
+                        <div class="car-info">
+                            <b class="name">BMW 5시리즈 (F10) 520d</b>
+                            <div class="margin">딜러 마진 -10%</div>
+                            <b class="price">판매가  2,350 만원</b>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="/">
+                    <div class="car-horizon">
+                        <label><input type="checkbox" class="btn-bookmark"><span>찜</span></label>
+
+                        <div class="pic-area">
+                            <figure class="pic-dealer">
+                                <img src="{{dirRoot}}/resources/images/temp/temp-dealer100x100.png" alt="" class="img">
+                            </figure>
+
+                            <figure class="pic-car">
+                                <img src="{{dirRoot}}/resources/images/temp/temp-car438x300.jpg" alt="" class="img">
+                            </figure>
+                        </div>
+                        <div class="car-info">
+                            <b class="name">BMW 5시리즈 (F10) 520d</b>
+                            <div class="margin">딜러 마진 -10%</div>
+                            <b class="price">판매가  2,350 만원</b>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="/">
+                    <div class="car-horizon">
+                        <label><input type="checkbox" class="btn-bookmark"><span>찜</span></label>
+
+                        <div class="pic-area">
+                            <figure class="pic-dealer">
+                                <img src="{{dirRoot}}/resources/images/temp/temp-dealer100x100.png" alt="" class="img">
+                            </figure>
+
+                            <figure class="pic-car">
+                                <img src="{{dirRoot}}/resources/images/temp/temp-car438x300.jpg" alt="" class="img">
+                            </figure>
+                        </div>
+                        <div class="car-info">
+                            <b class="name">BMW 5시리즈 (F10) 520d</b>
+                            <div class="margin">딜러 마진 -10%</div>
+                            <b class="price">판매가  2,350 만원</b>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="/">
+                    <div class="car-horizon">
+                        <label><input type="checkbox" class="btn-bookmark"><span>찜</span></label>
+
+                        <div class="pic-area">
+                            <figure class="pic-dealer">
+                                <img src="{{dirRoot}}/resources/images/temp/temp-dealer100x100.png" alt="" class="img">
+                            </figure>
+
+                            <figure class="pic-car">
+                                <img src="{{dirRoot}}/resources/images/temp/temp-car438x300.jpg" alt="" class="img">
+                            </figure>
+                        </div>
+                        <div class="car-info">
+                            <b class="name">BMW 5시리즈 (F10) 520d</b>
+                            <div class="margin">딜러 마진 -10%</div>
+                            <b class="price">판매가  2,350 만원</b>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="/">
+                    <div class="car-horizon">
+                        <label><input type="checkbox" class="btn-bookmark"><span>찜</span></label>
+
+                        <div class="pic-area">
+                            <figure class="pic-dealer">
+                                <img src="{{dirRoot}}/resources/images/temp/temp-dealer100x100.png" alt="" class="img">
+                            </figure>
+
+                            <figure class="pic-car">
+                                <img src="{{dirRoot}}/resources/images/temp/temp-car438x300.jpg" alt="" class="img">
+                            </figure>
+                        </div>
+                        <div class="car-info">
+                            <b class="name">BMW 5시리즈 (F10) 520d</b>
+                            <div class="margin">딜러 마진 -10%</div>
+                            <b class="price">판매가  2,350 만원</b>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <hr id="list-area-end">
+    <!-- // 최근 본 차량 목록 -->
+
+</div>

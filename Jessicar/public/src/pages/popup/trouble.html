@@ -1,0 +1,402 @@
+<div class="target">
+    <b class="number">서울30가1234</b>
+    <div class="date">정보조회일 : 2019.10.18</div>
+</div>
+
+<!-- 일반사양 // -->
+<section class="spec">
+    <div class="inner">
+        <header class="header">
+            <h3 class="tit">일반사양</h3>
+        </header>
+
+        <table>
+            <caption class="hide">사양</caption>
+
+            <tbody>
+                <tr>
+                    <th>제작사</th>
+                    <td>지프</td>
+                </tr>
+
+                <tr>
+                    <th>자동차명</th>
+                    <td>랭글러(JL)</td>
+                </tr>
+
+                <tr>
+                    <th>연식</th>
+                    <td>2018년식</td>
+                </tr>
+
+                <tr>
+                    <th>사용연료</th>
+                    <td>가솔린</td>
+                </tr>
+
+                <tr>
+                    <th>배기량</th>
+                    <td>5038cc</td>
+                </tr>
+
+                <tr>
+                    <th>차체형상</th>
+                    <td>4도어</td>
+                </tr>
+
+                <tr>
+                    <th>용도 및 차종</th>
+                    <td>자가용 SUV</td>
+                </tr>
+
+                <tr>
+                    <th>최초보험가입일자</th>
+                    <td>2016.01.07</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="txt-area">
+            <p>본 중고차 사고이력 정보는 정보조회일자를 기준으로 작성된 것입니다.</p>
+            <p>본 정보는 자동차 일반정보로서 서울30가 1234 차량을 확 인하기 위하여 참고로 제공하는 것이며, 일부차량의 경우, 정보의 누락이나 오류가 있을 수 있습니다.</p>
+        </div>
+    </div>
+</section>
+<!-- // 일반사양 -->
+
+<!-- 사고이력 // -->
+<section class="trouble">
+    <div class="inner">
+        <header class="header">
+            <h3 class="tit">사고이력</h3>
+        </header>
+
+        <ul class="list-area">
+            <li class="total active">전손보험사고 <strong>3건</strong></li><!-- 이력 있을경우 class="active" -->
+            <li class="robbery">도난보험사고 <strong>0건</strong></li>
+            <li class="flooding">침수보험사고 <strong>0건</strong></li>
+        </ul>
+
+        <div class="txt-area">
+            <p>자동차보험으로 처리된 사고기록 중에서 전손사고, 도난사고, 침수사고 발생 여부를 확인할 수 있습니다.</p>
+            <p>침수사고에는 경미한 부분 침수도 포함되며, 자료의 누락으로 ‘침수 보험사고 이력없음’으로 표시되는 경우가 있습니다.</p>
+        </div>
+
+        <div class="fold active">
+            <button type="button" class="btn-fold" onclick="fn.fold(this);"><b>보험사고이력 <span>3건</span></b></button>
+
+            <div class="content">
+                <!-- 내 차 피해 // -->
+                <section>
+                    <h4 class="tit">내 차 피해</h4>
+                    <p class="txt">
+                        자동차사고로 발생한 서울30가1234 차량의 손상·수리기록을 수리
+                        비(보험금)출처에 따라 ‘①자기 자동차보험에서 지급된 경우’와 ‘②
+                        타인의 자동차보험에서 지급된 경우’ 로 나누어 제공합니다. (대인
+                        사고는 제외합니다.)
+                    </p>
+
+                    <!-- 내 차 보험 // -->
+                    <section>
+                        <h5 class="tit"><em>내 차 보험</em>으로 처리한 내 차 사고</h5>
+
+                        <div class="txt-area">
+                            <p>자동차 사고로 56머54** 차량이 손해를 동 차량의 보험으로 처리한 내역입니다.</p>
+                        </div>
+
+                        <div class="table">
+                            <!--<b>이력없음</b>--><!-- 이력 없는경우 -->
+
+                            <!-- 이력 있는경우 // -->
+                            <table>
+                                <caption>사고일자 2019.03.12</caption>
+
+                                <tbody>
+                                    <tr>
+                                        <th>부품</th>
+                                        <td>852,200원</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>공임</th>
+                                        <td>327,600원</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>도장</th>
+                                        <td>367,980원</td>
+                                    </tr>
+                                </tbody>
+
+                                <tfoot>
+                                    <tr>
+                                        <th>수리비용</th>
+                                        <td><b>1,547,810원 발생</b></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <!-- // 이력 있는경우 -->
+                        </div>
+                    </section>
+                    <!-- // 내 차 보험 -->
+
+                    <!-- 타 차 보험 // -->
+                    <section>
+                        <h5 class="tit"><em>타 차 보험</em>으로 처리한 내 차 사고</h5>
+
+                        <div class="txt-area">
+                            <p>자동차 사고로 서울35나1234 차량이 입은 손해가 다른 차량의 자동차 보험에서 처리된 내용입니다.(②는 카 히스토리 자료수집 방법상 오류가 발생할 수 있으니, 의심되는 사항이 있으시면 전화 주시기 바랍니다.)</p>
+                        </div>
+
+                        <div class="table">
+                            <b>이력없음</b><!-- 이력 없는경우 -->
+
+                            <!-- 이력 있는경우 // -->
+                            <!-- <table>
+                                <caption>사고일자 2019.03.12</caption>
+
+                                <tbody>
+                                    <tr>
+                                        <th>부품</th>
+                                        <td>852,200원</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>공임</th>
+                                        <td>327,600원</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>도장</th>
+                                        <td>367,980원</td>
+                                    </tr>
+                                </tbody>
+
+                                <tfoot>
+                                    <tr>
+                                        <th>수리비용</th>
+                                        <td><b>1,547,810원 발생</b></td>
+                                    </tr>
+                                </tfoot>
+                            </table> -->
+                            <!-- // 이력 있는경우 -->
+                        </div>
+                    </section>
+                    <!-- // 타 차 보험 -->
+                </section>
+                <!-- // 내 차 피해 -->
+
+                <!-- 타차 피해 // -->
+                <section>
+                    <h4 class="tit">타차 피해</h4>
+                    <p class="txt">
+                        서울35나1234 차량이 타인의 자동차 등의 재물에 피해를 입혀, 그 손해를 해당 차량의 자동차 보험으로 처리한 내역입니다.(대인사고는 제외합니다.)
+                    </p>
+
+                    <div class="table">
+                        <b>이력없음</b><!-- 이력 없는경우 -->
+
+                        <!-- 이력 있는경우 // -->
+                        <!-- <table>
+                            <caption>사고일자 2019.03.12</caption>
+
+                            <tbody>
+                                <tr>
+                                    <th>부품</th>
+                                    <td>852,200원</td>
+                                </tr>
+
+                                <tr>
+                                    <th>공임</th>
+                                    <td>327,600원</td>
+                                </tr>
+
+                                <tr>
+                                    <th>도장</th>
+                                    <td>367,980원</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <th>수리비용</th>
+                                    <td><b>1,547,810원 발생</b></td>
+                                </tr>
+                            </tfoot>
+                        </table> -->
+                        <!-- // 이력 있는경우 -->
+                    </div>
+                </section>
+                <!-- // 타차 피해 -->
+
+                <p class="txt">
+                    본 정보는 자동차 사고로 상대방 차량 또는 재물에 발생한 손해와 관련된 정보로서, 상대방 차량 또는 재물에 발생한 손해 규모를 참고하식 자기 자동차의 손상여부 등을 간접적으로 확인할 수 있도록 제공하여 드리고 있습니다.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- // 사고이력 -->
+
+<!-- 변경이력 // -->
+<section class="change">
+    <div class="inner">
+        <header class="header">
+            <h3 class="tit">변경이력</h3>
+        </header>
+
+        <ul class="list-area">
+            <li class="rent active">대여용도(렌트카) <strong>있음</strong></li><!-- 이력 있을경우 class="active" -->
+            <li class="business">영업용도 <strong>없음</strong></li>
+            <li class="public">관용용도 <strong>없음</strong></li>
+        </ul>
+
+        <div class="txt-area">
+            <p>
+                본 정보는 서울30가1234 차량의 과거 자동차 번호 변경기록
+                을 모두 검색하여 제공하는 것으로 대여용(렌트카), 영업용(택
+                시 등)으로 사용된 적이 있는지 확인할 수 있습니다.
+            </p>
+        </div>
+
+        <div class="fold active">
+            <button type="button" class="btn-fold" onclick="fn.fold(this);"><b>번호/소유자 변경 이력 <span>1건</span></b></button>
+
+            <div class="content">
+                <!--<b>이력없음</b>--><!-- 이력 없는경우 -->
+
+                <!-- 이력 있는경우 // -->
+                <!-- 반복영역 // -->
+                <div class="table">
+                    <table>
+                        <caption>2019.03.02</caption>
+
+                        <tbody>
+                            <tr>
+                                <th>변경 내역</th>
+                                <td>차량번호 변경(30가****)</td>
+                            </tr>
+
+                            <tr>
+                                <th>차량 용도</th>
+                                <td>자가용/SUV</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- // 반복영역 -->
+
+                <div class="table">
+                    <table>
+                        <caption>2019.03.02</caption>
+
+                        <tbody>
+                            <tr>
+                                <th>변경 내역</th>
+                                <td>차량번호 변경(30가****)</td>
+                            </tr>
+
+                            <tr>
+                                <th>차량 용도</th>
+                                <td>자가용/SUV</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- // 이력 있는경우 -->
+            </div>
+        </div>
+
+        <div class="txt-area">
+            <p>
+                소유자 변경 이력은 자료수집 방법상 오류가 발생할 수 있으니, 의심되는 사항이 있으시면 전화 주시기 바랍니다.
+            </p>
+            <p>
+                또한 자동차 번호 · 소유자 변경 이력은 보고서 상의 제약에 따라 최근부터 4회까지만 제공되기 때문에, 요약 정보의 횟수와 상이할 수 있습니다.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- // 변경이력 -->
+
+<!-- 부가이용 정보 // -->
+<div class="additional">
+    <div class="inner">
+        <div class="fold active">
+            <button type="button" class="btn-fold" onclick="fn.fold(this);"><b>부가이용 정보</b></button>
+
+            <div class="content">
+                <div class="txt-area">
+                    <p>
+                        본 중고차 사고 이력 정보는 정보조회 일자를 기준으로 작성된 것입니다.
+                    </p>
+                    <p>
+                        본 정보는 자동차 일반정보로서 조회 차량을 확인
+                        하기 위하여 참고로 제공하는 것이며, 일부 차량의
+                        경우, 정보의 누락이나 오류가 있을 수 있습니다.
+                    </p>
+                    <p>
+                        침수사고에는 경미한 부분 침수도 포함되며, 자료의
+                        누락으로 이력 “없음”으로 표시되는 경우가 있습니다.
+                    </p>
+                    <p>
+                        본 정보는 중고차 품질 확인을 위한 용도로만 활용
+                        해야 하며, 보험개발원과의 협의 없이 정보의 수집
+                        및 가공 등을 통하여 제삼자에게제 3자에게 제공할
+                        수 없습니다.
+                    </p>
+                    <p>
+                        수리 비용은 보험사에서 지급되는 보험금 산정을
+                        위하여 책정된 차량 수리 관련 항목만의 비용으로
+                        실제 지급받은 보험금과 차이가 있을 수 있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // 부가이용 정보 -->
+
+<!-- 정보 이용관련 유의사항 // -->
+<div class="information">
+    <div class="inner">
+        <div class="fold active">
+            <button type="button" class="btn-fold" onclick="fn.fold(this);"><b>정보 이용관련 유의사항</b></button>
+
+            <div class="content">
+                <p>
+                    <b>자동차보험사고기록이 없었다고 해서 반드시 무사고 라고 할 수는 없습니다.</b>
+                </p>
+                <p>
+                    중고차 사고이력정보 서비스는 자동차 보험을 취급 하는 14개 손해보험사의 자동차 보험수리 지급기록 (1996년 이후)에 근거하여 제공하고 있습니다.
+                </p>
+                <p>
+                    따라서 다음과 같은 경우에는 중고차 사고 이력정보 서비스를 제공할 수 없습니다.
+                </p>
+                <p>
+                    1) 사고가 있었다 하더라도 보험회사에서 사고신고를 하지 않고 자비로 처리한 경우, 사고신고를 하였더라 도 면책, 취소, 등의 사유로 지급되지 않는 경우, 사고 신고 후 자비로 처리한 경우입니다.
+                </p>
+                <p>
+                    2) 사고가 있었다 하더라도 종합정보, 즉 자기차량담 보나 대물배상담보의 자동차 보험에 가입하지 않아 서 자동차 보험으로 수리비용을 청구하지 못한 경우 (단, 이 경우라도 타인 자동차 보험에서 보상받을 경 우에는 사고정보 제공 가능)
+                </p>
+                <p>
+                    3) 자동차보험이 아닌 운수공제(택시공제, 화물공제, 버스공제 등)에 가입되어 운수공제로부터 자동차의 피해에 대한 손해를 보상받은 경우 등
+                </p>
+                <p>
+                    본 중고차 사고이력 정보는 중고차 품질확인을 위한 보조 정보이며 결정적인 판단자료로 사용되어서는 아니 됩니다. 따라서 정밀한 중고차 품질확인을 원하 시면 차량진단 전문업체의 진단을 받아 보시기 바랍 니다.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // 정보 이용관련 유의사항 -->
+
+<p class="txt">
+    보험개발원(www.kidi.or.kr)은 보험업법 제176조에 의하여<br>
+    설립된 보험요율산출기관이며,<br>
+    중고차사고이력정보서비스(www.dohistory.or.kr)는<br>
+    보험업법시행령 제86조 제1호에 근거하여 제공합니다.<br><br>
+    2019년 03월 04일
+
+    <em>보험개발원장</em>
+</p>

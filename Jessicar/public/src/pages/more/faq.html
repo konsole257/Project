@@ -1,0 +1,82 @@
+<div class="header">
+    <h2 class="tit">{{prop.pageName}}</h2>
+    <button type="button" class="btn-mute btn-close">뒤로가기</button>
+</div>
+
+<div id="contents" class="{{prop.page}}">
+    <!-- 검색 // -->
+    <section class="search-area">
+        {{include('./components/skip.html', {"prop": {"id": "search-area-end","text": "검색 건너뛰기"}})}}
+
+        <h3 class="hide">검색어 검색</h3>
+
+        <form>
+            <fieldset>
+                <legend class="hide">검색</legend>
+
+                <div class="input-search">
+                    <input type="search" title="검색어 입력" placeholder="궁금한 점을 검색해 보세요.">
+                    <button type="reset" class="btn-mute btn-reset">삭제</button>
+                    <button type="submit" class="btn-mute btn-search">검색</button>
+                </div>
+            </fieldset>
+        </form>
+    </section>
+
+    <hr id="search-area-end">
+    <!-- // 검색 -->
+
+    <!-- 자주 묻는 질문 // -->
+    <section class="faq-area">
+        {{include('./components/skip.html', {"prop": {"id": "search-area-end","text": "자주 묻는 질문 건너뛰기"}})}}
+
+        <h3 class="tit">자주 묻는 질문</h3>
+
+        <!-- nodata // -->
+        <!-- <div class="nodata">
+            <p>
+                찾으시는 내역이 없네요<br>
+                1:1문의를 보내주시면 빠른시일내에<br>
+                답변 드리겠습니다.
+            </p>
+        </div> -->
+        <!-- // nodata -->
+
+        <ul class="list-area">
+            <!--
+                팝업 호출 function
+                <a href="#팝업 ID값" onclick="fn.popupOpen(this);">
+             -->
+            <li><a href="#popup-faq" onclick="fn.popupOpen(this);">로그인 해야만 문의가 가능한가요?</a></li>
+            <li><a href="#popup-faq" onclick="fn.popupOpen(this);">문의하면 계속 전화오나요?</a></li>
+            <li><a href="#popup-faq" onclick="fn.popupOpen(this);">마음에 드는 차량이 없으면 입고 요청해도 되나요?</a></li>
+            <li><a href="#popup-faq" onclick="fn.popupOpen(this);">마진을 오픈할 수 있는 이유가 있나요?</a></li>
+            <li><a href="#popup-faq" onclick="fn.popupOpen(this);">제시카에서 구매하는 게 이익인 이유?</a></li>
+            <li><a href="#popup-faq" onclick="fn.popupOpen(this);">로그인 해야만 문의가 가능한가요?</a></li>
+            <li><a href="#popup-faq" onclick="fn.popupOpen(this);">문의하면 계속 전화오나요?</a></li>
+            <li><a href="#popup-faq" onclick="fn.popupOpen(this);">마음에 드는 차량이 없으면 입고 요청해도 되나요?</a></li>
+            <li><a href="#popup-faq" onclick="fn.popupOpen(this);">마진을 오픈할 수 있는 이유가 있나요?</a></li>
+            <li><a href="#popup-faq" onclick="fn.popupOpen(this);">제시카에서 구매하는 게 이익인 이유?</a></li>
+            <li><a href="#popup-faq" onclick="fn.popupOpen(this);">로그인 해야만 문의가 가능한가요?</a></li>
+            <li><a href="#popup-faq" onclick="fn.popupOpen(this);">문의하면 계속 전화오나요?</a></li>
+            <li><a href="#popup-faq" onclick="fn.popupOpen(this);">마음에 드는 차량이 없으면 입고 요청해도 되나요?</a></li>
+            <li><a href="#popup-faq" onclick="fn.popupOpen(this);">마진을 오픈할 수 있는 이유가 있나요?</a></li>
+            <li><a href="#popup-faq" onclick="fn.popupOpen(this);">제시카에서 구매하는 게 이익인 이유?</a></li>
+        </ul>
+    </section>
+
+    <hr id="faq-area-end">
+    <!-- // 자주 묻는 질문 -->
+</div>
+
+<!-- 팝업 : 자주 묻는 질문 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-faq",
+        "class": "popup-faq",
+        "type": "full",
+        "tit": "자주 묻는 질문",
+        "content": "./pages/popup/faq.html"
+    }
+})}}
+<!-- // 팝업 : 자주 묻는 질문 -->

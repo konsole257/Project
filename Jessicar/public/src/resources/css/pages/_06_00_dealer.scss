@@ -1,0 +1,314 @@
+/**
+* --------------------------------
+* Dealer CSS
+* --------------------------------
+*/
+#container #contents.dealer {
+    height:calc(100vh - #{calcu(150px)} - #{calcu(3px)});
+    margin-top:0;
+    overflow-y: scroll;
+
+    .info-dealer {
+        @include clearfix;
+
+        position:relative;
+        padding:calcu(90px) calcu(42px);
+        background-color:#fff;
+
+        .pic-dealer {
+            float:left;
+            width:calcu(160px);
+            height:calcu(160px);
+            border-radius:100%;
+            background-color:#29adb8;
+            overflow:hidden;
+
+            img {
+                width:calcu(160px);
+                height:calcu(160px);
+            }
+        }
+
+        .info {
+            float:left;
+            margin-left:3px;
+
+            .number {
+                line-height:calcu(54px);
+                color:$colorBlack2;
+            }
+
+            .name {
+                font-size:calcu(54px);
+                line-height:calcu(66px);
+                margin-bottom:calcu(48px);
+            }
+
+            .grade {
+                span {
+                    &:before {
+                        @include bgList(1, 1);
+
+                        content:"";
+                        display:inline-block;
+                        width:calcu(33px);
+                        height:calcu(33px);
+                        margin-right:calcu(15px);
+                        background-image:url($dirCommon+'icon.png');
+                        background-size:calcu(900px) auto;
+                    }
+                }
+            }
+
+            .tel {
+                color:$colorBlue;
+
+                span {
+                    &:before {
+                        @include bgList(3, 1);
+
+                        content:"";
+                        display:inline-block;
+                        width:calcu(33px);
+                        height:calcu(33px);
+                        margin-right:calcu(15px);
+                        background-image:url($dirCommon+'icon.png');
+                        background-size:calcu(900px) auto;
+                    }
+                }
+            }
+        }
+
+        .txt {
+            float:left;
+            width:100%;
+            line-height:calcu(56px);
+            padding:calcu(46px) calcu(78px) calcu(46px) calcu(56px);
+            margin-top:calcu(58px);
+            border-radius:calcu(20px);
+            background-color:#f8f8f8;
+        }
+    }
+
+    > .tab-menu {
+        margin-top:calcu(27px);
+    }
+
+    > .list-area {
+        padding:calcu(66px) calcu(42px);
+        background-color:#fff;
+    }
+
+    > .appraisal-area {
+        @include clearfix;
+
+        padding:calcu(104px) calcu(42px) 0;
+        background-color:#fff;
+
+        .point-area {
+            float:left;
+            width:calcu(312px);
+            text-align:center;
+
+            .point {
+                display:block;
+                font-size:calcu(72px);
+            }
+
+            .grade-area {
+                display:inline-block;
+                margin-top:calcu(52px);
+            }
+        }
+
+        .graph-area {
+            float:left;
+            position:relative;
+            padding-left:calcu(87px);
+
+            &:before {
+                content:"";
+                position:absolute;
+                top:calcu(15px);
+                left:0;
+                width:calcu(3px);
+                height:calcu(180px);
+                background-color:#f3f3f3;
+            }
+
+            li {
+                @include clearfix;
+
+                font-size:calcu(36px);
+                line-height:calcu(50px);
+
+                .name {
+                    float:left;
+                    width:calcu(220px);
+                    font-size:calcu(33px);
+                    color:$colorBlack2;
+                }
+
+                .graph {
+                    float:left;
+                    position:relative;
+                    width:calcu(280px);
+                    height:calcu(12px);
+                    margin-top:calcu(19px);
+                    border-radius:calcu(6px);
+                    background-color:#eee;
+                    overflow:hidden;
+
+                    .bar {
+                        position:absolute;
+                        top:0;
+                        left:0;
+                        width:0;
+                        height:100%;
+                        background-color:#00d1e6;
+                    }
+                }
+
+                .point {
+                    float:left;
+                    width:calcu(72px);
+                    text-align:right;
+                    color:$colorDefault;
+                }
+            }
+        }
+    }
+
+    > .review-area {
+        padding:calcu(132px) calcu(42px) 0;
+        background-color:#fff;
+
+        > .header {
+            position:relative;
+            padding-bottom:calcu(36px);
+            border-bottom:calcu(3px) solid #e7e7e7;
+
+            > .tit {
+                font-size:calcu(42px);
+
+                span {
+                    color:$colorBlue;
+                }
+            }
+            label {
+                position:absolute;
+                top:0;
+                right:0;
+
+                input[type="checkbox"] {
+                    & + span {
+                        line-height:calcu(39px);
+
+                        &:before {
+                            width:calcu(29px);
+                            height:calcu(21px);
+                            margin-top:calcu(8px);
+                            background-image:none;
+                        }
+                    }
+
+                    &:checked {
+                        & + span {
+                            &:before {
+                                @include bgList(9, 1);
+
+                                background-image:url($dirCommon+'form.png');
+                                background-size:calcu(900px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .list-area {
+            li {
+                padding:calcu(42px) 0 calcu(90px);
+                border-top:calcu(3px) solid #e7e7e7;
+
+                &:first-child {
+                    border-top:0;
+                }
+
+                .grade-area {
+                    display:inline-block;
+                    vertical-align:top;
+                }
+
+                .name {
+                    font-size:calcu(42px);
+                    line-height:calcu(39px);
+                    color:$colorLightGray;
+                    margin:0 calcu(18px);
+                }
+
+                .date {
+                    font-size:calcu(42px);
+                    line-height:calcu(39px);
+                    color:$colorLightGray;
+                }
+
+                .header {
+                    margin-top:calcu(18px);
+
+                    .flag {
+                        height:calcu(54px);
+                        font-size:calcu(36px);
+                        line-height:calcu(48px);
+                        color:$colorBlack2;
+                        padding:0 calcu(12px);
+                        margin-right:calcu(18px);
+                        border:calcu(3px) solid #aea7a2;
+                    }
+
+                    .car-name {
+                        font-size:calcu(42px);
+                        line-height:calcu(54px);
+                        color:$colorBlack2;
+                    }
+                }
+
+                .txt {
+                    line-height:calcu(56px);
+                    margin-top:calcu(50px);
+                }
+
+                .pic-area {
+                    @include clearfix;
+
+                    margin-top:calcu(74px);
+
+                    .pic {
+                        float:left;
+                        position:relative;
+                        width:calcu(198px);
+                        height:calcu(198px);
+                        margin-left:calcu(24px);
+                        overflow:hidden;
+
+                        &:first-child {
+                            margin-left:0;
+                        }
+
+                        .img {
+                            position:absolute;
+                            top:0;
+                            right:0;
+                            bottom:0;
+                            left:0;
+                            width:100%;
+                            height:calcu(198px);
+                            margin:auto;
+                            object-fit:cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,132 @@
+<div class="header">
+    <h2 class="tit">{{prop.pageName}}</h2>
+    <button type="button" class="btn-mute btn-close">뒤로가기</button>
+</div>
+
+<div id="contents" class="{{prop.page}}">
+    <!-- 딜러정보 // -->
+    <div class="info-dealer">
+        <figure class="pic-dealer">
+            <img src="{{dirRoot}}/resources/images/temp/temp-dealer100x100.png" alt="" class="img">
+        </figure>
+        <div class="info">
+            <div class="number">사원번호 12-345-67890</div>
+            <div class="name">라온 모터스 <b>김민재 딜러</b></div>
+            <div class="division-horizon-line">
+                <span class="career">딜러 경력 3년차</span>
+                <span class="grade"><span>3.6</span></span>
+                <span class="tel"><span>032-715-7477</span></span>
+            </div>
+        </div>
+        <p class="txt">
+            랭글러 무사고 차량입니다.<br>
+            사진으로 보시는 것처럼 새차 상태이고, 타이어와 휠 상태가 매우 좋으며 결점 없고 키로수 짧은 신차급 차량입니다.
+        </p>
+    </div>
+    <!-- // 딜러정보 -->
+
+
+    <!-- 탭메뉴 // -->
+    <div class="tab-menu">
+        <a href="{{dirRoot}}/dealer/index.html" class="menu active">판매중인 차량 <span>3</span></a><!-- 활성화 class="active" -->
+        <a href="{{dirRoot}}/dealer/review.html" class="menu">딜러후기 <span>3</span></a>
+    </div>
+    <!-- // 탭메뉴 -->
+
+    <ul class="list-area">
+        <!-- 반복영역 // -->
+        <li>
+            <a href="/">
+                <div class="car-horizon">
+                    <label>
+                        <input type="checkbox" class="btn-bookmark" checked><!-- 찜한차일경우 checked -->
+                        <span>찜</span>
+                    </label>
+
+                    <div class="pic-area">
+                        <figure class="pic-dealer">
+                            <img src="{{dirRoot}}/resources/images/temp/temp-dealer100x100.png" alt="" class="img">
+                        </figure>
+
+                        <figure class="pic-car">
+                            <img src="{{dirRoot}}/resources/images/temp/temp-car438x300.jpg" alt="" class="img">
+                        </figure>
+                    </div>
+                    <div class="car-info">
+                        <b class="name">BMW 5시리즈 (F10) 520d</b>
+                        <div class="data division-horizon-bullet">
+                            <span>16년 11월식(17년형)</span>
+                            <span>71,221km</span>
+                            <span>가솔린</span>
+                        </div>
+                        <div class="margin">딜러 마진 -10%</div><!-- 2020.05.21 : "마진율" -> "딜러마진" 텍스트 변경  -->
+                        <b class="price">판매가  2,350 만원</b>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <!-- // 반복영역 -->
+
+        <li>
+            <a href="/">
+                <div class="car-horizon">
+                    <label>
+                        <input type="checkbox" class="btn-bookmark" checked><!-- 찜한차일경우 checked -->
+                        <span>찜</span>
+                    </label>
+
+                    <div class="pic-area">
+                        <figure class="pic-dealer">
+                            <img src="{{dirRoot}}/resources/images/temp/temp-dealer100x100.png" alt="" class="img">
+                        </figure>
+
+                        <figure class="pic-car">
+                            <img src="{{dirRoot}}/resources/images/temp/temp-car438x300.jpg" alt="" class="img">
+                        </figure>
+                    </div>
+                    <div class="car-info">
+                        <b class="name">BMW 5시리즈 (F10) 520d</b>
+                        <div class="data division-horizon-bullet">
+                            <span>16년 11월식(17년형)</span>
+                            <span>71,221km</span>
+                            <span>가솔린</span>
+                        </div>
+                        <div class="margin">딜러 마진 -10%</div>
+                        <b class="price">판매가  2,350 만원</b>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="/">
+                <div class="car-horizon">
+                    <label>
+                        <input type="checkbox" class="btn-bookmark" checked><!-- 찜한차일경우 checked -->
+                        <span>찜</span>
+                    </label>
+
+                    <div class="pic-area">
+                        <figure class="pic-dealer">
+                            <img src="{{dirRoot}}/resources/images/temp/temp-dealer100x100.png" alt="" class="img">
+                        </figure>
+
+                        <figure class="pic-car">
+                            <img src="{{dirRoot}}/resources/images/temp/temp-car438x300.jpg" alt="" class="img">
+                        </figure>
+                    </div>
+                    <div class="car-info">
+                        <b class="name">BMW 5시리즈 (F10) 520d</b>
+                        <div class="data division-horizon-bullet">
+                            <span>16년 11월식(17년형)</span>
+                            <span>71,221km</span>
+                            <span>가솔린</span>
+                        </div>
+                        <div class="margin">딜러 마진 -10%</div>
+                        <b class="price">판매가  2,350 만원</b>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>

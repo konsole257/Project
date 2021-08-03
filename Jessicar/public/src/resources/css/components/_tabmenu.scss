@@ -1,0 +1,42 @@
+/* tab-menu */
+.tab-menu {
+    display:flex;
+    padding:0 calcu(42px);
+    border-bottom:calcu(3px) solid #e0e0e0;
+    background-color:#fff;
+
+    .menu {
+        flex:1;
+        position:relative;
+        height:calcu(120px);
+        font-size:calcu(42px);
+        text-align:center;
+        line-height:calcu(120px);
+        color:$colorLightGray;
+
+        &.active {
+            font-weight:700;
+            color:$colorBlue;
+
+            &:after {
+                content:"";
+                position:absolute;
+                right:0;
+                bottom:-1px;
+                left:0;
+                width:calc(100% - #{calcu(48px)});
+                height:calcu(6px);
+                margin:auto;
+                background-color:$colorBlue;
+            }
+        }
+    }
+}
+
+.tab-contents {
+    display:none;
+
+    &.active {
+        display:block;
+    }
+}

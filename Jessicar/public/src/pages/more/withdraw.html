@@ -1,0 +1,50 @@
+<div class="header">
+    <h2 class="tit">{{prop.pageName}}</h2>
+    <button type="button" class="btn-mute btn-close">뒤로가기</button>
+</div>
+
+<div id="contents" class="{{prop.page}}">
+    <p class="txt">
+        정말로 회원 탈퇴를 하시겠습니까?
+    </p>
+
+    <p class="txt2">회원 탈퇴 전 확인해 주세요.</p>
+
+    <div class="txt-area">
+        <p>탈퇴 후 30일간 동일 ID로 재가입 불가</p>
+        <p>탈퇴 취소 처리 불가</p>
+        <p>활동 내역 복구 불가</p>
+    </div>
+
+    <div class="form">
+        <form>
+            <fieldset>
+                <legend class="hide">탈퇴사유 작성</legend>
+
+                <p class="txt">제시카에게 조언을 남겨주세요 <span>(선택)</span></p>
+
+                <textarea title="탈퇴사유 입력" placeholder="탈퇴사유를 작성해 주시면 더 나은 서비스를 제공할 수 있도록 노력하겠습니다."></textarea>
+
+                <div class="btn-area">
+                    <!--
+                        팝업 호출 function
+                        <a href="#팝업 ID값" onclick="fn.popupOpen(this);">
+                     -->
+                    <button type="reset" class="btn-medium-stroke-black btn-cancel">취소</button>
+                    <a href="#popup-withdraw-result" class="btn-medium-fill-blue btn-withdraw" onclick="fn.popupOpen(this);">탈퇴하기</a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<!-- 팝업 : 탈퇴하기 결과 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-withdraw-result",
+        "class": "popup-withdraw-result",
+        "type": "alert",
+        "content": "./pages/popup/withdraw-result.html"
+    }
+})}}
+<!-- // 팝업 : 탈퇴하기 결과 -->

@@ -1,0 +1,131 @@
+<div id="contents" class="{{prop.page}}">
+    <!-- 검색 // -->
+    <section class="search-area">
+        {{include('./components/skip.html', {"prop": {"id": "search-area-end","text": "검색 건너뛰기"}})}}
+
+        <h2 class="hide">검색어 검색</h2>
+
+        <form>
+            <fieldset>
+                <legend class="hide">검색</legend>
+
+                <div class="input-search">
+                    <input type="search" title="검색어 입력" placeholder="원하는 차량을 검색해 보세요."  onclick="fn.popupOpen('#popup-search');$('.popup-search .input-search input').focus();">
+                    <button type="submit" class="btn-mute btn-search">검색</button>
+                </div>
+
+                <!--
+                    팝업 호출 function
+                    fn.popupOpen('팝업 ID값');
+                 -->
+                <button type="button" class="btn btn-filter" onclick="fn.popupOpen('#popup-filter');">조건필터</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <hr id="search-area-end">
+    <!-- // 검색 -->
+
+    <!-- 모델 찾기 // -->
+    <section class="model-area">
+        {{include('./components/skip.html', {"prop": {"id": "model-area-end","text": "모델 찾기 건너뛰기"}})}}
+
+        <h2 class="hide">브랜드/차종 찾기</h2>
+
+        <div class="tab-menu">
+            <button type="button" class="menu">브랜드</button><!-- 버튼 활성화 class="active" -->
+            <button type="button" class="menu active">차종</button>
+        </div>
+
+        <!-- 브랜드에서만 노출 // -->
+        <!-- <div class="division-horizon-line lang-menu">
+            <button type="button" class="menu">ABC</button>
+            <button type="button" class="menu active">ㄱㄴㄷ</button>
+        </div> -->
+        <!-- // 브랜드에서만 노출 -->
+
+        <div class="dial-menu">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <a href="#a" class="menu swiper-slide active">경차</a><!-- 버튼 활성화 class="active" -->
+                    <a href="#b" class="menu swiper-slide">소형</a>
+                    <a href="#c" class="menu swiper-slide">준중형</a>
+                    <a href="#d" class="menu swiper-slide">대형</a>
+                    <a href="#e" class="menu swiper-slide">SUV</a>
+                    <a href="#f" class="menu swiper-slide">RV</a>
+                    <a href="#g" class="menu swiper-slide">스포츠</a>
+                    <a href="#h" class="menu swiper-slide">승합</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="list-area">
+            <h3 class="tit" id="a">경차</h3>
+            <ul>
+                <!-- 반복영역 // -->
+                <li>
+                    <!-- 2020.06.19 : 수정 // -->
+                    <button type="button">
+                        <span class="ko">아토스</span>
+                        <span class="number">1</span>
+                    </button>
+                    <!-- // 2020.06.19 : 수정 -->
+                </li>
+                <!-- // 반복영역 -->
+            </ul>
+
+            <!-- 2020.06.19 : 삭제 // -->
+            <!-- <h3 class="tit" class="b">소형</h3>
+            <ul>
+                <li>
+                    <button type="button">
+                        <img src="{{dirRoot}}/resources/images/temp/temp-emblem.png" alt="" class="img">
+                        <span class="ko">닛산</span>
+                        <span class="en">NISSAN</span>
+                        <span class="number">1</span>
+                    </button>
+                </li>
+            </ul>
+
+            <h3 class="tit" class="c">준중형</h3>
+            <ul>
+                <li>
+                    <button type="button">
+                        <img src="{{dirRoot}}/resources/images/temp/temp-emblem.png" alt="" class="img">
+                        <span class="ko">닛산</span>
+                        <span class="en">NISSAN</span>
+                        <span class="number">1</span>
+                    </button>
+                </li>
+            </ul> -->
+            <!-- // 2020.06.19 : 삭제 -->
+        </div>
+    </section>
+
+    <hr id="model-area-end">
+    <!-- // 모델 찾기 -->
+</div>
+
+<!-- 팝업 : 조건필터 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-filter",
+        "class": "popup-filter",
+        "type": "full",
+        "tit": "조건필터",
+        "content": "./pages/popup/filter.html"
+    }
+})}}
+<!-- // 팝업 : 조건필터 -->
+
+<!-- 팝업 : 검색 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-search",
+        "class": "popup-search",
+        "type": "search",
+        "tit": "검색",
+        "content": "./pages/popup/search.html"
+    }
+})}}
+<!-- // 팝업 : 검색 -->

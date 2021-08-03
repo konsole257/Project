@@ -1,0 +1,503 @@
+@charset "utf-8";
+
+@import
+    "./utils/variable",
+    "./utils/function",
+    "./utils/mixin";
+
+/**
+* --------------------------------
+* Home CSS
+* --------------------------------
+*/
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes fadeOut {
+    0% {opacity:1;}
+    100% {opacity:0;z-index:-1;}
+}
+
+#wrap {
+    opacity:0;
+    animation:fadeIn 0ms 500ms forwards;
+}
+
+#container #contents.home {
+    margin-top:0;
+
+    > section {
+        position:relative;
+        padding:calcu(120px) calcu(42px);
+        margin-top:calcu(27px);
+        background:#fff;
+        overflow:hidden;
+
+        > .header {
+           margin-bottom:calcu(60px);
+
+           > .inner {
+               position:relative;
+
+               > .tit {
+                   font-size:calcu(54px);
+
+                   + .txt {
+                       font-size:calcu(42px);
+                       color:$colorBlack1;
+                       margin-top:calcu(24px);
+                    }
+                }
+           }
+        }
+
+        &.visual-area {
+           padding:0;
+           margin-top:0;
+
+           li {
+              .img {
+                  width:100%;
+              }
+           }
+
+           .swiper-pagination {
+               position:absolute;
+               left:calcu(42px);
+               bottom:calcu(160px);
+               width:auto;
+               font-size:calcu(42px);
+               color:#43655f;
+               line-height:calcu(60px);
+
+               .swiper-pagination-current {
+                    font-weight:700;
+               }
+           }
+
+           .btn-toggle {
+               position:absolute;
+               left:calcu(115px);
+               bottom:calcu(141px);
+               width:calcu(96px);
+               height:calcu(96px);
+
+               &:after {
+                   @include bgList(3, 1);
+
+                    content:"";
+                   position:absolute;
+                   z-index:1;
+                   top:0;
+                   right:0;
+                   bottom:0;
+                   left:0;
+                   width:calcu(60px);
+                   height:calcu(60px);
+                   margin:auto;
+                   background-image:url($dirCommon+'btn.png');
+                   background-size:calcu(900px) auto;
+               }
+
+           }
+       }
+
+       &.special-area {
+           padding-top:calcu(32px);
+           margin-top:0;
+           background:#fff;
+
+           li {
+               margin-top:calcu(70px);
+
+               &:first-child {
+                   margin-top:0;
+               }
+           }
+
+           .swiper-pagination {
+               bottom:calcu(21px);
+               left:0;
+               width:100%;
+
+               .swiper-pagination-bullet {
+                   opacity:1;
+                   width:calcu(20px);
+                   height:calcu(20px);
+                   margin-left:calcu(24px);
+                   border-radius:calcu(10px);
+                   background-color:#ccc;
+
+                   &:first-child {
+                       margin-left:0;
+                   }
+
+                   &.swiper-pagination-bullet-active {
+                       width:calcu(78px);
+                       background-color:#555;
+                   }
+               }
+           }
+       }
+
+       &.banner-area {
+           padding-top:calcu(99px);
+           padding-bottom:0;
+           margin-top:0;
+
+           .banner {
+               position:relative;
+                a {
+                    display:block;
+
+                   img {
+                       width:100%;
+                   }
+               }
+           }
+       }
+
+       &.recommend-area {
+           background-color:#fff;
+
+           .tab-menu {
+               display:block;
+               padding:0;
+               margin-top:calcu(60px);
+               border-bottom:none;
+
+               .menu {
+                   height:auto;
+                   line-height:1;
+                   margin-left:calcu(48px);
+
+                   &:after {
+                       width:100%;
+                       height:calcu(3px);
+                   }
+
+                   &:first-child {
+                       margin-left:0;
+                   }
+               }
+           }
+
+           .list-area {
+               @include clearfix;
+
+               li {
+                   float:left;
+                   width:calc((100vw - #{calcu(84px)} - #{calcu(132px)}) / 3);
+                   margin:calcu(82px) 0 0 calcu(63px);
+
+                   [class*="car"] {
+                       .pic-area {
+                           padding-bottom:calcu(42px);
+                           .pic-car {
+                               height:calc((100vw - #{calcu(84px)} - #{calcu(132px)}) / 3);
+                               border-radius:100%;
+                           }
+                       }
+
+                       .car-info {
+                           .name {
+                               text-align:center;
+                               color:$colorGray;
+                           }
+                       }
+                   }
+
+                   &:nth-child(3n + 1) {
+                       margin-left:0;
+                   }
+
+                   &:nth-child(1),
+                   &:nth-child(2),
+                   &:nth-child(3) {
+                       margin-top:0;
+                   }
+               }
+           }
+       }
+
+       &.new-area {
+           padding-bottom:calcu(213px);
+
+           .swiper-slide {
+               li {
+                   float:left;
+                   width:calc((100% - #{calcu(42px)}) / 2);
+                   margin:calcu(78px) 0 0 calcu(42px);
+
+                   &:nth-child(2n + 1) {
+                       margin-left:0;
+                   }
+
+                   &:nth-child(1),
+                   &:nth-child(2) {
+                       margin-top:0;
+                   }
+
+                   .car-info {
+                       .name {
+                           width:calc(100% - #{calcu(140px)} - #{calcu(16px)});
+                           font-size:calcu(42px);
+                           margin-top:calcu(-67px);
+                       }
+
+                       .price {
+                           font-size:calcu(42px);
+                           margin-top:calcu(20px);
+                       }
+
+                       .data {
+                           margin-top:calcu(20px);
+                       }
+                   }
+               }
+           }
+
+           .swiper-pagination {
+               bottom:calcu(115px);
+               left:0;
+               width:100%;
+
+               .swiper-pagination-bullet {
+                   opacity:1;
+                   width:calcu(20px);
+                   height:calcu(20px);
+                   margin-left:calcu(24px);
+                   border-radius:calcu(10px);
+                   background-color:#ccc;
+
+                   &:first-child {
+                       margin-left:0;
+                   }
+
+                   &.swiper-pagination-bullet-active {
+                       width:calcu(78px);
+                       background-color:#555;
+                   }
+               }
+           }
+       }
+
+        &.event-area {
+            padding-bottom:calcu(230px);
+
+            li {
+                .pic-car {
+                    border-radius:calcu(9px);
+                    overflow:hidden;
+
+                    .img {
+                        width:100%;
+                    }
+                }
+
+                .name {
+                    display:block;
+                    font-weight:700;
+                    margin-top:calcu(53px);
+                }
+            }
+
+            .swiper-pagination {
+                bottom:calcu(119px);
+                left:0;
+                width:100%;
+
+                .swiper-pagination-bullet {
+                    opacity:1;
+                    width:calcu(20px);
+                    height:calcu(20px);
+                    margin-left:calcu(24px);
+                    border-radius:calcu(10px);
+                    background-color:#ccc;
+
+                    &:first-child {
+                        margin-left:0;
+                    }
+
+                    &.swiper-pagination-bullet-active {
+                        width:calcu(78px);
+                        background-color:#555;
+                    }
+                }
+            }
+        }
+
+        &.review-area {
+             padding-bottom:calcu(213px);
+
+            .swiper-slide {
+                li {
+                    float:left;
+                    width:calc((100% - #{calcu(42px)}) / 2);
+                    margin:calcu(78px) 0 0 calcu(42px);
+
+                    &:nth-child(2n + 1) {
+                        margin-left:0;
+                    }
+
+                    &:nth-child(1),
+                    &:nth-child(2) {
+                        margin-top:0;
+                    }
+
+                    .car-info {
+                        .grade-area {
+                            margin:calcu(-55px) 0 calcu(12px);
+                        }
+
+                        .name {
+                            font-size:calcu(42px);
+                        }
+                    }
+                }
+            }
+
+            .swiper-pagination {
+                bottom:calcu(115px);
+                left:0;
+                width:100%;
+
+                .swiper-pagination-bullet {
+                    opacity:1;
+                    width:calcu(20px);
+                    height:calcu(20px);
+                    margin-left:calcu(24px);
+                    border-radius:calcu(10px);
+                    background-color:#ccc;
+
+                    &:first-child {
+                        margin-left:0;
+                    }
+
+                    &.swiper-pagination-bullet-active {
+                        width:calcu(78px);
+                        background-color:#555;
+                    }
+                }
+            }
+        }
+
+        &.dealer-area {
+            padding-left:0;
+            padding-right:0;
+            padding-bottom:calcu(214px);
+            background-color:#e8f9fa;
+
+            .header {
+                > .inner {
+                    > .tit {
+                        font-weight:400;
+                        font-size:calcu(52px);
+                        text-align:center;
+                        line-height:calcu(64px);
+
+                        > b {
+                            display:block;
+                        }
+                    }
+                }
+            }
+
+            .swiper-slide {
+                width:calcu(690px);
+                border-radius:calcu(9px);
+                overflow:hidden;
+
+                .img {
+                    width:100%;
+                }
+
+                &.swiper-slide-active {
+                    transform:scale(1.2);
+                }
+            }
+
+            .swiper-pagination {
+                bottom:calcu(80px);
+                left:0;
+                width:100%;
+
+                .swiper-pagination-bullet {
+                    opacity:1;
+                    width:calcu(20px);
+                    height:calcu(20px);
+                    margin-left:calcu(24px);
+                    border-radius:calcu(10px);
+                    background-color:#ccc;
+
+                    &:first-child {
+                        margin-left:0;
+                    }
+
+                    &.swiper-pagination-bullet-active {
+                        width:calcu(78px);
+                        background-color:#555;
+                    }
+                }
+            }
+        }
+
+
+       &.notice-area {
+           position:relative;
+           height:calcu(135px);
+           padding:0 calcu(42px);
+           margin-top:0;
+           background:#fff;
+
+           .tit {
+               position:absolute;
+               top:0;
+               bottom:0;
+               left:calcu(42px);
+               width:calcu(78px);
+               height:calcu(54px);
+               line-height:calcu(54px);
+               font-size:calcu(36px);
+               color:$colorWhite;
+               text-align:center;
+               margin:auto;
+               border-radius:calcu(3px);
+               background:#69bfb7;
+           }
+
+           .swiper-container {
+               height:100%;
+
+               li {
+                   width:100%;
+                   height:calcu(135px);
+                   padding-left:calcu(105px);
+                   box-sizing:border-box;
+
+                   .ellipsis {
+                       @include ellipsis(calcu(135px), 1);
+                   }
+               }
+           }
+       }
+   }
+}
+
+.splash {
+    animation:fadeOut 1500ms 2000ms forwards;
+    position:fixed;
+    z-index:1000;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    .img {
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+}

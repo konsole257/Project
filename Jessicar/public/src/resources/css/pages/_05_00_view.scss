@@ -1,0 +1,677 @@
+/**
+* --------------------------------
+* View CSS
+* --------------------------------
+*/
+#container #contents.view {
+    height:calc(100vh - #{calcu(150px)} - #{calcu(3px)} - #{calcu(150px)} - env(safe-area-inset-bottom));
+    margin-top:0;
+    overflow-y:scroll;
+
+    > .btn-area {
+        @include clearfix;
+
+        position:fixed;
+        left:0;
+        bottom:0;
+        width:100%;
+
+        a {
+            float:left;
+            width:50%;
+            padding-bottom:env(safe-area-inset-bottom);
+        }
+    }
+
+    .pic-area {
+        position:relative;
+
+        img {
+            width:100%;
+        }
+
+        .swiper-pagination {
+            bottom:calcu(60px);
+            left:calcu(42px);
+            width:calcu(120px);
+            height:calcu(64px);
+            font-size:calcu(32px);
+            line-height:calcu(64px);
+            color:$colorWhite;
+            border-radius:calcu(32px);
+            background-color:rgba(0, 0, 0, 0.3);
+
+            .swiper-pagination-current {
+                font-weight:700;
+            }
+        }
+    }
+
+    .info-area {
+        > [class*="info"] {
+            position:relative;
+            padding:calcu(90px) calcu(42px);
+            margin-top:calcu(27px);
+            background-color:#fff;
+
+            .header {
+                position:relative;
+
+                .tit {
+                    font-size:calcu(54px);
+                }
+
+                .btn-all {
+                    position:absolute;
+                    right:0;
+                    bottom:0;
+                    font-size:calcu(42px);
+                    color:$colorBlack2;
+
+                    &:after {
+                        @include bgList(3, 1);
+
+                        content:"";
+                        display:inline-block;
+                        width:calcu(15px);
+                        height:calcu(25px);
+                        margin-left:calcu(18px);
+                        background-image:url($dirCommon+'btn-arrow.png');
+                        background-size:calcu(900px) auto;
+                    }
+                }
+            }
+
+            &.info-basic {
+                padding-right:calcu(60px);
+                padding-left:calcu(60px);
+                margin-top:0;
+
+                .name {
+                    display:block;
+                    font-size:calcu(42px);
+                }
+
+                .price {
+                    display:block;
+                    font-size:calcu(72px);
+                    margin-top:calcu(42px);
+                }
+
+                .margin {
+                    position:relative;
+                    margin-top:calcu(18px);
+
+                    .percent {
+                        display:block;
+                        height:calcu(108px);
+                        line-height:calcu(108px);
+                        color:$colorBlack2;
+                        border-bottom:calcu(3px) solid #e7e7e7;
+
+                        &:before {
+                            @include bgList(1, 1);
+
+                            content:"";
+                            display:inline-block;
+                            width:calcu(69px);
+                            height:calcu(69px);
+                            vertical-align:top;
+                            margin:calcu(28px) calcu(15px) 0 0;
+                            background-image:url($dirView+'icon.png');
+                            background-size:calcu(900px) auto;
+                        }
+                    }
+
+                    .fold {
+                        .btn-fold {
+                            position:absolute;
+                            top:0;
+                            right:0;
+                            width:auto;
+                            height:calcu(108px);
+                            padding-right:calcu(60px);
+                        }
+
+                        .content {
+                            background-color:#f8f8f8;
+
+                            table {
+                                display:block;
+                                width:100%;
+                                padding:0 calcu(60px);
+
+                                tbody {
+                                    display:block;
+                                    padding:calcu(99px) 0 calcu(83px);
+                                    background-image:url($dirView+'border-pattern1.jpg');
+                                    background-size:calcu(36px);
+                                    background-repeat:repeat-x;
+
+                                    &:first-of-type {
+                                        background:none;
+                                    }
+
+                                    tr {
+                                        display:block;
+                                        position:relative;
+                                        margin-top:calcu(60px);
+
+                                        &:first-child {
+                                            margin-top:0;
+                                        }
+
+                                        th {
+                                            display:inline-block;
+                                            font-weight:400;
+                                            text-align:left;
+
+                                            .tooltip {
+                                                margin-left:calcu(24px);
+                                            }
+
+                                            .btn-document {
+                                                display:block;
+                                                font-size:calcu(42px);
+                                                color:#6dc8bf;
+                                                text-align:left;
+                                                margin-top:calcu(42px);
+
+                                                &:before {
+                                                    @include bgList(2, 1);
+
+                                                    content:"";
+                                                    display:inline-block;
+                                                    width:calcu(27px);
+                                                    height:calcu(33px);
+                                                    vertical-align:top;
+                                                    margin-right:calcu(15px);
+                                                    background-image:url($dirView+'icon.png');
+                                                    background-size:calcu(900px) auto;
+                                                }
+                                            }
+                                        }
+
+                                        td {
+                                            display:block;
+
+                                            > span {
+                                                position:absolute;
+                                                top:0;
+                                                right:0;
+
+                                                small {
+                                                    display:block;
+                                                    font-size:calcu(42px);
+                                                    text-align:right;
+                                                    color:$colorBlack2;
+                                                    margin-top:calcu(18px);
+                                                }
+                                            }
+
+                                            .txt {
+                                                height:calcu(99px);
+                                                line-height:calcu(99px);
+                                                font-size:calcu(42px);
+                                                text-align:center;
+                                                color:$colorBlack2;
+                                                margin-top:calcu(93px);
+                                                background:#e7e7e7;
+                                            }
+
+                                            table {
+                                                padding:0;
+                                                margin-top:calcu(60px);
+
+                                                tbody {
+                                                    padding:0;
+
+                                                    tr {
+                                                        margin-top:calcu(45px);
+
+                                                        th {
+                                                            color:$colorBlack2;
+
+                                                            small {
+                                                                display:block;
+                                                                font-size:calcu(42px);
+                                                                margin-top:calcu(21px);
+                                                            }
+                                                        }
+
+                                                        td {
+                                                            color:$colorBlack2;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                tfoot {
+                                    display:block;
+                                    padding:calcu(86px) 0 calcu(150px);
+                                    background-image:url($dirView+'border-pattern1.jpg'), url($dirView+'border-pattern2.jpg');
+                                    background-size:calcu(36px), calcu(64px);
+                                    background-position:left top, left bottom;
+                                    background-repeat:repeat-x;
+
+                                    tr {
+                                        display:block;
+                                        position:relative;
+                                        margin-top:calcu(60px);
+
+                                        &:first-child {
+                                            margin-top:0;
+                                        }
+
+                                        th {
+                                            display:inline-block;
+                                            font-weight:400;
+                                            text-align:left;
+                                        }
+
+                                        td {
+                                            display:block;
+
+                                            > span {
+                                                position:absolute;
+                                                top:0;
+                                                right:0;
+                                                font-size:calcu(54px);
+                                                color:$colorBlue;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .btn-area {
+                    @include clearfix;
+
+                    margin-top:calcu(104px);
+
+                    a {
+                        float:left;
+                        width:33.33%;
+
+                        &:before {
+                            content:"";
+                            display:block;
+                            width:calcu(144px);
+                            height:calcu(144px);
+                            margin:0 auto;
+                            background-image:url($dirView+'icon.png');
+                            background-size:calcu(900px) auto;
+                        }
+
+                        &.btn-price {
+                            &:before {
+                                @include bgList(1, 2);
+                            }
+                        }
+
+                        &.btn-trouble {
+                            &:before {
+                                @include bgList(3, 2);
+                            }
+                        }
+
+                        &.btn-repair {
+                            &:before {
+                                @include bgList(5, 2);
+                            }
+                        }
+
+                        span {
+                            display:block;
+                            font-size:calcu(42px);
+                            color:$colorBlack2;
+                            margin:calcu(28px) 0 calcu(24px);
+
+                            &:after {
+                                @include bgList(2, 1);
+
+                                content:"";
+                                display:inline-block;
+                                width:calcu(12px);
+                                height:calcu(24px);
+                                vertical-align:top;
+                                margin:calcu(4px) 0 0 calcu(18px);
+                                background-image:url($dirCommon+'btn-arrow.png');
+                                background-size:calcu(900px) auto;
+                            }
+                        }
+                    }
+                }
+
+                .basic {
+                    padding:calcu(60px) calcu(60px) calcu(39px);
+                    margin-top:calcu(90px);
+                    border-radius:calcu(20px);
+                    background-color:#f8f8f8;
+
+                    table {
+                        caption {
+                            height:calcu(90px);
+                            line-height:calcu(90px);
+                            font-weight:700;
+                            text-align:left;
+                        }
+
+                        tbody {
+                            display:block;
+
+                            tr {
+                                display:block;
+                                position:relative;
+                                border-top:calcu(3px) solid #e7e7e7;
+
+                                &:first-child {
+                                    border-top:none;
+                                }
+
+                                th {
+                                    display:block;
+                                    height:calcu(120px);
+                                    line-height:calcu(120px);
+                                    font-size:calcu(42px);
+                                    text-align:left;
+                                    color:$colorLightGray;
+                                }
+
+                                td {
+                                    position:absolute;
+                                    top:0;
+                                    right:0;
+                                    height:calcu(120px);
+                                    line-height:calcu(120px);
+                                    font-size:calcu(42px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.info-option {
+                .option {
+                    @include clearfix;
+
+                    label {
+                        float:left;
+                        width:25%;
+
+                        span {
+                            display:block;
+                            position:relative;
+                            height:calcu(300px);
+                            text-align:center;
+                            color:$colorLightGray;
+                            padding-top:calcu(260px);
+
+                            &:before {
+                                content:"";
+                                position:absolute;
+                                top:0;
+                                right:0;
+                                bottom:0;
+                                left:0;
+                                margin:auto;
+                                background-image:url($dirView+'icon.png');
+                                background-size:calcu(900px) auto;
+                            }
+                        }
+
+                        :checked {
+                            + span {
+                                color:$colorDefault;
+                            }
+                        }
+
+                        .navigation {
+                            + span {
+                                &:before {
+                                    width:calcu(99px);
+                                    height:calcu(94px);
+                                    @include bgList(1, 4);
+                                }
+                            }
+
+                            &:checked {
+                                + span {
+                                    &:before {
+                                        @include bgList(1, 6);
+                                    }
+                                }
+                            }
+                        }
+
+                        .blackbox {
+                            + span {
+                                &:before {
+                                    width:calcu(99px);
+                                    height:calcu(84px);
+                                    @include bgList(3, 4);
+                                }
+                            }
+
+                            &:checked {
+                                + span {
+                                    &:before {
+                                        @include bgList(3, 6);
+                                    }
+                                }
+                            }
+                        }
+
+                        .sunroof {
+                            + span {
+                                &:before {
+                                    width:calcu(99px);
+                                    height:calcu(106px);
+                                    @include bgList(5, 4);
+                                }
+                            }
+
+                            &:checked {
+                                + span {
+                                    &:before {
+                                        @include bgList(5, 6);
+                                    }
+                                }
+                            }
+                        }
+
+                        .hipass {
+                            + span {
+                                &:before {
+                                    width:calcu(99px);
+                                    height:calcu(38px);
+                                    @include bgList(7, 4);
+                                }
+                            }
+
+                            &:checked {
+                                + span {
+                                    &:before {
+                                        @include bgList(7, 6);
+                                    }
+                                }
+                            }
+                        }
+
+                        .rearsensor {
+                            + span {
+                                &:before {
+                                    width:calcu(99px);
+                                    height:calcu(57px);
+                                    @include bgList(1, 8);
+                                }
+                            }
+
+                            &:checked {
+                                + span {
+                                    &:before {
+                                        @include bgList(1, 10);
+                                    }
+                                }
+                            }
+                        }
+
+                        .rearcamera {
+                            + span {
+                                &:before {
+                                    width:calcu(99px);
+                                    height:calcu(56px);
+                                    @include bgList(3, 8);
+                                }
+                            }
+
+                            &:checked {
+                                + span {
+                                    &:before {
+                                        @include bgList(3, 10);
+                                    }
+                                }
+                            }
+                        }
+
+                        .hotseat {
+                            + span {
+                                &:before {
+                                    width:calcu(70px);
+                                    height:calcu(99px);
+                                    @include bgList(5, 8);
+                                }
+                            }
+
+                            &:checked {
+                                + span {
+                                    &:before {
+                                        @include bgList(5, 10);
+                                    }
+                                }
+                            }
+                        }
+
+                        .smartkey {
+                            + span {
+                                &:before {
+                                    width:calcu(53px);
+                                    height:calcu(100px);
+                                    @include bgList(7, 8);
+                                }
+                            }
+
+                            &:checked {
+                                + span {
+                                    &:before {
+                                        @include bgList(7, 10);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.info-dealer {
+                @include clearfix;
+
+                .pic-dealer {
+                    float:left;
+                    width:calcu(160px);
+                    height:calcu(160px);
+                    border-radius:100%;
+                    background-color:#29adb8;
+                    overflow:hidden;
+
+                    img {
+                        width:calcu(160px);
+                        height:calcu(160px);
+                    }
+                }
+
+                .info {
+                    float:left;
+                    margin-left:calcu(45px);
+
+                    .number {
+                        line-height:calcu(54px);
+                        color:$colorBlack2;
+                    }
+
+                    .name {
+                        font-size:calcu(48px);
+                        line-height:calcu(66px);
+                        margin-bottom:calcu(48px);
+
+                        .btn-tel {
+                            display:inline-block;
+                            width:calcu(167px);
+                            font-size:calcu(33px);
+                            text-align:center;
+                            line-height:calcu(60px);
+                            color:$colorBlue;
+                            margin-left:calcu(30px);
+                            border:calcu(3px) solid #6dc8bf;
+                            border-radius:calcu(30px);
+                        }
+                    }
+
+                    .grade {
+                        span {
+                            &:before {
+                                @include bgList(1, 1);
+
+                                content:"";
+                                display:inline-block;
+                                width:calcu(33px);
+                                height:calcu(33px);
+                                margin-right:calcu(15px);
+                                background-image:url($dirCommon+'icon.png');
+                                background-size:calcu(900px) auto;
+                            }
+                        }
+                    }
+                }
+
+                .txt {
+                    float:left;
+                    width:100%;
+                    line-height:calcu(56px);
+                    padding:calcu(46px) calcu(78px) calcu(46px) calcu(56px);
+                    margin-top:calcu(58px);
+                    border-radius:calcu(20px);
+                    background-color:#f8f8f8;
+                }
+            }
+
+            &.info-location {
+                span {
+                    display:block;
+                    line-height:calcu(53px);
+                    margin-top:calcu(42px);
+
+                    &:before {
+                        @include bgList(3, 1);
+
+                        content:"";
+                        display:inline-block;
+                        width:calcu(42px);
+                        height:calcu(53px);
+                        vertical-align:top;
+                        margin-right:calcu(15px);
+                        background-image:url($dirView+'icon.png');
+                        background-size:calcu(900px) auto;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,91 @@
+<div class="header">
+    <h2 class="tit hide">{{prop.pageName}}</h2>
+    <button type="button" class="btn-mute btn-close">뒤로가기</button>
+</div>
+
+<div id="contents" class="{{prop.page}}">
+    <p class="txt">
+        로그인
+    </p>
+
+    <form>
+        <fieldset>
+            <legend class="hide">로그인</legend>
+
+            <div class="input-id">
+                <input type="text" title="아이디 입력" placeholder="아이디" class="type2">
+
+                <strong class="txt-caution">존재하지 않는 아이디 입니다.</strong><!-- 아이디 없을경우 노출 -->
+            </div>
+
+            <div class="input-password">
+                <input type="password" title="비밀번호 재입력" placeholder="비밀번호 확인" class="type2" onkeyup="$(this).val() !=='' ? $('.btn-confirm').removeAttr('disabled') : $('.btn-confirm').prop('disabled', true);">
+
+                <strong class="txt-caution">비밀번호를 확인해 주세요.</strong><!-- 비밀번호 틀렸을경우 노출 -->
+            </div>
+
+            <button type="button" class="btn-medium-fill-blue-rounded btn-login" disabled><b>확인</b></button>
+        </fieldset>
+    </form>
+
+    <div class="find">
+        <span class="division-horizon-line">
+            <!--
+                팝업 호출 function
+                <a href="#팝업 ID값" onclick="fn.popupOpen(this);">
+             -->
+            <a href="#popup-find-id" onclick="fn.popupOpen(this);">아이디찾기</a>
+            <a href="#popup-find-pw" onclick="fn.popupOpen(this);">비밀번호 찾기</a>
+        </span>
+    </div>
+
+    <p class="join">
+        아직 JESSICAR 회원이 아니신가요?
+
+        <a href="#">회원가입</a>
+    </p>
+</div>
+
+<!-- 팝업 : 아이디 찾기 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-find-id",
+        "class": "popup-find-id",
+        "type": "full",
+        "content": "./pages/popup/find-id.html"
+    }
+})}}
+<!-- // 팝업 : 아이디 찾기 -->
+
+<!-- 팝업 : 아이디 찾기 결과 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-find-id-result",
+        "class": "popup-find-id-result",
+        "type": "full",
+        "content": "./pages/popup/find-id-result.html"
+    }
+})}}
+<!-- // 팝업 : 아이디 찾기 결과 -->
+
+<!-- 팝업 : 비밀번호 찾기 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-find-pw",
+        "class": "popup-find-pw",
+        "type": "full",
+        "content": "./pages/popup/find-pw.html"
+    }
+})}}
+<!-- // 팝업 : 비밀번호 찾기 -->
+
+<!-- 팝업 : 비밀번호 찾기 결과 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-find-pw-result",
+        "class": "popup-find-pw-result",
+        "type": "alert",
+        "content": "./pages/popup/find-pw-result.html"
+    }
+})}}
+<!-- // 팝업 : 비밀번호 찾기 결과 -->

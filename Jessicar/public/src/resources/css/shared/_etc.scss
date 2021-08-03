@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/**
+* --------------------------------
+* Common CSS
+* --------------------------------
+*/
+* {box-sizing:border-box;}
+html {position:relative;font-family:-apple-system,Noto Sans,Roboto,"Helvetica Neue",sans-serif;font-weight:400;font-size:calcu(42px);line-height:1;letter-spacing:-0.025em;color:$colorDefault;background:#eee;word-break:keep-all;word-wrap:break-word;}
+h1,h2,h3,h4,h5,h6 {margin:0;}
+ul, ol {list-style:none;margin:0;padding:0;}
+fieldset {margin:0;padding:0;border:none;}
+textarea {resize:none;outline:none;font-family:-apple-system,Noto Sans,Roboto,"Helvetica Neue",sans-serif;}
+button {font-family:-apple-system,Noto Sans,Roboto,"Helvetica Neue",sans-serif;cursor:pointer;padding:0;border:none;background:none;-webkit-tap-highlight-color:transparent;}
+a {text-decoration:none;color:$colorDefault;-webkit-tap-highlight-color:transparent;}
+p {margin:0;}
+em {font-style:normal;}
+table {table-layout:fixed;width:100%;border-collapse:collapse;border-spacing:0;}
+th {padding:0;}
+td {padding:0;}
+dl,dd {margin:0;}
+figure {margin:0;}
+img {vertical-align:top;}
+hr {display:none;}
+address {font-style:normal;}
+label {display:inline-block;}
+select {outline:none;font-family:-apple-system,Noto Sans,Roboto,"Helvetica Neue",sans-serif;}
+.hide {
+    position:absolute !important;
+    top:-9999px;
+    left:-9999px;
+}
+
+/* skip */
+.skip {
+    opacity:0.9;
+    position:absolute;
+    z-index:9999;
+    top:-9999px;
+    left:0;
+    width:100%;
+    height:30px;
+    font-weight:700;
+    text-align:center;
+    line-height:30px;
+    background:#ffffff;
+
+    &:focus {
+        top:0;
+    }
+}
+
+
+/* datepicker */
+.ui-widget { font-family:-apple-system,Noto Sans,Roboto,"Helvetica Neue",sans-serif; }
+.ui-datepicker { width:280px; padding:0; border-radius:0; border-color:#a0a0a0; }
+.ui-datepicker .ui-datepicker-header { padding:0; border:none; background:none; }
+.ui-datepicker .ui-datepicker-title { line-height:45px; font-size:12px; color:#333; }
+.ui-datepicker .ui-datepicker-next,
+.ui-datepicker .ui-datepicker-prev { width:40px; height:40px; border-color:transparent; background:transparent; }
+.ui-datepicker .ui-datepicker-next span,
+.ui-datepicker .ui-datepicker-prev span { width:7px; height:13px; background:url() no-repeat -158px -34px; }
+.ui-datepicker .ui-datepicker-prev span { transform:rotate(180deg); }
+.ui-datepicker th { border-top:1px solid #f0f0f0; border-bottom:1px solid #f0f0f0; background:#f8f8f8; }
+.ui-datepicker td { height:28px; text-align:center; }
+.ui-datepicker td a { display:inline-block; width:24px; height:24px; text-align:center; line-height:24px; padding:0; border-radius:3px; border:none !important; background:#fff !important; }
+.ui-datepicker td a.ui-state-active { font-size:12px; color:#fff; background:#1d53bf !important; }
+
+/* form set */
+/* .form-area .input-area { padding:40px 30px 0; } */
+.form-area .row { position:relative; margin-top:24px; }
+.form-area .row:after { content:""; display:block; clear:both; }
+.form-area .row:first-child { margin-top:0; }
+.form-area .column { float:left; position:relative; width:calc((100% - 12px) / 2); margin-left:12px; }
+.form-area .column:first-child { margin-left:0; }
+.form-area .column:only-child { float:none; width:100%; }
+.form-area .field-tit { display:block; font-size:14px; }
+.form-area .field-input { position:relative; }
+/* .form-area .field-tit.require:after { content:" *"; color:#ff0000; } */
+.form-area .field-input > .inner:after { content:""; display:block; clear:both; }
+.form-area .field-input > .inner > * { float:left; margin-left:10px; }
+.form-area .field-input > .inner > *:only-child { margin-left:0; width:100%; }
+.form-area .field-input > .inner > *:first-child { margin-left:0; }
+.form-area .column.horizontal .field-tit,
+.form-area .column.horizontal .field-input { float:left; }
+.form-area .column.horizontal .field-tit { width:100px; line-height:36px; margin-bottom:0; }
+.form-area .column.horizontal .field-input { width:calc(100% - 100px); }
+.form-area .column.vertical .field-tit,
+.form-area .column.vertical .field-input { display:block;}
+.form-area .column.vertical .field-tit { margin-bottom:12px; }
+
+/* table */
+.table.type1 { position:relative; }
+.table.type1 table { margin-top:20px; border-top:1px solid #b4b4b4; border-bottom:1px solid #b4b4b4; }
+.table.type1 caption { font-weight:bold; font-size:16px; text-align:left; line-height:47px; color:#4a4a4a; }
+.table.type1 th { font-weight:normal; font-size:14px; text-align:left; line-height:20px; color:#767676; padding:12px 0 12px 32px; border-top:1px solid #e0e0e0; background:#f8f8f8; }
+.table.type1 td { font-size:14px; line-height:20px; color:#202020; padding:12px 0 12px 24px; border-top:1px solid #e0e0e0; }
+.table.type1 tr:first-child th,
+.table.type1 tr:first-child th ~ td { border-top:none; }
+
+.table.type2 { position:relative; padding:0 32px 24px; border-radius:6px; background:#f8f8f8; }
+.table.type2 table { border-bottom:1px solid #b4b4b4; }
+.table.type2 th { font-weight:normal; font-size:13px; line-height:20px; color:#767676; padding:18px 0; }
+.table.type2 td { font-size:14px; text-align:center; line-height:20px; color:#4a4a4a; padding:18px 0; border-top:1px solid #e0e0e0; }
+.table.type2 tbody tr:first-child td { border-top-color:#b4b4b4; }
+
+.table.type3 table { margin-top:20px; border-top:1px solid #b4b4b4; border-bottom:1px solid #b4b4b4; }
+.table.type3 th { font-weight:normal; font-size:14px; text-align:center; line-height:20px; color:#8f8f8f; padding:12px 0 12px; background:#efefef; }
+.table.type3 td { font-size:14px; text-align:center; line-height:20px; color:#202020; padding:12px 0 12px; border-top:1px solid #e0e0e0; }
+.table.type3 td:nth-child(2),
+.table.type3 td:nth-child(3) { text-align:left; }
+.table.type3 tr:nth-child(odd) td { background:#fff; }

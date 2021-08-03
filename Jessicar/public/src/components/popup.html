@@ -1,0 +1,48 @@
+{{if (context.prop) { <article id="{{prop.id}}" class="popup {{if (context.prop.type) {{{prop.type}}}}} {{if (context.prop.class) {{{prop.class}}}}}">
+    <div class="inner">
+        {{if (context.prop.type !== 'alert' || context.prop.type !== 'confirm') {
+        <header class="header">
+            {{if (context.prop.type === 'full') {
+                {{if (context.prop.tit) {
+                <h3 class="tit">{{prop.tit}}</h3>
+                }}}
+                <button type="button" class="btn-mute btn-close" onclick="fn.popupClose(this);">닫기</button>
+            }}}
+
+            {{if (context.prop.type === 'search') {
+                <h3 class="hide">{{prop.tit}}</h3>
+
+                <form>
+                    <fieldset>
+                        <legend class="hide">검색</legend>
+
+                        <div class="input-search">
+                            <input type="search" title="검색어 입력" placeholder="원하는 차량을 검색해 보세요.">
+                            <button type="reset" class="btn-mute btn-reset">삭제</button>
+                            <button type="submit" class="btn-mute btn-search">검색</button>
+                        </div>
+                    </fieldset>
+
+                    <button type="reset" class="btn-mute btn-close" onclick="fn.popupClose(this);">닫기</button>
+                </form>
+            }}}
+        </header>
+        }}}
+
+
+        <div class="contents">
+            {{if (context.prop.content) { {{include('{{prop.content}}')}} }}}
+            {{if (context.prop.type === 'alert') {
+                <div class="btn-area">
+                    <button type="button" class="btn-medium-fill-blue btn-close" onclick="fn.popupClose(this);">확인</button>
+                </div>
+            }}}
+            {{if (context.prop.type === 'confirm') {
+                <div class="btn-area">
+                    <button type="button" class="btn-medium-fill-gray btn-close" onclick="fn.popupClose(this);">취소</button>
+                    <button type="button" class="btn-medium-fill-blue btn-close" onclick="fn.popupClose(this);">삭제</button>
+                </div>
+            }}}
+        </div>
+    </div>
+</article> }}}

@@ -1,0 +1,50 @@
+/**
+* --------------------------------
+* Footer
+* --------------------------------
+*/
+#footer {
+    padding:calcu(41px) calcu(42px) calcu(224px);
+
+    .info {
+        dl {
+            @include clearfix;
+
+            line-height:calcu(56px);
+            margin:calcu(6px) 0 calcu(24px);
+
+            dt {
+                clear:both;
+                float:left;
+                font-size:calcu(36px);
+                color:$colorGray;
+            }
+
+            dd {
+                float:left;
+                font-size:calcu(36px);
+                color:$colorBlack2;
+                margin-left:calcu(21px);
+            }
+        }
+    }
+
+    .link-terms {
+        padding-top:calcu(6px);
+        border-top:calcu(3px) solid #ccc;
+
+        a {
+            height:calcu(92px);
+            font-size:calcu(36px);
+            line-height:calcu(92px);
+            color:$colorBlack2;
+            padding:0 calcu(24px) 0 calcu(27px);
+        }
+    }
+
+    .txt {
+        font-size:calcu(36px);
+        line-height:calcu(42px);
+        color:$colorBlack2;
+    }
+}

@@ -1,0 +1,30 @@
+/**
+* --------------------------------
+* txt CSS
+* --------------------------------
+*/
+.txt-area {
+    p {
+        font-size:calcu(42px);
+        text-indent:calcu(-21px);
+        line-height:calcu(60px);
+        color:$colorBlack2;
+        padding-left:calcu(21px);
+        margin-top:calcu(12px);
+
+        &:before {
+            content:"";
+            display:inline-block;
+            width:calcu(9px);
+            height:calcu(9px);
+            vertical-align:middle;
+            margin:0 calcu(12px) 0 0;
+            border-radius:100%;
+            background-color:#767676;
+        }
+
+        &:first-child {
+            margin-top:0;
+        }
+    }
+}

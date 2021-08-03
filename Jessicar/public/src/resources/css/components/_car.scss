@@ -1,0 +1,115 @@
+/* car */
+[class*="car"] {
+    position:relative;
+
+    > label {
+        position:absolute;
+        z-index:1;
+        top:0;
+        left:0;
+    }
+
+    .pic-area {
+        position:relative;
+
+
+        .pic-car {
+            border-radius:calcu(10px);
+            overflow:hidden;
+            .img {
+                width:100%;
+                height:100%;
+            }
+        }
+
+        .pic-dealer {
+            position:absolute;
+            z-index:1;
+            right:calcu(31px);
+            bottom:0;
+            border:calcu(8px) solid #fff;
+            border-radius:100%;
+            background:#29adb8;
+            overflow:hidden;
+
+            .img {
+                width:100%;
+                height:100%;
+            }
+        }
+    }
+
+    .car-info {
+        .name {
+            @include ellipsis(calcu(58px), 1)
+
+            font-size:calcu(42px);
+        }
+
+        .data {
+            font-size:calcu(36px);
+            line-height:calcu(49px);
+            color:$colorBlack2;
+
+            > * {
+                padding:0 calcu(14px) 0 calcu(16px);
+            }
+        }
+
+        .margin {
+            font-size:calcu(42px);
+            line-height:calcu(58px);
+            color:$colorRed;
+        }
+
+        .price {
+            display:block;
+            font-size:calcu(54px);
+            color:$colorBlue;
+            margin-top:calcu(34px);
+        }
+
+        .txt {
+            @include ellipsis(calcu(42px), 3);
+            font-size:calcu(42px);
+            color:$colorBlack1;
+            margin-top:calcu(6px);
+        }
+    }
+
+    &[class*="horizon"] {
+        @include clearfix;
+
+        .pic-area {
+            float:left;
+            padding-bottom:calcu(45px);
+
+            .pic-dealer {
+                width:calcu(100px);
+                height:calcu(100px);
+            }
+
+            .pic-car {
+                width:calcu(438px);
+                height:calcu(300px);
+            }
+        }
+
+        .car-info {
+            float:left;
+            width:calc(100% - #{calcu(438px)} - #{calcu(42px)});
+            padding:calcu(6px) 0 0 calcu(42px);
+        }
+    }
+
+    &[class*="vertical"] {
+        .pic-area {
+            padding-bottom:calcu(86px);
+
+            .pic-dealer {
+                width:calcu(140px);
+                height:calcu(140px);
+            }
+        }
+    }
+}

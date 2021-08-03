@@ -1,0 +1,73 @@
+<div class="header">
+    <h2 class="tit">{{prop.pageName}}</h2>
+    <button type="button" class="btn-mute btn-close">뒤로가기</button>
+</div>
+
+<div id="contents" class="{{prop.page}}">
+    <div class="list-area" onscroll="scrollMore(this);"><!-- 2020.07.07 : 추가 -->
+        <ul>
+            <li>
+                <a href="#popup-event" onclick="fn.popupOpen(this);">
+                    <figure class="pic">
+                        <img src="{{dirRoot}}/resources/images/temp/temp-home-event996x740.jpg" alt="" class="img">
+                    </figure>
+                    <b class="subject">오프로드의 최강자, 랭글러 시리즈</b>
+                    <span class="date">2020.07.16 ~ 2020.08.16</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#popup-event" onclick="fn.popupOpen(this);">
+                    <figure class="pic">
+                        <img src="{{dirRoot}}/resources/images/temp/temp-home-event996x740.jpg" alt="" class="img">
+                    </figure>
+                    <b class="subject">오프로드의 최강자, 랭글러 시리즈</b>
+                    <span class="date">2020.07.16 ~ 2020.08.16</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#popup-event" onclick="fn.popupOpen(this);">
+                    <figure class="pic">
+                        <img src="{{dirRoot}}/resources/images/temp/temp-home-event996x740.jpg" alt="" class="img">
+                    </figure>
+                    <b class="subject">오프로드의 최강자, 랭글러 시리즈</b>
+                    <span class="date">2020.07.16 ~ 2020.08.16</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- 2020.07.07 : 추가 // -->
+<script>
+var item = '<li>';
+    item += '<a href="#popup-event" onclick="fn.popupOpen(this);">';
+    item += '<figure class="pic">';
+    item += '<img src="{{dirRoot}}/resources/images/temp/temp-home-event996x740.jpg" alt="" class="img">';
+    item += '</figure>';
+    item += '<b class="subject">오프로드의 최강자, 랭글러 시리즈</b>';
+    item += '<span class="date">2020.07.16 ~ 2020.08.16</span>';
+    item += '</a>';
+    item += '</li>';
+
+var scrollMore = function(target) {
+    var $target = $(target)
+    if ($target.scrollTop() >= Math.ceil($target.children().height()) - ($target.height()+10)) {
+        $target.children().append(item);
+    }
+};
+</script>
+<!-- // 2020.07.07 : 추가 -->
+
+<!-- 팝업 : 이벤트 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-event",
+        "class": "popup-event",
+        "type": "full",
+        "tit": "이벤트",
+        "content": "./pages/popup/event.html"
+    }
+})}}
+<!-- // 팝업 : 이벤트 -->

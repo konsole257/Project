@@ -1,0 +1,78 @@
+#container {
+    > .header {
+        position:relative;
+        height:calcu(150px);
+        background-color:#fff;
+
+        .tit {
+            height:calcu(150px);
+            font-size:calcu(54px);
+            text-align:center;
+            line-height:calcu(105px);
+            padding:calcu(23px) calcu(42px) calcu(22px);
+            border-bottom:calcu(3px) solid #e7e7e7;
+        }
+
+        .btn-filter {
+            position:absolute;
+            top:calcu(23px);
+            right:calcu(42px);
+            height:calcu(105px);
+            line-height:1;
+            font-size:calcu(39px);
+
+            &:after {
+                @include bgList(1, 1);
+
+                content:"";
+                display:inline-block;
+                width:calcu(49px);
+                height:calcu(43px);
+                vertical-align:top;
+                margin-left:calcu(30px);
+                background-image:url($dirCommon+"btn.png");
+                background-size:calcu(900px) auto;
+            }
+        }
+
+        label {
+            position:absolute;
+            top:0;
+            right:0;
+            height:100%;
+
+            span {
+                width:calcu(134px);
+                height:100%;
+            }
+        }
+
+        .btn-close {
+            position:absolute;
+            top:0;
+            left:0;
+            width:calcu(108px);
+            height:100%;
+
+            &:before {
+                @include bgList(2, 1);
+
+                content:"";
+                position:absolute;
+                top:0;
+                right:0;
+                bottom:0;
+                left:0;
+                width:calcu(24px);
+                height:calcu(47px);
+                margin:auto;
+                background-image:url($dirCommon+"btn-close.png");
+                background-size:calcu(900px);
+            }
+        }
+    }
+
+    #contents {
+        margin-top:calcu(27px);
+    }
+}

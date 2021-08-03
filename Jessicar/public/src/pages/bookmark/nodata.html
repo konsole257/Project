@@ -1,0 +1,44 @@
+<div class="header">
+    <h2 class="tit">{{prop.pageName}}</h2>
+</div>
+
+<div id="contents" class="{{prop.page}}">
+    <!-- 정렬순서 // -->
+    <div class="sort-area">
+        <form>
+            <fieldset>
+                <legend class="hide">정렬</legend>
+
+                <label class="select">
+                    <select title="정렬순서 선택">
+                        <option>최근 등록순</option>
+                        <option>낮은 가격순</option>
+                        <option>낮은 주행거리순</option>
+                        <option>최근 연식순</option>
+                    </select>
+                </label>
+            </fieldset>
+        </form>
+    </div>
+    <!-- // 정렬순서 -->
+
+    <!-- 찜한차 목록 // -->
+    <section class="list-area">
+        {{include('./components/skip.html', {"prop": {"id": "special-area-end","text": "찜한차 목록 건너뛰기"}})}}
+
+        <h3 class="hide">찜한차 목록</h3>
+
+        <ul>
+            <li>
+                <p class="nodata">
+                    아직 찜한 차가 없어요.<br>
+                    하트를 눌러 관심 차량을 한 눈에 비교하세요.
+                </p>
+            </li>
+        </ul>
+    </section>
+
+    <hr id="list-area-end">
+    <!-- // 찜한차 목록 -->
+
+</div>

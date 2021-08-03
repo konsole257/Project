@@ -1,0 +1,67 @@
+<form>
+    <fieldset>
+        <legend class="hide">방문판매 신청서 작성</legend>
+
+        <div class="txt">
+            <div class="inner">
+                <b>원하는 차량을 원하는 장소에서!</b>
+
+                <p>
+                    딜러가 차량을 몰고 원하는 곳으로<br>
+                    방문하여 상담해 드리는 서비스입니다.
+                </p>
+            </div>
+        </div>
+
+        <div class="address">
+            <div class="inner">
+                <b>연락처를 입력해 주세요.</b>
+
+                <input type="text" title="이름 입력" placeholder="이름">
+                <input type="number" title="전화번호 입력" pattern="\d*" placeholder="전화번호(숫자만입력)">
+
+                <label><input type="checkbox" class="hotseat" checked required><span>개인정보 수집 및 이용 동의 (필수)</span></label>
+            </div>
+        </div>
+
+        <div class="data">
+            <div class="inner">
+                <b>방문 딜러에게 차량관련 자료를 요청하세요.</b>
+
+                <div>
+                    <label><input type="checkbox"><span>기본등록증</span></label>
+                </div>
+                <div>
+                    <label><input type="checkbox"><span>성능검사표</span></label>
+                </div>
+                <div>
+                    <label><input type="checkbox"><span>인허가증</span></label>
+                </div>
+                <div>
+                    <label><input type="checkbox"><span>제반비용 내역</span></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="price">
+            <div class="inner">
+                <b>방문비용</b>
+
+                <div class="txt-area">
+                    <p>서울, 경기 지역 : 5만원</p>
+                    <p>기타 지역 : 별도 문의</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-area">
+            <div class="inner">
+                <!--
+                    팝업 호출 function
+                    <a href="#팝업 ID값" onclick="fn.popupOpen(this);">
+                 -->
+                <a href="#popup-request-result" class="btn-medium-fill-blue btn-request" onclick="fn.popupOpen(this);"><b>신청하기</b></a>
+            </div>
+        </div>
+    </fieldset>
+</form>

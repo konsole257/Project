@@ -1,0 +1,22 @@
+{{if (context.prop) {
+<table class="table type{{prop.style}} {{if (context.prop.class) {{{prop.class}}}}}">
+	<caption {{if (!context.prop.captionVisible) {class="hide"}}}>{{prop.caption.text}}</caption>
+
+	{{if (context.prop.colgroup) {
+	<colgroup>
+		{{for (var i = 0; i < context.prop.colgroup.colWidth.length; i++) { <col style="width:`+prop.colgroup.colWidth[i]+`"> }}}
+	</colgroup>
+	}}} {{if (context.prop.thead) {
+	<thead>
+		<tr>
+			{{for (var i = 0; i < context.prop.thead.th.length; i++) { <th>`+prop.thead.th[i]+`</th> }}}
+		</tr>
+	</thead>
+	}}} {{if (context.prop.tbody) {
+	<tbody>
+		<tr>
+			{{for (var i = 0; i < context.prop.tbody.td.length; i++) { <td>`+prop.tbody.td[i]+`</td> }}}
+		</tr>
+	</tbody>
+	}}}
+</table> }}}

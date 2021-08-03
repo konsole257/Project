@@ -1,0 +1,225 @@
+<div class="header hide">
+    <h2 class="tit">{{prop.pageName}}</h2>
+</div>
+
+<div id="contents" class="{{prop.page}}">
+    <!-- 검색 // -->
+    <section class="search-area">
+        {{include('./components/skip.html', {"prop": {"id": "search-area-end","text": "검색 건너뛰기"}})}}
+
+        <h3 class="hide">검색어 검색</h3>
+
+        <form>
+            <fieldset>
+                <legend class="hide">검색</legend>
+
+                <div class="input-search">
+                    <input type="search" title="검색어 입력" placeholder="원하는 차량을 검색해 보세요."  onclick="fn.popupOpen('#popup-search');$('.popup-search .input-search input').focus();">
+                    <button type="submit" class="btn-mute btn-search">검색</button>
+                </div>
+
+                <!--
+                    팝업 호출 function
+                    fn.popupOpen('팝업 ID값');
+                 -->
+                <button type="button" class="btn btn-filter" onclick="fn.popupOpen('#popup-filter');">조건필터</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <hr id="search-area-end">
+    <!-- // 검색 -->
+
+    <!-- 모델 찾기 // -->
+    <section class="model-area">
+        {{include('./components/skip.html', {"prop": {"id": "model-area-end","text": "모델 찾기 건너뛰기"}})}}
+
+        <h3 class="hide">브랜드/차종 찾기</h3>
+
+        <div class="tab-menu">
+            <button type="button" class="menu active">브랜드</button><!-- 버튼 활성화 class="active" -->
+            <button type="button" class="menu">차종</button>
+        </div>
+
+            <!-- 브랜드에서만 노출 // -->
+            <div class="division-horizon-line lang-menu">
+                <button type="button" class="menu active">ABC</button><!-- 버튼 활성화 class="active" -->
+                <button type="button" class="menu">ㄱㄴㄷ</button>
+            </div>
+            <!-- // 브랜드에서만 노출 -->
+
+            <div class="dial-menu">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- 영문으로 찾기일경우 // -->
+                        <a href="#a" class="menu swiper-slide active">A</a><!-- 버튼 활성화 class="active" -->
+                        <a href="#b" class="menu swiper-slide">B</a>
+                        <a href="#c" class="menu swiper-slide">C</a>
+                        <a href="#d" class="menu swiper-slide">D</a>
+                        <a href="#e" class="menu swiper-slide">E</a>
+                        <a href="#f" class="menu swiper-slide">F</a>
+                        <a href="#g" class="menu swiper-slide">G</a>
+                        <a href="#h" class="menu swiper-slide">H</a>
+                        <a href="#i" class="menu swiper-slide">I</a>
+                        <a href="#j" class="menu swiper-slide">J</a>
+                        <a href="#k" class="menu swiper-slide">K</a>
+                        <a href="#l" class="menu swiper-slide">L</a>
+                        <a href="#m" class="menu swiper-slide">M</a>
+                        <a href="#n" class="menu swiper-slide">N</a>
+                        <a href="#o" class="menu swiper-slide">O</a>
+                        <a href="#p" class="menu swiper-slide">P</a>
+                        <a href="#q" class="menu swiper-slide">Q</a>
+                        <a href="#r" class="menu swiper-slide">R</a>
+                        <a href="#s" class="menu swiper-slide">S</a>
+                        <a href="#t" class="menu swiper-slide">T</a>
+                        <a href="#u" class="menu swiper-slide">U</a>
+                        <a href="#v" class="menu swiper-slide">V</a>
+                        <a href="#w" class="menu swiper-slide">W</a>
+                        <a href="#x" class="menu swiper-slide">X</a>
+                        <a href="#y" class="menu swiper-slide">Y</a>
+                        <a href="#z" class="menu swiper-slide">Z</a>
+                        <!-- // 영문으로 찾기일경우 -->
+
+                        <!-- 국문으로 찾기일경우 // -->
+                        <!-- <a href="#a" class="menu swiper-slide active">ㄱ</a>
+                        <a href="#b" class="menu swiper-slide">ㄴ</a>
+                        <a href="#c" class="menu swiper-slide">ㄷ</a>
+                        <a href="#d" class="menu swiper-slide">ㄹ</a>
+                        <a href="#e" class="menu swiper-slide">ㅁ</a>
+                        <a href="#f" class="menu swiper-slide">ㅂ</a>
+                        <a href="#g" class="menu swiper-slide">ㅅ</a>
+                        <a href="#h" class="menu swiper-slide">ㅇ</a>
+                        <a href="#i" class="menu swiper-slide">ㅈ</a>
+                        <a href="#j" class="menu swiper-slide">ㅊ</a>
+                        <a href="#k" class="menu swiper-slide">ㅌ</a>
+                        <a href="#l" class="menu swiper-slide">ㅍ</a>
+                        <a href="#m" class="menu swiper-slide">ㅋ</a>
+                        <a href="#n" class="menu swiper-slide">ㅎ</a> -->
+                        <!-- // 국문으로 찾기일경우 -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-area">
+                <!-- 반복영역 // -->
+                <h4 class="tit" id="a">A</h4><!-- id="a" ~ id="z" -->
+                <ul>
+                    <!-- 반복영역 // -->
+                    <li>
+                        <button type="button">
+                            <img src="{{dirRoot}}/resources/images/temp/temp-emblem.png" alt="" class="img">
+                            <!-- 영문으로 찾기일경우 // -->
+                            <span class="en">ACURA</span>
+                            <span class="ko">아큐라</span>
+                            <!-- // 영문으로 찾기일경우 -->
+
+                            <!-- 국문으로 찾기일경우 // -->
+                            <!-- <span class="ko">아큐라</span>
+                            <span class="en">ACURA</span> -->
+                            <!-- // 국문으로 찾기일경우 -->
+
+                            <span class="number">1</span>
+                        </button>
+                    </li>
+                    <!-- // 반복영역 -->
+
+                    <li>
+                        <button type="button">
+                            <img src="{{dirRoot}}/resources/images/temp/temp-emblem.png" alt="" class="img">
+                            <span class="en">ALFA ROMEO</span>
+                            <span class="ko">알파로메오</span>
+                            <span class="number">999</span>
+                        </button>
+                    </li>
+                </ul>
+                <!-- // 반복영역 -->
+
+                <h4 class="tit" id="b">B</h4>
+                <ul>
+                    <li>
+                        <button type="button">
+                            <img src="{{dirRoot}}/resources/images/temp/temp-emblem.png" alt="" class="img">
+                            <span class="en">BAIC</span>
+                            <span class="ko">북기은상</span>
+                            <span class="number">1</span>
+                        </button>
+                    </li>
+                </ul>
+
+                <h4 class="tit" id="c">C</h4>
+                <ul>
+                    <li>
+                        <button type="button">
+                            <img src="{{dirRoot}}/resources/images/temp/temp-emblem.png" alt="" class="img">
+                            <span class="en">BAIC</span>
+                            <span class="ko">북기은상</span>
+                            <span class="number">1</span>
+                        </button>
+                    </li>
+                </ul>
+
+                <h4 class="tit" id="d">D</h4>
+                <ul>
+                    <li>
+                        <button type="button">
+                            <img src="{{dirRoot}}/resources/images/temp/temp-emblem.png" alt="" class="img">
+                            <span class="en">BAIC</span>
+                            <span class="ko">북기은상</span>
+                            <span class="number">1</span>
+                        </button>
+                    </li>
+                </ul>
+
+                <h4 class="tit" id="e">E</h4>
+                <ul>
+                    <li>
+                        <button type="button">
+                            <img src="{{dirRoot}}/resources/images/temp/temp-emblem.png" alt="" class="img">
+                            <span class="en">BAIC</span>
+                            <span class="ko">북기은상</span>
+                            <span class="number">1</span>
+                        </button>
+                    </li>
+                </ul>
+
+                <h4 class="tit" id="f">F</h4>
+                <ul>
+                    <li>
+                        <button type="button">
+                            <img src="{{dirRoot}}/resources/images/temp/temp-emblem.png" alt="" class="img">
+                            <span class="en">BAIC</span>
+                            <span class="ko">북기은상</span>
+                            <span class="number">1</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+    </section>
+
+    <hr id="model-area-end">
+    <!-- // 모델 찾기 -->
+</div>
+
+<!-- 팝업 : 조건필터 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-filter",
+        "class": "popup-filter",
+        "type": "full",
+        "tit": "조건필터",
+        "content": "./pages/popup/filter.html"
+    }
+})}}
+<!-- // 팝업 : 조건필터 -->
+
+<!-- 팝업 : 검색 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-search",
+        "class": "popup-search",
+        "type": "search",
+        "tit": "검색",
+        "content": "./pages/popup/search.html"
+    }
+})}}
+<!-- // 팝업 : 검색 -->

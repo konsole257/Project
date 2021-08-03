@@ -1,0 +1,34 @@
+/**
+* --------------------------------
+* Lately CSS
+* --------------------------------
+*/
+#container #contents.lately {
+    height:calc(100vh - #{calcu(150px)} - #{calcu(3px)});
+    padding-bottom:calcu(150px);
+    margin-top:0;
+
+    > section {
+        position:relative;
+        background-color:#fff;
+        overflow:hidden;
+    }
+
+    .list-area {
+        height:calc(100% - env(safe-area-inset-bottom));
+        padding:calcu(60px) calcu(42px) calcu(70px);
+        overflow-y:scroll;
+
+        li {
+            margin-top:calcu(70px);
+
+            &:first-child {
+                margin-top:0;
+            }
+
+            .nodata {
+                margin-top:calcu(200px);
+            }
+        }
+    }
+}

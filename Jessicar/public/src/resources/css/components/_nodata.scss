@@ -1,0 +1,21 @@
+/**
+* --------------------------------
+* Nodata CSS
+* --------------------------------
+*/
+.nodata {
+    font-size:calcu(42px);
+    color:$colorBlack2;
+    line-height:calcu(58px);
+    text-align:center;
+
+    &:before {
+        content:"";
+        display:block;
+        width:calcu(159px);
+        height:calcu(159px);
+        margin:0 auto calcu(46px);
+        background-image:url($dirCommon+'icon-nodata.png');
+        background-size:calcu(180px);
+    }
+}

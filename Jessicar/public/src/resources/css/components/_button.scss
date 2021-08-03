@@ -1,0 +1,79 @@
+/**
+* --------------------------------
+* Button CSS
+* --------------------------------
+*/
+[class*="btn"]:not(.btn-area):not(input) {
+    display:inline-block;
+    position:relative;
+    text-align:center;
+    vertical-align:top;
+    overflow:hidden;
+
+    &[disabled] {
+        pointer-events:none; 
+    }
+
+    &[class*="mute"] {
+        text-indent:-9999px;
+    }
+
+    &[class*="stroke"] {
+        border-width:1px;
+        border-style:solid;
+        background-color:#fff;
+
+        &[class*="black"] {
+            border-color:#222;
+        }
+
+        &[class*="blue"] {
+            color:#21aab8;
+            border-color:#6dc8bf;
+        }
+
+        &[class*="gray"] {
+            color:#dbd9d6;
+            border-color:#dbd9d6;
+        }
+    }
+
+    &[class*="fill"] {
+        border-width:1px;
+        border-style:solid;
+
+        &[class*="black"] {
+            color:#fff;
+            border-color:#222;
+            background-color:#222;
+        }
+
+        &[class*="blue"] {
+            color:#fff;
+            border-color:#6dc8bf;
+            background-color:#6dc8bf;
+        }
+
+        &[class*="gray"] {
+            border-color:#f3f3f3;
+            background-color:#f3f3f3;
+        }
+    }
+
+    &[class*="rounded"] {
+        border-radius:calcu(10px);
+    }
+
+    &[class*="small"] {
+        height:calcu(120px);
+        line-height:calcu(114px);
+    }
+
+    &[class*="medium"] {
+        height:calcu(150px);
+        line-height:calcu(144px);
+    }
+
+    &[class*="big"] {
+    }
+}

@@ -1,0 +1,446 @@
+<div class="header">
+    <h2 class="tit">{{prop.pageName}}</h2>
+    <label><input type="checkbox" class="btn-bookmark big" checked><span>찜</span></label>
+    <button type="button" class="btn-mute btn-close">뒤로가기</button>
+</div>
+
+<div id="contents" class="{{prop.page}}">
+    <!-- 이미지 영역 // -->
+    <div class="pic-area">
+        <div class="swiper-container">
+            <ul class="swiper-wrapper">
+                <!-- 반복영역 // -->
+                <!--
+                    팝업 호출 function
+                    fn.popupOpen('팝업 ID값');
+                    picSwiper.slideTo($(this).index());
+                 -->
+                <li class="swiper-slide" onclick="fn.popupOpen('#popup-image'); picSwiper.slideTo($(this).index());">
+                    <img src="{{dirRoot}}/resources/images/temp/temp-car1080x960.jpg" alt="">
+                </li>
+                <!-- // 반복영역 -->
+
+                <!-- <li class="swiper-slide" onclick="fn.popupOpen('#popup-image'); picSwiper.slideTo($(this).index());">
+                    <img src="{{dirRoot}}/resources/images/temp/temp-car1080x960.jpg" alt="">
+                </li>
+                <li class="swiper-slide" onclick="fn.popupOpen('#popup-image'); picSwiper.slideTo($(this).index());">
+                    <img src="{{dirRoot}}/resources/images/temp/temp-car1080x960.jpg" alt="">
+                </li> -->
+            </ul>
+        </div>
+
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- // 이미지 영역 -->
+
+    <!-- 차량정보 영역 // -->
+    <div class="info-area">
+        <!-- 기본정보 // -->
+        <div class="info-basic">
+            <span class="name">지프 랭글러(JL) 2.0 루비콘 파워 탑 4도어</span>
+            <b class="price">판매가 2,350 만원</b>
+
+            <div class="margin">
+                <b class="percent">딜러 마진 8%</b><!-- 2020.05.21 : "마진율" -> "딜러마진" 텍스트 변경  -->
+
+                <div class="fold">
+                    <button type="button" class="btn-fold" onclick="fn.fold(this);">딜러마진 확인하기</button>
+
+                    <div class="content">
+                        <table>
+                            <caption class="hide">딜러마진</caption>
+
+                            <tbody>
+                                <tr>
+                                    <th>매입일</th>
+                                    <td>
+                                        <span>2016.01.07</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>매입처</th>
+                                    <td>
+                                        <span>법인</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        딜러 최초 구매가
+                                        <!--
+                                            팝업 호출 function
+                                            <a href="#팝업 ID값" onclick="fn.pdf('pdf경로'); fn.popupOpen(this);">
+                                         -->
+                                        <a href="#popup-pdf" class="btn-document" onclick="fn.pdf('{{dirRoot}}/resources/images/temp/pdf.pdf');fn.popupOpen(this);">첨부서류</a>
+                                    </th>
+                                    <td>
+                                        <span><b>19,000,000원</b></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        상품화 비용
+                                        <div class="tooltip">
+                                            <button type="button" class="btn-mute btn-tooltip">설명보기</button>
+                                            <p class="txt">
+                                                딜러가 매입한 중고차의 상품성을 높이기 위해 지출한 비용 총계입니다.
+                                            </p>
+                                        </div>
+                                        <a type="#popup-pdf" class="btn-document" onclick="fn.pdf('{{dirRoot}}/resources/images/temp/pdf.pdf');fn.popupOpen(this);">첨부서류</a>
+                                    </th>
+                                    <td>
+                                        <span><b>200,000원</b></span>
+
+                                        <table>
+                                            <caption class="hide">상품화 비용</caption>
+
+                                            <tbody>
+                                                <tr>
+                                                    <th>성능 검사비</th>
+                                                    <td>
+                                                        <span>100,000원</span>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>
+                                                        정비비
+                                                        <small>(정비, 광택, 부품교체, 도색, 기타)</small>
+                                                    </th>
+                                                    <td>
+                                                        <span>100,000원</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        상사 유지비
+                                        <div class="tooltip">
+                                            <button type="button" class="btn-mute btn-tooltip">설명보기</button>
+                                            <p class="txt">
+                                                딜러가 소속 상사에 차량 판매와 관련하여 지급하는 비용 합계입니다. (매입비, 사무실비, 주차비, 광고비 등)
+                                            </p>
+                                        </div>
+                                        <a type="#popup-pdf" class="btn-document" onclick="fn.pdf('{{dirRoot}}/resources/images/temp/pdf.pdf');fn.popupOpen(this);">첨부서류</a>
+                                    </th>
+                                    <td>
+                                        <span><b>300,000원</b></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>딜러 마진</th>
+                                    <td>
+                                        <span>
+                                            <b>1,164,000원</b>
+                                            <small>(판매가의 5%)</small>
+                                        </span>
+
+                                        <p class="txt">개시 차량이라 기본급 만큼만 받겠습니다.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        이전 등록비
+                                        <div class="tooltip">
+                                            <button type="button" class="btn-mute btn-tooltip">설명보기</button>
+                                            <p class="txt">
+                                                고객에게 차량의 명의 인도 시, 발생하는 비용입니다.
+                                            </p>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <span><b>2,036,000원</b></span>
+
+                                        <table>
+                                            <caption class="hide">이전 등록비</caption>
+
+                                            <tbody>
+                                                <tr>
+                                                    <th>취득세</th>
+                                                    <td>
+                                                        <span>1,645,000원</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>공채매입비</th>
+                                                    <td>
+                                                        <span>380,000원</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>중지대</th>
+                                                    <td>
+                                                        <span>1,000원</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>인지대</th>
+                                                    <td>
+                                                        <span>3,000원</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>번호판 교체비(옵션)</th>
+                                                    <td>
+                                                        <span>7,000원</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        매도비
+                                        <div class="tooltip">
+                                            <button type="button" class="btn-mute btn-tooltip">설명보기</button>
+                                            <p class="txt">
+                                                차량 매도 시, 딜러가 상사에게 지급하는 비용 입니다.
+                                            </p>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <span><b>300,000원</b></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>총 구입 비용</th>
+                                    <td>
+                                        <span><b>23,000,000원</b></span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-area">
+                <!--
+                    팝업 호출 function
+                    <a href="#팝업 ID값" onclick="fn.popupOpen(this);">
+                 -->
+                <a href="#popup-price" class="btn-price" onclick="fn.popupOpen(this);"><span>시세 대비</span><strong>높음</strong></a>
+                <a href="#popup-trouble" class="btn-trouble" onclick="fn.popupOpen(this);"><span>사고 이력</span><strong>무사고</strong></a>
+                <a href="#popup-repair" class="btn-repair" onclick="fn.popupOpen(this);"><span>수리 이력</span><strong>1회</strong></a>
+            </div>
+
+            <div class="basic">
+                <table>
+                    <caption>기본정보</caption>
+
+                    <tbody>
+                        <tr>
+                            <th>연식</th>
+                            <td>18년 11월식</td>
+                        </tr>
+                        <tr>
+                            <th>차종/연료</th>
+                            <td>SUV / 가솔린</td>
+                        </tr>
+                        <tr>
+                            <th>변속기</th>
+                            <td>오토</td>
+                        </tr>
+                        <tr>
+                            <th>주행거리</th>
+                            <td>12,046km</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- // 기본정보 -->
+
+        <!-- 차량옵션 // -->
+        <div class="info-option">
+            <header class="header">
+                <h3 class="tit">차량옵션</h3>
+                <!--
+                    팝업 호출 function
+                    <a href="#팝업 ID값" onclick="fn.popupOpen(this);">
+                 -->
+                <a href="#popup-option" class="btn-all" onclick="fn.popupOpen(this);">전체보기</a>
+            </header>
+
+            <div class="option">
+                <label><input type="checkbox" class="navigation" checked disabled><span>네비게이션</span></label><!-- 옵션사항 checked -->
+                <label><input type="checkbox" class="blackbox" disabled><span>블랙박스</span></label>
+                <label><input type="checkbox" class="sunroof" disabled><span>썬루프</span></label>
+                <label><input type="checkbox" class="hipass" disabled><span>하이패스</span></label>
+                <label><input type="checkbox" class="rearsensor" checked disabled><span>후방감지센서</span></label>
+                <label><input type="checkbox" class="rearcamera" checked disabled><span>후방카메라</span></label>
+                <label><input type="checkbox" class="hotseat" checked disabled><span>열선시트</span></label>
+                <label><input type="checkbox" class="smartkey" checked disabled><span>스마트키</span></label>
+            </div>
+        </div>
+        <!-- // 차량옵션 -->
+
+        <!-- 딜러정보 // -->
+        <div class="info-dealer">
+            <figure class="pic-dealer">
+                <a href="{{dirRoot}}/dealer/index.html"><img src="{{dirRoot}}/resources/images/temp/temp-dealer100x100.png" alt="" class="img"></a>
+            </figure>
+            <div class="info">
+                <div class="number"><a href="{{dirRoot}}/dealer/index.html">사원번호 12-345-67890</a></div>
+                <div class="name"><a href="{{dirRoot}}/dealer/index.html">라온 모터스 <b>김민재 딜러</b></a> <a href="tel:010-0000-0000" class="btn-tel">연락하기</a></div>
+                <div class="division-horizon-line">
+                    <a href="{{dirRoot}}/dealer/index.html"><span class="career">딜러 경력 3년차</span></a>
+                    <a href="{{dirRoot}}/dealer/review.html"><span class="grade"><span>3.6</span></span></a>
+                    <a href="{{dirRoot}}/dealer/review.html"><span class="review">딜러후기 17</span></a>
+                </div>
+            </div>
+            <p class="txt">
+                랭글러 무사고 차량입니다.<br>
+                사진으로 보시는 것처럼 새차 상태이고, 타이어와 휠 상태가 매우 좋으며 결점 없고 키로수 짧은 신차급 차량입니다.
+            </p>
+        </div>
+        <!-- // 딜러정보 -->
+
+        <!-- 위치정보 // -->
+        <div class="info-location">
+            <header class="header">
+                <h3 class="tit">차량위치</h3>
+            </header>
+
+            <span>광명시 하안동 제시카 빌딩 6층 주차장</span>
+        </div>
+        <!-- 위치정보 // -->
+    </div>
+    <!-- // 차량정보 영역 -->
+
+    <!-- 버튼 영역 // -->
+    <div class="btn-area">
+        <!--
+            팝업 호출 function
+            <a href="#팝업 ID값" onclick="fn.popupOpen(this);">
+         -->
+        <a href="#popup-request" class="btn-medium-fill-gray btn-request" onclick="fn.popupOpen(this);"><b>방문 판매 신청</b></a>
+        <a href="#popup-inquiry" class="btn-medium-fill-blue btn-inquiry" onclick="fn.popupOpen(this);"><b>온라인 문의</b></a>
+    </div>
+    <!-- // 버튼 영역 -->
+</div>
+
+<!-- 팝업 : PDF // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-pdf",
+        "class": "popup-pdf",
+        "type": "full",
+        "tit": "첨부서류",
+        "content": "./pages/popup/pdf.html"
+    }
+})}}
+<!-- // 팝업 : PDF -->
+
+<!-- 팝업 : 이미지보기 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-image",
+        "class": "popup-image",
+        "type": "full",
+        "tit": "서울30가1234",
+        "content": "./pages/popup/image.html"
+    }
+})}}
+<!-- // 팝업 : 이미지보기 -->
+
+<!-- 팝업 : 시세 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-price",
+        "class": "popup-price",
+        "type": "full",
+        "content": "./pages/popup/price.html"
+    }
+})}}
+<!-- // 팝업 : 시세 -->
+
+<!-- 팝업 : 보험 사고 이력 정보 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-trouble",
+        "class": "popup-trouble",
+        "type": "full",
+        "tit": "보험 사고 이력 정보",
+        "content": "./pages/popup/trouble.html"
+    }
+})}}
+<!-- // 팝업 : 보험 사고 이력 정보 -->
+
+<!-- 팝업 : 성능 상태 기록부 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-repair",
+        "class": "popup-repair",
+        "type": "full",
+        "tit": "성능 상태 기록부",
+        "content": "./pages/popup/repair.html"
+    }
+})}}
+<!-- // 팝업 : 성능 상태 기록부 -->
+
+<!-- 팝업 : 차량옵션 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-option",
+        "class": "popup-option",
+        "type": "full",
+        "tit": "차량옵션",
+        "content": "./pages/popup/option.html"
+    }
+})}}
+<!-- // 팝업 : 차량옵션 -->
+
+<!-- 팝업 : 방문판매 신청 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-request",
+        "class": "popup-request",
+        "type": "full",
+        "tit": "방문판매 신청",
+        "content": "./pages/popup/request.html"
+    }
+})}}
+<!-- // 팝업 : 방문판매 신청 -->
+
+<!-- 팝업 : 방문판매 신청 결과 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-request-result",
+        "class": "popup-request-result",
+        "type": "alert",
+        "tit": "방문판매 신청",
+        "content": "./pages/popup/request-result.html"
+    }
+})}}
+<!-- // 팝업 : 방문판매 신청 결과 -->
+
+<!-- 팝업 : 문의 작성 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-inquiry",
+        "class": "popup-inquiry",
+        "type": "full",
+        "tit": "문의 작성",
+        "content": "./pages/popup/inquiry.html"
+    }
+})}}
+<!-- // 팝업 : 문의 작성 -->
+
+<!-- 팝업 : 문의 작성 결과 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-inquiry-result",
+        "class": "popup-inquiry-result",
+        "type": "alert",
+        "content": "./pages/popup/inquiry-result.html"
+    }
+})}}
+<!-- // 팝업 : 문의 작성 결과 -->

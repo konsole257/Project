@@ -1,0 +1,6 @@
+{{if (context.prop) {
+<span class="select type{{prop.style}} {{if (context.prop.class) {{{prop.class}}}}}">
+	<select title="옵션 선택">
+		{{for (var i = 0; i < context.prop.option.length; i++) { <option `+prop.select[i]+`>`+prop.option[i]+`</option> }}}
+	</select>
+</span> }}}

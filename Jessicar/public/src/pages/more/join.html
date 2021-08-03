@@ -1,0 +1,88 @@
+<div class="header">
+    <h2 class="tit hide">{{prop.pageName}}</h2>
+    <button type="button" class="btn-mute btn-close">뒤로가기</button>
+</div>
+
+<div id="contents" class="{{prop.page}}">
+    <p class="txt">
+        제시카에 가입하고<br>
+        다양한 정보를 확인해 보세요.
+    </p>
+
+    <form>
+        <fieldset>
+            <legend class="hide">회원가입</legend>
+
+            <div class="input-id">
+                <input type="text" title="아이디 입력" placeholder="아이디" class="type2">
+            </div>
+
+            <div class="input-password">
+                <input type="password" title="비밀번호 입력" placeholder="비밀번호" class="type2">
+
+                <div class="tooltip active"><!-- 2020.05.21 : 수정 -->
+                    <button type="button" class="btn-mute btn-tooltip">설명보기</button>
+                    <p class="txt">
+                        영문 소문자, 숫자, 기호(!@#$%^&*)를 포함하여 6~15자리의 비밀번호를 입력해 주세요.
+                    </p>
+                </div>
+            </div>
+
+            <div class="input-password">
+                <input type="password" title="비밀번호 재입력" placeholder="비밀번호 확인" class="type2">
+            </div>
+
+            <div class="input-mail">
+                <input type="mail" title="이메일 입력" placeholder="이메일" class="type2">
+            </div>
+
+            <div class="input-name">
+                <input type="text" title="이름 입력" placeholder="이름" class="type2">
+            </div>
+
+            <div class="input-phone">
+                <input type="number" title="휴대폰번호 입력" placeholder="휴대폰번호(숫자만)" class="type2" onkeyup="$(this).val() !=='' ? $('.btn-code, .btn-re').removeAttr('disabled') : $('.btn-code, .btn-re').prop('disabled', true);">
+                <button type="button" class="btn-code" disabled>인증번호 전송</button>
+                <!-- <button type="button" class="btn-re" disabled>재전송</button> -->
+            </div>
+
+            <!-- 인증번호 전송시 노출 // -->
+            <div class="input-phone">
+                <input type="number" class="type2" title="인증번호 입력" placeholder="인증번호 4자리" onkeyup="$(this).val() !=='' ? $('.btn-join').removeAttr('disabled') : $('.btn-join').prop('disabled', true);">
+                <div class="timer"><b>03:00</b></div>
+            </div>
+            <!-- // 인증번호 전송시 노출 -->
+
+            <div class="agree-area">
+                <p class="txt"><b>제시카 서비스 이용약관에 동의해 주세요.</b></p>
+                <div class="agree-all">
+                    <label><input type="checkbox" data-name="all"><span>전체동의</span></label>
+                </div>
+
+                <!-- 2020.07.29 : 수정 // -->
+                <div><label><input type="checkbox" data-name="check"><span>서비스 이용약관 (필수)</span></label><a href="#">약관보기</a></div>
+                <div><label><input type="checkbox" data-name="check"><span>개인정보 제공 동의 (필수)</span></label><a href="#">약관보기</a></div>
+                <div><label><input type="checkbox" data-name="check"><span>개인정보 수집 및 이용 동의 (필수)</span></label><a href="#">약관보기</a></div>
+                <div><label><input type="checkbox" data-name="check"><span>마케팅 활용 동의 (선택)</span></label><a href="#">약관보기</a></div>
+                <!-- // 2020.07.29 : 수정 -->
+            </div>
+
+            <!--
+                팝업 호출 function
+                <a href="#팝업 ID값" onclick="fn.popupOpen(this);">
+             -->
+            <a href="#popup-join-result" class="btn-medium-fill-blue-rounded btn-join" disabled onclick="fn.popupOpen(this);"><b>가입하기</b></a>
+        </fieldset>
+    </form>
+</div>
+
+<!-- 팝업 : 회원가입 결과 // -->
+{{include('./components/popup.html', {
+    "prop": {
+        "id": "popup-join-result",
+        "class": "popup-join-result",
+        "type": "alert",
+        "content": "./pages/popup/join-result.html"
+    }
+})}}
+<!-- // 팝업 : 회원가입 결과 -->

@@ -1,0 +1,2367 @@
+/* 팝업 : 조건필터 */
+.popup-filter {
+    .contents {
+        section {
+            padding:calcu(120px) calcu(84px);
+            margin-top:calcu(27px);
+            background-color:#fff;
+
+            > .tit {
+                font-weight:400;
+                margin-bottom:calcu(60px);
+            }
+
+            &.price-area {
+                margin-top:0;
+                padding-bottom:calcu(180px);
+            }
+
+            &.distance-area {
+                padding-top:0;
+                padding-bottom:calcu(180px);
+                margin-top:0;
+            }
+
+            &.year-area {
+                padding-top:0;
+                padding-bottom:calcu(180px);
+                margin-top:0;
+            }
+
+            &.fuel-area,
+            &.transmission-area {
+                @include clearfix;
+
+                label {
+                    float:left;
+                    margin:0 calcu(24px) calcu(30px) 0;
+                }
+            }
+        }
+    }
+}
+
+/* 팝업 : 검색 */
+.popup-search {
+    .contents {
+        padding-top:calcu(27px);
+
+        section {
+            display:none;
+
+            &.lately-area,
+            &.autocompleate-area {
+                height:100%;
+                background-color:#fff;
+
+                .tit {
+                    font-weight:400;
+                    font-size:calcu(42px);
+                    line-height:calcu(120px);
+                    padding:0 calcu(42px);
+                    border-bottom:calcu(3px) solid #e7e7e7;
+                }
+
+                ul {
+                    // max-height:calc(100% - #{calcu(120px)} - #{calcu(3px)});
+                    padding-top:calcu(20px);
+                    // overflow-y:scroll;
+
+                    li {
+                        position:relative;
+
+                        button {
+                            width:100%;
+                            height:calcu(128px);
+                            color:$colorBlack2;
+                            text-align:left;
+                            padding:0 calcu(42px);
+
+                            &.btn-del {
+                                position:absolute;
+                                top:0;
+                                right:0;
+                                width:calcu(114px);
+                                height:100%;
+
+                                &:after {
+                                    @include bgList(2, 1);
+
+                                    content:"";
+                                    position:absolute;
+                                    top:0;
+                                    right:0;
+                                    bottom:0;
+                                    left:0;
+                                    width:calcu(30px);
+                                    height:calcu(30px);
+                                    margin:auto;
+                                    background-image:url($dirCommon+'btn.png');
+                                    background-size:calcu(900px);
+                                }
+                            }
+                        }
+
+                        .nodata {
+                            padding:calcu(259px) 0;
+
+                            button {
+                                display:block;
+                                width:auto;
+                                height:calcu(84px);
+                                font-weight:700;
+                                font-size:calcu(36px);
+                                color:$colorBlue;
+                                padding:0 calcu(32px);
+                                margin:calcu(75px) auto 0;
+                                border:calcu(3px) solid #6dc8bf;
+                                border-radius:calcu(42px);
+                            }
+                        }
+                    }
+                }
+
+                &.active {
+                    display:block;
+                }
+            }
+        }
+    }
+}
+
+/* 팝업 : 이미지보기 */
+.popup-image {
+    .contents {
+        background-color:#fff !important;
+    }
+
+    .pic-area {
+        position:relative;
+
+        .swiper-slide {
+            img {
+                width:100%;
+            }
+        }
+
+        .swiper-pagination {
+            bottom:calcu(60px);
+            left:calcu(42px);
+            width:calcu(141px);
+            height:calcu(64px);
+            font-size:calcu(36px);
+            line-height:calcu(64px);
+            color:$colorWhite;
+            border-radius:calcu(32px);
+            background-color:rgba(0, 0, 0, 0.3);
+
+            .swiper-pagination-current {
+                font-weight:700;
+            }
+        }
+    }
+
+    .thumb-list {
+        @include clearfix;
+
+        padding:calcu(42px);
+
+        li {
+            float:left;
+            width:calc((100vw - #{calcu(84px)} - #{calcu(72px)}) / 4);
+            height:calc((100vw - #{calcu(84px)} - #{calcu(72px)}) / 4);
+            margin:calcu(24px) 0 0 calcu(24px);
+            border:calcu(3px) solid #e7e7e7;
+            overflow:hidden;
+
+            img {
+                height:100%;
+            }
+
+            &:nth-child(4n + 1) {
+                margin-left:0;
+            }
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                margin-top:0;
+            }
+        }
+    }
+}
+
+/* 팝업 : 후기 이미지보기 */
+.popup-reviewimage {
+    .contents {
+        background-color:#fff !important;
+    }
+
+    .pic-area {
+        position:relative;
+
+        .swiper-slide {
+            img {
+                width:100%;
+            }
+        }
+
+        .swiper-pagination {
+            bottom:calcu(60px);
+            left:calcu(42px);
+            width:calcu(141px);
+            height:calcu(64px);
+            font-size:calcu(36px);
+            line-height:calcu(64px);
+            color:$colorWhite;
+            border-radius:calcu(32px);
+            background-color:rgba(0, 0, 0, 0.3);
+
+            .swiper-pagination-current {
+                font-weight:700;
+            }
+        }
+    }
+
+    .thumb-list {
+        @include clearfix;
+
+        padding:calcu(42px);
+
+        li {
+            float:left;
+            width:calc((100vw - #{calcu(84px)} - #{calcu(72px)}) / 4);
+            height:calc((100vw - #{calcu(84px)} - #{calcu(72px)}) / 4);
+            margin:calcu(24px) 0 0 calcu(24px);
+            border:calcu(3px) solid #e7e7e7;
+            overflow:hidden;
+
+            img {
+                height:100%;
+            }
+
+            &:nth-child(4n + 1) {
+                margin-left:0;
+            }
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                margin-top:0;
+            }
+        }
+    }
+}
+
+/* 팝업 : 시세 */
+.popup-price {
+    > .inner {
+        .header {
+            position:absolute !important;
+            top:0;
+            left:0;
+            width:100%;
+
+            .btn-close {
+                &:before {
+                    @include bgList(4, 1);
+                }
+            }
+        }
+
+        .contents {
+            height:100% !important;
+            background-color:#f3f3f3 !important;
+
+            > .txt {
+                font-size:calcu(64px);
+                color:$colorWhite;
+                line-height:calcu(80px);
+                padding:calcu(120px) calcu(90px) calcu(319px);
+                background-color:#6dc8bf;
+
+                span {
+                    display:block;
+                }
+            }
+
+            .graph {
+                padding:0 calcu(60px);
+                margin-top:calcu(-278px);
+
+                > .inner {
+
+                    padding:calcu(200px) calcu(80px) calcu(120px);
+                    border-radius:calcu(30px);
+                    background-color:#fff;
+
+                    .price-area {
+                        position:relative;
+
+                        .img {
+                            width:100%;
+                        }
+
+                        ul {
+                            @include clearfix;
+
+                            li {
+                                float:left;
+
+                                width:25%;
+                                font-size:calcu(36px);
+                                text-align:center;
+                                color:$colorLightGray;
+
+                                .price {
+                                    position:absolute;
+                                    top:0;
+                                    left:0;
+                                    width:25%;
+                                    font-size:calcu(33px);
+                                    text-align:center;
+                                    color:$colorLightGray;
+                                }
+
+                                .price {
+                                    &.active {
+                                        line-height:calcu(34px);
+                                        padding:calcu(21px) 0 calcu(15px);
+                                        margin-top:calcu(20px);
+                                        border-radius:calcu(6px);
+                                        background-color:#fff;
+                                        box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.2);
+
+                                        &:before {
+                                            @include arrow(calcu(40px), #fff, 'top');
+
+                                            content:"";
+                                            transform:translateX(-50%);
+                                            position:absolute;
+                                            top:calcu(-20px);
+                                            left:50%;
+                                            width:0;
+                                            margin:0 auto;
+                                            border-top:none;
+                                        }
+                                    }
+                                }
+
+                                &.low {
+                                    padding-left:calcu(20px);
+
+                                    .price {
+                                        top:51.51%;
+                                        left:calcu(12px);
+
+                                        &.active {
+                                            top:71.51%;
+                                        }
+                                    }
+
+                                    strong {
+                                        color:#3dc3eb;
+                                    }
+                                }
+
+                                &.middle {
+                                    .price {
+                                        top:38.18%;
+                                        left:25%;
+
+                                        &.active {
+                                            top:56.16%;
+                                        }
+                                    }
+
+                                    strong {
+                                        color:#447af9;
+                                    }
+                                }
+
+                                &.high {
+                                    .price {
+                                        top:18.18%;
+                                        left:50%;
+
+                                        &.active {
+                                            top:36.16%;
+                                        }
+                                    }
+
+                                    strong {
+                                        color:#ff3f55;
+                                    }
+                                }
+
+                                &.veryhigh {
+                                    padding-right:calcu(20px);
+
+                                    .price {
+                                        top:8.48%;
+                                        left:calc(75% - #{calcu(9px)});
+
+                                        &.active {
+                                            top:25.05%;
+                                        }
+                                    }
+
+                                    strong {
+                                        color:#e16473;
+                                    }
+                                }
+
+
+                            }
+                        }
+                    }
+
+                    table {
+                        margin-top:calcu(120px);
+                        border-top:calcu(3px) solid #e7e7e7;
+                        border-bottom:calcu(3px) solid #e7e7e7;
+
+                        tbody {
+                            display:block;
+                            padding:calcu(56px) calcu(30px) calcu(46px);
+
+                            tr {
+                                display:block;
+                                position:relative;
+                                font-size:calcu(36px);
+                                height:calcu(66px);
+                                line-height:calcu(66px);
+                                color:$colorBlack2;
+
+                                th {
+                                    display:block;
+                                    text-align:left;
+                                }
+
+                                td {
+                                    position:absolute;
+                                    top:0;
+                                    right:0;
+                                }
+
+                                &:last-child {
+                                    height:calcu(90px);
+                                    font-size:calcu(42px);
+                                    line-height:calcu(90px);
+
+                                    td {
+                                        color:#ff3f55;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .txt {
+                        font-size:calcu(33px);
+                        color:$colorBlack2;
+                        line-height:calcu(42px);
+                        padding-left:calcu(20px);
+                        margin-top:calcu(78px);
+
+                        &:before {
+                            @include bgList(2, 1);
+
+                            content:"";
+                            display:inline-block;
+                            width:calcu(42px);
+                            height:calcu(42px);
+                            vertical-align:top;
+                            margin-right:calcu(15px);
+                            background-image:url($dirCommon+'icon.png');
+                            background-size:calcu(900px) auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 팝업 : 보험 사고 이력 정보 */
+.popup-trouble {
+    > .inner {
+        > .contents {
+            padding-bottom:calcu(130px);
+
+            > section,
+            > div {
+                padding:0 calcu(60px);
+                margin-top:calcu(60px);
+
+                > .inner {
+                    padding:calcu(80px) calcu(60px) calcu(63px);
+                    border-radius:calcu(20px);
+                    background:#fff;
+
+                    > .header {
+                        .tit {
+                            font-size:calcu(48px);
+                        }
+                    }
+                }
+
+                &.target {
+                    color:$colorWhite;
+                    padding:calcu(120px) calcu(87px) calcu(350px);
+                    margin-top:0;
+                    background-color:#6dc8bf;
+
+                    .number {
+                        font-size:calcu(72px);
+                    }
+
+                    .date {
+                        font-size:calcu(36px);
+                        margin-top:calcu(32px);
+                    }
+                }
+
+                &.spec {
+                    margin-top:calcu(-290px);
+
+                    table {
+                        display:block;
+                        margin-top:calcu(42px);
+
+                        tbody {
+                            display:block;
+
+                            tr {
+                                display:block;
+                                position:relative;
+                                height:calcu(114px);
+                                font-size:calcu(36px);
+                                line-height:calcu(111px);
+                                border-bottom:calcu(3px) solid #f3f3f3;
+
+                                th {
+                                    display:block;
+                                    font-weight:400;
+                                    text-align:left;
+                                    color:$colorLightGray;
+                                }
+
+                                td {
+                                    position:absolute;
+                                    top:0;
+                                    right:0;
+                                }
+                            }
+                        }
+                    }
+
+                    .txt-area {
+                        margin-top:calcu(53px);
+                    }
+                }
+
+                &.trouble {
+                    > .inner {
+                        .list-area {
+                            margin-top:calcu(118px);
+                            overflow:hidden;
+
+                            li {
+                                float:left;
+                                position:relative;
+                                width:calc(33.33% - #{calcu(45px/2)});
+                                font-size:calcu(36px);
+                                color:$colorBlack2;
+                                padding-left:calcu(45px);
+                                border-left:calcu(3px) solid #e7e7e7;
+
+                                &:before {
+                                    content:"";
+                                    display:block;
+                                    margin-bottom:calcu(117px);
+                                    background-image:url($dirView+'icon.png');
+                                    background-size:calcu(900px) auto;
+                                }
+
+                                strong {
+                                    position:absolute;
+                                    left:calcu(45px);
+                                    font-size:calcu(48px);
+                                    color:$colorDefault;
+                                    margin-top:calcu(-72px);
+                                }
+
+                                &.total {
+                                    padding-left:0;
+                                    border-left:none;
+
+                                    &:before {
+                                        @include bgList(1, 12);
+
+                                        width:calcu(99px);
+                                        height:calcu(63px);
+                                    }
+
+                                    strong {
+                                        left:0;
+                                    }
+                                }
+
+                                &.robbery {
+                                    width:calc(33.33% + #{calcu(45px)});
+
+                                    &:before {
+                                        @include bgList(3, 12);
+
+                                        width:calcu(84px);
+                                        height:calcu(58px);
+                                    }
+                                }
+
+                                &.flooding {
+                                    &:before {
+                                        @include bgList(4, 12);
+
+                                        width:calcu(90px);
+                                        height:calcu(66px);
+                                    }
+                                }
+
+                                &.active {
+                                    strong {
+                                        color:#6dc8bf
+                                    }
+                                }
+                            }
+                        }
+
+                        > .txt-area {
+                            padding:calcu(60px) 0 calcu(99px);
+                            border-bottom:calcu(3px) solid #e7e7e7;
+                        }
+
+                        .fold {
+                            margin-top:calcu(99px);
+                            border:calcu(3px) solid #e7e7e7;
+
+                            .btn-fold {
+                                color:$colorDefault;
+                                padding:0 calcu(45px);
+                                background-color:#f8f8f8;
+
+                                &:after {
+                                    right:calcu(45px);
+                                }
+
+                                span {
+                                    color:$colorBlack2;
+                                }
+                            }
+
+                            .content {
+                                padding:0 calcu(45px) calcu(48px);
+                                border-top:calcu(3px) solid #e7e7e7;
+
+                                > section {
+                                    padding:calcu(60px) 0 0;
+                                    margin-top:calcu(60px);
+                                    border-top:calcu(3px) solid #e7e7e7;
+
+                                    > .txt {
+                                        font-size:calcu(30px);
+                                        color:$colorBlack2;
+                                        line-height:calcu(42px);
+                                        margin-top:calcu(20px);
+                                    }
+
+                                    &:first-child {
+                                        margin-top:0;
+                                        border-top:none;
+                                    }
+
+                                    > section {
+                                        margin-top:calcu(60px);
+
+                                        &:first-of-type {
+                                            padding-top:calcu(48px);
+                                            margin-top:calcu(42px);
+                                            border-top:calcu(3px) solid #e7e7e7;
+                                        }
+
+                                         > .tit {
+                                             color:$colorBlack2;
+
+                                             em {
+                                                 color:$colorDefault;
+                                             }
+                                         }
+
+                                         .txt-area {
+                                             font-size:calcu(30px);
+                                             margin-top:calcu(21px);
+                                         }
+                                    }
+
+                                    .table {
+                                        padding:calcu(60px) calcu(48px) calcu(36px);
+                                        margin-top:calcu(24px);
+                                        background-color:#f9f9f9;
+
+                                        > b {
+                                            display:block;
+                                            text-align:center;
+                                            line-height:calcu(474px);
+                                        }
+
+                                        table {
+                                            display:block;
+
+                                            caption {
+                                                display:block;
+                                                font-weight:700;
+                                                font-size:calcu(36px);
+                                                text-align:left;
+                                            }
+
+                                            tbody {
+                                                display:block;
+                                                margin-top:calcu(36px);
+
+                                                tr {
+                                                    display:block;
+                                                    position:relative;
+                                                    height:calcu(81px);
+                                                    font-size:calcu(36px);
+                                                    line-height:calcu(81px);
+
+                                                    th {
+                                                        display:block;
+                                                        font-weight:400;
+                                                        text-align:left;
+                                                        color:$colorBlack2;
+                                                    }
+
+                                                    td {
+                                                        position:absolute;
+                                                        top:0;
+                                                        right:0;
+                                                    }
+                                                }
+                                            }
+
+                                            tfoot {
+                                                display:block;
+                                                padding-top:calcu(15px);
+                                                margin-top:calcu(15px);
+                                                background-image:url($dirView+'border-pattern1.jpg');
+                                                background-size:calcu(36px);
+                                                background-repeat:repeat-x;
+
+                                                tr {
+                                                    display:block;
+                                                    position:relative;
+                                                    height:calcu(81px);
+                                                    font-size:calcu(36px);
+                                                    line-height:calcu(81px);
+
+                                                    th {
+                                                        display:block;
+                                                        font-weight:400;
+                                                        text-align:left;
+                                                        color:$colorBlack2;
+                                                    }
+
+                                                    td {
+                                                        position:absolute;
+                                                        top:0;
+                                                        right:0;
+                                                        color:$colorBlue;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                > .txt {
+                                    margin-top:calcu(24px);
+                                    font-size:calcu(30px);
+                                    line-height:calcu(42px);
+                                    color:$colorBlack2;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.change {
+                    > .inner {
+                        .list-area {
+                            margin-top:calcu(118px);
+                            overflow:hidden;
+
+                            li {
+                                float:left;
+                                position:relative;
+                                width:calc(33.33% - #{calcu(45px/2)});
+                                font-size:calcu(36px);
+                                color:$colorBlack2;
+                                padding-left:calcu(45px);
+                                border-left:calcu(3px) solid #e7e7e7;
+
+                                &:before {
+                                    content:"";
+                                    display:block;
+                                    margin-bottom:calcu(117px);
+                                    background-image:url($dirView+'icon.png');
+                                    background-size:calcu(900px) auto;
+                                }
+
+                                strong {
+                                    position:absolute;
+                                    left:calcu(45px);
+                                    font-size:calcu(48px);
+                                    color:$colorDefault;
+                                    margin-top:calcu(-72px);
+                                }
+
+                                &.rent {
+                                    padding-left:0;
+                                    border-left:none;
+
+                                    &:before {
+                                        @include bgList(5, 12);
+
+                                        width:calcu(84px);
+                                        height:calcu(80px);
+                                    }
+
+                                    strong {
+                                        left:0;
+                                    }
+                                }
+
+                                &.business {
+                                    width:calc(33.33% + #{calcu(45px)});
+
+                                    &:before {
+                                        @include bgList(6, 12);
+
+                                        width:calcu(84px);
+                                        height:calcu(71px);
+                                    }
+                                }
+
+                                &.public {
+
+                                    &:before {
+                                        @include bgList(7, 12);
+
+                                        width:calcu(84px);
+                                        height:calcu(73px);
+                                    }
+                                }
+
+                                &.active {
+                                    strong {
+                                        color:#6dc8bf
+                                    }
+                                }
+                            }
+                        }
+
+                        > .txt-area {
+                            padding:calcu(60px) 0 calcu(99px);
+                            border-bottom:calcu(3px) solid #e7e7e7;
+
+                            &:last-child {
+                                padding-bottom:0;
+                                border-bottom:none;
+                            }
+                        }
+
+                        .fold {
+                            margin-top:calcu(100px);
+                            border:calcu(3px) solid #e7e7e7;
+
+                            .btn-fold {
+                                color:$colorDefault;
+                                padding:0 calcu(45px);
+                                background-color:#f8f8f8;
+
+                                &:after {
+                                    right:calcu(45px);
+                                }
+
+                                span {
+                                    color:$colorBlack2;
+                                }
+                            }
+
+                            .content {
+                                padding:0 calcu(45px) calcu(48px);
+                                border-top:calcu(3px) solid #e7e7e7;
+
+                                > b {
+                                    display:block;
+                                    text-align:center;
+                                    line-height:calcu(474px);
+                                }
+
+                                .table {
+                                    padding-top:calcu(70px);
+                                    margin-top:calcu(70px);
+                                    border-top:1px solid #e7e7e7;
+
+                                    &:first-child {
+                                        margin-top:0;
+                                        border-top:none;
+                                    }
+
+                                    table {
+                                        display:block;
+
+                                        caption {
+                                            display:block;
+                                            font-weight:700;
+                                            text-align:left;
+                                        }
+
+                                        tbody {
+                                            display:block;
+                                            margin-top:calcu(36px);
+
+                                            tr {
+                                                display:block;
+                                                position:relative;
+                                                height:calcu(81px);
+                                                line-height:calcu(81px);
+
+                                                th {
+                                                    display:block;
+                                                    font-weight:400;
+                                                    text-align:left;
+                                                    color:$colorBlack2;
+                                                }
+
+                                                td {
+                                                    position:absolute;
+                                                    top:0;
+                                                    right:0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.additional {
+                    > .inner {
+                        padding:0;
+
+                        .fold {
+                            .btn-fold {
+                                height:calcu(160px);
+                                font-size:calcu(48px);
+                                color:$colorDefault;
+                                padding:0 calcu(60px);
+
+                                &:after {
+                                    right:calcu(60px);
+                                }
+                            }
+
+                            .content {
+                                padding:calcu(52px) calcu(60px);
+                                border-top:calcu(3px) solid #f3f3f3;
+
+                                .txt-area {
+                                    p {
+                                        font-size:calcu(42px);
+                                        text-indent:calcu(-33px);
+                                        line-height:calcu(56px);
+                                        color:$colorBlack2;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.information {
+                    > .inner {
+                        padding:0;
+
+                        .fold {
+                            .btn-fold {
+                                height:calcu(160px);
+                                font-size:calcu(48px);
+                                color:$colorDefault;
+                                padding:0 calcu(60px);
+
+                                &:after {
+                                    right:calcu(60px);
+                                }
+                            }
+
+                            .content {
+                                padding:calcu(52px) calcu(60px);
+                                border-top:calcu(3px) solid #f3f3f3;
+
+                                p {
+                                    font-size:calcu(42px);
+                                    line-height:calcu(56px);
+                                    margin-top:calcu(56px);
+                                    word-break: break-all;
+                                    color:$colorBlack2;
+
+                                    &:first-child {
+                                        margin-top:0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            > .txt {
+                font-size:calcu(36px);
+                color:$colorLightGray;
+                line-height:calcu(48px);
+                text-align:center;
+                margin-top:calcu(56px);
+
+                em {
+                    display:block;
+                    font-size:calcu(42px);
+                    color:$colorBlack2;
+                    line-height:calcu(54px);
+                }
+            }
+        }
+    }
+}
+
+/* 팝업 : 성능 상태 기록부 */
+.popup-repair {
+    > .inner {
+        > .contents {
+            padding-bottom:calcu(130px);
+
+            > section,
+            > div {
+                padding:0 calcu(60px);
+                margin-top:calcu(60px);
+
+                > .inner {
+                    padding:calcu(80px) calcu(60px) calcu(63px);
+                    border-radius:calcu(20px);
+                    background:#fff;
+
+                    > .header {
+                        .tit {
+                            font-size:calcu(48px);
+                        }
+                    }
+                }
+
+                &.target {
+                    color:$colorWhite;
+                    padding:calcu(120px) calcu(87px) calcu(350px);
+                    margin-top:0;
+                    background-color:#6dc8bf;
+
+                    .number {
+                        font-size:calcu(72px);
+
+                        .tooltip {
+                            .btn-tooltip {
+                                @include bgList(5, 1);
+
+                                width:calcu(57px);
+                                height:calcu(57px);
+                                margin-top:calcu(9px);
+                                background-image:url($dirView+'icon.png');
+                                background-size:calcu(900px) auto;
+                            }
+
+                            .txt {
+                                left:auto;
+                                right:0;
+                                color:$colorDefault;
+                            }
+                        }
+                    }
+
+                    .date {
+                        font-size:calcu(36px);
+                        margin-top:calcu(32px);
+                    }
+                }
+
+                &.repair {
+                    margin-top:calcu(-290px);
+
+                    .swiper-container {
+                        padding:0 calcu(60px);
+
+                        .indicator {
+                            position:absolute;
+                            z-index:2;
+                            top:0;
+                            bottom:0;
+                            left:0;
+                            width:100%;
+                            height:calcu(47px);
+                            margin:auto;
+
+                            [class^="swiper-button"] {
+                                opacity:1;
+                                right:0;
+
+                                &:after {
+                                    @include bgList(6, 1);
+
+                                    width:calcu(24px);
+                                    height:calcu(47px);
+                                    font-size:0;
+
+                                    background-image:url($dirView+'icon.png');
+                                    background-size:calcu(900px) auto;
+                                }
+                            }
+
+                            .swiper-button-prev {
+                                left:0;
+                                right:auto;
+                                &:after {
+                                    transform:rotate(180deg);
+                                }
+                            }
+
+                            .swiper-button-disabled {
+                                opacity:0.15;
+                            }
+                        }
+
+                        .swiper-slide {
+                            > div {
+                                position:absolute;
+                                top:0;
+                                width:50%;
+                                height:100%;
+
+                                &.left {
+                                    left:0;
+                                }
+
+                                &.right {
+                                    right:0;
+                                }
+
+                                span {
+                                    position:absolute;
+                                    width:calcu(52px);
+                                    height:calcu(52px);
+                                    font-size:calcu(27px);
+                                    text-align:center;
+                                    line-height:calcu(52px);
+                                    color:$colorWhite;
+                                    margin:auto;
+                                    border-radius:100%;
+                                    background-color:#aea7a2;
+
+                                    &.active {
+                                        background-color:#6dc8bf;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(1) {
+                                .left {
+                                    span {
+                                        left:0;
+                                        right:0;
+
+                                        &.part1 {
+                                            top:15.5%;
+                                        }
+
+                                        &.part7 {
+                                            top:52.16%;
+                                        }
+
+                                        &.part4 {
+                                            top:82.66%;
+                                        }
+                                    }
+                                }
+
+                                .right {
+                                    span {
+                                        &.part5 {
+                                            left:0;
+                                            right:0;
+                                            top:1%;
+                                        }
+
+                                        &.part9 {
+                                            left:0;
+                                            right:0;
+                                            top:8.83%;
+                                        }
+
+                                        &.part11-1 {
+                                            left:16.11%;
+                                            top:14.83%;
+                                        }
+
+                                        &.part12-1 {
+                                            left:31.66%;
+                                            top:14.83%;
+                                        }
+
+                                        &.part12-2 {
+                                            left:54.44%;
+                                            top:14.83%;
+                                        }
+
+                                        &.part11-2 {
+                                            left:71.11%;
+                                            top:14.83%;
+                                        }
+
+                                        &.part13-1 {
+                                            left:16.11%;
+                                            top:26.5%;
+                                        }
+
+                                        &.part13-2 {
+                                            left:71.11%;
+                                            top:26.5%;
+                                        }
+
+                                        &.part10 {
+                                            left:0;
+                                            right:0;
+                                            top:30%;
+                                        }
+
+                                        &.part15 {
+                                            left:0;
+                                            right:0;
+                                            top:36.66%;
+                                        }
+
+                                        &.part16 {
+                                            left:0;
+                                            right:0;
+                                            top:46.16%;
+                                        }
+
+                                        &.part19 {
+                                            left:0;
+                                            right:0;
+                                            top:70.5%;
+                                        }
+
+                                        &.part13-3 {
+                                            left:16.11%;
+                                            top:73%;
+                                        }
+
+                                        &.part13-4 {
+                                            left:71.11%;
+                                            top:73%;
+                                        }
+
+                                        &.part12-3 {
+                                            left:18.05%;
+                                            top:83%;
+                                        }
+
+                                        &.part12-4 {
+                                            left:68.33%;
+                                            top:83%;
+                                        }
+
+                                        &.part17 {
+                                            left:0;
+                                            right:0;
+                                            top:81.5%;
+                                        }
+
+                                        &.part18 {
+                                            left:0;
+                                            right:0;
+                                            top:91.33%;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                .left {
+                                    span {
+                                        &.part2 {
+                                            top:3.5%;
+                                            left:25.83%;
+                                        }
+
+                                        &.part3-1 {
+                                            top:36.16%;
+                                            left:30.55%;
+                                        }
+
+                                        &.part8 {
+                                            top:40.16%;
+                                            left:9.44%;
+                                        }
+
+                                        &.part14 {
+                                            top:50.5%;
+                                            left:60%;
+                                        }
+
+                                        &.part3-2 {
+                                            top:58.5%;
+                                            left:31.38%;
+                                        }
+
+                                        &.part6 {
+                                            top:85.66%;
+                                            left:28.05%;
+                                        }
+                                    }
+                                }
+
+                                .right {
+                                    span {
+                                        &.part2 {
+                                            top:3.5%;
+                                            right:25.83%;
+                                        }
+
+                                        &.part3-1 {
+                                            top:36.16%;
+                                            right:30.55%;
+                                        }
+
+                                        &.part8 {
+                                            top:40.16%;
+                                            right:9.44%;
+                                        }
+
+                                        &.part14 {
+                                            top:50.5%;
+                                            right:60%;
+                                        }
+
+                                        &.part3-2 {
+                                            top:58.5%;
+                                            right:31.38%;
+                                        }
+
+                                        &.part6 {
+                                            top:85.66%;
+                                            right:28.05%;
+                                        }
+                                    }
+                                }
+                            }
+
+                            img {
+                                width:100%;
+                            }
+                        }
+                    }
+
+                    .swiper-container + table {
+                        display:block;
+                        margin:calcu(130px) 0 calcu(48px);
+
+                        tbody {
+                            @include clearfix;
+
+                            display:block;
+                            padding:0 calcu(60px);
+
+                            tr {
+                                display:block;
+                                float:left;
+                                position:relative;
+                                width:calc((100% - #{calcu(60px)}) / 2);
+                                height:calcu(56px);
+                                font-size:calcu(36px);
+                                color:$colorBlack2;
+                                line-height:calcu(56px);
+
+                                th {
+                                    display:block;
+                                    font-weight:400;
+                                    text-align:left;
+
+                                }
+
+                                td {
+                                    position:absolute;
+                                    top:0;
+                                    right:0;
+                                }
+
+                                &:first-child {
+                                    border-top:0;
+                                }
+
+                                &:nth-child(2n + 2) {
+                                    margin-left:calcu(60px);
+                                }
+                            }
+                        }
+                    }
+
+                    table + table {
+                        display:block;
+                        padding:calcu(20px) calcu(60px);
+                        border-radius:calcu(20px);
+                        background-color:#f9f9f9;
+
+                        tbody {
+                            display:block;
+
+                            tr {
+                                display:block;
+                                position:relative;
+                                height:calcu(114px);
+                                font-size:calcu(36px);
+                                line-height:calcu(111px);
+                                border-top:calcu(3px) solid #e7e7e7;
+
+                                th {
+                                    display:block;
+                                    font-weight:400;
+                                    text-align:left;
+                                    color:$colorBlack2;
+                                }
+
+                                td {
+                                    position:absolute;
+                                    top:0;
+                                    right:0;
+                                }
+
+                                &:first-child {
+                                    border-top:0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.basic {
+                    > .inner {
+                        padding:0;
+
+                        .fold {
+                            .btn-fold {
+                                height:calcu(160px);
+                                font-size:calcu(48px);
+                                color:$colorDefault;
+                                padding:0 calcu(60px);
+
+                                &:after {
+                                    right:calcu(60px);
+                                }
+                            }
+
+                            .content {
+                                padding:calcu(40px) calcu(60px);
+                                border-top:calcu(3px) solid #f3f3f3;
+
+                                table {
+                                    display:block;
+
+                                    tbody {
+                                        display:block;
+
+                                        tr {
+                                            display:block;
+                                            position:relative;
+                                            height:calcu(114px);
+                                            font-size:calcu(36px);
+                                            line-height:calcu(111px);
+                                            border-top:calcu(3px) solid #f3f3f3;
+
+                                            th {
+                                                display:block;
+                                                font-weight:400;
+                                                text-align:left;
+                                                color:$colorLightGray;
+                                            }
+
+                                            td {
+                                                position:absolute;
+                                                top:0;
+                                                right:0;
+                                            }
+
+                                            &:first-child {
+                                                border-top:none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.total {
+                    > .inner {
+                        position:relative;
+                        padding:0;
+
+                        .fold {
+                            .btn-fold {
+                                height:calcu(160px);
+                                font-size:calcu(48px);
+                                color:$colorDefault;
+                                padding:0 calcu(60px);
+
+                                &:after {
+                                    right:calcu(60px);
+                                }
+                            }
+
+                            .tooltip {
+                                position:absolute;
+                                z-index:1;
+                                top:calcu(59px);
+                                left:calcu(386px);
+                            }
+
+                            .content {
+                                padding:calcu(40px) calcu(60px);
+                                border-top:calcu(3px) solid #f3f3f3;
+
+                                table {
+                                    display:block;
+
+                                    tbody {
+                                        display:block;
+
+                                        tr {
+                                            display:block;
+                                            position:relative;
+                                            font-size:calcu(36px);
+                                            line-height:calcu(48px);
+                                            padding:calcu(30px) 0;
+                                            border-top:calcu(3px) solid #f3f3f3;
+
+                                            th {
+                                                position:absolute;
+                                                top:0;
+                                                left:0;
+                                                display:block;
+                                                font-weight:400;
+                                                text-align:left;
+                                                line-height:calcu(111px);
+                                                color:$colorLightGray;
+                                            }
+
+                                            td {
+                                                display:block;
+                                                width:100%;
+                                                text-align:right;
+                                            }
+
+                                            &:first-child {
+                                                border-top:none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.detail {
+                    > .inner {
+                        position:relative;
+                        padding:0;
+
+                        .fold {
+                            .btn-fold {
+                                height:calcu(160px);
+                                font-size:calcu(48px);
+                                color:$colorDefault;
+                                padding:0 calcu(60px);
+
+                                &:after {
+                                    right:calcu(60px);
+                                }
+                            }
+
+                            .tooltip {
+                                position:absolute;
+                                z-index:1;
+                                top:calcu(59px);
+                                left:calcu(386px);
+                            }
+
+                            .content {
+                                padding:calcu(40px) calcu(60px);
+                                border-top:calcu(3px) solid #f3f3f3;
+
+                                .table {
+                                    padding:calcu(60px) calcu(48px) calcu(36px);
+                                    margin-top:calcu(60px);
+                                    border-radius:calcu(20px);
+                                    background-color:#f9f9f9;
+
+                                    &:first-child {
+                                        margin-top:0;
+                                    }
+
+                                    table {
+                                        display:block;
+
+                                        caption {
+                                            display:block;
+                                            font-weight:700;
+                                            font-size:calcu(42px);
+                                            text-align:left;
+                                            margin-bottom:calcu(40px);
+                                        }
+
+                                        tbody {
+                                            display:block;
+
+                                            tr {
+                                                display:block;
+                                                position:relative;
+                                                font-size:calcu(36px);
+                                                line-height:calcu(48px);
+                                                padding:calcu(30px) 0;
+                                                border-top:calcu(3px) solid #f3f3f3;
+
+                                                th {
+                                                    position:absolute;
+                                                    top:0;
+                                                    left:0;
+                                                    display:block;
+                                                    font-weight:400;
+                                                    text-align:left;
+                                                    line-height:calcu(111px);
+                                                    color:$colorLightGray;
+                                                }
+
+                                                td {
+                                                    display:block;
+                                                    width:100%;
+                                                    text-align:right;
+                                                }
+
+                                                &:first-child {
+                                                    border-top:none;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            > .txt {
+                font-size:calcu(36px);
+                color:$colorBlack2;
+                line-height:calcu(48px);
+                text-align:center;
+                margin-top:calcu(56px);
+
+                span {
+                    color:$colorDefault;
+
+                    &:before {
+                        @include bgList(4, 1);
+
+                        content:"";
+                        display:inline-block;
+                        width:calcu(30px);
+                        height:calcu(23px);
+                        vertical-align:2px;
+                        margin-right:calcu(12px);
+                        background-image:url($dirView+'icon.png');
+                        background-size:calcu(900px) auto;
+                    }
+
+                    & + span {
+                        margin-left:calcu(24px);
+                    }
+                }
+
+                em {
+                    display:block;
+                    font-size:calcu(36px);
+                    color:#000022;
+                    line-height:calcu(48px);
+                }
+            }
+        }
+    }
+}
+
+/* 팝업 : 차량옵션 */
+.popup-option {
+    > .inner {
+        > .contents {
+            .tab-menu {
+                margin-top:calcu(27px);
+                padding:0;
+
+                .menu {
+                    line-height:calcu(42px);
+                    padding:calcu(18px) 0;
+
+                    span {
+                        display:inline-block;
+                        vertical-align:middle;
+                    }
+
+                    &:before {
+                        content:"";
+                        display:inline-block;
+                        height:100%;
+                        vertical-align:middle;
+                    }
+
+                    &:after {
+                        width:100%;
+                    }
+                }
+            }
+
+            .tab-contents {
+                height:calc(100% - 41px - #{calcu(27px)});
+                padding:calcu(60px) calcu(72px);
+                background-color:#fff;
+                overflow-y:scroll;
+
+                label {
+                    float:left;
+                    width:50%;
+                    line-height:calcu(96px);
+
+                    input[type="checkbox"] {
+                        & + span {
+                            color:$colorLightGray;
+
+                            &:before {
+                                display:none;
+                            }
+                        }
+
+                        &:checked {
+                            & + span {
+                                color:$colorDefault;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 팝업 : 방문판매 신청 */
+.popup-request {
+    > .inner {
+        > .contents {
+            position:relative;
+
+
+            form {
+                fieldset {
+                    > div {
+                        background-color:#fff !important;
+
+                        &.txt {
+                            position:relative;
+                            padding:calcu(105px) calcu(60px) 0;
+
+                            &:before {
+                                @include bgList(7, 2);
+
+                                content:"";
+                                position:absolute;
+                                bottom:0;
+                                right:calcu(90px);
+                                width:calcu(161px);
+                                height:calcu(132px);
+                                background-image:url($dirView+'icon.png');
+                                background-size:calcu(900px) auto;
+                            }
+
+                            b {
+                                font-size:calcu(48px);
+                            }
+
+                            p {
+                                line-height:calcu(54px);
+                                color:$colorBlack2;
+                                margin-top:calcu(52px);
+                            }
+                        }
+
+                        &.address {
+                            padding::calcu(113px) calcu(60px) 0;
+
+                            b {
+                                display:block;
+                                font-size:calcu(48px);
+                                margin-bottom:calcu(54px);
+                            }
+
+                            input[type="number"] {
+                                margin-top:calcu(24px);
+                            }
+
+                            label {
+                                margin-top:calcu(33px);
+                            }
+                        }
+
+                        &.data {
+                            padding:calcu(60px) calcu(60px) 0;
+
+                            > .inner {
+                                padding-top:calcu(84px);
+                                border-top:calcu(3px) solid #e7e7e7;
+
+                                b {
+                                    display:block;
+                                    font-size:calcu(48px);
+                                    margin-bottom:calcu(54px);
+                                }
+
+                                > div {
+                                    margin-top:calcu(42px);
+
+                                    &:first-of-type {
+                                        margin-top:0;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.price {
+                            padding:calcu(84px) calcu(60px) 0;
+
+                            > .inner {
+                                padding:calcu(84px) 0 calcu(69px);
+                                border-top:calcu(3px) solid #e7e7e7;
+
+                                b {
+                                    display:block;
+                                    font-size:calcu(48px);
+                                    margin-bottom:calcu(34px);
+                                }
+
+                                .txt-area {
+                                    p {
+                                        font-size:calcu(42px);
+                                        line-height:calcu(66px);
+                                        color:$colorDefault;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.btn-area {
+                            background-color:transparent !important;
+
+                            .btn-request {
+                                width:100% !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 팝업 : 문의 작성 */
+.popup-inquiry {
+    > .inner {
+        > .contents {
+            form {
+                height:calc(100% - #{calcu(270px)} - #{calcu(27px)});
+
+                fieldset {
+                    height:100%;
+                }
+            }
+            .write {
+                height:100%;
+                padding:calcu(106px) calcu(42px) 0;
+                background-color:#fff;
+
+                .name {
+                    font-size:calcu(48px);
+                }
+
+                .txt {
+                    font-size:calcu(26px);
+                    margin-top:calcu(60px);
+                }
+
+                textarea {
+                    height:calcu(600px);
+                    padding:calcu(50px);
+                    margin-top:calcu(40px);
+                }
+
+                .count {
+                    font-size:calcu(36px);
+                    text-align:right;
+                    color:#dbd9d6;
+                    margin-top:calcu(18px);
+
+                    span {
+                        color:$colorLightGray;
+                    }
+                }
+
+                .txt-box {
+                    font-size:calcu(36px);
+                    line-height:calcu(120px);
+                    text-align:center;
+                    margin-top:calcu(57px);
+                    background-color:#f8f8f8;
+
+                    b {
+                        color:$colorBlue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 팝업 : 자주 묻는 질문 */
+.popup-faq {
+    > .inner {
+        > .contents {
+            padding:0 calcu(42px);
+            background-color:#fff !important;
+
+            .question {
+                line-height:calcu(150px);
+                border-bottom:calcu(3px) solid #e7e7e7;
+
+                &:before {
+                    content:"Q";
+                    display:inline-block;
+                    font-weight:700;
+                    color:#6dc8bf;
+                    vertical-align:top;
+                    margin-right:calcu(21px);
+                }
+            }
+
+            .answer {
+                line-height:calcu(54px);
+                margin-top:calcu(54px);
+            }
+        }
+    }
+}
+
+/* 팝업 : 이벤트 */
+.popup-event {
+    > .inner {
+        > .contents {
+            padding:calcu(60px) calcu(42px);
+            background-color:#fff !important;
+
+            .header {
+                .subject {
+                    display:block;
+                }
+
+                .date {
+                    display:block;
+                    font-size:calcu(36px);
+                    color:$colorLightGray;
+                    margin-top:calcu(24px);
+                }
+            }
+
+            .editor-area {
+                line-height:calcu(54px);
+                padding-top:calcu(60px);
+                margin-top:calcu(60px);
+                border-top:calcu(3px) solid #e7e7e7;
+
+                .img {
+                    width:100%;
+                }
+            }
+        }
+    }
+}
+
+/* 팝업 : 이벤트 */
+.popup-notice {
+    > .inner {
+        > .contents {
+            padding:calcu(60px) calcu(42px);
+            background-color:#fff !important;
+
+            .header {
+                .subject {
+                    display:block;
+                }
+
+                .date {
+                    display:block;
+                    font-size:calcu(36px);
+                    color:$colorLightGray;
+                    margin-top:calcu(24px);
+                }
+            }
+
+            .editor-area {
+                line-height:calcu(54px);
+                padding-top:calcu(60px);
+                margin-top:calcu(60px);
+                border-top:calcu(3px) solid #e7e7e7;
+
+                .img {
+                    width:100%;
+                }
+            }
+        }
+    }
+}
+
+/* 팝업 : 아이디 찾기 */
+.popup-find-id,
+.popup-find-id-result {
+    > .inner {
+        > .contents {
+            padding:calcu(140px) calcu(90px);
+            background-color:#fff !important;
+
+            > .txt {
+                font-weight:700;
+                font-size:calcu(63px);
+                line-height:calcu(84px);
+            }
+
+            [class^="input"] {
+                position:relative;
+                margin-top:calcu(24px);
+
+                input {
+                    height:calcu(147px);
+
+                    &:disabled {
+                        background-color:transparent;
+                    }
+                }
+            }
+
+            .btn-code {
+                position:absolute;
+                top:0;
+                right:0;
+                bottom:0;
+                font-weight:700;
+                height:calcu(88px);
+                line-height:calcu(82px);
+                margin:auto;
+                color:#6dc8bf;
+
+                &[disabled] {
+                    color:#dbd9d6;
+                }
+            }
+
+            .btn-re {
+                position:absolute;
+                top:0;
+                right:0;
+                bottom:0;
+                font-weight:700;
+                height:calcu(88px);
+                line-height:calcu(82px);
+                margin:auto;
+                color:#6dc8bf;
+
+                &[disabled] {
+                    color:#dbd9d6;
+                }
+            }
+
+            .timer {
+                position:absolute;
+                top:0;
+                right:0;
+                bottom:0;
+                margin:auto;
+                height:calcu(88px);
+                font-size:calcu(36px);
+                line-height:calcu(82px);
+                color:$colorBlack2;
+            }
+
+            .btn-password {
+                width:100%;
+                font-size:calcu(48px);
+                color:#767676 !important;
+                border-color:#767676 !important;
+                margin-top:calcu(60px);
+
+                & + .btn-confirm {
+                    margin-top:calcu(24px);
+                }
+            }
+
+            .btn-confirm {
+                width:100%;
+                font-size:calcu(48px);
+                margin-top:calcu(60px);
+
+                &[disabled] {
+                    color:#dbd9d6;
+                    border-color:#f3f3f3;
+                    background-color:#f3f3f3;
+                }
+            }
+        }
+    }
+}
+
+/* 팝업 : 비밀번호 찾기 */
+.popup-find-pw {
+    > .inner {
+        > .contents {
+            padding:calcu(140px) calcu(90px);
+            background-color:#fff !important;
+
+            > .txt {
+                font-weight:700;
+                font-size:calcu(63px);
+                line-height:calcu(84px);
+            }
+
+            [class^="input"] {
+                position:relative;
+                margin-top:calcu(24px);
+
+                input {
+                    height:calcu(147px);
+                }
+            }
+
+            .btn-code {
+                position:absolute;
+                top:0;
+                right:0;
+                bottom:0;
+                font-weight:700;
+                height:calcu(88px);
+                line-height:calcu(82px);
+                margin:auto;
+                color:#6dc8bf;
+
+                &[disabled] {
+                    color:#dbd9d6;
+                }
+            }
+
+            .btn-re {
+                position:absolute;
+                top:0;
+                right:0;
+                bottom:0;
+                font-weight:700;
+                height:calcu(88px);
+                line-height:calcu(82px);
+                margin:auto;
+                color:#6dc8bf;
+
+                &[disabled] {
+                    color:#dbd9d6;
+                }
+            }
+
+            .timer {
+                position:absolute;
+                top:0;
+                right:0;
+                bottom:0;
+                margin:auto;
+                height:calcu(88px);
+                font-size:calcu(36px);
+                line-height:calcu(82px);
+                color:$colorBlack2;
+            }
+
+            .btn-confirm {
+                width:100%;
+                font-size:calcu(48px);
+                margin-top:calcu(60px);
+
+                &[disabled] {
+                    color:#dbd9d6;
+                    border-color:#f3f3f3;
+                    background-color:#f3f3f3;
+                }
+            }
+        }
+    }
+}
+
+/* 팝업 : 생생후기 */
+.popup-review {
+    > .inner {
+        > .contents {
+            padding-bottom:calcu(113px);
+            background-color:#fff !important;
+
+            .info-dealer {
+                @include clearfix;
+
+                position:relative;
+                padding:calcu(48px) calcu(42px);
+
+                .pic-dealer {
+                    float:left;
+                    width:calcu(96px);
+                    height:calcu(96px);
+                    border-radius:100%;
+                    background-color:#29adb8;
+                    overflow:hidden;
+
+                    img {
+                        width:calcu(96px);
+                        height:calcu(96px);
+                    }
+                }
+
+                .info {
+                    float:left;
+                    margin-left:calcu(45px);
+
+                    .name {
+                        line-height:calcu(96px);
+                    }
+                }
+            }
+
+            .review-area {
+                .pic-area {
+                    position:relative;
+
+                    .swiper-slide {
+                        img {
+                            width:100%;
+                        }
+                    }
+                }
+
+                .thumb-list {
+                    @include clearfix;
+
+                    padding:calcu(30px) 0;
+                    margin-bottom:calcu(60px);
+
+                    li {
+                        float:left;
+                        width:calc((100vw - #{calcu(9px)}) / 4);
+                        height:calc((100vw - #{calcu(9px)}) / 4);
+                        margin:calcu(24px) 0 0 calcu(3px);
+                        overflow:hidden;
+
+                        img {
+                            height:100%;
+                        }
+
+                        &:nth-child(4n + 1) {
+                            margin-left:0;
+                        }
+
+                        &:nth-child(1),
+                        &:nth-child(2),
+                        &:nth-child(3),
+                        &:nth-child(4) {
+                            margin-top:0;
+                        }
+                    }
+                }
+
+                .info {
+                    padding:0 calcu(42px);
+
+                    .grade-area {
+                        display:inline-block;
+                        vertical-align:top;
+                    }
+
+                    .name {
+                        font-size:calcu(36px);
+                        line-height:calcu(39px);
+                        color:$colorLightGray;
+                        margin:0 calcu(18px);
+                    }
+
+                    .date {
+                        font-size:calcu(36px);
+                        line-height:calcu(39px);
+                        color:$colorLightGray;
+                    }
+
+                    .header {
+                        margin-top:calcu(18px);
+
+                        .flag {
+                            height:calcu(54px);
+                            font-size:calcu(30px);
+                            line-height:calcu(48px);
+                            color:$colorBlack2;
+                            padding:0 calcu(12px);
+                            margin-right:calcu(18px);
+                            border:calcu(3px) solid #aea7a2;
+                        }
+
+                        .car-name {
+                            font-size:calcu(36px);
+                            line-height:calcu(54px);
+                            color:$colorBlack2;
+                        }
+                    }
+                }
+
+                .txt {
+                    line-height:calcu(56px);
+                    padding:0 calcu(42px);
+                    margin-top:calcu(60px);
+                }
+            }
+        }
+    }
+}

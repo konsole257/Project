@@ -1,0 +1,163 @@
+<form>
+    <fieldset>
+        <legend class="hide">조건검색</legend>
+
+        <!-- 가격 // -->
+        <section class="price-area">
+            <h4 class="tit">가격</h4>
+
+            <div class="slider-range">
+                <div class="value">
+                    <input type="text" title="최소 가격" class="price-min" disabled><!-- 최소 가격 -->
+                    <span class="dash">~</span>
+                    <input type="text" title="최대 가격" class="price-max" disabled><!-- 최대 가격 -->
+                </div>
+            </div>
+        </section>
+        <!-- // 가격 -->
+
+        <!-- 주행거리 // -->
+        <section class="distance-area">
+            <h4 class="tit">주행거리</h4>
+
+            <div class="slider-range">
+                <div class="value">
+                    <input type="text" title="최소 가격" class="distance-min" disabled><!-- 최소 주행거리 -->
+                    <span class="dash">~</span>
+                    <input type="text" title="최대 가격" class="distance-max" disabled><!-- 최대 주행거리 -->
+                </div>
+            </div>
+        </section>
+        <!-- // 주행거리 -->
+
+        <!-- 연식 // -->
+        <section class="year-area">
+            <h4 class="tit">연식</h4>
+
+            <div class="slider-range">
+                <div class="value">
+                    <input type="text" title="최소 가격" class="year-min" disabled><!-- 최소 연식 -->
+                    <span class="dash">~</span>
+                    <input type="text" title="최대 가격" class="year-max" disabled><!-- 최대 연식 -->
+                </div>
+            </div>
+        </section>
+        <!-- // 연식 -->
+
+        <!-- 연료 // -->
+        <section class="fuel-area">
+            <h4 class="tit">연료</h4>
+
+            <label><input type="checkbox" class="btn"><span>가솔린</span></label>
+            <label><input type="checkbox" class="btn"><span>디젤</span></label>
+            <label><input type="checkbox" class="btn"><span>LPG</span></label>
+            <label><input type="checkbox" class="btn"><span>전기</span></label>
+            <label><input type="checkbox" class="btn"><span>LPG(일반)</span></label>
+            <label><input type="checkbox" class="btn"><span>가솔린+LPG</span></label>
+            <label><input type="checkbox" class="btn"><span>LPG+전기</span></label>
+            <label><input type="checkbox" class="btn"><span>가솔린+전기</span></label>
+            <label><input type="checkbox" class="btn"><span>디젤+전기</span></label>
+            <label><input type="checkbox" class="btn"><span>가솔린+CNG</span></label>
+            <label><input type="checkbox" class="btn"><span>CNG</span></label>
+            <label><input type="checkbox" class="btn"><span>수소</span></label>
+            <label><input type="checkbox" class="btn"><span>기타</span></label>
+        </section>
+        <!-- // 연료 -->
+
+        <!-- 변속기 // -->
+        <section class="transmission-area">
+            <h4 class="tit">변속기</h4>
+
+            <label><input type="checkbox" class="btn"><span>수동</span></label>
+            <label><input type="checkbox" class="btn"><span>오토</span></label>
+            <label><input type="checkbox" class="btn"><span>세미오토</span></label>
+            <label><input type="checkbox" class="btn"><span>CVT</span></label>
+            <label><input type="checkbox" class="btn"><span>기타</span></label>
+        </section>
+        <!-- // 변속기 -->
+
+        <div class="btn-area">
+            <div class="inner">
+                <button type="reset" class="btn-medium-stroke-black btn-reset" onclick="rangeReset();">초기화</button>
+                <button type="submit" class="btn-medium-fill-blue btn-apply">필터 적용</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<!-- 2020.07.07 : 추가 // -->
+<script>
+window.addEventListener('load', function(){
+    var price = [
+            '0원', '100만원', '200만원', '300만원', '400만원', '500만원', '600만원', '700만원', '800만원', '900만원',
+            '1000만원', '2000만원', '3000만원', '4000만원', '5000만원', '6000만원', '7000만원', '8000만원', '9000만원',
+            '1억원', '2억원', '3억원', '4억원', '5억원'
+        ];
+
+    var distance = [
+            '0km', '10000km', '20000km', '30000km', '40000km', '50000km', '60000km', '70000km', '80000km', '90000km', '100000km',
+            '150000km', '200000km', '250000km', '300000km', '350000km', '400000km', '450000km', '500000km 이상'
+        ];
+
+    var year = [
+            '1980년', '1990년', '2000년', '2010년', '2020년', '현재'
+        ];
+
+    $(document).ready(function(){
+        $('.popup-filter .price-area .slider-range').slider({
+            range: true,
+            min: 0,
+            max: price.length-1,
+            values: [2, 5], // 초기값 [0, price.length-1] : 최소값, 최대값 (상단 price 배열 참조) : 뒤로가기시 해당 필터값 적용
+            create: function(event, ui) {
+                $('.popup-filter .price-area .price-min').val(price[2]); // 초기값 price[0] : 최소값 (상단 price 배열 참조) : 뒤로가기시 해당 필터값 적용
+                $('.popup-filter .price-area .price-max').val(price[5]); // 초기값 price[year.length-1] : 최대값 (상단 price 배열 참조) : 뒤로가기시 해당 필터값 적용
+            },
+            slide: function(event, ui) {
+                var min = ui.values[0],
+                    max = ui.values[1];
+
+                $('.popup-filter .price-area .price-min').val(price[min]);
+                $('.popup-filter .price-area .price-max').val(price[max]);
+            }
+        });
+
+        $('.popup-filter .distance-area .slider-range').slider({
+            range: true,
+            min: 0,
+            max: distance.length-1,
+            values: [0, 8], // 초기값 [0, distance.length-1] : 최소값, 최대값 (상단 distance 배열 참조) : 뒤로가기시 해당 필터값 적용
+            create: function(event, ui) {
+                $('.popup-filter .distance-area .distance-min').val(distance[0]); // 초기값 distance[0] : 최소값 (상단 distance 배열 참조) : 뒤로가기시 해당 필터값 적용
+                $('.popup-filter .distance-area .distance-max').val(distance[8]); // 초기값 distance[distance.length-1] : 최대값 (상단 distance 배열 참조) : 뒤로가기시 해당 필터값 적용
+            },
+            slide: function(event, ui) {
+                var min = ui.values[0],
+                    max = ui.values[1];
+
+                $('.popup-filter .distance-area .distance-min').val(distance[min]);
+                $('.popup-filter .distance-area .distance-max').val(distance[max]);
+            }
+        });
+
+        $('.popup-filter .year-area .slider-range').slider({
+            range: true,
+            min: 0,
+            max: year.length-1,
+            values: [1, year.length-1], // 초기값 [0, year.length-1] : 최소값, 최대값 (상단 year 배열 참조) : 뒤로가기시 해당 필터값 적용
+            create: function(event, ui) {
+                $('.popup-filter .year-area .year-min').val(year[1]); // 초기값 distance[0] : 최소값 (상단 year 배열 참조) : 뒤로가기시 해당 필터값 적용
+                $('.popup-filter .year-area .year-max').val(year[year.length-1]); // 초기값 distance[year.length-1] : 최대값 (상단 year 배열 참조) : 뒤로가기시 해당 필터값 적용
+            },
+            slide: function(event, ui) {
+                var min = ui.values[0],
+                    max = ui.values[1];
+
+                $('.popup-filter .year-area .year-min').val(year[min]);
+                $('.popup-filter .year-area .year-max').val(year[max]);
+            }
+        });
+    });
+});
+</script>
+<!-- // 2020.07.07 : 추가 -->

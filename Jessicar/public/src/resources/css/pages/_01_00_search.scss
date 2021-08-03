@@ -1,0 +1,152 @@
+/**
+* --------------------------------
+* Search CSS
+* --------------------------------
+*/
+#container #contents.search {
+    margin-top:0;
+
+    > section {
+        position:relative;
+        margin-top:calcu(27px);
+        overflow:hidden;
+
+        &.search-area {
+            @include clearfix;
+
+            margin-top:0;
+            padding:calcu(24px) calcu(42px);
+            border-bottom:calcu(3px) solid #e7e7e7;
+            background-color:#fff;
+
+            .input-search {
+                float:left;
+                width:calc(100% - #{calcu(276px)});
+            }
+
+            .btn-filter {
+                float:right;
+                height:calcu(105px);
+                line-height:1;
+                font-size:calcu(39px);
+
+                &:after {
+                    @include bgList(1, 1);
+
+                    content:"";
+                    display:inline-block;
+                    width:calcu(49px);
+                    height:calcu(43px);
+                    vertical-align:top;
+                    margin-left:calcu(30px);
+                    background-image:url($dirCommon+"btn.png");
+                    background-size:calcu(900px) auto;
+                }
+            }
+        }
+
+        &.model-area {
+            .lang-menu {
+                font-size:0;
+                text-align:right;
+                padding:0 calcu(42px);
+
+                .menu {
+                    float:none;
+                    height:calcu(123px);
+                    font-size:calcu(42px);
+                    color:$colorLightGray;
+                    padding:0 calcu(48px) 0 calcu(50px);
+
+                    &:before {
+                        background-color:#e7e7e7;
+                    }
+
+                    &.active {
+                        color:$colorDefault;
+                    }
+                }
+            }
+
+            .dial-menu {
+                font-size:0;
+                padding:0 0 0 calcu(42px);
+                border-bottom:calcu(3px) solid #f3f3f3;
+                background:#fff;
+
+                .menu {
+                    float:none;
+                    width:auto;
+                    height:calcu(123px);
+                    font-size:calcu(42px);
+                    line-height:calcu(123px);
+                    color:$colorLightGray;
+                    padding:0 calcu(42px);
+
+                    &:first-child {margin-left:0;}
+
+                    &.active {
+                        color:$colorDefault;
+                    }
+                }
+            }
+
+            .list-area {
+                height:calc(100vh - #{calcu(128px)} - #{calcu(120px)} - #{calcu(27px)} - #{calcu(156px)} - #{calcu(150px)} - env(safe-area-inset-bottom));
+                padding:0 calcu(66px) 0 calcu(84px);
+                background-color:#fff;
+                overflow:scroll;
+
+                .tit {
+                    font-size:calcu(90px);
+                    padding:calcu(67px) 0 calcu(34px) 0;
+                }
+
+                li {
+                    button {
+                        position:relative;
+                        width:100%;
+                        height:calcu(129px);
+
+                        .img {
+                            position:absolute;
+                            top:0;
+                            left:0;
+                            bottom:0;
+                            width:calcu(48px);
+                            margin:auto;
+                        }
+
+                        span {
+                            float:left;
+                            color:$colorBlack1;
+
+                            &.number {
+                                float:right;
+                                color:$colorGray;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .lang-menu ~ .list-area {
+                height:calc(100vh - #{calcu(128px)} - #{calcu(120px)} - #{calcu(123px)} - #{calcu(27px)} - #{calcu(156px)} - #{calcu(150px)});
+
+                button {
+                    padding-left:calcu(79px);
+
+                    span {
+                        float:left;
+                        color:$colorBlack1;
+
+                        &.ko {
+                            margin-left:calcu(30px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

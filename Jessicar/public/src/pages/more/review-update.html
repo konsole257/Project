@@ -1,0 +1,135 @@
+<div class="header">
+    <h2 class="tit">{{prop.pageName}}</h2>
+    <button type="button" class="btn-mute btn-close">뒤로가기</button>
+</div>
+
+<div id="contents" class="{{prop.page}}">
+
+    <form>
+        <fieldset>
+            <legend class="hide">후기 작성</legend>
+
+            <!-- 딜러 정보 영역 // -->
+            <div class="pic-area">
+                <div class="inner">
+                    <figure class="pic-dealer">
+                        <img src="{{dirRoot}}/resources/images/temp/temp-dealer100x100.png" alt="" class="img">
+                    </figure>
+
+                    <div class="name-area">
+                        <span class="flag">전화문의</span><!-- 문의 카테고리  -->
+                        <span class="name">라온 모터스 <b>김민재</b></span>
+                    </div>
+                </div>
+            </div>
+            <!-- // 딜러 정보 영역 -->
+
+            <!-- 별점 영역 // -->
+            <div class="appraisal-area">
+                <ul class="appraisal-list">
+                    <li>
+                        <div class="txt">
+                            서비스 호감도
+                            <small>별점을 선택해 주세요.</small>
+                        </div>
+
+                        <div class="grade-area">
+                            <span class="hide">별점</span>
+                            <label><input type="radio" name="service" class="big"><span>1점</span></label>
+                            <label><input type="radio" name="service" class="big"><span>2점</span></label>
+                            <label><input type="radio" name="service" class="big"><span>3점</span></label>
+                            <label><input type="radio" name="service" class="big"><span>4점</span></label>
+                            <label><input type="radio" name="service" class="big" checked><span>5점</span></label><!-- 후기 작성시 받은 점수에 checked -->
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="txt">
+                            신뢰도
+                            <small>별점을 선택해 주세요.</small>
+                        </div>
+
+                        <div class="grade-area">
+                            <span class="hide">별점</span>
+                            <label><input type="radio" name="credibility" class="big"><span>1점</span></label>
+                            <label><input type="radio" name="credibility" class="big"><span>2점</span></label>
+                            <label><input type="radio" name="credibility" class="big"><span>3점</span></label>
+                            <label><input type="radio" name="credibility" class="big"><span>4점</span></label>
+                            <label><input type="radio" name="credibility" class="big" checked><span>5점</span></label>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="txt">
+                            전문성
+                            <small>별점을 선택해 주세요.</small>
+                        </div>
+
+                        <div class="grade-area">
+                            <span class="hide">별점</span>
+                            <label><input type="radio" name="professional" class="big"><span>1점</span></label>
+                            <label><input type="radio" name="professional" class="big"><span>2점</span></label>
+                            <label><input type="radio" name="professional" class="big"><span>3점</span></label>
+                            <label><input type="radio" name="professional" class="big"><span>4점</span></label>
+                            <label><input type="radio" name="professional" class="big" checked><span>5점</span></label>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="txt">
+                            품질 및 가격 만족도
+                            <small>별점을 선택해 주세요.</small>
+                        </div>
+
+                        <div class="grade-area">
+                            <span class="hide">별점</span>
+                            <label><input type="radio" name="quality" class="big"><span>1점</span></label>
+                            <label><input type="radio" name="quality" class="big"><span>2점</span></label>
+                            <label><input type="radio" name="quality" class="big"><span>3점</span></label>
+                            <label><input type="radio" name="quality" class="big"><span>4점</span></label>
+                            <label><input type="radio" name="quality" class="big" checked><span>5점</span></label>
+                        </div>
+                    </li>
+                </ul>
+
+                <textarea placeholder="자세한 리뷰를 작성해 주시면 딜러에게 큰 힘이 되며,  더 좋은 서비스를 제공하는데 큰 도움이 됩니다.">너무 친절하게 설명 해주셔서 감동 받았어요. 늘 구매하고 싶었던
+차인데 조건도 만족스럽고 조만간 연락 드릴게요.</textarea>
+                <div class="count"><span>0</span>/1000</div><!-- 2020.06.19 : 수정 -->
+            </div>
+            <!-- // 별점 영역 -->
+
+            <!-- 첨부파일 영역 // -->
+            <div class="file-area">
+                <span class="file">
+        			<span class="btn-mute-fill-gray btn-file" onclick="fn.filePreviewBtn(this);">파일첨부</span>
+        			<input type="file" title="파일찾기" onchange="fn.filePreview(this);" accept=".jpg" data-index="1"><!-- 첨부파일이 있을경우 data-index="index" -->
+        			<input type="file" title="파일찾기" onchange="fn.filePreview(this);" accept=".jpg" data-index="2"><!-- 첨부파일이 있을경우 data-index="index" -->
+        			<input type="file" title="파일찾기" onchange="fn.filePreview(this);" accept=".jpg"><!-- 첨부파일이 없을경우 data-index="index" 삭제 -->
+
+                    <!-- 첨부파일이 있을경우 노출 // -->
+                    <div class="preview-area">
+                        <div class="preview" onclick="fn.filePreviewRemove(this)" data-index="1"><!-- data-index="index"  -->
+                            <img src="{{dirRoot}}/resources/images/temp/temp-car438x300.jpg" alt="" class="img">
+                        </div>
+
+                        <div class="preview" onclick="fn.filePreviewRemove(this)" data-index="2"><!-- data-index="index"  -->
+                            <img src="{{dirRoot}}/resources/images/temp/temp-car438x300.jpg" alt="" class="img">
+                        </div>
+                    </div>
+                    <!-- // 첨부파일이 있을경우 노출 -->
+        		</span>
+
+                <div class="txt-area">
+                    <p>첨부파일은 최대 3개, 10MB까지 등록 가능합니다.</p>
+                    <p>파일 형식은 JPG만 가능합니다.</p>
+                </div>
+            </div>
+            <!-- // 첨부파일 영역 -->
+
+            <div class="btn-area">
+                <button type="reset" class="btn-medium-stroke-black"><b>취소</b></button>
+                <button type="submit" class="btn-medium-fill-blue"><b>확인</b></button>
+            </div>
+        </fieldset>
+    </form>
+</div>

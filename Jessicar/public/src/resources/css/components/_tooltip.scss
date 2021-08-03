@@ -1,0 +1,39 @@
+/**
+* --------------------------------
+* Tooltip CSS
+* --------------------------------
+*/
+.tooltip {
+    display:inline-block;
+    position:relative;
+
+    .btn-tooltip {
+        @include bgList(4, 1);
+
+        display:block;
+        width:calcu(45px);
+        height:calcu(45px);
+        background-image:url($dirCommon+'btn.png');
+        background-size:calcu(900px) auto;
+    }
+
+    .txt {
+        display:none;
+        position:absolute;
+        top:calcu(57px);
+        z-index:2;
+        width:calcu(570px);
+        font-size:calcu(36px);
+        line-height:calcu(40px);
+        padding:calcu(33px) calcu(39px);
+        margin-top:calcu(12px);
+        border:calcu(3px) solid #222;
+        background:#fff;
+    }
+
+    &.active {
+        .txt {
+            display:block;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+<div class="header">
+    <h2 class="tit">{{prop.pageName}}</h2>
+    <button type="button" class="btn-mute btn-close">뒤로가기</button>
+</div>
+
+<div id="contents" class="{{prop.page}}">
+    <!-- 검색 // -->
+    <section class="search-area">
+        {{include('./components/skip.html', {"prop": {"id": "search-area-end","text": "검색 건너뛰기"}})}}
+
+        <h3 class="hide">검색어 검색</h3>
+
+        <form>
+            <fieldset>
+                <legend class="hide">검색</legend>
+
+                <div class="input-search">
+                    <input type="search" title="검색어 입력" placeholder="궁금한 점을 검색해 보세요.">
+                    <button type="reset" class="btn-mute btn-reset">삭제</button>
+                    <button type="submit" class="btn-mute btn-search">검색</button>
+                </div>
+            </fieldset>
+        </form>
+    </section>
+
+    <hr id="search-area-end">
+    <!-- // 검색 -->
+
+    <!-- 자주 묻는 질문 // -->
+    <section class="faq-area">
+        <h3 class="tit">자주 묻는 질문</h3>
+
+        <div class="nodata">
+            <p>
+                찾으시는 내역이 없네요<br>
+                1:1문의를 보내주시면 빠른시일내에<br>
+                답변 드리겠습니다.
+            </p>
+        </div>
+    </section>
+    <!-- // 자주 묻는 질문 -->
+
+</div>

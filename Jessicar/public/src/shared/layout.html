@@ -1,0 +1,67 @@
+{{if (context.prop) {
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<!-- config// -->
+	{{include('./shared/config.html', {
+		"prop": {
+			"page": "{{prop.page}}",
+			"pageName": "{{prop.pageName}}"
+		}
+	})}}
+	<!-- //config -->
+</head>
+
+<body>
+
+{{if (prop.page === "home") {
+<!-- 스플래시 : 메인에서만 노출 : 2020.07.08 : 추가 // -->
+<div class="splash">
+    <img src="{{dirRoot}}/resources/images/home/splash.jpg" alt="" class="img">
+</div>
+<!-- // 스플래시 : 메인에서만 노출 : 2020.07.08 : 추가 -->
+}}}
+
+<div id="wrap">
+	<!-- header// -->
+	{{include('./shared/header.html')}}
+	<!-- //header -->
+
+	<!-- contents// -->
+	<main id="container">
+		{{include('{{prop.content}}', {
+			"prop": {
+				"page": "{{prop.page}}",
+				"pageName": "{{prop.pageName}}"
+			}
+		})}}
+	</main>
+	<!-- //contents -->
+
+
+	{{if (prop.page === "home" || prop.page === "search" || prop.page === "bookmark" ||prop.page === "lately" || prop.page === "more") {
+	<!-- toolbar : 메인, 검색, 찜한차, 최근본차량, 더보기메인 외 나머지페이지에서 노출X, // -->
+		{{include('./shared/toolbar.html', {
+			"prop": {
+				"page": "{{prop.page}}",
+				"pageName": "{{prop.pageName}}"
+			}
+		})}}
+	<!-- //toolbar -->
+	}}}
+
+
+	<!-- footer// -->
+	{{include('./shared/footer.html', {
+		"prop": {
+			"page": "{{prop.page}}",
+			"pageName": "{{prop.pageName}}"
+		}
+	})}}
+	<!-- //footer -->
+</div>
+
+</body>
+</html>
+}}}

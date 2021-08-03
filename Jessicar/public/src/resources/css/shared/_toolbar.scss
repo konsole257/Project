@@ -1,0 +1,203 @@
+/**
+* --------------------------------
+* Toolbar
+* --------------------------------
+*/
+#toolbar {
+    position:fixed;
+    z-index:100;
+    top:auto !important;
+    left:0;
+    bottom:0;
+    width:calcu(100%);
+    padding-bottom:env(safe-area-inset-bottom);
+    box-sizing:border-box;
+    background-color:#f8f8f8;
+    overflow:hidden;
+
+    ul {
+        @include clearfix;
+
+        display:flex;
+
+        li {
+            flex:1;
+
+            a {
+                display:flex;
+                height:calcu(150px);
+                font-size:calcu(36px);
+                align-items:center;
+                justify-content:center;
+
+                div {
+                    display:inline-block;
+                    text-align:center;
+                    vertical-align:middle;
+
+                    .toolbar-icon {
+                        display:flex;
+                        height:calcu(52px);
+                        margin:0 auto calcu(18px);
+                        align-items:center;
+                        justify-content:center;
+
+                        &:before {
+                            content:"";
+                            display:inline-block;
+                            width:calcu(62px);
+                            height:calcu(52px);
+                            background-image:url($dirCommon+"btn-toolbar.png");
+                            background-size:calcu(900px) auto;
+                        }
+                    }
+                }
+
+                &.active {
+                    div {
+                        font-size:0;
+
+                        .toolbar-icon {
+                            margin:0 auto calcu(24px);
+                        }
+
+                        &:after {
+                            content:"";
+                            display:block;
+                            width:calcu(15px);
+                            height:calcu(15px);
+                            margin:0 auto;
+                            background-color:#6dc8bf;
+                            border-radius:100%;
+                        }
+                    }
+                }
+            }
+
+            &.toolbar-home {
+                a {
+                    div {
+                        .toolbar-icon {
+                            &:before {
+                                @include bgList(1, 1);
+
+                                width:calcu(50px);
+                                height:calcu(52px);
+                            }
+                        }
+                    }
+
+                    &.active {
+                        div {
+                            .toolbar-icon {
+                                &:before {
+                                    @include bgList(1, 2);
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            &.toolbar-search {
+                a {
+                    div {
+                        .toolbar-icon {
+                            &:before {
+                                @include bgList(2, 1);
+
+                                width:calcu(54px);
+                                height:calcu(52px);
+                            }
+                        }
+                    }
+
+                    &.active {
+                        div {
+                            .toolbar-icon {
+                                &:before {
+                                    @include bgList(2, 2);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.toolbar-bookmark {
+                a {
+                    div {
+                        .toolbar-icon {
+                            &:before {
+                                width:calcu(54px);
+                                height:calcu(48px);
+                                @include bgList(3, 1);
+                            }
+                        }
+                    }
+
+                    &.active {
+                        div {
+                            .toolbar-icon {
+                                &:before {
+                                    @include bgList(3, 2);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.toolbar-lately {
+                a {
+                    div {
+                        .toolbar-icon {
+                            &:before {
+                                @include bgList(4, 1);
+
+                                width:calcu(50px);
+                                height:calcu(52px);
+                            }
+                        }
+                    }
+
+                    &.active {
+                        div {
+                            .toolbar-icon {
+                                &:before {
+                                    @include bgList(4, 2);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.toolbar-more {
+                a {
+                    div {
+                        .toolbar-icon {
+                            &:before {
+                                @include bgList(5, 1);
+
+                                width:calcu(62px);
+                                height:calcu(18px);
+                            }
+                        }
+                    }
+
+                    &.active {
+                        div {
+                            .toolbar-icon {
+                                &:before {
+                                    @include bgList(5, 2);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

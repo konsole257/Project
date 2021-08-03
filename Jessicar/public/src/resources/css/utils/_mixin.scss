@@ -1,0 +1,35 @@
+@mixin clearfix {
+    &:after {
+        content:'';
+        display:block;
+        clear:both;
+    }
+}
+
+@mixin bgList($col, $row) {
+    $col: -90*($col - 1)/$multiple;
+    $row: -90*($row - 1)/$multiple;
+    background-position:$col#{px} $row#{px};
+}
+
+@mixin ellipsis($lineHeight: null, $row: 1) {
+    height: $lineHeight*$row;
+    line-height:$lineHeight;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $row;
+    -webkit-box-orient: vertical;
+}
+
+@mixin arrow($size, $color, $direction) {
+	border:$size solid transparent;
+	@if ($direction == 'right') {
+		border-left-color:$color;
+	} @else if ($direction == 'left') {
+		border-right-color:$color;
+	} @else if ($direction == 'top') {
+		border-bottom-color:$color;
+	} @else if ($direction == 'bottom') {
+		border-top-color:$color;
+	}
+}
