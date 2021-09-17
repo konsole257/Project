@@ -1,0 +1,52 @@
+$multiple: 1;
+$deviceWidth: 800px;
+
+$dirFonts: '{{dirRoot}}/resources/fonts/';
+
+$dirImgCommon: '{{dirRoot}}/resources/images/web/admin/visang/common/';
+$dirImgMain: '{{dirRoot}}/resources/images/web/admin/visang/main/';
+$dirImgSub: '{{dirRoot}}/resources/images/web/admin/visang/sub/';
+$dirImgHome: '{{dirRoot}}/resources/images/web/admin/visang/home/';
+$dirImgLib: '{{dirRoot}}/resources/images/web/admin/visang/lib/';
+
+$NanumSquareRound: "NanumSquareRound", Noto Sans, Roboto, "Helvetica Neue", sans-serif;
+
+$primaryColor: #00b5e2;
+
+$pointColorAB: #f1f6fa;
+$pointColorDAB: #e0e7f1;
+$pointColorRed: #f1614e;
+$pointColorOrange: #f1843d;
+$pointColorGreen: #167e1b;
+$pointColorPurple: #d867ab;
+$pointColorGray: #adb0b8;
+$pointColorDarkgray: #55575d;
+
+$fontColorBase: #000;
+$fontColorDarkgray: #55575d;
+$fontColorBlack: #18212c;
+$fontColorWhite: #fff;
+
+$light-mode: (
+    "bgcolor": (#dde4f1, #eaeff8, #ccd3e2, #f5f7fa, #fff),
+    "gradient": (
+            linear-gradient(to bottom, #2659eb, #4b76f2),
+            linear-gradient(to bottom, #6437e8, #7253dd),
+            linear-gradient(to bottom, #25ba6c, #83df56),
+            linear-gradient(to bottom, #f95f5f, #f46b8f),
+            linear-gradient(to bottom, #f8a748, #fcd022)
+        ),
+    "textcolor": (#000, #b8b8b9, #777, #5b5a5f, #333)
+);
+
+$dark-mode: (
+    "bgcolor": (#1d1c21, #27262d, #2f2e36, #37363f, #45444d),
+    "gradient": (
+            linear-gradient(to bottom, #2659eb, #4b76f2),
+            linear-gradient(to bottom, #6437e8, #7253dd),
+            linear-gradient(to bottom, #25ba6c, #83df56),
+            linear-gradient(to bottom, #f95f5f, #f46b8f),
+            linear-gradient(to bottom, #f8a748, #fcd022)
+        ),
+    "textcolor": (#fff, #b8b8b9, #777, #5b5a5f, #333)
+);

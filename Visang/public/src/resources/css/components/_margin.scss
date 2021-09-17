@@ -1,0 +1,26 @@
+/**
+* --------------------------------
+* Margin
+* --------------------------------
+*/
+
+@for $i from 0 through 20 {
+    .mt#{$i * 5} {
+        margin-top: 5px * $i !important;
+    }
+}
+@for $i from 0 through 20 {
+    .mr#{$i * 5} {
+        margin-right: 5px * $i !important;
+    }
+}
+@for $i from 0 through 20 {
+    .mb#{$i * 5} {
+        margin-bottom: 5px * $i !important;
+    }
+}
+@for $i from 0 through 20 {
+    .ml#{$i * 5} {
+        margin-left: 5px * $i !important;
+    }
+}

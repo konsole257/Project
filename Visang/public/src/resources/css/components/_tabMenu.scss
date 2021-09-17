@@ -1,0 +1,38 @@
+/**
+* --------------------------------
+* Tab Menu CSS
+* --------------------------------
+*/
+
+.tab_menu {
+    font-size: 0;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    border-top: 1px solid $pointColorDAB;
+
+    a {
+        display: inline-block;
+        height: 40px;
+        font-size: 15px;
+        line-height: 40px;
+        padding: 0 16px;
+        margin-left: 8px;
+        background-color: $pointColorDAB;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &.active {
+            font-weight: 700;
+            color: #fff;
+            background-color: #19212c;
+        }
+    }
+}
+
+.popup {
+    .tab_menu {
+        border-top: none;
+    }
+}

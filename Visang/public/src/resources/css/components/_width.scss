@@ -1,0 +1,21 @@
+/**
+* --------------------------------
+* Width
+* --------------------------------
+*/
+
+@for $i from 1 through 100 {
+    .w#{$i}p {
+        width: 1% * $i !important;
+        flex-grow: 0 !important;
+        flex-basis: 1% * $i !important;
+    }
+}
+
+@for $i from 1 through 100 {
+    .w#{$i * 5} {
+        width: 5px * $i !important;
+        flex-grow: 0 !important;
+        flex-basis: 5px * $i !important;
+    }
+}

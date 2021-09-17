@@ -1,0 +1,113 @@
+/**
+* --------------------------------
+* Input File CSS
+* --------------------------------
+*/
+
+.file {
+    position:relative;
+    display:inline-block;
+    min-width: 300px;
+
+    .file_set {
+        &:before {
+            content: attr(data-filename);
+            display: inline-block;
+            width: calc(100% - 89px);
+            height: 32px;
+            font-size: 13px;
+            line-height: 30px;
+            padding: 0 10px;
+            border: 1px solid $pointColorDAB;
+            background-color: #f1f6fa;
+            box-sizing: border-box;
+        }
+    }
+
+    .btn-file {
+        width: 85px;
+        color: #fff;
+        padding: 0;
+        margin-left: 4px;
+        border-color: $pointColorDarkgray !important;
+        background-color: $pointColorDarkgray !important;
+        cursor: pointer;
+    }
+
+    .btn-cancel {
+        position:absolute;
+        top:0;
+        right:142px;
+        width:48px;
+        height:48px;
+
+        &:before {
+            content:"";
+            position:absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            width:18px;
+            height:18px;
+            margin:auto;
+            @include bgImg($dirImgCommon+'icon.png', 10, 1);
+        }
+    }
+
+    input[type="file"] {
+        opacity:0;
+        position:absolute;
+        z-index:2;
+        top:0;
+        left:-9999px;
+    }
+
+    &.file-picture {
+        .picture {
+            display:block;
+            position:relative;
+            width:138px;
+            height:168px;
+            padding:9px;
+            border:1px solid #dfdfdf;
+
+            span {
+                display:block;
+
+                width:118px;
+                height:148px;
+                font-size:14px;
+                text-align:center;
+                line-height:20px;
+                color:$fontColorBase;
+                padding-top:44px;
+                background-color:#f9f9f9;
+            }
+
+            .img {
+                position:absolute;
+                top:0;
+                right:0;
+                bottom:0;
+                left:0;
+                width:118px;
+                height:148px;
+                margin:auto;
+                overflow:hidden;
+
+                img {
+                    width:100%;
+                    height:100%;
+                    object-fit:cover;
+                }
+            }
+        }
+
+        .btn-file {
+            float:left;
+            width:138px;
+            margin:14px 0 0 0;
+        }
+    }
+}

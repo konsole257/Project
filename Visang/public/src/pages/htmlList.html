@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>비상교육 -  Publishing List</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#g_container li').each(function(index){
+		$(this).find('em').text(index+1 + ".");
+	});
+	$('#g_container li').click(function() {
+		$('#g_container li').removeClass('on');
+		$(this).addClass('on');
+	});
+});
+</script>
+<style>
+/* reset */
+html {width:100%; height:100%; filter: expression(document.execCommand('BackgroundImageCache', false, true));}
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button {margin:0; padding:0;}
+body{font-size:12px;line-height:1.25;color:#333;background-color: #f2f4f7;}
+ul,ol{list-style:none}
+caption {display:none;}
+a {text-decoration:none;color:#666;}
+a:hover, a:active, a:focus {text-decoration:none;}
+
+/* header */
+#g_header {background:#00b5e2;}
+#g_header h1 {padding:20px 0 20px 30px;color:#fff;font-size:30px;}
+
+/* container */
+#g_container {background-color: #fff;}
+#g_container h2.g_tit {padding:30px 30px 10px 30px; font-size:16px; color:#333; font-weight: 700;}
+#g_container ul {border-top:1px #dee3eb solid}
+#g_container ul li {border-bottom:1px #dee3eb solid}
+#g_container ul li a {display: block;padding:10px 30px;}
+#g_container ul li em {display: inline-block;width:15px;font-style: normal;}
+#g_container ul li a:hover,
+#g_container ul li.on a {background-color: #fafafb;}
+
+/* g_footer */
+#g_footer {padding:20px 0;text-align: center; color:#999; font-size: 11px; font-family:"arial";}
+</style>
+</head>
+
+<body>
+<div id="wrap">
+	<!-- header s -->
+	<div id="g_header">
+		<h1>비상교육 Publishing List</h1>
+	</div>
+	<!--// header -->
+
+	<div id="g_container">
+		<h2 class="g_tit">참고</h2>
+		<ul>
+			<li>
+				<a href="{{dirRoot}}/style_guide.html" target="_blank"><em></em>스타일 가이드</a>
+			</li>
+			<li>
+				<a href="{{dirRoot}}/layout.html" target="_blank"><em></em>레이아웃</a>
+			</li>
+		</ul>
+
+		<h2 class="g_tit">서브</h2>
+		<ul>
+			<li>
+				<a href="{{dirRoot}}/01_sub/01_sub.html" target="_blank"><em></em>서브</a>
+			</li>
+		</ul>
+	</div>
+	<!-- //g_container -->
+
+	<div id="g_footer">
+		Copyright © 비상교육 2021. All Rights Reserved.
+	</div>
+</div>
+</body>
+</html>

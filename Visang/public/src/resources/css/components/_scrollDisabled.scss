@@ -1,0 +1,12 @@
+/**
+* --------------------------------
+* Scroll Disabled CSS
+* --------------------------------
+*/
+
+.scroll_disabled {
+    height: 100%;
+    min-height: 100%;
+    overflow:hidden !important;
+    touch-action:none;
+}

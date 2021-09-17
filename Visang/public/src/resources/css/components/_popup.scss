@@ -1,0 +1,139 @@
+/**
+* --------------------------------
+* Popup CSS
+* --------------------------------
+*/
+
+.popup {
+    opacity:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:fixed;
+    top:-100vh;
+    left:-100vw;
+    z-index:99;
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.8);
+    outline:none;
+
+    > .inner {
+        position:relative;
+        min-width:480px;
+        max-width: 1280px;
+        background-color:#fff;
+        box-sizing: border-box;
+        overflow:hidden;
+
+        > .header {
+            position:relative;
+
+            .tit {
+                height:60px;
+                font-weight: 700;
+                font-size:20px;
+                line-height:60px;
+                color: $fontColorBlack;
+                padding: 0 24px;
+                border-bottom:1px solid #e0e7f1;
+            }
+
+            .btn_close {
+                position:absolute;
+                top:0;
+                right:0;
+                width:60px;
+                height:60px;
+
+                &:before {
+                    content:"";
+                    position:absolute;
+                    top:0;
+                    right:0;
+                    bottom:0;
+                    left:0;
+                    width:18px;
+                    height:18px;
+                    margin:auto;
+
+                    @include bgImg($dirImgCommon+'btn.png', 1, 1);
+                }
+            }
+        }
+
+        > .btn_close {
+            position:absolute;
+            top:7px;
+            right:7px;
+            width:60px;
+            height:60px;
+
+            &:before {
+                content:"";
+                position:absolute;
+                top:0;
+                right:0;
+                bottom:0;
+                left:0;
+                width:18px;
+                height:18px;
+                margin:auto;
+
+                @include bgImg($dirImgCommon+'btn.png', 1, 1);
+            }
+        }
+
+        > .contents {
+            position:relative;
+            max-width: 1000px;
+            max-height: 70vh;
+            padding: 24px;
+            overflow: auto;
+
+            .btn_area {
+                display:flex;
+                width:100%;
+                justify-content:center;
+
+                [class*="btn"] {
+                    flex-basis:100px;
+                    margin-left:4px;
+
+                    &:first-child {
+                        margin-left:0;
+                    }
+                }
+            }
+        }
+
+        > .footer {
+            margin-top:36px;
+        }
+    }
+
+    &.active {
+        opacity:1;
+        top:0;
+        left:0;
+
+        &+ hr {
+            display: block;
+            width: 0;
+            margin: 0;
+            border: none;
+        }
+    }
+
+    &[class*="alert"],
+    &[class*="confirm"] {
+        > .inner {
+            padding:78px 25px 60px;
+
+            > .contents {
+                text-align:center;
+                margin-top:0;
+            }
+        }
+    }
+}

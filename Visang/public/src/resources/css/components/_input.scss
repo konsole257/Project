@@ -1,0 +1,120 @@
+/**
+* --------------------------------
+* Input CSS
+* --------------------------------
+*/
+
+label {
+    display: inline-block;
+    text-align: center;
+    -webkit-tap-highlight-color:transparent;
+}
+input {
+    padding:0;
+    // -webkit-appearance:none;
+
+    &[type="text"],
+    &[type="number"],
+    &[type="password"],
+    &[type="search"],
+    &[type="mail"] {
+        height:32px;
+        font-weight: 350;
+        font-family: $NanumSquareRound;
+        font-size:13px;
+        color: $fontColorDarkgray;
+        padding:0 15px;
+        border:1px solid $pointColorDAB;
+        border-radius:0;
+        box-sizing: border-box;
+        -webkit-appearance:none;
+        -webkit-tap-highlight-color:transparent;
+
+        &.big {
+            height: 44px;
+            font-size: 15px;
+        }
+    }
+
+    &[type="text"]::-ms-clear {
+        display:none;
+    }
+
+    &[type="number"] {
+        -moz-appearance:textfield;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance:none;
+        }
+    }
+
+    &[type="file"] {
+        cursor:pointer;
+    }
+
+    &:focus {
+        outline:none;
+    }
+
+    &::placeholder {
+        font-size:13px;
+        color:#adb0b8;
+    }
+
+    &:-ms-input-placeholder {
+        font-size:13px;
+        color:#adb0b8 !important;
+    }
+
+    &.big {
+        &::placeholder {
+            font-size:15px;
+        }
+
+        &:-ms-input-placeholder {
+            font-size:15px;
+        }
+    }
+}
+
+textarea {
+    width:100%;
+    font-size:13px;
+    color: $fontColorDarkgray;
+    padding:15px 20px;
+    border:1px solid #dfdfdf;
+    border-radius:0;
+    box-sizing: border-box;
+    -webkit-appearance:none;
+    -webkit-tap-highlight-color:transparent;
+
+    &::placeholder{
+        font-size:15px;
+        color:#adb0b8;
+    }
+
+    &:-ms-input-placeholder {
+        font-size:15px;
+        color:#adb0b8;
+    }
+}
+
+
+// input[type="text"]:focus,
+// input[type="search"]:focus,
+// input[type="number"]:focus,
+// input[type="password"]:focus {border-color:#0a4bcc;}
+textarea:required,
+input:required,
+textarea.required,
+input.required {
+    border-color:#e0e7f1;
+    background-color: #e5f7fb;
+}
+textarea:-moz-read-only,
+input:-moz-read-only {color:#adb0b8;background-color:#eee;}
+textarea[readonly],
+input[readonly] {color:#adb0b8;background-color:#eee;}
+textarea:disabled,
+input:disabled {color:#adb0b8;background-color:#eee;}

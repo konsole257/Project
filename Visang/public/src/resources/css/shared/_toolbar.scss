@@ -1,0 +1,126 @@
+/**
+* --------------------------------
+* Toolbar
+* --------------------------------
+*/
+
+#toolbar {
+    display: flex;
+    position: absolute;
+    z-index: 999;
+    bottom: 0;
+    left: 0;
+    width: calcvw(800px);
+    height: calcvw(100px);
+    font-size: 0;
+    padding: 0 calcvw(40px);
+    border-radius: calcvw(30px) calcvw(30px) 0 0;
+    box-shadow: 0px 0px calcvw(40px) 0px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-sizing: border-box;
+
+    .btn {
+        position: relative;
+        width: calcvw(140px);
+        height: 100%;
+        padding: 0;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            background-size: calcvw(720px) auto;
+        }
+
+        &.btn_allmenu {
+            &:after {
+                width: calcvw(40px);
+                height: calcvw(40px);
+
+                @include bgImg($dirImgCommon+'toolbar.png', 1, 1);
+            }
+        }
+
+        &.btn_calendar {
+            &:after {
+                width: calcvw(40px);
+                height: calcvw(40px);
+
+                @include bgImg($dirImgCommon+'toolbar.png', 3, 1);
+            }
+        }
+
+        &.btn_note {
+            &:after {
+                width: calcvw(36px);
+                height: calcvw(40px);
+
+                @include bgImg($dirImgCommon+'toolbar.png', 5, 1);
+            }
+        }
+
+        &.btn_storage {
+            &:after {
+                width: calcvw(38px);
+                height: calcvw(34px);
+
+                @include bgImg($dirImgCommon+'toolbar.png', 7, 1);
+            }
+        }
+
+        &.btn_check {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: calcvw(160px);
+            height: calcvw(158px);
+            margin: auto;
+
+            &:after {
+                width: 100%;
+                height: 100%;
+
+                @include bgImg($dirImgCommon+'toolbar.png', 1, 3);
+            }
+        }
+    }
+
+    > span {
+        flex: 1;
+        display: flex;
+    }
+
+    > span:first-child {
+        justify-content:flex-start;
+    }
+
+    > span:last-child {
+        justify-content:flex-end;
+    }
+}
+
+.sub3 ~ #toolbar {
+    .btn {
+        &.btn_check {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: calcvw(160px);
+            height: calcvw(170px);
+            margin: auto;
+
+            &:after {
+                width: 100%;
+                height: 100%;
+
+                @include bgImg($dirImgCommon+'toolbar.png', 7, 3);
+            }
+        }
+    }
+}

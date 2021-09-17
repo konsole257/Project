@@ -1,0 +1,166 @@
+/**
+* --------------------------------
+* Button CSS
+* --------------------------------
+*/
+
+button {
+    font-family:$NanumSquareRound;
+    padding:0;
+    border:none;
+    background:none;
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+}
+
+.btn_area {
+    display:flex !important;
+    justify-content:center;
+
+    > [class^="align"] {
+        flex: 1;
+        display:flex;
+
+        &[class*="left"] {
+            justify-content:flex-start;
+        }
+
+        &[class*="center"] {
+            justify-content:center;
+        }
+
+        &[class*="right"] {
+            justify-content:flex-end;
+        }
+    }
+
+    [class^="btn"] {
+        margin-left:10px;
+
+        &:first-child {
+            margin-left:0;
+        }
+    }
+}
+
+.btn {
+    display:inline-block;
+    position:relative;
+    height:32px;
+    font-weight: 350;
+    font-size: 13px;
+    line-height:30px;
+    text-align:center;
+    vertical-align:top;
+    padding: 0 16px;
+    overflow:hidden;
+    box-sizing: border-box;
+
+    // &[class*="small"] {
+    //     height:24px;
+    //     font-size:13px;
+    //     line-height:22px;
+    // }
+
+    &[class*="big"] {
+        height:40px;
+        font-weight: 700;
+        font-size:15px;
+        line-height:38px;
+    }
+
+    &[class*="mute"] {
+        text-indent:-9999px;
+    }
+
+    &[class*="stroke"] {
+        border-width:1px;
+        border-style:solid;
+        border-color:$pointColorDarkgray;
+        background-color:#fff;
+
+        &[class*="primary"] {
+            color:$primaryColor;
+            border-color:$primaryColor;
+        }
+
+        &[class*="red"] {
+            color:$pointColorRed;
+            border-color:$pointColorRed;
+        }
+
+        &[class*="orange"] {
+            color:$pointColorOrange;
+            border-color:$pointColorOrange;
+        }
+
+        &[class*="green"] {
+            color:$pointColorGreen;
+            border-color:$pointColorGreen;
+        }
+
+        &[class*="purple"] {
+            color:$pointColorPurple;
+            border-color:$pointColorPurple;
+        }
+
+        &[class*="gray"] {
+            color:$pointColorGray;
+            border-color:$pointColorGray;
+        }
+    }
+
+    &[class*="fill"] {
+        color:$fontColorWhite;
+        background-color :$pointColorDarkgray;
+
+        &[class*="primary"] {
+            background-color:$primaryColor;
+        }
+
+        &[class*="red"] {
+            background-color:$pointColorRed;
+        }
+
+        &[class*="orange"] {
+            background-color:$pointColorOrange;
+        }
+
+        &[class*="green"] {
+            background-color:$pointColorGreen;
+        }
+
+        &[class*="purple"] {
+            background-color:$pointColorPurple;
+        }
+
+        &[class*="gray"] {
+            background-color:$pointColorGray;
+        }
+
+        &[class*="white"] {
+            background-color:#fff;
+        }
+    }
+
+    // &[class*="rounded"] {
+    //     border-radius:calcu(10px);
+    // }
+
+    &[class*="full"] {
+        width:100%;
+    }
+
+    &[class*="middle"] {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    &[disabled] {
+        color:$fontColorBase !important;
+        border-color:#efefef !important;
+        background-color:#efefef !important;
+        pointer-events:none;
+    }
+}

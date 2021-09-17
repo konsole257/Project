@@ -1,0 +1,48 @@
+/**
+* --------------------------------
+* Icon CSS
+* --------------------------------
+*/
+
+.icon {
+    display: inline-block;
+    background-size: calcvw(720px) auto;
+
+    &.dm {
+        width: calcvw(32px);
+        height: calcvw(32px);
+
+        @include bgImg($dirImgCommon+'icon.png', 1, 1);
+    }
+
+    &.alarm {
+        width: calcvw(28px);
+        height: calcvw(32px);
+
+        @include bgImg($dirImgCommon+'icon.png', 3, 1);
+    }
+}
+
+@include darkmode {
+    .icon {
+        &.dm {
+            @include bgPosition(1, 3);
+        }
+
+        &.alarm {
+            @include bgPosition(3, 3);
+        }
+    }
+}
+
+.dark {
+    .icon {
+        &.dm {
+            @include bgPosition(1, 3);
+        }
+
+        &.alarm {
+            @include bgPosition(3, 3);
+        }
+    }
+}

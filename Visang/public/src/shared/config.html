@@ -1,0 +1,48 @@
+{{if (context.prop) {
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+
+    <meta name="robots" content="index,nofollow">
+    <meta name="description" content="페이지 설명">
+    <meta name="keywords" content="키워드, 키워드">
+
+    <!-- 오픈그래프 필요시 사용 -->
+    <!-- <link rel="canonical" href="url입력">
+    <meta property="og:site_name" content="비상교육">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="title">
+    <meta property="og:image" content="image">
+    <meta property="og:url" content="url입력">
+    <meta property="og:description" content="페이지 설명"> -->
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{dirRoot}}/resources/images/common/favicon.ico">
+
+    <!-- 공통 css, js -->
+    <link rel="stylesheet" href="{{dirRoot}}/resources/css/lib/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="{{dirRoot}}/resources/css/common.css" />
+    <script src="{{dirRoot}}/resources/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="{{dirRoot}}/resources/js/lib/swiper-bundle.min.js"></script>
+    <script src="{{dirRoot}}/resources/js/function.ui.js"></script>
+    <script src="{{dirRoot}}/resources/js/common.ui.js"></script>
+
+
+
+    <!-- 페이지별 css, js -->
+    {{if (context.prop.page === "home") {
+        <link rel="stylesheet" type="text/css" href="{{dirRoot}}/resources/css/home.css" />
+        <script src="{{dirRoot}}/resources/js/home.js"></script>
+    }}}
+    {{if (context.prop.page !== "home") {
+        <link rel="stylesheet" type="text/css" href="{{dirRoot}}/resources/css/sub.css" />
+        <script src="{{dirRoot}}/resources/js/sub.js"></script>
+    }}}
+
+    <!-- <title>현재 페이지 - 비상교육</title> -->
+    <title>{{prop.pageName}} - 비상교육</title>
+}}}

@@ -1,0 +1,27 @@
+/**
+* --------------------------------
+* Form CSS
+* --------------------------------
+*/
+
+form {
+    tr {
+        &:nth-child(even) {
+            td {
+                &:hover {
+                    color: $fontColorBase !important;
+                    background-color: #fafafa !important;
+                }
+            }
+        }
+
+        &:nth-child(odd) {
+            td {
+                &:hover {
+                    color: $fontColorBase !important;
+                    background-color: #fff !important;
+                }
+            }
+        }
+    }
+}
