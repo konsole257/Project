@@ -1,7 +1,0 @@
-@function calcu($value) {
-    @return $value/$multiple#{px};
-};
-
-@function calcvw($value) {
-    @return $value*100/$deviceWidth#{vw};
-};
